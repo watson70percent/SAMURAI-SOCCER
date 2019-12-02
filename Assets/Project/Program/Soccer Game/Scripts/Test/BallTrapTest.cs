@@ -7,6 +7,6 @@ public class BallTrapTest : MonoBehaviour
     public BallControler ball;
     void OnCollisionEnter(Collision collision)
     {
-        ball.Trap();
+        ball.Trap(gameObject);
     }
 }
