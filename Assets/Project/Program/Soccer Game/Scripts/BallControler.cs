@@ -8,8 +8,9 @@ using Random = UnityEngine.Random;
 public class BallControler : MonoBehaviour
 {
     private Rigidbody rb;
-    private readonly float sqrt3 = Mathf.Sqrt(3);
-    private readonly float sqrt2 = Mathf.Sqrt(2);
+    private static readonly float sqrt3 = Mathf.Sqrt(3);
+    private static readonly float sqrt2 = Mathf.Sqrt(2);
+    private static readonly float gravity = 10.0f;
     public bool last_touch;
     public delegate void GoalEventHandler(object sender, GoalEventArgs e);
     public delegate void OutBallEventHandler(object sender, OutBallEventArgs e);
@@ -77,7 +78,7 @@ public class BallControler : MonoBehaviour
     {
         Vector3 dest = (recever.transform.position - sender.transform.position);
         float distance = dest.magnitude;
-        float power = Mathf.Sqrt(3 * 9.8f * distance) / 2;
+        float power = Mathf.Sqrt(3 * gravity * distance) / 2;
         if(power > self.Power)
         {
             power = self.Power;
@@ -91,7 +92,7 @@ public class BallControler : MonoBehaviour
     {
         Vector3 dest = recever.transform.position - sender.transform.position;
         float distance = dest.magnitude;
-        float power = Mathf.Sqrt(9.8f * distance);
+        float power = Mathf.Sqrt(gravity * distance);
         if (power > self.Power)
         {
             power = self.Power;
