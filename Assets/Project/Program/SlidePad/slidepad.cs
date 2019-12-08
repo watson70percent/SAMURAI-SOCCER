@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class slidepad : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class slidepad : MonoBehaviour
     Rigidbody playerrig;
     public float speed;
 
+    public Text text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,42 +29,35 @@ public class slidepad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isTapped == true)
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                //print(touch.position.x + ":" + touch.position.y);
 
+
+                Vector2 dir = touch.position - slidestartposition;
+
+                if (dir.magnitude > radius) { dir = dir.normalized * radius; }
+
+                Controller(dir);
+
+                joyrect.localPosition = joystartposition + dir;
+
+            }
+        }
+        
     }
 
 
 
 
-    public void Drag()
+    public void DragStart()
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            //print(touch.position.x + ":" + touch.position.y);
-
-
-            if (isTapped == false)
-            {
-                isTapped = true;
-                slidestartposition = touch.position;
-
-            }
-
-
-            Vector2 dir = touch.position - slidestartposition;
-
-            if (dir.magnitude > radius) { dir = dir.normalized * radius; }
-
-
-            Controller(dir);
-
-            joyrect.localPosition = joystartposition + dir;
-
-        }
-
-
-
-
+        isTapped = true;
+        Touch touch = Input.GetTouch(0);
+        slidestartposition = touch.position;
     }
 
 
@@ -75,6 +71,8 @@ public class slidepad : MonoBehaviour
     {
         Vector2 velocity= dir/radius * speed ;
         playerrig.position = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+
+
 
     }
 
