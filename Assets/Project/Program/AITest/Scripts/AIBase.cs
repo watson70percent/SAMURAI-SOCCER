@@ -11,6 +11,9 @@ public class AIBase
     protected List<GameObject> opponent = new List<GameObject>();
     protected Vector2Int goal;
     protected BallControler ball;
+    protected GameObject plane;
+    protected Renderer[,] objs_b = new Renderer[60, 100];
+    protected Renderer[,] objs_r = new Renderer[60, 100];
 
     public AIBase(List<GameObject> team, List<GameObject> opp, BallControler _ball, bool _ally)
     {
@@ -32,7 +35,8 @@ public class AIBase
     /// </summary>
     public virtual void Revaluation() { }
 
-    public virtual Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal) {
+    public virtual Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal)
+    {
         Vector2Int temp = new Vector2Int();
         int max = -1000;
         int x_min = self.x < 10 ? 0 : self.x - 10;
@@ -89,10 +93,10 @@ public class AIBase
     /// <param name="point2_x"></param>
     /// <param name="point2_y"></param>
     /// <returns></returns>
-    protected float CalcDistance(int point1_x,int point1_y,int point2_x, int point2_y)
+    protected float CalcDistance(int point1_x, int point1_y, int point2_x, int point2_y)
     {
         float temp = 10 - Mathf.Abs(point1_x - point2_x) - Mathf.Abs(point1_y - point2_y);
-        if(temp < 0)
+        if (temp < 0)
         {
             temp = 0;
         }
@@ -105,12 +109,36 @@ public class AIBase
 
     protected void InitRevaluat()
     {
-        for(int i = 0; i < 60; i++)
+        for (int i = 0; i < 60; i++)
         {
-            for(int j = 0; j < 100; j++)
+            for (int j = 0; j < 100; j++)
             {
                 benefitMap[i, j] = 0;
                 riskMap[i, j] = 0;
+            }
+        }
+    }
+
+    public void InitVisualize(GameObject obj, Vector3 origin_b, Vector3 origin_r)
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            for (int j = 0; j < 100; j++)
+            {
+                objs_b[i, j] = Object.Instantiate(obj, origin_b + new Vector3(i, 0, j), Quaternion.identity).GetComponent<Renderer>();
+                objs_r[i, j] = Object.Instantiate(obj, origin_r + new Vector3(i, 0, j), Quaternion.identity).GetComponent<Renderer>();
+            }
+        }
+    }
+
+    public void UpdateVisualize()
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            for (int j = 0; j < 100; j++)
+            {
+                objs_b[i, j].material.color = Color.HSVToRGB(240 - benefitMap[i, j], 1, 1);
+                objs_b[i, j].material.color = Color.HSVToRGB(240 - riskMap[i, j], 1, 1);
             }
         }
     }
