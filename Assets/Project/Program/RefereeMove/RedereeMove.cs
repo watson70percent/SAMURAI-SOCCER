@@ -60,7 +60,7 @@ public class RedereeMove : MonoBehaviour
         eulerrotate.x = 0;
         eulerrotate.z = 0;
         eulerrotate.y = (eulerrotate.y - 180 <= 0) ? eulerrotate.y % 360 : ((360 - eulerrotate.y) % 360) * -1; //0~360°で角度が返ってくるので-180°~180°に変換
-        print(eulerrotate.y);
+       // print(eulerrotate.y);
 
         if (Mathf.Abs(eulerrotate.y) > lookatspeed) { eulerrotate.y = lookatspeed * Mathf.Sign(eulerrotate.y); }  //一度に回転する量を制限
 
