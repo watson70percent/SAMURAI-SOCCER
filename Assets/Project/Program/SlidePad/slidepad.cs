@@ -24,10 +24,12 @@ public class slidepad : MonoBehaviour
         joyrect = joystick.GetComponent<RectTransform>();
         joystartposition = joyrect.localPosition;
         playerrig = player.GetComponent<Rigidbody>();
+
+
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (isTapped == true)
         {
@@ -69,8 +71,19 @@ public class slidepad : MonoBehaviour
 
     void Controller(Vector2 dir)
     {
+        Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
+        // print(rotationdir);
+        rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;
+        playerrig.rotation = Quaternion.LookRotation(rotationdir);
+        //player.transform.rotation = Quaternion.LookRotation(rotationdir); //なんか挙動がおかしい
+
+
+
+
         Vector2 velocity= dir/radius * speed ;
-        playerrig.position = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        Vector3 direction3d= new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        playerrig.position = direction3d;
+      
 
 
 
