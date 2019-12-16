@@ -7,7 +7,7 @@ public class slidepad : MonoBehaviour
 {
 
     public float radius;
-    bool isTapped;
+    bool isdragged;
     public GameObject joystick;
     RectTransform joyrect;
     Vector2 joystartposition;
@@ -18,6 +18,8 @@ public class slidepad : MonoBehaviour
 
     public Text text;
 
+
+    int fingerID;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,16 +33,16 @@ public class slidepad : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (isTapped == true)
+        if (isdragged == true)
         {
             if (Input.touchCount > 0)
             {
-                Touch touch = Input.GetTouch(0);
-                //print(touch.position.x + ":" + touch.position.y);
-
+                Touch touch = Input.GetTouch(fingerID);
+                
+                print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
-
+                
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
                 Controller(dir);
@@ -53,20 +55,28 @@ public class slidepad : MonoBehaviour
     }
 
 
+    public void Touch()
+    {
+        if (!isdragged)
+        {
+        fingerID = Input.GetTouch(Input.touchCount - 1).fingerId;
 
+        }
+    }
 
     public void DragStart()
     {
-        isTapped = true;
-        Touch touch = Input.GetTouch(0);
+        isdragged = true;
+        Touch touch = Input.GetTouch(fingerID);
         slidestartposition = touch.position;
     }
 
 
     public void DragEnd()
     {
-        isTapped = false;
+        isdragged = false;
         joyrect.localPosition = joystartposition;
+        
     }
 
     void Controller(Vector2 dir)
