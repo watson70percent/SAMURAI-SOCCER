@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class slidepad : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class slidepad : MonoBehaviour
             {
                 Touch touch = Input.GetTouch(fingerID);
                 
-                print(touch.position+":"+slidestartposition);
+               // print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
                 
@@ -55,11 +56,13 @@ public class slidepad : MonoBehaviour
     }
 
 
-    public void Touch()
+    public void Touch(BaseEventData baseEventData)
     {
+        PointerEventData pointerEventData = baseEventData as PointerEventData;
+        print(pointerEventData.pointerId);
         if (!isdragged)
         {
-        fingerID = Input.GetTouch(Input.touchCount - 1).fingerId;
+        fingerID = pointerEventData.pointerId;
 
         }
     }
