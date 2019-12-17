@@ -34,12 +34,12 @@ public class slidepad : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        
         if (isdragged == true)
         {
             if (Input.touchCount > 0)
             {
-                Touch touch = Input.GetTouch(fingerID);
-                
+                 Touch touch=FindFinger();
                // print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
@@ -55,20 +55,10 @@ public class slidepad : MonoBehaviour
         
     }
 
-
-    public void Touch(BaseEventData baseEventData)
+    public void DragStart(BaseEventData baseEventData)
     {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
-        print(pointerEventData.pointerId);
-        if (!isdragged)
-        {
-        fingerID = pointerEventData.pointerId;
-
-        }
-    }
-
-    public void DragStart()
-    {
+            fingerID = pointerEventData.pointerId;
         isdragged = true;
         Touch touch = Input.GetTouch(fingerID);
         slidestartposition = touch.position;
@@ -102,4 +92,13 @@ public class slidepad : MonoBehaviour
 
     }
 
+    Touch FindFinger()
+    {
+        foreach(Touch t in Input.touches)
+        {
+            if (t.fingerId == fingerID) { return t; }
+
+        }
+        return new Touch();
+    }
 }
