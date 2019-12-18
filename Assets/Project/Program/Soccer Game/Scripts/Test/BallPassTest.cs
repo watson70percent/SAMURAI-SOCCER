@@ -13,6 +13,6 @@ public class BallPassTest : MonoBehaviour
     async void Start()
     {
         await Task.Delay(2000);
-        ball.Pass(sender, recever,height);
+        ball.Pass(sender.ToVector2Int(), recever.ToVector2Int(),height);
     }
 }

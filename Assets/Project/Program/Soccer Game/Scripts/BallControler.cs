@@ -18,11 +18,15 @@ public class BallControler : MonoBehaviour
     public delegate void OutBallEventHandler(object sender, OutBallEventArgs e);
     public delegate void PassEventHandler(object sender, PassEventArgs e);
     public delegate void StealEventHandler(object sender, StealEventArgs e);
+    public delegate void DribbleEventHandler(object sender, DribbleEventArgs e);
+    public delegate void TrapEventHandler(object sender, TrapEventArgs e);
 
     public event GoalEventHandler Goal;
     public event OutBallEventHandler OutBall;
     public event PassEventHandler PassSend;
     public event StealEventHandler StealBall;
+    public event DribbleEventHandler DribbleKick;
+    public event TrapEventHandler Trapping;
 
     void Start()
     {
@@ -38,6 +42,9 @@ public class BallControler : MonoBehaviour
     {
         last_touch = self.ally;
         rb.AddForce(5 * new Vector3(-Mathf.Sin(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad), 0, Mathf.Cos(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad)), ForceMode.Impulse);
+        var e = new DribbleEventArgs();
+        e.owner = owner;
+        OnDribble(e);
         yield return null;
         for(int i = 0; i < 19; i++)
         {
@@ -53,6 +60,11 @@ public class BallControler : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    private void OnDribble(DribbleEventArgs e)
+    {
+        DribbleKick?.Invoke(this, e);
     }
 
     /// <summary>
@@ -94,7 +106,15 @@ public class BallControler : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             owner = recever;
+            var e = new TrapEventArgs();
+            e.owner = recever;
+            OnTrap(e);
         }
+    }
+
+    private void OnTrap(TrapEventArgs e)
+    {
+        Trapping?.Invoke(this, e);
     }
 
     /// <summary>
@@ -115,7 +135,7 @@ public class BallControler : MonoBehaviour
     /// <param name="recever">パス受け取る人</param>
     /// <param name="height">パスの高さ</param>
     /// <param name="self">自分の能力</param>
-    public void Pass(GameObject sender, GameObject recever, PassHeight height = PassHeight.Middle, PersonalStatus self = default)
+    public void Pass(Vector2 sender, Vector2 recever, PassHeight height = PassHeight.Middle, PersonalStatus self = default)
     {
         if(self == default)
         {
@@ -129,21 +149,22 @@ public class BallControler : MonoBehaviour
         }
 
         var e = new PassEventArgs();
-        e.sender = new Vector2(sender.transform.position.x, sender.transform.position.z);
-        e.recever = new Vector2(recever.transform.position.x, recever.transform.position.z);
+        e.sender = sender;
+        e.recever = recever;
+        e.height = height;
         OnPass(e);
     }
 
-    private void CalcLowPass(GameObject sender, GameObject recever, PersonalStatus self)
+    private void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)
     {
-        Vector3 dest = (recever.transform.position - sender.transform.position).normalized;
+        Vector2 dest = (recever - sender).normalized;
 
-        rb.AddForceAtPosition(self.Power * dest, 0.3f * new Vector3(-dest.x / 2, 0.4f, -dest.z / 2), ForceMode.Impulse);
+        rb.AddForceAtPosition(self.Power * dest, 0.3f * new Vector3(-dest.x / 2, 0.4f, -dest.y / 2), ForceMode.Impulse);
     }
 
-    private void CalcMiddlePass(GameObject sender, GameObject recever, PersonalStatus self)
+    private void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)
     {
-        Vector3 dest = (recever.transform.position - sender.transform.position);
+        Vector2 dest = (recever - sender);
         float distance = dest.magnitude;
         float power = Mathf.Sqrt(3 * gravity * distance) / 2;
         if(power > self.Power)
@@ -151,13 +172,13 @@ public class BallControler : MonoBehaviour
             power = self.Power;
         }
         dest = dest.normalized;
-        rb.AddForceAtPosition(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.z), 0.3f * new Vector3(-2 / sqrt3 * dest.x, -1.0f / sqrt3, -2 / sqrt3 * dest.z), ForceMode.Impulse);
-        Debug.Log(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.z));
+        rb.AddForceAtPosition(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y), 0.3f * new Vector3(-2 / sqrt3 * dest.x, -1.0f / sqrt3, -2 / sqrt3 * dest.y), ForceMode.Impulse);
+        Debug.Log(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y));
     }
 
-    private void CalcHighPass(GameObject sender, GameObject recever, PersonalStatus self)
+    private void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)
     {
-        Vector3 dest = recever.transform.position - sender.transform.position;
+        Vector3 dest = recever - sender;
         float distance = dest.magnitude;
         float power = Mathf.Sqrt(gravity * distance);
         if (power > self.Power)
@@ -252,10 +273,21 @@ public class OutBallEventArgs : EventArgs {
 public class PassEventArgs : EventArgs {
     public Vector2 sender;
     public Vector2 recever;
+    public PassHeight height;
 }
 
 
 public class StealEventArgs : EventArgs
 {
     public GameObject stealer;
+}
+
+public class DribbleEventArgs : EventArgs
+{
+    public GameObject owner;
+}
+
+public class TrapEventArgs : EventArgs
+{
+    public GameObject owner;
 }
