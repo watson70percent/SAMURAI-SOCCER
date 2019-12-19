@@ -114,12 +114,15 @@ public class AIManager : MonoBehaviour
     {
         var recever = FindByVector2(e.recever);
         recever.destination = new Vector2Int((int)e.recever.x,(int)e.recever.y);
-        recever.action = CPUAction.GetBall;
         int idx1 = cpus.IndexOf(recever);
         evalutable[idx1] = false;
+        recever.action = CPUAction.GetBall;
 
-        int idx2 = cpus.IndexOf(FindByVector2(e.sender));
+        var send = FindByVector2(e.sender);
+        int idx2 = cpus.IndexOf(send);
         evalutable[idx2] = false;
+        send.action = CPUAction.Move;
+
 
         if(e.height == PassHeight.Low)
         {
