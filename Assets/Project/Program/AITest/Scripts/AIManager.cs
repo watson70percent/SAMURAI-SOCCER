@@ -8,6 +8,8 @@ public class AIManager : MonoBehaviour
     public BallControler ball;
     public List<GameObject> team;
     public List<GameObject> opp;
+    public bool debug;
+    public GameObject plane = new GameObject();
     private static List<CPUMove> cpus;
     private List<bool> evalutable;
     private int cpu_count;
@@ -76,6 +78,16 @@ public class AIManager : MonoBehaviour
         all.Add(defenceMF_o);
         defenceDF_o = new DefenceDF(team, opp, ball, false);
         all.Add(defenceDF_o);
+
+        StartCoroutine(Revaluate());
+
+        if (debug)
+        {
+            for(int i = 0; i < all.Count; i++)
+            {
+                all[i].InitVisualize(plane, new Vector3(70 * i, 0, 0), new Vector3(70 * i, 0, 110));
+            }
+        }
     }
 
     // Update is called once per frame
@@ -84,6 +96,14 @@ public class AIManager : MonoBehaviour
         for(int i = 0; i < cpu_count; i++)
         {
             SetState(i);
+        }
+
+        if (debug)
+        {
+            for(int i = 0; i < all.Count; i++)
+            {
+                all[i].UpdateVisualize();
+            }
         }
     }
 
