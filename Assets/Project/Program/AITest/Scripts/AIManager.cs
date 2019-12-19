@@ -9,8 +9,8 @@ public class AIManager : MonoBehaviour
     public List<GameObject> team;
     public List<GameObject> opp;
     public bool debug;
-    public GameObject plane = new GameObject();
-    private static List<CPUMove> cpus;
+    public GameObject plane;
+    private static List<CPUMove> cpus = new List<CPUMove>();
     private List<bool> evalutable;
     private int cpu_count;
     private BallHolder ballHolder_t;
@@ -32,6 +32,9 @@ public class AIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        evalutable = new List<bool>();
+        all = new List<AIBase>();
+
         foreach(var o in team)
         {
             cpus.Add(o.GetComponent<CPUMove>());
@@ -85,7 +88,7 @@ public class AIManager : MonoBehaviour
         {
             for(int i = 0; i < all.Count; i++)
             {
-                all[i].InitVisualize(plane, new Vector3(70 * i, 0, 0), new Vector3(70 * i, 0, 110));
+                all[i].InitVisualize(plane, new Vector3(70 * (i + 1), 0, 0), new Vector3(70 * (i + 1), 0, 110));
             }
         }
     }

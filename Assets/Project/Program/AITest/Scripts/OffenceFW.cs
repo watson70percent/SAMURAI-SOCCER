@@ -86,11 +86,10 @@ public class OffenceFW : AIBase
                 {
                     for (int j = (int)pos.y - 5; j < (int)pos.y + 5; j++)
                     {
-                        if (i < 0 || i > 60 || j < 0 || j > 100)
+                        if (i >= 0 && i < 60 && j >= 0 && j < 100)
                         {
-                            continue;
+                            riskMap[i, j] += 1;
                         }
-                        riskMap[i, j] += 1;
                     }
                 }
 

@@ -139,7 +139,7 @@ public class BallControler : MonoBehaviour
     {
         if(self == default)
         {
-            self = new PersonalStatus(_power: 30);
+            self.power = 30;
         }
         switch (height)
         {
@@ -159,7 +159,7 @@ public class BallControler : MonoBehaviour
     {
         Vector2 dest = (recever - sender).normalized;
 
-        rb.AddForceAtPosition(self.Power * dest, 0.3f * new Vector3(-dest.x / 2, 0.4f, -dest.y / 2), ForceMode.Impulse);
+        rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x / 2, 0.4f, -dest.y / 2), ForceMode.Impulse);
     }
 
     private void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)
@@ -167,13 +167,12 @@ public class BallControler : MonoBehaviour
         Vector2 dest = (recever - sender);
         float distance = dest.magnitude;
         float power = Mathf.Sqrt(3 * gravity * distance) / 2;
-        if(power > self.Power)
+        if(power > self.power)
         {
-            power = self.Power;
+            power = self.power;
         }
         dest = dest.normalized;
         rb.AddForceAtPosition(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y), 0.3f * new Vector3(-2 / sqrt3 * dest.x, -1.0f / sqrt3, -2 / sqrt3 * dest.y), ForceMode.Impulse);
-        Debug.Log(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y));
     }
 
     private void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)
@@ -181,9 +180,9 @@ public class BallControler : MonoBehaviour
         Vector3 dest = recever - sender;
         float distance = dest.magnitude;
         float power = Mathf.Sqrt(gravity * distance);
-        if (power > self.Power)
+        if (power > self.power)
         {
-            power = self.Power;
+            power = self.power;
         }
         dest = dest.normalized;
         rb.AddForceAtPosition(power * new Vector3(dest.x / sqrt2, 1.0f / sqrt2, dest.z / sqrt2), 0.3f * new Vector3(-dest.x / sqrt2, -1.0f / sqrt2, -dest.z / sqrt2), ForceMode.Impulse);
@@ -204,7 +203,7 @@ public class BallControler : MonoBehaviour
     {
         if(self == default)
         {
-            self = new PersonalStatus(_power: 30);
+            self.power = 30;
         }
 
         Vector3 dest;
@@ -217,8 +216,8 @@ public class BallControler : MonoBehaviour
             dest = (new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), -50) - sender.transform.position).normalized;
         }
 
-        rb.AddForceAtPosition(self.Power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z),ForceMode.Impulse);
-        Debug.Log(self.Power * dest);
+        rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z),ForceMode.Impulse);
+        Debug.Log(self.power * dest);
     }
 
     /// <summary>

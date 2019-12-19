@@ -56,11 +56,10 @@ public class DefenceDF : AIBase
                     {
                         for (int j = (int)pos.y - 5; j < (int)pos.y + 5; j++)
                         {
-                            if (i < 0 || i > 60 || j < 0 || j > 100)
+                            if (i >= 0 && i < 60 && j >= 0 && j < 100)
                             {
-                                continue;
+                                riskMap[i, j] += 5;
                             }
-                            riskMap[i, j] += 5;
                         }
                     }
 
@@ -73,11 +72,10 @@ public class DefenceDF : AIBase
                     {
                         for (int j = (int)pos.y - 5; j < (int)pos.y + 5; j++)
                         {
-                            if (i < 0 || i > 60 || j < 0 || j > 100)
+                            if (i >= 0 && i < 60 && j >= 0 && j < 100)
                             {
-                                continue;
+                                riskMap[i, j] += 5;
                             }
-                            riskMap[i, j] += 5;
                         }
                     }
                     pos += delta;
@@ -115,21 +113,27 @@ public class DefenceDF : AIBase
         //前に行きすぎ回避
         if (goal.y == 100)
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 60; i++)
             {
                 for (int j = 99; j > ball.transform.position.z - 30; j--)
                 {
-                    riskMap[i, j] += j - (int)ball.transform.position.z + 30;
+                    if (j >= 0)
+                    {
+                        riskMap[i, j] += j - (int)ball.transform.position.z + 30;
+                    }
                 }
             }
         }
         else
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 60; i++)
             {
                 for (int j = 0; j < ball.transform.position.z + 30; j++)
                 {
-                    riskMap[i, j] += (int)ball.transform.position.z - 30 - j;
+                    if (j >= 0)
+                    {
+                        riskMap[i, j] += (int)ball.transform.position.z - 30 - j;
+                    }
                 }
             }
         }
@@ -171,11 +175,10 @@ public class DefenceDF : AIBase
                         {
                             for (int j = y_min; j < y_max; j++)
                             {
-                                if (i < 0 || i > 60 || j < 0 || j > 100)
+                                if (i >= 0 && i < 60 && j >= 0 && j < 100)
                                 {
-                                    continue;
+                                    riskMap[i, j] += (int)(mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude;
                                 }
-                                riskMap[i, j] += (int)(mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude;
                             }
                         }
                     }

@@ -84,9 +84,10 @@ public class CPUMove : MonoBehaviour
             }
         }
 
+
         Vector3 pos = gameObject.transform.position;
         gameObject.transform.rotation = Quaternion.Euler(0, Mathf.Atan2(vec.y, vec.x), 0);
-        vec = vec.normalized * velocity;
+        vec = vec.normalized * velocity / 60;
         pos += new Vector3(vec.x, 0, vec.y);
         gameObject.transform.position = pos;
 
@@ -110,15 +111,15 @@ public class CPUMove : MonoBehaviour
         float min = AIManager.MinimamEnemy(gameObject.ToVector2Int(), destination);
         if(min < 5)
         {
-            ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.Low);
+            ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.Low, gameObject.GetComponent<PersonalStatus>());
         }
         else if((gameObject.ToVector2Int() - destination).sqrMagnitude < 900)
         {
-            ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.High);
+            ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.High, gameObject.GetComponent<PersonalStatus>());
         }
         else
         {
-            ball.Pass(ball.gameObject.ToVector2Int(), destination);
+            ball.Pass(ball.gameObject.ToVector2Int(), destination,self: gameObject.GetComponent<PersonalStatus>());
         }
     }
 

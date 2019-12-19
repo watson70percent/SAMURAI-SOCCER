@@ -55,11 +55,10 @@ public class OffenceDF : AIBase
                 {
                     for (int j = (int)pos.y - 5; j < (int)pos.y + 5; j++)
                     {
-                        if (i < 0 || i > 60 || j < 0 || j > 100)
+                        if (i >= 0 && i < 60 && j >= 0 && j < 100)
                         {
-                            continue;
+                            riskMap[i, j] += 2;
                         }
-                        riskMap[i, j] += 2;
                     }
                 }
 
@@ -103,11 +102,10 @@ public class OffenceDF : AIBase
                         {
                             for (int j = y_min; j < y_max; j++)
                             {
-                                if (i < 0 || i > 60 || j < 0 || j > 100)
+                                if (i >= 0 && i < 60 && j >= 0 && j < 100)
                                 {
-                                    continue;
+                                    riskMap[i, j] += (int)(mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude;
                                 }
-                                riskMap[i, j] += (int)(mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude;
                             }
                         }
                     }
