@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 [RequireComponent(typeof(PersonalStatus))]
@@ -12,6 +13,7 @@ public class CPUMove : MonoBehaviour
     public BallControler ball;
     private bool can_change = true;
     private IEnumerator dribble;
+    private int counter = 0;
     private PersonalStatus self;
     private float velocity = 0;
 
@@ -38,13 +40,15 @@ public class CPUMove : MonoBehaviour
     private void Dribble()
     {
         AllMove();
-        if(dribble == null)
+        if(dribble == null || counter == 40)
         {
             dribble = ball.Dribble(self);
+            counter = 0;
         }
         else
         {
             dribble.MoveNext();
+            counter++;
         }
     }
 
@@ -55,6 +59,7 @@ public class CPUMove : MonoBehaviour
         {
             SetState(CPUAction.Steal, ball.gameObject.ToVector2Int());
         }
+        dribble = null;
     }
 
     private float AllMove(float max = 5, Vector2 dest = default)
@@ -98,12 +103,14 @@ public class CPUMove : MonoBehaviour
     private void GetBall()
     {
         AllMove(3);
+        dribble = null;
     }
     
     private void CutBall()
     {
         Vector2 dest = destination + (ball.gameObject.ToVector2Int() - destination).nomalize();
         AllMove(dest: dest);
+        dribble = null;
     }
 
     private void Pass()
@@ -121,16 +128,19 @@ public class CPUMove : MonoBehaviour
         {
             ball.Pass(ball.gameObject.ToVector2Int(), destination,self: gameObject.GetComponent<PersonalStatus>());
         }
+        dribble = null;
     }
 
     private void Shoot()
     {
         ball.Shoot(gameObject);
+        dribble = null;
     }
 
     private void Steal()
     {
         ball.Steal(gameObject);
+        dribble = null;
     }
 
     public void SetState(CPUAction act, Vector2Int dest)

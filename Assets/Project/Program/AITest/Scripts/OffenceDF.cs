@@ -19,7 +19,7 @@ public class OffenceDF : AIBase
         foreach (var mate in teamMate)
         {
             int x = (int)mate.transform.position.x;
-            int y = (int)mate.transform.position.y;
+            int y = (int)mate.transform.position.z;
 
             int x_min = (x - 10) > 0 ? x - 10 : 0;
             int y_min = (y - 10) > 0 ? y - 10 : 0;
@@ -51,9 +51,9 @@ public class OffenceDF : AIBase
 
             while (pos.x > 0 && pos.x < 60 && pos.y > 0 && pos.y < 100)
             {
-                for (int i = (int)pos.x - 5; i < (int)pos.x + 5; i++)
+                for (int i = (int)pos.x - 3; i < (int)pos.x + 3; i++)
                 {
-                    for (int j = (int)pos.y - 5; j < (int)pos.y + 5; j++)
+                    for (int j = (int)pos.y - 3; j < (int)pos.y + 3; j++)
                     {
                         if (i >= 0 && i < 60 && j >= 0 && j < 100)
                         {
@@ -73,7 +73,7 @@ public class OffenceDF : AIBase
             {
                 if (mate != mate2)
                 {
-                    if ((mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude < 400)
+                    if ((mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude < 100)
                     {
                         int x_min, x_max, y_min, y_max;
                         if (mate.transform.position.x > mate2.transform.position.x)
@@ -104,7 +104,7 @@ public class OffenceDF : AIBase
                             {
                                 if (i >= 0 && i < 60 && j >= 0 && j < 100)
                                 {
-                                    riskMap[i, j] += (int)(mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude;
+                                    riskMap[i, j] += (int)((mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude * 0.1f);
                                 }
                             }
                         }

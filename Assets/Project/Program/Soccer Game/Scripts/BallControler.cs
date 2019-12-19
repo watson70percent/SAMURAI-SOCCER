@@ -137,22 +137,26 @@ public class BallControler : MonoBehaviour
     /// <param name="self">自分の能力</param>
     public void Pass(Vector2 sender, Vector2 recever, PassHeight height = PassHeight.Middle, PersonalStatus self = default)
     {
-        if(self == default)
+        if (gameObject.transform.position.y < 1 && (sender - gameObject.ToVector2Int()).sqrMagnitude < 4)
         {
-            self.power = 30;
-        }
-        switch (height)
-        {
-            case PassHeight.Low:    CalcLowPass(sender, recever, self); break;
-            case PassHeight.Middle: CalcMiddlePass(sender, recever, self); break;
-            case PassHeight.High:   CalcHighPass(sender, recever, self); break;
-        }
 
-        var e = new PassEventArgs();
-        e.sender = sender;
-        e.recever = recever;
-        e.height = height;
-        OnPass(e);
+            if (self == default)
+            {
+                self.power = 30;
+            }
+            switch (height)
+            {
+                case PassHeight.Low: CalcLowPass(sender, recever, self); break;
+                case PassHeight.Middle: CalcMiddlePass(sender, recever, self); break;
+                case PassHeight.High: CalcHighPass(sender, recever, self); break;
+            }
+
+            var e = new PassEventArgs();
+            e.sender = sender;
+            e.recever = recever;
+            e.height = height;
+            OnPass(e);
+        }
     }
 
     private void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)

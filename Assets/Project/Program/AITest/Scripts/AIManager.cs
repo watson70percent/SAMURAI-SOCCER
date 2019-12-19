@@ -10,6 +10,7 @@ public class AIManager : MonoBehaviour
     public List<GameObject> opp;
     public bool debug;
     public GameObject plane;
+    public List<Transform> parents;
     private static List<CPUMove> cpus = new List<CPUMove>();
     private List<bool> evalutable;
     private int cpu_count;
@@ -67,20 +68,25 @@ public class AIManager : MonoBehaviour
         defenceDF_t = new DefenceDF(team, opp, ball, true);
         all.Add(defenceDF_t);
 
-        ballHolder_o = new BallHolder(team, opp, ball, false);
+        ballHolder_o = new BallHolder(opp, team, ball, false);
         all.Add(ballHolder_o);
-        offenceFW_o = new OffenceFW(team, opp, ball, false);
+        offenceFW_o = new OffenceFW(opp, team, ball, false);
         all.Add(offenceFW_o);
-        offenceMF_o = new OffenceMF(team, opp, ball, false);
+        offenceMF_o = new OffenceMF(opp, team, ball, false);
         all.Add(offenceMF_o);
-        offenceDF_o = new OffenceDF(team, opp, ball, false);
+        offenceDF_o = new OffenceDF(opp, team, ball, false);
         all.Add(offenceDF_o);
-        defenceFW_o = new DefenceFW(team, opp, ball, false);
+        defenceFW_o = new DefenceFW(opp, team, ball, false);
         all.Add(defenceFW_o);
-        defenceMF_o = new DefenceMF(team, opp, ball, false);
+        defenceMF_o = new DefenceMF(opp, team, ball, false);
         all.Add(defenceMF_o);
-        defenceDF_o = new DefenceDF(team, opp, ball, false);
+        defenceDF_o = new DefenceDF(opp, team, ball, false);
         all.Add(defenceDF_o);
+
+        foreach(var e in all)
+        {
+            e.Revaluation();
+        }
 
         StartCoroutine(Revaluate());
 
@@ -88,7 +94,7 @@ public class AIManager : MonoBehaviour
         {
             for(int i = 0; i < all.Count; i++)
             {
-                all[i].InitVisualize(plane, new Vector3(70 * (i + 1), 0, 0), new Vector3(70 * (i + 1), 0, 110));
+                all[i].InitVisualize(parents.Skip(2 * i).Take(2).ToArray(),plane, new Vector3(70 * (i + 1), 0, 0), new Vector3(70 * (i + 1), 0, 110));
             }
         }
     }
@@ -254,7 +260,7 @@ public class AIManager : MonoBehaviour
 
             return;
         }
-
+        
         switch (cpus[i].position)
         {
             case Position.FW:
@@ -266,7 +272,7 @@ public class AIManager : MonoBehaviour
                     }
                     else
                     {
-                        cpus[i].SetState(CPUAction.Move, defenceFW_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));                                                                                                                
+                        cpus[i].SetState(CPUAction.Move, defenceFW_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
                     }
                 }
                 else

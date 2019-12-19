@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class AIBase
 {
@@ -12,8 +14,8 @@ public class AIBase
     protected Vector2Int goal;
     protected BallControler ball;
     protected GameObject plane;
-    protected Renderer[,] objs_b = new Renderer[60, 100];
-    protected Renderer[,] objs_r = new Renderer[60, 100];
+    protected MeshRenderer[,] objs_b = new MeshRenderer[15, 25];
+    protected MeshRenderer[,] objs_r = new MeshRenderer[15, 25];
 
     public AIBase(List<GameObject> team, List<GameObject> opp, BallControler _ball, bool _ally)
     {
@@ -37,7 +39,7 @@ public class AIBase
 
     public virtual Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal)
     {
-        Vector2Int temp = new Vector2Int();
+        Vector2Int temp = self;
         int max = -1000;
         int x_min = self.x < 10 ? 0 : self.x - 10;
         int x_max = self.x > 50 ? 60 : self.x + 10;
@@ -49,35 +51,34 @@ public class AIBase
             for (int j = y_min; j < y_max; j++)
             {
 
-                if (benefitMap[i, j] == 0)
+                if (benefitMap[i, j] != 0)
                 {
-                    continue;
-                }
-                switch (strategy)
-                {
-                    case StrategyMode.Nomal:
-                        if (max < benefitMap[i, j] - riskMap[i, j])
-                        {
-                            max = benefitMap[i, j] - riskMap[i, j];
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
+                    switch (strategy)
+                    {
+                        case StrategyMode.Nomal:
+                            if (max < benefitMap[i, j] - riskMap[i, j])
+                            {
+                                max = benefitMap[i, j] - riskMap[i, j];
+                                temp = new Vector2Int(i, j);
+                            }
+                            break;
 
-                    case StrategyMode.Positive:
-                        if (max < benefitMap[i, j] * 2 - riskMap[i, j])
-                        {
-                            max = benefitMap[i, j] * 2 - riskMap[i, j];
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
+                        case StrategyMode.Positive:
+                            if (max < benefitMap[i, j] * 2 - riskMap[i, j])
+                            {
+                                max = benefitMap[i, j] * 2 - riskMap[i, j];
+                                temp = new Vector2Int(i, j);
+                            }
+                            break;
 
-                    case StrategyMode.Passive:
-                        if (max < benefitMap[i, j] - riskMap[i, j] * 2)
-                        {
-                            max = benefitMap[i, j] - riskMap[i, j] * 2;
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
+                        case StrategyMode.Passive:
+                            if (max < benefitMap[i, j] - riskMap[i, j] * 2)
+                            {
+                                max = benefitMap[i, j] - riskMap[i, j] * 2;
+                                temp = new Vector2Int(i, j);
+                            }
+                            break;
+                    }
                 }
             }
         }
@@ -119,26 +120,37 @@ public class AIBase
         }
     }
 
-    public void InitVisualize(GameObject obj, Vector3 origin_b, Vector3 origin_r)
+    public void InitVisualize(Transform[] parent, GameObject obj, Vector3 origin_b, Vector3 origin_r)
     {
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 15; i++)
         {
-            for (int j = 0; j < 100; j++)
+            for (int j = 0; j < 25; j++)
             {
-                objs_b[i, j] = Object.Instantiate(obj, origin_b + new Vector3(i, 0, j), Quaternion.identity).GetComponent<Renderer>();
-                objs_r[i, j] = Object.Instantiate(obj, origin_r + new Vector3(i, 0, j), Quaternion.identity).GetComponent<Renderer>();
+                objs_b[i, j] = Object.Instantiate(obj, origin_b + new Vector3(i * 4, 0, j * 4), Quaternion.identity, parent[0]).GetComponent<MeshRenderer>();
+                objs_r[i, j] = Object.Instantiate(obj, origin_r + new Vector3(i * 4, 0, j * 4), Quaternion.identity, parent[1]).GetComponent<MeshRenderer>();
             }
         }
     }
 
     public void UpdateVisualize()
     {
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 15; i++)
         {
-            for (int j = 0; j < 100; j++)
+            for (int j = 0; j < 25; j++)
             {
-                objs_b[i, j].material.color = Color.HSVToRGB(240 - benefitMap[i, j], 1, 1);
-                objs_b[i, j].material.color = Color.HSVToRGB(240 - riskMap[i, j], 1, 1);
+                int sum1 = 0;
+                int sum2 = 0;
+                for (int k = 0; k < 4; k++)
+                {
+                    for (int l = 0; l < 4; l++)
+                    {
+                        sum1 += benefitMap[4 * i + k, 4 * j + l];
+                        sum2 += riskMap[4* i + k, 4 * j + l];
+                    }
+                }
+               
+                    objs_b[i, j].material.color = Color.HSVToRGB((240 - sum1 * 0.0625f) / 360, 1, 1);
+                    objs_r[i, j].material.color = Color.HSVToRGB((240 - sum2 * 0.0625f) / 360, 1, 1);              
             }
         }
     }

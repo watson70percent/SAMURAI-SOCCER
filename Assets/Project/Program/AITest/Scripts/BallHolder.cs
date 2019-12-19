@@ -24,7 +24,7 @@ public class BallHolder : AIBase
         foreach (var mate in teamMate)
         {
             int x = (int)mate.transform.position.x;
-            int y = (int)mate.transform.position.y;
+            int y = (int)mate.transform.position.z;
 
             int x_min = (x - 10) > 0 ? x - 10 : 0;
             int y_min = (y - 10) > 0 ? y - 10 : 0;
@@ -33,23 +33,26 @@ public class BallHolder : AIBase
 
             int to_goal = (int)Mathf.Abs(goal.x - x) + (int)Mathf.Abs(goal.y - y);
 
-
-            for (int i = x_min; i < x_max; i++)
+            if (ball.owner == mate)
             {
-                for (int j = y_min; j < y_max; j++)
+                int t = 40 - to_goal > 0 ? 40 - to_goal : 0;
+                benefitGoal = t * t;
+            }
+            else
+            {
+                for (int i = x_min; i < x_max; i++)
                 {
-                    benefitMap[i, j] = (int)((100 - to_goal) * CalcDistance(i, j, x, y));
-                    if (benefitMap[i, j] < 0)
+                    for (int j = y_min; j < y_max; j++)
                     {
-                        benefitMap[i, j] = 0;
+                        benefitMap[i, j] = (int)((100 - to_goal) * CalcDistance(i, j, x, y));
+                        if (benefitMap[i, j] < 0)
+                        {
+                            benefitMap[i, j] = 0;
+                        }
                     }
                 }
             }
 
-            if (ball.owner == mate)
-            {
-                benefitGoal = (40 - to_goal) * (40 - to_goal);
-            }
         }
     }
 
@@ -67,12 +70,12 @@ public class BallHolder : AIBase
         foreach (var mate in opponent)
         {
             int x = (int)mate.transform.position.x;
-            int y = (int)mate.transform.position.y;
+            int y = (int)mate.transform.position.z;
 
-            int x_min = (x - 10) > 0 ? x - 10 : 0;
-            int y_min = (y - 10) > 0 ? y - 10 : 0;
-            int x_max = (x + 10) < 60 ? x + 10 : 60;
-            int y_max = (y + 10) < 100 ? y + 10 : 100;
+            int x_min = (x - 5) > 0 ? x - 5 : 0;
+            int y_min = (y - 5) > 0 ? y - 5 : 0;
+            int x_max = (x + 5) < 60 ? x + 5 : 60;
+            int y_max = (y + 5) < 100 ? y + 5 : 100;
 
             int to_goal;
             if (goal.y == 100)
@@ -112,23 +115,20 @@ public class BallHolder : AIBase
 
     private void AddDribbleBenefit(GameObject mate)
     {
-        //自分の近くを多少評価上げる
+        //自分の近くを評価上げる
         int x = (int)mate.transform.position.x;
-        int y = (int)mate.transform.position.y;
+        int y = (int)mate.transform.position.z;
 
-        int x_min = (x - 10) > 0 ? x - 10 : 0;
-        int y_min = (y - 10) > 0 ? y - 10 : 0;
-        int x_max = (x + 10) < 60 ? x + 10 : 60;
-        int y_max = (y + 10) < 100 ? y + 10 : 100;
+        int x_min = (x - 20) > 0 ? x - 20 : 0;
+        int y_min = (y - 20) > 0 ? y - 20 : 0;
+        int x_max = (x + 20) < 60 ? x + 20 : 60;
+        int y_max = (y + 20) < 100 ? y + 20 : 100;
 
         for (int i = x_min; i < x_max; i++)
         {
             for (int j = y_min; j < y_max; j++)
             {
-                if (CalcDistance(i, j, x, y) > 0)
-                {
-                    benefitMap[i, j] += 10;
-                }
+                benefitMap[i, j] += 50;
             }
         }
     }
@@ -140,7 +140,7 @@ public class BallHolder : AIBase
     /// <returns>最も高い期待値の点。シュートの場合Vector2Int.downを返す</returns>
     public override Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal)
     {
-        Vector2Int temp = new Vector2Int();
+        Vector2Int temp = self;
         int max = -1000;
 
         for (int i = 0; i < 60; i++)
@@ -148,35 +148,34 @@ public class BallHolder : AIBase
             for (int j = 0; j < 100; j++)
             {
 
-                if (benefitMap[i, j] == 0)
+                if (benefitMap[i, j] != 0)
                 {
-                    continue;
-                }
-                switch (strategy)
-                {
-                    case StrategyMode.Nomal:
-                        if (max < benefitMap[i, j] - riskMap[i, j])
-                        {
-                            max = benefitMap[i, j] - riskMap[i, j];
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
+                    switch (strategy)
+                    {
+                        case StrategyMode.Nomal:
+                            if (max < benefitMap[i, j] - riskMap[i, j])
+                            {
+                                max = benefitMap[i, j] - riskMap[i, j];
+                                temp = new Vector2Int(i, j);
+                            }
+                            break;
 
-                    case StrategyMode.Positive:
-                        if (max < benefitMap[i, j] * 2 - riskMap[i, j])
-                        {
-                            max = benefitMap[i, j] * 2 - riskMap[i, j];
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
+                        case StrategyMode.Positive:
+                            if (max < benefitMap[i, j] * 2 - riskMap[i, j])
+                            {
+                                max = benefitMap[i, j] * 2 - riskMap[i, j];
+                                temp = new Vector2Int(i, j);
+                            }
+                            break;
 
-                    case StrategyMode.Passive:
-                        if (max < benefitMap[i, j] - riskMap[i, j] * 2)
-                        {
-                            max = benefitMap[i, j] - riskMap[i, j] * 2;
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
+                        case StrategyMode.Passive:
+                            if (max < benefitMap[i, j] - riskMap[i, j] * 2)
+                            {
+                                max = benefitMap[i, j] - riskMap[i, j] * 2;
+                                temp = new Vector2Int(i, j);
+                            }
+                            break;
+                    }
                 }
             }
         }
