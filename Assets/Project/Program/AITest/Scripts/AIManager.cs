@@ -11,9 +11,27 @@ public class AIManager : MonoBehaviour
     public bool debug;
     public GameObject plane;
     public List<Transform> parents;
+
     private static List<CPUMove> cpus = new List<CPUMove>();
+    private List<Vector2Int>[,,] dest = new List<Vector2Int>[2, 3, 2];
+    private static List<CPUMove> team_cpu = new List<CPUMove>();
+    private static List<CPUMove> opp_cpu = new List<CPUMove>();
+    private List<GameObject> t_FW = new List<GameObject>();
+    private List<CPUMove> t_FW_cpu = new List<CPUMove>();
+    private List<GameObject> t_MF = new List<GameObject>();
+    private List<CPUMove> t_MF_cpu = new List<CPUMove>();
+    private List<GameObject> t_DF = new List<GameObject>();
+    private List<CPUMove> t_DF_cpu = new List<CPUMove>();
+    private List<GameObject> o_FW = new List<GameObject>();
+    private List<CPUMove> o_FW_cpu = new List<CPUMove>();
+    private List<GameObject> o_MF = new List<GameObject>();
+    private List<CPUMove> o_MF_cpu = new List<CPUMove>();
+    private List<GameObject> o_DF = new List<GameObject>();
+    private List<CPUMove> o_DF_cpu = new List<CPUMove>();
+    private static int team_count;
     private List<bool> evalutable;
-    private int cpu_count;
+    private static int cpu_count;
+
     private BallHolder ballHolder_t;
     private OffenceFW offenceFW_t;
     private OffenceMF offenceMF_t;
@@ -29,6 +47,7 @@ public class AIManager : MonoBehaviour
     private DefenceMF defenceMF_o;
     private DefenceDF defenceDF_o;
     private List<AIBase> all;
+    private bool start = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,17 +55,46 @@ public class AIManager : MonoBehaviour
         evalutable = new List<bool>();
         all = new List<AIBase>();
 
-        foreach(var o in team)
+        foreach (var o in team)
         {
             cpus.Add(o.GetComponent<CPUMove>());
             evalutable.Add(true);
         }
-        foreach(var o in opp)
+        team_cpu = team.Select(value => value.GetComponent<CPUMove>()).ToList();
+        team_count = cpus.Count;
+        foreach (var o in opp)
         {
             cpus.Add(o.GetComponent<CPUMove>());
             evalutable.Add(true);
         }
+        opp_cpu = opp.Select(value => value.GetComponent<CPUMove>()).ToList();
         cpu_count = cpus.Count;
+
+        t_FW = cpus.Where(value => { if (value.ally && value.position == Position.FW) { return true; } else return false; }).Select(value => value.gameObject).ToList();
+        t_MF = cpus.Where(value => { if (value.ally && value.position == Position.MF) { return true; } else return false; }).Select(value => value.gameObject).ToList();
+        t_DF = cpus.Where(value => { if (value.ally && value.position == Position.DF) { return true; } else return false; }).Select(value => value.gameObject).ToList();
+        o_FW = cpus.Where(value => { if (!value.ally && value.position == Position.FW) { return true; } else return false; }).Select(value => value.gameObject).ToList();
+        o_MF = cpus.Where(value => { if (!value.ally && value.position == Position.MF) { return true; } else return false; }).Select(value => value.gameObject).ToList();
+        o_DF = cpus.Where(value => { if (!value.ally && value.position == Position.DF) { return true; } else return false; }).Select(value => value.gameObject).ToList();
+
+        t_FW_cpu = t_FW.Select(value => value.GetComponent<CPUMove>()).ToList();
+        t_MF_cpu = t_MF.Select(value => value.GetComponent<CPUMove>()).ToList();
+        t_DF_cpu = t_DF.Select(value => value.GetComponent<CPUMove>()).ToList();
+        o_FW_cpu = o_FW.Select(value => value.GetComponent<CPUMove>()).ToList();
+        o_MF_cpu = o_MF.Select(value => value.GetComponent<CPUMove>()).ToList();
+        o_DF_cpu = o_DF.Select(value => value.GetComponent<CPUMove>()).ToList();
+
+        for (int i = 0; i < 2; i++)
+        {
+            for(int j = 0;j < 3; j++)
+            {
+                for(int k = 0; k < 2; k++)
+                {
+                    dest[i, j, k] = new List<Vector2Int>();
+                }
+            }
+        }
+
 
         ball.PassSend += OnPass;
         ball.Trapping += OnTrap;
@@ -83,7 +131,7 @@ public class AIManager : MonoBehaviour
         defenceDF_o = new DefenceDF(opp, team, ball, false);
         all.Add(defenceDF_o);
 
-        foreach(var e in all)
+        foreach (var e in all)
         {
             e.Revaluation();
         }
@@ -92,56 +140,76 @@ public class AIManager : MonoBehaviour
 
         if (debug)
         {
-            for(int i = 0; i < all.Count; i++)
+            for (int i = 0; i < all.Count; i++)
             {
-                all[i].InitVisualize(parents.Skip(2 * i).Take(2).ToArray(),plane, new Vector3(70 * (i + 1), 0, 0), new Vector3(70 * (i + 1), 0, 110));
+                all[i].InitVisualize(parents.Skip(2 * i).Take(2).ToArray(), plane, new Vector3(70 * (i + 1), 0, 0), new Vector3(70 * (i + 1), 0, 110));
             }
         }
+
+        start = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < cpu_count; i++)
+        if (start)
         {
-            SetState(i);
-        }
+            SetDest();
+            CalcState();
 
-        if (debug)
-        {
-            for(int i = 0; i < all.Count; i++)
+            if (debug)
             {
-                all[i].UpdateVisualize();
+                for (int i = 0; i < all.Count; i++)
+                {
+                    all[i].UpdateVisualize();
+                }
             }
         }
     }
 
+    private void SetDest()
+    {
+        dest[0, 0, 0] = offenceFW_t.MaxValuePoint(Vector2Int.zero, t_FW.Count);
+        dest[0, 0, 1] = defenceFW_t.MaxValuePoint(Vector2Int.zero, t_FW.Count);
+        dest[0, 1, 0] = offenceMF_t.MaxValuePoint(Vector2Int.zero, t_MF.Count);
+        dest[0, 1, 1] = defenceMF_t.MaxValuePoint(Vector2Int.zero, t_MF.Count);
+        dest[0, 2, 0] = offenceDF_t.MaxValuePoint(Vector2Int.zero, t_DF.Count);
+        dest[0, 2, 1] = defenceDF_t.MaxValuePoint(Vector2Int.zero, t_DF.Count);
+        dest[1, 0, 0] = offenceFW_o.MaxValuePoint(Vector2Int.zero, o_FW.Count);
+        dest[1, 0, 1] = defenceFW_o.MaxValuePoint(Vector2Int.zero, o_FW.Count);
+        dest[1, 1, 0] = offenceMF_o.MaxValuePoint(Vector2Int.zero, o_MF.Count);
+        dest[1, 1, 1] = defenceMF_o.MaxValuePoint(Vector2Int.zero, o_MF.Count);
+        dest[1, 2, 0] = offenceDF_o.MaxValuePoint(Vector2Int.zero, o_DF.Count);
+        dest[1, 2, 1] = defenceDF_o.MaxValuePoint(Vector2Int.zero, o_DF.Count);
+    }
+
     private void OnPass(object sender, PassEventArgs e)
     {
-        var recever = FindByVector2(e.recever);
-        recever.destination = new Vector2Int((int)e.recever.x,(int)e.recever.y);
+        var ally = ball.owner.GetComponent<CPUMove>().ally;
+        var recever = FindByVector2(ally ? team_cpu : opp_cpu, e.recever);
+        recever.destination = new Vector2Int((int)e.recever.x, (int)e.recever.y);
         int idx1 = cpus.IndexOf(recever);
         evalutable[idx1] = false;
         recever.action = CPUAction.GetBall;
+        recever.destination = new Vector2Int((int)e.recever.x, (int)e.recever.y);
 
-        var send = FindByVector2(e.sender);
+        var send = FindByVector2(ally ? team_cpu : opp_cpu, e.sender);
         int idx2 = cpus.IndexOf(send);
         evalutable[idx2] = false;
-        send.action = CPUAction.Move;
+        Debug.Log("recever :" + recever + ", point :" + e.recever);
 
-
-        if(e.height == PassHeight.Low)
+        if (e.height == PassHeight.Low)
         {
-            if(idx1 < team.Count)
+            if (idx1 < team.Count)
             {
-                for(int i = team.Count; i < cpu_count; i++)
+                for (int i = team.Count; i < cpu_count; i++)
                 {
                     Cutball(e, i);
                 }
             }
             else
             {
-                for(int i = team.Count - 1; i > -1; i--)
+                for (int i = team.Count - 1; i > -1; i--)
                 {
                     Cutball(e, i);
                 }
@@ -153,7 +221,7 @@ public class AIManager : MonoBehaviour
             {
                 for (int i = team.Count; i < cpu_count; i++)
                 {
-                    if((e.recever - cpus[i].gameObject.ToVector2Int()).sqrMagnitude < 100)
+                    if ((e.recever - cpus[i].gameObject.ToVector2Int()).sqrMagnitude < 100)
                     {
                         cpus[i].action = CPUAction.CutBall;
                         cpus[i].destination = new Vector2Int((int)e.recever.x, (int)e.recever.y);
@@ -193,9 +261,9 @@ public class AIManager : MonoBehaviour
 
     }
 
-    private CPUMove FindByVector2(Vector2 pos)
+    private static CPUMove FindByVector2(List<CPUMove> objs ,Vector2 pos)
     {
-        return cpus.Aggregate((result, next) => (result.gameObject.ToVector2Int() - pos).sqrMagnitude > (next.gameObject.ToVector2Int() - pos).sqrMagnitude ? result : next);
+        return objs.Aggregate((result, next) => (result.gameObject.ToVector2Int() - pos).sqrMagnitude < (next.gameObject.ToVector2Int() - pos).sqrMagnitude ? result : next);
     }
 
     private void OnTrap(object sender, TrapEventArgs e)
@@ -212,8 +280,11 @@ public class AIManager : MonoBehaviour
     private void OnSteal(object sender, StealEventArgs e)
     {
         var temp = ball.owner.GetComponent<CPUMove>();
-        temp.SetState(CPUAction.Move, temp.destination);
+        temp.action = CPUAction.Move;
+        temp.can_change = false;
+        StartCoroutine(temp.CoolTime());
         ball.owner = e.stealer;
+        ball.owner.GetComponent<CPUMove>().action = CPUAction.Dribble;
     }
 
     private void OnGoal(object sender, GoalEventArgs e)
@@ -226,115 +297,81 @@ public class AIManager : MonoBehaviour
         //TODO: ボールが外に出たときの処理
     }
 
-    private void SetState(int i)
+    private void CalcState()
     {
-        if (!evalutable[i])
-        {
-            return;
-        }
+        bool ally = ball.owner.GetComponent<CPUMove>().ally;
+        var t_FW = ally ? dest[0, 0, 0] : dest[0, 0, 1];
+        var t_MF = ally ? dest[0, 1, 0] : dest[0, 0, 1];
+        var t_DF = ally ? dest[0, 2, 0] : dest[0, 2, 1];
+        var o_FW = ally ? dest[1, 0, 1] : dest[1, 0, 0];
+        var o_MF = ally ? dest[1, 1, 1] : dest[1, 1, 0];
+        var o_DF = ally ? dest[1, 2, 1] : dest[1, 2, 0];
+        CalcEachState(t_FW, t_FW_cpu);
+        CalcEachState(t_MF, t_MF_cpu);
+        CalcEachState(t_DF, t_DF_cpu);
+        CalcEachState(o_FW, o_FW_cpu);
+        CalcEachState(o_MF, o_MF_cpu);
+        CalcEachState(o_DF, o_DF_cpu);
 
-        if(cpus[i].gameObject == ball.owner)
+    }
+
+    private void CalcEachState(List<Vector2Int> dest, List<CPUMove> c)
+    {
+        CPUMove[] temp = new CPUMove[c.Count];
+        c.CopyTo(temp);
+        var left = temp.ToList();
+        foreach (var d in dest)
         {
-            Vector2Int point;
-            if (cpus[i].ally)
+            var obj = FindByVector2(left, d);
+            if (obj.gameObject == ball.owner)
             {
-                point = ballHolder_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int());
+                SetOwnerState(obj);
             }
             else
             {
-                point = ballHolder_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int());
+                SetState(CPUAction.Move, d, cpus.IndexOf(obj));
             }
+            left.Remove(obj);
+        }
+    }
 
-            if(point == Vector2Int.down)
-            {
-                cpus[i].SetState(CPUAction.Shoot, Vector2Int.zero);
-            }
-            else if ((cpus[i].gameObject.ToVector2Int() - point).sqrMagnitude > 100)
-            {
-                cpus[i].SetState(CPUAction.Pass, point);
-            }
-            else
-            {
-                cpus[i].SetState(CPUAction.Dribble, point);
-            }
+    private void SetOwnerState(CPUMove owner)
+    {
 
+        Vector2Int point;
+        if (owner.ally)
+        {
+            point = ballHolder_t.MaxValuePoint(owner.gameObject.ToVector2Int(), 1).First();
+        }
+        else
+        {
+            point = ballHolder_o.MaxValuePoint(owner.gameObject.ToVector2Int(), 1).First();
+        }
+
+        if (point == Vector2Int.down)
+        {
+            owner.SetState(CPUAction.Shoot, Vector2Int.zero);
+        }
+        else if (FindByVector2(team_cpu, point) == owner || FindByVector2(opp_cpu, point) == owner)
+        {
+            owner.SetState(CPUAction.Dribble, point);
+            
+        }
+        else
+        {
+            owner.SetState(CPUAction.Pass, point);
+        }
+    }
+
+    private void SetState(CPUAction action, Vector2Int dest, int idx)
+    {
+        if (!evalutable[idx])
+        {
             return;
         }
-        
-        switch (cpus[i].position)
+        else
         {
-            case Position.FW:
-                if(i < team.Count)
-                {
-                    if(ball.owner.GetComponent<CPUMove>().ally)
-                    {
-                        cpus[i].SetState(CPUAction.Move, offenceFW_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                    else
-                    {
-                        cpus[i].SetState(CPUAction.Move, defenceFW_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                }
-                else
-                {
-                    if (ball.owner.GetComponent<CPUMove>().ally)
-                    {
-                        cpus[i].SetState(CPUAction.Move, offenceFW_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                    else
-                    {
-                        cpus[i].SetState(CPUAction.Move, defenceFW_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                }break;
-
-            case Position.MF:
-                if (i < team.Count)
-                {
-                    if (ball.owner.GetComponent<CPUMove>().ally)
-                    {
-                        cpus[i].SetState(CPUAction.Move, offenceMF_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                    else
-                    {
-                        cpus[i].SetState(CPUAction.Move, defenceMF_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                }
-                else
-                {
-                    if (ball.owner.GetComponent<CPUMove>().ally)
-                    {
-                        cpus[i].SetState(CPUAction.Move, offenceMF_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                    else
-                    {
-                        cpus[i].SetState(CPUAction.Move, defenceMF_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                }break;
-
-            case Position.DF:
-                if (i < team.Count)
-                {
-                    if (ball.owner.GetComponent<CPUMove>().ally)
-                    {
-                        cpus[i].SetState(CPUAction.Move, offenceDF_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                    else
-                    {
-                        cpus[i].SetState(CPUAction.Move, defenceDF_t.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                }
-                else
-                {
-                    if (ball.owner.GetComponent<CPUMove>().ally)
-                    {
-                        cpus[i].SetState(CPUAction.Move, offenceDF_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                    else
-                    {
-                        cpus[i].SetState(CPUAction.Move, defenceDF_o.MaxValuePoint(cpus[i].gameObject.ToVector2Int()));
-                    }
-                }
-                break;
+            cpus[idx].SetState(action, dest);
         }
     }
 
@@ -343,7 +380,7 @@ public class AIManager : MonoBehaviour
     {
         while (true)
         {
-            foreach(var e in all)
+            foreach (var e in all)
             {
                 e.Revaluation();
 
@@ -355,8 +392,22 @@ public class AIManager : MonoBehaviour
     public static float MinimamEnemy(Vector2 sender, Vector2 recever)
     {
         List<float> temp = new List<float>();
+        int skip;
+        int take;
+        var obj = GameObject.Find("ball").GetComponent<BallControler>().owner.GetComponent<CPUMove>().ally ? team_cpu : opp_cpu;
 
-        cpus.ForEach(value =>
+        if (cpus.IndexOf(FindByVector2(obj ,sender)) < team_count)
+        {
+            skip = 0;
+            take = team_count;
+        }
+        else
+        {
+            skip = team_count;
+            take = cpu_count - team_count;
+        }
+
+        cpus.Skip(skip).Take(take).ToList().ForEach(value =>
         {
             Vector2 val = value.gameObject.ToVector2Int();
             var x1 = recever.x - sender.x;

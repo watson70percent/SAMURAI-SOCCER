@@ -32,7 +32,7 @@ public class DefenceMF : AIBase
                 {
                     for (int j = y_min; j < y_max; j++)
                     {
-                        benefitMap[i, j] = (int)(PointValue(i, j) * CalcDistance(i, j, x, y));
+                        benefitMap[i, j] = PointValue(i, j);
                         if (benefitMap[i, j] < 0)
                         {
                             benefitMap[i, j] = 0;
@@ -58,7 +58,7 @@ public class DefenceMF : AIBase
                         {
                             if (i >= 0 && i < 60 && j >= 0 && j < 100)
                             {
-                                riskMap[i, j] += 5;
+                                benefitMap[i, j] += 5;
                             }
                         }
                     }
@@ -74,7 +74,7 @@ public class DefenceMF : AIBase
                         {
                             if (i >= 0 && i < 60 && j >= 0 && j < 100)
                             {
-                                riskMap[i, j] += 5;
+                                benefitMap[i, j] += 5;
                             }
                         }
                     }
@@ -127,7 +127,7 @@ public class DefenceMF : AIBase
         //前に行きすぎ回避
         if (goal.y == 100)
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 60; i++)
             {
                 for (int j = 99; j > ball.transform.position.z; j--)
                 {
@@ -140,7 +140,7 @@ public class DefenceMF : AIBase
         }
         else
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 60; i++)
             {
                 for (int j = 0; j < ball.transform.position.z; j++)
                 {
@@ -153,53 +153,7 @@ public class DefenceMF : AIBase
         }
 
 
-        //近くなりすぎを避ける
-        foreach (var mate in goal.y == 100 ? teamMate : opponent)
-        {
-            foreach (var mate2 in goal.y == 100 ? teamMate : opponent)
-            {
-                if (mate != mate2)
-                {
-                    if ((mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude < 100)
-                    {
-                        int x_min, x_max, y_min, y_max;
-                        if (mate.transform.position.x > mate2.transform.position.x)
-                        {
-                            x_max = (int)mate2.transform.position.x;
-                            x_min = (int)mate.transform.position.x;
-                        }
-                        else
-                        {
-                            x_min = (int)mate2.transform.position.x;
-                            x_max = (int)mate.transform.position.x;
-                        }
-
-                        if (mate.transform.position.z > mate2.transform.position.z)
-                        {
-                            y_max = (int)mate2.transform.position.z;
-                            y_min = (int)mate.transform.position.z;
-                        }
-                        else
-                        {
-                            y_min = (int)mate2.transform.position.z;
-                            y_max = (int)mate.transform.position.z;
-                        }
-
-                        for (int i = x_min; i < x_max; i++)
-                        {
-                            for (int j = y_min; j < y_max; j++)
-                            {
-                                if (i >= 0 && i < 60 && j >= 0 && j < 100)
-                                {
-                                    riskMap[i, j] += (int)((mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude * 0.1f);
-                                }
-                                
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        AvoidTeamMate();
     }
 
     private int PointValue(int x, int y)
@@ -226,8 +180,8 @@ public class DefenceMF : AIBase
         return temp;
     }
 
-    public override Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal)
+    public override List<Vector2Int> MaxValuePoint(Vector2Int self,int num ,StrategyMode strategy = StrategyMode.Nomal)
     {
-        return base.MaxValuePoint(self, strategy);
+        return base.MaxValuePoint(self, num, strategy);
     }
 }

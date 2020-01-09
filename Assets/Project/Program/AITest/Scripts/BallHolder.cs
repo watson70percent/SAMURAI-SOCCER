@@ -109,6 +109,8 @@ public class BallHolder : AIBase
                     riskGoal += 10;
                 }
             }
+
+            AvoidTeamMate(0.5f);
         }
     }
 
@@ -119,16 +121,26 @@ public class BallHolder : AIBase
         int x = (int)mate.transform.position.x;
         int y = (int)mate.transform.position.z;
 
-        int x_min = (x - 20) > 0 ? x - 20 : 0;
-        int y_min = (y - 20) > 0 ? y - 20 : 0;
-        int x_max = (x + 20) < 60 ? x + 20 : 60;
-        int y_max = (y + 20) < 100 ? y + 20 : 100;
+        int x_min = (x - 10) > 0 ? x - 10 : 0;
+        int y_min = (y - 10) > 0 ? y - 10 : 0;
+        int x_max = (x + 10) < 60 ? x + 10 : 60;
+        int y_max = (y + 10) < 100 ? y + 10 : 100;
 
         for (int i = x_min; i < x_max; i++)
         {
             for (int j = y_min; j < y_max; j++)
             {
-                benefitMap[i, j] += 50;
+                if ((x - i) * (x - i) + (y - j) * (y - j) < 100)
+                {
+                    if (goal.y == 100)
+                    {
+                        benefitMap[i, j] += 50 - 2 * (y_max - j);
+                    }
+                    else
+                    {
+                        benefitMap[i, j] += 50 - 2 * (j - y_min);
+                    }
+                }
             }
         }
     }
@@ -138,9 +150,10 @@ public class BallHolder : AIBase
     /// </summary>
     /// <param name="strategy">戦略</param>
     /// <returns>最も高い期待値の点。シュートの場合Vector2Int.downを返す</returns>
-    public override Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal)
+    public override List<Vector2Int> MaxValuePoint(Vector2Int self,int num, StrategyMode strategy = StrategyMode.Nomal)
     {
         Vector2Int temp = self;
+        List<Vector2Int> res = new List<Vector2Int>();
         int max = -1000;
 
         for (int i = 0; i < 60; i++)
@@ -179,7 +192,7 @@ public class BallHolder : AIBase
                 }
             }
         }
-
-        return temp;
+        res.Add(temp);
+        return res;
     }
 }

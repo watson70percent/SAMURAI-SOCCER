@@ -11,7 +11,7 @@ public class CPUMove : MonoBehaviour
     public Position position;
     public bool ally;
     public BallControler ball;
-    private bool can_change = true;
+    public bool can_change = true;
     private IEnumerator dribble;
     private int counter = 0;
     private PersonalStatus self;
@@ -40,7 +40,7 @@ public class CPUMove : MonoBehaviour
     private void Dribble()
     {
         AllMove();
-        if(dribble == null || counter == 40)
+        if(dribble == null || counter == 10)
         {
             dribble = ball.Dribble(self);
             counter = 0;
@@ -54,15 +54,16 @@ public class CPUMove : MonoBehaviour
 
     private void Move()
     {
-        var dis = AllMove();
-        if(dis < 1)
+        AllMove();
+        var dis = (gameObject.transform.position - ball.gameObject.transform.position).sqrMagnitude;
+        if(dis < 2)
         {
             SetState(CPUAction.Steal, ball.gameObject.ToVector2Int());
         }
         dribble = null;
     }
 
-    private float AllMove(float max = 5, Vector2 dest = default)
+    private void AllMove(float max = 5, Vector2 dest = default)
     {
         if(dest == default)
         {
@@ -89,15 +90,11 @@ public class CPUMove : MonoBehaviour
             }
         }
 
-
-        Vector3 pos = gameObject.transform.position;
+        Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
         gameObject.transform.rotation = Quaternion.Euler(0, Mathf.Atan2(vec.y, vec.x), 0);
-        vec = vec.normalized * velocity / 60;
-        pos += new Vector3(vec.x, 0, vec.y);
-        gameObject.transform.position = pos;
-
-
-        return dis;
+        vec = vec.normalized;
+        gameObject.transform.Translate(vec.x * Time.deltaTime, 0, vec.y * Time.deltaTime, Space.World);
+        gameObject.transform.rotation = Quaternion.Euler(rot);
     }
 
     private void GetBall()
@@ -116,17 +113,22 @@ public class CPUMove : MonoBehaviour
     private void Pass()
     {
         float min = AIManager.MinimamEnemy(gameObject.ToVector2Int(), destination);
+        bool done;
         if(min < 5)
         {
-            ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.Low, gameObject.GetComponent<PersonalStatus>());
+            done = ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.Low, gameObject.GetComponent<PersonalStatus>());
         }
         else if((gameObject.ToVector2Int() - destination).sqrMagnitude < 900)
         {
-            ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.High, gameObject.GetComponent<PersonalStatus>());
+            done = ball.Pass(ball.gameObject.ToVector2Int(), destination, PassHeight.High, gameObject.GetComponent<PersonalStatus>());
         }
         else
         {
-            ball.Pass(ball.gameObject.ToVector2Int(), destination,self: gameObject.GetComponent<PersonalStatus>());
+            done = ball.Pass(ball.gameObject.ToVector2Int(), destination,self: gameObject.GetComponent<PersonalStatus>());
+        }
+        if (done)
+        {
+            action = CPUAction.Move;
         }
         dribble = null;
     }
@@ -145,6 +147,7 @@ public class CPUMove : MonoBehaviour
 
     public void SetState(CPUAction act, Vector2Int dest)
     {
+
         if (action != act)
         {
             if (can_change)
@@ -155,13 +158,29 @@ public class CPUMove : MonoBehaviour
                 can_change = false;
                 StartCoroutine(CoolTime());
             }
+        }else
+        {
+            destination = dest;
         }
     }
 
-    private IEnumerator CoolTime()
+    public IEnumerator CoolTime()
     {
         yield return new WaitForSeconds(1);
         can_change = true;
+    }
+    
+    private void OnTriggerEnter(Collider collision)
+    {
+        switch (action)
+        {
+            case CPUAction.GetBall:
+            case CPUAction.CutBall:
+                if(collision.gameObject == ball.gameObject)
+                {
+                    ball.Trap(gameObject, self);
+                }break;
+        }
     }
 }
 

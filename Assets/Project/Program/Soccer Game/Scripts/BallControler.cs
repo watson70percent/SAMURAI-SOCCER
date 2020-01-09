@@ -41,17 +41,17 @@ public class BallControler : MonoBehaviour
     public IEnumerator Dribble(PersonalStatus self)
     {
         last_touch = self.ally;
-        rb.AddForce(5 * new Vector3(-Mathf.Sin(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad), 0, Mathf.Cos(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad)), ForceMode.Impulse);
+        rb.AddForce(new Vector3(Mathf.Sin(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * 4, 0, Mathf.Cos(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * 4), ForceMode.Impulse);
         var e = new DribbleEventArgs();
         e.owner = owner;
         OnDribble(e);
         yield return null;
-        for(int i = 0; i < 19; i++)
+        for(int i = 0; i < 4; i++)
         {
             yield return null;
         }
         Vector3 pos = transform.position;
-        for(int i = 0; i < 20; i++)
+        for(int i = 0; i < 5; i++)
         {
             pos.x = Mathf.Lerp(pos.x, owner.transform.position.x, i / 20.0f);
             pos.z = Mathf.Lerp(pos.z, owner.transform.position.z, i / 20.0f);
@@ -135,7 +135,7 @@ public class BallControler : MonoBehaviour
     /// <param name="recever">パス受け取る人</param>
     /// <param name="height">パスの高さ</param>
     /// <param name="self">自分の能力</param>
-    public void Pass(Vector2 sender, Vector2 recever, PassHeight height = PassHeight.Middle, PersonalStatus self = default)
+    public bool Pass(Vector2 sender, Vector2 recever, PassHeight height = PassHeight.Middle, PersonalStatus self = default)
     {
         if (gameObject.transform.position.y < 1 && (sender - gameObject.ToVector2Int()).sqrMagnitude < 4)
         {
@@ -144,6 +144,8 @@ public class BallControler : MonoBehaviour
             {
                 self.power = 30;
             }
+
+            rb.velocity = Vector3.zero;
             switch (height)
             {
                 case PassHeight.Low: CalcLowPass(sender, recever, self); break;
@@ -156,7 +158,10 @@ public class BallControler : MonoBehaviour
             e.recever = recever;
             e.height = height;
             OnPass(e);
+            return true;
         }
+
+        return false;
     }
 
     private void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)
