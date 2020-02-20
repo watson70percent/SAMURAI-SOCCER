@@ -2,17 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedereeMove : MonoBehaviour
+public class RefereeMove : MonoBehaviour
 {
     public GameObject ball;
     public float lookatspeed;
     public float runningspeed;
     public float radius;
     Rigidbody rig;
+    public RefereeArea refereeArea;
+    public AnimationController animcon;
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody>();
+
+        animcon.AttackEvent += (sender, e) =>
+        {
+            var vec = ((AnimationController)sender).transform.position - transform.position;
+            if (vec.magnitude < refereeArea.size)
+            {
+                if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
+                {
+                    print("yakki");
+                }
+            }
+        };
     }
 
     // Update is called once per frame
