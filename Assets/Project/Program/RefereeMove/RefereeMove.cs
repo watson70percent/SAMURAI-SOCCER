@@ -11,9 +11,12 @@ public class RefereeMove : MonoBehaviour
     Rigidbody rig;
     public RefereeArea refereeArea;
     public AnimationController animcon;
+    ParticleSystem bikkuri;
     // Start is called before the first frame update
     void Start()
     {
+        bikkuri = GetComponent<ParticleSystem>();
+
         rig = GetComponent<Rigidbody>();
 
         animcon.AttackEvent += (sender, e) =>
@@ -23,7 +26,7 @@ public class RefereeMove : MonoBehaviour
             {
                 if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
                 {
-                    print("yakki");
+                    bikkuri.Play();
                 }
             }
         };
