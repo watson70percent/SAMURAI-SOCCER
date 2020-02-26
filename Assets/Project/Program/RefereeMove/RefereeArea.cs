@@ -9,13 +9,13 @@ public class RefereeArea : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MeshMaker();
+        //MeshMaker();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //DynamicMeshMaker();
+        DynamicMeshMaker();
     }
 
     void MeshMaker()
