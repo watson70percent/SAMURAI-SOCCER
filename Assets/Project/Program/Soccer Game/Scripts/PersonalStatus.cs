@@ -8,5 +8,7 @@ public class PersonalStatus : MonoBehaviour
     public int hp;
     public int power;
     public bool ally;
-
+    public float see;
+    public float seelen;
+    public float fast;
 }

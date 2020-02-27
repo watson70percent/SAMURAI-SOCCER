@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class BallControler : MonoBehaviour
 {
-    private Rigidbody rb;
+    public Rigidbody rb;
     private static readonly float sqrt3 = Mathf.Sqrt(3);
     private static readonly float sqrt2 = Mathf.Sqrt(2);
     private static readonly float gravity = 9.8f;
@@ -137,7 +137,7 @@ public class BallControler : MonoBehaviour
     /// <param name="self">自分の能力</param>
     public bool Pass(Vector2 sender, Vector2 recever, PassHeight height = PassHeight.Middle, PersonalStatus self = default)
     {
-        if (gameObject.transform.position.y < 1 && (sender - gameObject.ToVector2Int()).sqrMagnitude < 4)
+        if (gameObject.transform.position.y < 1 && (sender - gameObject.ToVector2Int()).sqrMagnitude < 4 && rb.velocity.sqrMagnitude < 25)
         {
 
             if (self == default)
@@ -210,23 +210,26 @@ public class BallControler : MonoBehaviour
     /// <param name="self">能力値</param>
     public void Shoot(GameObject sender, PersonalStatus self = default)
     {
-        if(self == default)
+        if (rb.velocity.sqrMagnitude < 25)
         {
-            self.power = 30;
-        }
+            if (self == default)
+            {
+                self.power = 30;
+            }
 
-        Vector3 dest;
-        if (self.ally)
-        {
-            dest = (new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 50) - sender.transform.position).normalized;
-        }
-        else
-        {
-            dest = (new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), -50) - sender.transform.position).normalized;
-        }
+            Vector3 dest;
+            if (self.ally)
+            {
+                dest = (new Vector3(Random.Range(20, 40), Random.Range(0.0f, 2.0f), 100) - sender.transform.position).normalized;
+            }
+            else
+            {
+                dest = (new Vector3(Random.Range(20, 40), Random.Range(0.0f, 2.0f), 0) - sender.transform.position).normalized;
+            }
 
-        rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z),ForceMode.Impulse);
-        Debug.Log(self.power * dest);
+            rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z), ForceMode.Impulse);
+            Debug.Log(self.power * dest);
+        }
     }
 
     /// <summary>
