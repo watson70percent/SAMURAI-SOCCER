@@ -2,7 +2,7 @@
 
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
-Shader "Custom/Refraction"
+Shader "Custom/Glass"
 {
 	Properties
 	{
