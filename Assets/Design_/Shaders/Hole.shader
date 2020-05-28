@@ -122,7 +122,7 @@
 
 				float3 normal = float3(0,1,0);
 
-				const int StepNum = 70;
+				const int StepNum = 200;
 				for (int i = 0; i < StepNum; i++)
 				{
 					float dis = getDis(pos);

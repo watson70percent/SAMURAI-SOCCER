@@ -1,10 +1,8 @@
-﻿Shader "Custom/RayMarching"
+﻿Shader "Custom/RayMarchingDefault"
 {
 	Properties
 	{
-		 _Threshold("Threshold", Range(0.0,3.0)) = 0.6 // sliders
-		 _Freqency("Freaquency",Float) = 1
-		_TimeRate("TimeRate",Float)=1
+
 	}
 
 
@@ -27,7 +25,7 @@
 			#include "UnityCG.cginc"
 			#define PI 3.141592
 
-			
+
 
 			struct appdata
 			{
@@ -40,6 +38,12 @@
 				float4 pos:POSITION1;
 			};
 
+			struct rm
+			{
+				float dis : TEXCOORD0;
+				fixed4 col : TEXCOORD1;
+			};
+
 			v2f vert(appdata v)
 			{
 				v2f o;
@@ -48,17 +52,16 @@
 				return o;
 			}
 
-			float _Threshold;
-			float _Freqency;
-			float _TimeRate;
+			rm RayMarching(float3 pos) {
+				rm o;
+				o.dis = length(pos) - 1;
+				o.col = fixed4(1, 1, 1, 1);
+				return o;
+			}
 
 
 			//レイマーチングはこの距離関数で模様を決める
-			bool isInObject(float3 pos) {
-				const float PI2 = 6.28318530718;
-				float dist = length(pos);
-				return sin(PI2 * dist * _Freqency + PI2 * _Time * _TimeRate) < _Threshold;
-			}
+			
 
 			fixed4 frag(v2f i) : SV_Target
 			{
@@ -75,15 +78,16 @@
 				const float MarchingDist = 0.03;
 				for (int i = 0; i < StepNum; i++)
 				{
-					if (isInObject(pos)) {
+					rm o = RayMarching(pos);
+					if (o.dis<0.01) {
 						col.xyz = 1.0 - i * 0.03;
 						break;
 					}
 					pos.xyz += MarchingDist * forward;
-					
+
 
 				}
-				col.w = saturate(StepNum-i-1);
+				col.w = saturate(StepNum - i - 1);
 				//col.w = 1-i* 0.02;
 
 
@@ -98,3 +102,4 @@
 	}
 		FallBack "Diffuse"
 }
+
