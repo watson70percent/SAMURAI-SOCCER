@@ -74,6 +74,8 @@ public class slidepad : MonoBehaviour
 
     void Controller(Vector2 dir)
     {
+        dir = new Vector2(dir.y, -dir.x);
+
         Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
         // print(rotationdir);
         rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;

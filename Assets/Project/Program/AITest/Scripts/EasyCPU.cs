@@ -97,14 +97,14 @@ public class EasyCPU : MonoBehaviour
         {
             if (velocity < max)
             {
-                velocity += 0.05f;
+                velocity += 0.2f;
             }
         }
         else
         {
             if (velocity < Mathf.Log10(dis + 1) * max)
             {
-                velocity += 0.05f;
+                velocity += 0.2f;
             }
             else
             {
@@ -114,6 +114,7 @@ public class EasyCPU : MonoBehaviour
 
         Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
         vec = vec.normalized;
+        vec *= (float)velocity;
         gameObject.transform.Translate(vec.x * Time.deltaTime, 0, vec.y * Time.deltaTime, Space.World);
         gameObject.transform.rotation = Quaternion.Euler(rot);
     }
