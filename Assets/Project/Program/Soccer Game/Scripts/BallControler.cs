@@ -261,7 +261,7 @@ public enum PassHeight
 }
 
 public class GoalEventArgs : EventArgs {
-    public bool Ally;
+    public bool Ally;//true 味方のゴール
 }
 
 public class OutBallEventArgs : EventArgs {

@@ -35,7 +35,7 @@ public class TimerScript : MonoBehaviour
                 playing = false;
                 end = true;
                 //ここに多分処理を追加することになる
-
+                Time.timeScale = 0;
 
             }
         }
