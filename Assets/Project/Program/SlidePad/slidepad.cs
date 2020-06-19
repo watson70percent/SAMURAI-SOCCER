@@ -19,6 +19,12 @@ public class slidepad : MonoBehaviour
 
     public Text text;
 
+    public enum State
+    {
+        StandBy,
+        Playing
+    }
+    State state = State.StandBy;
 
     int fingerID;
     // Start is called before the first frame update
@@ -34,16 +40,28 @@ public class slidepad : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        switch (state)
+        {
+            case State.StandBy : break;
+            case State.Playing: PlayingState(); break;
+            default: break;
+        }
         
+        
+    }
+
+
+    void PlayingState()
+    {
         if (isdragged == true)
         {
             if (Input.touchCount > 0)
             {
-                 Touch touch=FindFinger();
-               // print(touch.position+":"+slidestartposition);
+                Touch touch = FindFinger();
+                // print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
-                
+
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
                 Controller(dir);
@@ -52,8 +70,9 @@ public class slidepad : MonoBehaviour
 
             }
         }
-        
     }
+
+
 
     public void DragStart(BaseEventData baseEventData)
     {
@@ -102,5 +121,14 @@ public class slidepad : MonoBehaviour
 
         }
         return new Touch();
+    }
+
+    /// <summary>
+    /// コントローラーのStateをセット
+    /// </summary>
+    /// <param name="newstate"></param>
+    public void SetState(State newstate)
+    {
+        state = newstate;
     }
 }

@@ -13,6 +13,15 @@ public class RefereeMove : MonoBehaviour
     public AnimationController animcon;
     ParticleSystem bikkuri;
     // Start is called before the first frame update
+
+    public enum State
+    {
+        StandBy,
+        Playing
+    }
+
+    State state = State.StandBy;
+
     void Start()
     {
         bikkuri = GetComponent<ParticleSystem>();
@@ -35,9 +44,18 @@ public class RefereeMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LookAtBall();
-        MoveAroundBall();
+        switch(state){
+            case State.StandBy : break;
+            case State.Playing:
+                LookAtBall();
+                MoveAroundBall();
+                break;
+            default: break;
+        }
 
+       
+
+        
     }
 
 
@@ -89,5 +107,15 @@ public class RefereeMove : MonoBehaviour
 
         transform.rotation = rotate * transform.rotation;
 
+    }
+    
+
+    /// <summary>
+    /// 審判のStateを変えます
+    /// </summary>
+    /// <param name="newstate"></param>
+    public void SetState(State newstate)
+    {
+        state = newstate;
     }
 }
