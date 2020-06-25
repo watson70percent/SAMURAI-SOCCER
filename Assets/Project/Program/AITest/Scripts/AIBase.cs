@@ -1,19 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class AIBase
 {
     protected int[,] benefitMap = new int[60, 100];
     protected int[,] riskMap = new int[60, 100];
+    protected bool[,] evaluateble = new bool[60, 100]; 
     protected List<GameObject> teamMate = new List<GameObject>();
     protected List<GameObject> opponent = new List<GameObject>();
     protected Vector2Int goal;
     protected BallControler ball;
     protected GameObject plane;
-    protected Renderer[,] objs_b = new Renderer[60, 100];
-    protected Renderer[,] objs_r = new Renderer[60, 100];
+    protected MeshRenderer[,] objs_b = new MeshRenderer[15, 25];
+    protected MeshRenderer[,] objs_r = new MeshRenderer[15, 25];
 
     public AIBase(List<GameObject> team, List<GameObject> opp, BallControler _ball, bool _ally)
     {
@@ -35,58 +38,85 @@ public class AIBase
     /// </summary>
     public virtual void Revaluation() { }
 
-    public virtual Vector2Int MaxValuePoint(Vector2Int self, StrategyMode strategy = StrategyMode.Nomal)
+    public virtual List<Vector2Int> MaxValuePoint(Vector2Int self,int num ,StrategyMode strategy = StrategyMode.Nomal)
     {
-        Vector2Int temp = new Vector2Int();
-        int max = -1000;
-        int x_min = self.x < 10 ? 0 : self.x - 10;
-        int x_max = self.x > 50 ? 60 : self.x + 10;
-        int y_min = self.y < 10 ? 0 : self.y - 10;
-        int y_max = self.y > 90 ? 100 : self.y + 10;
-
-        for (int i = x_min; i < x_max; i++)
+        for(int i = 0; i < 60; i++)
         {
-            for (int j = y_min; j < y_max; j++)
+            for(int j = 0; j < 100; j++)
             {
-
-                if (benefitMap[i, j] == 0)
-                {
-                    continue;
-                }
-                switch (strategy)
-                {
-                    case StrategyMode.Nomal:
-                        if (max < benefitMap[i, j] - riskMap[i, j])
-                        {
-                            max = benefitMap[i, j] - riskMap[i, j];
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
-
-                    case StrategyMode.Positive:
-                        if (max < benefitMap[i, j] * 2 - riskMap[i, j])
-                        {
-                            max = benefitMap[i, j] * 2 - riskMap[i, j];
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
-
-                    case StrategyMode.Passive:
-                        if (max < benefitMap[i, j] - riskMap[i, j] * 2)
-                        {
-                            max = benefitMap[i, j] - riskMap[i, j] * 2;
-                            temp = new Vector2Int(i, j);
-                        }
-                        break;
-                }
+                evaluateble[i, j] = true;
             }
         }
 
-        return temp;
+        Vector2Int temp = self;
+        List<Vector2Int> res = new List<Vector2Int>();
+        int max = -1000;
+        int harf_length = Mathf.FloorToInt(60 / num * 0.5f);
+
+        for(int k = 0; k < num; k++) {
+            for (int i = 0; i < 60; i++)
+            {
+                for (int j = 0; j < 100; j++)
+                {
+
+                    if (benefitMap[i, j] != 0 && evaluateble[i, j])
+                    {
+                        switch (strategy)
+                        {
+                            case StrategyMode.Nomal:
+                                if (max < benefitMap[i, j] - riskMap[i, j])
+                                {
+                                    max = benefitMap[i, j] - riskMap[i, j];
+                                    temp = new Vector2Int(i, j);
+                                }
+                                break;
+
+                            case StrategyMode.Positive:
+                                if (max < benefitMap[i, j] * 2 - riskMap[i, j])
+                                {
+                                    max = benefitMap[i, j] * 2 - riskMap[i, j];
+                                    temp = new Vector2Int(i, j);
+                                }
+                                break;
+
+                            case StrategyMode.Passive:
+                                if (max < benefitMap[i, j] - riskMap[i, j] * 2)
+                                {
+                                    max = benefitMap[i, j] - riskMap[i, j] * 2;
+                                    temp = new Vector2Int(i, j);
+                                }
+                                break;
+                        }
+                    }
+                }
+            }
+            res.Add(temp);
+            FindPointProcess(temp.x, temp.y, harf_length);
+            max = -1000;
+        }
+
+        return res;
+    }
+
+    protected void FindPointProcess(int x, int y, int length)
+    {
+        int x_min = x - length > 0 ? x - length : 0;
+        int x_max = x + length < 60 ? x + length : 59;
+        int y_min = y - length > 0 ? y - length : 0;
+        int y_max = y + length < 100 ? y + length : 99;
+
+        for(int i = x_min; i < x_max; i++)
+        {
+            for(int j = y_min ; j < y_max; j++)
+            {
+                evaluateble[i, j] = false;
+            }
+        }
+        
     }
 
     /// <summary>
-    /// 二点のマンハッタン距離を返す
+    /// 二点のマンハッタン距離から近いほど高い値を返す
     /// </summary>
     /// <param name="point1_x"></param>
     /// <param name="point1_y"></param>
@@ -100,11 +130,80 @@ public class AIBase
         {
             temp = 0;
         }
+        if(temp == 10)
+        {
+            temp = 0;
+        }
         temp += 1;
 
         temp = Mathf.Log10(temp);
 
         return temp;
+    }
+
+
+    /// <summary>
+    /// 近くなりすぎを避ける
+    /// </summary>
+    protected void AvoidTeamMate(float magnification = 1)
+    {
+        foreach (var mate in teamMate)
+        {
+            foreach (var mate2 in teamMate)
+            {
+                if (mate != mate2)
+                {
+                    if ((mate.ToVector2Int() - mate2.ToVector2Int()).sqrMagnitude < 100)
+                    {
+                        int x_min, x_max, y_min, y_max;
+                        if (mate.transform.position.x > mate2.transform.position.x)
+                        {
+                            x_min = (int)mate2.transform.position.x - 3;
+                            x_max = (int)mate.transform.position.x + 3;
+                        }
+                        else
+                        {
+                            x_max = (int)mate2.transform.position.x + 3;
+                            x_min = (int)mate.transform.position.x - 3;
+                        }
+
+                        if (mate.transform.position.z > mate2.transform.position.z)
+                        {
+                            y_min = (int)mate2.transform.position.z - 3;
+                            y_max = (int)mate.transform.position.z + 3;
+                        }
+                        else
+                        {
+                            y_max = (int)mate2.transform.position.z + 3;
+                            y_min = (int)mate.transform.position.z - 3;
+                        }
+
+                        if (x_max - x_min < 8)
+                        {
+                            x_max += 3;
+                            x_min -= 3;
+                        }
+
+                        if (y_max - y_min < 8)
+                        {
+                            y_max += 3;
+                            y_min -= 3;
+                        }
+
+                        for (int i = x_min; i < x_max; i++)
+                        {
+                            for (int j = y_min; j < y_max; j++)
+                            {
+                                if (i >= 0 && i < 60 && j >= 0 && j < 100)
+                                {
+                                    riskMap[i, j] += (int)((100 - 10 * (mate.ToVector2Int() - mate2.ToVector2Int()).magnitude) * magnification);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     protected void InitRevaluat()
@@ -119,26 +218,37 @@ public class AIBase
         }
     }
 
-    public void InitVisualize(GameObject obj, Vector3 origin_b, Vector3 origin_r)
+    public void InitVisualize(Transform[] parent, GameObject obj, Vector3 origin_b, Vector3 origin_r)
     {
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 15; i++)
         {
-            for (int j = 0; j < 100; j++)
+            for (int j = 0; j < 25; j++)
             {
-                objs_b[i, j] = Object.Instantiate(obj, origin_b + new Vector3(i, 0, j), Quaternion.identity).GetComponent<Renderer>();
-                objs_r[i, j] = Object.Instantiate(obj, origin_r + new Vector3(i, 0, j), Quaternion.identity).GetComponent<Renderer>();
+                objs_b[i, j] = Object.Instantiate(obj, origin_b + new Vector3(i * 4, 0, j * 4), Quaternion.identity, parent[0]).GetComponent<MeshRenderer>();
+                objs_r[i, j] = Object.Instantiate(obj, origin_r + new Vector3(i * 4, 0, j * 4), Quaternion.identity, parent[1]).GetComponent<MeshRenderer>();
             }
         }
     }
 
     public void UpdateVisualize()
     {
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 15; i++)
         {
-            for (int j = 0; j < 100; j++)
+            for (int j = 0; j < 25; j++)
             {
-                objs_b[i, j].material.color = Color.HSVToRGB(240 - benefitMap[i, j], 1, 1);
-                objs_b[i, j].material.color = Color.HSVToRGB(240 - riskMap[i, j], 1, 1);
+                int sum1 = 0;
+                int sum2 = 0;
+                for (int k = 0; k < 4; k++)
+                {
+                    for (int l = 0; l < 4; l++)
+                    {
+                        sum1 += benefitMap[4 * i + k, 4 * j + l];
+                        sum2 += riskMap[4* i + k, 4 * j + l];
+                    }
+                }
+               
+                    objs_b[i, j].material.color = Color.HSVToRGB((240 - sum1 * 0.0625f) / 360, 1, 1);
+                    objs_r[i, j].material.color = Color.HSVToRGB((240 - sum2 * 0.0625f) / 360, 1, 1);              
             }
         }
     }
