@@ -5,24 +5,21 @@ using IceMilkTea.Core;
 
 public class ResetState : ImtStateMachine<GameManager>.State
 {
-    private bool flag;
-    public bool Flag
-    {
-        get {return flag; }
-        private set {flag = value; }
-    }
     // 状態へ突入時の処理はこのEnterで行う
     protected override void Enter()
     {
+        Context.StartStateChangeEvent(GameState.Reset);
     }
 
     // 状態の更新はこのUpdateで行う
     protected override void Update()
     {
+        Context.gameObject.GetComponent<IGameManagerable>().AllResetedSignal();
     }
 
     // 状態から脱出する時の処理はこのExitで行う
     protected override void Exit()
     {
+        
     }
 }
