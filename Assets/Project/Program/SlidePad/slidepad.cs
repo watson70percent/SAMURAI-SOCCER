@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class slidepad : MonoBehaviour
 {
 
     public float radius;
-    bool isTapped;
+    bool isdragged;
     public GameObject joystick;
     RectTransform joyrect;
     Vector2 joystartposition;
@@ -18,27 +19,31 @@ public class slidepad : MonoBehaviour
 
     public Text text;
 
+
+    int fingerID;
     // Start is called before the first frame update
     void Start()
     {
         joyrect = joystick.GetComponent<RectTransform>();
         joystartposition = joyrect.localPosition;
         playerrig = player.GetComponent<Rigidbody>();
+
+
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (isTapped == true)
+        
+        if (isdragged == true)
         {
             if (Input.touchCount > 0)
             {
-                Touch touch = Input.GetTouch(0);
-                //print(touch.position.x + ":" + touch.position.y);
-
+                 Touch touch=FindFinger();
+               // print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
-
+                
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
                 Controller(dir);
@@ -50,30 +55,50 @@ public class slidepad : MonoBehaviour
         
     }
 
-
-
-
-    public void DragStart()
+    public void DragStart(BaseEventData baseEventData)
     {
-        isTapped = true;
-        Touch touch = Input.GetTouch(0);
+        PointerEventData pointerEventData = baseEventData as PointerEventData;
+            fingerID = pointerEventData.pointerId;
+        isdragged = true;
+        Touch touch = Input.GetTouch(fingerID);
         slidestartposition = touch.position;
     }
 
 
     public void DragEnd()
     {
-        isTapped = false;
+        isdragged = false;
         joyrect.localPosition = joystartposition;
+        
     }
 
     void Controller(Vector2 dir)
     {
+        Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
+        // print(rotationdir);
+        rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;
+        playerrig.rotation = Quaternion.LookRotation(rotationdir);
+        //player.transform.rotation = Quaternion.LookRotation(rotationdir); //なんか挙動がおかしい
+
+
+
+
         Vector2 velocity= dir/radius * speed ;
-        playerrig.position = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        Vector3 direction3d= new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        playerrig.position = direction3d;
+      
 
 
 
     }
 
+    Touch FindFinger()
+    {
+        foreach(Touch t in Input.touches)
+        {
+            if (t.fingerId == fingerID) { return t; }
+
+        }
+        return new Touch();
+    }
 }
