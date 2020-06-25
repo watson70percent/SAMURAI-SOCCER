@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+/// <summary>
+/// CPUを操作するクラス
+/// </summary>
 public class EasyCPUManager : MonoBehaviour
 {
     public List<GameObject> team;
@@ -25,6 +28,10 @@ public class EasyCPUManager : MonoBehaviour
         Init();
     }
 
+    /// <summary>
+    /// 選手を殺す
+    /// </summary>
+    /// <param name="dead">死ぬ対象の選手</param>
     public void kill(GameObject dead)
     {
         opp.Remove(dead);
@@ -32,29 +39,45 @@ public class EasyCPUManager : MonoBehaviour
         Destroy(dead);
     }
 
-
-    public void RespornTeammate()
+    /// <summary>
+    /// 選手復活
+    /// </summary>
+    /// <param name="status">ステータス</param>
+    /// <param name="pos">復活場所</param>
+    /// <return>復活した選手</return>
+    public GameObject Sporn(PersonalStatus status, Vector3 pos)
     {
-        var temp = Instantiate(teammate, new Vector3(0, 0, 50), Quaternion.identity, team_p);
+        var temp = Instantiate(teammate, pos, Quaternion.identity, team_p);
         var setting = temp.GetComponent<EasyCPU>();
         setting.ball = ball;
         setting.dest = ball.gameObject;
         setting.manager = this;
-        setting.status = temp.GetComponent<PersonalStatus>();
-        team.Add(temp);
+        setting.status = status;
+        if (status.ally)
+        {
+            team.Add(temp);
+        }
+        else
+        {
+            opp.Add(temp);
+        }
+
+        return temp;
     }
 
-    public void RespornOpponent()
+    /// <summary>
+    /// 選手復活。中央に出てくる。
+    /// </summary>
+    /// <param name="status">ステータス</param>
+    /// <return>復活した選手</return>
+    public GameObject Sporn(PersonalStatus status)
     {
-        var temp = Instantiate(opponent, new Vector3(60, 0, 50), Quaternion.identity, team_p);
-        var setting = temp.GetComponent<EasyCPU>();
-        setting.ball = ball;
-        setting.dest = ball.gameObject;
-        setting.manager = this;
-        setting.status = temp.GetComponent<PersonalStatus>();
-        opp.Add(temp);
+        return Sporn(status, new Vector3(0, 0, 50));
     }
 
+    /// <summary>
+    /// 初期化。選手の生成をしてる。
+    /// </summary>
     public void Init()
     {
         foreach(var t in team)
@@ -75,22 +98,11 @@ public class EasyCPUManager : MonoBehaviour
         {
             for(int j = 0; j < 3; j++)
             {
-                var temp = Instantiate(teammate, new Vector3(15 * j + 15, 0, 35 - 15 * i), Quaternion.identity, team_p);
-                var setting = temp.GetComponent<EasyCPU>();
-                setting.ball = ball;
-                setting.dest = ball.gameObject;
-                setting.manager = this;
-                setting.status = temp.GetComponent<PersonalStatus>();
-                MakeRandomStatus(setting.status);
-                team.Add(temp);
-                var temp2 = Instantiate(opponent, new Vector3(15 * j + 15, 0, 65 + 15 * i), Quaternion.identity, opp_p);
-                var setting2 = temp2.GetComponent<EasyCPU>();
-                setting2.ball = ball;
-                setting2.dest = ball.gameObject;
-                setting2.manager = this;
-                setting2.status = temp2.GetComponent<PersonalStatus>();
-                MakeRandomStatus(setting2.status);
-                opp.Add(temp2);
+                var t1 = Sporn(new PersonalStatus() { ally = true }, new Vector3(15 * j + 15, 0, 35 - 15 * i));
+                MakeRandomStatus(t1.GetComponent<PersonalStatus>());
+
+                var t2 = Sporn(new PersonalStatus() { ally = false }, new Vector3(15 * j + 15, 0, 65 + 15 * i));
+                MakeRandomStatus(t2.GetComponent<PersonalStatus>());
             }
         }
         kill(team[1]);
