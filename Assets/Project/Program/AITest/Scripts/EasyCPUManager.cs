@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.IO;
 
 /// <summary>
 /// CPUを操作するクラス
@@ -9,34 +10,79 @@ using System.Linq;
 public class EasyCPUManager : MonoBehaviour
 {
     public List<GameObject> team;
+    public Team team_stock;
     public List<GameObject> opp;
+    public Team opp_stock;
     public Transform team_p;
     public Transform opp_p;
     public BallControler ball;
     private GameObject teammate;
     private GameObject opponent;
 
+    /// <summary>
+    /// 味方の人数
+    /// </summary>
+    public int TeamMemberCount { 
+        get
+        {
+            return team.Count + team_stock.member.Count;
+        } 
+    }
+
+    /// <summary>
+    /// 敵の人数
+    /// </summary>
+    public int OpponentMemberCount {
+        get
+        {
+            return opp.Count + opp_stock.member.Count;
+        }
+    }
+
+
     void Awake()
     {
         teammate = Resources.Load<GameObject>("Teammate");
         opponent = Resources.Load<GameObject>("opponent");
+        // opponent = Resources.Load<GameObject>(OpponentName.name);
+        LoadMember();
     }
 
     private void Start()
     {
-        ball.Goal += (sender, e) => { Init(); };
+        ball.Goal += (sender, e) => { Init(e.Ally); };
         Init();
     }
 
+    private void LoadMember()
+    {
+        var team_string = File.ReadAllText(Application.streamingAssetsPath + "/our.json");
+        team_stock = JsonUtility.FromJson<Team>(team_string);
+        var opp_string = File.ReadAllText(Application.streamingAssetsPath + "/" + OpponentName.name + ".json");
+        opp_stock = JsonUtility.FromJson<Team>(opp_string);
+    }
+
     /// <summary>
-    /// 選手を殺す
+    /// 選手を殺す。一応瞬時復活もさせる。
     /// </summary>
     /// <param name="dead">死ぬ対象の選手</param>
     public void kill(GameObject dead)
     {
+        bool ally = dead.GetComponent<EasyCPU>().status.ally;
         opp.Remove(dead);
         team.Remove(dead);
         Destroy(dead);
+
+        if (ally)
+        {
+            Sporn(team_stock.member[0], Constants.TeammateSpornPoint);
+            team_stock.member.RemoveAt(0);
+        }
+        else
+        {
+            Sporn(opp_stock.member[0], Constants.OppornentSpornPoint);
+            opp_stock.member.RemoveAt(0);
+        }
     }
 
     /// <summary>
@@ -47,7 +93,15 @@ public class EasyCPUManager : MonoBehaviour
     /// <return>復活した選手</return>
     public GameObject Sporn(PersonalStatus status, Vector3 pos)
     {
-        var temp = Instantiate(teammate, pos, Quaternion.identity, team_p);
+        GameObject temp = default;
+        if (status.ally)
+        {
+            temp = Instantiate(teammate, pos, Quaternion.identity, team_p);
+        }
+        else
+        {
+            temp = Instantiate(opponent, pos, Quaternion.identity, opp_p);
+        }
         var setting = temp.GetComponent<EasyCPU>();
         setting.ball = ball;
         setting.dest = ball.gameObject;
@@ -66,22 +120,13 @@ public class EasyCPUManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 選手復活。中央に出てくる。
-    /// </summary>
-    /// <param name="status">ステータス</param>
-    /// <return>復活した選手</return>
-    public GameObject Sporn(PersonalStatus status)
-    {
-        return Sporn(status, new Vector3(0, 0, 50));
-    }
-
-    /// <summary>
     /// 初期化。選手の生成をしてる。
     /// </summary>
-    public void Init()
+    public void Init(bool centerIsOppornent = true)
     {
         foreach(var t in team)
         {
+            team_stock.member.Insert(0, t.GetComponent<EasyCPU>().status);
             Destroy(t);
         }
 
@@ -89,32 +134,46 @@ public class EasyCPUManager : MonoBehaviour
 
         foreach(var t in opp)
         {
+            opp_stock.member.Insert(0, t.GetComponent<EasyCPU>().status);
             Destroy(t);
         }
 
         opp.Clear();
 
-        for(int i = 0; i < 3; i++)
-        {
-            for(int j = 0; j < 3; j++)
-            {
-                var t1 = Sporn(new PersonalStatus() { ally = true }, new Vector3(15 * j + 15, 0, 35 - 15 * i));
-                MakeRandomStatus(t1.GetComponent<PersonalStatus>());
+        int teamCount = team_stock.member.Count > 11 ? 11 : team_stock.member.Count;
+        int oppCount = opp_stock.member.Count > 11 ? 11 : opp_stock.member.Count;
 
-                var t2 = Sporn(new PersonalStatus() { ally = false }, new Vector3(15 * j + 15, 0, 65 + 15 * i));
-                MakeRandomStatus(t2.GetComponent<PersonalStatus>());
+        if (centerIsOppornent)
+        {
+            for(int i = 0; i < teamCount; i++)
+            {
+                Sporn(team_stock.member[0], Constants.TeammateInitialSpornPointCenterOppornent[i]);
+                team_stock.member.RemoveAt(0);
+            }
+
+            for (int i = 0; i < oppCount; i++)
+            {
+                Sporn(opp_stock.member[0], Constants.OpprnentInitialSpornPointCenterOppornent[i]);
+                opp_stock.member.RemoveAt(0);
             }
         }
-        kill(team[1]);
-        ball.gameObject.transform.position = new Vector3(30, 0.5f, 50);
-        ball.rb.velocity = Vector3.zero;
-    }
+        else
+        {
+            for (int i = 0; i < teamCount; i++)
+            {
+                Sporn(team_stock.member[0], Constants.TeammateInitialSpornPointCenterTeam[i]);
+                team_stock.member.RemoveAt(0);
+            }
 
-    private void MakeRandomStatus(PersonalStatus status)
-    {
-        status.fast += Random.Range(-2.0f, 2.0f);
-        status.power += Random.Range(-2, 2);
-        status.see += Random.Range(-0.2f, 0.2f);
-        status.seelen += Random.Range(-5.0f, 3.0f);
+            for (int i = 0; i < oppCount; i++)
+            {
+                Sporn(opp_stock.member[0], Constants.OpprnentInitialSpornPointCenterTeam[i]);
+                opp_stock.member.RemoveAt(0);
+            }
+        }
+
+
+        ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0,0.5f,0);
+        ball.rb.velocity = Vector3.zero;
     }
 }
