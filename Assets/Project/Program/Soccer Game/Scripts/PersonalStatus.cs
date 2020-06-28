@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersonalStatus : MonoBehaviour
+[Serializable]
+public class PersonalStatus
 {
     public readonly int MAX_HP;
     public int hp;
     public int power;
     public bool ally;
-    public float see;
+
     public float seelen;
     public float fast;
 }

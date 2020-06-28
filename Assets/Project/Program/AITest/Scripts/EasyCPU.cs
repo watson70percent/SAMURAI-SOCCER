@@ -5,7 +5,6 @@ using System.Linq;
 using System;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(PersonalStatus))]
 public class EasyCPU : MonoBehaviour
 {
     public BallControler ball;
@@ -46,6 +45,7 @@ public class EasyCPU : MonoBehaviour
                     {
                         ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int());
                     }
+
                 }
             }
             catch (Exception) { }
@@ -57,38 +57,58 @@ public class EasyCPU : MonoBehaviour
 
     private void AllMove(Vector2 dest, float max = 5)
     {
-        Vector2 vec = (dest - gameObject.ToVector2Int()) * (status.seelen + Random.Range(-5.0f, 5.0f)) / Mathf.Pow((dest - gameObject.ToVector2Int()).sqrMagnitude, status.see);
-        if(vec.sqrMagnitude < 100)
-        {
-            vec = vec.normalized * 10;
-        }
+        Vector2 vec = dest - gameObject.ToVector2Int();
+        vec = vec.normalized * 10;
+
         try
         {
             if (status.ally)
             {
-                manager.team.ForEach(value =>
+                if(vec.sqrMagnitude > 400 && ball.gameObject.transform.position.z > gameObject.transform.position.z + 10)
                 {
-                    if (value != gameObject)
+                    vec = Vector2.zero;
+                }
+
+                if (vec.sqrMagnitude > 25)
+                {
+
+                    manager.team.ForEach(value =>
                     {
-                        Vector2 t = gameObject.ToVector2Int() - value.ToVector2Int();
-                        vec += t * (status.seelen + Random.Range(-8.0f, 8.0f)) / Mathf.Pow(t.sqrMagnitude, status.see);
-                    }
-                });
+                        if (value != gameObject)
+                        {
+                            Vector2 t = gameObject.ToVector2Int() - value.ToVector2Int();
+                            float tmp = status.seelen - t.magnitude > 0 ? status.seelen - t.magnitude : 0;
+                            vec += t.normalized * tmp;
+                        }
+                    });
+                }
             }
             else
             {
-                manager.opp.ForEach(value =>
+                if (vec.sqrMagnitude > 400 && ball.gameObject.transform.position.z < gameObject.transform.position.z - 10)
                 {
-                    if (value != gameObject)
+                    vec = Vector2.zero;
+                }
+
+                if (vec.sqrMagnitude > 25)
+                {
+                    manager.opp.ForEach(value =>
                     {
-                        Vector2 t = gameObject.ToVector2Int() - value.ToVector2Int();
-                        vec += t * (status.seelen + Random.Range(-8.0f, 8.0f)) / Mathf.Pow(t.sqrMagnitude, status.see);
-                    }
-                });
+                        if (value != gameObject)
+                        {
+                            Vector2 t = gameObject.ToVector2Int() - value.ToVector2Int();
+                            float tmp = status.seelen - t.magnitude > 0 ? status.seelen - t.magnitude : 0;
+                            vec += t.normalized * tmp;
+                        }
+                    });
+
+                }
             }
+            catch (Exception) { }
         }
         catch (Exception)
         {
+
 
         }
         float dis = vec.magnitude;
@@ -113,8 +133,9 @@ public class EasyCPU : MonoBehaviour
         }
 
         Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
-        vec = vec.normalized;
-        vec *= (float)velocity;
+
+        vec = vec.normalized * (float)velocity;
+
         gameObject.transform.Translate(vec.x * Time.deltaTime, 0, vec.y * Time.deltaTime, Space.World);
         gameObject.transform.rotation = Quaternion.Euler(rot);
     }
