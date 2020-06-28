@@ -11,9 +11,21 @@ public class RefereeMove : MonoBehaviour
     Rigidbody rig;
     public RefereeArea refereeArea;
     public AnimationController animcon;
+    ParticleSystem bikkuri;
     // Start is called before the first frame update
+
+    public enum State
+    {
+        StandBy,
+        Playing
+    }
+
+    State state = State.StandBy;
+
     void Start()
     {
+        bikkuri = GetComponent<ParticleSystem>();
+
         rig = GetComponent<Rigidbody>();
 
         animcon.AttackEvent += (sender, e) =>
@@ -23,7 +35,7 @@ public class RefereeMove : MonoBehaviour
             {
                 if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
                 {
-                    print("yakki");
+                    bikkuri.Play();
                 }
             }
         };
@@ -32,9 +44,18 @@ public class RefereeMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LookAtBall();
-        MoveAroundBall();
+        switch(state){
+            case State.StandBy : break;
+            case State.Playing:
+                LookAtBall();
+                MoveAroundBall();
+                break;
+            default: break;
+        }
 
+       
+
+        
     }
 
 
@@ -86,5 +107,15 @@ public class RefereeMove : MonoBehaviour
 
         transform.rotation = rotate * transform.rotation;
 
+    }
+    
+
+    /// <summary>
+    /// 審判のStateを変えます
+    /// </summary>
+    /// <param name="newstate"></param>
+    public void SetState(State newstate)
+    {
+        state = newstate;
     }
 }

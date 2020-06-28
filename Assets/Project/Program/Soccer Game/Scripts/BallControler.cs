@@ -220,11 +220,13 @@ public class BallControler : MonoBehaviour
             Vector3 dest;
             if (self.ally)
             {
+
                 dest = (Constants.OppornentGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0) - sender.transform.position).normalized;
             }
             else
             {
                 dest = (Constants.OurGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0) - sender.transform.position).normalized;
+
             }
 
             rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z), ForceMode.Impulse);

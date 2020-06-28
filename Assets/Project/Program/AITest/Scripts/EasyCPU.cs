@@ -5,7 +5,6 @@ using System.Linq;
 using System;
 using Random = UnityEngine.Random;
 
-
 public class EasyCPU : MonoBehaviour
 {
     public BallControler ball;
@@ -46,6 +45,7 @@ public class EasyCPU : MonoBehaviour
                     {
                         ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int());
                     }
+
                 }
             }
             catch (Exception) { }
@@ -101,11 +101,14 @@ public class EasyCPU : MonoBehaviour
                             vec += t.normalized * tmp;
                         }
                     });
+
                 }
             }
+            catch (Exception) { }
         }
         catch (Exception)
         {
+
 
         }
         float dis = vec.magnitude;
@@ -114,14 +117,14 @@ public class EasyCPU : MonoBehaviour
         {
             if (velocity < max)
             {
-                velocity += 0.05f;
+                velocity += 0.2f;
             }
         }
         else
         {
             if (velocity < Mathf.Log10(dis + 1) * max)
             {
-                velocity += 0.05f;
+                velocity += 0.2f;
             }
             else
             {
@@ -130,7 +133,9 @@ public class EasyCPU : MonoBehaviour
         }
 
         Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
+
         vec = vec.normalized * (float)velocity;
+
         gameObject.transform.Translate(vec.x * Time.deltaTime, 0, vec.y * Time.deltaTime, Space.World);
         gameObject.transform.rotation = Quaternion.Euler(rot);
     }

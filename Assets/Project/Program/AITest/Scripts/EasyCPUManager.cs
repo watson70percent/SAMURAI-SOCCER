@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+
 using System.IO;
 
 /// <summary>
@@ -12,7 +13,9 @@ public class EasyCPUManager : MonoBehaviour
     public List<GameObject> team;
     public Team team_stock;
     public List<GameObject> opp;
+
     public Team opp_stock;
+
     public Transform team_p;
     public Transform opp_p;
     public BallControler ball;
@@ -44,8 +47,10 @@ public class EasyCPUManager : MonoBehaviour
     {
         teammate = Resources.Load<GameObject>("Teammate");
         opponent = Resources.Load<GameObject>("opponent");
+
         // opponent = Resources.Load<GameObject>(OpponentName.name);
         LoadMember();
+
     }
 
     private void Start()
@@ -102,10 +107,12 @@ public class EasyCPUManager : MonoBehaviour
         {
             temp = Instantiate(opponent, pos, Quaternion.identity, opp_p);
         }
+
         var setting = temp.GetComponent<EasyCPU>();
         setting.ball = ball;
         setting.dest = ball.gameObject;
         setting.manager = this;
+
         setting.status = status;
         if (status.ally)
         {
@@ -127,6 +134,7 @@ public class EasyCPUManager : MonoBehaviour
         foreach(var t in team)
         {
             team_stock.member.Insert(0, t.GetComponent<EasyCPU>().status);
+
             Destroy(t);
         }
 
@@ -134,11 +142,14 @@ public class EasyCPUManager : MonoBehaviour
 
         foreach(var t in opp)
         {
+
             opp_stock.member.Insert(0, t.GetComponent<EasyCPU>().status);
+
             Destroy(t);
         }
 
         opp.Clear();
+
 
         int teamCount = team_stock.member.Count > 11 ? 11 : team_stock.member.Count;
         int oppCount = opp_stock.member.Count > 11 ? 11 : opp_stock.member.Count;
@@ -176,4 +187,5 @@ public class EasyCPUManager : MonoBehaviour
         ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0,0.5f,0);
         ball.rb.velocity = Vector3.zero;
     }
+
 }

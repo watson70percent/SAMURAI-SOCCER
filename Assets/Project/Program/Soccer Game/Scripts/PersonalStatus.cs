@@ -10,6 +10,7 @@ public class PersonalStatus
     public int hp;
     public int power;
     public bool ally;
+
     public float seelen;
     public float fast;
 }
