@@ -104,7 +104,7 @@ public class EasyCPU : MonoBehaviour
 
                 }
             }
-            catch (Exception) { }
+           
         }
         catch (Exception)
         {
