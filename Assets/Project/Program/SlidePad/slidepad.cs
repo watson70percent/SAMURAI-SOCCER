@@ -19,12 +19,8 @@ public class slidepad : MonoBehaviour
 
     public Text text;
 
-    public enum State
-    {
-        StandBy,
-        Playing
-    }
-    State state = State.StandBy;
+   
+    GameState state = GameState.Standby;
 
     int fingerID;
     // Start is called before the first frame update
@@ -42,8 +38,8 @@ public class slidepad : MonoBehaviour
     {
         switch (state)
         {
-            case State.StandBy : break;
-            case State.Playing: PlayingState(); break;
+            case GameState.Standby : break;
+            case GameState.Playing: PlayingState(); break;
             default: break;
         }
         
@@ -127,7 +123,7 @@ public class slidepad : MonoBehaviour
     /// コントローラーのStateをセット
     /// </summary>
     /// <param name="newstate"></param>
-    public void SetState(State newstate)
+    public void SetState(GameState newstate)
     {
         state = newstate;
     }

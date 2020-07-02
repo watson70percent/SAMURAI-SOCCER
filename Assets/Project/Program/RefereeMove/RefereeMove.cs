@@ -14,13 +14,9 @@ public class RefereeMove : MonoBehaviour
     ParticleSystem bikkuri;
     // Start is called before the first frame update
 
-    public enum State
-    {
-        StandBy,
-        Playing
-    }
 
-    State state = State.StandBy;
+
+    GameState state = GameState.Reset;
 
     void Start()
     {
@@ -45,8 +41,8 @@ public class RefereeMove : MonoBehaviour
     void Update()
     {
         switch(state){
-            case State.StandBy : break;
-            case State.Playing:
+            case GameState.Standby : break;
+            case GameState.Playing:
                 LookAtBall();
                 MoveAroundBall();
                 break;
@@ -114,7 +110,7 @@ public class RefereeMove : MonoBehaviour
     /// 審判のStateを変えます
     /// </summary>
     /// <param name="newstate"></param>
-    public void SetState(State newstate)
+    public void SetState(GameState newstate)
     {
         state = newstate;
     }
