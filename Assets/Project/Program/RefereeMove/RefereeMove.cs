@@ -14,12 +14,24 @@ public class RefereeMove : MonoBehaviour
     ParticleSystem bikkuri;
     // Start is called before the first frame update
 
-
+    GameManager gameManager;
 
     GameState state = GameState.Reset;
 
+
+    void SwitchState(StateChangedArg a)
+    {
+        state = a.gameState;
+    }
+
     void Start()
     {
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.StateChange += SwitchState;
+        
+
+
         bikkuri = GetComponent<ParticleSystem>();
 
         rig = GetComponent<Rigidbody>();
@@ -106,12 +118,4 @@ public class RefereeMove : MonoBehaviour
     }
     
 
-    /// <summary>
-    /// 審判のStateを変えます
-    /// </summary>
-    /// <param name="newstate"></param>
-    public void SetState(GameState newstate)
-    {
-        state = newstate;
-    }
 }
