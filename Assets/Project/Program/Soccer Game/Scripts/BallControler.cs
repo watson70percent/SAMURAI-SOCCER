@@ -234,18 +234,20 @@ public class BallControler : MonoBehaviour
         }
     }
 
+
+
     /// <summary>
     /// 特殊なイベント発生
     /// </summary>
     /// <param name="collision"></param>
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Goal")
+        if(other.gameObject.tag == "Goal")
         {
             var e = new GoalEventArgs();
             e.Ally = last_touch;
             OnGoal(e);
-        }else if(collision.gameObject.tag == "OutWall")
+        }else if(other.gameObject.tag == "OutWall")
         {
             var e = new OutBallEventArgs();
             e.Ally = last_touch;
