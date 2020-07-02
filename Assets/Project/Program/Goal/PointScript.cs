@@ -24,14 +24,22 @@ public class PointScript : MonoBehaviour
         text.text = point[0].ToString() + " - " + point[1].ToString();
     }
 
-    public void GainPoint(int p)
+    public void GainPoint(GoalEventArgs e)
     {
-        point[p] ++;
+        if (e.Ally)
+        {
+            point[0]++;
+        }
+        else
+        {
+            point[1]++;
+        }
+        
     }
 
-    public void ResetPoint(int p)
+    public void ResetPoint(bool p)
     {
-        point[p] = 0;
+        //point[p] = 0;
     }
 
     public int GetPoint(int p)

@@ -7,34 +7,68 @@ public class TimerScript : MonoBehaviour
 {
     public bool playing;//試合中のフラグ
     bool end = false;//試合終了のフラグ
-    public float timer;//残り試合時間
-    Text timeText;//時間の表示  Textに表示する前提だからTextにアタッチしてないとバグると思われ
+    public float elapsedTime;//経過時間
+    public float limitTime;//制限時間
+
+    public GameObject displayText;//時間を表示させるもの
+    public Text timeText;//時間を表示させるもの
+
+
+
+    public GameManager gameManager;
+    JudgeGameEnd judgeGameEnd;//ゲーム終了判定クラス
+
+    public void Timer(StateChangedArg stateChangedArg) {
+        switch (stateChangedArg.gameState)
+        {
+            case GameState.Pause:
+                Pause();
+                break;
+            case GameState.Playing:
+                Playing();
+                break;
+            case GameState.Reset:
+                Reset();
+                break;
+        }
+    }
+
+    public void Reset()
+    {
+        elapsedTime = 0;
+    }
 
     public bool isTimeUp()//タイムアップか否かを返す  true:タイムアップ false:まだ
     {
         return end;
     }
 
-    public void setTimer(int min,int sec)//時間をセットする  (int 分　int 秒)
+    public void setTimer(int sec)//時間をセットする  (int 分　int 秒)
     {
-        timer = min * 60 + sec;
-        end = false;
+        limitTime = sec;
+        //end = false;
     }
 
-    public void pause()//停止する
+    public void Pause()//停止する
     {
         playing = false;
     }
 
-    public void pauseEnd()//停止解除する
+    public void Playing()//停止解除する
     {
         playing = true;
+    }
+
+    private void Awake()
+    {
+        gameManager.StateChange += Timer;
+        judgeGameEnd = GetComponent<JudgeGameEnd>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        timeText = this.GetComponent<Text>();///バグの要因
+        timeText = displayText.GetComponent<Text>();//
     }
 
     // Update is called once per frame
@@ -42,17 +76,19 @@ public class TimerScript : MonoBehaviour
     {
         if (playing && !end)
         {
-            if (timer > 0)
+            if (limitTime > elapsedTime)
             {
-                timer -= Time.deltaTime;
-                ///バグの要因
-                timeText.text = ((int)(timer / 60)).ToString("0") + ":" + Mathf.CeilToInt(timer % 60).ToString("00");
-                ///
+                elapsedTime += Time.deltaTime;
+                
+                int displayTime = (int)(limitTime - elapsedTime);
+                timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
+                
             }
             else
             {
                 playing = false;
                 end = true;
+                judgeGameEnd.EndFlag = true;
             }
         }
        
