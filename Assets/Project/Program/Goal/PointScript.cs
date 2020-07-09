@@ -8,8 +8,13 @@ public class PointScript : MonoBehaviour
 
     Text text;
 
-    int[] point= {0,0}; 
+    int[] point= {0,0};
+    public BallControler ballControler;
 
+    public void Point(object sender, GoalEventArgs e)
+    {
+        GainPoint(e);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +23,10 @@ public class PointScript : MonoBehaviour
         text.text = "0-0";
     }
 
+    private void Awake()
+    {
+        ballControler.Goal += Point;
+    }
     // Update is called once per frame
     void Update()
     {
