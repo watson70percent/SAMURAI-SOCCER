@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PointScript : MonoBehaviour
 {
 
-    Text text;
+    public Text text;
 
     int[] point= {0,0};
     public BallControler ballControler;
@@ -19,7 +19,6 @@ public class PointScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = gameObject.GetComponent<Text>();
         text.text = "0-0";
     }
 
