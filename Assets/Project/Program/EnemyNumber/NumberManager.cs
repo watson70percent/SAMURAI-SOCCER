@@ -7,13 +7,6 @@ public class NumberManager : MonoBehaviour
 {
     public EasyCPUManager cpuManager;
     public Text enemyNumber;
-    public Text Point;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RefereeArea : MonoBehaviour
 {
-        public float maxang = 60;
-        public int size = 10; 
+    public float maxang = 60;
+    public int areaSize = 10;
+    public AnimationController anicom;
+    public ParticleSystem surprisedMark;
+    public Button attackButton;
     // Start is called before the first frame update
     void Start()
     {
         //MeshMaker();
+        anicom.AttackEvent += FoulCheck;
     }
 
     // Update is called once per frame
@@ -18,6 +23,7 @@ public class RefereeArea : MonoBehaviour
         DynamicMeshMaker();
     }
 
+    //これは今は使ってない
     void MeshMaker()
     {
 
@@ -31,7 +37,7 @@ public class RefereeArea : MonoBehaviour
         for (ang = -maxang; ang <= maxang; ang += deltaang) {
 
             count++;
-            var vec = new Vector3(Mathf.Sin(ang / 360 * 2 * Mathf.PI), 0, Mathf.Cos(ang / 360 * 2 * Mathf.PI))*size;
+            var vec = new Vector3(Mathf.Sin(ang / 360 * 2 * Mathf.PI), 0, Mathf.Cos(ang / 360 * 2 * Mathf.PI))*areaSize;
             verticles.Add(vec);
         }
         mesh.SetVertices(verticles);
@@ -67,7 +73,7 @@ public class RefereeArea : MonoBehaviour
             Ray ray = new Ray(transform.position,transform.TransformDirection(vec));
            // Debug.DrawRay(transform.position, transform.TransformDirection(vec));
             RaycastHit hit;
-            vec2=(Physics.Raycast(ray,out hit,size)) ? vec*hit.distance:vec*size;
+            vec2=(Physics.Raycast(ray,out hit,areaSize)) ? vec*hit.distance:vec*areaSize;
             
             verticles.Add(vec2);
         }
@@ -84,5 +90,26 @@ public class RefereeArea : MonoBehaviour
 
         var meshFilter = GetComponent<MeshFilter>();
         meshFilter.mesh = mesh;
+    }
+
+    void FoulCheck(object sender, System.EventArgs e)
+    {
+
+        
+        var vec = ((AnimationController)sender).transform.position - transform.position;
+        if (vec.magnitude > areaSize || Vector3.Dot(vec.normalized, transform.forward) < Mathf.Cos(maxang / 360 * 2 * Mathf.PI))  return;
+        Ray ray = new Ray(transform.position, vec);
+        RaycastHit hit;
+        if(Physics.Raycast(ray,out hit,areaSize) ? (hit.collider.tag=="Player") : false)
+        {
+            surprisedMark.Play();
+            attackButton.enabled = false;
+            Invoke("PenaltyRemoval", 1);
+        }
+       
+    }
+    void PenaltyRemoval()
+    {
+        attackButton.enabled = true;
     }
 }
