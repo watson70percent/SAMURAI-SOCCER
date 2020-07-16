@@ -6,18 +6,26 @@ using UnityEngine.UI;
 public class PointScript : MonoBehaviour
 {
 
-    Text text;
+    public Text text;
+    public bool leftSide;
+    int[] point= {0,0};
+    public BallControler ballControler;
 
-    int[] point= {0,0}; 
-
+    public void Point(object sender, GoalEventArgs e)
+    {
+        GainPoint(e);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        text = gameObject.GetComponent<Text>();
         text.text = "0-0";
     }
 
+    private void Awake()
+    {
+        ballControler.Goal += Point;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +34,7 @@ public class PointScript : MonoBehaviour
 
     public void GainPoint(GoalEventArgs e)
     {
-        if (e.Ally)
+        if (e.Ally == leftSide)
         {
             point[0]++;
         }
