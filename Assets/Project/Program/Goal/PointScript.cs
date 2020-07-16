@@ -7,7 +7,7 @@ public class PointScript : MonoBehaviour
 {
 
     public Text text;
-
+    public bool leftSide;
     int[] point= {0,0};
     public BallControler ballControler;
 
@@ -34,7 +34,7 @@ public class PointScript : MonoBehaviour
 
     public void GainPoint(GoalEventArgs e)
     {
-        if (e.Ally)
+        if (e.Ally == leftSide)
         {
             point[0]++;
         }
