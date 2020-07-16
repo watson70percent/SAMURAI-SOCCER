@@ -12,6 +12,9 @@ public class BallControler : MonoBehaviour
     private static readonly float sqrt2 = Mathf.Sqrt(2);
     private static readonly float gravity = 9.8f;
 
+    private Vector3 velocity;
+    private Vector3 angularVelocity;
+
     public bool last_touch;
     public GameObject owner;
     public delegate void GoalEventHandler(object sender, GoalEventArgs e);
@@ -31,6 +34,20 @@ public class BallControler : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    public void Pause()
+    {
+        velocity = rb.velocity;
+        rb.velocity = Vector3.zero;
+        angularVelocity = rb.angularVelocity;
+        rb.angularVelocity = Vector3.zero;
+    }
+
+    public void Play()
+    {
+        rb.velocity = velocity;
+        rb.angularVelocity = angularVelocity;
     }
 
 
