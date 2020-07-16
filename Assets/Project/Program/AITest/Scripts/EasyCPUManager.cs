@@ -10,6 +10,8 @@ using System.IO;
 /// </summary>
 public class EasyCPUManager : MonoBehaviour
 {
+    public GameManager gm;
+
     public List<GameObject> team;
     public Team team_stock;
     public List<GameObject> opp;
@@ -48,9 +50,42 @@ public class EasyCPUManager : MonoBehaviour
         teammate = Resources.Load<GameObject>("Teammate");
         opponent = Resources.Load<GameObject>("opponent");
 
+        gm.StateChange += StateChanged;
+
         // opponent = Resources.Load<GameObject>(OpponentName.name);
         LoadMember();
 
+    }
+
+    private void StateChanged(StateChangedArg e)
+    {
+        if(e.gameState == GameState.Pause)
+        {
+            ball.Pause();
+            foreach(var t in team)
+            {
+                t.GetComponent<EasyCPU>().Pause();
+            }
+
+            foreach(var t in opp)
+            {
+                t.GetComponent<EasyCPU>().Pause();
+            }
+        }
+
+        if(e.gameState == GameState.Playing)
+        {
+            ball.Play();
+            foreach (var t in team)
+            {
+                t.GetComponent<EasyCPU>().Play();
+            }
+
+            foreach (var t in opp)
+            {
+                t.GetComponent<EasyCPU>().Play();
+            }
+        }
     }
 
     private void Start()
