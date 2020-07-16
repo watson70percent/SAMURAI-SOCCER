@@ -12,10 +12,26 @@ public class EasyCPU : MonoBehaviour
     public EasyCPUManager manager;
     public PersonalStatus status;
     private double velocity;
+    private bool isPause = false;
+
+    public void Pause()
+    {
+        isPause = true;
+    }
+
+    public void Play()
+    {
+        isPause = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (isPause)
+        {
+            return;
+        }
+
         if ((dest.transform.position - transform.position).sqrMagnitude < 4)
         {
             try

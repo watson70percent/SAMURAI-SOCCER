@@ -23,9 +23,19 @@ public class slidepad : MonoBehaviour
     GameState state = GameState.Standby;
 
     int fingerID;
+
+    void SwitchState(StateChangedArg a)
+    {
+        state = a.gameState;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("GameManager").GetComponent<GameManager>().StateChange += SwitchState;
+
+
+
         joyrect = joystick.GetComponent<RectTransform>();
         joystartposition = joyrect.localPosition;
         playerrig = player.GetComponent<Rigidbody>();
@@ -119,12 +129,5 @@ public class slidepad : MonoBehaviour
         return new Touch();
     }
 
-    /// <summary>
-    /// コントローラーのStateをセット
-    /// </summary>
-    /// <param name="newstate"></param>
-    public void SetState(GameState newstate)
-    {
-        state = newstate;
-    }
+
 }
