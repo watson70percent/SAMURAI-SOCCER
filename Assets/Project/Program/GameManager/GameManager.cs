@@ -24,33 +24,18 @@ public class StateChangedArg : EventArgs
 
 public delegate void StateChangedHandler(StateChangedArg arg);
 
-public partial class  GameManager : MonoBehaviour,IGameManagerable
+public partial class  GameManager : MonoBehaviour
 {
     /// <summary>
     /// Stateの移動時に呼ばれるイベント
     /// </summary>
     public event StateChangedHandler StateChange;
 
-    private enum GameStateId
-    {
-        AllReseted,
-        Play,
-        Pause,
-        PauseBack,
-        PlayAgain,
-        Finish,
-    }
     //このGameManagerクラスのステートマシーン
     private ImtStateMachine<GameManager> _gameManagerStateMachine;
     private void Awake()
     {
         _gameManagerStateMachine = new ImtStateMachine<GameManager>(this);
-        _gameManagerStateMachine.AddTransition<ResetState,StandbyState>((int)GameStateId.AllReseted);
-        _gameManagerStateMachine.AddTransition<StandbyState,PlayingState>((int)GameStateId.Play);
-        _gameManagerStateMachine.AddTransition<PlayingState, PauseState>((int)GameStateId.Pause);
-        _gameManagerStateMachine.AddTransition<PauseState, PlayingState>((int)GameStateId.PauseBack);
-        _gameManagerStateMachine.AddTransition<PauseState, ResetState>((int)GameStateId.PlayAgain);
-        _gameManagerStateMachine.AddTransition<PlayingState,FinishState>((int)GameStateId.Finish);
 
         //無理やりStateを移動する用
         _gameManagerStateMachine.AddAnyTransition<ResetState>((int)GameState.Reset);
@@ -81,59 +66,6 @@ public partial class  GameManager : MonoBehaviour,IGameManagerable
         Debug.Log("Stateを"+state+"に移動しました");
     }
 
-    public void AllResetedSignal()
-    {
-        //ステートマシンにAllResetedを送る
-        _gameManagerStateMachine.SendEvent((int)GameStateId.AllReseted);
-    }
-
-    public void PlaySignal()
-    {
-        //ステートマシンにPlayを送る
-        _gameManagerStateMachine.SendEvent((int)GameStateId.Play);
-    }
-
-    public void PauseSignal()
-    {
-        //ステートマシンにPoseを送る
-        _gameManagerStateMachine.SendEvent((int)GameStateId.Pause);
-    }
-
-    public void PauseBackSignal()
-    {
-        //ステートマシンにBackを送る
-        _gameManagerStateMachine.SendEvent((int)GameStateId.PauseBack);
-    }
-
-    public void PlayAgainSignal()
-    {
-        //ステートマシンにPlayAgainを送る
-        _gameManagerStateMachine.SendEvent((int)GameStateId.PlayAgain);
-    }
-
-    public void FinishSignal()
-    {
-        //ステートマシンにFinishを送る
-        _gameManagerStateMachine.SendEvent((int)GameStateId.Finish);
-    }
-
-    //Poseボタンの処理
-    public void OnClickPauseButton()
-    {
-        PauseSignal();
-    }
-
-    //Pose状態から戻るボタン
-    public void OnClickPauseBackButton()
-    {
-        PauseBackSignal();
-    }
-
-    //再試合ボタン
-    public void OnClickPlayAgainButton()
-    {
-        PlayAgainSignal();
-    }
 
     /// <summary>
     /// イベント発火関数
