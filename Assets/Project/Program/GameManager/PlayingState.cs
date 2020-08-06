@@ -19,7 +19,7 @@ public class PlayingState : ImtStateMachine<GameManager>.State
         //ゲームエンドフラグで試合終了
         if (judgeGameEnd.EndFlag)
         {
-            Context.gameObject.GetComponent<IGameManagerable>().FinishSignal();
+            Context.gameObject.GetComponent<GameManager>().StateChangeSignal(GameState.Finish);
         }
     }
 
