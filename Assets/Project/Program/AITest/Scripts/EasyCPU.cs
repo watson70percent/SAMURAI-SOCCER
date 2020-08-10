@@ -148,11 +148,38 @@ public class EasyCPU : MonoBehaviour
             }
         }
 
+        vec = CalcNextPoint(vec, velocity);
+
         Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
 
-        vec = vec.normalized * (float)velocity;
-
-        gameObject.transform.Translate(vec.x * Time.deltaTime, 0, vec.y * Time.deltaTime, Space.World);
+        gameObject.transform.Translate(vec.x, 0, vec.y, Space.World);
         gameObject.transform.rotation = Quaternion.Euler(rot);
+    }
+
+    private Vector2 CalcNextPoint(Vector2 vec, double velocity)
+    {
+        var move = vec.normalized * (float)velocity * Time.deltaTime;
+        var next = move + new Vector2(transform.position.x, transform.position.z);
+
+
+        if(next.x < 0)
+        {
+            move.x = -transform.position.x;
+        }
+        else if(next.x > Constants.Width)
+        {
+            move.x = Constants.Width - transform.position.x;
+        }
+
+        if(next.y < 0)
+        {
+            move.y = -transform.position.x;
+        }
+        else if(next.y > Constants.G2G)
+        {
+            move.y = Constants.G2G - transform.position.y;
+        }
+
+        return move.normalized * (float)velocity * Time.deltaTime;
     }
 }
