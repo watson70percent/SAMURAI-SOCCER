@@ -48,7 +48,7 @@ public static class Constants
         get
         {
             var vec = OurGoalPoint - OppornentGoalPoint;
-            return OurGoalPoint + vec * 0.1f;
+            return OurGoalPoint + vec * 0.1f+Vector3.up;
         }
     }
 
@@ -60,7 +60,7 @@ public static class Constants
         get
         {
             var vec = OppornentGoalPoint - OurGoalPoint;
-            return OppornentGoalPoint + vec * 0.1f;
+            return OppornentGoalPoint + vec * 0.1f+Vector3.up;
         }
     }
 

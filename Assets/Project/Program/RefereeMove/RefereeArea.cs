@@ -10,6 +10,7 @@ public class RefereeArea : MonoBehaviour
     public AnimationController anicom;
     public ParticleSystem surprisedMark;
     public Button attackButton;
+    public Penalty penaltyManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,6 +106,7 @@ public class RefereeArea : MonoBehaviour
             surprisedMark.Play();
             attackButton.enabled = false;
             Invoke("PenaltyRemoval", 1);
+            penaltyManager.YellowCard();
         }
        
     }
