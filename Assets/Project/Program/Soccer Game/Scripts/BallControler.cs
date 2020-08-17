@@ -257,8 +257,9 @@ public class BallControler : MonoBehaviour
     /// 特殊なイベント発生
     /// </summary>
     /// <param name="collision"></param>
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
+
         if(other.gameObject.tag == "Goal")
         {
             var e = new GoalEventArgs();
