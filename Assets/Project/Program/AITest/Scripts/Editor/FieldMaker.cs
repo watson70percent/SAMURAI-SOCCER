@@ -5,6 +5,9 @@ using UnityEditor;
 using System.IO;
 using Newtonsoft.Json;
 
+/// <summary>
+/// フィールドを作るためのクラス。メニューウィンドウに出るけど実行用。スクリプトで内容を書く。
+/// </summary>
 public class FieldMaker : EditorWindow
 {
     [MenuItem("Coustom/FieldMaker")]

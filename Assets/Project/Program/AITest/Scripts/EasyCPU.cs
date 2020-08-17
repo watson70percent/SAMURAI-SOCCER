@@ -143,7 +143,7 @@ public class EasyCPU : MonoBehaviour
         vec = CalcNextPoint(vec);
 
         Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
-
+        //TODO: 向いている向きを元の向きにする。実際の方と異なる。
         gameObject.transform.Translate(vec.x, 0, vec.y, Space.World);
         gameObject.transform.rotation = Quaternion.Euler(rot);
     }

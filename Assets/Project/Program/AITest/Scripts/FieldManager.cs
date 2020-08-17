@@ -4,6 +4,9 @@ using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
 
+/// <summary>
+///　フィールド情報を管理する。
+/// </summary>
 public class FieldManager : MonoBehaviour
 {
     public FieldInfo info = default;

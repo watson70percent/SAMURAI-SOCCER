@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// フィールド
+/// </summary>
 [Serializable]
 public class FieldInfo
 {
