@@ -15,6 +15,7 @@ public class EasyCPU : MonoBehaviour
     public FieldInfo info;
     private bool isPause = false;
     private Vector2 before_velocity = Vector2.zero;
+    private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
 
     public void Pause()
     {
@@ -139,13 +140,15 @@ public class EasyCPU : MonoBehaviour
         {
             vec = vec.normalized * Mathf.Log10(dis + 1) * status.fast;
         }
-
+        rot_chain.AddLast(vec);
+        if (rot_chain.Count > 30)
+        {
+            rot_chain.RemoveFirst();
+        }
         vec = CalcNextPoint(vec);
-
-        Vector3 rot = new Vector3(0, Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg);
-        //TODO: 向いている向きを元の向きにする。実際の方と異なる。
+        
+        gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, CalcRotAverage()));
         gameObject.transform.Translate(vec.x, 0, vec.y, Space.World);
-        gameObject.transform.rotation = Quaternion.Euler(rot);
     }
 
     private Vector2 CalcNextPoint(Vector2 vec)
@@ -154,22 +157,30 @@ public class EasyCPU : MonoBehaviour
         var move = realVec * Time.deltaTime;
         var next = move + new Vector2(transform.position.x, transform.position.z);
 
-        if(next.x < 0)
+        if(next.x < 0 || transform.position.x < 0)
         {
-            move.x = (-transform.position.x + 1) * Time.deltaTime;
+            move.x = (-transform.position.x + 5) * Time.deltaTime;
+            rot_chain.RemoveLast();
+            rot_chain.AddLast(move);
         }
-        else if(next.x > Constants.Width)
+        else if(next.x > Constants.Width || transform.position.x > Constants.Width)
         {
-            move.x = (Constants.Width - transform.position.x - 1) * Time.deltaTime;
+            move.x = (Constants.Width - transform.position.x - 5) * Time.deltaTime;
+            rot_chain.RemoveLast();
+            rot_chain.AddLast(move);
         }
 
-        if(next.y < 0)
+        if(next.y < 0 || transform.position.z < 0)
         {
-            move.y = (-transform.position.z + 1) * Time.deltaTime;
+            move.y = (-transform.position.z + 5) * Time.deltaTime;
+            rot_chain.RemoveLast();
+            rot_chain.AddLast(move);
         }
-        else if(next.y > Constants.G2G)
+        else if(next.y > Constants.G2G || transform.position.z > Constants.G2G)
         {
-            move.y = (Constants.G2G - transform.position.z - 1) * Time.deltaTime;
+            move.y = (Constants.G2G - transform.position.z - 5) * Time.deltaTime;
+            rot_chain.RemoveLast();
+            rot_chain.AddLast(move);
         }
         before_velocity = move / Time.deltaTime;
 
@@ -187,5 +198,16 @@ public class EasyCPU : MonoBehaviour
         }
 
         return before_velocity + diff;
+    }
+
+    private float CalcRotAverage()
+    {
+        Vector2 vec = default;
+        foreach(var v in rot_chain)
+        {
+            vec += v;
+        }
+
+        return Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
     }
 }

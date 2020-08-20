@@ -7,7 +7,9 @@ using Random = UnityEngine.Random;
 
 public class BallControler : MonoBehaviour
 {
+    [NonSerialized]
     public Rigidbody rb;
+    public FieldManager info;
     private static readonly float sqrt3 = Mathf.Sqrt(3);
     private static readonly float sqrt2 = Mathf.Sqrt(2);
     private static readonly float gravity = 9.8f;
@@ -15,7 +17,9 @@ public class BallControler : MonoBehaviour
     private Vector3 velocity;
     private Vector3 angularVelocity;
 
+    [NonSerialized]
     public bool last_touch;
+    [NonSerialized]
     public GameObject owner;
     public delegate void GoalEventHandler(object sender, GoalEventArgs e);
     public delegate void OutBallEventHandler(object sender, OutBallEventArgs e);
@@ -34,6 +38,11 @@ public class BallControler : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        rb.angularDrag = info.info.Getdrag(gameObject.transform.position);
     }
 
     public void Pause()
