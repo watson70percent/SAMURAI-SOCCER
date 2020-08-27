@@ -13,9 +13,27 @@ public class EasyCPU : MonoBehaviour
     public EasyCPUManager manager;
     public PersonalStatus status;
     public FieldInfo info;
+    public Rigidbody rb;
     private bool isPause = false;
     private Vector2 before_velocity = Vector2.zero;
     private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
+
+    /// <summary>
+    /// 吹っ飛びやすさを再設定
+    /// </summary>
+    public void SetMass()
+    {
+        rb.mass = Mathf.Pow(2, status.hp - 1);
+    }
+
+    /// <summary>
+    /// 攻撃されたときに呼ぶ。hpが減り、吹っ飛びやすくなる。
+    /// </summary>
+    public void Attacked()
+    {
+        status.hp--;
+        SetMass();
+    }
 
     public void Pause()
     {

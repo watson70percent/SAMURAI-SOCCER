@@ -125,6 +125,11 @@ public class TeamMaker : EditorWindow
             return;
         }
 
+        foreach(var member in team.member)
+        {
+            member.hp = member.MAX_HP;
+        }
+
         File.WriteAllText(Application.streamingAssetsPath + "/" + path_name + ".json", JsonConvert.SerializeObject(team, Formatting.Indented));
 
         EditorUtility.DisplayDialog("成功", "チームを上書きしました。", "OK");

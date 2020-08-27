@@ -31,6 +31,8 @@ public class EasyCPUManager : MonoBehaviour
     [NonSerialized]
     public GameObject near_opp;
 
+    public Dictionary<GameObject, Rigidbody> rbs = default;
+
     private FieldInfo info;
 
     /// <summary>
@@ -128,6 +130,8 @@ public class EasyCPUManager : MonoBehaviour
         team.Remove(dead);
         Destroy(dead);
 
+        rbs.Remove(dead);
+
         if (ally)
         {
             Sporn(team_stock.member[0], Constants.TeammateSpornPoint);
@@ -163,6 +167,10 @@ public class EasyCPUManager : MonoBehaviour
         setting.dest = ball.gameObject;
         setting.manager = this;
         setting.info = info;
+        setting.rb = temp.GetComponent<Rigidbody>();
+        setting.SetMass();
+
+        rbs.Add(temp, setting.rb);
 
         setting.status = status;
         if (status.ally)
