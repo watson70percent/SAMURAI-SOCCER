@@ -4,10 +4,12 @@ using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
 using System;
+using System.Linq;
 
 /// <summary>
 ///　フィールド情報を管理する。
 /// </summary>
+[DefaultExecutionOrder(-1)]
 public class FieldManager : MonoBehaviour
 {
     [NonSerialized]
@@ -23,6 +25,8 @@ public class FieldManager : MonoBehaviour
     {
         info = JsonConvert.DeserializeObject<FieldInfo>(File.ReadAllText(Application.streamingAssetsPath + "/Field_" + FieldNumber.no + ".json"));
         ball_rb = ball.GetComponent<Rigidbody>();
+        gameObject.AddComponent(typeof(NonWind));
+        wind = GetComponents<WindInfoBase>().First();
     }
 
     private void FixedUpdate()

@@ -31,7 +31,7 @@ public class EasyCPUManager : MonoBehaviour
     [NonSerialized]
     public GameObject near_opp;
 
-    public Dictionary<GameObject, Rigidbody> rbs = default;
+    public Dictionary<GameObject, Rigidbody> rbs = new Dictionary<GameObject, Rigidbody>();
 
     private FieldInfo info;
 

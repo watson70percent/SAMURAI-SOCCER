@@ -101,7 +101,7 @@ public class EasyCPU : MonoBehaviour
         {
             if (status.ally)
             {
-                if(vec.sqrMagnitude > 40000 && ball.gameObject.transform.position.z > gameObject.transform.position.z + 10)
+                if(vec.sqrMagnitude > status.seelen * status.seelen * 100 && ball.gameObject.transform.position.z > gameObject.transform.position.z + 10)
                 {
                     vec = Vector2.zero;
                 }

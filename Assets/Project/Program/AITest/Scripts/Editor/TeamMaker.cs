@@ -30,7 +30,7 @@ public class TeamMaker : EditorWindow
 
     private Vector2 pos = Vector2.zero;
 
-    [MenuItem("Coustom/TeamMaker")]
+    [MenuItem("Custom/TeamMaker")]
     static void OpenWindow()
     {
         GetWindow<TeamMaker>();

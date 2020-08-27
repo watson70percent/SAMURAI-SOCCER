@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 /// </summary>
 public class FieldMaker : EditorWindow
 {
-    [MenuItem("Coustom/FieldMaker")]
+    [MenuItem("Custom/FieldMaker")]
     static void ClickButton()
     {
         var info = new FieldInfo();
