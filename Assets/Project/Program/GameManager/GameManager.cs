@@ -37,7 +37,7 @@ public partial class  GameManager : MonoBehaviour
     {
         _gameManagerStateMachine = new ImtStateMachine<GameManager>(this);
 
-        //無理やりStateを移動する用
+        //Stateの移動する方向とIdを関連づけ
         _gameManagerStateMachine.AddAnyTransition<ResetState>((int)GameState.Reset);
         _gameManagerStateMachine.AddAnyTransition<StandbyState>((int)GameState.Standby);
         _gameManagerStateMachine.AddAnyTransition<PlayingState>((int)GameState.Playing);
