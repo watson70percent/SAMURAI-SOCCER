@@ -14,7 +14,7 @@ public class ResetState : ImtStateMachine<GameManager>.State
     // 状態の更新はこのUpdateで行う
     protected override void Update()
     {
-        Context.gameObject.GetComponent<IGameManagerable>().AllResetedSignal();
+        Context.StateChangeSignal(GameState.Standby);
     }
 
     // 状態から脱出する時の処理はこのExitで行う

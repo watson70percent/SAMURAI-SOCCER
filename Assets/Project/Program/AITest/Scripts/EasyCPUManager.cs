@@ -4,10 +4,13 @@ using UnityEngine;
 using System.Linq;
 
 using System.IO;
+using Unity.Collections;
+using System;
 
 /// <summary>
 /// CPUを操作するクラス
 /// </summary>
+[RequireComponent(typeof(FieldManager))]
 public class EasyCPUManager : MonoBehaviour
 {
     public GameManager gm;
@@ -23,6 +26,12 @@ public class EasyCPUManager : MonoBehaviour
     public BallControler ball;
     private GameObject teammate;
     private GameObject opponent;
+    [NonSerialized]
+    public GameObject near_team;
+    [NonSerialized]
+    public GameObject near_opp;
+
+    private FieldInfo info;
 
     /// <summary>
     /// 味方の人数
@@ -51,10 +60,16 @@ public class EasyCPUManager : MonoBehaviour
         opponent = Resources.Load<GameObject>("opponent");
 
         gm.StateChange += StateChanged;
-
+        info = GetComponent<FieldManager>().info;
         // opponent = Resources.Load<GameObject>(OpponentName.name);
         LoadMember();
 
+    }
+
+    private void Update()
+    {
+        near_team = team.Aggregate((cur, next) => { return (ball.transform.position - cur.transform.position).sqrMagnitude > (ball.transform.position - next.transform.position).sqrMagnitude ? next : cur; });
+        near_opp = opp.Aggregate((cur, next) => { return (ball.transform.position - cur.transform.position).sqrMagnitude > (ball.transform.position - next.transform.position).sqrMagnitude ? next : cur; });
     }
 
     private void StateChanged(StateChangedArg e)
@@ -147,6 +162,7 @@ public class EasyCPUManager : MonoBehaviour
         setting.ball = ball;
         setting.dest = ball.gameObject;
         setting.manager = this;
+        setting.info = info;
 
         setting.status = status;
         if (status.ally)

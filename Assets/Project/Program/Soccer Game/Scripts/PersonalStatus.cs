@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class PersonalStatus
 {
-    public readonly int MAX_HP;
+    public int MAX_HP;
     public int hp;
     public int power;
     public bool ally;

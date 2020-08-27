@@ -10,8 +10,8 @@ public class RefereeMove : MonoBehaviour
     public float radius;
     Rigidbody rig;
     public RefereeArea refereeArea;
-    public AnimationController animcon;
-    ParticleSystem bikkuri;
+    //public AnimationController animcon;
+    //ParticleSystem bikkuri;
     // Start is called before the first frame update
 
     GameManager gameManager;
@@ -32,21 +32,21 @@ public class RefereeMove : MonoBehaviour
         
 
 
-        bikkuri = GetComponent<ParticleSystem>();
 
         rig = GetComponent<Rigidbody>();
 
-        animcon.AttackEvent += (sender, e) =>
-        {
-            var vec = ((AnimationController)sender).transform.position - transform.position;
-            if (vec.magnitude < refereeArea.size)
-            {
-                if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
-                {
-                    bikkuri.Play();
-                }
-            }
-        };
+        //bikkuri = GetComponent<ParticleSystem>();
+        //animcon.AttackEvent += (sender, e) =>
+        //{
+        //    var vec = ((AnimationController)sender).transform.position - transform.position;
+        //    if (vec.magnitude < refereeArea.areaSize)
+        //    {
+        //        if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
+        //        {
+        //            bikkuri.Play();
+        //        }
+        //    }
+        //};
     }
 
     // Update is called once per frame
