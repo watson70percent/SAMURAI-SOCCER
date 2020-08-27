@@ -3,8 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 風の情報を持ったクラス。これから派生させてください。
+/// </summary>
 public abstract class WindInfoBase : MonoBehaviour
 {
+    /// <summary>
+    /// 風の力
+    /// </summary>
     public Vector2[][] wind = default;
 
     /// <summary>
