@@ -15,11 +15,15 @@ public class FieldManager : MonoBehaviour
     [NonSerialized]
     public FieldInfo info = default;
     public EasyCPUManager manager;
+    public GameManager gm;
 
     public GameObject ball;
     private Rigidbody ball_rb = default;
 
     private WindInfoBase wind = default;
+
+    private bool isPlaying = false;
+
 
     void Awake()
     {
@@ -27,20 +31,37 @@ public class FieldManager : MonoBehaviour
         ball_rb = ball.GetComponent<Rigidbody>();
         gameObject.AddComponent(typeof(NonWind));
         wind = GetComponents<WindInfoBase>().First();
+        gm.StateChange += StateChanged;
     }
 
     private void FixedUpdate()
     {
-        manager.team.ForEach(member =>
+        if (isPlaying)
         {
-            manager.rbs[member].AddForce(wind.WindEffect(member.transform.position));
-        });
+            manager.team.ForEach(member =>
+            {
+                manager.rbs[member].AddForce(wind.WindEffect(member.transform.position));
+            });
 
-        manager.opp.ForEach(member =>
+            manager.opp.ForEach(member =>
+            {
+                manager.rbs[member].AddForce(wind.WindEffect(member.transform.position));
+            });
+
+            ball_rb.AddForce(wind.WindEffect(ball.transform.position));
+        }
+    }
+
+    private void StateChanged(StateChangedArg e)
+    {
+        if (e.gameState == GameState.Pause)
         {
-            manager.rbs[member].AddForce(wind.WindEffect(member.transform.position));
-        });
+            isPlaying = false;
+        }
 
-        ball_rb.AddForce(wind.WindEffect(ball.transform.position));
+        if (e.gameState == GameState.Playing)
+        {
+            isPlaying = true;
+        }
     }
 }
