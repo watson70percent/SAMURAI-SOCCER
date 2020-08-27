@@ -256,7 +256,6 @@ public class BallControler : MonoBehaviour
             }
 
             rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z), ForceMode.Impulse);
-            Debug.Log(self.power * dest);
         }
     }
 
