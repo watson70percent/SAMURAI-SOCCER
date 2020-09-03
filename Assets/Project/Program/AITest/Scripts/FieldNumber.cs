@@ -8,5 +8,5 @@ using UnityEngine;
 /// </summary>
 public static class FieldNumber
 {
-    public static int no = 1;
+    public static int no = 0;
 }
