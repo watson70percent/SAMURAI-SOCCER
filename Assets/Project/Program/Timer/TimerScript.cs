@@ -68,7 +68,7 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeText = displayText.GetComponent<Text>();//
+        timeText = GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -79,7 +79,7 @@ public class TimerScript : MonoBehaviour
             if (limitTime > elapsedTime)
             {
                 elapsedTime += Time.deltaTime;
-                
+                //Debug.Log(elapsedTime);
                 int displayTime = (int)(limitTime - elapsedTime);
                 timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
                 
