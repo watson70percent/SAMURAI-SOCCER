@@ -16,7 +16,10 @@ Shader "Custom/Glass"
 		"RenderType" = "Opaque" }
 		LOD 200
 		//Blend SrcAlpha OneMinusSrcAlpha
-		GrabPass{}
+		GrabPass{} //これでオブジェクトの向こう側が見える
+
+
+		//これは透過ではなくて後ろの映像を加工して表示している
 
 		Pass{
 
@@ -40,9 +43,9 @@ Shader "Custom/Glass"
 	};
 
 	struct v2f {
-		float4 grabPos :TEXCOOD0;
+		float4 grabPos :TEXCOOD0; 
 			float4 pos : SV_POSITION;
-			float3 refract:TEXCOORD1;
+			float3 refract:TEXCOORD1; //屈折の影響
 			float attent :TEXCOORD2;
 	};
 
