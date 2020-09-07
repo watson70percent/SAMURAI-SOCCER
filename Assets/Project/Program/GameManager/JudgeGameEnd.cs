@@ -1,19 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(GameManager),typeof(EasyCPUManager))]
 public class JudgeGameEnd : MonoBehaviour
 {
-    private bool _endflag = false;
-    /// <summary>
-    /// 試合終了かどうか判定するフラグ
-    /// false→試合中
-    /// true→試合終了
-    /// </summary>
-    public bool EndFlag
+    private GameManager _gameManager;
+    private EasyCPUManager _easyCPUManager;
+
+    private void Start()
     {
-        get { return _endflag; }
-        set { _endflag = value; }
+        _gameManager = GetComponent<GameManager>();
+        _easyCPUManager = GetComponent<EasyCPUManager>();
+    }
+
+    private void Update()
+    {
+        //FinishStateに移動していないなら(移動したらもうこの辺の処理は止める)
+        if (_gameManager.CurrentGameState!= GameState.Finish)
+        {
+            //敵CPUの数が0以下なら勝利リザルト用の処理をSceneManagerに追加し、StateをFinishに移動
+            if (_easyCPUManager.OpponentMemberCount <= 0)
+            {
+                //SceneManagerのイベントに勝利リザルト処理を追加
+                SceneManager.sceneLoaded += GameSceneLoaded;
+                _gameManager.StateChangeSignal(GameState.Finish);
+            }
+        }
+
+    }
+
+    //勝利リザルト用の処理
+    void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    {
+        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
+        resultManager.resultState = ResultState.Win;
+
+        SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 
 }
