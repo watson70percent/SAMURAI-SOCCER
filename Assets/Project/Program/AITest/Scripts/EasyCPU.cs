@@ -67,7 +67,7 @@ public class EasyCPU : MonoBehaviour
                     }
                     else
                     {
-                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int());
+                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(), (PassHeight)Random.Range(0, 3),status);
                     }
                 }
                 else
@@ -80,7 +80,7 @@ public class EasyCPU : MonoBehaviour
                     }
                     else
                     {
-                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int());
+                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(),(PassHeight)Random.Range(0, 3), status);
                     }
 
                 }

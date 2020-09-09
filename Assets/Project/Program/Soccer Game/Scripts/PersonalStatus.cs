@@ -8,7 +8,7 @@ public class PersonalStatus
 {
     public int MAX_HP;
     public int hp;
-    public int power;
+    public float power;
     public bool ally;
 
     public float seelen;

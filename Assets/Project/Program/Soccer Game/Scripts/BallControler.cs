@@ -171,7 +171,6 @@ public class BallControler : MonoBehaviour
                 self.power = 30;
             }
 
-            rb.velocity = Vector3.zero;
             switch (height)
             {
                 case PassHeight.Low: CalcLowPass(sender, recever, self); break;
@@ -194,7 +193,7 @@ public class BallControler : MonoBehaviour
     {
         Vector2 dest = (recever - sender).normalized;
 
-        rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x / 2, 0.4f, -dest.y / 2), ForceMode.Impulse);
+        rb.AddForce(self.power * dest, ForceMode.Impulse);
     }
 
     private void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)
@@ -207,7 +206,7 @@ public class BallControler : MonoBehaviour
             power = self.power;
         }
         dest = dest.normalized;
-        rb.AddForceAtPosition(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y), 0.3f * new Vector3(-2 / sqrt3 * dest.x, -1.0f / sqrt3, -2 / sqrt3 * dest.y), ForceMode.Impulse);
+        rb.AddForce(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y), ForceMode.Impulse);
     }
 
     private void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)
@@ -220,7 +219,7 @@ public class BallControler : MonoBehaviour
             power = self.power;
         }
         dest = dest.normalized;
-        rb.AddForceAtPosition(power * new Vector3(dest.x / sqrt2, 1.0f / sqrt2, dest.z / sqrt2), 0.3f * new Vector3(-dest.x / sqrt2, -1.0f / sqrt2, -dest.z / sqrt2), ForceMode.Impulse);
+        rb.AddForce(power * new Vector3(dest.x / sqrt2, 1.0f / sqrt2, dest.z / sqrt2), ForceMode.Impulse);
 
     }
 
@@ -238,24 +237,20 @@ public class BallControler : MonoBehaviour
     {
         if (rb.velocity.sqrMagnitude < 25)
         {
-            if (self == default)
-            {
-                self.power = 30;
-            }
 
             Vector3 dest;
             if (self.ally)
             {
 
-                dest = (Constants.OppornentGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0) - sender.transform.position).normalized;
+                dest = (info.AdaptPosition(Constants.OppornentGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - sender.transform.position).normalized;
             }
             else
             {
-                dest = (Constants.OurGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0) - sender.transform.position).normalized;
+                dest = (info.AdaptPosition(Constants.OurGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - sender.transform.position).normalized;
 
             }
 
-            rb.AddForceAtPosition(self.power * dest, 0.3f * new Vector3(-dest.x, -dest.y, dest.z), ForceMode.Impulse);
+            rb.AddForce(self.power * dest, ForceMode.Impulse);
         }
     }
 
