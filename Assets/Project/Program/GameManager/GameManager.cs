@@ -33,6 +33,15 @@ public partial class  GameManager : MonoBehaviour
 
     //このGameManagerクラスのステートマシーン
     private ImtStateMachine<GameManager> _gameManagerStateMachine;
+
+    GameState state = GameState.Reset;
+    //MainGameの現在の状態
+    public GameState CurrentGameState
+    {
+        get { return state; }
+        private set { state = value; }
+    }
+
     private void Awake()
     {
         _gameManagerStateMachine = new ImtStateMachine<GameManager>(this);
@@ -63,9 +72,9 @@ public partial class  GameManager : MonoBehaviour
     public void StateChangeSignal(GameState state)
     {
         _gameManagerStateMachine.SendEvent((int)state);
+        CurrentGameState = state;
         Debug.Log("Stateを"+state+"に移動しました");
     }
-
 
     /// <summary>
     /// イベント発火関数

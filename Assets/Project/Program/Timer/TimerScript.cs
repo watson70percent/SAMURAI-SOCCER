@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class TimerScript : MonoBehaviour
 
 
     public GameManager gameManager;
-    JudgeGameEnd judgeGameEnd;//ゲーム終了判定クラス
 
     public void Timer(StateChangedArg stateChangedArg) {
         switch (stateChangedArg.gameState)
@@ -62,13 +62,12 @@ public class TimerScript : MonoBehaviour
     private void Awake()
     {
         gameManager.StateChange += Timer;
-        judgeGameEnd = GetComponent<JudgeGameEnd>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        timeText = GetComponent<Text>();
+        
     }
 
     // Update is called once per frame
@@ -82,15 +81,30 @@ public class TimerScript : MonoBehaviour
                 //Debug.Log(elapsedTime);
                 int displayTime = (int)(limitTime - elapsedTime);
                 timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
-                
+
             }
             else
             {
                 playing = false;
                 end = true;
-                judgeGameEnd.EndFlag = true;
+                //FinishStateに移動していないなら(移動したらもうこの辺の処理は止める)
+                if (gameManager.CurrentGameState != GameState.Finish)
+                {
+                    //SceneManagerのイベントにTimeUpリザルト処理を追加
+                    SceneManager.sceneLoaded += GameSceneLoaded;
+                    gameManager.StateChangeSignal(GameState.Finish);
+                }
             }
         }
        
+    }
+
+    //TimeUpリザルト用の処理
+    void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    {
+        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
+        resultManager.resultState = ResultState.TimeOver;
+
+        SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 }
