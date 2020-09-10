@@ -67,7 +67,7 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeText = GetComponent<Text>();
+        
     }
 
     // Update is called once per frame
