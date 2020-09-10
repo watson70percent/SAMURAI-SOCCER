@@ -71,6 +71,16 @@ public class FieldManager : MonoBehaviour
         return rotation.AdaptPosition(pos);
     }
 
+    /// <summary>
+    /// 開店前の位置に変換
+    /// </summary>
+    /// <param name="pos">元の場所</param>
+    /// <returns>変換後の場所</returns>
+    public Vector3 AdaptInversePosition(Vector3 pos)
+    {
+        return rotation.AdaptInversePosition(pos);
+    }
+
     private void StateChanged(StateChangedArg e)
     {
         if (e.gameState == GameState.Pause)

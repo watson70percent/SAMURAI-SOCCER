@@ -217,7 +217,7 @@ public class EasyCPUManager : MonoBehaviour
         setting.ball = ball;
         setting.dest = ball.gameObject;
         setting.manager = this;
-        setting.info = field.info;
+        setting.field = field;
         setting.rb = temp.GetComponent<Rigidbody>();
         setting.SetMass();
 
