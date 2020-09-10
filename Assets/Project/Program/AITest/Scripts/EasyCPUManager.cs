@@ -33,7 +33,7 @@ public class EasyCPUManager : MonoBehaviour
 
     public Dictionary<GameObject, Rigidbody> rbs = new Dictionary<GameObject, Rigidbody>();
 
-    private FieldInfo info;
+    private FieldManager field;
 
     /// <summary>
     /// 味方の人数
@@ -55,6 +55,57 @@ public class EasyCPUManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// ブースト
+    /// </summary>
+    /// <param name="isTeam">味方にブーストか</param>
+    /// <param name="coeff">倍率</param>
+    /// <param name="finishTime">ブースト終了時間</param>
+    public void Boost(bool isTeam, float coeff, int finishTime = 0)
+    {
+        if (isTeam)
+        {
+            foreach(var member in team)
+            {
+                var s = member.GetComponent<EasyCPU>().status;
+                s.fast *= coeff;
+                s.power *= coeff;
+            }
+
+            foreach (var member in team_stock.member)
+            {
+                member.fast *= coeff;
+                member.power *= coeff;
+            }
+        }
+        else
+        {
+            foreach (var member in opp)
+            {
+                var s = member.GetComponent<EasyCPU>().status;
+                s.fast *= coeff;
+                s.power *= coeff;
+            }
+
+            foreach (var member in opp_stock.member)
+            {
+                member.fast *= coeff;
+                member.power *= coeff;
+            }
+        }
+
+        if(finishTime != 0)
+        {
+            StartCoroutine(FinBoost(isTeam, coeff, finishTime));
+        }
+    }
+
+    private IEnumerator FinBoost(bool isTeam, float coeff, int fin)
+    {
+        yield return new WaitForSeconds(fin);
+        Boost(isTeam, 1 / coeff);
+    }
+
 
     void Awake()
     {
@@ -62,7 +113,7 @@ public class EasyCPUManager : MonoBehaviour
         opponent = Resources.Load<GameObject>("opponent");
 
         gm.StateChange += StateChanged;
-        info = GetComponent<FieldManager>().info;
+        field = GetComponent<FieldManager>();
         // opponent = Resources.Load<GameObject>(OpponentName.name);
         LoadMember();
 
@@ -134,12 +185,12 @@ public class EasyCPUManager : MonoBehaviour
 
         if (ally)
         {
-            Sporn(team_stock.member[0], Constants.TeammateSpornPoint);
+            Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateSpornPoint));
             team_stock.member.RemoveAt(0);
         }
         else
         {
-            Sporn(opp_stock.member[0], Constants.OppornentSpornPoint);
+            Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OppornentSpornPoint));
             opp_stock.member.RemoveAt(0);
         }
     }
@@ -166,7 +217,7 @@ public class EasyCPUManager : MonoBehaviour
         setting.ball = ball;
         setting.dest = ball.gameObject;
         setting.manager = this;
-        setting.info = info;
+        setting.field = field;
         setting.rb = temp.GetComponent<Rigidbody>();
         setting.SetMass();
 
@@ -217,13 +268,13 @@ public class EasyCPUManager : MonoBehaviour
         {
             for(int i = 0; i < teamCount; i++)
             {
-                Sporn(team_stock.member[0], Constants.TeammateInitialSpornPointCenterOppornent[i]);
+                Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateInitialSpornPointCenterOppornent[i]));
                 team_stock.member.RemoveAt(0);
             }
 
             for (int i = 0; i < oppCount; i++)
             {
-                Sporn(opp_stock.member[0], Constants.OpprnentInitialSpornPointCenterOppornent[i]);
+                Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OpprnentInitialSpornPointCenterOppornent[i]));
                 opp_stock.member.RemoveAt(0);
             }
         }
@@ -231,13 +282,13 @@ public class EasyCPUManager : MonoBehaviour
         {
             for (int i = 0; i < teamCount; i++)
             {
-                Sporn(team_stock.member[0], Constants.TeammateInitialSpornPointCenterTeam[i]);
+                Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateInitialSpornPointCenterTeam[i]));
                 team_stock.member.RemoveAt(0);
             }
 
             for (int i = 0; i < oppCount; i++)
             {
-                Sporn(opp_stock.member[0], Constants.OpprnentInitialSpornPointCenterTeam[i]);
+                Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OpprnentInitialSpornPointCenterTeam[i]));
                 opp_stock.member.RemoveAt(0);
             }
         }

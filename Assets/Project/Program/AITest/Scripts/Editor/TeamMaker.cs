@@ -90,7 +90,7 @@ public class TeamMaker : EditorWindow
                 var member = team.member[i];
                 EditorGUILayout.BeginVertical(GUI.skin.box);
                 member.MAX_HP = EditorGUILayout.IntField("Max HP", member.MAX_HP);
-                member.power = EditorGUILayout.IntField("Kick power", member.power);
+                member.power = EditorGUILayout.FloatField("Kick power", member.power);
                 member.ally = EditorGUILayout.Toggle("味方", member.ally);
                 member.seelen = EditorGUILayout.FloatField("See len", member.seelen);
                 member.fast = EditorGUILayout.FloatField("Fast", member.fast);
@@ -157,7 +157,7 @@ public class TeamMaker : EditorWindow
         for (int i = 0; i < generate_num; i++)
         {
             int maxHP = Mathf.FloorToInt(UnityEngine.Random.Range(min_hp, max_hp));
-            int power = Mathf.FloorToInt(UnityEngine.Random.Range(min_power, max_power));
+            float power = UnityEngine.Random.Range(min_power, max_power);
             float seelen = UnityEngine.Random.Range(min_seelen, max_seelen);
             float fast = UnityEngine.Random.Range(max_fast, min_fast);
 
