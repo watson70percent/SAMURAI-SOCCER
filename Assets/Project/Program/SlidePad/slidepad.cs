@@ -7,7 +7,8 @@ using UnityEngine.EventSystems;
 public class slidepad : MonoBehaviour
 {
 
-    public float radius;
+    float radius;
+    float scale;
     bool isdragged;
     public GameObject joystick;
     RectTransform joyrect;
@@ -23,6 +24,7 @@ public class slidepad : MonoBehaviour
     GameState state = GameState.Standby;
 
     int fingerID;
+    Vector2 velocity;
 
     void SwitchState(StateChangedArg a)
     {
@@ -39,8 +41,9 @@ public class slidepad : MonoBehaviour
         joyrect = joystick.GetComponent<RectTransform>();
         joystartposition = joyrect.localPosition;
         playerrig = player.GetComponent<Rigidbody>();
-
-
+        velocity = Vector3.zero;
+        scale = transform.localScale.x;
+        radius = 50 * scale;
     }
 
     // Update is called once per frame
@@ -67,12 +70,13 @@ public class slidepad : MonoBehaviour
                 // print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
+                
 
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
-                Controller(dir);
+                Controller(dir/radius);
 
-                joyrect.localPosition = joystartposition + dir;
+                joyrect.localPosition = joystartposition + dir / scale;
 
             }
         }
@@ -101,6 +105,7 @@ public class slidepad : MonoBehaviour
     {
         dir = new Vector2(dir.y, -dir.x);
 
+        //  向きを決める
         Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
         // print(rotationdir);
         rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;
@@ -108,16 +113,23 @@ public class slidepad : MonoBehaviour
         //player.transform.rotation = Quaternion.LookRotation(rotationdir); //なんか挙動がおかしい
 
 
-
-
-        Vector2 velocity= dir/radius * speed ;
-        Vector3 direction3d= new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
-        playerrig.position = direction3d;
-      
-
+        //動きを決める
+        //Vector2 velocity= dir/radius * speed ;
+        //Vector3 direction3d= new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        //playerrig.position = direction3d;
+        Move(dir);
 
 
     }
+
+    void Move(Vector2 dir)
+    {
+        Vector2 force = dir* speed;
+        velocity = force;
+        Vector3 direction3d = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        playerrig.position = direction3d;
+    }
+
 
     Touch FindFinger()
     {
