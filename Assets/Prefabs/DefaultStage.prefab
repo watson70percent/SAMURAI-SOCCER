@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 2677264473109749924}
   - component: {fileID: 2677264473109749979}
   - component: {fileID: 2677264473109749978}
+  - component: {fileID: 6109866594413290109}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -356,9 +357,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d953e3f97ac5e54a8b3807bc41be5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  root: {fileID: 0}
   manager: {fileID: 2677264473109749920}
   gm: {fileID: 2677264473109749926}
   ball: {fileID: 6198748369724877548}
+  rotation: {fileID: 0}
+--- !u!114 &6109866594413290109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677264473109749921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e4ab564a574784caecdc5dc107c3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResultSceneName: Result
 --- !u!1 &2677264473272702813
 GameObject:
   m_ObjectHideFlags: 0

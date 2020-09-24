@@ -12,7 +12,7 @@ public class EasyCPU : MonoBehaviour
     public GameObject dest;
     public EasyCPUManager manager;
     public PersonalStatus status;
-    public FieldInfo info;
+    public FieldManager field;
     public Rigidbody rb;
     private bool isPause = false;
     private Vector2 before_velocity = Vector2.zero;
@@ -59,7 +59,7 @@ public class EasyCPU : MonoBehaviour
             {
                 if (status.ally)
                 {
-                    var temp = manager.team.Where(value => value.transform.position.y > transform.position.y);
+                    var temp = manager.team.Where(value =>  field.AdaptInversePosition(value.transform.position).z > field.AdaptInversePosition(transform.position).z);
                     var to = Random.Range(0, temp.Count() + 1);
                     if (to == temp.Count())
                     {
@@ -67,12 +67,12 @@ public class EasyCPU : MonoBehaviour
                     }
                     else
                     {
-                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int());
+                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(), (PassHeight)Random.Range(0, 3),status);
                     }
                 }
                 else
                 {
-                    var temp = manager.opp.Where(value => value.transform.position.y < transform.position.y);
+                    var temp = manager.opp.Where(value => field.AdaptInversePosition(value.transform.position).z < field.AdaptInversePosition(transform.position).z);
                     var to = Random.Range(0, temp.Count() + 1);
                     if (to == temp.Count())
                     {
@@ -80,7 +80,7 @@ public class EasyCPU : MonoBehaviour
                     }
                     else
                     {
-                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int());
+                        ball.Pass(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(),(PassHeight)Random.Range(0, 3), status);
                     }
 
                 }
@@ -101,7 +101,7 @@ public class EasyCPU : MonoBehaviour
         {
             if (status.ally)
             {
-                if(vec.sqrMagnitude > status.seelen * status.seelen * 100 && ball.gameObject.transform.position.z > gameObject.transform.position.z + 10)
+                if(vec.sqrMagnitude > status.seelen * status.seelen * 100 && field.AdaptInversePosition(ball.gameObject.transform.position).z > field.AdaptInversePosition(gameObject.transform.position).z + 10)
                 {
                     vec = Vector2.zero;
                 }
@@ -122,7 +122,7 @@ public class EasyCPU : MonoBehaviour
             }
             else
             {
-                if (vec.sqrMagnitude > 40000 && ball.gameObject.transform.position.z < gameObject.transform.position.z - 10)
+                if (vec.sqrMagnitude > 40000 && field.AdaptInversePosition(ball.gameObject.transform.position).z < field.AdaptInversePosition(gameObject.transform.position).z - 10)
                 {
                     vec = Vector2.zero;
                 }
@@ -209,7 +209,7 @@ public class EasyCPU : MonoBehaviour
     {
         var diff = vec - before_velocity;
         float deg = Vector2.Dot(before_velocity, diff) / before_velocity.magnitude / diff.magnitude;
-        float coeff = (deg + 1) / 2 * info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * info.GetAccDownCoeff(transform.position);
+        float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
         if(diff.sqrMagnitude > status.fast * status.fast * coeff * coeff / 180 / 180)
         {
             diff = diff.normalized * status.fast * coeff / 180;
