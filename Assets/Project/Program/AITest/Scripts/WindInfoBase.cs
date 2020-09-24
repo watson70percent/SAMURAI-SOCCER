@@ -11,17 +11,17 @@ public abstract class WindInfoBase : MonoBehaviour
     /// <summary>
     /// 風の力
     /// </summary>
-    public Vector2[][] wind = default;
+    public Vector3[][] wind = default;
 
     /// <summary>
     /// 初期化。派生クラスでは自由に
     /// </summary>
     protected virtual void Start()
     {
-        wind = new Vector2[Mathf.FloorToInt(Constants.Width)][];
+        wind = new Vector3[Mathf.FloorToInt(Constants.Width)][];
         for(int i = 0; i < Mathf.FloorToInt(Constants.Width); i++)
         {
-            wind[i] = new Vector2[Mathf.FloorToInt(Constants.G2G)];
+            wind[i] = new Vector3[Mathf.FloorToInt(Constants.G2G)];
             for(int j = 0; j < Mathf.FloorToInt(Constants.G2G); j++)
             {
                 wind[i][j] = Vector2.zero;
@@ -29,7 +29,7 @@ public abstract class WindInfoBase : MonoBehaviour
         }
     }
 
-    public Vector2 WindEffect(Vector3 position)
+    public Vector3 WindEffect(Vector3 position)
     {
         try
         {

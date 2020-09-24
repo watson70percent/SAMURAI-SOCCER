@@ -8,7 +8,7 @@ public class Penalty : MonoBehaviour
 
     public GameObject[] yellowCard=new GameObject[2];
     int penaltycount = 0;
-    public GameManager gameManager;
+    GameManager gameManager;
     // Start is called before the first frame update
 
     private void Reset(StateChangedArg a)

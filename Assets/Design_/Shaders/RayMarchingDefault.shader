@@ -58,9 +58,9 @@
 				o.col = fixed4(1, 1, 1, 1);
 				return o;
 			}
-
-
 			//レイマーチングはこの距離関数で模様を決める
+
+
 			
 
 			fixed4 frag(v2f i) : SV_Target
