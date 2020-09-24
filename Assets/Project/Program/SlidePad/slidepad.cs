@@ -49,6 +49,7 @@ public class slidepad : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+
         switch (state)
         {
             case GameState.Standby : break;
@@ -60,6 +61,7 @@ public class slidepad : MonoBehaviour
     }
 
 
+
     void PlayingState()
     {
         if (isdragged == true)
@@ -67,14 +69,13 @@ public class slidepad : MonoBehaviour
             if (Input.touchCount > 0)
             {
                 Touch touch = FindFinger();
-                // print(touch.position+":"+slidestartposition);
 
                 Vector2 dir = touch.position - slidestartposition;
-                
+
 
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
-                Controller(dir/radius);
+                Controller(dir / radius);
 
                 joyrect.localPosition = joystartposition + dir / scale;
 
@@ -87,43 +88,40 @@ public class slidepad : MonoBehaviour
     public void DragStart(BaseEventData baseEventData)
     {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
-            fingerID = pointerEventData.pointerId;
+        fingerID = pointerEventData.pointerId;
         isdragged = true;
         Touch touch = Input.GetTouch(fingerID);
         slidestartposition = touch.position;
     }
 
 
+
+
     public void DragEnd()
     {
         isdragged = false;
         joyrect.localPosition = joystartposition;
-        
     }
 
     void Controller(Vector2 dir)
     {
         dir = new Vector2(dir.y, -dir.x);
 
-        //  向きを決める
-        Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
-        // print(rotationdir);
-        rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;
-        playerrig.rotation = Quaternion.LookRotation(rotationdir);
-        //player.transform.rotation = Quaternion.LookRotation(rotationdir); //なんか挙動がおかしい
-
-
-        //動きを決める
-        //Vector2 velocity= dir/radius * speed ;
-        //Vector3 direction3d= new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
-        //playerrig.position = direction3d;
         Move(dir);
 
 
     }
 
+
+
+
     void Move(Vector2 dir)
     {
+        Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
+        rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;
+        playerrig.rotation = Quaternion.LookRotation(rotationdir);
+
+
         Vector2 force = dir* speed;
         velocity = force;
         Vector3 direction3d = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
@@ -140,6 +138,7 @@ public class slidepad : MonoBehaviour
         }
         return new Touch();
     }
+
 
 
 }
