@@ -14,7 +14,7 @@ public class StandbyState : ImtStateMachine<GameManager>.State
     // 状態の更新はこのUpdateで行う
     protected override void Update()
     {
-        Context.StateChangeSignal(GameState.Playing);
+
     }
 
     // 状態から脱出する時の処理はこのExitで行う

@@ -18,8 +18,12 @@ public class FinishProcess : MonoBehaviour
 
     public void FinishProcessContent(StateChangedArg stateChangedArg)
     {
-        //試合終了みたいなホイッスル音とテキストの表示
-        //リザルトへのシーン遷移
-        SceneManager.LoadScene(ResultSceneName);
+        if (stateChangedArg.gameState == GameState.Finish)
+        {
+            //試合終了みたいなホイッスル音とテキストの表示
+            //リザルトへのシーン遷移
+            SceneManager.LoadScene(ResultSceneName);
+        }
+
     }
 }
