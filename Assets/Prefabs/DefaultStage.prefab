@@ -557,7 +557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2677264473386580604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -821,7 +821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2677264473445202724
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1194,10 +1194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4d4adc043676468e84a87a654cb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
   joystick: {fileID: 2677264474847645206}
   player: {fileID: 8193507230244180728}
-  speed: 10
+  speed: 20
   text: {fileID: 2677264474855727162}
 --- !u!114 &2677264473606409381
 MonoBehaviour:
@@ -1257,23 +1256,6 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 3450927741976376891}
           m_MethodName: Run
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PA
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2423,7 +2405,6 @@ MonoBehaviour:
   yellowCard:
   - {fileID: 2677264473386580605}
   - {fileID: 2677264473445202725}
-  gameManager: {fileID: 0}
 --- !u!1 &2677264474762347549
 GameObject:
   m_ObjectHideFlags: 0
@@ -9050,36 +9031,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
-        type: 3}
-      propertyPath: ball
-      value: 
-      objectReference: {fileID: 6198748369724877548}
-    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
-        type: 3}
-      propertyPath: animcon
-      value: 
-      objectReference: {fileID: 3450927741976376891}
-    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
-        type: 3}
-      propertyPath: radius
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 681709424100340582, guid: 1e64183c9ab276d478846abdab9dfe8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 615710841079041042, guid: 1e64183c9ab276d478846abdab9dfe8e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f59e0680beefd864c84b76b524e99778, type: 2}
     - target: {fileID: 681709424100340571, guid: 1e64183c9ab276d478846abdab9dfe8e,
         type: 3}
       propertyPath: size
@@ -9105,6 +9056,41 @@ PrefabInstance:
       propertyPath: penaltyManager
       value: 
       objectReference: {fileID: 2677264474737504856}
+    - target: {fileID: 681709424100340571, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: areaSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 6198748369724877548}
+    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: animcon
+      value: 
+      objectReference: {fileID: 3450927741976376891}
+    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556855674757504784, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: lookatspeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 615710841079041042, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f59e0680beefd864c84b76b524e99778, type: 2}
     - target: {fileID: 9162859003031571509, guid: 1e64183c9ab276d478846abdab9dfe8e,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -9114,6 +9100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.1685711
+      objectReference: {fileID: 0}
+    - target: {fileID: 681709424100340582, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e64183c9ab276d478846abdab9dfe8e, type: 3}
