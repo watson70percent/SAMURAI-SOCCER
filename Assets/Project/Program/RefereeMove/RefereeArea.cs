@@ -11,17 +11,21 @@ public class RefereeArea : MonoBehaviour
     public ParticleSystem surprisedMark;
     public Button attackButton;
     public Penalty penaltyManager;
+    private MeshFilter meshFilter;
+    [SerializeField] bool useObstacles=false;
     // Start is called before the first frame update
     void Start()
     {
         //MeshMaker();
         anicom.AttackEvent += FoulCheck;
+        meshFilter = GetComponent<MeshFilter>();
+        if (!useObstacles)  MeshMaker(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        DynamicMeshMaker();
+        if(useObstacles)DynamicMeshMaker();
     }
 
     //これは今は使ってない
@@ -89,7 +93,7 @@ public class RefereeArea : MonoBehaviour
         }
         mesh.SetTriangles(triangles, 0);
 
-        var meshFilter = GetComponent<MeshFilter>();
+        
         meshFilter.mesh = mesh;
     }
 
