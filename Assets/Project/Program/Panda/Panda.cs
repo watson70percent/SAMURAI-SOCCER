@@ -24,4 +24,9 @@ public class Panda : MonoBehaviour
         if (pos.y < -50) { Destroy(gameObject); }
     }
 
-} // class ForceRenderer
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+} 

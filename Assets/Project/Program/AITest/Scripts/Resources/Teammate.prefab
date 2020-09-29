@@ -112,11 +112,14 @@ MonoBehaviour:
   dest: {fileID: 0}
   manager: {fileID: 0}
   status:
+    MAX_HP: 0
     hp: 0
     power: 0
     ally: 0
     seelen: 0
     fast: 0
+  field: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!54 &-5317762510978805031
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,7 +224,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02f94b517cab3ea41baebc210a938ef6, type: 2}
+      objectReference: {fileID: 2100000, guid: 739b719a40fe6d94ba30c70940485640, type: 2}
     - target: {fileID: 3050767779185917609, guid: ddf1c0cb74917514e943d232c9cdbe9b,
         type: 3}
       propertyPath: m_Materials.Array.data[1]

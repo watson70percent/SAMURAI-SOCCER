@@ -11,7 +11,7 @@
 		Tags {
 		"RenderType" = "Opaque" "Queue"="Geometry+501" }
 		LOD 200
-		GrabPass{"_PandaTexture"}
+		
 	   Pass{
 
 			Cull Off
@@ -51,6 +51,7 @@
 
 				ENDCG
 	}
+		GrabPass{"_PandaTexture"}
 		Pass{
 
 			CGPROGRAM
@@ -77,8 +78,8 @@
 			{
 				v2f o;
 				float4 wPos = mul(unity_ObjectToWorld, v.vertex);
-				float y = o.shadow = max(mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).y, 0.001);
-				wPos.y = min(wPos.y , 0.1-y*0.0001);
+				float y = max(mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).y, 0.001);
+				wPos.y = min(wPos.y , 0.2-y*0.0005);
 				float4 oPos = mul(unity_WorldToObject, wPos);
 				o.pos = UnityObjectToClipPos(oPos);
 				o.grabPos = ComputeGrabScreenPos(o.pos);
