@@ -13,7 +13,10 @@ public class StageSelectData : ScriptableObject
 public class StageSelect
 {
     public string name;
-    public string previewName, summary;
+    public string previewName;
+    [TextArea(1, 5)]
+    public string summary;
+
     public Sprite stageImage;
     public SceneObject gameScene;
 }

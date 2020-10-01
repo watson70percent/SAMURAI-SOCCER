@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class StageIconButton : MonoBehaviour
 {
-    public string stageName;
-    public string stageSummary;
+    string stageName;
+    string stageSummary;
     public GameObject preview;
     public StageSelectManager stageSelectMng;
-    public Sprite stImage;
+    Sprite stImage;
     SceneObject gameScene;
     public int indexOfButton;
 
