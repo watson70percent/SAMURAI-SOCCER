@@ -70,8 +70,9 @@
 					float3 t = v.tangent;
 					float3 b = cross(n, t);
 					// ワールド位置にあるライトをローカル空間へ変換する
+					
 					float3 localLight = mul(unity_WorldToObject, _WorldSpaceLightPos0);
-
+					localLight.y *= 0.05; //あえて光の角度を横向きにすることで凹凸の陰影が出やすくなっている
 					// ローカルライトを接空間へ変換する（行列の掛ける順番に注意）
 					o.lightDir = mul(localLight, InvTangentMatrix(t, b, n));
 					TRANSFER_SHADOW(o)//影の描写のために追加
@@ -85,10 +86,10 @@
 					fixed4 col;
 					col = tex2D(_MainTex,i.uv);
 					fixed4 shadow = SHADOW_ATTENUATION(i); //影を計算
-					float3 normal = float4(UnpackNormal(tex2D(_BumpMap, i.uv)), 1);
+					float3 normal = float4(UnpackNormal(lerp(fixed4(0.5,0.5,1,1), tex2D(_BumpMap, i.uv), _BumpScale)), 1);
 					float3 light = normalize(i.lightDir);
 					float diff = max(0, dot(normal, light));
-					col *= shadow * (diff*_BumpScale+(1-_BumpScale));
+					col *= shadow * (diff*0.5+0.9);
 					return col;
 				}
 
