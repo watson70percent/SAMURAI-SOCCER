@@ -52,7 +52,7 @@ public class slidepad : MonoBehaviour
 
         switch (state)
         {
-            case GameState.Standby : break;
+            case GameState.Standby: PlayingState(); break;
             case GameState.Playing: PlayingState(); break;
             default: break;
         }

@@ -14,7 +14,7 @@
 		
 	   Pass{
 
-			Cull Off
+			Cull Back
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -87,7 +87,7 @@
 				//float XS = length(unity_WorldToObject[0].xyz);
 				//o.shadow= 1/mul(unity_ObjectToWorld, v.vertex).y/XS*0.03;
 				
-				o.shadow = (1-y/100)*0.2;
+				o.shadow = (1-y/100)*0.8;
 				//o.shadow = min(o.shadow, 0.3);
 				
 				return o;

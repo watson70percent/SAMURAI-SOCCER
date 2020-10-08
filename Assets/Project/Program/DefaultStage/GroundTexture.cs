@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class GroundTexture : MonoBehaviour
 {
-    [SerializeField] Texture texture;
-    [SerializeField] Texture normalMap;
+    [SerializeField] Texture groundTexture;
+    [SerializeField] Texture groundNormalMap;
 
     private void Start()
     {
-        var material = new Material(GetComponent<Renderer>().material);
-        if (texture != null) material.mainTexture = texture;
-        if (normalMap != null) material.SetTexture("_BumpMap", normalMap);
-        GetComponent<Renderer>().material=material;
+        var groundMaterial = new Material(GetComponent<Renderer>().material);
+        if (groundTexture != null) groundMaterial.mainTexture = groundTexture;
+        if (groundNormalMap != null) groundMaterial.SetTexture("_BumpMap", groundNormalMap);
+        GetComponent<Renderer>().material=groundMaterial;
     }
 }

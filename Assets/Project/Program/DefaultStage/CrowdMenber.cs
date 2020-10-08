@@ -5,22 +5,22 @@ using UnityEngine;
 public class CrowdMenber : MonoBehaviour
 {
 
-    [SerializeField] Texture[] textures;
-    [SerializeField] Renderer[] renderers;
-    [SerializeField] Material mat;
+    public Texture[] crowdTextures;
+    public Renderer[] crowdRenderers;
+    public Material crowdMaterial;
     // Start is called before the first frame update
     void Start()
     {
-        var material = new Material(mat);
+        var material = new Material(crowdMaterial);
         for(int i = 0; i < 10; i++)
         {
             string texturename = "_Person" + (i + 1).ToString();
-            material.SetTexture(texturename, textures[i%(textures.Length)]);
+            material.SetTexture(texturename, crowdTextures[i%(crowdTextures.Length)]);
         }
 
-        for(int i = 0; i < renderers.Length; i++)
+        for(int i = 0; i < crowdRenderers.Length; i++)
         {
-            renderers[i].material = material;
+            crowdRenderers[i].material = material;
         }
     }
 

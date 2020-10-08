@@ -22,7 +22,7 @@ public class PandaMaker : MonoBehaviour
     void Spawn()
     {
         Vector3 pos = new Vector3(58 * Random.value, 100, 100 * Random.value);
-        GameObject p = Instantiate(panda, pos, Quaternion.Euler(Random.value * 90, Random.value * 90, Random.value * 90));
+        GameObject p = Instantiate(panda, pos, Quaternion.Euler(Random.value * 360, Random.value * 360, Random.value * 360));
         p.transform.localScale = Vector3.one * (Random.value * (maxSize-minSize) + minSize);
     }
 }

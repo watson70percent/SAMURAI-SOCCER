@@ -4,6 +4,7 @@ public class Panda : MonoBehaviour
 {
     [SerializeField] private float m_expandAmount = 100.0f;
     [SerializeField] private float speed;
+    bool hit;
 
     private void Start()
     {
@@ -26,7 +27,11 @@ public class Panda : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player"&&!hit)
+        {
+            hit = true;
+            GameObject.Find("YellowCard").GetComponent<Penalty>().YellowCard();
+        }
     }
 
 } 

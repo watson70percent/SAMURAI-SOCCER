@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class RefereeArea : MonoBehaviour
 {
+    [Tooltip("審判の視界の視野角")]
     public float maxang = 60;
+    [Tooltip("審判の視界の距離")]
     public int areaSize = 10;
     public AnimationController anicom;
     public ParticleSystem surprisedMark;
     public Button attackButton;
     public Penalty penaltyManager;
     private MeshFilter meshFilter;
-    [SerializeField] bool useObstacles=false;
+    [Space(10)]
+     public bool useObstacles=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,7 @@ public class RefereeArea : MonoBehaviour
         if(useObstacles)DynamicMeshMaker();
     }
 
-    //これは今は使ってない
+    
     void MeshMaker()
     {
 
@@ -78,7 +81,8 @@ public class RefereeArea : MonoBehaviour
             Ray ray = new Ray(transform.position,transform.TransformDirection(vec));
            // Debug.DrawRay(transform.position, transform.TransformDirection(vec));
             RaycastHit hit;
-            vec2=(Physics.Raycast(ray,out hit,areaSize)) ? vec*hit.distance:vec*areaSize;
+            int layerMask = 1 << 8;
+            vec2=(Physics.Raycast(ray,out hit,areaSize,layerMask)) ? vec*hit.distance:vec*areaSize;
             
             verticles.Add(vec2);
         }
