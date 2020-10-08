@@ -35,7 +35,7 @@ public class JudgeGameEnd : MonoBehaviour
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.resultState = ResultState.Win;
+        resultManager.SetResult(Result.Win,"敵は全滅じゃ!");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
