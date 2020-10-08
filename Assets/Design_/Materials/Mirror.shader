@@ -1,4 +1,4 @@
-﻿Shader "Custom/Mirror"
+﻿Shader "Samurai/Mirror"
 {
 	Properties
 	{

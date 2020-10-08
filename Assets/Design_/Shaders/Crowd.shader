@@ -45,6 +45,7 @@
 				float2 uv : TEXCOORD0;
 				float4 vertex : SV_POSITION;
 				float aspect : TEXCODE1;
+				float yPos : TEXCODE2;
 			};
 
 			sampler2D _Person1, _Person2, _Person3, _Person4, _Person5, _Person6, _Person7, _Person8, _Person9, _Person10;
@@ -56,6 +57,7 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
+				o.yPos = mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).y;
 
 				float xscale = 1 / sqrt(pow(unity_WorldToObject[0].x, 2) + pow(unity_WorldToObject[0].y, 2) + pow(unity_WorldToObject[0].z, 2));
 				float zscale= 1 / sqrt(pow(unity_WorldToObject[2].x, 2) + pow(unity_WorldToObject[2].y, 2) + pow(unity_WorldToObject[2].z, 2));
@@ -82,12 +84,12 @@
 			}
 
 
-			fixed4 customCol(float2 _uv,float aspect)
+			fixed4 customCol(float2 _uv,float yPos,float aspect)
 			{
 
 				
 				float2 uv = _uv;
-				float tempx = uv.x*_NumberOfPeople;
+				float tempx = uv.x*_NumberOfPeople+17*yPos*yPos;
 				int num = floor(tempx);
 				uv.x = tempx  - num;
 				
@@ -112,7 +114,7 @@
 			fixed4 frag(v2f i) : SV_Target
 			{
 				// sample the texture
-				fixed4 col = customCol(i.uv,i.aspect);
+				fixed4 col = customCol(i.uv,i.yPos,i.aspect);
 				return col;
 			}
 			ENDCG
