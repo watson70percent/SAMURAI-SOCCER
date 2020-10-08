@@ -4,19 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum ResultState
+public enum Result
 {
     Win,
-    TimeOver,
-    Violation
+    Lose,
+    Draw
 }
 
 public class ResultManager : MonoBehaviour
 {
 
-    public ResultState resultState;
-    public Text resultText;
-    public Text samuraiPhrase;
+    Result resultState;
+    [SerializeField]Text result;
+    [SerializeField]public string resultText;
+    Text samuraiPhrase;
     public SamuraiWordBase samuraiWordBase;
 
 
@@ -27,24 +28,25 @@ public class ResultManager : MonoBehaviour
         //勝敗に応じてテキスト変更
         switch (resultState) 
         {
-            case ResultState.Win:
-                resultText.text = "勝利";
+            case Result.Win:
+                result.text = "勝利";
                 break;
-            case ResultState.TimeOver:
-                resultText.text = "敗北";
+            case Result.Lose:
+                result.text = "敗北";
                 break;
-            case ResultState.Violation:
-                resultText.text = "敗北";
+            case Result.Draw:
+                result.text = "引分";
                 break;
         }
+
         //今日のひとこと
         samuraiPhrase.text = samuraiWordBase.samuraiwords[Random.Range(0,samuraiWordBase.samuraiwords.Count)];
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetResult(Result resultState,string resultText)
     {
-        
+        this.resultState = resultState;
+        this.resultText = resultText;
     }
 }

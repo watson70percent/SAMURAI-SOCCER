@@ -103,7 +103,7 @@ public class TimerScript : MonoBehaviour
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.resultState = ResultState.TimeOver;
+        resultManager.SetResult(Result.Lose,"時間切れ!");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
