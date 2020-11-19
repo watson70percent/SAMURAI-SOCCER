@@ -3,7 +3,7 @@
 	Properties
 	{
 		_MainTex("MainTex", 2D) = "white"{}
-		
+		[PowerSlider(1.0)]_CullingDistance("CullingDistance",Range(0,1))=0.1 
 
 	}
 		SubShader
@@ -21,6 +21,7 @@
 			#include "UnityCG.cginc"
 
 			sampler2D _MainTex;
+			float _CullingDistance;
 
 			struct appdata
 			{
@@ -45,6 +46,7 @@
 			fixed4 frag(v2f i) : SV_Target
 			{
 				fixed4 col;
+				clip(_CullingDistance-i.pos.z);
 				col = tex2D(_MainTex,i.uv);
 				return col;
 			}

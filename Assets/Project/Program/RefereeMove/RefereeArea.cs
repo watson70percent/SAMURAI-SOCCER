@@ -22,7 +22,8 @@ public class RefereeArea : MonoBehaviour
         //MeshMaker();
         anicom.AttackEvent += FoulCheck;
         meshFilter = GetComponent<MeshFilter>();
-        if (!useObstacles)  MeshMaker(); 
+        if (!useObstacles)  MeshMaker();
+        
     }
 
     // Update is called once per frame
