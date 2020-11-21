@@ -18,6 +18,9 @@ public class EasyCPU : MonoBehaviour
     private Vector2 before_velocity = Vector2.zero;
     private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
 
+    private bool stop = false;
+
+
     /// <summary>
     /// 吹っ飛びやすさを再設定
     /// </summary>
@@ -43,6 +46,22 @@ public class EasyCPU : MonoBehaviour
     public void Play()
     {
         isPause = false;
+    }
+
+    public void SlowDown()
+    {
+        isPause = true;
+        StartCoroutine(SlowMove());
+    }
+
+    private IEnumerator SlowMove()
+    {
+        while (true)
+        {
+            yield return null;
+            gameObject.transform.Translate(before_velocity.x * 0.2f * Time.deltaTime, 0, before_velocity.y * 0.2f * Time.deltaTime, Space.World);
+        }
+
     }
 
     // Update is called once per frame

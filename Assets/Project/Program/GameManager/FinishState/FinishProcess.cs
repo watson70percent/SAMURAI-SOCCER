@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class FinishProcess : MonoBehaviour
 {
     public string ResultSceneName = "ResultScene";
+    [SerializeField]
+    private AudioClip finishSound;
+    [SerializeField]
+    private AudioSource audioSource;
     private GameManager _gameManager;
     // Start is called before the first frame update
     void Start()
@@ -21,9 +25,18 @@ public class FinishProcess : MonoBehaviour
         if (stateChangedArg.gameState == GameState.Finish)
         {
             //試合終了みたいなホイッスル音とテキストの表示
+            audioSource.clip = finishSound;
+            audioSource.Play();
             //リザルトへのシーン遷移
-            SceneManager.LoadScene(ResultSceneName);
+            StartCoroutine(GoResult());
         }
 
+    }
+
+    IEnumerator GoResult()
+    {
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(ResultSceneName);
     }
 }
