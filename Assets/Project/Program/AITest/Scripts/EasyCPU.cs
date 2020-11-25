@@ -177,13 +177,24 @@ public class EasyCPU : MonoBehaviour
         {
             vec = vec.normalized * Mathf.Log10(dis + 1) * status.fast;
         }
-        rot_chain.AddLast(vec);
-        if (rot_chain.Count > 30)
+
+        if (FieldNumber.no == 1)
         {
-            rot_chain.RemoveFirst();
+            rot_chain.AddLast(vec);
+            if (rot_chain.Count > 30)
+            {
+                rot_chain.RemoveFirst();
+            }
         }
         vec = CalcNextPoint(vec);
-        
+        if(FieldNumber.no != 1)
+        {
+            rot_chain.AddLast(vec);
+            if (rot_chain.Count > 30)
+            {
+                rot_chain.RemoveFirst();
+            }
+        }
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, CalcRotAverage()));
         gameObject.transform.Translate(vec.x, 0, vec.y, Space.World);
     }
@@ -192,33 +203,42 @@ public class EasyCPU : MonoBehaviour
     {
         var realVec = CalcRealVec(vec);
         var move = realVec * Time.deltaTime;
-        var next = move + new Vector2(transform.position.x, transform.position.z);
+        var next = field.AdaptInversePosition(new Vector3(move.x + transform.position.x, 0, move.y + transform.position.z));
+        var now = field.AdaptInversePosition(transform.position);
+        var infield = Vector3.zero;
 
-        if(next.x < 0 || transform.position.x < 0)
+        if(next.x < 0 || now.x < 0)
         {
-            move.x = (-transform.position.x + 5) * Time.deltaTime;
+            infield += field.AdaptPosition(new Vector3((-field.AdaptInversePosition(transform.position).x + 5) * Time.deltaTime, 0, 0));
             rot_chain.RemoveLast();
             rot_chain.AddLast(move);
         }
-        else if(next.x > Constants.Width || transform.position.x > Constants.Width)
+        else if(next.x > Constants.Width || now.x > Constants.Width)
         {
-            move.x = (Constants.Width - transform.position.x - 5) * Time.deltaTime;
+            infield += field.AdaptPosition(new Vector3((Constants.Width - field.AdaptInversePosition(transform.position).x - 5) * Time.deltaTime, 0, 0));
             rot_chain.RemoveLast();
             rot_chain.AddLast(move);
         }
 
-        if(next.y < 0 || transform.position.z < 0)
+        if(next.z < 0 || now.z < 0)
         {
-            move.y = (-transform.position.z + 5) * Time.deltaTime;
+            infield += field.AdaptPosition(new Vector3(0,0,(-field.AdaptInversePosition(transform.position).z + 5) * Time.deltaTime));
             rot_chain.RemoveLast();
             rot_chain.AddLast(move);
         }
-        else if(next.y > Constants.G2G || transform.position.z > Constants.G2G)
+        else if(next.z > Constants.G2G || now.z > Constants.G2G)
         {
-            move.y = (Constants.G2G - transform.position.z - 5) * Time.deltaTime;
+            infield += field.AdaptPosition(new Vector3(0,0,(Constants.G2G - field.AdaptInversePosition(transform.position).z - 5) * Time.deltaTime));
             rot_chain.RemoveLast();
             rot_chain.AddLast(move);
         }
+
+        if(infield != Vector3.zero)
+        {
+            move.x = infield.x;
+            move.y = infield.z;
+        }
+
         before_velocity = move / Time.deltaTime;
 
         return move;
@@ -246,5 +266,15 @@ public class EasyCPU : MonoBehaviour
         }
 
         return Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
+    }
+
+
+    private void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject == ball)
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 }
