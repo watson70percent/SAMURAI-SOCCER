@@ -25,10 +25,7 @@ public class FinishProcess : MonoBehaviour
         if (stateChangedArg.gameState == GameState.Finish)
         {
             //試合終了みたいなホイッスル音とテキストの表示
-            audioSource.clip = finishSound;
-            audioSource.Play();
-            //リザルトへのシーン遷移
-            StartCoroutine(GoResult());
+            
         }
 
     }
