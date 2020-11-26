@@ -52,7 +52,7 @@ public class slidepad : MonoBehaviour
 
         switch (state)
         {
-            case GameState.Standby : break;
+            case GameState.Standby: PlayingState(); break;
             case GameState.Playing: PlayingState(); break;
             default: break;
         }
@@ -117,15 +117,22 @@ public class slidepad : MonoBehaviour
 
     void Move(Vector2 dir)
     {
-        Vector3 rotationdir = new Vector3(dir.x, 0, dir.y);
-        rotationdir = (rotationdir != Vector3.zero) ? rotationdir : player.transform.forward;
-        playerrig.rotation = Quaternion.LookRotation(rotationdir);
+        Vector3 direction = new Vector3(dir.x, 0, dir.y);
+
+        direction = (direction != Vector3.zero) ? direction : player.transform.forward;
+        playerrig.rotation = Quaternion.LookRotation(direction);
+
+        //Vector2 force = dir* speed;
+        //velocity = force;
+        //Vector3 direction3d = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
+        //playerrig.position = direction3d;
 
 
-        Vector2 force = dir* speed;
-        velocity = force;
-        Vector3 direction3d = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
-        playerrig.position = direction3d;
+        Vector3 force = direction * speed;
+        if (Vector3.Dot(playerrig.velocity,force.normalized)<speed)
+        {
+            playerrig.AddForce(force*30);
+        }
     }
 
 

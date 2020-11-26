@@ -49,7 +49,7 @@ public class Penalty : MonoBehaviour
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.resultState = ResultState.Violation;
+        resultManager.SetResult(Result.Lose, "反則負け!");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }

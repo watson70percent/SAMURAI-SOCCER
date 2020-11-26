@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
+    private string ResultSceneName = "Result";
+    [SerializeField]
+    private AudioClip finishSound;
+    [SerializeField]
+    private AudioSource audioSource;
     public bool playing;//試合中のフラグ
     bool end = false;//試合終了のフラグ
     public float elapsedTime;//経過時間
@@ -93,17 +98,29 @@ public class TimerScript : MonoBehaviour
                     //SceneManagerのイベントにTimeUpリザルト処理を追加
                     SceneManager.sceneLoaded += GameSceneLoaded;
                     gameManager.StateChangeSignal(GameState.Finish);
+                    Time.timeScale = 0.2f;
+                    audioSource.clip = finishSound;
+                    audioSource.Play();
+                    //リザルトへのシーン遷移
+                    StartCoroutine(GoResult());
                 }
             }
         }
        
     }
 
+    IEnumerator GoResult()
+    {
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(ResultSceneName);
+    }
+
     //TimeUpリザルト用の処理
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.resultState = ResultState.TimeOver;
+        resultManager.SetResult(Result.Lose,"時間切れ!");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
