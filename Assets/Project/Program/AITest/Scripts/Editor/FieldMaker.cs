@@ -30,7 +30,7 @@ public class FieldMaker : EditorWindow
             info.acc_down_coeff[i] = new float[100];
             for (int j = 0; j < 100; j++)
             {
-                info.acc_down_coeff[i][j] = 0.05f;
+                info.acc_down_coeff[i][j] = 0.2f;
             }
         }
 

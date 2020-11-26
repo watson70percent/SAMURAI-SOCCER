@@ -34,6 +34,7 @@ public class EasyCPUManager : MonoBehaviour
     public Dictionary<GameObject, Rigidbody> rbs = new Dictionary<GameObject, Rigidbody>();
 
     private FieldManager field;
+    private BallControler.GoalEventHandler goalEvent = null;
 
     /// <summary>
     /// 味方の人数
@@ -127,17 +128,19 @@ public class EasyCPUManager : MonoBehaviour
 
     private void StateChanged(StateChangedArg e)
     {
-        if(e.gameState == GameState.Pause)
+        if(e.gameState == GameState.Pause || e.gameState == GameState.Standby)
         {
             ball.Pause();
             foreach(var t in team)
             {
                 t.GetComponent<EasyCPU>().Pause();
+                t.GetComponentInChildren<Animator>().speed = 0;
             }
 
             foreach(var t in opp)
             {
                 t.GetComponent<EasyCPU>().Pause();
+                t.GetComponentInChildren<Animator>().speed = 0;
             }
         }
 
@@ -147,18 +150,37 @@ public class EasyCPUManager : MonoBehaviour
             foreach (var t in team)
             {
                 t.GetComponent<EasyCPU>().Play();
+                t.GetComponentInChildren<Animator>().speed = 1;
             }
 
             foreach (var t in opp)
             {
                 t.GetComponent<EasyCPU>().Play();
+                t.GetComponentInChildren<Animator>().speed = 1;
+            }
+        }
+
+        if(e.gameState == GameState.Finish)
+        {
+            ball.Goal -= goalEvent;
+            Time.timeScale = 0.2f;
+            
+            foreach (var t in team)
+            {
+                t.GetComponent<EasyCPU>().SlowDown();
+            }
+
+            foreach (var t in opp)
+            {
+                t.GetComponent<EasyCPU>().SlowDown();
             }
         }
     }
 
     private void Start()
     {
-        ball.Goal += (sender, e) => { Init(e.Ally); };
+        goalEvent = (sender, e) => { Init(e.Ally); };
+        ball.Goal += goalEvent;
         Init();
     }
 
@@ -206,11 +228,11 @@ public class EasyCPUManager : MonoBehaviour
         GameObject temp = default;
         if (status.ally)
         {
-            temp = Instantiate(teammate, pos, Quaternion.identity, team_p);
+            temp = Instantiate(teammate, pos, Quaternion.identity * field.rotation.rotation , team_p);
         }
         else
         {
-            temp = Instantiate(opponent, pos, Quaternion.identity, opp_p);
+            temp = Instantiate(opponent, pos, Quaternion.LookRotation(Vector3.back, Vector3.up) * field.rotation.rotation, opp_p);
         }
 
         var setting = temp.GetComponent<EasyCPU>();
