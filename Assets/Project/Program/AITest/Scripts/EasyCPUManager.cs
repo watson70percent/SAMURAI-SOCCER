@@ -164,7 +164,7 @@ public class EasyCPUManager : MonoBehaviour
         {
             ball.Goal -= goalEvent;
             Time.timeScale = 0.2f;
-
+            
             foreach (var t in team)
             {
                 t.GetComponent<EasyCPU>().SlowDown();

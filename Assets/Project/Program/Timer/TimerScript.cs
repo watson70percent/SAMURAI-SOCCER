@@ -98,6 +98,7 @@ public class TimerScript : MonoBehaviour
                     //SceneManagerのイベントにTimeUpリザルト処理を追加
                     SceneManager.sceneLoaded += GameSceneLoaded;
                     gameManager.StateChangeSignal(GameState.Finish);
+                    Time.timeScale = 0.2f;
                     audioSource.clip = finishSound;
                     audioSource.Play();
                     //リザルトへのシーン遷移
