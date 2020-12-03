@@ -26,6 +26,7 @@ public class StagePreviwScript : MonoBehaviour
         
     }
 
+    //プレビューを表示する
     public void previewDisplay(string stageName, string summary, Sprite image, SceneObject scene)
     {
         
@@ -36,12 +37,14 @@ public class StagePreviwScript : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
+    //x押されたら閉じる
     public void OnClickClose()
     {
         stageSelectMng.selectState();
         this.gameObject.SetActive(false);
     }
 
+    //スタート押されたらシーン呼び出す
     public void OnClickStart()
     {
         Debug.Log("ゲームスタート");
