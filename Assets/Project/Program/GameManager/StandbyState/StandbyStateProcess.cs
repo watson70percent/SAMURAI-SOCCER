@@ -8,12 +8,16 @@ using UnityEngine.UI;
 public class StandbyStateProcess : MonoBehaviour
 {
     private GameManager _gameManager;
-    private Text _startSignText;
+    private Text _opponentInfoText;//開始前の相手の情報
+    public static string OpponentInfo { get; set; } = "敵をすべて切り倒せ!";//相手の情報
+    public AudioSource audioSource;//オーディオソース
+    public AudioClip audioClip;//ホイッスル音
     // Start is called before the first frame update
     void Start()
     {
         _gameManager = GetComponent<GameManager>();
-        _startSignText = GameObject.FindGameObjectWithTag("StartSign").GetComponent<Text>();
+        _opponentInfoText = GameObject.FindGameObjectWithTag("StartSign").GetComponent<Text>();
+        _opponentInfoText.text = OpponentInfo;
         //StandbyStateに処理を追加
         _gameManager.StateChange += StandbyProcessContent;
     }
@@ -26,12 +30,14 @@ public class StandbyStateProcess : MonoBehaviour
     {
         if (stateChangedArg.gameState == GameState.Standby)
         {
-            await StandardFade.FadeIn(_startSignText, 2);
             //ホイッスル音
+            await Task.Delay(7000);
+            audioSource.PlayOneShot(audioClip);
             await Task.Delay(1000);
             //PlayingStateへ移動
             _gameManager.StateChangeSignal(GameState.Playing);
-            await StandardFade.FadeOut(_startSignText, 1);
+            await StandardFade.FadeOut(_opponentInfoText, 1);
         }
     }
+
 }
