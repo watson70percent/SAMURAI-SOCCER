@@ -421,12 +421,12 @@ PrefabInstance:
     - target: {fileID: 2677264473472736776, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.5
+      value: -14.299999
       objectReference: {fileID: 0}
     - target: {fileID: 2677264473472736776, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.68
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7478265008445319157, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -438,11 +438,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 7.68
       objectReference: {fileID: 0}
-    - target: {fileID: 1534508126126776885, guid: f0c17f2fc41c12044b2143319858dbd4,
+    - target: {fileID: 6328458148553293569, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
-      propertyPath: texture
-      value: 
-      objectReference: {fileID: 2800000, guid: b601d045cfcef3f408394cb573f147e2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328458148553293569, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2677264473109749924, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: audioSource
@@ -458,6 +463,11 @@ PrefabInstance:
       propertyPath: limitTime
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 2677264473109749978, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: root
+      value: 
+      objectReference: {fileID: 2020750879}
     - target: {fileID: 6109866594413290109, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: audioSource
@@ -473,10 +483,36 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2677264473109749978, guid: f0c17f2fc41c12044b2143319858dbd4,
+    - target: {fileID: 1534508126126776885, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
-      propertyPath: root
+      propertyPath: texture
       value: 
-      objectReference: {fileID: 2020750879}
-    m_RemovedComponents: []
+      objectReference: {fileID: 2800000, guid: b601d045cfcef3f408394cb573f147e2, type: 3}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6328458148553293568, guid: f0c17f2fc41c12044b2143319858dbd4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0c17f2fc41c12044b2143319858dbd4, type: 3}
