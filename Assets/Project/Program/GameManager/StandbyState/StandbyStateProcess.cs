@@ -11,7 +11,8 @@ public class StandbyStateProcess : MonoBehaviour
     private Text _opponentInfoText;//開始前の相手の情報
     public static string OpponentInfo { get; set; } = "敵をすべて切り倒せ!";//相手の情報
     public AudioSource audioSource;//オーディオソース
-    public AudioClip audioClip;//ホイッスル音
+    public AudioClip whistle;//ホイッスル音
+    public AudioClip katana;//開戦の刀音
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +32,10 @@ public class StandbyStateProcess : MonoBehaviour
         if (stateChangedArg.gameState == GameState.Standby)
         {
             //ホイッスル音
-            await Task.Delay(7000);
-            audioSource.PlayOneShot(audioClip);
+            await Task.Delay(1000);
+            audioSource.PlayOneShot(katana);
+            await Task.Delay(6000);
+            audioSource.PlayOneShot(whistle);
             await Task.Delay(1000);
             //PlayingStateへ移動
             _gameManager.StateChangeSignal(GameState.Playing);
