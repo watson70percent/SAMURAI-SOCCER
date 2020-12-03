@@ -10,7 +10,6 @@ public class Panda : MonoBehaviour
     [SerializeField] GameState state = GameState.Reset;
     Animator anim;
     [SerializeField] SkinnedMeshRenderer skin;
-    public GameObject gameOverPanel;
 
     void SwitchState(StateChangedArg a)
     {
@@ -52,7 +51,6 @@ public class Panda : MonoBehaviour
             hit = true;
             //GameObject.Find("YellowCard").GetComponent<Penalty>().YellowCard();
             GameOver();
-            other.transform.Rotate(90, 0, 0);
         }
     }
 
@@ -62,7 +60,7 @@ public class Panda : MonoBehaviour
 
         SceneManager.sceneLoaded += GameSceneLoaded;
         gameManager.StateChangeSignal(GameState.Finish);
-        Instantiate(gameOverPanel);
+
 
     }
 
