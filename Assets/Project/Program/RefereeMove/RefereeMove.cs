@@ -17,7 +17,7 @@ public class RefereeMove : MonoBehaviour
     GameManager gameManager;
 
     GameState state = GameState.Reset;
-
+    Animator anim;
 
     void SwitchState(StateChangedArg a)
     {
@@ -29,34 +29,23 @@ public class RefereeMove : MonoBehaviour
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.StateChange += SwitchState;
-        
-
-
-
         rig = GetComponent<Rigidbody>();
-
-        //bikkuri = GetComponent<ParticleSystem>();
-        //animcon.AttackEvent += (sender, e) =>
-        //{
-        //    var vec = ((AnimationController)sender).transform.position - transform.position;
-        //    if (vec.magnitude < refereeArea.areaSize)
-        //    {
-        //        if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
-        //        {
-        //            bikkuri.Play();
-        //        }
-        //    }
-        //};
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         switch(state){
-            case GameState.Standby : break;
+            case GameState.Standby :
+                anim.speed = 0;
+                break;
             case GameState.Playing:
+                anim.speed = 1;
                 LookAtBall();
                 MoveAroundBall();
+                break;
+            case GameState.Pause:anim.speed = 0;
                 break;
             default: break;
         }
