@@ -163,17 +163,6 @@ public class EasyCPUManager : MonoBehaviour
         if(e.gameState == GameState.Finish)
         {
             ball.Goal -= goalEvent;
-            Time.timeScale = 0.2f;
-            
-            foreach (var t in team)
-            {
-                t.GetComponent<EasyCPU>().SlowDown();
-            }
-
-            foreach (var t in opp)
-            {
-                t.GetComponent<EasyCPU>().SlowDown();
-            }
         }
     }
 
