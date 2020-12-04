@@ -11,10 +11,14 @@ public class Penalty : MonoBehaviour
     GameManager gameManager;
     public GameObject gameOverPanel;
 
+    GameState state = GameState.Reset;
+
+
     // Start is called before the first frame update
 
     private void Reset(StateChangedArg a)
     {
+        state = a.gameState;
         if (a.gameState == GameState.Reset)
         {
             penaltycount = 0;
@@ -38,6 +42,7 @@ public class Penalty : MonoBehaviour
 
     public void YellowCard()
     {
+        if (state != GameState.Playing) { return; }
         yellowCard[penaltycount].SetActive(true);
         penaltycount++;
         if (penaltycount == 2)
