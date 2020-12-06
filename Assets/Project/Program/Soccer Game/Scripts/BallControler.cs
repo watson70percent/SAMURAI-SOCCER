@@ -263,12 +263,12 @@ public class BallControler : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 
-        if(other.gameObject.tag == "Goal")
+        if(other.gameObject.CompareTag("Goal"))
         {
             var e = new GoalEventArgs();
             e.Ally = last_touch;
             OnGoal(e);
-        }else if(other.gameObject.tag == "OutWall")
+        }else if(other.gameObject.CompareTag("OutBall"))
         {
             var e = new OutBallEventArgs();
             e.Ally = last_touch;
@@ -276,6 +276,23 @@ public class BallControler : MonoBehaviour
             OnOutBall(e);
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            var e = new GoalEventArgs();
+            e.Ally = last_touch;
+            OnGoal(e);
+        }
+        else if (other.gameObject.CompareTag("OutBall"))
+        {
+            var e = new OutBallEventArgs();
+            e.Ally = last_touch;
+            e.Point = new Vector2(transform.position.x, transform.position.z);
+            OnOutBall(e);
+        }
     }
 
     private void OnGoal(GoalEventArgs e)
