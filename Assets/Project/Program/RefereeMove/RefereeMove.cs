@@ -18,7 +18,7 @@ public class RefereeMove : MonoBehaviour
 
     GameState state = GameState.Reset;
 
-
+    Animator anicon;
     void SwitchState(StateChangedArg a)
     {
         state = a.gameState;
@@ -29,7 +29,7 @@ public class RefereeMove : MonoBehaviour
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.StateChange += SwitchState;
-        
+        anicon = GetComponent<Animator>();
 
 
 
@@ -42,10 +42,13 @@ public class RefereeMove : MonoBehaviour
     void Update()
     {
         switch(state){
-            case GameState.Standby : break;
+            case GameState.Standby :
+                anicon.speed = 0;
+                break;
             case GameState.Playing:
                 LookAtBall();
                 MoveAroundBall();
+                anicon.speed = 1;
                 break;
             default: break;
         }

@@ -8,10 +8,22 @@ public class AnimationController : MonoBehaviour
     Animator animator;
     public GameObject slash;
     public event EventHandler AttackEvent;
+
+    GameManager gameManager;
+
+    GameState state = GameState.Reset;
+
+
+    void SwitchState(StateChangedArg a)
+    {
+        state = a.gameState;
+    }
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.StateChange += SwitchState;
     }
 
     // Update is called once per frame
@@ -22,6 +34,7 @@ public class AnimationController : MonoBehaviour
 
     public void Attack()
     {
+        if (state != GameState.Playing) { return; }
         animator.SetTrigger("Attack");
         Instantiate(slash, transform.position, transform.rotation);
 
