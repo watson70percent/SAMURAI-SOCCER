@@ -35,18 +35,7 @@ public class RefereeMove : MonoBehaviour
 
         rig = GetComponent<Rigidbody>();
 
-        //bikkuri = GetComponent<ParticleSystem>();
-        //animcon.AttackEvent += (sender, e) =>
-        //{
-        //    var vec = ((AnimationController)sender).transform.position - transform.position;
-        //    if (vec.magnitude < refereeArea.areaSize)
-        //    {
-        //        if (Vector3.Dot(vec.normalized, transform.forward) > Mathf.Cos(refereeArea.maxang/360*2*Mathf.PI))
-        //        {
-        //            bikkuri.Play();
-        //        }
-        //    }
-        //};
+
     }
 
     // Update is called once per frame

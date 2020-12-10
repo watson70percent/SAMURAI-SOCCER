@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// 他のタイプにも対応したいが、現状はTextのみ対応
@@ -18,7 +19,7 @@ public class StandardFade : MonoBehaviour
     /// <param name="intervalMilliSec">
     /// フェード全体の秒数
     /// </param>
-    public static async Task FadeIn(Text text,int FadeLength)
+    public static async Task FadeIn(TextMeshProUGUI text,int FadeLength)
     {
         while (text.color.a<1)
         {
@@ -38,7 +39,7 @@ public class StandardFade : MonoBehaviour
     /// フェード全体の秒数
     /// </param>
     /// <returns></returns>
-    public static async Task FadeOut(Text text, int FadeLength)
+    public static async Task FadeOut(TextMeshProUGUI text, int FadeLength)
     {
         while (text.color.a > 0)
         {
@@ -53,7 +54,7 @@ public class StandardFade : MonoBehaviour
     /// </summary>
     /// <param name="text"></param>
     /// <param name="alpha"></param>
-    static void SetColor(Text text,float alpha)
+    static void SetColor(TextMeshProUGUI text,float alpha)
     {
         var txcolor = text.color;
         txcolor.a = alpha;

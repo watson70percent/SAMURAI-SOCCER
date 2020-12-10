@@ -16,9 +16,22 @@ public class RefereeArea : MonoBehaviour
     private MeshFilter meshFilter;
     [Space(10)]
      public bool useObstacles=false;
+
+    GameManager gameManager;
+
+    GameState state = GameState.Reset;
+
+
+    void SwitchState(StateChangedArg a)
+    {
+        state = a.gameState;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.StateChange += SwitchState;
+
         //MeshMaker();
         anicom.AttackEvent += FoulCheck;
         meshFilter = GetComponent<MeshFilter>();
@@ -105,7 +118,11 @@ public class RefereeArea : MonoBehaviour
     void FoulCheck(object sender, System.EventArgs e)
     {
 
-        
+        if (state != GameState.Playing)
+        {
+            return;
+        }
+
         var vec = ((AnimationController)sender).transform.position - transform.position;
         if (vec.magnitude > areaSize || Vector3.Dot(vec.normalized, transform.forward) < Mathf.Cos(maxang / 360 * 2 * Mathf.PI))  return;
         Ray ray = new Ray(transform.position, vec);
