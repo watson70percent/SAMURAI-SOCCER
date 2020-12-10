@@ -9,10 +9,16 @@ public class Penalty : MonoBehaviour
     public GameObject[] yellowCard=new GameObject[2];
     int penaltycount = 0;
     GameManager gameManager;
+    public GameObject gameOverPanel;
+
+    GameState state = GameState.Reset;
+
+
     // Start is called before the first frame update
 
     private void Reset(StateChangedArg a)
     {
+        state = a.gameState;
         if (a.gameState == GameState.Reset)
         {
             penaltycount = 0;
@@ -36,13 +42,14 @@ public class Penalty : MonoBehaviour
 
     public void YellowCard()
     {
+        if (state != GameState.Playing) { return; }
         yellowCard[penaltycount].SetActive(true);
         penaltycount++;
         if (penaltycount == 2)
         {
             SceneManager.sceneLoaded += GameSceneLoaded;
             gameManager.StateChangeSignal(GameState.Finish);
-            
+            Instantiate(gameOverPanel);
         }
     }
 
@@ -50,7 +57,6 @@ public class Penalty : MonoBehaviour
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
         resultManager.SetResult(Result.Lose, "反則負け!");
-
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 }

@@ -14,6 +14,8 @@ using System;
 public class EasyCPUManager : MonoBehaviour
 {
     public GameManager gm;
+    public GameObject samurai;
+    public GameObject referee;
 
     public List<GameObject> team;
     public Team team_stock;
@@ -35,6 +37,12 @@ public class EasyCPUManager : MonoBehaviour
 
     private FieldManager field;
     private BallControler.GoalEventHandler goalEvent = null;
+
+    public AudioSource audioSource;
+    public AudioClip goalSound;
+    public AudioClip startSound;
+    public TimerScript timer;
+    public GameObject goalCanvas;
 
     /// <summary>
     /// 味方の人数
@@ -168,9 +176,26 @@ public class EasyCPUManager : MonoBehaviour
 
     private void Start()
     {
-        goalEvent = (sender, e) => { Init(e.Ally); };
+        goalEvent = (sender, e) => { StartCoroutine(GoalAction(e)); };
         ball.Goal += goalEvent;
         Init();
+    }
+
+    private IEnumerator GoalAction(GoalEventArgs e)
+    {
+        audioSource.PlayOneShot(goalSound);
+        timer.Pause();
+        ball.Goal -= goalEvent;
+        goalCanvas.SetActive(true);
+        yield return new WaitForSeconds(4);
+        ball.Goal += goalEvent;
+        gm.StateChangeSignal(GameState.Standby);
+        Init(e.Ally);
+        yield return new WaitForSeconds(2);
+        goalCanvas.SetActive(false);
+        timer.Playing();
+        audioSource.PlayOneShot(startSound);
+        gm.StateChangeSignal(GameState.Playing);
     }
 
     private void LoadMember()
@@ -307,6 +332,8 @@ public class EasyCPUManager : MonoBehaviour
 
         ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0,0.5f,0);
         ball.rb.velocity = Vector3.zero;
+        samurai.transform.position = new Vector3(35.7f, 0, 59.6f);
+        referee.transform.position = new Vector3(38, 0, 69);
     }
 
 }

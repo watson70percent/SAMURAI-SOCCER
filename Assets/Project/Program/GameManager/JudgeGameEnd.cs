@@ -9,6 +9,12 @@ public class JudgeGameEnd : MonoBehaviour
     private GameManager _gameManager;
     private EasyCPUManager _easyCPUManager;
 
+    public string ResultSceneName = "Result";//リザルトシーン名
+    [SerializeField]
+    private AudioClip finishSound;
+    [SerializeField]
+    private AudioSource audioSource;
+
     private void Start()
     {
         _gameManager = GetComponent<GameManager>();
@@ -26,6 +32,9 @@ public class JudgeGameEnd : MonoBehaviour
                 //SceneManagerのイベントに勝利リザルト処理を追加
                 SceneManager.sceneLoaded += GameSceneLoaded;
                 _gameManager.StateChangeSignal(GameState.Finish);
+                Time.timeScale = 0.2f;                
+                audioSource.PlayOneShot(finishSound);
+                StartCoroutine(GoResult());
             }
         }
 
@@ -40,4 +49,10 @@ public class JudgeGameEnd : MonoBehaviour
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 
+    IEnumerator GoResult()
+    {
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(ResultSceneName);
+    }
 }
