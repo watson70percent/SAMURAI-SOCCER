@@ -210,26 +210,38 @@ public class EasyCPU : MonoBehaviour
         if(next.x < 0 || now.x < 0)
         {
             infield += field.AdaptPosition(new Vector3((-field.AdaptInversePosition(transform.position).x + 5) * Time.deltaTime, 0, 0));
-            rot_chain.RemoveLast();
+            if (rot_chain.Count > 0)
+            {
+                rot_chain.RemoveLast();
+            }
             rot_chain.AddLast(move);
         }
         else if(next.x > Constants.Width || now.x > Constants.Width)
         {
             infield += field.AdaptPosition(new Vector3((Constants.Width - field.AdaptInversePosition(transform.position).x - 5) * Time.deltaTime, 0, 0));
-            rot_chain.RemoveLast();
+            if (rot_chain.Count > 0)
+            {
+                rot_chain.RemoveLast();
+            }
             rot_chain.AddLast(move);
         }
 
         if(next.z < 0 || now.z < 0)
         {
             infield += field.AdaptPosition(new Vector3(0,0,(-field.AdaptInversePosition(transform.position).z + 5) * Time.deltaTime));
-            rot_chain.RemoveLast();
+            if (rot_chain.Count > 0)
+            {
+                rot_chain.RemoveLast();
+            }
             rot_chain.AddLast(move);
         }
         else if(next.z > Constants.G2G || now.z > Constants.G2G)
         {
             infield += field.AdaptPosition(new Vector3(0,0,(Constants.G2G - field.AdaptInversePosition(transform.position).z - 5) * Time.deltaTime));
-            rot_chain.RemoveLast();
+            if (rot_chain.Count > 0)
+            {
+                rot_chain.RemoveLast();
+            }
             rot_chain.AddLast(move);
         }
 
