@@ -41,6 +41,7 @@ public class StandbyStateProcess : MonoBehaviour
             //PlayingStateへ移動
             _gameManager.StateChangeSignal(GameState.Playing);
             await StandardFade.FadeOut(_opponentInfoText, 1);
+            _gameManager.StateChange -= StandbyProcessContent;
         }
     }
 
