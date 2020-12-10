@@ -119,7 +119,7 @@ public class EasyCPUManager : MonoBehaviour
     void Awake()
     {
         teammate = Resources.Load<GameObject>("Teammate");
-        opponent = Resources.Load<GameObject>("opponent");
+        opponent = Resources.Load<GameObject>(OpponentName.name);
 
         gm.StateChange += StateChanged;
         field = GetComponent<FieldManager>();
