@@ -16,7 +16,8 @@ public class ResultManager : MonoBehaviour
 
     Result resultState;
     [SerializeField]Text result;
-    [SerializeField]public string resultText;
+    public string resultText;
+    [SerializeField]
     Text samuraiPhrase;
     public SamuraiWordBase samuraiWordBase;
 
