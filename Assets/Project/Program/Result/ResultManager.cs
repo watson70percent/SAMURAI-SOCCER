@@ -20,6 +20,9 @@ public class ResultManager : MonoBehaviour
     Text samuraiPhrase;
     public SamuraiWordBase samuraiWordBase;
 
+    public List<Text> texts;
+    public Camera background;
+
 
 
     // Start is called before the first frame update
@@ -48,5 +51,20 @@ public class ResultManager : MonoBehaviour
     {
         this.resultState = resultState;
         this.resultText = resultText;
+        if (resultState == Result.Win) {
+            foreach (var txt in texts)
+            {
+                txt.color = Color.black;
+            }
+            background.backgroundColor = Color.white;
+        }
+        else
+        {
+            foreach (var txt in texts)
+            {
+                txt.color = Color.white;
+            }
+            background.backgroundColor = Color.black;
+        }
     }
 }
