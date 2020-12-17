@@ -21,4 +21,5 @@ public class StageSelect
 
     public int fieldNumber;
     public string oppnentName;
+    public string opponentInfo;
 }
