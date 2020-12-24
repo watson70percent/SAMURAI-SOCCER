@@ -29,7 +29,7 @@ public class FieldManager : MonoBehaviour
 
     void Awake()
     {
-        info = JsonConvert.DeserializeObject<FieldInfo>(File.ReadAllText(Application.streamingAssetsPath + "/Field_" + FieldNumber.no + ".json"));
+        StartCoroutine(LoadField());
         ball_rb = ball.GetComponent<Rigidbody>();
         gameObject.AddComponent(typeof(NonWind));
         wind = GetComponents<WindInfoBase>().First();
@@ -60,6 +60,31 @@ public class FieldManager : MonoBehaviour
             ball_rb.AddForce(wind.WindEffect(ball.transform.position));
         }
     }
+
+
+    private IEnumerator LoadField()
+    {
+        var file_path1 = Path.Combine(Application.streamingAssetsPath, "Field_" + FieldNumber.no + ".json");
+        string json = "";
+        Debug.Log("filepath is " + file_path1);
+        if (file_path1.Contains("://"))
+        {
+            var www1 = UnityEngine.Networking.UnityWebRequest.Get(file_path1);
+            yield return www1.SendWebRequest();
+            json = www1.downloadHandler.text;
+        }
+        else
+        {
+            json = File.ReadAllText(file_path1);
+        }
+        info = JsonUtility.FromJson<FieldInfo>(json);
+
+        
+
+        yield return null;
+
+    }
+
 
     /// <summary>
     /// 回転後の位置に変換

@@ -202,6 +202,7 @@ public class EasyCPUManager : MonoBehaviour
     {
         var file_path1 = Path.Combine(Application.streamingAssetsPath, "our.json");
         string json = "";
+        Debug.Log("filepath is " + file_path1);
         if (file_path1.Contains("://"))
         {
             var www1 = UnityEngine.Networking.UnityWebRequest.Get(file_path1);
@@ -267,6 +268,7 @@ public class EasyCPUManager : MonoBehaviour
     /// <return>復活した選手</return>
     public GameObject Sporn(PersonalStatus status, Vector3 pos)
     {
+        print(pos);
         GameObject temp = default;
         if (status.ally)
         {

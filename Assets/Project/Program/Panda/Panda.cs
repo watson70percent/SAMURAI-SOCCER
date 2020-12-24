@@ -39,6 +39,9 @@ public class Panda : MonoBehaviour
                 if (pos.y < -50) { Destroy(gameObject); }
                 anim.speed = 1;
                 break;
+            case GameState.Standby:
+                Destroy(gameObject);
+                break;
             default: anim.speed = 0; break;
         }
 
