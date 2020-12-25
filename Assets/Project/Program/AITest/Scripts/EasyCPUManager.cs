@@ -268,7 +268,6 @@ public class EasyCPUManager : MonoBehaviour
     /// <return>復活した選手</return>
     public GameObject Sporn(PersonalStatus status, Vector3 pos)
     {
-        print(pos);
         GameObject temp = default;
         if (status.ally)
         {
