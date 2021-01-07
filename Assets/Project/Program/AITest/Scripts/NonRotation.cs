@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NonRotation : FieldRotationBase
 {
-    protected override void Start()
+    protected override void Awake()
     {
         rotation = Quaternion.Euler(0, 0, 0);
     }
