@@ -35,7 +35,7 @@ public class RefereeArea : MonoBehaviour
         //MeshMaker();
         anicom.AttackEvent += FoulCheck;
         meshFilter = GetComponent<MeshFilter>();
-        if (!useObstacles)  MeshMaker();
+        
         
     }
 
@@ -46,7 +46,7 @@ public class RefereeArea : MonoBehaviour
     }
 
     
-    void MeshMaker()
+    public void MeshMaker()
     {
 
         var mesh = new Mesh();
@@ -123,9 +123,12 @@ public class RefereeArea : MonoBehaviour
             return;
         }
 
-        var vec = ((AnimationController)sender).transform.position - transform.position;
-        if (vec.magnitude > areaSize || Vector3.Dot(vec.normalized, transform.forward) < Mathf.Cos(maxang / 360 * 2 * Mathf.PI))  return;
-        Ray ray = new Ray(transform.position, vec);
+        var vec = ((AnimationController)sender).transform.position - transform.position;//審判からプレイヤーまでのベクトル
+        if (vec.magnitude > areaSize || Vector3.Dot(vec.normalized, transform.forward) < Mathf.Cos(maxang / 360 * 2 * Mathf.PI)) { return; }
+        print(areaSize);
+        
+        print(vec.magnitude > areaSize);
+        Ray ray = new Ray(transform.position+Vector3.up, vec);
         RaycastHit hit;
         if(Physics.Raycast(ray,out hit,areaSize) ? (hit.collider.tag=="Player") : false)
         {

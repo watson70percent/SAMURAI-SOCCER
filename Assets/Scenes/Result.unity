@@ -277,7 +277,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Panda
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -5116,7 +5116,7 @@ GameObject:
   - component: {fileID: 577103518}
   - component: {fileID: 577103517}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SamuraiPhrase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5168,7 +5168,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 64
-    m_Alignment: 5
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -15239,7 +15239,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: StageSelect
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -15313,7 +15313,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   result: {fileID: 2109276535}
   resultText: 
+  samuraiPhrase: {fileID: 577103517}
   samuraiWordBase: {fileID: 11400000, guid: 036624e2754eeb0499cdafa9b2850bb2, type: 2}
+  texts:
+  - {fileID: 2109276535}
+  - {fileID: 577103517}
+  - {fileID: 1969274112}
+  - {fileID: 1453404590}
+  background: {fileID: 1029053017}
 --- !u!4 &1810134306
 Transform:
   m_ObjectHideFlags: 0

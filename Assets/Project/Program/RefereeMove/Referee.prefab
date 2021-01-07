@@ -1643,11 +1643,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
-  lookatspeed: 5
+  lookatspeed: 1
   runningspeed: 7
   radius: 5
   refereeArea: {fileID: 681709424100340571}
-  animcon: {fileID: 0}
 --- !u!1 &5963280015246318449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2278,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RefereeArea
       objectReference: {fileID: 0}
+    - target: {fileID: 3030409815460604646, guid: f9462ecf3a50fa24d8cb2967a5981a5a,
+        type: 3}
+      propertyPath: maxang
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030409815460604646, guid: f9462ecf3a50fa24d8cb2967a5981a5a,
+        type: 3}
+      propertyPath: size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3030409815460604647, guid: f9462ecf3a50fa24d8cb2967a5981a5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2333,16 +2342,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3030409815460604646, guid: f9462ecf3a50fa24d8cb2967a5981a5a,
-        type: 3}
-      propertyPath: maxang
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 3030409815460604646, guid: f9462ecf3a50fa24d8cb2967a5981a5a,
-        type: 3}
-      propertyPath: size
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3030409815460604632, guid: f9462ecf3a50fa24d8cb2967a5981a5a,
         type: 3}

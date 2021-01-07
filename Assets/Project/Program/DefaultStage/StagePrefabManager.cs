@@ -57,6 +57,7 @@ public class StagePrefabManager : MonoBehaviour
         refereeArea.useObstacles = useObstacles;
         refereeMove.runningspeed = runningSpeed;
         refereeMove.lookatspeed = lookAtSpeed;
+        refereeArea.MeshMaker();
     }
 
 }
