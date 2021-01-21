@@ -57,6 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1739227168206833872
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1990056226184712001
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &3341165462635119277
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730910104951025854}
   - component: {fileID: -8574847174163486900}
+  - component: {fileID: -1414935354958215785}
   m_Layer: 0
   m_Name: StatueOfLiberty
   m_TagString: Untagged
@@ -215,6 +225,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110dcf26f01c31143a20cd202d06d201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1414935354958215785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341165462635119277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 8300000, guid: 07767b3374b47e5419c62ef53a89cac7, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &5050674481649214451
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &5139327151025288034
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &5711641943621815051
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSceneName: Result
+  finishSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &6037561199736516363
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +512,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -489,6 +524,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -511,7 +547,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -593053110101353100, guid: a0f66062bb73e5a479463155ee8f9ef5, type: 3}

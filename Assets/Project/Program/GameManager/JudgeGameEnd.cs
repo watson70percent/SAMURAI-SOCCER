@@ -49,6 +49,7 @@ public class JudgeGameEnd : MonoBehaviour
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 
+    //リザルトへ移動するためのコルーチン
     IEnumerator GoResult()
     {
         yield return new WaitForSeconds(1);

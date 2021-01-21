@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class CrushedToDeath : MonoBehaviour
 {
     private GameManager _gameManager;
+
+    public string ResultSceneName = "Result";//リザルトシーン名
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,8 @@ public class CrushedToDeath : MonoBehaviour
                 //SceneManagerのイベントに圧死リザルト処理を追加
                 SceneManager.sceneLoaded += GameSceneLoaded;
                 _gameManager.StateChangeSignal(GameState.Finish);
+                Time.timeScale = 0.2f;
+                StartCoroutine(GoResult());
             }
         }
     }
@@ -32,5 +37,13 @@ public class CrushedToDeath : MonoBehaviour
         resultManager.SetResult(Result.Lose, "つぶされてしまった!");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
+    }
+
+    //リザルトへ移動するためのコルーチン
+    IEnumerator GoResult()
+    {
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(ResultSceneName);
     }
 }
