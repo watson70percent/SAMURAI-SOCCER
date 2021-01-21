@@ -8,7 +8,7 @@ public class RefereeArea : MonoBehaviour
     [Tooltip("審判の視界の視野角")]
     public float maxang = 60;
     [Tooltip("審判の視界の距離")]
-    public int areaSize = 10;
+    public float areaSize = 10;
     public AnimationController anicom;
     public ParticleSystem surprisedMark;
     public Button attackButton;

@@ -18,6 +18,7 @@ public class AnimationController : MonoBehaviour
     {
         state = a.gameState;
     }
+
     // Start is called before the first frame update
     void Start()
     {
