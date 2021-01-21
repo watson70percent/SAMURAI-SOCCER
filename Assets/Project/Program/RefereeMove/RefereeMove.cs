@@ -45,6 +45,9 @@ public class RefereeMove : MonoBehaviour
             case GameState.Standby :
                 anicon.speed = 0;
                 break;
+            case GameState.Pause:
+                anicon.speed = 0;
+                break;
             case GameState.Playing:
                 LookAtBall();
                 MoveAroundBall();
