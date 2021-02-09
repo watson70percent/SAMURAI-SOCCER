@@ -16,7 +16,10 @@ public class StageSelect
     public string previewName;
     [TextArea(1, 5)]
     public string summary;
-
     public Sprite stageImage;
     public SceneObject gameScene;
+
+    public int fieldNumber;
+    public string oppnentName;
+    public string opponentInfo;
 }

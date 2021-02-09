@@ -14,6 +14,8 @@ using System;
 public class EasyCPUManager : MonoBehaviour
 {
     public GameManager gm;
+    public GameObject samurai;
+    public GameObject referee;
 
     public List<GameObject> team;
     public Team team_stock;
@@ -34,6 +36,13 @@ public class EasyCPUManager : MonoBehaviour
     public Dictionary<GameObject, Rigidbody> rbs = new Dictionary<GameObject, Rigidbody>();
 
     private FieldManager field;
+    private BallControler.GoalEventHandler goalEvent = null;
+
+    public AudioSource audioSource;
+    public AudioClip goalSound;
+    public AudioClip startSound;
+    public TimerScript timer;
+    public GameObject goalCanvas;
 
     /// <summary>
     /// 味方の人数
@@ -110,12 +119,12 @@ public class EasyCPUManager : MonoBehaviour
     void Awake()
     {
         teammate = Resources.Load<GameObject>("Teammate");
-        opponent = Resources.Load<GameObject>("opponent");
+        opponent = Resources.Load<GameObject>(OpponentName.name);
 
         gm.StateChange += StateChanged;
         field = GetComponent<FieldManager>();
         // opponent = Resources.Load<GameObject>(OpponentName.name);
-        LoadMember();
+        StartCoroutine(LoadMember());
 
     }
 
@@ -127,17 +136,19 @@ public class EasyCPUManager : MonoBehaviour
 
     private void StateChanged(StateChangedArg e)
     {
-        if(e.gameState == GameState.Pause)
+        if(e.gameState == GameState.Pause || e.gameState == GameState.Standby)
         {
             ball.Pause();
             foreach(var t in team)
             {
                 t.GetComponent<EasyCPU>().Pause();
+                t.GetComponentInChildren<Animator>().speed = 0;
             }
 
             foreach(var t in opp)
             {
                 t.GetComponent<EasyCPU>().Pause();
+                t.GetComponentInChildren<Animator>().speed = 0;
             }
         }
 
@@ -147,27 +158,81 @@ public class EasyCPUManager : MonoBehaviour
             foreach (var t in team)
             {
                 t.GetComponent<EasyCPU>().Play();
+                t.GetComponentInChildren<Animator>().speed = 1;
             }
 
             foreach (var t in opp)
             {
                 t.GetComponent<EasyCPU>().Play();
+                t.GetComponentInChildren<Animator>().speed = 1;
             }
+        }
+
+        if(e.gameState == GameState.Finish)
+        {
+            ball.Goal -= goalEvent;
         }
     }
 
     private void Start()
     {
-        ball.Goal += (sender, e) => { Init(e.Ally); };
-        Init();
+        goalEvent = (sender, e) => { StartCoroutine(GoalAction(e)); };
+        ball.Goal += goalEvent;
     }
 
-    private void LoadMember()
+    private IEnumerator GoalAction(GoalEventArgs e)
     {
-        var team_string = File.ReadAllText(Application.streamingAssetsPath + "/our.json");
-        team_stock = JsonUtility.FromJson<Team>(team_string);
-        var opp_string = File.ReadAllText(Application.streamingAssetsPath + "/" + OpponentName.name + ".json");
-        opp_stock = JsonUtility.FromJson<Team>(opp_string);
+        audioSource.PlayOneShot(goalSound);
+        timer.Pause();
+        ball.Goal -= goalEvent;
+        goalCanvas.SetActive(true);
+        yield return new WaitForSeconds(4);
+        ball.Goal += goalEvent;
+        gm.StateChangeSignal(GameState.Standby);
+        Init(e.Ally);
+        yield return new WaitForSeconds(2);
+        goalCanvas.SetActive(false);
+        timer.Playing();
+        audioSource.PlayOneShot(startSound);
+        gm.StateChangeSignal(GameState.Playing);
+    }
+
+
+    private IEnumerator LoadMember()
+    {
+        var file_path1 = Path.Combine(Application.streamingAssetsPath, "our.json");
+        string json = "";
+        Debug.Log("filepath is " + file_path1);
+        if (file_path1.Contains("://"))
+        {
+            var www1 = UnityEngine.Networking.UnityWebRequest.Get(file_path1);
+            yield return www1.SendWebRequest();
+            json = www1.downloadHandler.text;
+        }
+        else
+        {
+            json = File.ReadAllText(file_path1);
+        }
+        team_stock = JsonUtility.FromJson<Team>(json);
+
+        var file_path2 = Path.Combine(Application.streamingAssetsPath, OpponentName.name + ".json");
+        print(Application.streamingAssetsPath);
+        if (file_path2.Contains("://"))
+        {
+            var www2 = UnityEngine.Networking.UnityWebRequest.Get(file_path2);
+            yield return www2.SendWebRequest();
+            json = www2.downloadHandler.text;
+        }
+        else
+        {
+            json = File.ReadAllText(file_path2);
+        }
+        opp_stock = JsonUtility.FromJson<Team>(json);
+
+        Init();
+
+        yield return null;
+
     }
 
     /// <summary>
@@ -206,11 +271,11 @@ public class EasyCPUManager : MonoBehaviour
         GameObject temp = default;
         if (status.ally)
         {
-            temp = Instantiate(teammate, pos, Quaternion.identity, team_p);
+            temp = Instantiate(teammate, pos, Quaternion.identity * field.rotation.rotation , team_p);
         }
         else
         {
-            temp = Instantiate(opponent, pos, Quaternion.identity, opp_p);
+            temp = Instantiate(opponent, pos, Quaternion.LookRotation(Vector3.back, Vector3.up) * field.rotation.rotation, opp_p);
         }
 
         var setting = temp.GetComponent<EasyCPU>();
@@ -296,6 +361,8 @@ public class EasyCPUManager : MonoBehaviour
 
         ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0,0.5f,0);
         ball.rb.velocity = Vector3.zero;
+        samurai.transform.position = new Vector3(35.7f, 0, 59.6f);
+        referee.transform.position = new Vector3(38, 0, 69);
     }
 
 }

@@ -23,6 +23,7 @@ public class StageSelectManager : MonoBehaviour
     StagePreviwScript stagePreviwScript;
     public GameObject prefabButton;
 
+    //stageselectのデータ(public)
     public StageSelectData stageSelectData;// = Resources.Load<StageSelectData>("Project/Program/StageSelect/StageSelectData1");
     StageSelect stageSelect;// = stageSelectData.stageSelectList[0];
 
@@ -89,20 +90,29 @@ public class StageSelectManager : MonoBehaviour
 
     public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene)
     {
+        //previewを見せる
         state = StageSelectState.preview;
         stagePreviwScript.previewDisplay(stageName, summary, stImage, gameScene);
     }
 
     public void selectState()
     {
+        //ステージを選ぶ
         state = StageSelectState.select;
         
     }
 
     public (string stName, string summary, Sprite stagePreview, SceneObject scene)ButtonDataSet(int index)
     {
+        //押されたボタンの番号のデータを返す
         StageSelect item = stageSelectData.stageSelectList[index];
+        //相手選手のデータ、ステージ名をstaticにセットしておく
+        FieldNumber.no = item.fieldNumber;
+        OpponentName.name = item.oppnentName;
+        StandbyStateProcess.OpponentInfo=item.opponentInfo;
         return (stName:item.previewName, summary:item.summary, stagePreview:item.stageImage, scene:item.gameScene);
+
+
     }
 
 }

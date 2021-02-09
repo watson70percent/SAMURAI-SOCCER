@@ -16,7 +16,7 @@ public abstract class FieldRotationBase : MonoBehaviour
     /// <summary>
     /// 初期化。ご自由に。
     /// </summary>
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         rotation = Quaternion.identity;
     }

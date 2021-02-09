@@ -9,6 +9,7 @@ public class Slash : MonoBehaviour
     ParticleSystem.MainModule particle;
     float time;
     float alpha;
+    public AudioClip slash;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,7 @@ public class Slash : MonoBehaviour
             
             var dir = other.transform.position - transform.position;
             other.gameObject.GetComponent<Rigidbody>()?.AddForce(dir * 1000);
+            GameObject.Find("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
         }
     }
 }

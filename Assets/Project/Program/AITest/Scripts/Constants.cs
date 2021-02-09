@@ -48,7 +48,7 @@ public static class Constants
         get
         {
             var vec = OurGoalPoint - OppornentGoalPoint;
-            return OurGoalPoint + vec * 0.1f+Vector3.up;
+            return OurGoalPoint + vec * 0.01f+Vector3.up;
         }
     }
 
@@ -60,7 +60,7 @@ public static class Constants
         get
         {
             var vec = OppornentGoalPoint - OurGoalPoint;
-            return OppornentGoalPoint + vec * 0.1f+Vector3.up;
+            return OppornentGoalPoint + vec * 0.01f+Vector3.up;
         }
     }
 
@@ -110,7 +110,7 @@ public static class Constants
 
     private static readonly IEnumerable<Vector3> teammateInitialSpornPointCenterTeam = new Vector3[]
     {
-        new Vector3(0.5f,0,0.5f),
+        new Vector3(0.5f,0,0.48f),
         new Vector3(0.8f,0,0.1f),new Vector3(0.2f,0,0.1f),new Vector3(0.6f,0,0.1f),new Vector3(0.4f,0,0.1f),
         new Vector3(0.8f,0,0.3f),new Vector3(0.2f,0,0.3f),new Vector3(0.6f,0,0.3f),new Vector3(0.4f,0,0.3f),
         new Vector3(0.75f,0,0.4f),new Vector3(0.25f,0,0.4f)
@@ -132,7 +132,7 @@ public static class Constants
 
     private static readonly IEnumerable<Vector3> oppornentInitialSpornPointCenterOppornent = new Vector3[]
     {
-        new Vector3(0.5f,0,0.5f),
+        new Vector3(0.5f,0,0.52f),
         new Vector3(0.8f,0,0.9f),new Vector3(0.2f,0,0.9f),new Vector3(0.6f,0,0.9f),new Vector3(0.4f,0,0.9f),
         new Vector3(0.8f,0,0.7f),new Vector3(0.2f,0,0.7f),new Vector3(0.6f,0,0.7f),new Vector3(0.4f,0,0.7f),
         new Vector3(0.75f,0,0.6f),new Vector3(0.25f,0,0.6f)
