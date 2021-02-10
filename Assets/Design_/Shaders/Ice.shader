@@ -5,10 +5,13 @@
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Radius", Range(0.0,1.0)) = 0.9999
         _Smooth("Smooth", Range(1, 100)) = 10
+        _Threshold ("Threshold", Range(0.0, 1.0)) = 0.75
     }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
+        Tags { "LightMode"="ForwardBase" }
+
         LOD 200
 
         CGPROGRAM
@@ -21,6 +24,7 @@
         sampler2D _MainTex;
         half _Glossiness;
         half _Smooth;
+        half _Threshold;
 
         struct Input
         {
@@ -48,7 +52,7 @@
             float3 spec = fixed4(1, 1, 1, 1) * pow(smoothstep(_Glossiness,1,max(0, dot(H, normalize(s.Normal)))), _Smooth);
 
             half4 c;
-            c.rgb = (s.Albedo + spec) * atten;
+            c.rgb = (s.Albedo + spec) * ((atten > _Threshold) ? 1 : atten);
             c.a = s.Alpha;
             return c;
         }
