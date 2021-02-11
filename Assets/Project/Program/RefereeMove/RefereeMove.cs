@@ -10,6 +10,7 @@ public class RefereeMove : MonoBehaviour
     public float radius;
     Rigidbody rig;
     public RefereeArea refereeArea;
+    
     //public AnimationController animcon;
     //ParticleSystem bikkuri;
     // Start is called before the first frame update
@@ -18,7 +19,7 @@ public class RefereeMove : MonoBehaviour
 
     GameState state = GameState.Reset;
 
-    Animator anicon;
+    public Animator anicon;
     void SwitchState(StateChangedArg a)
     {
         state = a.gameState;
@@ -29,8 +30,6 @@ public class RefereeMove : MonoBehaviour
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.StateChange += SwitchState;
-        anicon = GetComponent<Animator>();
-
 
 
         rig = GetComponent<Rigidbody>();
