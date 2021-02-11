@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.SceneObject
+  commentId: T:SAMURAI.SceneObject
+  id: SceneObject
+  parent: SAMURAI
+  children:
+  - SAMURAI.SceneObject.op_Implicit(SAMURAI.SceneObject)~System.String
+  - SAMURAI.SceneObject.op_Implicit(System.String)~SAMURAI.SceneObject
+  langs:
+  - csharp
+  - vb
+  name: SceneObject
+  nameWithType: SceneObject
+  fullName: SAMURAI.SceneObject
+  type: Class
+  source:
+    id: SceneObject
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\SceneObject.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SceneObject
+    content.vb: >-
+      <Serializable>
+
+      Public Class SceneObject
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.SceneObject.op_Implicit(SAMURAI.SceneObject)~System.String
+  commentId: M:SAMURAI.SceneObject.op_Implicit(SAMURAI.SceneObject)~System.String
+  id: op_Implicit(SAMURAI.SceneObject)~System.String
+  parent: SAMURAI.SceneObject
+  langs:
+  - csharp
+  - vb
+  name: Implicit(SceneObject to String)
+  nameWithType: SceneObject.Implicit(SceneObject to String)
+  fullName: SAMURAI.SceneObject.Implicit(SAMURAI.SceneObject to System.String)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\SceneObject.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public static implicit operator string (SceneObject sceneObject)
+    parameters:
+    - id: sceneObject
+      type: SAMURAI.SceneObject
+    return:
+      type: System.String
+    content.vb: Public Shared Widening Operator CType(sceneObject As SceneObject) As String
+  overload: SAMURAI.SceneObject.op_Implicit*
+  nameWithType.vb: SceneObject.Widening(SceneObject to String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: SAMURAI.SceneObject.Widening(SAMURAI.SceneObject to System.String)
+  name.vb: Widening(SceneObject to String)
+- uid: SAMURAI.SceneObject.op_Implicit(System.String)~SAMURAI.SceneObject
+  commentId: M:SAMURAI.SceneObject.op_Implicit(System.String)~SAMURAI.SceneObject
+  id: op_Implicit(System.String)~SAMURAI.SceneObject
+  parent: SAMURAI.SceneObject
+  langs:
+  - csharp
+  - vb
+  name: Implicit(String to SceneObject)
+  nameWithType: SceneObject.Implicit(String to SceneObject)
+  fullName: SAMURAI.SceneObject.Implicit(System.String to SAMURAI.SceneObject)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\SceneObject.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public static implicit operator SceneObject(string sceneName)
+    parameters:
+    - id: sceneName
+      type: System.String
+    return:
+      type: SAMURAI.SceneObject
+    content.vb: Public Shared Widening Operator CType(sceneName As String) As SceneObject
+  overload: SAMURAI.SceneObject.op_Implicit*
+  nameWithType.vb: SceneObject.Widening(String to SceneObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: SAMURAI.SceneObject.Widening(System.String to SAMURAI.SceneObject)
+  name.vb: Widening(String to SceneObject)
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.SceneObject.op_Implicit*
+  commentId: Overload:SAMURAI.SceneObject.op_Implicit
+  name: Implicit
+  nameWithType: SceneObject.Implicit
+  fullName: SAMURAI.SceneObject.Implicit
+  nameWithType.vb: SceneObject.Widening
+  fullName.vb: SAMURAI.SceneObject.Widening
+  name.vb: Widening
+- uid: SAMURAI.SceneObject
+  commentId: T:SAMURAI.SceneObject
+  parent: SAMURAI
+  name: SceneObject
+  nameWithType: SceneObject
+  fullName: SAMURAI.SceneObject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

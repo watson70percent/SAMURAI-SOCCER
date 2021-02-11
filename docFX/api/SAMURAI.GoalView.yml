@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.GoalView
+  commentId: T:SAMURAI.GoalView
+  id: GoalView
+  parent: SAMURAI
+  children:
+  - SAMURAI.GoalView.image
+  langs:
+  - csharp
+  - vb
+  name: GoalView
+  nameWithType: GoalView
+  fullName: SAMURAI.GoalView
+  type: Class
+  source:
+    id: GoalView
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\GoalView.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class GoalView : MonoBehaviour'
+    content.vb: >-
+      Public Class GoalView
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.GoalView.image
+  commentId: F:SAMURAI.GoalView.image
+  id: image
+  parent: SAMURAI.GoalView
+  langs:
+  - csharp
+  - vb
+  name: image
+  nameWithType: GoalView.image
+  fullName: SAMURAI.GoalView.image
+  type: Field
+  source:
+    id: image
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\GoalView.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Image image
+    return:
+      type: Image
+    content.vb: Public image As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Image
+  commentId: '!:Image'
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image

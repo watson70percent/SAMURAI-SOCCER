@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.particle
+  commentId: T:SAMURAI.particle
+  id: particle
+  parent: SAMURAI
+  children:
+  - SAMURAI.particle.PA
+  langs:
+  - csharp
+  - vb
+  name: particle
+  nameWithType: particle
+  fullName: SAMURAI.particle
+  type: Class
+  source:
+    id: particle
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\particle.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class particle : MonoBehaviour'
+    content.vb: >-
+      Public Class particle
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.particle.PA
+  commentId: M:SAMURAI.particle.PA
+  id: PA
+  parent: SAMURAI.particle
+  langs:
+  - csharp
+  - vb
+  name: PA()
+  nameWithType: particle.PA()
+  fullName: SAMURAI.particle.PA()
+  type: Method
+  source:
+    id: PA
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\particle.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void PA()
+    content.vb: Public Sub PA
+  overload: SAMURAI.particle.PA*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.particle.PA*
+  commentId: Overload:SAMURAI.particle.PA
+  name: PA
+  nameWithType: particle.PA
+  fullName: SAMURAI.particle.PA

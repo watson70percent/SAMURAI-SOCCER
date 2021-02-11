@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.CallStatueOfLiberty
+  commentId: T:SAMURAI.CallStatueOfLiberty
+  id: CallStatueOfLiberty
+  parent: SAMURAI
+  children:
+  - SAMURAI.CallStatueOfLiberty.StatuePrefab
+  langs:
+  - csharp
+  - vb
+  name: CallStatueOfLiberty
+  nameWithType: CallStatueOfLiberty
+  fullName: SAMURAI.CallStatueOfLiberty
+  type: Class
+  source:
+    id: CallStatueOfLiberty
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AmericaStage\CallStatueOfLiberty.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class CallStatueOfLiberty : MonoBehaviour'
+    content.vb: >-
+      Public Class CallStatueOfLiberty
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.CallStatueOfLiberty.StatuePrefab
+  commentId: F:SAMURAI.CallStatueOfLiberty.StatuePrefab
+  id: StatuePrefab
+  parent: SAMURAI.CallStatueOfLiberty
+  langs:
+  - csharp
+  - vb
+  name: StatuePrefab
+  nameWithType: CallStatueOfLiberty.StatuePrefab
+  fullName: SAMURAI.CallStatueOfLiberty.StatuePrefab
+  type: Field
+  source:
+    id: StatuePrefab
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AmericaStage\CallStatueOfLiberty.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject StatuePrefab
+    return:
+      type: GameObject
+    content.vb: Public StatuePrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject

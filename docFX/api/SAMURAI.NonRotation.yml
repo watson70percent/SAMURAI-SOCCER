@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.NonRotation
+  commentId: T:SAMURAI.NonRotation
+  id: NonRotation
+  parent: SAMURAI
+  children:
+  - SAMURAI.NonRotation.Start
+  langs:
+  - csharp
+  - vb
+  name: NonRotation
+  nameWithType: NonRotation
+  fullName: SAMURAI.NonRotation
+  type: Class
+  source:
+    id: NonRotation
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\NonRotation.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class NonRotation : FieldRotationBase'
+    content.vb: >-
+      Public Class NonRotation
+          Inherits FieldRotationBase
+  inheritance:
+  - System.Object
+  - SAMURAI.FieldRotationBase
+  inheritedMembers:
+  - SAMURAI.FieldRotationBase.rotation
+  - SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  - SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.NonRotation.Start
+  commentId: M:SAMURAI.NonRotation.Start
+  id: Start
+  parent: SAMURAI.NonRotation
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: NonRotation.Start()
+  fullName: SAMURAI.NonRotation.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\NonRotation.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start
+  overridden: SAMURAI.FieldRotationBase.Start
+  overload: SAMURAI.NonRotation.Start*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: SAMURAI.FieldRotationBase
+  commentId: T:SAMURAI.FieldRotationBase
+  parent: SAMURAI
+  name: FieldRotationBase
+  nameWithType: FieldRotationBase
+  fullName: SAMURAI.FieldRotationBase
+- uid: SAMURAI.FieldRotationBase.rotation
+  commentId: F:SAMURAI.FieldRotationBase.rotation
+  parent: SAMURAI.FieldRotationBase
+  name: rotation
+  nameWithType: FieldRotationBase.rotation
+  fullName: SAMURAI.FieldRotationBase.rotation
+- uid: SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  commentId: M:SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  parent: SAMURAI.FieldRotationBase
+  isExternal: true
+  name: AdaptPosition(Vector3)
+  nameWithType: FieldRotationBase.AdaptPosition(Vector3)
+  fullName: SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  spec.csharp:
+  - uid: SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+    name: AdaptPosition
+    nameWithType: FieldRotationBase.AdaptPosition
+    fullName: SAMURAI.FieldRotationBase.AdaptPosition
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+    name: AdaptPosition
+    nameWithType: FieldRotationBase.AdaptPosition
+    fullName: SAMURAI.FieldRotationBase.AdaptPosition
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  commentId: M:SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  parent: SAMURAI.FieldRotationBase
+  isExternal: true
+  name: AdaptInversePosition(Vector3)
+  nameWithType: FieldRotationBase.AdaptInversePosition(Vector3)
+  fullName: SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  spec.csharp:
+  - uid: SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+    name: AdaptInversePosition
+    nameWithType: FieldRotationBase.AdaptInversePosition
+    fullName: SAMURAI.FieldRotationBase.AdaptInversePosition
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+    name: AdaptInversePosition
+    nameWithType: FieldRotationBase.AdaptInversePosition
+    fullName: SAMURAI.FieldRotationBase.AdaptInversePosition
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.FieldRotationBase.Start
+  commentId: M:SAMURAI.FieldRotationBase.Start
+  parent: SAMURAI.FieldRotationBase
+  name: Start()
+  nameWithType: FieldRotationBase.Start()
+  fullName: SAMURAI.FieldRotationBase.Start()
+  spec.csharp:
+  - uid: SAMURAI.FieldRotationBase.Start
+    name: Start
+    nameWithType: FieldRotationBase.Start
+    fullName: SAMURAI.FieldRotationBase.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SAMURAI.FieldRotationBase.Start
+    name: Start
+    nameWithType: FieldRotationBase.Start
+    fullName: SAMURAI.FieldRotationBase.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SAMURAI.NonRotation.Start*
+  commentId: Overload:SAMURAI.NonRotation.Start
+  name: Start
+  nameWithType: NonRotation.Start
+  fullName: SAMURAI.NonRotation.Start

@@ -1,0 +1,177 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.ColliderInputData
+  commentId: T:SAMURAI.ColliderInputData
+  id: ColliderInputData
+  parent: SAMURAI
+  children:
+  - SAMURAI.ColliderInputData.#ctor(SAMURAI.Polygon[],SAMURAI.CollisionObject)
+  - SAMURAI.ColliderInputData.collisionObject
+  - SAMURAI.ColliderInputData.polygons
+  langs:
+  - csharp
+  - vb
+  name: ColliderInputData
+  nameWithType: ColliderInputData
+  fullName: SAMURAI.ColliderInputData
+  type: Class
+  source:
+    id: ColliderInputData
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 256
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public class ColliderInputData
+    content.vb: Public Class ColliderInputData
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.ColliderInputData.polygons
+  commentId: F:SAMURAI.ColliderInputData.polygons
+  id: polygons
+  parent: SAMURAI.ColliderInputData
+  langs:
+  - csharp
+  - vb
+  name: polygons
+  nameWithType: ColliderInputData.polygons
+  fullName: SAMURAI.ColliderInputData.polygons
+  type: Field
+  source:
+    id: polygons
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 258
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Polygon[] polygons
+    return:
+      type: SAMURAI.Polygon[]
+    content.vb: Public polygons As Polygon()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.ColliderInputData.collisionObject
+  commentId: F:SAMURAI.ColliderInputData.collisionObject
+  id: collisionObject
+  parent: SAMURAI.ColliderInputData
+  langs:
+  - csharp
+  - vb
+  name: collisionObject
+  nameWithType: ColliderInputData.collisionObject
+  fullName: SAMURAI.ColliderInputData.collisionObject
+  type: Field
+  source:
+    id: collisionObject
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 259
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public CollisionObject collisionObject
+    return:
+      type: SAMURAI.CollisionObject
+    content.vb: Public collisionObject As CollisionObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.ColliderInputData.#ctor(SAMURAI.Polygon[],SAMURAI.CollisionObject)
+  commentId: M:SAMURAI.ColliderInputData.#ctor(SAMURAI.Polygon[],SAMURAI.CollisionObject)
+  id: '#ctor(SAMURAI.Polygon[],SAMURAI.CollisionObject)'
+  parent: SAMURAI.ColliderInputData
+  langs:
+  - csharp
+  - vb
+  name: ColliderInputData(Polygon[], CollisionObject)
+  nameWithType: ColliderInputData.ColliderInputData(Polygon[], CollisionObject)
+  fullName: SAMURAI.ColliderInputData.ColliderInputData(SAMURAI.Polygon[], SAMURAI.CollisionObject)
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 261
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public ColliderInputData(Polygon[] polygons, CollisionObject collisionObjectInstance)
+    parameters:
+    - id: polygons
+      type: SAMURAI.Polygon[]
+    - id: collisionObjectInstance
+      type: SAMURAI.CollisionObject
+    content.vb: Public Sub New(polygons As Polygon(), collisionObjectInstance As CollisionObject)
+  overload: SAMURAI.ColliderInputData.#ctor*
+  nameWithType.vb: ColliderInputData.ColliderInputData(Polygon(), CollisionObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: SAMURAI.ColliderInputData.ColliderInputData(SAMURAI.Polygon(), SAMURAI.CollisionObject)
+  name.vb: ColliderInputData(Polygon(), CollisionObject)
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.Polygon[]
+  isExternal: true
+  name: Polygon[]
+  nameWithType: Polygon[]
+  fullName: SAMURAI.Polygon[]
+  nameWithType.vb: Polygon()
+  fullName.vb: SAMURAI.Polygon()
+  name.vb: Polygon()
+  spec.csharp:
+  - uid: SAMURAI.Polygon
+    name: Polygon
+    nameWithType: Polygon
+    fullName: SAMURAI.Polygon
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: SAMURAI.Polygon
+    name: Polygon
+    nameWithType: Polygon
+    fullName: SAMURAI.Polygon
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.CollisionObject
+  commentId: T:SAMURAI.CollisionObject
+  parent: SAMURAI
+  name: CollisionObject
+  nameWithType: CollisionObject
+  fullName: SAMURAI.CollisionObject
+- uid: SAMURAI.ColliderInputData.#ctor*
+  commentId: Overload:SAMURAI.ColliderInputData.#ctor
+  name: ColliderInputData
+  nameWithType: ColliderInputData.ColliderInputData
+  fullName: SAMURAI.ColliderInputData.ColliderInputData

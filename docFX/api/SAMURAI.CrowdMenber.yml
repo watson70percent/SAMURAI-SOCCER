@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.CrowdMenber
+  commentId: T:SAMURAI.CrowdMenber
+  id: CrowdMenber
+  parent: SAMURAI
+  children:
+  - SAMURAI.CrowdMenber.crowdMaterial
+  - SAMURAI.CrowdMenber.crowdRenderers
+  - SAMURAI.CrowdMenber.crowdTextures
+  langs:
+  - csharp
+  - vb
+  name: CrowdMenber
+  nameWithType: CrowdMenber
+  fullName: SAMURAI.CrowdMenber
+  type: Class
+  source:
+    id: CrowdMenber
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\CrowdMenber.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class CrowdMenber : MonoBehaviour'
+    content.vb: >-
+      Public Class CrowdMenber
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.CrowdMenber.crowdTextures
+  commentId: F:SAMURAI.CrowdMenber.crowdTextures
+  id: crowdTextures
+  parent: SAMURAI.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: crowdTextures
+  nameWithType: CrowdMenber.crowdTextures
+  fullName: SAMURAI.CrowdMenber.crowdTextures
+  type: Field
+  source:
+    id: crowdTextures
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\CrowdMenber.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Texture[] crowdTextures
+    return:
+      type: Texture[]
+    content.vb: Public crowdTextures As Texture()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.CrowdMenber.crowdRenderers
+  commentId: F:SAMURAI.CrowdMenber.crowdRenderers
+  id: crowdRenderers
+  parent: SAMURAI.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: crowdRenderers
+  nameWithType: CrowdMenber.crowdRenderers
+  fullName: SAMURAI.CrowdMenber.crowdRenderers
+  type: Field
+  source:
+    id: crowdRenderers
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\CrowdMenber.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Renderer[] crowdRenderers
+    return:
+      type: Renderer[]
+    content.vb: Public crowdRenderers As Renderer()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.CrowdMenber.crowdMaterial
+  commentId: F:SAMURAI.CrowdMenber.crowdMaterial
+  id: crowdMaterial
+  parent: SAMURAI.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: crowdMaterial
+  nameWithType: CrowdMenber.crowdMaterial
+  fullName: SAMURAI.CrowdMenber.crowdMaterial
+  type: Field
+  source:
+    id: crowdMaterial
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\CrowdMenber.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Material crowdMaterial
+    return:
+      type: Material
+    content.vb: Public crowdMaterial As Material
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Texture[]
+  isExternal: true
+  name: Texture[]
+  nameWithType: Texture[]
+  fullName: Texture[]
+  nameWithType.vb: Texture()
+  fullName.vb: Texture()
+  name.vb: Texture()
+  spec.csharp:
+  - uid: Texture
+    name: Texture
+    nameWithType: Texture
+    fullName: Texture
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Texture
+    name: Texture
+    nameWithType: Texture
+    fullName: Texture
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Renderer[]
+  isExternal: true
+  name: Renderer[]
+  nameWithType: Renderer[]
+  fullName: Renderer[]
+  nameWithType.vb: Renderer()
+  fullName.vb: Renderer()
+  name.vb: Renderer()
+  spec.csharp:
+  - uid: Renderer
+    name: Renderer
+    nameWithType: Renderer
+    fullName: Renderer
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Renderer
+    name: Renderer
+    nameWithType: Renderer
+    fullName: Renderer
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Material
+  isExternal: true
+  name: Material
+  nameWithType: Material
+  fullName: Material

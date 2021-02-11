@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  id: GameManager
+  parent: SAMURAI
+  children:
+  - SAMURAI.GameManager.CurrentGameState
+  - SAMURAI.GameManager.CurrentStateChanger(SAMURAI.GameState)
+  - SAMURAI.GameManager.CurrentStateResercher
+  - SAMURAI.GameManager.StartStateChangeEvent(SAMURAI.GameState)
+  - SAMURAI.GameManager.StateChange
+  - SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
+  langs:
+  - csharp
+  - vb
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+  type: Class
+  source:
+    id: GameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class GameManager : MonoBehaviour'
+    content.vb: >-
+      Public Class GameManager
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.GameManager.StateChange
+  commentId: E:SAMURAI.GameManager.StateChange
+  id: StateChange
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: StateChange
+  nameWithType: GameManager.StateChange
+  fullName: SAMURAI.GameManager.StateChange
+  type: Event
+  source:
+    id: StateChange
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nStateの移動時に呼ばれるイベント\n"
+  example: []
+  syntax:
+    content: public event StateChangedHandler StateChange
+    return:
+      type: SAMURAI.StateChangedHandler
+    content.vb: Public Event StateChange As StateChangedHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.GameManager.CurrentGameState
+  commentId: P:SAMURAI.GameManager.CurrentGameState
+  id: CurrentGameState
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: CurrentGameState
+  nameWithType: GameManager.CurrentGameState
+  fullName: SAMURAI.GameManager.CurrentGameState
+  type: Property
+  source:
+    id: CurrentGameState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameState CurrentGameState { get; }
+    parameters: []
+    return:
+      type: SAMURAI.GameState
+    content.vb: Public ReadOnly Property CurrentGameState As GameState
+  overload: SAMURAI.GameManager.CurrentGameState*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
+  commentId: M:SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
+  id: StateChangeSignal(SAMURAI.GameState)
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: StateChangeSignal(GameState)
+  nameWithType: GameManager.StateChangeSignal(GameState)
+  fullName: SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
+  type: Method
+  source:
+    id: StateChangeSignal
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 72
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n任意のStateに変更するIdをステートマシンに送る\n"
+  example: []
+  syntax:
+    content: public void StateChangeSignal(GameState state)
+    parameters:
+    - id: state
+      type: SAMURAI.GameState
+    content.vb: Public Sub StateChangeSignal(state As GameState)
+  overload: SAMURAI.GameManager.StateChangeSignal*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.GameManager.StartStateChangeEvent(SAMURAI.GameState)
+  commentId: M:SAMURAI.GameManager.StartStateChangeEvent(SAMURAI.GameState)
+  id: StartStateChangeEvent(SAMURAI.GameState)
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: StartStateChangeEvent(GameState)
+  nameWithType: GameManager.StartStateChangeEvent(GameState)
+  fullName: SAMURAI.GameManager.StartStateChangeEvent(SAMURAI.GameState)
+  type: Method
+  source:
+    id: StartStateChangeEvent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 83
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nイベント発火関数\n"
+  example: []
+  syntax:
+    content: public void StartStateChangeEvent(GameState gameState)
+    parameters:
+    - id: gameState
+      type: SAMURAI.GameState
+      description: ''
+    content.vb: Public Sub StartStateChangeEvent(gameState As GameState)
+  overload: SAMURAI.GameManager.StartStateChangeEvent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.GameManager.CurrentStateChanger(SAMURAI.GameState)
+  commentId: M:SAMURAI.GameManager.CurrentStateChanger(SAMURAI.GameState)
+  id: CurrentStateChanger(SAMURAI.GameState)
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: CurrentStateChanger(GameState)
+  nameWithType: GameManager.CurrentStateChanger(GameState)
+  fullName: SAMURAI.GameManager.CurrentStateChanger(SAMURAI.GameState)
+  type: Method
+  source:
+    id: CurrentStateChanger
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 93
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nデバッグ用　現在のStateを変更する\n"
+  example: []
+  syntax:
+    content: public void CurrentStateChanger(GameState gameState)
+    parameters:
+    - id: gameState
+      type: SAMURAI.GameState
+    content.vb: Public Sub CurrentStateChanger(gameState As GameState)
+  overload: SAMURAI.GameManager.CurrentStateChanger*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.GameManager.CurrentStateResercher
+  commentId: M:SAMURAI.GameManager.CurrentStateResercher
+  id: CurrentStateResercher
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: CurrentStateResercher()
+  nameWithType: GameManager.CurrentStateResercher()
+  fullName: SAMURAI.GameManager.CurrentStateResercher()
+  type: Method
+  source:
+    id: CurrentStateResercher
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 101
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nデバッグ用　現在のStateを確認する\n"
+  example: []
+  syntax:
+    content: public void CurrentStateResercher()
+    content.vb: Public Sub CurrentStateResercher
+  overload: SAMURAI.GameManager.CurrentStateResercher*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.StateChangedHandler
+  commentId: T:SAMURAI.StateChangedHandler
+  parent: SAMURAI
+  name: StateChangedHandler
+  nameWithType: StateChangedHandler
+  fullName: SAMURAI.StateChangedHandler
+- uid: SAMURAI.GameManager.CurrentGameState*
+  commentId: Overload:SAMURAI.GameManager.CurrentGameState
+  name: CurrentGameState
+  nameWithType: GameManager.CurrentGameState
+  fullName: SAMURAI.GameManager.CurrentGameState
+- uid: SAMURAI.GameState
+  commentId: T:SAMURAI.GameState
+  parent: SAMURAI
+  name: GameState
+  nameWithType: GameState
+  fullName: SAMURAI.GameState
+- uid: SAMURAI.GameManager.StateChangeSignal*
+  commentId: Overload:SAMURAI.GameManager.StateChangeSignal
+  name: StateChangeSignal
+  nameWithType: GameManager.StateChangeSignal
+  fullName: SAMURAI.GameManager.StateChangeSignal
+- uid: SAMURAI.GameManager.StartStateChangeEvent*
+  commentId: Overload:SAMURAI.GameManager.StartStateChangeEvent
+  name: StartStateChangeEvent
+  nameWithType: GameManager.StartStateChangeEvent
+  fullName: SAMURAI.GameManager.StartStateChangeEvent
+- uid: SAMURAI.GameManager.CurrentStateChanger*
+  commentId: Overload:SAMURAI.GameManager.CurrentStateChanger
+  name: CurrentStateChanger
+  nameWithType: GameManager.CurrentStateChanger
+  fullName: SAMURAI.GameManager.CurrentStateChanger
+- uid: SAMURAI.GameManager.CurrentStateResercher*
+  commentId: Overload:SAMURAI.GameManager.CurrentStateResercher
+  name: CurrentStateResercher
+  nameWithType: GameManager.CurrentStateResercher
+  fullName: SAMURAI.GameManager.CurrentStateResercher

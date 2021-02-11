@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StagePrefabManagerEditor
+  commentId: T:SAMURAI.StagePrefabManagerEditor
+  id: StagePrefabManagerEditor
+  parent: SAMURAI
+  children:
+  - SAMURAI.StagePrefabManagerEditor.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: StagePrefabManagerEditor
+  nameWithType: StagePrefabManagerEditor
+  fullName: SAMURAI.StagePrefabManagerEditor
+  type: Class
+  source:
+    id: StagePrefabManagerEditor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\Editor\StagePrefabManagerEditor.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StagePrefabManagerEditor : Editor'
+    content.vb: >-
+      Public Class StagePrefabManagerEditor
+          Inherits Editor
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StagePrefabManagerEditor.OnInspectorGUI
+  commentId: M:SAMURAI.StagePrefabManagerEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: SAMURAI.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: StagePrefabManagerEditor.OnInspectorGUI()
+  fullName: SAMURAI.StagePrefabManagerEditor.OnInspectorGUI()
+  type: Method
+  source:
+    id: OnInspectorGUI
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\Editor\StagePrefabManagerEditor.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: SAMURAI
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI
+  overload: SAMURAI.StagePrefabManagerEditor.OnInspectorGUI*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.StagePrefabManagerEditor.OnInspectorGUI*
+  commentId: Overload:SAMURAI.StagePrefabManagerEditor.OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: StagePrefabManagerEditor.OnInspectorGUI
+  fullName: SAMURAI.StagePrefabManagerEditor.OnInspectorGUI

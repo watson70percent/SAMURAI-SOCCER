@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StageSelectManager.StageSelectState
+  commentId: T:SAMURAI.StageSelectManager.StageSelectState
+  id: StageSelectManager.StageSelectState
+  parent: SAMURAI
+  children:
+  - SAMURAI.StageSelectManager.StageSelectState.preview
+  - SAMURAI.StageSelectManager.StageSelectState.select
+  langs:
+  - csharp
+  - vb
+  name: StageSelectManager.StageSelectState
+  nameWithType: StageSelectManager.StageSelectState
+  fullName: SAMURAI.StageSelectManager.StageSelectState
+  type: Enum
+  source:
+    id: StageSelectState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nいまはStageSelectManagerにつけてるけど、適当なオブジェクトにつけて、オブジェクトを適切につければ動くよ\n"
+  example: []
+  syntax:
+    content: public enum StageSelectState
+    content.vb: Public Enum StageSelectState
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SAMURAI.StageSelectManager.StageSelectState.select
+  commentId: F:SAMURAI.StageSelectManager.StageSelectState.select
+  id: select
+  parent: SAMURAI.StageSelectManager.StageSelectState
+  langs:
+  - csharp
+  - vb
+  name: select
+  nameWithType: StageSelectManager.StageSelectState.select
+  fullName: SAMURAI.StageSelectManager.StageSelectState.select
+  type: Field
+  source:
+    id: select
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: select = 0
+    return:
+      type: SAMURAI.StageSelectManager.StageSelectState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.StageSelectManager.StageSelectState.preview
+  commentId: F:SAMURAI.StageSelectManager.StageSelectState.preview
+  id: preview
+  parent: SAMURAI.StageSelectManager.StageSelectState
+  langs:
+  - csharp
+  - vb
+  name: preview
+  nameWithType: StageSelectManager.StageSelectState.preview
+  fullName: SAMURAI.StageSelectManager.StageSelectState.preview
+  type: Field
+  source:
+    id: preview
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: preview = 1
+    return:
+      type: SAMURAI.StageSelectManager.StageSelectState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: SAMURAI.StageSelectManager.StageSelectState
+  commentId: T:SAMURAI.StageSelectManager.StageSelectState
+  parent: SAMURAI
+  name: StageSelectManager.StageSelectState
+  nameWithType: StageSelectManager.StageSelectState
+  fullName: SAMURAI.StageSelectManager.StageSelectState

@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.GoalText
+  commentId: T:SAMURAI.GoalText
+  id: GoalText
+  parent: SAMURAI
+  children:
+  - SAMURAI.GoalText.text
+  langs:
+  - csharp
+  - vb
+  name: GoalText
+  nameWithType: GoalText
+  fullName: SAMURAI.GoalText
+  type: Class
+  source:
+    id: GoalText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\GoalText.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class GoalText : MonoBehaviour'
+    content.vb: >-
+      Public Class GoalText
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.GoalText.text
+  commentId: F:SAMURAI.GoalText.text
+  id: text
+  parent: SAMURAI.GoalText
+  langs:
+  - csharp
+  - vb
+  name: text
+  nameWithType: GoalText.text
+  fullName: SAMURAI.GoalText.text
+  type: Field
+  source:
+    id: text
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\GoalText.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public TextMeshProUGUI text
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public text As TextMeshProUGUI
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro

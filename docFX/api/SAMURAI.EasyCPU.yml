@@ -1,0 +1,418 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.EasyCPU
+  commentId: T:SAMURAI.EasyCPU
+  id: EasyCPU
+  parent: SAMURAI
+  children:
+  - SAMURAI.EasyCPU.Attacked
+  - SAMURAI.EasyCPU.ball
+  - SAMURAI.EasyCPU.dest
+  - SAMURAI.EasyCPU.field
+  - SAMURAI.EasyCPU.manager
+  - SAMURAI.EasyCPU.Pause
+  - SAMURAI.EasyCPU.Play
+  - SAMURAI.EasyCPU.rb
+  - SAMURAI.EasyCPU.SetMass
+  - SAMURAI.EasyCPU.SlowDown
+  - SAMURAI.EasyCPU.status
+  langs:
+  - csharp
+  - vb
+  name: EasyCPU
+  nameWithType: EasyCPU
+  fullName: SAMURAI.EasyCPU
+  type: Class
+  source:
+    id: EasyCPU
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class EasyCPU : MonoBehaviour'
+    content.vb: >-
+      Public Class EasyCPU
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.EasyCPU.ball
+  commentId: F:SAMURAI.EasyCPU.ball
+  id: ball
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: EasyCPU.ball
+  fullName: SAMURAI.EasyCPU.ball
+  type: Field
+  source:
+    id: ball
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public BallControler ball
+    return:
+      type: BallControler
+    content.vb: Public ball As BallControler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.dest
+  commentId: F:SAMURAI.EasyCPU.dest
+  id: dest
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: dest
+  nameWithType: EasyCPU.dest
+  fullName: SAMURAI.EasyCPU.dest
+  type: Field
+  source:
+    id: dest
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject dest
+    return:
+      type: GameObject
+    content.vb: Public dest As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.manager
+  commentId: F:SAMURAI.EasyCPU.manager
+  id: manager
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: manager
+  nameWithType: EasyCPU.manager
+  fullName: SAMURAI.EasyCPU.manager
+  type: Field
+  source:
+    id: manager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public EasyCPUManager manager
+    return:
+      type: SAMURAI.EasyCPUManager
+    content.vb: Public manager As EasyCPUManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.status
+  commentId: F:SAMURAI.EasyCPU.status
+  id: status
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: status
+  nameWithType: EasyCPU.status
+  fullName: SAMURAI.EasyCPU.status
+  type: Field
+  source:
+    id: status
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public PersonalStatus status
+    return:
+      type: PersonalStatus
+    content.vb: Public status As PersonalStatus
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.field
+  commentId: F:SAMURAI.EasyCPU.field
+  id: field
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: field
+  nameWithType: EasyCPU.field
+  fullName: SAMURAI.EasyCPU.field
+  type: Field
+  source:
+    id: field
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public FieldManager field
+    return:
+      type: SAMURAI.FieldManager
+    content.vb: Public field As FieldManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.rb
+  commentId: F:SAMURAI.EasyCPU.rb
+  id: rb
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: rb
+  nameWithType: EasyCPU.rb
+  fullName: SAMURAI.EasyCPU.rb
+  type: Field
+  source:
+    id: rb
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Rigidbody rb
+    return:
+      type: Rigidbody
+    content.vb: Public rb As Rigidbody
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.SetMass
+  commentId: M:SAMURAI.EasyCPU.SetMass
+  id: SetMass
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: SetMass()
+  nameWithType: EasyCPU.SetMass()
+  fullName: SAMURAI.EasyCPU.SetMass()
+  type: Method
+  source:
+    id: SetMass
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n吹っ飛びやすさを再設定\n"
+  example: []
+  syntax:
+    content: public void SetMass()
+    content.vb: Public Sub SetMass
+  overload: SAMURAI.EasyCPU.SetMass*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.Attacked
+  commentId: M:SAMURAI.EasyCPU.Attacked
+  id: Attacked
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: Attacked()
+  nameWithType: EasyCPU.Attacked()
+  fullName: SAMURAI.EasyCPU.Attacked()
+  type: Method
+  source:
+    id: Attacked
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n攻撃されたときに呼ぶ。hpが減り、吹っ飛びやすくなる。\n"
+  example: []
+  syntax:
+    content: public void Attacked()
+    content.vb: Public Sub Attacked
+  overload: SAMURAI.EasyCPU.Attacked*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.Pause
+  commentId: M:SAMURAI.EasyCPU.Pause
+  id: Pause
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: EasyCPU.Pause()
+  fullName: SAMURAI.EasyCPU.Pause()
+  type: Method
+  source:
+    id: Pause
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Pause()
+    content.vb: Public Sub Pause
+  overload: SAMURAI.EasyCPU.Pause*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.Play
+  commentId: M:SAMURAI.EasyCPU.Play
+  id: Play
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: Play()
+  nameWithType: EasyCPU.Play()
+  fullName: SAMURAI.EasyCPU.Play()
+  type: Method
+  source:
+    id: Play
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Play()
+    content.vb: Public Sub Play
+  overload: SAMURAI.EasyCPU.Play*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.EasyCPU.SlowDown
+  commentId: M:SAMURAI.EasyCPU.SlowDown
+  id: SlowDown
+  parent: SAMURAI.EasyCPU
+  langs:
+  - csharp
+  - vb
+  name: SlowDown()
+  nameWithType: EasyCPU.SlowDown()
+  fullName: SAMURAI.EasyCPU.SlowDown()
+  type: Method
+  source:
+    id: SlowDown
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPU.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void SlowDown()
+    content.vb: Public Sub SlowDown
+  overload: SAMURAI.EasyCPU.SlowDown*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallControler
+  commentId: T:BallControler
+  name: BallControler
+  nameWithType: BallControler
+  fullName: BallControler
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.EasyCPUManager
+  commentId: T:SAMURAI.EasyCPUManager
+  parent: SAMURAI
+  name: EasyCPUManager
+  nameWithType: EasyCPUManager
+  fullName: SAMURAI.EasyCPUManager
+- uid: PersonalStatus
+  commentId: T:PersonalStatus
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: PersonalStatus
+- uid: SAMURAI.FieldManager
+  commentId: T:SAMURAI.FieldManager
+  parent: SAMURAI
+  name: FieldManager
+  nameWithType: FieldManager
+  fullName: SAMURAI.FieldManager
+- uid: Rigidbody
+  commentId: '!:Rigidbody'
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: Rigidbody
+- uid: SAMURAI.EasyCPU.SetMass*
+  commentId: Overload:SAMURAI.EasyCPU.SetMass
+  name: SetMass
+  nameWithType: EasyCPU.SetMass
+  fullName: SAMURAI.EasyCPU.SetMass
+- uid: SAMURAI.EasyCPU.Attacked*
+  commentId: Overload:SAMURAI.EasyCPU.Attacked
+  name: Attacked
+  nameWithType: EasyCPU.Attacked
+  fullName: SAMURAI.EasyCPU.Attacked
+- uid: SAMURAI.EasyCPU.Pause*
+  commentId: Overload:SAMURAI.EasyCPU.Pause
+  name: Pause
+  nameWithType: EasyCPU.Pause
+  fullName: SAMURAI.EasyCPU.Pause
+- uid: SAMURAI.EasyCPU.Play*
+  commentId: Overload:SAMURAI.EasyCPU.Play
+  name: Play
+  nameWithType: EasyCPU.Play
+  fullName: SAMURAI.EasyCPU.Play
+- uid: SAMURAI.EasyCPU.SlowDown*
+  commentId: Overload:SAMURAI.EasyCPU.SlowDown
+  name: SlowDown
+  nameWithType: EasyCPU.SlowDown
+  fullName: SAMURAI.EasyCPU.SlowDown
