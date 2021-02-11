@@ -5,6 +5,7 @@ items:
   id: SAMURAI
   children:
   - SAMURAI.AnimationController
+  - SAMURAI.AvoidCarScript
   - SAMURAI.Ball_Temp
   - SAMURAI.CallStatueOfLiberty
   - SAMURAI.ColliderInputData
@@ -34,6 +35,8 @@ items:
   - SAMURAI.GoalText
   - SAMURAI.GoalView
   - SAMURAI.GroundTexture
+  - SAMURAI.IceStageManager
+  - SAMURAI.JiangshiSceneManager
   - SAMURAI.JudgeGameEnd
   - SAMURAI.LoadAnyScene
   - SAMURAI.MeshCut
@@ -48,6 +51,7 @@ items:
   - SAMURAI.PandaMaker
   - SAMURAI.particle
   - SAMURAI.PauseBackScript
+  - SAMURAI.PauseButton
   - SAMURAI.PauseButtonScript
   - SAMURAI.PauseState
   - SAMURAI.Penalty
@@ -69,6 +73,7 @@ items:
   - SAMURAI.SkinnedMeshCut.MeshData
   - SAMURAI.Slash
   - SAMURAI.slidepad
+  - SAMURAI.Snow
   - SAMURAI.StageIcon
   - SAMURAI.StageIconButton
   - SAMURAI.StagePrefabManager
@@ -238,6 +243,7 @@ references:
   fullName: SAMURAI.GroundTexture
 - uid: SAMURAI.StagePrefabManager
   commentId: T:SAMURAI.StagePrefabManager
+  parent: SAMURAI
   name: StagePrefabManager
   nameWithType: StagePrefabManager
   fullName: SAMURAI.StagePrefabManager
@@ -340,6 +346,21 @@ references:
   name: PointScript
   nameWithType: PointScript
   fullName: SAMURAI.PointScript
+- uid: SAMURAI.IceStageManager
+  commentId: T:SAMURAI.IceStageManager
+  name: IceStageManager
+  nameWithType: IceStageManager
+  fullName: SAMURAI.IceStageManager
+- uid: SAMURAI.Snow
+  commentId: T:SAMURAI.Snow
+  name: Snow
+  nameWithType: Snow
+  fullName: SAMURAI.Snow
+- uid: SAMURAI.JiangshiSceneManager
+  commentId: T:SAMURAI.JiangshiSceneManager
+  name: JiangshiSceneManager
+  nameWithType: JiangshiSceneManager
+  fullName: SAMURAI.JiangshiSceneManager
 - uid: SAMURAI.CollisionManager
   commentId: T:SAMURAI.CollisionManager
   name: CollisionManager
@@ -410,6 +431,11 @@ references:
   name: SkinnedMeshCut.MeshData
   nameWithType: SkinnedMeshCut.MeshData
   fullName: SAMURAI.SkinnedMeshCut.MeshData
+- uid: SAMURAI.AvoidCarScript
+  commentId: T:SAMURAI.AvoidCarScript
+  name: AvoidCarScript
+  nameWithType: AvoidCarScript
+  fullName: SAMURAI.AvoidCarScript
 - uid: SAMURAI.ShotObjectScript
   commentId: T:SAMURAI.ShotObjectScript
   name: ShotObjectScript
@@ -440,6 +466,11 @@ references:
   name: Wall_temp
   nameWithType: Wall_temp
   fullName: SAMURAI.Wall_temp
+- uid: SAMURAI.PauseButton
+  commentId: T:SAMURAI.PauseButton
+  name: PauseButton
+  nameWithType: PauseButton
+  fullName: SAMURAI.PauseButton
 - uid: SAMURAI.Penalty
   commentId: T:SAMURAI.Penalty
   parent: SAMURAI
@@ -482,6 +513,7 @@ references:
   fullName: SAMURAI.SamuraiWordBase
 - uid: SAMURAI.slidepad
   commentId: T:SAMURAI.slidepad
+  parent: SAMURAI
   name: slidepad
   nameWithType: slidepad
   fullName: SAMURAI.slidepad

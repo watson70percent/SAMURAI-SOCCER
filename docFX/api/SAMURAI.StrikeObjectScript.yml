@@ -5,6 +5,7 @@ items:
   id: StrikeObjectScript
   parent: SAMURAI
   children:
+  - SAMURAI.StrikeObjectScript.emergencySign
   - SAMURAI.StrikeObjectScript.gameManager
   - SAMURAI.StrikeObjectScript.shotInterval
   - SAMURAI.StrikeObjectScript.ShotObject
@@ -112,6 +113,33 @@ items:
     return:
       type: SAMURAI.GameManager
     content.vb: Public gameManager As GameManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StrikeObjectScript.emergencySign
+  commentId: F:SAMURAI.StrikeObjectScript.emergencySign
+  id: emergencySign
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: emergencySign
+  nameWithType: StrikeObjectScript.emergencySign
+  fullName: SAMURAI.StrikeObjectScript.emergencySign
+  type: Field
+  source:
+    id: emergencySign
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject emergencySign
+    return:
+      type: GameObject
+    content.vb: Public emergencySign As GameObject
   modifiers.csharp:
   - public
   modifiers.vb:

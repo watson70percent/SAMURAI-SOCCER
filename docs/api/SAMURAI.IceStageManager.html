@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FieldRotationBase
+    <title>Class IceStageManager
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FieldRotationBase
+    <meta name="title" content="Class IceStageManager
    ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,37 +68,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SAMURAI.FieldRotationBase">
+            <article class="content wrap" id="_content" data-uid="SAMURAI.IceStageManager">
   
   
-  <h1 id="SAMURAI_FieldRotationBase" data-uid="SAMURAI.FieldRotationBase" class="text-break">Class FieldRotationBase
+  <h1 id="SAMURAI_IceStageManager" data-uid="SAMURAI.IceStageManager" class="text-break">Class IceStageManager
   </h1>
-  <div class="markdown level0 summary"><p>フィールドの傾きを持ったクラス。ここから派生。</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FieldRotationBase</span></div>
-      <div class="level2"><a class="xref" href="SAMURAI.NonRotation.html">NonRotation</a></div>
+    <div class="level1"><span class="xref">IceStageManager</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SAMURAI.html">SAMURAI</a></h6>
   <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
-  <h5 id="SAMURAI_FieldRotationBase_syntax">Syntax</h5>
+  <h5 id="SAMURAI_IceStageManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class FieldRotationBase : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class IceStageManager : MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="SAMURAI_FieldRotationBase_rotation" data-uid="SAMURAI.FieldRotationBase.rotation">rotation</h4>
-  <div class="markdown level1 summary"><p>回転</p>
-</div>
+  <h4 id="SAMURAI_IceStageManager_eclanoplan" data-uid="SAMURAI.IceStageManager.eclanoplan">eclanoplan</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Quaternion rotation</code></pre>
+    <pre><code class="lang-csharp hljs">public GameObject eclanoplan</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,41 +107,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">GameObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="SAMURAI_FieldRotationBase_AdaptInversePosition_" data-uid="SAMURAI.FieldRotationBase.AdaptInversePosition*"></a>
-  <h4 id="SAMURAI_FieldRotationBase_AdaptInversePosition_Vector3_" data-uid="SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)">AdaptInversePosition(Vector3)</h4>
+  <h4 id="SAMURAI_IceStageManager_greenMaterial" data-uid="SAMURAI.IceStageManager.greenMaterial">greenMaterial</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 AdaptInversePosition(Vector3 pos)</code></pre>
+    <pre><code class="lang-csharp hljs">public Material greenMaterial</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">pos</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -154,39 +131,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
+        <td><span class="xref">Material</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="SAMURAI_FieldRotationBase_AdaptPosition_" data-uid="SAMURAI.FieldRotationBase.AdaptPosition*"></a>
-  <h4 id="SAMURAI_FieldRotationBase_AdaptPosition_Vector3_" data-uid="SAMURAI.FieldRotationBase.AdaptPosition(Vector3)">AdaptPosition(Vector3)</h4>
+  <h4 id="SAMURAI_IceStageManager_greenTexture" data-uid="SAMURAI.IceStageManager.greenTexture">greenTexture</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 AdaptPosition(Vector3 pos)</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture greenTexture</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">pos</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -196,22 +155,107 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
+        <td><span class="xref">Texture</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="SAMURAI_FieldRotationBase_Awake_" data-uid="SAMURAI.FieldRotationBase.Awake*"></a>
-  <h4 id="SAMURAI_FieldRotationBase_Awake" data-uid="SAMURAI.FieldRotationBase.Awake">Awake()</h4>
-  <div class="markdown level1 summary"><p>初期化。ご自由に。</p>
-</div>
+  <h4 id="SAMURAI_IceStageManager_iceMaterial" data-uid="SAMURAI.IceStageManager.iceMaterial">iceMaterial</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+    <pre><code class="lang-csharp hljs">public Material iceMaterial</code></pre>
   </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_IceStageManager_iceTexture" data-uid="SAMURAI.IceStageManager.iceTexture">iceTexture</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture iceTexture</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Texture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_IceStageManager_no" data-uid="SAMURAI.IceStageManager.no">no</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int no</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_IceStageManager_stageManager" data-uid="SAMURAI.IceStageManager.stageManager">stageManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StagePrefabManager stageManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SAMURAI.StagePrefabManager.html">StagePrefabManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

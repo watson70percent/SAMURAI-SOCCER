@@ -86,10 +86,10 @@ items:
   - Assembly-CSharp
   namespace: SAMURAI
   syntax:
-    content: public int areaSize
+    content: public float areaSize
     return:
-      type: System.Int32
-    content.vb: Public areaSize As Integer
+      type: System.Single
+    content.vb: Public areaSize As Single
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -281,13 +281,6 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: SAMURAI.AnimationController
   commentId: T:SAMURAI.AnimationController
   parent: SAMURAI
@@ -295,7 +288,6 @@ references:
   nameWithType: AnimationController
   fullName: SAMURAI.AnimationController
 - uid: ParticleSystem
-  commentId: '!:ParticleSystem'
   isExternal: true
   name: ParticleSystem
   nameWithType: ParticleSystem
