@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Constants
+  commentId: T:SAMURAI.Constants
+  id: Constants
+  parent: SAMURAI
+  children:
+  - SAMURAI.Constants.G2G
+  - SAMURAI.Constants.OppornentGoalPoint
+  - SAMURAI.Constants.OppornentSpornPoint
+  - SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent
+  - SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam
+  - SAMURAI.Constants.OurGoalPoint
+  - SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent
+  - SAMURAI.Constants.TeammateInitialSpornPointCenterTeam
+  - SAMURAI.Constants.TeammateSpornPoint
+  - SAMURAI.Constants.Width
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: SAMURAI.Constants
+  type: Class
+  source:
+    id: Constants
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n定数\n"
+  example: []
+  syntax:
+    content: public static class Constants
+    content.vb: Public Module Constants
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: SAMURAI.Constants.OurGoalPoint
+  commentId: F:SAMURAI.Constants.OurGoalPoint
+  id: OurGoalPoint
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: OurGoalPoint
+  nameWithType: Constants.OurGoalPoint
+  fullName: SAMURAI.Constants.OurGoalPoint
+  type: Field
+  source:
+    id: OurGoalPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n自陣のゴール\n"
+  example: []
+  syntax:
+    content: public static readonly Vector3 OurGoalPoint
+    return:
+      type: Vector3
+    content.vb: Public Shared ReadOnly OurGoalPoint As Vector3
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.OppornentGoalPoint
+  commentId: F:SAMURAI.Constants.OppornentGoalPoint
+  id: OppornentGoalPoint
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentGoalPoint
+  nameWithType: Constants.OppornentGoalPoint
+  fullName: SAMURAI.Constants.OppornentGoalPoint
+  type: Field
+  source:
+    id: OppornentGoalPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n相手のゴール\n"
+  example: []
+  syntax:
+    content: public static readonly Vector3 OppornentGoalPoint
+    return:
+      type: Vector3
+    content.vb: Public Shared ReadOnly OppornentGoalPoint As Vector3
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.Width
+  commentId: P:SAMURAI.Constants.Width
+  id: Width
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Constants.Width
+  fullName: SAMURAI.Constants.Width
+  type: Property
+  source:
+    id: Width
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nフィールドの幅\n"
+  example: []
+  syntax:
+    content: public static float Width { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property Width As Single
+  overload: SAMURAI.Constants.Width*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.G2G
+  commentId: P:SAMURAI.Constants.G2G
+  id: G2G
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: G2G
+  nameWithType: Constants.G2G
+  fullName: SAMURAI.Constants.G2G
+  type: Property
+  source:
+    id: G2G
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nゴール間の距離\n"
+  example: []
+  syntax:
+    content: public static float G2G { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property G2G As Single
+  overload: SAMURAI.Constants.G2G*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.TeammateSpornPoint
+  commentId: P:SAMURAI.Constants.TeammateSpornPoint
+  id: TeammateSpornPoint
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: TeammateSpornPoint
+  nameWithType: Constants.TeammateSpornPoint
+  fullName: SAMURAI.Constants.TeammateSpornPoint
+  type: Property
+  source:
+    id: TeammateSpornPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n味方のスポーン地点\n"
+  example: []
+  syntax:
+    content: public static Vector3 TeammateSpornPoint { get; }
+    parameters: []
+    return:
+      type: Vector3
+    content.vb: Public Shared ReadOnly Property TeammateSpornPoint As Vector3
+  overload: SAMURAI.Constants.TeammateSpornPoint*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.OppornentSpornPoint
+  commentId: P:SAMURAI.Constants.OppornentSpornPoint
+  id: OppornentSpornPoint
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentSpornPoint
+  nameWithType: Constants.OppornentSpornPoint
+  fullName: SAMURAI.Constants.OppornentSpornPoint
+  type: Property
+  source:
+    id: OppornentSpornPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n相手のスポーン地点\n"
+  example: []
+  syntax:
+    content: public static Vector3 OppornentSpornPoint { get; }
+    parameters: []
+    return:
+      type: Vector3
+    content.vb: Public Shared ReadOnly Property OppornentSpornPoint As Vector3
+  overload: SAMURAI.Constants.OppornentSpornPoint*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.TeammateInitialSpornPointCenterTeam
+  commentId: P:SAMURAI.Constants.TeammateInitialSpornPointCenterTeam
+  id: TeammateInitialSpornPointCenterTeam
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: TeammateInitialSpornPointCenterTeam
+  nameWithType: Constants.TeammateInitialSpornPointCenterTeam
+  fullName: SAMURAI.Constants.TeammateInitialSpornPointCenterTeam
+  type: Property
+  source:
+    id: TeammateInitialSpornPointCenterTeam
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 70
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n味方ボールのときの味方の最初のスポーン場所\n"
+  example: []
+  syntax:
+    content: public static Vector3[] TeammateInitialSpornPointCenterTeam { get; }
+    parameters: []
+    return:
+      type: Vector3[]
+    content.vb: Public Shared ReadOnly Property TeammateInitialSpornPointCenterTeam As Vector3()
+  overload: SAMURAI.Constants.TeammateInitialSpornPointCenterTeam*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent
+  commentId: P:SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent
+  id: TeammateInitialSpornPointCenterOppornent
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: TeammateInitialSpornPointCenterOppornent
+  nameWithType: Constants.TeammateInitialSpornPointCenterOppornent
+  fullName: SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent
+  type: Property
+  source:
+    id: TeammateInitialSpornPointCenterOppornent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 81
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n相手ボールのときの味方の最初のスポーン場所\n"
+  example: []
+  syntax:
+    content: public static Vector3[] TeammateInitialSpornPointCenterOppornent { get; }
+    parameters: []
+    return:
+      type: Vector3[]
+    content.vb: Public Shared ReadOnly Property TeammateInitialSpornPointCenterOppornent As Vector3()
+  overload: SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam
+  commentId: P:SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam
+  id: OpprnentInitialSpornPointCenterTeam
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: OpprnentInitialSpornPointCenterTeam
+  nameWithType: Constants.OpprnentInitialSpornPointCenterTeam
+  fullName: SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam
+  type: Property
+  source:
+    id: OpprnentInitialSpornPointCenterTeam
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 92
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n味方ボールのときの相手の最初のスポーン場所\n"
+  example: []
+  syntax:
+    content: public static Vector3[] OpprnentInitialSpornPointCenterTeam { get; }
+    parameters: []
+    return:
+      type: Vector3[]
+    content.vb: Public Shared ReadOnly Property OpprnentInitialSpornPointCenterTeam As Vector3()
+  overload: SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent
+  commentId: P:SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent
+  id: OpprnentInitialSpornPointCenterOppornent
+  parent: SAMURAI.Constants
+  langs:
+  - csharp
+  - vb
+  name: OpprnentInitialSpornPointCenterOppornent
+  nameWithType: Constants.OpprnentInitialSpornPointCenterOppornent
+  fullName: SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent
+  type: Property
+  source:
+    id: OpprnentInitialSpornPointCenterOppornent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Constants.cs
+    startLine: 103
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n相手ボールのときの相手の最初のスポーン場所\n"
+  example: []
+  syntax:
+    content: public static Vector3[] OpprnentInitialSpornPointCenterOppornent { get; }
+    parameters: []
+    return:
+      type: Vector3[]
+    content.vb: Public Shared ReadOnly Property OpprnentInitialSpornPointCenterOppornent As Vector3()
+  overload: SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: SAMURAI.Constants.Width*
+  commentId: Overload:SAMURAI.Constants.Width
+  name: Width
+  nameWithType: Constants.Width
+  fullName: SAMURAI.Constants.Width
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.Constants.G2G*
+  commentId: Overload:SAMURAI.Constants.G2G
+  name: G2G
+  nameWithType: Constants.G2G
+  fullName: SAMURAI.Constants.G2G
+- uid: SAMURAI.Constants.TeammateSpornPoint*
+  commentId: Overload:SAMURAI.Constants.TeammateSpornPoint
+  name: TeammateSpornPoint
+  nameWithType: Constants.TeammateSpornPoint
+  fullName: SAMURAI.Constants.TeammateSpornPoint
+- uid: SAMURAI.Constants.OppornentSpornPoint*
+  commentId: Overload:SAMURAI.Constants.OppornentSpornPoint
+  name: OppornentSpornPoint
+  nameWithType: Constants.OppornentSpornPoint
+  fullName: SAMURAI.Constants.OppornentSpornPoint
+- uid: SAMURAI.Constants.TeammateInitialSpornPointCenterTeam*
+  commentId: Overload:SAMURAI.Constants.TeammateInitialSpornPointCenterTeam
+  name: TeammateInitialSpornPointCenterTeam
+  nameWithType: Constants.TeammateInitialSpornPointCenterTeam
+  fullName: SAMURAI.Constants.TeammateInitialSpornPointCenterTeam
+- uid: Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent*
+  commentId: Overload:SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent
+  name: TeammateInitialSpornPointCenterOppornent
+  nameWithType: Constants.TeammateInitialSpornPointCenterOppornent
+  fullName: SAMURAI.Constants.TeammateInitialSpornPointCenterOppornent
+- uid: SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam*
+  commentId: Overload:SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam
+  name: OpprnentInitialSpornPointCenterTeam
+  nameWithType: Constants.OpprnentInitialSpornPointCenterTeam
+  fullName: SAMURAI.Constants.OpprnentInitialSpornPointCenterTeam
+- uid: SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent*
+  commentId: Overload:SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent
+  name: OpprnentInitialSpornPointCenterOppornent
+  nameWithType: Constants.OpprnentInitialSpornPointCenterOppornent
+  fullName: SAMURAI.Constants.OpprnentInitialSpornPointCenterOppornent

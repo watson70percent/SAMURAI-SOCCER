@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StageIconButton
+  commentId: T:SAMURAI.StageIconButton
+  id: StageIconButton
+  parent: SAMURAI
+  children:
+  - SAMURAI.StageIconButton.indexOfButton
+  - SAMURAI.StageIconButton.OnClick
+  - SAMURAI.StageIconButton.preview
+  - SAMURAI.StageIconButton.stageSelectMng
+  langs:
+  - csharp
+  - vb
+  name: StageIconButton
+  nameWithType: StageIconButton
+  fullName: SAMURAI.StageIconButton
+  type: Class
+  source:
+    id: StageIconButton
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIconButton.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StageIconButton : MonoBehaviour'
+    content.vb: >-
+      Public Class StageIconButton
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StageIconButton.preview
+  commentId: F:SAMURAI.StageIconButton.preview
+  id: preview
+  parent: SAMURAI.StageIconButton
+  langs:
+  - csharp
+  - vb
+  name: preview
+  nameWithType: StageIconButton.preview
+  fullName: SAMURAI.StageIconButton.preview
+  type: Field
+  source:
+    id: preview
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIconButton.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject preview
+    return:
+      type: GameObject
+    content.vb: Public preview As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageIconButton.stageSelectMng
+  commentId: F:SAMURAI.StageIconButton.stageSelectMng
+  id: stageSelectMng
+  parent: SAMURAI.StageIconButton
+  langs:
+  - csharp
+  - vb
+  name: stageSelectMng
+  nameWithType: StageIconButton.stageSelectMng
+  fullName: SAMURAI.StageIconButton.stageSelectMng
+  type: Field
+  source:
+    id: stageSelectMng
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIconButton.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public StageSelectManager stageSelectMng
+    return:
+      type: SAMURAI.StageSelectManager
+    content.vb: Public stageSelectMng As StageSelectManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageIconButton.indexOfButton
+  commentId: F:SAMURAI.StageIconButton.indexOfButton
+  id: indexOfButton
+  parent: SAMURAI.StageIconButton
+  langs:
+  - csharp
+  - vb
+  name: indexOfButton
+  nameWithType: StageIconButton.indexOfButton
+  fullName: SAMURAI.StageIconButton.indexOfButton
+  type: Field
+  source:
+    id: indexOfButton
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIconButton.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public int indexOfButton
+    return:
+      type: System.Int32
+    content.vb: Public indexOfButton As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageIconButton.OnClick
+  commentId: M:SAMURAI.StageIconButton.OnClick
+  id: OnClick
+  parent: SAMURAI.StageIconButton
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: StageIconButton.OnClick()
+  fullName: SAMURAI.StageIconButton.OnClick()
+  type: Method
+  source:
+    id: OnClick
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIconButton.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick
+  overload: SAMURAI.StageIconButton.OnClick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.StageSelectManager
+  commentId: T:SAMURAI.StageSelectManager
+  parent: SAMURAI
+  name: StageSelectManager
+  nameWithType: StageSelectManager
+  fullName: SAMURAI.StageSelectManager
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SAMURAI.StageIconButton.OnClick*
+  commentId: Overload:SAMURAI.StageIconButton.OnClick
+  name: OnClick
+  nameWithType: StageIconButton.OnClick
+  fullName: SAMURAI.StageIconButton.OnClick

@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StandbyState
+  commentId: T:SAMURAI.StandbyState
+  id: StandbyState
+  parent: SAMURAI
+  children:
+  - SAMURAI.StandbyState.Enter
+  - SAMURAI.StandbyState.Exit
+  - SAMURAI.StandbyState.Update
+  langs:
+  - csharp
+  - vb
+  name: StandbyState
+  nameWithType: StandbyState
+  fullName: SAMURAI.StandbyState
+  type: Class
+  source:
+    id: StandbyState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StandbyState : ImtStateMachine<GameManager>.State'
+    content.vb: >-
+      Public Class StandbyState
+          Inherits ImtStateMachine(Of GameManager).State
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StandbyState.Enter
+  commentId: M:SAMURAI.StandbyState.Enter
+  id: Enter
+  parent: SAMURAI.StandbyState
+  langs:
+  - csharp
+  - vb
+  name: Enter()
+  nameWithType: StandbyState.Enter()
+  fullName: SAMURAI.StandbyState.Enter()
+  type: Method
+  source:
+    id: Enter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Enter()
+    content.vb: Protected Overrides Sub Enter
+  overload: SAMURAI.StandbyState.Enter*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SAMURAI.StandbyState.Update
+  commentId: M:SAMURAI.StandbyState.Update
+  id: Update
+  parent: SAMURAI.StandbyState
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StandbyState.Update()
+  fullName: SAMURAI.StandbyState.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Update()
+    content.vb: Protected Overrides Sub Update
+  overload: SAMURAI.StandbyState.Update*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SAMURAI.StandbyState.Exit
+  commentId: M:SAMURAI.StandbyState.Exit
+  id: Exit
+  parent: SAMURAI.StandbyState
+  langs:
+  - csharp
+  - vb
+  name: Exit()
+  nameWithType: StandbyState.Exit()
+  fullName: SAMURAI.StandbyState.Exit()
+  type: Method
+  source:
+    id: Exit
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Exit()
+    content.vb: Protected Overrides Sub Exit
+  overload: SAMURAI.StandbyState.Exit*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.StandbyState.Enter*
+  commentId: Overload:SAMURAI.StandbyState.Enter
+  name: Enter
+  nameWithType: StandbyState.Enter
+  fullName: SAMURAI.StandbyState.Enter
+- uid: SAMURAI.StandbyState.Update*
+  commentId: Overload:SAMURAI.StandbyState.Update
+  name: Update
+  nameWithType: StandbyState.Update
+  fullName: SAMURAI.StandbyState.Update
+- uid: SAMURAI.StandbyState.Exit*
+  commentId: Overload:SAMURAI.StandbyState.Exit
+  name: Exit
+  nameWithType: StandbyState.Exit
+  fullName: SAMURAI.StandbyState.Exit

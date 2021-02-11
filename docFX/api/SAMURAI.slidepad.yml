@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.slidepad
+  commentId: T:SAMURAI.slidepad
+  id: slidepad
+  parent: SAMURAI
+  children:
+  - SAMURAI.slidepad.DragEnd
+  - SAMURAI.slidepad.DragStart(BaseEventData)
+  - SAMURAI.slidepad.flagsParent
+  - SAMURAI.slidepad.joystick
+  - SAMURAI.slidepad.player
+  - SAMURAI.slidepad.speed
+  langs:
+  - csharp
+  - vb
+  name: slidepad
+  nameWithType: slidepad
+  fullName: SAMURAI.slidepad
+  type: Class
+  source:
+    id: slidepad
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class slidepad : MonoBehaviour'
+    content.vb: >-
+      Public Class slidepad
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.slidepad.joystick
+  commentId: F:SAMURAI.slidepad.joystick
+  id: joystick
+  parent: SAMURAI.slidepad
+  langs:
+  - csharp
+  - vb
+  name: joystick
+  nameWithType: slidepad.joystick
+  fullName: SAMURAI.slidepad.joystick
+  type: Field
+  source:
+    id: joystick
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject joystick
+    return:
+      type: GameObject
+    content.vb: Public joystick As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.slidepad.player
+  commentId: F:SAMURAI.slidepad.player
+  id: player
+  parent: SAMURAI.slidepad
+  langs:
+  - csharp
+  - vb
+  name: player
+  nameWithType: slidepad.player
+  fullName: SAMURAI.slidepad.player
+  type: Field
+  source:
+    id: player
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject player
+    return:
+      type: GameObject
+    content.vb: Public player As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.slidepad.speed
+  commentId: F:SAMURAI.slidepad.speed
+  id: speed
+  parent: SAMURAI.slidepad
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: slidepad.speed
+  fullName: SAMURAI.slidepad.speed
+  type: Field
+  source:
+    id: speed
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.slidepad.flagsParent
+  commentId: F:SAMURAI.slidepad.flagsParent
+  id: flagsParent
+  parent: SAMURAI.slidepad
+  langs:
+  - csharp
+  - vb
+  name: flagsParent
+  nameWithType: slidepad.flagsParent
+  fullName: SAMURAI.slidepad.flagsParent
+  type: Field
+  source:
+    id: flagsParent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Transform flagsParent
+    return:
+      type: Transform
+    content.vb: Public flagsParent As Transform
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.slidepad.DragStart(BaseEventData)
+  commentId: M:SAMURAI.slidepad.DragStart(BaseEventData)
+  id: DragStart(BaseEventData)
+  parent: SAMURAI.slidepad
+  langs:
+  - csharp
+  - vb
+  name: DragStart(BaseEventData)
+  nameWithType: slidepad.DragStart(BaseEventData)
+  fullName: SAMURAI.slidepad.DragStart(BaseEventData)
+  type: Method
+  source:
+    id: DragStart
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 88
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void DragStart(BaseEventData baseEventData)
+    parameters:
+    - id: baseEventData
+      type: BaseEventData
+    content.vb: Public Sub DragStart(baseEventData As BaseEventData)
+  overload: SAMURAI.slidepad.DragStart*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.slidepad.DragEnd
+  commentId: M:SAMURAI.slidepad.DragEnd
+  id: DragEnd
+  parent: SAMURAI.slidepad
+  langs:
+  - csharp
+  - vb
+  name: DragEnd()
+  nameWithType: slidepad.DragEnd()
+  fullName: SAMURAI.slidepad.DragEnd()
+  type: Method
+  source:
+    id: DragEnd
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\SlidePad\slidepad.cs
+    startLine: 100
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void DragEnd()
+    content.vb: Public Sub DragEnd
+  overload: SAMURAI.slidepad.DragEnd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Transform
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: SAMURAI.slidepad.DragStart*
+  commentId: Overload:SAMURAI.slidepad.DragStart
+  name: DragStart
+  nameWithType: slidepad.DragStart
+  fullName: SAMURAI.slidepad.DragStart
+- uid: BaseEventData
+  commentId: '!:BaseEventData'
+  isExternal: true
+  name: BaseEventData
+  nameWithType: BaseEventData
+  fullName: BaseEventData
+- uid: SAMURAI.slidepad.DragEnd*
+  commentId: Overload:SAMURAI.slidepad.DragEnd
+  name: DragEnd
+  nameWithType: slidepad.DragEnd
+  fullName: SAMURAI.slidepad.DragEnd

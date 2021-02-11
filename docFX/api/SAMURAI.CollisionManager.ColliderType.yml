@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.CollisionManager.ColliderType
+  commentId: T:SAMURAI.CollisionManager.ColliderType
+  id: CollisionManager.ColliderType
+  parent: SAMURAI
+  children:
+  - SAMURAI.CollisionManager.ColliderType.EnemyBoby
+  - SAMURAI.CollisionManager.ColliderType.EnemyWeapon
+  - SAMURAI.CollisionManager.ColliderType.PlayerBody
+  - SAMURAI.CollisionManager.ColliderType.PlayerWeapon
+  langs:
+  - csharp
+  - vb
+  name: CollisionManager.ColliderType
+  nameWithType: CollisionManager.ColliderType
+  fullName: SAMURAI.CollisionManager.ColliderType
+  type: Enum
+  source:
+    id: ColliderType
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public enum ColliderType
+    content.vb: Public Enum ColliderType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SAMURAI.CollisionManager.ColliderType.PlayerBody
+  commentId: F:SAMURAI.CollisionManager.ColliderType.PlayerBody
+  id: PlayerBody
+  parent: SAMURAI.CollisionManager.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: PlayerBody
+  nameWithType: CollisionManager.ColliderType.PlayerBody
+  fullName: SAMURAI.CollisionManager.ColliderType.PlayerBody
+  type: Field
+  source:
+    id: PlayerBody
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: PlayerBody = 0
+    return:
+      type: SAMURAI.CollisionManager.ColliderType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.CollisionManager.ColliderType.PlayerWeapon
+  commentId: F:SAMURAI.CollisionManager.ColliderType.PlayerWeapon
+  id: PlayerWeapon
+  parent: SAMURAI.CollisionManager.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: PlayerWeapon
+  nameWithType: CollisionManager.ColliderType.PlayerWeapon
+  fullName: SAMURAI.CollisionManager.ColliderType.PlayerWeapon
+  type: Field
+  source:
+    id: PlayerWeapon
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: PlayerWeapon = 1
+    return:
+      type: SAMURAI.CollisionManager.ColliderType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.CollisionManager.ColliderType.EnemyBoby
+  commentId: F:SAMURAI.CollisionManager.ColliderType.EnemyBoby
+  id: EnemyBoby
+  parent: SAMURAI.CollisionManager.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: EnemyBoby
+  nameWithType: CollisionManager.ColliderType.EnemyBoby
+  fullName: SAMURAI.CollisionManager.ColliderType.EnemyBoby
+  type: Field
+  source:
+    id: EnemyBoby
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: EnemyBoby = 2
+    return:
+      type: SAMURAI.CollisionManager.ColliderType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.CollisionManager.ColliderType.EnemyWeapon
+  commentId: F:SAMURAI.CollisionManager.ColliderType.EnemyWeapon
+  id: EnemyWeapon
+  parent: SAMURAI.CollisionManager.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: EnemyWeapon
+  nameWithType: CollisionManager.ColliderType.EnemyWeapon
+  fullName: SAMURAI.CollisionManager.ColliderType.EnemyWeapon
+  type: Field
+  source:
+    id: EnemyWeapon
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: EnemyWeapon = 3
+    return:
+      type: SAMURAI.CollisionManager.ColliderType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: SAMURAI.CollisionManager.ColliderType
+  commentId: T:SAMURAI.CollisionManager.ColliderType
+  parent: SAMURAI
+  name: CollisionManager.ColliderType
+  nameWithType: CollisionManager.ColliderType
+  fullName: SAMURAI.CollisionManager.ColliderType

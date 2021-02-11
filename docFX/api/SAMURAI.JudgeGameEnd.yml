@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.JudgeGameEnd
+  commentId: T:SAMURAI.JudgeGameEnd
+  id: JudgeGameEnd
+  parent: SAMURAI
+  children:
+  - SAMURAI.JudgeGameEnd.ResultSceneName
+  langs:
+  - csharp
+  - vb
+  name: JudgeGameEnd
+  nameWithType: JudgeGameEnd
+  fullName: SAMURAI.JudgeGameEnd
+  type: Class
+  source:
+    id: JudgeGameEnd
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class JudgeGameEnd : MonoBehaviour'
+    content.vb: >-
+      Public Class JudgeGameEnd
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.JudgeGameEnd.ResultSceneName
+  commentId: F:SAMURAI.JudgeGameEnd.ResultSceneName
+  id: ResultSceneName
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: ResultSceneName
+  nameWithType: JudgeGameEnd.ResultSceneName
+  fullName: SAMURAI.JudgeGameEnd.ResultSceneName
+  type: Field
+  source:
+    id: ResultSceneName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string ResultSceneName
+    return:
+      type: System.String
+    content.vb: Public ResultSceneName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

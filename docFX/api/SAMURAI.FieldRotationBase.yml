@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.FieldRotationBase
+  commentId: T:SAMURAI.FieldRotationBase
+  id: FieldRotationBase
+  parent: SAMURAI
+  children:
+  - SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  - SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  - SAMURAI.FieldRotationBase.rotation
+  - SAMURAI.FieldRotationBase.Start
+  langs:
+  - csharp
+  - vb
+  name: FieldRotationBase
+  nameWithType: FieldRotationBase
+  fullName: SAMURAI.FieldRotationBase
+  type: Class
+  source:
+    id: FieldRotationBase
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldRotationBase.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nフィールドの傾きを持ったクラス。ここから派生。\n"
+  example: []
+  syntax:
+    content: 'public abstract class FieldRotationBase : MonoBehaviour'
+    content.vb: >-
+      Public MustInherit Class FieldRotationBase
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - SAMURAI.NonRotation
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: SAMURAI.FieldRotationBase.rotation
+  commentId: F:SAMURAI.FieldRotationBase.rotation
+  id: rotation
+  parent: SAMURAI.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: rotation
+  nameWithType: FieldRotationBase.rotation
+  fullName: SAMURAI.FieldRotationBase.rotation
+  type: Field
+  source:
+    id: rotation
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldRotationBase.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n回転\n"
+  example: []
+  syntax:
+    content: public Quaternion rotation
+    return:
+      type: Quaternion
+    content.vb: Public rotation As Quaternion
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldRotationBase.Start
+  commentId: M:SAMURAI.FieldRotationBase.Start
+  id: Start
+  parent: SAMURAI.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: FieldRotationBase.Start()
+  fullName: SAMURAI.FieldRotationBase.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldRotationBase.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n初期化。ご自由に。\n"
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start
+  overload: SAMURAI.FieldRotationBase.Start*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  commentId: M:SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  id: AdaptPosition(Vector3)
+  parent: SAMURAI.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: AdaptPosition(Vector3)
+  nameWithType: FieldRotationBase.AdaptPosition(Vector3)
+  fullName: SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  type: Method
+  source:
+    id: AdaptPosition
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldRotationBase.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3 AdaptPosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: Vector3
+    return:
+      type: Vector3
+    content.vb: Public Function AdaptPosition(pos As Vector3) As Vector3
+  overload: SAMURAI.FieldRotationBase.AdaptPosition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  commentId: M:SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  id: AdaptInversePosition(Vector3)
+  parent: SAMURAI.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: AdaptInversePosition(Vector3)
+  nameWithType: FieldRotationBase.AdaptInversePosition(Vector3)
+  fullName: SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
+  type: Method
+  source:
+    id: AdaptInversePosition
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldRotationBase.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3 AdaptInversePosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: Vector3
+    return:
+      type: Vector3
+    content.vb: Public Function AdaptInversePosition(pos As Vector3) As Vector3
+  overload: SAMURAI.FieldRotationBase.AdaptInversePosition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quaternion
+  commentId: '!:Quaternion'
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: Quaternion
+- uid: SAMURAI.FieldRotationBase.Start*
+  commentId: Overload:SAMURAI.FieldRotationBase.Start
+  name: Start
+  nameWithType: FieldRotationBase.Start
+  fullName: SAMURAI.FieldRotationBase.Start
+- uid: SAMURAI.FieldRotationBase.AdaptPosition*
+  commentId: Overload:SAMURAI.FieldRotationBase.AdaptPosition
+  name: AdaptPosition
+  nameWithType: FieldRotationBase.AdaptPosition
+  fullName: SAMURAI.FieldRotationBase.AdaptPosition
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: SAMURAI.FieldRotationBase.AdaptInversePosition*
+  commentId: Overload:SAMURAI.FieldRotationBase.AdaptInversePosition
+  name: AdaptInversePosition
+  nameWithType: FieldRotationBase.AdaptInversePosition
+  fullName: SAMURAI.FieldRotationBase.AdaptInversePosition
