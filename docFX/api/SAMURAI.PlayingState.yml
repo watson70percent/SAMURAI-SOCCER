@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.PlayingState
+  commentId: T:SAMURAI.PlayingState
+  id: PlayingState
+  parent: SAMURAI
+  children:
+  - SAMURAI.PlayingState.Enter
+  - SAMURAI.PlayingState.Exit
+  - SAMURAI.PlayingState.Update
+  langs:
+  - csharp
+  - vb
+  name: PlayingState
+  nameWithType: PlayingState
+  fullName: SAMURAI.PlayingState
+  type: Class
+  source:
+    id: PlayingState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\PlayingState.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class PlayingState : ImtStateMachine<GameManager>.State'
+    content.vb: >-
+      Public Class PlayingState
+          Inherits ImtStateMachine(Of GameManager).State
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.PlayingState.Enter
+  commentId: M:SAMURAI.PlayingState.Enter
+  id: Enter
+  parent: SAMURAI.PlayingState
+  langs:
+  - csharp
+  - vb
+  name: Enter()
+  nameWithType: PlayingState.Enter()
+  fullName: SAMURAI.PlayingState.Enter()
+  type: Method
+  source:
+    id: Enter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\PlayingState.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Enter()
+    content.vb: Protected Overrides Sub Enter
+  overload: SAMURAI.PlayingState.Enter*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SAMURAI.PlayingState.Update
+  commentId: M:SAMURAI.PlayingState.Update
+  id: Update
+  parent: SAMURAI.PlayingState
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: PlayingState.Update()
+  fullName: SAMURAI.PlayingState.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\PlayingState.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Update()
+    content.vb: Protected Overrides Sub Update
+  overload: SAMURAI.PlayingState.Update*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SAMURAI.PlayingState.Exit
+  commentId: M:SAMURAI.PlayingState.Exit
+  id: Exit
+  parent: SAMURAI.PlayingState
+  langs:
+  - csharp
+  - vb
+  name: Exit()
+  nameWithType: PlayingState.Exit()
+  fullName: SAMURAI.PlayingState.Exit()
+  type: Method
+  source:
+    id: Exit
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\PlayingState.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Exit()
+    content.vb: Protected Overrides Sub Exit
+  overload: SAMURAI.PlayingState.Exit*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.PlayingState.Enter*
+  commentId: Overload:SAMURAI.PlayingState.Enter
+  name: Enter
+  nameWithType: PlayingState.Enter
+  fullName: SAMURAI.PlayingState.Enter
+- uid: SAMURAI.PlayingState.Update*
+  commentId: Overload:SAMURAI.PlayingState.Update
+  name: Update
+  nameWithType: PlayingState.Update
+  fullName: SAMURAI.PlayingState.Update
+- uid: SAMURAI.PlayingState.Exit*
+  commentId: Overload:SAMURAI.PlayingState.Exit
+  name: Exit
+  nameWithType: PlayingState.Exit
+  fullName: SAMURAI.PlayingState.Exit

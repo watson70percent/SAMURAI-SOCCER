@@ -1,0 +1,316 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.ResultManager
+  commentId: T:SAMURAI.ResultManager
+  id: ResultManager
+  parent: SAMURAI
+  children:
+  - SAMURAI.ResultManager.background
+  - SAMURAI.ResultManager.resultText
+  - SAMURAI.ResultManager.samuraiWordBase
+  - SAMURAI.ResultManager.SetResult(SAMURAI.Result,System.String)
+  - SAMURAI.ResultManager.texts
+  langs:
+  - csharp
+  - vb
+  name: ResultManager
+  nameWithType: ResultManager
+  fullName: SAMURAI.ResultManager
+  type: Class
+  source:
+    id: ResultManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class ResultManager : MonoBehaviour'
+    content.vb: >-
+      Public Class ResultManager
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.ResultManager.resultText
+  commentId: F:SAMURAI.ResultManager.resultText
+  id: resultText
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: resultText
+  nameWithType: ResultManager.resultText
+  fullName: SAMURAI.ResultManager.resultText
+  type: Field
+  source:
+    id: resultText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string resultText
+    return:
+      type: System.String
+    content.vb: Public resultText As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.ResultManager.samuraiWordBase
+  commentId: F:SAMURAI.ResultManager.samuraiWordBase
+  id: samuraiWordBase
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: samuraiWordBase
+  nameWithType: ResultManager.samuraiWordBase
+  fullName: SAMURAI.ResultManager.samuraiWordBase
+  type: Field
+  source:
+    id: samuraiWordBase
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public SamuraiWordBase samuraiWordBase
+    return:
+      type: SAMURAI.SamuraiWordBase
+    content.vb: Public samuraiWordBase As SamuraiWordBase
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.ResultManager.texts
+  commentId: F:SAMURAI.ResultManager.texts
+  id: texts
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: texts
+  nameWithType: ResultManager.texts
+  fullName: SAMURAI.ResultManager.texts
+  type: Field
+  source:
+    id: texts
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public List<Text> texts
+    return:
+      type: System.Collections.Generic.List{Text}
+    content.vb: Public texts As List(Of Text)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.ResultManager.background
+  commentId: F:SAMURAI.ResultManager.background
+  id: background
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: background
+  nameWithType: ResultManager.background
+  fullName: SAMURAI.ResultManager.background
+  type: Field
+  source:
+    id: background
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Camera background
+    return:
+      type: Camera
+    content.vb: Public background As Camera
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.ResultManager.SetResult(SAMURAI.Result,System.String)
+  commentId: M:SAMURAI.ResultManager.SetResult(SAMURAI.Result,System.String)
+  id: SetResult(SAMURAI.Result,System.String)
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: SetResult(Result, String)
+  nameWithType: ResultManager.SetResult(Result, String)
+  fullName: SAMURAI.ResultManager.SetResult(SAMURAI.Result, System.String)
+  type: Method
+  source:
+    id: SetResult
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void SetResult(Result resultState, string resultText)
+    parameters:
+    - id: resultState
+      type: SAMURAI.Result
+    - id: resultText
+      type: System.String
+    content.vb: Public Sub SetResult(resultState As Result, resultText As String)
+  overload: SAMURAI.ResultManager.SetResult*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SAMURAI.SamuraiWordBase
+  commentId: T:SAMURAI.SamuraiWordBase
+  parent: SAMURAI
+  name: SamuraiWordBase
+  nameWithType: SamuraiWordBase
+  fullName: SAMURAI.SamuraiWordBase
+- uid: System.Collections.Generic.List{Text}
+  commentId: T:System.Collections.Generic.List{Text}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Text>
+  nameWithType: List<Text>
+  fullName: System.Collections.Generic.List<Text>
+  nameWithType.vb: List(Of Text)
+  fullName.vb: System.Collections.Generic.List(Of Text)
+  name.vb: List(Of Text)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Text
+    name: Text
+    nameWithType: Text
+    fullName: Text
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Text
+    name: Text
+    nameWithType: Text
+    fullName: Text
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Camera
+  commentId: '!:Camera'
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: Camera
+- uid: SAMURAI.ResultManager.SetResult*
+  commentId: Overload:SAMURAI.ResultManager.SetResult
+  name: SetResult
+  nameWithType: ResultManager.SetResult
+  fullName: SAMURAI.ResultManager.SetResult
+- uid: SAMURAI.Result
+  commentId: T:SAMURAI.Result
+  parent: SAMURAI
+  name: Result
+  nameWithType: Result
+  fullName: SAMURAI.Result

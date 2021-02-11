@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StartCoroutineForPlayingState
+  commentId: T:SAMURAI.StartCoroutineForPlayingState
+  id: StartCoroutineForPlayingState
+  parent: SAMURAI
+  children:
+  - SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator(System.Collections.IEnumerator)
+  - SAMURAI.StartCoroutineForPlayingState.Start
+  - SAMURAI.StartCoroutineForPlayingState.Update
+  langs:
+  - csharp
+  - vb
+  name: StartCoroutineForPlayingState
+  nameWithType: StartCoroutineForPlayingState
+  fullName: SAMURAI.StartCoroutineForPlayingState
+  type: Class
+  source:
+    id: StartCoroutineForPlayingState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StartCoroutineForPlayingState : MonoBehaviour'
+    content.vb: >-
+      Public Class StartCoroutineForPlayingState
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StartCoroutineForPlayingState.Start
+  commentId: M:SAMURAI.StartCoroutineForPlayingState.Start
+  id: Start
+  parent: SAMURAI.StartCoroutineForPlayingState
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StartCoroutineForPlayingState.Start()
+  fullName: SAMURAI.StartCoroutineForPlayingState.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: SAMURAI.StartCoroutineForPlayingState.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StartCoroutineForPlayingState.Update
+  commentId: M:SAMURAI.StartCoroutineForPlayingState.Update
+  id: Update
+  parent: SAMURAI.StartCoroutineForPlayingState
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StartCoroutineForPlayingState.Update()
+  fullName: SAMURAI.StartCoroutineForPlayingState.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update
+  overload: SAMURAI.StartCoroutineForPlayingState.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator(System.Collections.IEnumerator)
+  commentId: M:SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator(System.Collections.IEnumerator)
+  id: AddTaskIEnumrator(System.Collections.IEnumerator)
+  parent: SAMURAI.StartCoroutineForPlayingState
+  langs:
+  - csharp
+  - vb
+  name: AddTaskIEnumrator(IEnumerator)
+  nameWithType: StartCoroutineForPlayingState.AddTaskIEnumrator(IEnumerator)
+  fullName: SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator(System.Collections.IEnumerator)
+  type: Method
+  source:
+    id: AddTaskIEnumrator
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 71
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nIEnumeratorを追加してコルーチンっぽく処理する\n○○秒待ちたいときはyeild return 秒数(float型)でその秒数待つ\n"
+  example: []
+  syntax:
+    content: public static void AddTaskIEnumrator(IEnumerator enumerator)
+    parameters:
+    - id: enumerator
+      type: System.Collections.IEnumerator
+      description: "\n処理してほしいIEnumerator\n"
+    content.vb: Public Shared Sub AddTaskIEnumrator(enumerator As IEnumerator)
+  overload: SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.StartCoroutineForPlayingState.Start*
+  commentId: Overload:SAMURAI.StartCoroutineForPlayingState.Start
+  name: Start
+  nameWithType: StartCoroutineForPlayingState.Start
+  fullName: SAMURAI.StartCoroutineForPlayingState.Start
+- uid: SAMURAI.StartCoroutineForPlayingState.Update*
+  commentId: Overload:SAMURAI.StartCoroutineForPlayingState.Update
+  name: Update
+  nameWithType: StartCoroutineForPlayingState.Update
+  fullName: SAMURAI.StartCoroutineForPlayingState.Update
+- uid: SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator*
+  commentId: Overload:SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator
+  name: AddTaskIEnumrator
+  nameWithType: StartCoroutineForPlayingState.AddTaskIEnumrator
+  fullName: SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

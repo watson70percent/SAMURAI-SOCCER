@@ -1,0 +1,310 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.PointScript
+  commentId: T:SAMURAI.PointScript
+  id: PointScript
+  parent: SAMURAI
+  children:
+  - SAMURAI.PointScript.ballControler
+  - SAMURAI.PointScript.GainPoint(GoalEventArgs)
+  - SAMURAI.PointScript.GetPoint(System.Int32)
+  - SAMURAI.PointScript.leftSide
+  - SAMURAI.PointScript.Point(System.Object,GoalEventArgs)
+  - SAMURAI.PointScript.ResetPoint(System.Boolean)
+  - SAMURAI.PointScript.text
+  langs:
+  - csharp
+  - vb
+  name: PointScript
+  nameWithType: PointScript
+  fullName: SAMURAI.PointScript
+  type: Class
+  source:
+    id: PointScript
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class PointScript : MonoBehaviour'
+    content.vb: >-
+      Public Class PointScript
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.PointScript.text
+  commentId: F:SAMURAI.PointScript.text
+  id: text
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: text
+  nameWithType: PointScript.text
+  fullName: SAMURAI.PointScript.text
+  type: Field
+  source:
+    id: text
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Text text
+    return:
+      type: Text
+    content.vb: Public text As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.PointScript.leftSide
+  commentId: F:SAMURAI.PointScript.leftSide
+  id: leftSide
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: leftSide
+  nameWithType: PointScript.leftSide
+  fullName: SAMURAI.PointScript.leftSide
+  type: Field
+  source:
+    id: leftSide
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public bool leftSide
+    return:
+      type: System.Boolean
+    content.vb: Public leftSide As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.PointScript.ballControler
+  commentId: F:SAMURAI.PointScript.ballControler
+  id: ballControler
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: ballControler
+  nameWithType: PointScript.ballControler
+  fullName: SAMURAI.PointScript.ballControler
+  type: Field
+  source:
+    id: ballControler
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public BallControler ballControler
+    return:
+      type: BallControler
+    content.vb: Public ballControler As BallControler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.PointScript.Point(System.Object,GoalEventArgs)
+  commentId: M:SAMURAI.PointScript.Point(System.Object,GoalEventArgs)
+  id: Point(System.Object,GoalEventArgs)
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: Point(Object, GoalEventArgs)
+  nameWithType: PointScript.Point(Object, GoalEventArgs)
+  fullName: SAMURAI.PointScript.Point(System.Object, GoalEventArgs)
+  type: Method
+  source:
+    id: Point
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Point(object sender, GoalEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: GoalEventArgs
+    content.vb: Public Sub Point(sender As Object, e As GoalEventArgs)
+  overload: SAMURAI.PointScript.Point*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.PointScript.GainPoint(GoalEventArgs)
+  commentId: M:SAMURAI.PointScript.GainPoint(GoalEventArgs)
+  id: GainPoint(GoalEventArgs)
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: GainPoint(GoalEventArgs)
+  nameWithType: PointScript.GainPoint(GoalEventArgs)
+  fullName: SAMURAI.PointScript.GainPoint(GoalEventArgs)
+  type: Method
+  source:
+    id: GainPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void GainPoint(GoalEventArgs e)
+    parameters:
+    - id: e
+      type: GoalEventArgs
+    content.vb: Public Sub GainPoint(e As GoalEventArgs)
+  overload: SAMURAI.PointScript.GainPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.PointScript.ResetPoint(System.Boolean)
+  commentId: M:SAMURAI.PointScript.ResetPoint(System.Boolean)
+  id: ResetPoint(System.Boolean)
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: ResetPoint(Boolean)
+  nameWithType: PointScript.ResetPoint(Boolean)
+  fullName: SAMURAI.PointScript.ResetPoint(System.Boolean)
+  type: Method
+  source:
+    id: ResetPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 48
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void ResetPoint(bool p)
+    parameters:
+    - id: p
+      type: System.Boolean
+    content.vb: Public Sub ResetPoint(p As Boolean)
+  overload: SAMURAI.PointScript.ResetPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.PointScript.GetPoint(System.Int32)
+  commentId: M:SAMURAI.PointScript.GetPoint(System.Int32)
+  id: GetPoint(System.Int32)
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: GetPoint(Int32)
+  nameWithType: PointScript.GetPoint(Int32)
+  fullName: SAMURAI.PointScript.GetPoint(System.Int32)
+  type: Method
+  source:
+    id: GetPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 53
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public int GetPoint(int p)
+    parameters:
+    - id: p
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetPoint(p As Integer) As Integer
+  overload: SAMURAI.PointScript.GetPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: BallControler
+  commentId: T:BallControler
+  name: BallControler
+  nameWithType: BallControler
+  fullName: BallControler
+- uid: SAMURAI.PointScript.Point*
+  commentId: Overload:SAMURAI.PointScript.Point
+  name: Point
+  nameWithType: PointScript.Point
+  fullName: SAMURAI.PointScript.Point
+- uid: GoalEventArgs
+  commentId: T:GoalEventArgs
+  name: GoalEventArgs
+  nameWithType: GoalEventArgs
+  fullName: GoalEventArgs
+- uid: SAMURAI.PointScript.GainPoint*
+  commentId: Overload:SAMURAI.PointScript.GainPoint
+  name: GainPoint
+  nameWithType: PointScript.GainPoint
+  fullName: SAMURAI.PointScript.GainPoint
+- uid: SAMURAI.PointScript.ResetPoint*
+  commentId: Overload:SAMURAI.PointScript.ResetPoint
+  name: ResetPoint
+  nameWithType: PointScript.ResetPoint
+  fullName: SAMURAI.PointScript.ResetPoint
+- uid: SAMURAI.PointScript.GetPoint*
+  commentId: Overload:SAMURAI.PointScript.GetPoint
+  name: GetPoint
+  nameWithType: PointScript.GetPoint
+  fullName: SAMURAI.PointScript.GetPoint
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

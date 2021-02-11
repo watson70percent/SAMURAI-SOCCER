@@ -1,0 +1,149 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Polygon
+  commentId: T:SAMURAI.Polygon
+  id: Polygon
+  parent: SAMURAI
+  children:
+  - SAMURAI.Polygon.#ctor(Vector3,Vector3,Vector3)
+  - SAMURAI.Polygon.vertices
+  langs:
+  - csharp
+  - vb
+  name: Polygon
+  nameWithType: Polygon
+  fullName: SAMURAI.Polygon
+  type: Class
+  source:
+    id: Polygon
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 268
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public class Polygon
+    content.vb: Public Class Polygon
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.Polygon.vertices
+  commentId: F:SAMURAI.Polygon.vertices
+  id: vertices
+  parent: SAMURAI.Polygon
+  langs:
+  - csharp
+  - vb
+  name: vertices
+  nameWithType: Polygon.vertices
+  fullName: SAMURAI.Polygon.vertices
+  type: Field
+  source:
+    id: vertices
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 270
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3[] vertices
+    return:
+      type: Vector3[]
+    content.vb: Public vertices As Vector3()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.Polygon.#ctor(Vector3,Vector3,Vector3)
+  commentId: M:SAMURAI.Polygon.#ctor(Vector3,Vector3,Vector3)
+  id: '#ctor(Vector3,Vector3,Vector3)'
+  parent: SAMURAI.Polygon
+  langs:
+  - csharp
+  - vb
+  name: Polygon(Vector3, Vector3, Vector3)
+  nameWithType: Polygon.Polygon(Vector3, Vector3, Vector3)
+  fullName: SAMURAI.Polygon.Polygon(Vector3, Vector3, Vector3)
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 271
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Polygon(Vector3 vertex1, Vector3 vertex2, Vector3 vertex3)
+    parameters:
+    - id: vertex1
+      type: Vector3
+    - id: vertex2
+      type: Vector3
+    - id: vertex3
+      type: Vector3
+    content.vb: Public Sub New(vertex1 As Vector3, vertex2 As Vector3, vertex3 As Vector3)
+  overload: SAMURAI.Polygon.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.Polygon.#ctor*
+  commentId: Overload:SAMURAI.Polygon.#ctor
+  name: Polygon
+  nameWithType: Polygon.Polygon
+  fullName: SAMURAI.Polygon.Polygon
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3

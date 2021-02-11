@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StandardFade
+  commentId: T:SAMURAI.StandardFade
+  id: StandardFade
+  parent: SAMURAI
+  children:
+  - SAMURAI.StandardFade.FadeIn(TMPro.TextMeshProUGUI,System.Int32)
+  - SAMURAI.StandardFade.FadeOut(TMPro.TextMeshProUGUI,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: StandardFade
+  nameWithType: StandardFade
+  fullName: SAMURAI.StandardFade
+  type: Class
+  source:
+    id: StandardFade
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\StandardFade.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n他のタイプにも対応したいが、現状はTextのみ対応\n"
+  example: []
+  syntax:
+    content: 'public class StandardFade : MonoBehaviour'
+    content.vb: >-
+      Public Class StandardFade
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StandardFade.FadeIn(TMPro.TextMeshProUGUI,System.Int32)
+  commentId: M:SAMURAI.StandardFade.FadeIn(TMPro.TextMeshProUGUI,System.Int32)
+  id: FadeIn(TMPro.TextMeshProUGUI,System.Int32)
+  parent: SAMURAI.StandardFade
+  langs:
+  - csharp
+  - vb
+  name: FadeIn(TextMeshProUGUI, Int32)
+  nameWithType: StandardFade.FadeIn(TextMeshProUGUI, Int32)
+  fullName: SAMURAI.StandardFade.FadeIn(TMPro.TextMeshProUGUI, System.Int32)
+  type: Method
+  source:
+    id: FadeIn
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\StandardFade.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nテキストをフェードイン\n"
+  example: []
+  syntax:
+    content: public static Task FadeIn(TextMeshProUGUI text, int FadeLength)
+    parameters:
+    - id: text
+      type: TMPro.TextMeshProUGUI
+      description: "\nフェードインする対象\n"
+    - id: FadeLength
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Shared Function FadeIn(text As TextMeshProUGUI, FadeLength As Integer) As Task
+  overload: SAMURAI.StandardFade.FadeIn*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SAMURAI.StandardFade.FadeOut(TMPro.TextMeshProUGUI,System.Int32)
+  commentId: M:SAMURAI.StandardFade.FadeOut(TMPro.TextMeshProUGUI,System.Int32)
+  id: FadeOut(TMPro.TextMeshProUGUI,System.Int32)
+  parent: SAMURAI.StandardFade
+  langs:
+  - csharp
+  - vb
+  name: FadeOut(TextMeshProUGUI, Int32)
+  nameWithType: StandardFade.FadeOut(TextMeshProUGUI, Int32)
+  fullName: SAMURAI.StandardFade.FadeOut(TMPro.TextMeshProUGUI, System.Int32)
+  type: Method
+  source:
+    id: FadeOut
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\StandardFade.cs
+    startLine: 42
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nテキストをフェードアウト\n"
+  example: []
+  syntax:
+    content: public static Task FadeOut(TextMeshProUGUI text, int FadeLength)
+    parameters:
+    - id: text
+      type: TMPro.TextMeshProUGUI
+      description: "\nフェードアウトする対象\n"
+    - id: FadeLength
+      type: System.Int32
+      description: "\nフェード全体の秒数\n"
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Shared Function FadeOut(text As TextMeshProUGUI, FadeLength As Integer) As Task
+  overload: SAMURAI.StandardFade.FadeOut*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.StandardFade.FadeIn*
+  commentId: Overload:SAMURAI.StandardFade.FadeIn
+  name: FadeIn
+  nameWithType: StandardFade.FadeIn
+  fullName: SAMURAI.StandardFade.FadeIn
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: SAMURAI.StandardFade.FadeOut*
+  commentId: Overload:SAMURAI.StandardFade.FadeOut
+  name: FadeOut
+  nameWithType: StandardFade.FadeOut
+  fullName: SAMURAI.StandardFade.FadeOut

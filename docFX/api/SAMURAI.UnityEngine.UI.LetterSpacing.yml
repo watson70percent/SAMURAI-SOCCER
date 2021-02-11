@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing
+  commentId: T:SAMURAI.UnityEngine.UI.LetterSpacing
+  id: LetterSpacing
+  parent: SAMURAI.UnityEngine.UI
+  children:
+  - SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
+  - SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh(VertexHelper)
+  - SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UIVertex})
+  - SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+  langs:
+  - csharp
+  - vb
+  name: LetterSpacing
+  nameWithType: LetterSpacing
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing
+  type: Class
+  source:
+    id: LetterSpacing
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: 'public class LetterSpacing : BaseMeshEffect'
+    content.vb: >-
+      Public Class LetterSpacing
+          Inherits BaseMeshEffect
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
+  commentId: M:SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
+  id: '#ctor'
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: LetterSpacing()
+  nameWithType: LetterSpacing.LetterSpacing()
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.LetterSpacing()
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: protected LetterSpacing()
+    content.vb: Protected Sub New
+  overload: SAMURAI.UnityEngine.UI.LetterSpacing.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+  commentId: P:SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+  id: spacing
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: spacing
+  nameWithType: LetterSpacing.spacing
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+  type: Property
+  source:
+    id: spacing
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 61
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: public float spacing { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property spacing As Single
+  overload: SAMURAI.UnityEngine.UI.LetterSpacing.spacing*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh(VertexHelper)
+  commentId: M:SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh(VertexHelper)
+  id: ModifyMesh(VertexHelper)
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: ModifyMesh(VertexHelper)
+  nameWithType: LetterSpacing.ModifyMesh(VertexHelper)
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh(VertexHelper)
+  type: Method
+  source:
+    id: ModifyMesh
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 77
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  example: []
+  syntax:
+    content: public override void ModifyMesh(VertexHelper vh)
+    parameters:
+    - id: vh
+      type: VertexHelper
+    content.vb: Public Overrides Sub ModifyMesh(vh As VertexHelper)
+  overload: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UIVertex})
+  commentId: M:SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UIVertex})
+  id: ModifyVertices(System.Collections.Generic.List{UIVertex})
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: ModifyVertices(List<UIVertex>)
+  nameWithType: LetterSpacing.ModifyVertices(List<UIVertex>)
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List<UIVertex>)
+  type: Method
+  source:
+    id: ModifyVertices
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 91
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: public void ModifyVertices(List<UIVertex> verts)
+    parameters:
+    - id: verts
+      type: System.Collections.Generic.List{UIVertex}
+    content.vb: Public Sub ModifyVertices(verts As List(Of UIVertex))
+  overload: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices*
+  nameWithType.vb: LetterSpacing.ModifyVertices(List(Of UIVertex))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List(Of UIVertex))
+  name.vb: ModifyVertices(List(Of UIVertex))
+references:
+- uid: SAMURAI.UnityEngine.UI
+  commentId: N:SAMURAI.UnityEngine.UI
+  name: SAMURAI.UnityEngine.UI
+  nameWithType: SAMURAI.UnityEngine.UI
+  fullName: SAMURAI.UnityEngine.UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.#ctor*
+  commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
+  name: LetterSpacing
+  nameWithType: LetterSpacing.LetterSpacing
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.LetterSpacing
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.spacing*
+  commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+  name: spacing
+  nameWithType: LetterSpacing.spacing
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh*
+  commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh
+  name: ModifyMesh
+  nameWithType: LetterSpacing.ModifyMesh
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh
+- uid: VertexHelper
+  commentId: '!:VertexHelper'
+  isExternal: true
+  name: VertexHelper
+  nameWithType: VertexHelper
+  fullName: VertexHelper
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices*
+  commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices
+  name: ModifyVertices
+  nameWithType: LetterSpacing.ModifyVertices
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices
+- uid: System.Collections.Generic.List{UIVertex}
+  commentId: T:System.Collections.Generic.List{UIVertex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<UIVertex>
+  nameWithType: List<UIVertex>
+  fullName: System.Collections.Generic.List<UIVertex>
+  nameWithType.vb: List(Of UIVertex)
+  fullName.vb: System.Collections.Generic.List(Of UIVertex)
+  name.vb: List(Of UIVertex)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: UIVertex
+    name: UIVertex
+    nameWithType: UIVertex
+    fullName: UIVertex
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: UIVertex
+    name: UIVertex
+    nameWithType: UIVertex
+    fullName: UIVertex
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

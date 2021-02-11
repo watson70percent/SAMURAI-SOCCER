@@ -1,0 +1,310 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StageSelect
+  commentId: T:SAMURAI.StageSelect
+  id: StageSelect
+  parent: SAMURAI
+  children:
+  - SAMURAI.StageSelect.fieldNumber
+  - SAMURAI.StageSelect.gameScene
+  - SAMURAI.StageSelect.name
+  - SAMURAI.StageSelect.oppnentName
+  - SAMURAI.StageSelect.opponentInfo
+  - SAMURAI.StageSelect.previewName
+  - SAMURAI.StageSelect.stageImage
+  - SAMURAI.StageSelect.summary
+  langs:
+  - csharp
+  - vb
+  name: StageSelect
+  nameWithType: StageSelect
+  fullName: SAMURAI.StageSelect
+  type: Class
+  source:
+    id: StageSelect
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class StageSelect
+    content.vb: >-
+      <Serializable>
+
+      Public Class StageSelect
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StageSelect.name
+  commentId: F:SAMURAI.StageSelect.name
+  id: name
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: StageSelect.name
+  fullName: SAMURAI.StageSelect.name
+  type: Field
+  source:
+    id: name
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string name
+    return:
+      type: System.String
+    content.vb: Public name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.previewName
+  commentId: F:SAMURAI.StageSelect.previewName
+  id: previewName
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: previewName
+  nameWithType: StageSelect.previewName
+  fullName: SAMURAI.StageSelect.previewName
+  type: Field
+  source:
+    id: previewName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string previewName
+    return:
+      type: System.String
+    content.vb: Public previewName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.summary
+  commentId: F:SAMURAI.StageSelect.summary
+  id: summary
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: summary
+  nameWithType: StageSelect.summary
+  fullName: SAMURAI.StageSelect.summary
+  type: Field
+  source:
+    id: summary
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string summary
+    return:
+      type: System.String
+    content.vb: Public summary As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.stageImage
+  commentId: F:SAMURAI.StageSelect.stageImage
+  id: stageImage
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: stageImage
+  nameWithType: StageSelect.stageImage
+  fullName: SAMURAI.StageSelect.stageImage
+  type: Field
+  source:
+    id: stageImage
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Sprite stageImage
+    return:
+      type: Sprite
+    content.vb: Public stageImage As Sprite
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.gameScene
+  commentId: F:SAMURAI.StageSelect.gameScene
+  id: gameScene
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: gameScene
+  nameWithType: StageSelect.gameScene
+  fullName: SAMURAI.StageSelect.gameScene
+  type: Field
+  source:
+    id: gameScene
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public SceneObject gameScene
+    return:
+      type: SAMURAI.SceneObject
+    content.vb: Public gameScene As SceneObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.fieldNumber
+  commentId: F:SAMURAI.StageSelect.fieldNumber
+  id: fieldNumber
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: fieldNumber
+  nameWithType: StageSelect.fieldNumber
+  fullName: SAMURAI.StageSelect.fieldNumber
+  type: Field
+  source:
+    id: fieldNumber
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public int fieldNumber
+    return:
+      type: System.Int32
+    content.vb: Public fieldNumber As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.oppnentName
+  commentId: F:SAMURAI.StageSelect.oppnentName
+  id: oppnentName
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: oppnentName
+  nameWithType: StageSelect.oppnentName
+  fullName: SAMURAI.StageSelect.oppnentName
+  type: Field
+  source:
+    id: oppnentName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string oppnentName
+    return:
+      type: System.String
+    content.vb: Public oppnentName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelect.opponentInfo
+  commentId: F:SAMURAI.StageSelect.opponentInfo
+  id: opponentInfo
+  parent: SAMURAI.StageSelect
+  langs:
+  - csharp
+  - vb
+  name: opponentInfo
+  nameWithType: StageSelect.opponentInfo
+  fullName: SAMURAI.StageSelect.opponentInfo
+  type: Field
+  source:
+    id: opponentInfo
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectData.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string opponentInfo
+    return:
+      type: System.String
+    content.vb: Public opponentInfo As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: SAMURAI.SceneObject
+  commentId: T:SAMURAI.SceneObject
+  parent: SAMURAI
+  name: SceneObject
+  nameWithType: SceneObject
+  fullName: SAMURAI.SceneObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

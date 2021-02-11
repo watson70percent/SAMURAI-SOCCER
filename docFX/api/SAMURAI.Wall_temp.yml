@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Wall_temp
+  commentId: T:SAMURAI.Wall_temp
+  id: Wall_temp
+  parent: SAMURAI
+  children:
+  - SAMURAI.Wall_temp.normalVec
+  langs:
+  - csharp
+  - vb
+  name: Wall_temp
+  nameWithType: Wall_temp
+  fullName: SAMURAI.Wall_temp
+  type: Class
+  source:
+    id: Wall_temp
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Wall_temp.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class Wall_temp : MonoBehaviour'
+    content.vb: >-
+      Public Class Wall_temp
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.Wall_temp.normalVec
+  commentId: F:SAMURAI.Wall_temp.normalVec
+  id: normalVec
+  parent: SAMURAI.Wall_temp
+  langs:
+  - csharp
+  - vb
+  name: normalVec
+  nameWithType: Wall_temp.normalVec
+  fullName: SAMURAI.Wall_temp.normalVec
+  type: Field
+  source:
+    id: normalVec
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Wall_temp.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3 normalVec
+    return:
+      type: Vector3
+    content.vb: Public normalVec As Vector3
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3

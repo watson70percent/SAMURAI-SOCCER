@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.MeshCut
+  commentId: T:SAMURAI.MeshCut
+  id: MeshCut
+  parent: SAMURAI
+  children:
+  - SAMURAI.MeshCut.CutMesh(GameObject,Vector3,Vector3)
+  - SAMURAI.MeshCut.CutMeshOnce(GameObject,Vector3,Vector3)
+  - SAMURAI.MeshCut.CutMeshRough(GameObject,Vector3,Vector3)
+  langs:
+  - csharp
+  - vb
+  name: MeshCut
+  nameWithType: MeshCut
+  fullName: SAMURAI.MeshCut
+  type: Class
+  source:
+    id: MeshCut
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class MeshCut : MonoBehaviour'
+    content.vb: >-
+      Public Class MeshCut
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.MeshCut.CutMesh(GameObject,Vector3,Vector3)
+  commentId: M:SAMURAI.MeshCut.CutMesh(GameObject,Vector3,Vector3)
+  id: CutMesh(GameObject,Vector3,Vector3)
+  parent: SAMURAI.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: CutMesh(GameObject, Vector3, Vector3)
+  nameWithType: MeshCut.CutMesh(GameObject, Vector3, Vector3)
+  fullName: SAMURAI.MeshCut.CutMesh(GameObject, Vector3, Vector3)
+  type: Method
+  source:
+    id: CutMesh
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\ngameObjectを切断して2つのMeshにして返します.\n1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です.\n何度も切るようなオブジェクトでも頂点数が増えないように処理をしてあります\n"
+  example: []
+  syntax:
+    content: public static Mesh[] CutMesh(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection)
+    parameters:
+    - id: target
+      type: GameObject
+      description: 切断対象のgameObject
+    - id: planeAnchorPoint
+      type: Vector3
+      description: 切断面上の1点
+    - id: planeNormalDirection
+      type: Vector3
+      description: 切断面の法線
+    return:
+      type: Mesh[]
+      description: ''
+    content.vb: Public Shared Function CutMesh(target As GameObject, planeAnchorPoint As Vector3, planeNormalDirection As Vector3) As Mesh()
+  overload: SAMURAI.MeshCut.CutMesh*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SAMURAI.MeshCut.CutMeshOnce(GameObject,Vector3,Vector3)
+  commentId: M:SAMURAI.MeshCut.CutMeshOnce(GameObject,Vector3,Vector3)
+  id: CutMeshOnce(GameObject,Vector3,Vector3)
+  parent: SAMURAI.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: CutMeshOnce(GameObject, Vector3, Vector3)
+  nameWithType: MeshCut.CutMeshOnce(GameObject, Vector3, Vector3)
+  fullName: SAMURAI.MeshCut.CutMeshOnce(GameObject, Vector3, Vector3)
+  type: Method
+  source:
+    id: CutMeshOnce
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 139
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\ngameObjectを切断して2つのMeshにして返します.\n1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です.\n切断の処理が雑なので何度も斬ると頂点数が膨れ上がります. そのかわり一回斬るだけならこっちが早い\n"
+  example: []
+  syntax:
+    content: public static Mesh[] CutMeshOnce(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection)
+    parameters:
+    - id: target
+      type: GameObject
+      description: 切断対象のgameObject
+    - id: planeAnchorPoint
+      type: Vector3
+      description: 切断面上の1点
+    - id: planeNormalDirection
+      type: Vector3
+      description: 切断面の法線
+    return:
+      type: Mesh[]
+      description: ''
+    content.vb: Public Shared Function CutMeshOnce(target As GameObject, planeAnchorPoint As Vector3, planeNormalDirection As Vector3) As Mesh()
+  overload: SAMURAI.MeshCut.CutMeshOnce*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SAMURAI.MeshCut.CutMeshRough(GameObject,Vector3,Vector3)
+  commentId: M:SAMURAI.MeshCut.CutMeshRough(GameObject,Vector3,Vector3)
+  id: CutMeshRough(GameObject,Vector3,Vector3)
+  parent: SAMURAI.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: CutMeshRough(GameObject, Vector3, Vector3)
+  nameWithType: MeshCut.CutMeshRough(GameObject, Vector3, Vector3)
+  fullName: SAMURAI.MeshCut.CutMeshRough(GameObject, Vector3, Vector3)
+  type: Method
+  source:
+    id: CutMeshRough
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 246
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\ngameObjectを雑に切断して2つのMeshにして返します. 切断面がザラザラなのでハイポリにしか使えませんが処理はちょっと早いです. 1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です.\n"
+  example: []
+  syntax:
+    content: public static Mesh[] CutMeshRough(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection)
+    parameters:
+    - id: target
+      type: GameObject
+      description: 切断対象のgameObject
+    - id: planeAnchorPoint
+      type: Vector3
+      description: 切断面上の1点
+    - id: planeNormalDirection
+      type: Vector3
+      description: 切断面の法線
+    return:
+      type: Mesh[]
+      description: ''
+    content.vb: Public Shared Function CutMeshRough(target As GameObject, planeAnchorPoint As Vector3, planeNormalDirection As Vector3) As Mesh()
+  overload: SAMURAI.MeshCut.CutMeshRough*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.MeshCut.CutMesh*
+  commentId: Overload:SAMURAI.MeshCut.CutMesh
+  name: CutMesh
+  nameWithType: MeshCut.CutMesh
+  fullName: SAMURAI.MeshCut.CutMesh
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: Mesh[]
+  isExternal: true
+  name: Mesh[]
+  nameWithType: Mesh[]
+  fullName: Mesh[]
+  nameWithType.vb: Mesh()
+  fullName.vb: Mesh()
+  name.vb: Mesh()
+  spec.csharp:
+  - uid: Mesh
+    name: Mesh
+    nameWithType: Mesh
+    fullName: Mesh
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Mesh
+    name: Mesh
+    nameWithType: Mesh
+    fullName: Mesh
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.MeshCut.CutMeshOnce*
+  commentId: Overload:SAMURAI.MeshCut.CutMeshOnce
+  name: CutMeshOnce
+  nameWithType: MeshCut.CutMeshOnce
+  fullName: SAMURAI.MeshCut.CutMeshOnce
+- uid: SAMURAI.MeshCut.CutMeshRough*
+  commentId: Overload:SAMURAI.MeshCut.CutMeshRough
+  name: CutMeshRough
+  nameWithType: MeshCut.CutMeshRough
+  fullName: SAMURAI.MeshCut.CutMeshRough

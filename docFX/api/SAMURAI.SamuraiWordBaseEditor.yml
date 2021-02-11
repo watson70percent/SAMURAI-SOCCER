@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.SamuraiWordBaseEditor
+  commentId: T:SAMURAI.SamuraiWordBaseEditor
+  id: SamuraiWordBaseEditor
+  parent: SAMURAI
+  children:
+  - SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: SamuraiWordBaseEditor
+  nameWithType: SamuraiWordBaseEditor
+  fullName: SAMURAI.SamuraiWordBaseEditor
+  type: Class
+  source:
+    id: SamuraiWordBaseEditor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\Editor\SamuraiWordBaseEditor.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: SAMURAI
+  syntax:
+    content: 'public class SamuraiWordBaseEditor : Editor'
+    content.vb: >-
+      Public Class SamuraiWordBaseEditor
+          Inherits Editor
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI
+  commentId: M:SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: SAMURAI.SamuraiWordBaseEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: SamuraiWordBaseEditor.OnInspectorGUI()
+  fullName: SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI()
+  type: Method
+  source:
+    id: OnInspectorGUI
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\Editor\SamuraiWordBaseEditor.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: SAMURAI
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI
+  overload: SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI*
+  commentId: Overload:SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: SamuraiWordBaseEditor.OnInspectorGUI
+  fullName: SAMURAI.SamuraiWordBaseEditor.OnInspectorGUI

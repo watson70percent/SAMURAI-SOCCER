@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StrikeObjectScript
+  commentId: T:SAMURAI.StrikeObjectScript
+  id: StrikeObjectScript
+  parent: SAMURAI
+  children:
+  - SAMURAI.StrikeObjectScript.gameManager
+  - SAMURAI.StrikeObjectScript.shotInterval
+  - SAMURAI.StrikeObjectScript.ShotObject
+  langs:
+  - csharp
+  - vb
+  name: StrikeObjectScript
+  nameWithType: StrikeObjectScript
+  fullName: SAMURAI.StrikeObjectScript
+  type: Class
+  source:
+    id: StrikeObjectScript
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StrikeObjectScript : MonoBehaviour'
+    content.vb: >-
+      Public Class StrikeObjectScript
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StrikeObjectScript.shotInterval
+  commentId: F:SAMURAI.StrikeObjectScript.shotInterval
+  id: shotInterval
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: shotInterval
+  nameWithType: StrikeObjectScript.shotInterval
+  fullName: SAMURAI.StrikeObjectScript.shotInterval
+  type: Field
+  source:
+    id: shotInterval
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float shotInterval
+    return:
+      type: System.Single
+    content.vb: Public shotInterval As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StrikeObjectScript.ShotObject
+  commentId: F:SAMURAI.StrikeObjectScript.ShotObject
+  id: ShotObject
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: ShotObject
+  nameWithType: StrikeObjectScript.ShotObject
+  fullName: SAMURAI.StrikeObjectScript.ShotObject
+  type: Field
+  source:
+    id: ShotObject
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject ShotObject
+    return:
+      type: GameObject
+    content.vb: Public ShotObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StrikeObjectScript.gameManager
+  commentId: F:SAMURAI.StrikeObjectScript.gameManager
+  id: gameManager
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: StrikeObjectScript.gameManager
+  fullName: SAMURAI.StrikeObjectScript.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: Public gameManager As GameManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager

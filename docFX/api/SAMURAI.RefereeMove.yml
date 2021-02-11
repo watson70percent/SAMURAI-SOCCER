@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.RefereeMove
+  commentId: T:SAMURAI.RefereeMove
+  id: RefereeMove
+  parent: SAMURAI
+  children:
+  - SAMURAI.RefereeMove.ball
+  - SAMURAI.RefereeMove.lookatspeed
+  - SAMURAI.RefereeMove.radius
+  - SAMURAI.RefereeMove.refereeArea
+  - SAMURAI.RefereeMove.runningspeed
+  langs:
+  - csharp
+  - vb
+  name: RefereeMove
+  nameWithType: RefereeMove
+  fullName: SAMURAI.RefereeMove
+  type: Class
+  source:
+    id: RefereeMove
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class RefereeMove : MonoBehaviour'
+    content.vb: >-
+      Public Class RefereeMove
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.RefereeMove.ball
+  commentId: F:SAMURAI.RefereeMove.ball
+  id: ball
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: RefereeMove.ball
+  fullName: SAMURAI.RefereeMove.ball
+  type: Field
+  source:
+    id: ball
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject ball
+    return:
+      type: GameObject
+    content.vb: Public ball As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeMove.lookatspeed
+  commentId: F:SAMURAI.RefereeMove.lookatspeed
+  id: lookatspeed
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: lookatspeed
+  nameWithType: RefereeMove.lookatspeed
+  fullName: SAMURAI.RefereeMove.lookatspeed
+  type: Field
+  source:
+    id: lookatspeed
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float lookatspeed
+    return:
+      type: System.Single
+    content.vb: Public lookatspeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeMove.runningspeed
+  commentId: F:SAMURAI.RefereeMove.runningspeed
+  id: runningspeed
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: runningspeed
+  nameWithType: RefereeMove.runningspeed
+  fullName: SAMURAI.RefereeMove.runningspeed
+  type: Field
+  source:
+    id: runningspeed
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float runningspeed
+    return:
+      type: System.Single
+    content.vb: Public runningspeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeMove.radius
+  commentId: F:SAMURAI.RefereeMove.radius
+  id: radius
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: radius
+  nameWithType: RefereeMove.radius
+  fullName: SAMURAI.RefereeMove.radius
+  type: Field
+  source:
+    id: radius
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float radius
+    return:
+      type: System.Single
+    content.vb: Public radius As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeMove.refereeArea
+  commentId: F:SAMURAI.RefereeMove.refereeArea
+  id: refereeArea
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: refereeArea
+  nameWithType: RefereeMove.refereeArea
+  fullName: SAMURAI.RefereeMove.refereeArea
+  type: Field
+  source:
+    id: refereeArea
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public RefereeArea refereeArea
+    return:
+      type: SAMURAI.RefereeArea
+    content.vb: Public refereeArea As RefereeArea
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.RefereeArea
+  commentId: T:SAMURAI.RefereeArea
+  parent: SAMURAI
+  name: RefereeArea
+  nameWithType: RefereeArea
+  fullName: SAMURAI.RefereeArea

@@ -1,0 +1,302 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.FieldInfo
+  commentId: T:SAMURAI.FieldInfo
+  id: FieldInfo
+  parent: SAMURAI
+  children:
+  - SAMURAI.FieldInfo.acc_down_coeff
+  - SAMURAI.FieldInfo.acc_up_coeff
+  - SAMURAI.FieldInfo.drag
+  - SAMURAI.FieldInfo.GetAccDownCoeff(Vector3)
+  - SAMURAI.FieldInfo.GetAccUpCoeff(Vector3)
+  - SAMURAI.FieldInfo.Getdrag(Vector3)
+  langs:
+  - csharp
+  - vb
+  name: FieldInfo
+  nameWithType: FieldInfo
+  fullName: SAMURAI.FieldInfo
+  type: Class
+  source:
+    id: FieldInfo
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nフィールド\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class FieldInfo
+    content.vb: >-
+      <Serializable>
+
+      Public Class FieldInfo
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.FieldInfo.acc_up_coeff
+  commentId: F:SAMURAI.FieldInfo.acc_up_coeff
+  id: acc_up_coeff
+  parent: SAMURAI.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: acc_up_coeff
+  nameWithType: FieldInfo.acc_up_coeff
+  fullName: SAMURAI.FieldInfo.acc_up_coeff
+  type: Field
+  source:
+    id: acc_up_coeff
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float[][] acc_up_coeff
+    return:
+      type: System.Single[][]
+    content.vb: Public acc_up_coeff As Single()()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldInfo.acc_down_coeff
+  commentId: F:SAMURAI.FieldInfo.acc_down_coeff
+  id: acc_down_coeff
+  parent: SAMURAI.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: acc_down_coeff
+  nameWithType: FieldInfo.acc_down_coeff
+  fullName: SAMURAI.FieldInfo.acc_down_coeff
+  type: Field
+  source:
+    id: acc_down_coeff
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float[][] acc_down_coeff
+    return:
+      type: System.Single[][]
+    content.vb: Public acc_down_coeff As Single()()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldInfo.drag
+  commentId: F:SAMURAI.FieldInfo.drag
+  id: drag
+  parent: SAMURAI.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: drag
+  nameWithType: FieldInfo.drag
+  fullName: SAMURAI.FieldInfo.drag
+  type: Field
+  source:
+    id: drag
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float[][] drag
+    return:
+      type: System.Single[][]
+    content.vb: Public drag As Single()()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldInfo.GetAccUpCoeff(Vector3)
+  commentId: M:SAMURAI.FieldInfo.GetAccUpCoeff(Vector3)
+  id: GetAccUpCoeff(Vector3)
+  parent: SAMURAI.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: GetAccUpCoeff(Vector3)
+  nameWithType: FieldInfo.GetAccUpCoeff(Vector3)
+  fullName: SAMURAI.FieldInfo.GetAccUpCoeff(Vector3)
+  type: Method
+  source:
+    id: GetAccUpCoeff
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float GetAccUpCoeff(Vector3 position)
+    parameters:
+    - id: position
+      type: Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function GetAccUpCoeff(position As Vector3) As Single
+  overload: SAMURAI.FieldInfo.GetAccUpCoeff*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldInfo.GetAccDownCoeff(Vector3)
+  commentId: M:SAMURAI.FieldInfo.GetAccDownCoeff(Vector3)
+  id: GetAccDownCoeff(Vector3)
+  parent: SAMURAI.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: GetAccDownCoeff(Vector3)
+  nameWithType: FieldInfo.GetAccDownCoeff(Vector3)
+  fullName: SAMURAI.FieldInfo.GetAccDownCoeff(Vector3)
+  type: Method
+  source:
+    id: GetAccDownCoeff
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float GetAccDownCoeff(Vector3 position)
+    parameters:
+    - id: position
+      type: Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function GetAccDownCoeff(position As Vector3) As Single
+  overload: SAMURAI.FieldInfo.GetAccDownCoeff*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldInfo.Getdrag(Vector3)
+  commentId: M:SAMURAI.FieldInfo.Getdrag(Vector3)
+  id: Getdrag(Vector3)
+  parent: SAMURAI.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: Getdrag(Vector3)
+  nameWithType: FieldInfo.Getdrag(Vector3)
+  fullName: SAMURAI.FieldInfo.Getdrag(Vector3)
+  type: Method
+  source:
+    id: Getdrag
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldInfo.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float Getdrag(Vector3 position)
+    parameters:
+    - id: position
+      type: Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function Getdrag(position As Vector3) As Single
+  overload: SAMURAI.FieldInfo.Getdrag*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single[][]
+  isExternal: true
+  name: Single[][]
+  nameWithType: Single[][]
+  fullName: System.Single[][]
+  nameWithType.vb: Single()()
+  fullName.vb: System.Single()()
+  name.vb: Single()()
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.FieldInfo.GetAccUpCoeff*
+  commentId: Overload:SAMURAI.FieldInfo.GetAccUpCoeff
+  name: GetAccUpCoeff
+  nameWithType: FieldInfo.GetAccUpCoeff
+  fullName: SAMURAI.FieldInfo.GetAccUpCoeff
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.FieldInfo.GetAccDownCoeff*
+  commentId: Overload:SAMURAI.FieldInfo.GetAccDownCoeff
+  name: GetAccDownCoeff
+  nameWithType: FieldInfo.GetAccDownCoeff
+  fullName: SAMURAI.FieldInfo.GetAccDownCoeff
+- uid: SAMURAI.FieldInfo.Getdrag*
+  commentId: Overload:SAMURAI.FieldInfo.Getdrag
+  name: Getdrag
+  nameWithType: FieldInfo.Getdrag
+  fullName: SAMURAI.FieldInfo.Getdrag

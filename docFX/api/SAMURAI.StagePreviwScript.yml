@@ -1,0 +1,304 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StagePreviwScript
+  commentId: T:SAMURAI.StagePreviwScript
+  id: StagePreviwScript
+  parent: SAMURAI
+  children:
+  - SAMURAI.StagePreviwScript.nameText
+  - SAMURAI.StagePreviwScript.OnClickClose
+  - SAMURAI.StagePreviwScript.OnClickStart
+  - SAMURAI.StagePreviwScript.previewDisplay(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  - SAMURAI.StagePreviwScript.stageImage
+  - SAMURAI.StagePreviwScript.stageSelectMng
+  - SAMURAI.StagePreviwScript.summaryText
+  langs:
+  - csharp
+  - vb
+  name: StagePreviwScript
+  nameWithType: StagePreviwScript
+  fullName: SAMURAI.StagePreviwScript
+  type: Class
+  source:
+    id: StagePreviwScript
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StagePreviwScript : MonoBehaviour'
+    content.vb: >-
+      Public Class StagePreviwScript
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StagePreviwScript.nameText
+  commentId: F:SAMURAI.StagePreviwScript.nameText
+  id: nameText
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: nameText
+  nameWithType: StagePreviwScript.nameText
+  fullName: SAMURAI.StagePreviwScript.nameText
+  type: Field
+  source:
+    id: nameText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Text nameText
+    return:
+      type: Text
+    content.vb: Public nameText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StagePreviwScript.summaryText
+  commentId: F:SAMURAI.StagePreviwScript.summaryText
+  id: summaryText
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: summaryText
+  nameWithType: StagePreviwScript.summaryText
+  fullName: SAMURAI.StagePreviwScript.summaryText
+  type: Field
+  source:
+    id: summaryText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Text summaryText
+    return:
+      type: Text
+    content.vb: Public summaryText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StagePreviwScript.stageSelectMng
+  commentId: F:SAMURAI.StagePreviwScript.stageSelectMng
+  id: stageSelectMng
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: stageSelectMng
+  nameWithType: StagePreviwScript.stageSelectMng
+  fullName: SAMURAI.StagePreviwScript.stageSelectMng
+  type: Field
+  source:
+    id: stageSelectMng
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public StageSelectManager stageSelectMng
+    return:
+      type: SAMURAI.StageSelectManager
+    content.vb: Public stageSelectMng As StageSelectManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StagePreviwScript.stageImage
+  commentId: F:SAMURAI.StagePreviwScript.stageImage
+  id: stageImage
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: stageImage
+  nameWithType: StagePreviwScript.stageImage
+  fullName: SAMURAI.StagePreviwScript.stageImage
+  type: Field
+  source:
+    id: stageImage
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject stageImage
+    return:
+      type: GameObject
+    content.vb: Public stageImage As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StagePreviwScript.previewDisplay(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  commentId: M:SAMURAI.StagePreviwScript.previewDisplay(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  id: previewDisplay(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: previewDisplay(String, String, Sprite, SceneObject)
+  nameWithType: StagePreviwScript.previewDisplay(String, String, Sprite, SceneObject)
+  fullName: SAMURAI.StagePreviwScript.previewDisplay(System.String, System.String, Sprite, SAMURAI.SceneObject)
+  type: Method
+  source:
+    id: previewDisplay
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void previewDisplay(string stageName, string summary, Sprite image, SceneObject scene)
+    parameters:
+    - id: stageName
+      type: System.String
+    - id: summary
+      type: System.String
+    - id: image
+      type: Sprite
+    - id: scene
+      type: SAMURAI.SceneObject
+    content.vb: Public Sub previewDisplay(stageName As String, summary As String, image As Sprite, scene As SceneObject)
+  overload: SAMURAI.StagePreviwScript.previewDisplay*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StagePreviwScript.OnClickClose
+  commentId: M:SAMURAI.StagePreviwScript.OnClickClose
+  id: OnClickClose
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: OnClickClose()
+  nameWithType: StagePreviwScript.OnClickClose()
+  fullName: SAMURAI.StagePreviwScript.OnClickClose()
+  type: Method
+  source:
+    id: OnClickClose
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void OnClickClose()
+    content.vb: Public Sub OnClickClose
+  overload: SAMURAI.StagePreviwScript.OnClickClose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StagePreviwScript.OnClickStart
+  commentId: M:SAMURAI.StagePreviwScript.OnClickStart
+  id: OnClickStart
+  parent: SAMURAI.StagePreviwScript
+  langs:
+  - csharp
+  - vb
+  name: OnClickStart()
+  nameWithType: StagePreviwScript.OnClickStart()
+  fullName: SAMURAI.StagePreviwScript.OnClickStart()
+  type: Method
+  source:
+    id: OnClickStart
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StagePreviwScript.cs
+    startLine: 48
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void OnClickStart()
+    content.vb: Public Sub OnClickStart
+  overload: SAMURAI.StagePreviwScript.OnClickStart*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: SAMURAI.StageSelectManager
+  commentId: T:SAMURAI.StageSelectManager
+  parent: SAMURAI
+  name: StageSelectManager
+  nameWithType: StageSelectManager
+  fullName: SAMURAI.StageSelectManager
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.StagePreviwScript.previewDisplay*
+  commentId: Overload:SAMURAI.StagePreviwScript.previewDisplay
+  name: previewDisplay
+  nameWithType: StagePreviwScript.previewDisplay
+  fullName: SAMURAI.StagePreviwScript.previewDisplay
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: SAMURAI.SceneObject
+  commentId: T:SAMURAI.SceneObject
+  parent: SAMURAI
+  name: SceneObject
+  nameWithType: SceneObject
+  fullName: SAMURAI.SceneObject
+- uid: SAMURAI.StagePreviwScript.OnClickClose*
+  commentId: Overload:SAMURAI.StagePreviwScript.OnClickClose
+  name: OnClickClose
+  nameWithType: StagePreviwScript.OnClickClose
+  fullName: SAMURAI.StagePreviwScript.OnClickClose
+- uid: SAMURAI.StagePreviwScript.OnClickStart*
+  commentId: Overload:SAMURAI.StagePreviwScript.OnClickStart
+  name: OnClickStart
+  nameWithType: StagePreviwScript.OnClickStart
+  fullName: SAMURAI.StagePreviwScript.OnClickStart

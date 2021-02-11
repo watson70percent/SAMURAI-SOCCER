@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Penalty
+  commentId: T:SAMURAI.Penalty
+  id: Penalty
+  parent: SAMURAI
+  children:
+  - SAMURAI.Penalty.gameOverPanel
+  - SAMURAI.Penalty.redAudioClip
+  - SAMURAI.Penalty.yellowAudioClip
+  - SAMURAI.Penalty.yellowCard
+  - SAMURAI.Penalty.YellowCard
+  langs:
+  - csharp
+  - vb
+  name: Penalty
+  nameWithType: Penalty
+  fullName: SAMURAI.Penalty
+  type: Class
+  source:
+    id: Penalty
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class Penalty : MonoBehaviour'
+    content.vb: >-
+      Public Class Penalty
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.Penalty.yellowCard
+  commentId: F:SAMURAI.Penalty.yellowCard
+  id: yellowCard
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: yellowCard
+  nameWithType: Penalty.yellowCard
+  fullName: SAMURAI.Penalty.yellowCard
+  type: Field
+  source:
+    id: yellowCard
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject[] yellowCard
+    return:
+      type: GameObject[]
+    content.vb: Public yellowCard As GameObject()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.Penalty.gameOverPanel
+  commentId: F:SAMURAI.Penalty.gameOverPanel
+  id: gameOverPanel
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: gameOverPanel
+  nameWithType: Penalty.gameOverPanel
+  fullName: SAMURAI.Penalty.gameOverPanel
+  type: Field
+  source:
+    id: gameOverPanel
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject gameOverPanel
+    return:
+      type: GameObject
+    content.vb: Public gameOverPanel As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.Penalty.yellowAudioClip
+  commentId: F:SAMURAI.Penalty.yellowAudioClip
+  id: yellowAudioClip
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: yellowAudioClip
+  nameWithType: Penalty.yellowAudioClip
+  fullName: SAMURAI.Penalty.yellowAudioClip
+  type: Field
+  source:
+    id: yellowAudioClip
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public AudioClip yellowAudioClip
+    return:
+      type: AudioClip
+    content.vb: Public yellowAudioClip As AudioClip
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.Penalty.redAudioClip
+  commentId: F:SAMURAI.Penalty.redAudioClip
+  id: redAudioClip
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: redAudioClip
+  nameWithType: Penalty.redAudioClip
+  fullName: SAMURAI.Penalty.redAudioClip
+  type: Field
+  source:
+    id: redAudioClip
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public AudioClip redAudioClip
+    return:
+      type: AudioClip
+    content.vb: Public redAudioClip As AudioClip
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.Penalty.YellowCard
+  commentId: M:SAMURAI.Penalty.YellowCard
+  id: YellowCard
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: YellowCard()
+  nameWithType: Penalty.YellowCard()
+  fullName: SAMURAI.Penalty.YellowCard()
+  type: Method
+  source:
+    id: YellowCard
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void YellowCard()
+    content.vb: Public Sub YellowCard
+  overload: SAMURAI.Penalty.YellowCard*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject[]
+  isExternal: true
+  name: GameObject[]
+  nameWithType: GameObject[]
+  fullName: GameObject[]
+  nameWithType.vb: GameObject()
+  fullName.vb: GameObject()
+  name.vb: GameObject()
+  spec.csharp:
+  - uid: GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
+- uid: SAMURAI.Penalty.YellowCard*
+  commentId: Overload:SAMURAI.Penalty.YellowCard
+  name: YellowCard
+  nameWithType: Penalty.YellowCard
+  fullName: SAMURAI.Penalty.YellowCard

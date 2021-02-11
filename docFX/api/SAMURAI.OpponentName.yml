@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.OpponentName
+  commentId: T:SAMURAI.OpponentName
+  id: OpponentName
+  parent: SAMURAI
+  children:
+  - SAMURAI.OpponentName.name
+  langs:
+  - csharp
+  - vb
+  name: OpponentName
+  nameWithType: OpponentName
+  fullName: SAMURAI.OpponentName
+  type: Class
+  source:
+    id: OpponentName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\OpponentName.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n敵チームの名前の保存場所\n"
+  example: []
+  syntax:
+    content: public static class OpponentName
+    content.vb: Public Module OpponentName
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: SAMURAI.OpponentName.name
+  commentId: F:SAMURAI.OpponentName.name
+  id: name
+  parent: SAMURAI.OpponentName
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: OpponentName.name
+  fullName: SAMURAI.OpponentName.name
+  type: Field
+  source:
+    id: name
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\OpponentName.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n敵チームの名前\n"
+  example: []
+  syntax:
+    content: public static string name
+    return:
+      type: System.String
+    content.vb: Public Shared name As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
