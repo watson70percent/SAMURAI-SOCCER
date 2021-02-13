@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  id: StateChangedArg
+  parent: SAMURAI
+  children:
+  - SAMURAI.StateChangedArg.#ctor(SAMURAI.GameState)
+  - SAMURAI.StateChangedArg.gameState
+  langs:
+  - csharp
+  - vb
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+  type: Class
+  source:
+    id: StateChangedArg
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StateChangedArg : EventArgs'
+    content.vb: >-
+      Public Class StateChangedArg
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StateChangedArg.gameState
+  commentId: F:SAMURAI.StateChangedArg.gameState
+  id: gameState
+  parent: SAMURAI.StateChangedArg
+  langs:
+  - csharp
+  - vb
+  name: gameState
+  nameWithType: StateChangedArg.gameState
+  fullName: SAMURAI.StateChangedArg.gameState
+  type: Field
+  source:
+    id: gameState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameState gameState
+    return:
+      type: SAMURAI.GameState
+    content.vb: Public gameState As GameState
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StateChangedArg.#ctor(SAMURAI.GameState)
+  commentId: M:SAMURAI.StateChangedArg.#ctor(SAMURAI.GameState)
+  id: '#ctor(SAMURAI.GameState)'
+  parent: SAMURAI.StateChangedArg
+  langs:
+  - csharp
+  - vb
+  name: StateChangedArg(GameState)
+  nameWithType: StateChangedArg.StateChangedArg(GameState)
+  fullName: SAMURAI.StateChangedArg.StateChangedArg(SAMURAI.GameState)
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public StateChangedArg(GameState state)
+    parameters:
+    - id: state
+      type: SAMURAI.GameState
+    content.vb: Public Sub New(state As GameState)
+  overload: SAMURAI.StateChangedArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.GameState
+  commentId: T:SAMURAI.GameState
+  parent: SAMURAI
+  name: GameState
+  nameWithType: GameState
+  fullName: SAMURAI.GameState
+- uid: SAMURAI.StateChangedArg.#ctor*
+  commentId: Overload:SAMURAI.StateChangedArg.#ctor
+  name: StateChangedArg
+  nameWithType: StateChangedArg.StateChangedArg
+  fullName: SAMURAI.StateChangedArg.StateChangedArg

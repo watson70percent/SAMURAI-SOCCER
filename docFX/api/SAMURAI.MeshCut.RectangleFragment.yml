@@ -1,0 +1,329 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.MeshCut.RectangleFragment
+  commentId: T:SAMURAI.MeshCut.RectangleFragment
+  id: MeshCut.RectangleFragment
+  parent: SAMURAI
+  children:
+  - SAMURAI.MeshCut.RectangleFragment.#ctor(System.Int32,System.Int32,Vector3,Vector3,Vector2[],Vector3[])
+  - SAMURAI.MeshCut.RectangleFragment.cutLine
+  - SAMURAI.MeshCut.RectangleFragment.cutPoints
+  - SAMURAI.MeshCut.RectangleFragment.normals
+  - SAMURAI.MeshCut.RectangleFragment.notCutPointIndecies
+  - SAMURAI.MeshCut.RectangleFragment.uvs
+  langs:
+  - csharp
+  - vb
+  name: MeshCut.RectangleFragment
+  nameWithType: MeshCut.RectangleFragment
+  fullName: SAMURAI.MeshCut.RectangleFragment
+  type: Class
+  source:
+    id: RectangleFragment
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 997
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public class RectangleFragment
+    content.vb: Public Class RectangleFragment
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.MeshCut.RectangleFragment.cutLine
+  commentId: F:SAMURAI.MeshCut.RectangleFragment.cutLine
+  id: cutLine
+  parent: SAMURAI.MeshCut.RectangleFragment
+  langs:
+  - csharp
+  - vb
+  name: cutLine
+  nameWithType: MeshCut.RectangleFragment.cutLine
+  fullName: SAMURAI.MeshCut.RectangleFragment.cutLine
+  type: Field
+  source:
+    id: cutLine
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 999
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3 cutLine
+    return:
+      type: Vector3
+    content.vb: Public cutLine As Vector3
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.RectangleFragment.cutPoints
+  commentId: F:SAMURAI.MeshCut.RectangleFragment.cutPoints
+  id: cutPoints
+  parent: SAMURAI.MeshCut.RectangleFragment
+  langs:
+  - csharp
+  - vb
+  name: cutPoints
+  nameWithType: MeshCut.RectangleFragment.cutPoints
+  fullName: SAMURAI.MeshCut.RectangleFragment.cutPoints
+  type: Field
+  source:
+    id: cutPoints
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 1000
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3[] cutPoints
+    return:
+      type: Vector3[]
+    content.vb: Public cutPoints As Vector3()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.RectangleFragment.notCutPointIndecies
+  commentId: F:SAMURAI.MeshCut.RectangleFragment.notCutPointIndecies
+  id: notCutPointIndecies
+  parent: SAMURAI.MeshCut.RectangleFragment
+  langs:
+  - csharp
+  - vb
+  name: notCutPointIndecies
+  nameWithType: MeshCut.RectangleFragment.notCutPointIndecies
+  fullName: SAMURAI.MeshCut.RectangleFragment.notCutPointIndecies
+  type: Field
+  source:
+    id: notCutPointIndecies
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 1001
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public int[] notCutPointIndecies
+    return:
+      type: System.Int32[]
+    content.vb: Public notCutPointIndecies As Integer()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.RectangleFragment.normals
+  commentId: F:SAMURAI.MeshCut.RectangleFragment.normals
+  id: normals
+  parent: SAMURAI.MeshCut.RectangleFragment
+  langs:
+  - csharp
+  - vb
+  name: normals
+  nameWithType: MeshCut.RectangleFragment.normals
+  fullName: SAMURAI.MeshCut.RectangleFragment.normals
+  type: Field
+  source:
+    id: normals
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 1002
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3[] normals
+    return:
+      type: Vector3[]
+    content.vb: Public normals As Vector3()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.RectangleFragment.uvs
+  commentId: F:SAMURAI.MeshCut.RectangleFragment.uvs
+  id: uvs
+  parent: SAMURAI.MeshCut.RectangleFragment
+  langs:
+  - csharp
+  - vb
+  name: uvs
+  nameWithType: MeshCut.RectangleFragment.uvs
+  fullName: SAMURAI.MeshCut.RectangleFragment.uvs
+  type: Field
+  source:
+    id: uvs
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 1003
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector2[] uvs
+    return:
+      type: Vector2[]
+    content.vb: Public uvs As Vector2()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.RectangleFragment.#ctor(System.Int32,System.Int32,Vector3,Vector3,Vector2[],Vector3[])
+  commentId: M:SAMURAI.MeshCut.RectangleFragment.#ctor(System.Int32,System.Int32,Vector3,Vector3,Vector2[],Vector3[])
+  id: '#ctor(System.Int32,System.Int32,Vector3,Vector3,Vector2[],Vector3[])'
+  parent: SAMURAI.MeshCut.RectangleFragment
+  langs:
+  - csharp
+  - vb
+  name: RectangleFragment(Int32, Int32, Vector3, Vector3, Vector2[], Vector3[])
+  nameWithType: MeshCut.RectangleFragment.RectangleFragment(Int32, Int32, Vector3, Vector3, Vector2[], Vector3[])
+  fullName: SAMURAI.MeshCut.RectangleFragment.RectangleFragment(System.Int32, System.Int32, Vector3, Vector3, Vector2[], Vector3[])
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 1004
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public RectangleFragment(int notCutPoint1Index, int notCutPoint2Index, Vector3 cutPoint1, Vector3 cutPoint2, Vector2[] uvs, Vector3[] normals)
+    parameters:
+    - id: notCutPoint1Index
+      type: System.Int32
+    - id: notCutPoint2Index
+      type: System.Int32
+    - id: cutPoint1
+      type: Vector3
+    - id: cutPoint2
+      type: Vector3
+    - id: uvs
+      type: Vector2[]
+    - id: normals
+      type: Vector3[]
+    content.vb: Public Sub New(notCutPoint1Index As Integer, notCutPoint2Index As Integer, cutPoint1 As Vector3, cutPoint2 As Vector3, uvs As Vector2(), normals As Vector3())
+  overload: SAMURAI.MeshCut.RectangleFragment.#ctor*
+  nameWithType.vb: MeshCut.RectangleFragment.RectangleFragment(Int32, Int32, Vector3, Vector3, Vector2(), Vector3())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: SAMURAI.MeshCut.RectangleFragment.RectangleFragment(System.Int32, System.Int32, Vector3, Vector3, Vector2(), Vector3())
+  name.vb: RectangleFragment(Int32, Int32, Vector3, Vector3, Vector2(), Vector3())
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.MeshCut.RectangleFragment.#ctor*
+  commentId: Overload:SAMURAI.MeshCut.RectangleFragment.#ctor
+  name: RectangleFragment
+  nameWithType: MeshCut.RectangleFragment.RectangleFragment
+  fullName: SAMURAI.MeshCut.RectangleFragment.RectangleFragment
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

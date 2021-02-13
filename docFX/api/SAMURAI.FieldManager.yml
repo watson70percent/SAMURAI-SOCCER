@@ -1,0 +1,349 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.FieldManager
+  commentId: T:SAMURAI.FieldManager
+  id: FieldManager
+  parent: SAMURAI
+  children:
+  - SAMURAI.FieldManager.AdaptInversePosition(Vector3)
+  - SAMURAI.FieldManager.AdaptPosition(Vector3)
+  - SAMURAI.FieldManager.ball
+  - SAMURAI.FieldManager.gm
+  - SAMURAI.FieldManager.info
+  - SAMURAI.FieldManager.manager
+  - SAMURAI.FieldManager.root
+  - SAMURAI.FieldManager.rotation
+  langs:
+  - csharp
+  - vb
+  name: FieldManager
+  nameWithType: FieldManager
+  fullName: SAMURAI.FieldManager
+  type: Class
+  source:
+    id: FieldManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nフィールド情報を管理する。\n"
+  example: []
+  syntax:
+    content: 'public class FieldManager : MonoBehaviour'
+    content.vb: >-
+      Public Class FieldManager
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.FieldManager.root
+  commentId: F:SAMURAI.FieldManager.root
+  id: root
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: root
+  nameWithType: FieldManager.root
+  fullName: SAMURAI.FieldManager.root
+  type: Field
+  source:
+    id: root
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject root
+    return:
+      type: GameObject
+    content.vb: Public root As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.info
+  commentId: F:SAMURAI.FieldManager.info
+  id: info
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: info
+  nameWithType: FieldManager.info
+  fullName: SAMURAI.FieldManager.info
+  type: Field
+  source:
+    id: info
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public FieldInfo info
+    return:
+      type: SAMURAI.FieldInfo
+    content.vb: >-
+      <NonSerialized>
+
+      Public info As FieldInfo
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.manager
+  commentId: F:SAMURAI.FieldManager.manager
+  id: manager
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: manager
+  nameWithType: FieldManager.manager
+  fullName: SAMURAI.FieldManager.manager
+  type: Field
+  source:
+    id: manager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public EasyCPUManager manager
+    return:
+      type: SAMURAI.EasyCPUManager
+    content.vb: Public manager As EasyCPUManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.gm
+  commentId: F:SAMURAI.FieldManager.gm
+  id: gm
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: gm
+  nameWithType: FieldManager.gm
+  fullName: SAMURAI.FieldManager.gm
+  type: Field
+  source:
+    id: gm
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameManager gm
+    return:
+      type: SAMURAI.GameManager
+    content.vb: Public gm As GameManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.ball
+  commentId: F:SAMURAI.FieldManager.ball
+  id: ball
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: FieldManager.ball
+  fullName: SAMURAI.FieldManager.ball
+  type: Field
+  source:
+    id: ball
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject ball
+    return:
+      type: GameObject
+    content.vb: Public ball As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.rotation
+  commentId: F:SAMURAI.FieldManager.rotation
+  id: rotation
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: rotation
+  nameWithType: FieldManager.rotation
+  fullName: SAMURAI.FieldManager.rotation
+  type: Field
+  source:
+    id: rotation
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public FieldRotationBase rotation
+    return:
+      type: SAMURAI.FieldRotationBase
+    content.vb: Public rotation As FieldRotationBase
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.AdaptPosition(Vector3)
+  commentId: M:SAMURAI.FieldManager.AdaptPosition(Vector3)
+  id: AdaptPosition(Vector3)
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: AdaptPosition(Vector3)
+  nameWithType: FieldManager.AdaptPosition(Vector3)
+  fullName: SAMURAI.FieldManager.AdaptPosition(Vector3)
+  type: Method
+  source:
+    id: AdaptPosition
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 94
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n回転後の位置に変換\n"
+  example: []
+  syntax:
+    content: public Vector3 AdaptPosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: Vector3
+      description: 元の場所
+    return:
+      type: Vector3
+      description: 変換後の場所
+    content.vb: Public Function AdaptPosition(pos As Vector3) As Vector3
+  overload: SAMURAI.FieldManager.AdaptPosition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FieldManager.AdaptInversePosition(Vector3)
+  commentId: M:SAMURAI.FieldManager.AdaptInversePosition(Vector3)
+  id: AdaptInversePosition(Vector3)
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: AdaptInversePosition(Vector3)
+  nameWithType: FieldManager.AdaptInversePosition(Vector3)
+  fullName: SAMURAI.FieldManager.AdaptInversePosition(Vector3)
+  type: Method
+  source:
+    id: AdaptInversePosition
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 104
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n開店前の位置に変換\n"
+  example: []
+  syntax:
+    content: public Vector3 AdaptInversePosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: Vector3
+      description: 元の場所
+    return:
+      type: Vector3
+      description: 変換後の場所
+    content.vb: Public Function AdaptInversePosition(pos As Vector3) As Vector3
+  overload: SAMURAI.FieldManager.AdaptInversePosition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.FieldInfo
+  commentId: T:SAMURAI.FieldInfo
+  parent: SAMURAI
+  name: FieldInfo
+  nameWithType: FieldInfo
+  fullName: SAMURAI.FieldInfo
+- uid: SAMURAI.EasyCPUManager
+  commentId: T:SAMURAI.EasyCPUManager
+  parent: SAMURAI
+  name: EasyCPUManager
+  nameWithType: EasyCPUManager
+  fullName: SAMURAI.EasyCPUManager
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.FieldRotationBase
+  commentId: T:SAMURAI.FieldRotationBase
+  parent: SAMURAI
+  name: FieldRotationBase
+  nameWithType: FieldRotationBase
+  fullName: SAMURAI.FieldRotationBase
+- uid: SAMURAI.FieldManager.AdaptPosition*
+  commentId: Overload:SAMURAI.FieldManager.AdaptPosition
+  name: AdaptPosition
+  nameWithType: FieldManager.AdaptPosition
+  fullName: SAMURAI.FieldManager.AdaptPosition
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: SAMURAI.FieldManager.AdaptInversePosition*
+  commentId: Overload:SAMURAI.FieldManager.AdaptInversePosition
+  name: AdaptInversePosition
+  nameWithType: FieldManager.AdaptInversePosition
+  fullName: SAMURAI.FieldManager.AdaptInversePosition

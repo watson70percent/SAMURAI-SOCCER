@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Result
+  commentId: T:SAMURAI.Result
+  id: Result
+  parent: SAMURAI
+  children:
+  - SAMURAI.Result.Draw
+  - SAMURAI.Result.Lose
+  - SAMURAI.Result.Win
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: Result
+  fullName: SAMURAI.Result
+  type: Enum
+  source:
+    id: Result
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public enum Result
+    content.vb: Public Enum Result
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SAMURAI.Result.Win
+  commentId: F:SAMURAI.Result.Win
+  id: Win
+  parent: SAMURAI.Result
+  langs:
+  - csharp
+  - vb
+  name: Win
+  nameWithType: Result.Win
+  fullName: SAMURAI.Result.Win
+  type: Field
+  source:
+    id: Win
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Win = 0
+    return:
+      type: SAMURAI.Result
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.Result.Lose
+  commentId: F:SAMURAI.Result.Lose
+  id: Lose
+  parent: SAMURAI.Result
+  langs:
+  - csharp
+  - vb
+  name: Lose
+  nameWithType: Result.Lose
+  fullName: SAMURAI.Result.Lose
+  type: Field
+  source:
+    id: Lose
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Lose = 1
+    return:
+      type: SAMURAI.Result
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.Result.Draw
+  commentId: F:SAMURAI.Result.Draw
+  id: Draw
+  parent: SAMURAI.Result
+  langs:
+  - csharp
+  - vb
+  name: Draw
+  nameWithType: Result.Draw
+  fullName: SAMURAI.Result.Draw
+  type: Field
+  source:
+    id: Draw
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Draw = 2
+    return:
+      type: SAMURAI.Result
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: SAMURAI.Result
+  commentId: T:SAMURAI.Result
+  parent: SAMURAI
+  name: Result
+  nameWithType: Result
+  fullName: SAMURAI.Result

@@ -1,0 +1,507 @@
+{
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "PLACEHOLDER",
+    "keywords": "PLACEHOLDER TODO: Add .NET projects to the src folder and run docfx to generate REAL API Documentation !"
+  },
+  "api/SAMURAI.AnimationController.html": {
+    "href": "api/SAMURAI.AnimationController.html",
+    "title": "Class AnimationController",
+    "keywords": "Class AnimationController Inheritance System.Object AnimationController Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class AnimationController : MonoBehaviour Fields slash Declaration public GameObject slash Field Value Type Description GameObject Methods Attack() Declaration public void Attack() Run() Declaration public void Run() Stay() Declaration public void Stay() Events AttackEvent Declaration public event EventHandler AttackEvent Event Type Type Description System.EventHandler"
+  },
+  "api/SAMURAI.AvoidCarScript.html": {
+    "href": "api/SAMURAI.AvoidCarScript.html",
+    "title": "Class AvoidCarScript",
+    "keywords": "Class AvoidCarScript Inheritance System.Object AvoidCarScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class AvoidCarScript : MonoBehaviour"
+  },
+  "api/SAMURAI.Ball_Temp.html": {
+    "href": "api/SAMURAI.Ball_Temp.html",
+    "title": "Class Ball_Temp",
+    "keywords": "Class Ball_Temp Inheritance System.Object Ball_Temp Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Ball_Temp : MonoBehaviour"
+  },
+  "api/SAMURAI.CallStatueOfLiberty.html": {
+    "href": "api/SAMURAI.CallStatueOfLiberty.html",
+    "title": "Class CallStatueOfLiberty",
+    "keywords": "Class CallStatueOfLiberty Inheritance System.Object CallStatueOfLiberty Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class CallStatueOfLiberty : MonoBehaviour Fields StatuePrefab Declaration public GameObject StatuePrefab Field Value Type Description GameObject"
+  },
+  "api/SAMURAI.ColliderInputData.html": {
+    "href": "api/SAMURAI.ColliderInputData.html",
+    "title": "Class ColliderInputData",
+    "keywords": "Class ColliderInputData Inheritance System.Object ColliderInputData Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class ColliderInputData Constructors ColliderInputData(Polygon[], CollisionObject) Declaration public ColliderInputData(Polygon[] polygons, CollisionObject collisionObjectInstance) Parameters Type Name Description Polygon [] polygons CollisionObject collisionObjectInstance Fields collisionObject Declaration public CollisionObject collisionObject Field Value Type Description CollisionObject polygons Declaration public Polygon[] polygons Field Value Type Description Polygon []"
+  },
+  "api/SAMURAI.CollisionInfo.html": {
+    "href": "api/SAMURAI.CollisionInfo.html",
+    "title": "Class CollisionInfo",
+    "keywords": "Class CollisionInfo Inheritance System.Object CollisionInfo Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class CollisionInfo Constructors CollisionInfo(Polygon, Vector3, CollisionManager.ColliderType) Declaration public CollisionInfo(Polygon _polygon, Vector3 _hitPoint, CollisionManager.ColliderType _colliderType) Parameters Type Name Description Polygon _polygon Vector3 _hitPoint CollisionManager.ColliderType _colliderType Fields colliderType Declaration public CollisionManager.ColliderType colliderType Field Value Type Description CollisionManager.ColliderType hitPoint Declaration public Vector3 hitPoint Field Value Type Description Vector3 polygon Declaration public Polygon polygon Field Value Type Description Polygon"
+  },
+  "api/SAMURAI.CollisionManager.ColliderType.html": {
+    "href": "api/SAMURAI.CollisionManager.ColliderType.html",
+    "title": "Enum CollisionManager.ColliderType",
+    "keywords": "Enum CollisionManager.ColliderType Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public enum ColliderType Fields Name Description EnemyBoby EnemyWeapon PlayerBody PlayerWeapon"
+  },
+  "api/SAMURAI.CollisionManager.html": {
+    "href": "api/SAMURAI.CollisionManager.html",
+    "title": "Class CollisionManager",
+    "keywords": "Class CollisionManager Inheritance System.Object CollisionManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class CollisionManager : MonoBehaviour Methods AddColliderDataList(ColliderInputData, CollisionManager.ColliderType) Declaration public static void AddColliderDataList(ColliderInputData colliderData, CollisionManager.ColliderType colliderType) Parameters Type Name Description ColliderInputData colliderData CollisionManager.ColliderType colliderType OverrapCheck(Vector3, Vector3, Vector3, Vector3, Vector3, out Vector3) Declaration public static bool OverrapCheck(Vector3 trianglePosition, Vector3 triangleVector1, Vector3 triangleVector2, Vector3 lineStartPosition, Vector3 lineVector, out Vector3 hitPoint) Parameters Type Name Description Vector3 trianglePosition Vector3 triangleVector1 Vector3 triangleVector2 Vector3 lineStartPosition Vector3 lineVector Vector3 hitPoint Returns Type Description System.Boolean"
+  },
+  "api/SAMURAI.CollisionObject.html": {
+    "href": "api/SAMURAI.CollisionObject.html",
+    "title": "Class CollisionObject",
+    "keywords": "Class CollisionObject Inheritance System.Object CollisionObject Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public abstract class CollisionObject : MonoBehaviour Properties ColliderType Declaration public abstract CollisionManager.ColliderType ColliderType { get; } Property Value Type Description CollisionManager.ColliderType LinesOfTrabsform Declaration protected abstract List<Transform[]> LinesOfTrabsform { get; } Property Value Type Description System.Collections.Generic.List < Transform []> Methods CheckCollision() 衝突判定をとってほしいフレームでCollisionManagerにPolygonをおくる, Update内で使うこと(LateUpdateはだめ) Declaration protected void CheckCollision() OnCollision(CollisionInfo) 衝突が検知されたらこれが呼ばれる Declaration public abstract void OnCollision(CollisionInfo collisionInfo) Parameters Type Name Description CollisionInfo collisionInfo StartOfCollisionInstance() Declaration protected abstract void StartOfCollisionInstance() UpdateOfCollisionInstance() Declaration protected abstract void UpdateOfCollisionInstance()"
+  },
+  "api/SAMURAI.Constants.html": {
+    "href": "api/SAMURAI.Constants.html",
+    "title": "Class Constants",
+    "keywords": "Class Constants 定数 Inheritance System.Object Constants Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public static class Constants Fields OppornentGoalPoint 相手のゴール Declaration public static readonly Vector3 OppornentGoalPoint Field Value Type Description Vector3 OurGoalPoint 自陣のゴール Declaration public static readonly Vector3 OurGoalPoint Field Value Type Description Vector3 Properties G2G ゴール間の距離 Declaration public static float G2G { get; } Property Value Type Description System.Single OppornentSpornPoint 相手のスポーン地点 Declaration public static Vector3 OppornentSpornPoint { get; } Property Value Type Description Vector3 OpprnentInitialSpornPointCenterOppornent 相手ボールのときの相手の最初のスポーン場所 Declaration public static Vector3[] OpprnentInitialSpornPointCenterOppornent { get; } Property Value Type Description Vector3 [] OpprnentInitialSpornPointCenterTeam 味方ボールのときの相手の最初のスポーン場所 Declaration public static Vector3[] OpprnentInitialSpornPointCenterTeam { get; } Property Value Type Description Vector3 [] TeammateInitialSpornPointCenterOppornent 相手ボールのときの味方の最初のスポーン場所 Declaration public static Vector3[] TeammateInitialSpornPointCenterOppornent { get; } Property Value Type Description Vector3 [] TeammateInitialSpornPointCenterTeam 味方ボールのときの味方の最初のスポーン場所 Declaration public static Vector3[] TeammateInitialSpornPointCenterTeam { get; } Property Value Type Description Vector3 [] TeammateSpornPoint 味方のスポーン地点 Declaration public static Vector3 TeammateSpornPoint { get; } Property Value Type Description Vector3 Width フィールドの幅 Declaration public static float Width { get; } Property Value Type Description System.Single"
+  },
+  "api/SAMURAI.CrowdMenber.html": {
+    "href": "api/SAMURAI.CrowdMenber.html",
+    "title": "Class CrowdMenber",
+    "keywords": "Class CrowdMenber Inheritance System.Object CrowdMenber Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class CrowdMenber : MonoBehaviour Fields crowdMaterial Declaration public Material crowdMaterial Field Value Type Description Material crowdRenderers Declaration public Renderer[] crowdRenderers Field Value Type Description Renderer [] crowdTextures Declaration public Texture[] crowdTextures Field Value Type Description Texture []"
+  },
+  "api/SAMURAI.CrushedToDeath.html": {
+    "href": "api/SAMURAI.CrushedToDeath.html",
+    "title": "Class CrushedToDeath",
+    "keywords": "Class CrushedToDeath Inheritance System.Object CrushedToDeath Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class CrushedToDeath : MonoBehaviour"
+  },
+  "api/SAMURAI.EasyCPU.html": {
+    "href": "api/SAMURAI.EasyCPU.html",
+    "title": "Class EasyCPU",
+    "keywords": "Class EasyCPU Inheritance System.Object EasyCPU Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class EasyCPU : MonoBehaviour Fields ball Declaration public BallControler ball Field Value Type Description BallControler dest Declaration public GameObject dest Field Value Type Description GameObject field Declaration public FieldManager field Field Value Type Description FieldManager manager Declaration public EasyCPUManager manager Field Value Type Description EasyCPUManager rb Declaration public Rigidbody rb Field Value Type Description Rigidbody status Declaration public PersonalStatus status Field Value Type Description PersonalStatus Methods Attacked() 攻撃されたときに呼ぶ。hpが減り、吹っ飛びやすくなる。 Declaration public void Attacked() Pause() Declaration public void Pause() Play() Declaration public void Play() SetMass() 吹っ飛びやすさを再設定 Declaration public void SetMass() SlowDown() Declaration public void SlowDown()"
+  },
+  "api/SAMURAI.EasyCPUManager.html": {
+    "href": "api/SAMURAI.EasyCPUManager.html",
+    "title": "Class EasyCPUManager",
+    "keywords": "Class EasyCPUManager CPUを操作するクラス Inheritance System.Object EasyCPUManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class EasyCPUManager : MonoBehaviour Fields audioSource Declaration public AudioSource audioSource Field Value Type Description AudioSource ball Declaration public BallControler ball Field Value Type Description BallControler gm Declaration public GameManager gm Field Value Type Description GameManager goalCanvas Declaration public GameObject goalCanvas Field Value Type Description GameObject goalSound Declaration public AudioClip goalSound Field Value Type Description AudioClip near_opp Declaration [NonSerialized] public GameObject near_opp Field Value Type Description GameObject near_team Declaration [NonSerialized] public GameObject near_team Field Value Type Description GameObject opp Declaration public List<GameObject> opp Field Value Type Description System.Collections.Generic.List < GameObject > opp_p Declaration public Transform opp_p Field Value Type Description Transform opp_stock Declaration public Team opp_stock Field Value Type Description Team rbs Declaration public Dictionary<GameObject, Rigidbody> rbs Field Value Type Description System.Collections.Generic.Dictionary < GameObject , Rigidbody > referee Declaration public GameObject referee Field Value Type Description GameObject samurai Declaration public GameObject samurai Field Value Type Description GameObject startSound Declaration public AudioClip startSound Field Value Type Description AudioClip team Declaration public List<GameObject> team Field Value Type Description System.Collections.Generic.List < GameObject > team_p Declaration public Transform team_p Field Value Type Description Transform team_stock Declaration public Team team_stock Field Value Type Description Team timer Declaration public TimerScript timer Field Value Type Description TimerScript Properties OpponentMemberCount 敵の人数 Declaration public int OpponentMemberCount { get; } Property Value Type Description System.Int32 TeamMemberCount 味方の人数 Declaration public int TeamMemberCount { get; } Property Value Type Description System.Int32 Methods Boost(Boolean, Single, Int32) ブースト Declaration public void Boost(bool isTeam, float coeff, int finishTime = 0) Parameters Type Name Description System.Boolean isTeam 味方にブーストか System.Single coeff 倍率 System.Int32 finishTime ブースト終了時間 Init(Boolean) 初期化。選手の生成をしてる。 Declaration public void Init(bool centerIsOppornent = true) Parameters Type Name Description System.Boolean centerIsOppornent kill(GameObject) 選手を殺す。一応瞬時復活もさせる。 Declaration public void kill(GameObject dead) Parameters Type Name Description GameObject dead 死ぬ対象の選手 Sporn(PersonalStatus, Vector3) 選手復活 Declaration public GameObject Sporn(PersonalStatus status, Vector3 pos) Parameters Type Name Description PersonalStatus status ステータス Vector3 pos 復活場所 Returns Type Description GameObject"
+  },
+  "api/SAMURAI.EMoveScript.html": {
+    "href": "api/SAMURAI.EMoveScript.html",
+    "title": "Class EMoveScript",
+    "keywords": "Class EMoveScript Inheritance System.Object EMoveScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class EMoveScript : MonoBehaviour Fields field Declaration public int[] field Field Value Type Description System.Int32 []"
+  },
+  "api/SAMURAI.Extentions.html": {
+    "href": "api/SAMURAI.Extentions.html",
+    "title": "Class Extentions",
+    "keywords": "Class Extentions Inheritance System.Object Extentions Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public static class Extentions Methods ToVector2Int(GameObject) Declaration public static Vector2Int ToVector2Int(this GameObject obj) Parameters Type Name Description GameObject obj Returns Type Description Vector2Int"
+  },
+  "api/SAMURAI.FieldInfo.html": {
+    "href": "api/SAMURAI.FieldInfo.html",
+    "title": "Class FieldInfo",
+    "keywords": "Class FieldInfo フィールド Inheritance System.Object FieldInfo Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax [Serializable] public class FieldInfo Fields acc_down_coeff Declaration public float[][] acc_down_coeff Field Value Type Description System.Single [][] acc_up_coeff Declaration public float[][] acc_up_coeff Field Value Type Description System.Single [][] drag Declaration public float[][] drag Field Value Type Description System.Single [][] Methods GetAccDownCoeff(Vector3) Declaration public float GetAccDownCoeff(Vector3 position) Parameters Type Name Description Vector3 position Returns Type Description System.Single GetAccUpCoeff(Vector3) Declaration public float GetAccUpCoeff(Vector3 position) Parameters Type Name Description Vector3 position Returns Type Description System.Single Getdrag(Vector3) Declaration public float Getdrag(Vector3 position) Parameters Type Name Description Vector3 position Returns Type Description System.Single"
+  },
+  "api/SAMURAI.FieldMaker.html": {
+    "href": "api/SAMURAI.FieldMaker.html",
+    "title": "Class FieldMaker",
+    "keywords": "Class FieldMaker フィールドを作るためのクラス。メニューウィンドウに出るけど実行用。スクリプトで内容を書く。 Inheritance System.Object FieldMaker Namespace : SAMURAI Assembly : Assembly-CSharp-Editor.dll Syntax public class FieldMaker : EditorWindow"
+  },
+  "api/SAMURAI.FieldManager.html": {
+    "href": "api/SAMURAI.FieldManager.html",
+    "title": "Class FieldManager",
+    "keywords": "Class FieldManager フィールド情報を管理する。 Inheritance System.Object FieldManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class FieldManager : MonoBehaviour Fields ball Declaration public GameObject ball Field Value Type Description GameObject gm Declaration public GameManager gm Field Value Type Description GameManager info Declaration [NonSerialized] public FieldInfo info Field Value Type Description FieldInfo manager Declaration public EasyCPUManager manager Field Value Type Description EasyCPUManager root Declaration public GameObject root Field Value Type Description GameObject rotation Declaration public FieldRotationBase rotation Field Value Type Description FieldRotationBase Methods AdaptInversePosition(Vector3) 開店前の位置に変換 Declaration public Vector3 AdaptInversePosition(Vector3 pos) Parameters Type Name Description Vector3 pos 元の場所 Returns Type Description Vector3 変換後の場所 AdaptPosition(Vector3) 回転後の位置に変換 Declaration public Vector3 AdaptPosition(Vector3 pos) Parameters Type Name Description Vector3 pos 元の場所 Returns Type Description Vector3 変換後の場所"
+  },
+  "api/SAMURAI.FieldNumber.html": {
+    "href": "api/SAMURAI.FieldNumber.html",
+    "title": "Class FieldNumber",
+    "keywords": "Class FieldNumber 何番目のフィールドを読み込むか Inheritance System.Object FieldNumber Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public static class FieldNumber Fields no Declaration public static int no Field Value Type Description System.Int32"
+  },
+  "api/SAMURAI.FieldRotationBase.html": {
+    "href": "api/SAMURAI.FieldRotationBase.html",
+    "title": "Class FieldRotationBase",
+    "keywords": "Class FieldRotationBase フィールドの傾きを持ったクラス。ここから派生。 Inheritance System.Object FieldRotationBase NonRotation Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public abstract class FieldRotationBase : MonoBehaviour Fields rotation 回転 Declaration public Quaternion rotation Field Value Type Description Quaternion Methods AdaptInversePosition(Vector3) Declaration public Vector3 AdaptInversePosition(Vector3 pos) Parameters Type Name Description Vector3 pos Returns Type Description Vector3 AdaptPosition(Vector3) Declaration public Vector3 AdaptPosition(Vector3 pos) Parameters Type Name Description Vector3 pos Returns Type Description Vector3 Awake() 初期化。ご自由に。 Declaration protected virtual void Awake()"
+  },
+  "api/SAMURAI.FinishProcess.html": {
+    "href": "api/SAMURAI.FinishProcess.html",
+    "title": "Class FinishProcess",
+    "keywords": "Class FinishProcess Inheritance System.Object FinishProcess Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class FinishProcess : MonoBehaviour Fields ResultSceneName Declaration public string ResultSceneName Field Value Type Description System.String Methods FinishProcessContent(StateChangedArg) Declaration public void FinishProcessContent(StateChangedArg stateChangedArg) Parameters Type Name Description StateChangedArg stateChangedArg"
+  },
+  "api/SAMURAI.FinishState.html": {
+    "href": "api/SAMURAI.FinishState.html",
+    "title": "Class FinishState",
+    "keywords": "Class FinishState Inheritance System.Object FinishState Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class FinishState : ImtStateMachine<GameManager>.State Methods Enter() Declaration protected override void Enter() Exit() Declaration protected override void Exit() Update() Declaration protected override void Update()"
+  },
+  "api/SAMURAI.Flag.html": {
+    "href": "api/SAMURAI.Flag.html",
+    "title": "Class Flag",
+    "keywords": "Class Flag Inheritance System.Object Flag Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Flag : MonoBehaviour"
+  },
+  "api/SAMURAI.GameManager.html": {
+    "href": "api/SAMURAI.GameManager.html",
+    "title": "Class GameManager",
+    "keywords": "Class GameManager Inheritance System.Object GameManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class GameManager : MonoBehaviour Properties CurrentGameState Declaration public GameState CurrentGameState { get; } Property Value Type Description GameState Methods CurrentStateChanger(GameState) デバッグ用 現在のStateを変更する Declaration public void CurrentStateChanger(GameState gameState) Parameters Type Name Description GameState gameState CurrentStateResercher() デバッグ用 現在のStateを確認する Declaration public void CurrentStateResercher() StartStateChangeEvent(GameState) イベント発火関数 Declaration public void StartStateChangeEvent(GameState gameState) Parameters Type Name Description GameState gameState StateChangeSignal(GameState) 任意のStateに変更するIdをステートマシンに送る Declaration public void StateChangeSignal(GameState state) Parameters Type Name Description GameState state Events StateChange Stateの移動時に呼ばれるイベント Declaration public event StateChangedHandler StateChange Event Type Type Description StateChangedHandler"
+  },
+  "api/SAMURAI.GameOverPanel.html": {
+    "href": "api/SAMURAI.GameOverPanel.html",
+    "title": "Class GameOverPanel",
+    "keywords": "Class GameOverPanel Inheritance System.Object GameOverPanel Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class GameOverPanel : MonoBehaviour"
+  },
+  "api/SAMURAI.GameState.html": {
+    "href": "api/SAMURAI.GameState.html",
+    "title": "Enum GameState",
+    "keywords": "Enum GameState メインゲームの状態 Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public enum GameState Fields Name Description Finish Pause Playing Reset Standby"
+  },
+  "api/SAMURAI.GoalCut.html": {
+    "href": "api/SAMURAI.GoalCut.html",
+    "title": "Class GoalCut",
+    "keywords": "Class GoalCut Inheritance System.Object GoalCut Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class GoalCut : MonoBehaviour"
+  },
+  "api/SAMURAI.GoalText.html": {
+    "href": "api/SAMURAI.GoalText.html",
+    "title": "Class GoalText",
+    "keywords": "Class GoalText Inheritance System.Object GoalText Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class GoalText : MonoBehaviour Fields text Declaration public TextMeshProUGUI text Field Value Type Description TMPro.TextMeshProUGUI"
+  },
+  "api/SAMURAI.GoalView.html": {
+    "href": "api/SAMURAI.GoalView.html",
+    "title": "Class GoalView",
+    "keywords": "Class GoalView Inheritance System.Object GoalView Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class GoalView : MonoBehaviour Fields image Declaration public Image image Field Value Type Description Image"
+  },
+  "api/SAMURAI.GroundTexture.html": {
+    "href": "api/SAMURAI.GroundTexture.html",
+    "title": "Class GroundTexture",
+    "keywords": "Class GroundTexture Inheritance System.Object GroundTexture Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class GroundTexture : MonoBehaviour"
+  },
+  "api/SAMURAI.html": {
+    "href": "api/SAMURAI.html",
+    "title": "Namespace SAMURAI",
+    "keywords": "Namespace SAMURAI Classes AnimationController AvoidCarScript Ball_Temp CallStatueOfLiberty ColliderInputData CollisionInfo CollisionManager CollisionObject Constants 定数 CrowdMenber CrushedToDeath EasyCPU EasyCPUManager CPUを操作するクラス EMoveScript Extentions FieldInfo フィールド FieldMaker フィールドを作るためのクラス。メニューウィンドウに出るけど実行用。スクリプトで内容を書く。 FieldManager フィールド情報を管理する。 FieldNumber 何番目のフィールドを読み込むか FieldRotationBase フィールドの傾きを持ったクラス。ここから派生。 FinishProcess FinishState Flag GameManager GameOverPanel GoalCut GoalText GoalView GroundTexture IceStageManager JiangshiSceneManager JudgeGameEnd LoadAnyScene MeshCut MeshCut.MeshData MeshCut.RectangleFragment MeshCut.TriangleFragment NonRotation NonWind NumberManager OpponentName 敵チームの名前の保存場所 Panda PandaMaker particle PauseBackScript PauseButton PauseButtonScript PauseState Penalty PlayingState PointScript Polygon RefereeArea RefereeMove ResetState ResultManager RiseStatue SamuraiDebugger SamuraiWordBase SamuraiWordBaseEditor SceneObject ShotObjectScript SkinnedMeshCut SkinnedMeshCut.MeshData Slash slidepad Snow StageIcon StageIconButton StagePrefabManager StagePrefabManagerEditor StagePreviwScript StageSelect StageSelectData StageSelectManager StandardFade 他のタイプにも対応したいが、現状はTextのみ対応 StandbyState StandbyStateProcess StartCoroutineForPlayingState StateChangedArg StrikeObjectScript SugiTemp Sword Team TeamMaker test TimerScript VanishAndBorn Wall_temp WindInfoBase 風の情報を持ったクラス。これから派生させてください。 Enums CollisionManager.ColliderType GameState メインゲームの状態 Result StageSelectManager.StageSelectState いまはStageSelectManagerにつけてるけど、適当なオブジェクトにつけて、オブジェクトを適切につければ動くよ Delegates StateChangedHandler"
+  },
+  "api/SAMURAI.IceStageManager.html": {
+    "href": "api/SAMURAI.IceStageManager.html",
+    "title": "Class IceStageManager",
+    "keywords": "Class IceStageManager Inheritance System.Object IceStageManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class IceStageManager : MonoBehaviour Fields eclanoplan Declaration public GameObject eclanoplan Field Value Type Description GameObject greenMaterial Declaration public Material greenMaterial Field Value Type Description Material greenTexture Declaration public Texture greenTexture Field Value Type Description Texture iceMaterial Declaration public Material iceMaterial Field Value Type Description Material iceTexture Declaration public Texture iceTexture Field Value Type Description Texture no Declaration public static int no Field Value Type Description System.Int32 stageManager Declaration public StagePrefabManager stageManager Field Value Type Description StagePrefabManager"
+  },
+  "api/SAMURAI.JiangshiSceneManager.html": {
+    "href": "api/SAMURAI.JiangshiSceneManager.html",
+    "title": "Class JiangshiSceneManager",
+    "keywords": "Class JiangshiSceneManager Inheritance System.Object JiangshiSceneManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class JiangshiSceneManager : MonoBehaviour Fields areaSize Declaration public int areaSize Field Value Type Description System.Int32"
+  },
+  "api/SAMURAI.JudgeGameEnd.html": {
+    "href": "api/SAMURAI.JudgeGameEnd.html",
+    "title": "Class JudgeGameEnd",
+    "keywords": "Class JudgeGameEnd Inheritance System.Object JudgeGameEnd Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class JudgeGameEnd : MonoBehaviour Fields ResultSceneName Declaration public string ResultSceneName Field Value Type Description System.String"
+  },
+  "api/SAMURAI.LoadAnyScene.html": {
+    "href": "api/SAMURAI.LoadAnyScene.html",
+    "title": "Class LoadAnyScene",
+    "keywords": "Class LoadAnyScene Inheritance System.Object LoadAnyScene Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class LoadAnyScene : MonoBehaviour Methods LoadScene(String) Scene遷移 Declaration public void LoadScene(string targetSceneName) Parameters Type Name Description System.String targetSceneName ロード先のScene"
+  },
+  "api/SAMURAI.MeshCut.html": {
+    "href": "api/SAMURAI.MeshCut.html",
+    "title": "Class MeshCut",
+    "keywords": "Class MeshCut Inheritance System.Object MeshCut Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class MeshCut : MonoBehaviour Methods CutMesh(GameObject, Vector3, Vector3) gameObjectを切断して2つのMeshにして返します. 1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です. 何度も切るようなオブジェクトでも頂点数が増えないように処理をしてあります Declaration public static Mesh[] CutMesh(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection) Parameters Type Name Description GameObject target 切断対象のgameObject Vector3 planeAnchorPoint 切断面上の1点 Vector3 planeNormalDirection 切断面の法線 Returns Type Description Mesh [] CutMeshOnce(GameObject, Vector3, Vector3) gameObjectを切断して2つのMeshにして返します. 1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です. 切断の処理が雑なので何度も斬ると頂点数が膨れ上がります. そのかわり一回斬るだけならこっちが早い Declaration public static Mesh[] CutMeshOnce(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection) Parameters Type Name Description GameObject target 切断対象のgameObject Vector3 planeAnchorPoint 切断面上の1点 Vector3 planeNormalDirection 切断面の法線 Returns Type Description Mesh [] CutMeshRough(GameObject, Vector3, Vector3) gameObjectを雑に切断して2つのMeshにして返します. 切断面がザラザラなのでハイポリにしか使えませんが処理はちょっと早いです. 1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です. Declaration public static Mesh[] CutMeshRough(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection) Parameters Type Name Description GameObject target 切断対象のgameObject Vector3 planeAnchorPoint 切断面上の1点 Vector3 planeNormalDirection 切断面の法線 Returns Type Description Mesh []"
+  },
+  "api/SAMURAI.MeshCut.MeshData.html": {
+    "href": "api/SAMURAI.MeshCut.MeshData.html",
+    "title": "Class MeshCut.MeshData",
+    "keywords": "Class MeshCut.MeshData Inheritance System.Object MeshCut.MeshData Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class MeshData Fields normals Declaration public List<Vector3> normals Field Value Type Description System.Collections.Generic.List < Vector3 > rectangleFragments Declaration public List<List<MeshCut.RectangleFragment>> rectangleFragments Field Value Type Description System.Collections.Generic.List < System.Collections.Generic.List < MeshCut.RectangleFragment >> subMeshIndices Declaration public List<List<int>> subMeshIndices Field Value Type Description System.Collections.Generic.List < System.Collections.Generic.List < System.Int32 >> triangleFragments Declaration public List<List<MeshCut.TriangleFragment>> triangleFragments Field Value Type Description System.Collections.Generic.List < System.Collections.Generic.List < MeshCut.TriangleFragment >> triangles Declaration public List<int> triangles Field Value Type Description System.Collections.Generic.List < System.Int32 > uvs Declaration public List<Vector2> uvs Field Value Type Description System.Collections.Generic.List < Vector2 > vertices Declaration public List<Vector3> vertices Field Value Type Description System.Collections.Generic.List < Vector3 > verticesArray Declaration public Vector3[] verticesArray Field Value Type Description Vector3 [] Methods AddTriangle(Int32, Int32, Int32, Int32) Declaration public void AddTriangle(int p1, int p2, int p3, int submeshNum) Parameters Type Name Description System.Int32 p1 System.Int32 p2 System.Int32 p3 System.Int32 submeshNum AddTriangle(Int32, Int32, Vector3, Vector3, Vector2, Int32) Declaration public void AddTriangle(int notCutIndex0, int notCutIndex1, Vector3 cutPoint, Vector3 normal, Vector2 uv, int submeshNum) Parameters Type Name Description System.Int32 notCutIndex0 System.Int32 notCutIndex1 Vector3 cutPoint Vector3 normal Vector2 uv System.Int32 submeshNum AddTriangle(Int32, Vector3, Vector3, Vector3[], Vector2[], Int32) Declaration public void AddTriangle(int notCutIndex, Vector3 cutPoint1, Vector3 cutPoint2, Vector3[] normals3, Vector2[] uvs3, int submeshNum) Parameters Type Name Description System.Int32 notCutIndex Vector3 cutPoint1 Vector3 cutPoint2 Vector3 [] normals3 Vector2 [] uvs3 System.Int32 submeshNum ClearAll() Declaration public void ClearAll() ConnectFragments() Declaration public void ConnectFragments()"
+  },
+  "api/SAMURAI.MeshCut.RectangleFragment.html": {
+    "href": "api/SAMURAI.MeshCut.RectangleFragment.html",
+    "title": "Class MeshCut.RectangleFragment",
+    "keywords": "Class MeshCut.RectangleFragment Inheritance System.Object MeshCut.RectangleFragment Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class RectangleFragment Constructors RectangleFragment(Int32, Int32, Vector3, Vector3, Vector2[], Vector3[]) Declaration public RectangleFragment(int notCutPoint1Index, int notCutPoint2Index, Vector3 cutPoint1, Vector3 cutPoint2, Vector2[] uvs, Vector3[] normals) Parameters Type Name Description System.Int32 notCutPoint1Index System.Int32 notCutPoint2Index Vector3 cutPoint1 Vector3 cutPoint2 Vector2 [] uvs Vector3 [] normals Fields cutLine Declaration public Vector3 cutLine Field Value Type Description Vector3 cutPoints Declaration public Vector3[] cutPoints Field Value Type Description Vector3 [] normals Declaration public Vector3[] normals Field Value Type Description Vector3 [] notCutPointIndecies Declaration public int[] notCutPointIndecies Field Value Type Description System.Int32 [] uvs Declaration public Vector2[] uvs Field Value Type Description Vector2 []"
+  },
+  "api/SAMURAI.MeshCut.TriangleFragment.html": {
+    "href": "api/SAMURAI.MeshCut.TriangleFragment.html",
+    "title": "Class MeshCut.TriangleFragment",
+    "keywords": "Class MeshCut.TriangleFragment Inheritance System.Object MeshCut.TriangleFragment Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class TriangleFragment Constructors TriangleFragment(Int32, Vector3, Vector3, Vector2[], Vector3[]) Declaration public TriangleFragment(int notCutPoint1Index, Vector3 cutPoint1, Vector3 cutPoint2, Vector2[] uvs, Vector3[] normals) Parameters Type Name Description System.Int32 notCutPoint1Index Vector3 cutPoint1 Vector3 cutPoint2 Vector2 [] uvs Vector3 [] normals Fields cutLine Declaration public Vector3 cutLine Field Value Type Description Vector3 cutPoints Declaration public Vector3[] cutPoints Field Value Type Description Vector3 [] normals Declaration public Vector3[] normals Field Value Type Description Vector3 [] notCutPointIndecies Declaration public int notCutPointIndecies Field Value Type Description System.Int32 uvs Declaration public Vector2[] uvs Field Value Type Description Vector2 []"
+  },
+  "api/SAMURAI.NonRotation.html": {
+    "href": "api/SAMURAI.NonRotation.html",
+    "title": "Class NonRotation",
+    "keywords": "Class NonRotation Inheritance System.Object FieldRotationBase NonRotation Inherited Members FieldRotationBase.rotation FieldRotationBase.AdaptPosition(Vector3) FieldRotationBase.AdaptInversePosition(Vector3) Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class NonRotation : FieldRotationBase Methods Awake() Declaration protected override void Awake() Overrides FieldRotationBase.Awake()"
+  },
+  "api/SAMURAI.NonWind.html": {
+    "href": "api/SAMURAI.NonWind.html",
+    "title": "Class NonWind",
+    "keywords": "Class NonWind Inheritance System.Object WindInfoBase NonWind Inherited Members WindInfoBase.wind WindInfoBase.WindEffect(Vector3) Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class NonWind : WindInfoBase Methods Start() Declaration protected override void Start() Overrides WindInfoBase.Start()"
+  },
+  "api/SAMURAI.NumberManager.html": {
+    "href": "api/SAMURAI.NumberManager.html",
+    "title": "Class NumberManager",
+    "keywords": "Class NumberManager Inheritance System.Object NumberManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class NumberManager : MonoBehaviour Fields cpuManager Declaration public EasyCPUManager cpuManager Field Value Type Description EasyCPUManager enemyNumber Declaration public Text enemyNumber Field Value Type Description Text"
+  },
+  "api/SAMURAI.OpponentName.html": {
+    "href": "api/SAMURAI.OpponentName.html",
+    "title": "Class OpponentName",
+    "keywords": "Class OpponentName 敵チームの名前の保存場所 Inheritance System.Object OpponentName Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public static class OpponentName Fields name 敵チームの名前 Declaration public static string name Field Value Type Description System.String"
+  },
+  "api/SAMURAI.Panda.html": {
+    "href": "api/SAMURAI.Panda.html",
+    "title": "Class Panda",
+    "keywords": "Class Panda Inheritance System.Object Panda Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Panda : MonoBehaviour Fields gameOverPanel Declaration public GameObject gameOverPanel Field Value Type Description GameObject Methods GameOver() Declaration public void GameOver()"
+  },
+  "api/SAMURAI.PandaMaker.html": {
+    "href": "api/SAMURAI.PandaMaker.html",
+    "title": "Class PandaMaker",
+    "keywords": "Class PandaMaker Inheritance System.Object PandaMaker Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PandaMaker : MonoBehaviour"
+  },
+  "api/SAMURAI.particle.html": {
+    "href": "api/SAMURAI.particle.html",
+    "title": "Class particle",
+    "keywords": "Class particle Inheritance System.Object particle Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class particle : MonoBehaviour Methods PA() Declaration public void PA()"
+  },
+  "api/SAMURAI.PauseBackScript.html": {
+    "href": "api/SAMURAI.PauseBackScript.html",
+    "title": "Class PauseBackScript",
+    "keywords": "Class PauseBackScript Inheritance System.Object PauseBackScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PauseBackScript : MonoBehaviour Fields gameManager Declaration public GameManager gameManager Field Value Type Description GameManager playing Declaration public bool playing Field Value Type Description System.Boolean Methods OnClick() Declaration public void OnClick() Pause() Declaration public void Pause() PauseBackButton(StateChangedArg) Declaration public void PauseBackButton(StateChangedArg stateChangedArg) Parameters Type Name Description StateChangedArg stateChangedArg Playing() Declaration public void Playing() Reset() Declaration public void Reset()"
+  },
+  "api/SAMURAI.PauseButton.html": {
+    "href": "api/SAMURAI.PauseButton.html",
+    "title": "Class PauseButton",
+    "keywords": "Class PauseButton Inheritance System.Object PauseButton Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PauseButton : MonoBehaviour Fields pausePanel Declaration public GameObject pausePanel Field Value Type Description GameObject Methods ContinueButton() Declaration public void ContinueButton() MenuBackButton() Declaration public void MenuBackButton() OnClick() Declaration public void OnClick() RestartButton() Declaration public void RestartButton()"
+  },
+  "api/SAMURAI.PauseButtonScript.html": {
+    "href": "api/SAMURAI.PauseButtonScript.html",
+    "title": "Class PauseButtonScript",
+    "keywords": "Class PauseButtonScript Inheritance System.Object PauseButtonScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PauseButtonScript : MonoBehaviour Fields gameManager Declaration public GameManager gameManager Field Value Type Description GameManager playing Declaration public bool playing Field Value Type Description System.Boolean Methods OnClick() Declaration public void OnClick() Pause() Declaration public void Pause() PauseButton(StateChangedArg) Declaration public void PauseButton(StateChangedArg stateChangedArg) Parameters Type Name Description StateChangedArg stateChangedArg Playing() Declaration public void Playing() Reset() Declaration public void Reset()"
+  },
+  "api/SAMURAI.PauseState.html": {
+    "href": "api/SAMURAI.PauseState.html",
+    "title": "Class PauseState",
+    "keywords": "Class PauseState Inheritance System.Object PauseState Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PauseState : ImtStateMachine<GameManager>.State Methods Enter() Declaration protected override void Enter() Exit() Declaration protected override void Exit() Update() Declaration protected override void Update()"
+  },
+  "api/SAMURAI.Penalty.html": {
+    "href": "api/SAMURAI.Penalty.html",
+    "title": "Class Penalty",
+    "keywords": "Class Penalty Inheritance System.Object Penalty Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Penalty : MonoBehaviour Fields gameOverPanel Declaration public GameObject gameOverPanel Field Value Type Description GameObject redAudioClip Declaration public AudioClip redAudioClip Field Value Type Description AudioClip yellowAudioClip Declaration public AudioClip yellowAudioClip Field Value Type Description AudioClip yellowCard Declaration public GameObject[] yellowCard Field Value Type Description GameObject [] Methods YellowCard() Declaration public void YellowCard()"
+  },
+  "api/SAMURAI.PlayingState.html": {
+    "href": "api/SAMURAI.PlayingState.html",
+    "title": "Class PlayingState",
+    "keywords": "Class PlayingState Inheritance System.Object PlayingState Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PlayingState : ImtStateMachine<GameManager>.State Methods Enter() Declaration protected override void Enter() Exit() Declaration protected override void Exit() Update() Declaration protected override void Update()"
+  },
+  "api/SAMURAI.PointScript.html": {
+    "href": "api/SAMURAI.PointScript.html",
+    "title": "Class PointScript",
+    "keywords": "Class PointScript Inheritance System.Object PointScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class PointScript : MonoBehaviour Fields ballControler Declaration public BallControler ballControler Field Value Type Description BallControler leftSide Declaration public bool leftSide Field Value Type Description System.Boolean text Declaration public Text text Field Value Type Description Text Methods GainPoint(GoalEventArgs) Declaration public void GainPoint(GoalEventArgs e) Parameters Type Name Description GoalEventArgs e GetPoint(Int32) Declaration public int GetPoint(int p) Parameters Type Name Description System.Int32 p Returns Type Description System.Int32 Point(Object, GoalEventArgs) Declaration public void Point(object sender, GoalEventArgs e) Parameters Type Name Description System.Object sender GoalEventArgs e ResetPoint(Boolean) Declaration public void ResetPoint(bool p) Parameters Type Name Description System.Boolean p"
+  },
+  "api/SAMURAI.Polygon.html": {
+    "href": "api/SAMURAI.Polygon.html",
+    "title": "Class Polygon",
+    "keywords": "Class Polygon Inheritance System.Object Polygon Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Polygon Constructors Polygon(Vector3, Vector3, Vector3) Declaration public Polygon(Vector3 vertex1, Vector3 vertex2, Vector3 vertex3) Parameters Type Name Description Vector3 vertex1 Vector3 vertex2 Vector3 vertex3 Fields vertices Declaration public Vector3[] vertices Field Value Type Description Vector3 []"
+  },
+  "api/SAMURAI.RefereeArea.html": {
+    "href": "api/SAMURAI.RefereeArea.html",
+    "title": "Class RefereeArea",
+    "keywords": "Class RefereeArea Inheritance System.Object RefereeArea Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class RefereeArea : MonoBehaviour Fields anicom Declaration public AnimationController anicom Field Value Type Description AnimationController areaSize Declaration public float areaSize Field Value Type Description System.Single attackButton Declaration public Button attackButton Field Value Type Description Button maxang Declaration public float maxang Field Value Type Description System.Single penaltyManager Declaration public Penalty penaltyManager Field Value Type Description Penalty surprisedMark Declaration public ParticleSystem surprisedMark Field Value Type Description ParticleSystem useObstacles Declaration public bool useObstacles Field Value Type Description System.Boolean Methods MeshMaker() Declaration public void MeshMaker()"
+  },
+  "api/SAMURAI.RefereeMove.html": {
+    "href": "api/SAMURAI.RefereeMove.html",
+    "title": "Class RefereeMove",
+    "keywords": "Class RefereeMove Inheritance System.Object RefereeMove Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class RefereeMove : MonoBehaviour Fields anicon Declaration public Animator anicon Field Value Type Description Animator ball Declaration public GameObject ball Field Value Type Description GameObject lookatspeed Declaration public float lookatspeed Field Value Type Description System.Single radius Declaration public float radius Field Value Type Description System.Single refereeArea Declaration public RefereeArea refereeArea Field Value Type Description RefereeArea runningspeed Declaration public float runningspeed Field Value Type Description System.Single"
+  },
+  "api/SAMURAI.ResetState.html": {
+    "href": "api/SAMURAI.ResetState.html",
+    "title": "Class ResetState",
+    "keywords": "Class ResetState Inheritance System.Object ResetState Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class ResetState : ImtStateMachine<GameManager>.State Methods Enter() Declaration protected override void Enter() Exit() Declaration protected override void Exit() Update() Declaration protected override void Update()"
+  },
+  "api/SAMURAI.Result.html": {
+    "href": "api/SAMURAI.Result.html",
+    "title": "Enum Result",
+    "keywords": "Enum Result Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public enum Result Fields Name Description Draw Lose Win"
+  },
+  "api/SAMURAI.ResultManager.html": {
+    "href": "api/SAMURAI.ResultManager.html",
+    "title": "Class ResultManager",
+    "keywords": "Class ResultManager Inheritance System.Object ResultManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class ResultManager : MonoBehaviour Fields background Declaration public Camera background Field Value Type Description Camera resultText Declaration public string resultText Field Value Type Description System.String samuraiWordBase Declaration public SamuraiWordBase samuraiWordBase Field Value Type Description SamuraiWordBase texts Declaration public List<Text> texts Field Value Type Description System.Collections.Generic.List < Text > Methods SetResult(Result, String) Declaration public void SetResult(Result resultState, string resultText) Parameters Type Name Description Result resultState System.String resultText"
+  },
+  "api/SAMURAI.RiseStatue.html": {
+    "href": "api/SAMURAI.RiseStatue.html",
+    "title": "Class RiseStatue",
+    "keywords": "Class RiseStatue Inheritance System.Object RiseStatue Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class RiseStatue : MonoBehaviour"
+  },
+  "api/SAMURAI.SamuraiDebugger.html": {
+    "href": "api/SAMURAI.SamuraiDebugger.html",
+    "title": "Class SamuraiDebugger",
+    "keywords": "Class SamuraiDebugger Inheritance System.Object SamuraiDebugger Namespace : SAMURAI Assembly : Assembly-CSharp-Editor.dll Syntax public class SamuraiDebugger : EditorWindow"
+  },
+  "api/SAMURAI.SamuraiWordBase.html": {
+    "href": "api/SAMURAI.SamuraiWordBase.html",
+    "title": "Class SamuraiWordBase",
+    "keywords": "Class SamuraiWordBase Inheritance System.Object SamuraiWordBase Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class SamuraiWordBase : ScriptableObject Fields samuraiwords Declaration public List<string> samuraiwords Field Value Type Description System.Collections.Generic.List < System.String >"
+  },
+  "api/SAMURAI.SamuraiWordBaseEditor.html": {
+    "href": "api/SAMURAI.SamuraiWordBaseEditor.html",
+    "title": "Class SamuraiWordBaseEditor",
+    "keywords": "Class SamuraiWordBaseEditor Inheritance System.Object SamuraiWordBaseEditor Namespace : SAMURAI Assembly : Assembly-CSharp-Editor.dll Syntax public class SamuraiWordBaseEditor : Editor Methods OnInspectorGUI() Declaration public override void OnInspectorGUI()"
+  },
+  "api/SAMURAI.SceneObject.html": {
+    "href": "api/SAMURAI.SceneObject.html",
+    "title": "Class SceneObject",
+    "keywords": "Class SceneObject Inheritance System.Object SceneObject Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax [Serializable] public class SceneObject Operators Implicit(SceneObject to String) Declaration public static implicit operator string (SceneObject sceneObject) Parameters Type Name Description SceneObject sceneObject Returns Type Description System.String Implicit(String to SceneObject) Declaration public static implicit operator SceneObject(string sceneName) Parameters Type Name Description System.String sceneName Returns Type Description SceneObject"
+  },
+  "api/SAMURAI.ShotObjectScript.html": {
+    "href": "api/SAMURAI.ShotObjectScript.html",
+    "title": "Class ShotObjectScript",
+    "keywords": "Class ShotObjectScript Inheritance System.Object ShotObjectScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class ShotObjectScript : MonoBehaviour"
+  },
+  "api/SAMURAI.SkinnedMeshCut.html": {
+    "href": "api/SAMURAI.SkinnedMeshCut.html",
+    "title": "Class SkinnedMeshCut",
+    "keywords": "Class SkinnedMeshCut Inheritance System.Object SkinnedMeshCut Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class SkinnedMeshCut : MonoBehaviour Methods CutMesh(SkinnedMeshRenderer, Vector3, Vector3) gameObjectを切断して2つのMeshにして返します. 1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です. 何度も切るようなオブジェクトでは Declaration public static Mesh[] CutMesh(SkinnedMeshRenderer target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection) Parameters Type Name Description SkinnedMeshRenderer target 切断対象のgameObject Vector3 planeAnchorPoint 切断面上の1点 Vector3 planeNormalDirection 切断面の法線 Returns Type Description Mesh []"
+  },
+  "api/SAMURAI.SkinnedMeshCut.MeshData.html": {
+    "href": "api/SAMURAI.SkinnedMeshCut.MeshData.html",
+    "title": "Class SkinnedMeshCut.MeshData",
+    "keywords": "Class SkinnedMeshCut.MeshData Inheritance System.Object SkinnedMeshCut.MeshData Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class MeshData Fields boneWeights Declaration public List<BoneWeight> boneWeights Field Value Type Description System.Collections.Generic.List < BoneWeight > normals Declaration public List<Vector3> normals Field Value Type Description System.Collections.Generic.List < Vector3 > subMeshIndices Declaration public List<List<int>> subMeshIndices Field Value Type Description System.Collections.Generic.List < System.Collections.Generic.List < System.Int32 >> triangles Declaration public List<int> triangles Field Value Type Description System.Collections.Generic.List < System.Int32 > uvs Declaration public List<Vector2> uvs Field Value Type Description System.Collections.Generic.List < Vector2 > vertices Declaration public List<Vector3> vertices Field Value Type Description System.Collections.Generic.List < Vector3 > Methods AddTriangle(Int32, Int32, Int32, Int32) Declaration public void AddTriangle(int p1, int p2, int p3, int submeshNum) Parameters Type Name Description System.Int32 p1 System.Int32 p2 System.Int32 p3 System.Int32 submeshNum AddTriangle(Int32, Int32, Vector3, Vector3, Vector2, Int32) Declaration public void AddTriangle(int notCutIndex0, int notCutIndex1, Vector3 cutPoint, Vector3 normal, Vector2 uv, int submeshNum) Parameters Type Name Description System.Int32 notCutIndex0 System.Int32 notCutIndex1 Vector3 cutPoint Vector3 normal Vector2 uv System.Int32 submeshNum AddTriangle(Int32, Vector3, Vector3, Vector3[], Vector2[], Int32) Declaration public void AddTriangle(int notCutIndex, Vector3 cutPoint1, Vector3 cutPoint2, Vector3[] normals3, Vector2[] uvs3, int submeshNum) Parameters Type Name Description System.Int32 notCutIndex Vector3 cutPoint1 Vector3 cutPoint2 Vector3 [] normals3 Vector2 [] uvs3 System.Int32 submeshNum ClearAll() Declaration public void ClearAll()"
+  },
+  "api/SAMURAI.Slash.html": {
+    "href": "api/SAMURAI.Slash.html",
+    "title": "Class Slash",
+    "keywords": "Class Slash Inheritance System.Object Slash Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Slash : MonoBehaviour Fields animator Declaration public Animator animator Field Value Type Description Animator slash Declaration public AudioClip slash Field Value Type Description AudioClip"
+  },
+  "api/SAMURAI.slidepad.html": {
+    "href": "api/SAMURAI.slidepad.html",
+    "title": "Class slidepad",
+    "keywords": "Class slidepad Inheritance System.Object slidepad Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class slidepad : MonoBehaviour Fields flagsParent Declaration public Transform flagsParent Field Value Type Description Transform joystick Declaration public GameObject joystick Field Value Type Description GameObject player Declaration public GameObject player Field Value Type Description GameObject speed Declaration public float speed Field Value Type Description System.Single Methods DragEnd() Declaration public void DragEnd() DragStart(BaseEventData) Declaration public void DragStart(BaseEventData baseEventData) Parameters Type Name Description BaseEventData baseEventData"
+  },
+  "api/SAMURAI.Snow.html": {
+    "href": "api/SAMURAI.Snow.html",
+    "title": "Class Snow",
+    "keywords": "Class Snow Inheritance System.Object Snow Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Snow : MonoBehaviour Fields audioSource Declaration public AudioSource audioSource Field Value Type Description AudioSource gameover Declaration public Image gameover Field Value Type Description Image gm Declaration public GameManager gm Field Value Type Description GameManager mainCamera Declaration public Transform mainCamera Field Value Type Description Transform pad Declaration public slidepad pad Field Value Type Description slidepad particle Declaration public ParticleSystem particle Field Value Type Description ParticleSystem samurai Declaration public Transform samurai Field Value Type Description Transform snow Declaration public Transform snow Field Value Type Description Transform"
+  },
+  "api/SAMURAI.StageIcon.html": {
+    "href": "api/SAMURAI.StageIcon.html",
+    "title": "Class StageIcon",
+    "keywords": "Class StageIcon Inheritance System.Object StageIcon Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StageIcon : MonoBehaviour"
+  },
+  "api/SAMURAI.StageIconButton.html": {
+    "href": "api/SAMURAI.StageIconButton.html",
+    "title": "Class StageIconButton",
+    "keywords": "Class StageIconButton Inheritance System.Object StageIconButton Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StageIconButton : MonoBehaviour Fields indexOfButton Declaration public int indexOfButton Field Value Type Description System.Int32 preview Declaration public GameObject preview Field Value Type Description GameObject stageSelectMng Declaration public StageSelectManager stageSelectMng Field Value Type Description StageSelectManager Methods OnClick() Declaration public void OnClick()"
+  },
+  "api/SAMURAI.StagePrefabManager.html": {
+    "href": "api/SAMURAI.StagePrefabManager.html",
+    "title": "Class StagePrefabManager",
+    "keywords": "Class StagePrefabManager Inheritance System.Object StagePrefabManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StagePrefabManager : MonoBehaviour Fields crowdMaterial Declaration public Material crowdMaterial Field Value Type Description Material crowdRenderers Declaration public Renderer[] crowdRenderers Field Value Type Description Renderer [] crowdTextures Declaration public Texture[] crowdTextures Field Value Type Description Texture [] flagRenderers Declaration public MeshRenderer[] flagRenderers Field Value Type Description MeshRenderer [] flagShader Declaration public Shader flagShader Field Value Type Description Shader flagTexture Declaration public Texture flagTexture Field Value Type Description Texture groundMaterial Declaration public Material groundMaterial Field Value Type Description Material groundNormalMap Declaration public Texture groundNormalMap Field Value Type Description Texture groundRenderer Declaration public Renderer groundRenderer Field Value Type Description Renderer groundTexture Declaration public Texture groundTexture Field Value Type Description Texture lookAtSpeed Declaration public float lookAtSpeed Field Value Type Description System.Single refereeArea Declaration public RefereeArea refereeArea Field Value Type Description RefereeArea refereeAreaSize Declaration public int refereeAreaSize Field Value Type Description System.Int32 refereeMaxAng Declaration public int refereeMaxAng Field Value Type Description System.Int32 refereeMove Declaration public RefereeMove refereeMove Field Value Type Description RefereeMove runningSpeed Declaration public float runningSpeed Field Value Type Description System.Single useObstacles Declaration public bool useObstacles Field Value Type Description System.Boolean"
+  },
+  "api/SAMURAI.StagePrefabManagerEditor.html": {
+    "href": "api/SAMURAI.StagePrefabManagerEditor.html",
+    "title": "Class StagePrefabManagerEditor",
+    "keywords": "Class StagePrefabManagerEditor Inheritance System.Object StagePrefabManagerEditor Namespace : SAMURAI Assembly : Assembly-CSharp-Editor.dll Syntax public class StagePrefabManagerEditor : Editor Methods OnInspectorGUI() Declaration public override void OnInspectorGUI()"
+  },
+  "api/SAMURAI.StagePreviwScript.html": {
+    "href": "api/SAMURAI.StagePreviwScript.html",
+    "title": "Class StagePreviwScript",
+    "keywords": "Class StagePreviwScript Inheritance System.Object StagePreviwScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StagePreviwScript : MonoBehaviour Fields nameText Declaration public Text nameText Field Value Type Description Text stageImage Declaration public GameObject stageImage Field Value Type Description GameObject stageSelectMng Declaration public StageSelectManager stageSelectMng Field Value Type Description StageSelectManager summaryText Declaration public Text summaryText Field Value Type Description Text Methods OnClickClose() Declaration public void OnClickClose() OnClickStart() Declaration public void OnClickStart() previewDisplay(String, String, Sprite, SceneObject) Declaration public void previewDisplay(string stageName, string summary, Sprite image, SceneObject scene) Parameters Type Name Description System.String stageName System.String summary Sprite image SceneObject scene"
+  },
+  "api/SAMURAI.StageSelect.html": {
+    "href": "api/SAMURAI.StageSelect.html",
+    "title": "Class StageSelect",
+    "keywords": "Class StageSelect Inheritance System.Object StageSelect Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax [Serializable] public class StageSelect Fields fieldNumber Declaration public int fieldNumber Field Value Type Description System.Int32 gameScene Declaration public SceneObject gameScene Field Value Type Description SceneObject name Declaration public string name Field Value Type Description System.String oppnentName Declaration public string oppnentName Field Value Type Description System.String opponentInfo Declaration public string opponentInfo Field Value Type Description System.String previewName Declaration public string previewName Field Value Type Description System.String stageImage Declaration public Sprite stageImage Field Value Type Description Sprite summary Declaration public string summary Field Value Type Description System.String"
+  },
+  "api/SAMURAI.StageSelectData.html": {
+    "href": "api/SAMURAI.StageSelectData.html",
+    "title": "Class StageSelectData",
+    "keywords": "Class StageSelectData Inheritance System.Object StageSelectData Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StageSelectData : ScriptableObject Fields stageSelectList Declaration public List<StageSelect> stageSelectList Field Value Type Description System.Collections.Generic.List < StageSelect >"
+  },
+  "api/SAMURAI.StageSelectManager.html": {
+    "href": "api/SAMURAI.StageSelectManager.html",
+    "title": "Class StageSelectManager",
+    "keywords": "Class StageSelectManager Inheritance System.Object StageSelectManager Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StageSelectManager : MonoBehaviour Fields canvas Declaration public GameObject canvas Field Value Type Description GameObject prefabButton Declaration public GameObject prefabButton Field Value Type Description GameObject stagePreview Declaration public GameObject stagePreview Field Value Type Description GameObject stageSelectData Declaration public StageSelectData stageSelectData Field Value Type Description StageSelectData state Declaration public StageSelectManager.StageSelectState state Field Value Type Description StageSelectManager.StageSelectState Methods ButtonDataSet(Int32) Declaration public (string stName, string summary, Sprite stagePreview, SceneObject scene) ButtonDataSet(int index) Parameters Type Name Description System.Int32 index Returns Type Description System.ValueTuple < System.String , System.String , Sprite , SceneObject > previewState(String, String, Sprite, SceneObject) Declaration public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene) Parameters Type Name Description System.String stageName System.String summary Sprite stImage SceneObject gameScene selectState() Declaration public void selectState()"
+  },
+  "api/SAMURAI.StageSelectManager.StageSelectState.html": {
+    "href": "api/SAMURAI.StageSelectManager.StageSelectState.html",
+    "title": "Enum StageSelectManager.StageSelectState",
+    "keywords": "Enum StageSelectManager.StageSelectState いまはStageSelectManagerにつけてるけど、適当なオブジェクトにつけて、オブジェクトを適切につければ動くよ Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public enum StageSelectState Fields Name Description preview select"
+  },
+  "api/SAMURAI.StandardFade.html": {
+    "href": "api/SAMURAI.StandardFade.html",
+    "title": "Class StandardFade",
+    "keywords": "Class StandardFade 他のタイプにも対応したいが、現状はTextのみ対応 Inheritance System.Object StandardFade Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StandardFade : MonoBehaviour Methods FadeIn(TextMeshProUGUI, Int32) テキストをフェードイン Declaration public static Task FadeIn(TextMeshProUGUI text, int FadeLength) Parameters Type Name Description TMPro.TextMeshProUGUI text フェードインする対象 System.Int32 FadeLength Returns Type Description System.Threading.Tasks.Task FadeOut(TextMeshProUGUI, Int32) テキストをフェードアウト Declaration public static Task FadeOut(TextMeshProUGUI text, int FadeLength) Parameters Type Name Description TMPro.TextMeshProUGUI text フェードアウトする対象 System.Int32 FadeLength フェード全体の秒数 Returns Type Description System.Threading.Tasks.Task"
+  },
+  "api/SAMURAI.StandbyState.html": {
+    "href": "api/SAMURAI.StandbyState.html",
+    "title": "Class StandbyState",
+    "keywords": "Class StandbyState Inheritance System.Object StandbyState Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StandbyState : ImtStateMachine<GameManager>.State Methods Enter() Declaration protected override void Enter() Exit() Declaration protected override void Exit() Update() Declaration protected override void Update()"
+  },
+  "api/SAMURAI.StandbyStateProcess.html": {
+    "href": "api/SAMURAI.StandbyStateProcess.html",
+    "title": "Class StandbyStateProcess",
+    "keywords": "Class StandbyStateProcess Inheritance System.Object StandbyStateProcess Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StandbyStateProcess : MonoBehaviour Fields audioSource Declaration public AudioSource audioSource Field Value Type Description AudioSource katana Declaration public AudioClip katana Field Value Type Description AudioClip whistle Declaration public AudioClip whistle Field Value Type Description AudioClip Properties OpponentInfo Declaration public static string OpponentInfo { get; set; } Property Value Type Description System.String Methods StandbyProcessContent(StateChangedArg) 試合開始の演出(StartSignTextのフェードとStateの移動)を行う Declaration public void StandbyProcessContent(StateChangedArg stateChangedArg) Parameters Type Name Description StateChangedArg stateChangedArg"
+  },
+  "api/SAMURAI.StartCoroutineForPlayingState.html": {
+    "href": "api/SAMURAI.StartCoroutineForPlayingState.html",
+    "title": "Class StartCoroutineForPlayingState",
+    "keywords": "Class StartCoroutineForPlayingState Inheritance System.Object StartCoroutineForPlayingState Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StartCoroutineForPlayingState : MonoBehaviour Methods AddTaskIEnumrator(IEnumerator) IEnumeratorを追加してコルーチンっぽく処理する ○○秒待ちたいときはyeild return 秒数(float型)でその秒数待つ Declaration public static void AddTaskIEnumrator(IEnumerator enumerator) Parameters Type Name Description System.Collections.IEnumerator enumerator 処理してほしいIEnumerator Start() Declaration public void Start() Update() Declaration public void Update()"
+  },
+  "api/SAMURAI.StateChangedArg.html": {
+    "href": "api/SAMURAI.StateChangedArg.html",
+    "title": "Class StateChangedArg",
+    "keywords": "Class StateChangedArg Inheritance System.Object System.EventArgs StateChangedArg Inherited Members System.EventArgs.Empty Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StateChangedArg : EventArgs Constructors StateChangedArg(GameState) Declaration public StateChangedArg(GameState state) Parameters Type Name Description GameState state Fields gameState Declaration public GameState gameState Field Value Type Description GameState"
+  },
+  "api/SAMURAI.StateChangedHandler.html": {
+    "href": "api/SAMURAI.StateChangedHandler.html",
+    "title": "Delegate StateChangedHandler",
+    "keywords": "Delegate StateChangedHandler Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public delegate void StateChangedHandler(StateChangedArg arg); Parameters Type Name Description StateChangedArg arg"
+  },
+  "api/SAMURAI.StrikeObjectScript.html": {
+    "href": "api/SAMURAI.StrikeObjectScript.html",
+    "title": "Class StrikeObjectScript",
+    "keywords": "Class StrikeObjectScript Inheritance System.Object StrikeObjectScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class StrikeObjectScript : MonoBehaviour Fields emergencySign Declaration public GameObject emergencySign Field Value Type Description GameObject gameManager Declaration public GameManager gameManager Field Value Type Description GameManager shotInterval Declaration public float shotInterval Field Value Type Description System.Single ShotObject Declaration public GameObject ShotObject Field Value Type Description GameObject"
+  },
+  "api/SAMURAI.SugiTemp.html": {
+    "href": "api/SAMURAI.SugiTemp.html",
+    "title": "Class SugiTemp",
+    "keywords": "Class SugiTemp Inheritance System.Object SugiTemp Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class SugiTemp : MonoBehaviour"
+  },
+  "api/SAMURAI.Sword.html": {
+    "href": "api/SAMURAI.Sword.html",
+    "title": "Class Sword",
+    "keywords": "Class Sword Inheritance System.Object Sword Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Sword : MonoBehaviour"
+  },
+  "api/SAMURAI.Team.html": {
+    "href": "api/SAMURAI.Team.html",
+    "title": "Class Team",
+    "keywords": "Class Team Inheritance System.Object Team Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Team Fields member Declaration public List<PersonalStatus> member Field Value Type Description System.Collections.Generic.List < PersonalStatus >"
+  },
+  "api/SAMURAI.TeamMaker.html": {
+    "href": "api/SAMURAI.TeamMaker.html",
+    "title": "Class TeamMaker",
+    "keywords": "Class TeamMaker Inheritance System.Object TeamMaker Namespace : SAMURAI Assembly : Assembly-CSharp-Editor.dll Syntax public class TeamMaker : EditorWindow"
+  },
+  "api/SAMURAI.test.html": {
+    "href": "api/SAMURAI.test.html",
+    "title": "Class test",
+    "keywords": "Class test Inheritance System.Object test Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class test : MonoBehaviour Fields banishrate Declaration public float banishrate Field Value Type Description System.Single"
+  },
+  "api/SAMURAI.TimerScript.html": {
+    "href": "api/SAMURAI.TimerScript.html",
+    "title": "Class TimerScript",
+    "keywords": "Class TimerScript Inheritance System.Object TimerScript Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class TimerScript : MonoBehaviour Fields displayText Declaration public GameObject displayText Field Value Type Description GameObject elapsedTime Declaration public float elapsedTime Field Value Type Description System.Single gameManager Declaration public GameManager gameManager Field Value Type Description GameManager limitTime Declaration public float limitTime Field Value Type Description System.Single playing Declaration public bool playing Field Value Type Description System.Boolean timeText Declaration public Text timeText Field Value Type Description Text Methods isTimeUp() Declaration public bool isTimeUp() Returns Type Description System.Boolean Pause() Declaration public void Pause() Playing() Declaration public void Playing() Reset() Declaration public void Reset() setTimer(Int32) Declaration public void setTimer(int sec) Parameters Type Name Description System.Int32 sec Timer(StateChangedArg) Declaration public void Timer(StateChangedArg stateChangedArg) Parameters Type Name Description StateChangedArg stateChangedArg"
+  },
+  "api/SAMURAI.UnityEngine.UI.html": {
+    "href": "api/SAMURAI.UnityEngine.UI.html",
+    "title": "Namespace SAMURAI.UnityEngine.UI",
+    "keywords": "Namespace SAMURAI.UnityEngine.UI Classes LetterSpacing"
+  },
+  "api/SAMURAI.UnityEngine.UI.LetterSpacing.html": {
+    "href": "api/SAMURAI.UnityEngine.UI.LetterSpacing.html",
+    "title": "Class LetterSpacing",
+    "keywords": "Class LetterSpacing Inheritance System.Object LetterSpacing Namespace : SAMURAI.UnityEngine.UI Assembly : Assembly-CSharp.dll Syntax public class LetterSpacing : BaseMeshEffect Constructors LetterSpacing() Declaration protected LetterSpacing() Properties spacing Declaration public float spacing { get; set; } Property Value Type Description System.Single Methods ModifyMesh(VertexHelper) Declaration public override void ModifyMesh(VertexHelper vh) Parameters Type Name Description VertexHelper vh ModifyVertices(List<UIVertex>) Declaration public void ModifyVertices(List<UIVertex> verts) Parameters Type Name Description System.Collections.Generic.List < UIVertex > verts"
+  },
+  "api/SAMURAI.VanishAndBorn.html": {
+    "href": "api/SAMURAI.VanishAndBorn.html",
+    "title": "Class VanishAndBorn",
+    "keywords": "Class VanishAndBorn Inheritance System.Object VanishAndBorn Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class VanishAndBorn : MonoBehaviour"
+  },
+  "api/SAMURAI.Wall_temp.html": {
+    "href": "api/SAMURAI.Wall_temp.html",
+    "title": "Class Wall_temp",
+    "keywords": "Class Wall_temp Inheritance System.Object Wall_temp Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public class Wall_temp : MonoBehaviour Fields normalVec Declaration public Vector3 normalVec Field Value Type Description Vector3"
+  },
+  "api/SAMURAI.WindInfoBase.html": {
+    "href": "api/SAMURAI.WindInfoBase.html",
+    "title": "Class WindInfoBase",
+    "keywords": "Class WindInfoBase 風の情報を持ったクラス。これから派生させてください。 Inheritance System.Object WindInfoBase NonWind Namespace : SAMURAI Assembly : Assembly-CSharp.dll Syntax public abstract class WindInfoBase : MonoBehaviour Fields wind 風の力 Declaration public Vector3[][] wind Field Value Type Description Vector3 [][] Methods Start() 初期化。派生クラスでは自由に Declaration protected virtual void Start() WindEffect(Vector3) Declaration public Vector3 WindEffect(Vector3 position) Parameters Type Name Description Vector3 position Returns Type Description Vector3"
+  },
+  "articles/intro.html": {
+    "href": "articles/intro.html",
+    "title": "Add your introductions here!",
+    "keywords": "Add your introductions here!"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE.",
+    "keywords": "This is the HOMEPAGE . Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

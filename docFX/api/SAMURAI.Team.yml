@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Team
+  commentId: T:SAMURAI.Team
+  id: Team
+  parent: SAMURAI
+  children:
+  - SAMURAI.Team.member
+  langs:
+  - csharp
+  - vb
+  name: Team
+  nameWithType: Team
+  fullName: SAMURAI.Team
+  type: Class
+  source:
+    id: Team
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Team.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public class Team
+    content.vb: Public Class Team
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.Team.member
+  commentId: F:SAMURAI.Team.member
+  id: member
+  parent: SAMURAI.Team
+  langs:
+  - csharp
+  - vb
+  name: member
+  nameWithType: Team.member
+  fullName: SAMURAI.Team.member
+  type: Field
+  source:
+    id: member
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Team.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public List<PersonalStatus> member
+    return:
+      type: System.Collections.Generic.List{PersonalStatus}
+    content.vb: Public member As List(Of PersonalStatus)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{PersonalStatus}
+  commentId: T:System.Collections.Generic.List{PersonalStatus}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<PersonalStatus>
+  nameWithType: List<PersonalStatus>
+  fullName: System.Collections.Generic.List<PersonalStatus>
+  nameWithType.vb: List(Of PersonalStatus)
+  fullName.vb: System.Collections.Generic.List(Of PersonalStatus)
+  name.vb: List(Of PersonalStatus)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PersonalStatus
+    name: PersonalStatus
+    nameWithType: PersonalStatus
+    fullName: PersonalStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PersonalStatus
+    name: PersonalStatus
+    nameWithType: PersonalStatus
+    fullName: PersonalStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

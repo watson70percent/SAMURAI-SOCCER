@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.test
+  commentId: T:SAMURAI.test
+  id: test
+  parent: SAMURAI
+  children:
+  - SAMURAI.test.banishrate
+  langs:
+  - csharp
+  - vb
+  name: test
+  nameWithType: test
+  fullName: SAMURAI.test
+  type: Class
+  source:
+    id: test
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\test.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class test : MonoBehaviour'
+    content.vb: >-
+      Public Class test
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.test.banishrate
+  commentId: F:SAMURAI.test.banishrate
+  id: banishrate
+  parent: SAMURAI.test
+  langs:
+  - csharp
+  - vb
+  name: banishrate
+  nameWithType: test.banishrate
+  fullName: SAMURAI.test.banishrate
+  type: Field
+  source:
+    id: banishrate
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\test.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float banishrate
+    return:
+      type: System.Single
+    content.vb: Public banishrate As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

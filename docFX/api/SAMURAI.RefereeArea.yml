@@ -1,0 +1,318 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.RefereeArea
+  commentId: T:SAMURAI.RefereeArea
+  id: RefereeArea
+  parent: SAMURAI
+  children:
+  - SAMURAI.RefereeArea.anicom
+  - SAMURAI.RefereeArea.areaSize
+  - SAMURAI.RefereeArea.attackButton
+  - SAMURAI.RefereeArea.maxang
+  - SAMURAI.RefereeArea.MeshMaker
+  - SAMURAI.RefereeArea.penaltyManager
+  - SAMURAI.RefereeArea.surprisedMark
+  - SAMURAI.RefereeArea.useObstacles
+  langs:
+  - csharp
+  - vb
+  name: RefereeArea
+  nameWithType: RefereeArea
+  fullName: SAMURAI.RefereeArea
+  type: Class
+  source:
+    id: RefereeArea
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class RefereeArea : MonoBehaviour'
+    content.vb: >-
+      Public Class RefereeArea
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.RefereeArea.maxang
+  commentId: F:SAMURAI.RefereeArea.maxang
+  id: maxang
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: maxang
+  nameWithType: RefereeArea.maxang
+  fullName: SAMURAI.RefereeArea.maxang
+  type: Field
+  source:
+    id: maxang
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float maxang
+    return:
+      type: System.Single
+    content.vb: Public maxang As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.areaSize
+  commentId: F:SAMURAI.RefereeArea.areaSize
+  id: areaSize
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: areaSize
+  nameWithType: RefereeArea.areaSize
+  fullName: SAMURAI.RefereeArea.areaSize
+  type: Field
+  source:
+    id: areaSize
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float areaSize
+    return:
+      type: System.Single
+    content.vb: Public areaSize As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.anicom
+  commentId: F:SAMURAI.RefereeArea.anicom
+  id: anicom
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: anicom
+  nameWithType: RefereeArea.anicom
+  fullName: SAMURAI.RefereeArea.anicom
+  type: Field
+  source:
+    id: anicom
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public AnimationController anicom
+    return:
+      type: SAMURAI.AnimationController
+    content.vb: Public anicom As AnimationController
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.surprisedMark
+  commentId: F:SAMURAI.RefereeArea.surprisedMark
+  id: surprisedMark
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: surprisedMark
+  nameWithType: RefereeArea.surprisedMark
+  fullName: SAMURAI.RefereeArea.surprisedMark
+  type: Field
+  source:
+    id: surprisedMark
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public ParticleSystem surprisedMark
+    return:
+      type: ParticleSystem
+    content.vb: Public surprisedMark As ParticleSystem
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.attackButton
+  commentId: F:SAMURAI.RefereeArea.attackButton
+  id: attackButton
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: attackButton
+  nameWithType: RefereeArea.attackButton
+  fullName: SAMURAI.RefereeArea.attackButton
+  type: Field
+  source:
+    id: attackButton
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Button attackButton
+    return:
+      type: Button
+    content.vb: Public attackButton As Button
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.penaltyManager
+  commentId: F:SAMURAI.RefereeArea.penaltyManager
+  id: penaltyManager
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: penaltyManager
+  nameWithType: RefereeArea.penaltyManager
+  fullName: SAMURAI.RefereeArea.penaltyManager
+  type: Field
+  source:
+    id: penaltyManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Penalty penaltyManager
+    return:
+      type: SAMURAI.Penalty
+    content.vb: Public penaltyManager As Penalty
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.useObstacles
+  commentId: F:SAMURAI.RefereeArea.useObstacles
+  id: useObstacles
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: useObstacles
+  nameWithType: RefereeArea.useObstacles
+  fullName: SAMURAI.RefereeArea.useObstacles
+  type: Field
+  source:
+    id: useObstacles
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public bool useObstacles
+    return:
+      type: System.Boolean
+    content.vb: Public useObstacles As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.RefereeArea.MeshMaker
+  commentId: M:SAMURAI.RefereeArea.MeshMaker
+  id: MeshMaker
+  parent: SAMURAI.RefereeArea
+  langs:
+  - csharp
+  - vb
+  name: MeshMaker()
+  nameWithType: RefereeArea.MeshMaker()
+  fullName: SAMURAI.RefereeArea.MeshMaker()
+  type: Method
+  source:
+    id: MeshMaker
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeArea.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void MeshMaker()
+    content.vb: Public Sub MeshMaker
+  overload: SAMURAI.RefereeArea.MeshMaker*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.AnimationController
+  commentId: T:SAMURAI.AnimationController
+  parent: SAMURAI
+  name: AnimationController
+  nameWithType: AnimationController
+  fullName: SAMURAI.AnimationController
+- uid: ParticleSystem
+  isExternal: true
+  name: ParticleSystem
+  nameWithType: ParticleSystem
+  fullName: ParticleSystem
+- uid: Button
+  commentId: '!:Button'
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: Button
+- uid: SAMURAI.Penalty
+  commentId: T:SAMURAI.Penalty
+  parent: SAMURAI
+  name: Penalty
+  nameWithType: Penalty
+  fullName: SAMURAI.Penalty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SAMURAI.RefereeArea.MeshMaker*
+  commentId: Overload:SAMURAI.RefereeArea.MeshMaker
+  name: MeshMaker
+  nameWithType: RefereeArea.MeshMaker
+  fullName: SAMURAI.RefereeArea.MeshMaker

@@ -1,0 +1,435 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.StageSelectManager
+  commentId: T:SAMURAI.StageSelectManager
+  id: StageSelectManager
+  parent: SAMURAI
+  children:
+  - SAMURAI.StageSelectManager.ButtonDataSet(System.Int32)
+  - SAMURAI.StageSelectManager.canvas
+  - SAMURAI.StageSelectManager.prefabButton
+  - SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  - SAMURAI.StageSelectManager.selectState
+  - SAMURAI.StageSelectManager.stagePreview
+  - SAMURAI.StageSelectManager.stageSelectData
+  - SAMURAI.StageSelectManager.state
+  langs:
+  - csharp
+  - vb
+  name: StageSelectManager
+  nameWithType: StageSelectManager
+  fullName: SAMURAI.StageSelectManager
+  type: Class
+  source:
+    id: StageSelectManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class StageSelectManager : MonoBehaviour'
+    content.vb: >-
+      Public Class StageSelectManager
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.StageSelectManager.state
+  commentId: F:SAMURAI.StageSelectManager.state
+  id: state
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: StageSelectManager.state
+  fullName: SAMURAI.StageSelectManager.state
+  type: Field
+  source:
+    id: state
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public StageSelectManager.StageSelectState state
+    return:
+      type: SAMURAI.StageSelectManager.StageSelectState
+    content.vb: Public state As StageSelectManager.StageSelectState
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.canvas
+  commentId: F:SAMURAI.StageSelectManager.canvas
+  id: canvas
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: canvas
+  nameWithType: StageSelectManager.canvas
+  fullName: SAMURAI.StageSelectManager.canvas
+  type: Field
+  source:
+    id: canvas
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject canvas
+    return:
+      type: GameObject
+    content.vb: Public canvas As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.stagePreview
+  commentId: F:SAMURAI.StageSelectManager.stagePreview
+  id: stagePreview
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: stagePreview
+  nameWithType: StageSelectManager.stagePreview
+  fullName: SAMURAI.StageSelectManager.stagePreview
+  type: Field
+  source:
+    id: stagePreview
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject stagePreview
+    return:
+      type: GameObject
+    content.vb: Public stagePreview As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.prefabButton
+  commentId: F:SAMURAI.StageSelectManager.prefabButton
+  id: prefabButton
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: prefabButton
+  nameWithType: StageSelectManager.prefabButton
+  fullName: SAMURAI.StageSelectManager.prefabButton
+  type: Field
+  source:
+    id: prefabButton
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject prefabButton
+    return:
+      type: GameObject
+    content.vb: Public prefabButton As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.stageSelectData
+  commentId: F:SAMURAI.StageSelectManager.stageSelectData
+  id: stageSelectData
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: stageSelectData
+  nameWithType: StageSelectManager.stageSelectData
+  fullName: SAMURAI.StageSelectManager.stageSelectData
+  type: Field
+  source:
+    id: stageSelectData
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public StageSelectData stageSelectData
+    return:
+      type: SAMURAI.StageSelectData
+    content.vb: Public stageSelectData As StageSelectData
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  commentId: M:SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  id: previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: previewState(String, String, Sprite, SceneObject)
+  nameWithType: StageSelectManager.previewState(String, String, Sprite, SceneObject)
+  fullName: SAMURAI.StageSelectManager.previewState(System.String, System.String, Sprite, SAMURAI.SceneObject)
+  type: Method
+  source:
+    id: previewState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 91
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene)
+    parameters:
+    - id: stageName
+      type: System.String
+    - id: summary
+      type: System.String
+    - id: stImage
+      type: Sprite
+    - id: gameScene
+      type: SAMURAI.SceneObject
+    content.vb: Public Sub previewState(stageName As String, summary As String, stImage As Sprite, gameScene As SceneObject)
+  overload: SAMURAI.StageSelectManager.previewState*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.selectState
+  commentId: M:SAMURAI.StageSelectManager.selectState
+  id: selectState
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: selectState()
+  nameWithType: StageSelectManager.selectState()
+  fullName: SAMURAI.StageSelectManager.selectState()
+  type: Method
+  source:
+    id: selectState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 98
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void selectState()
+    content.vb: Public Sub selectState
+  overload: SAMURAI.StageSelectManager.selectState*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.StageSelectManager.ButtonDataSet(System.Int32)
+  commentId: M:SAMURAI.StageSelectManager.ButtonDataSet(System.Int32)
+  id: ButtonDataSet(System.Int32)
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: ButtonDataSet(Int32)
+  nameWithType: StageSelectManager.ButtonDataSet(Int32)
+  fullName: SAMURAI.StageSelectManager.ButtonDataSet(System.Int32)
+  type: Method
+  source:
+    id: ButtonDataSet
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 105
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public (string stName, string summary, Sprite stagePreview, SceneObject scene) ButtonDataSet(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.ValueTuple{System.String,System.String,Sprite,SAMURAI.SceneObject}
+    content.vb: Public Function ButtonDataSet(index As Integer) As(stName As String, summary As String, stagePreview As Sprite, scene As SceneObject)
+  overload: SAMURAI.StageSelectManager.ButtonDataSet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.StageSelectManager.StageSelectState
+  commentId: T:SAMURAI.StageSelectManager.StageSelectState
+  parent: SAMURAI
+  name: StageSelectManager.StageSelectState
+  nameWithType: StageSelectManager.StageSelectState
+  fullName: SAMURAI.StageSelectManager.StageSelectState
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.StageSelectData
+  commentId: T:SAMURAI.StageSelectData
+  parent: SAMURAI
+  name: StageSelectData
+  nameWithType: StageSelectData
+  fullName: SAMURAI.StageSelectData
+- uid: SAMURAI.StageSelectManager.previewState*
+  commentId: Overload:SAMURAI.StageSelectManager.previewState
+  name: previewState
+  nameWithType: StageSelectManager.previewState
+  fullName: SAMURAI.StageSelectManager.previewState
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: SAMURAI.SceneObject
+  commentId: T:SAMURAI.SceneObject
+  parent: SAMURAI
+  name: SceneObject
+  nameWithType: SceneObject
+  fullName: SAMURAI.SceneObject
+- uid: SAMURAI.StageSelectManager.selectState*
+  commentId: Overload:SAMURAI.StageSelectManager.selectState
+  name: selectState
+  nameWithType: StageSelectManager.selectState
+  fullName: SAMURAI.StageSelectManager.selectState
+- uid: SAMURAI.StageSelectManager.ButtonDataSet*
+  commentId: Overload:SAMURAI.StageSelectManager.ButtonDataSet
+  name: ButtonDataSet
+  nameWithType: StageSelectManager.ButtonDataSet
+  fullName: SAMURAI.StageSelectManager.ButtonDataSet
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueTuple{System.String,System.String,Sprite,SAMURAI.SceneObject}
+  commentId: T:System.ValueTuple{System.String,System.String,Sprite,SAMURAI.SceneObject}
+  parent: System
+  isExternal: true
+  name: ValueTuple<String, String, Sprite, SceneObject>
+  nameWithType: ValueTuple<String, String, Sprite, SceneObject>
+  fullName: System.ValueTuple<System.String, System.String, Sprite, SAMURAI.SceneObject>
+  nameWithType.vb: ValueTuple(Of String, String, Sprite, SceneObject)
+  fullName.vb: System.ValueTuple(Of System.String, System.String, Sprite, SAMURAI.SceneObject)
+  name.vb: ValueTuple(Of String, String, Sprite, SceneObject)
+  spec.csharp:
+  - uid: System.ValueTuple`4
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: SAMURAI.SceneObject
+    name: SceneObject
+    nameWithType: SceneObject
+    fullName: SAMURAI.SceneObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`4
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: SAMURAI.SceneObject
+    name: SceneObject
+    nameWithType: SceneObject
+    fullName: SAMURAI.SceneObject
+  - name: )
+    nameWithType: )
+    fullName: )
