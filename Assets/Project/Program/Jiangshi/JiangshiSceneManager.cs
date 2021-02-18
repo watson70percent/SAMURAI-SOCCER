@@ -23,7 +23,7 @@ public class JiangshiSceneManager : MonoBehaviour
     private void Update()
     {
         float height = jianshi.transform.position.y;
-        refereeArea.areaSize = areaSize + height*20;
+        refereeArea.SerAreaSize( areaSize + height*20);
         refereeArea.MeshMaker();
     }
 
