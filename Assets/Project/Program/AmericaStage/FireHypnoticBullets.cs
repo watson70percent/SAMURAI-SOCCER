@@ -39,6 +39,8 @@ public class FireHypnoticBullets : MonoBehaviour
         yield return new WaitForSeconds(_fireDuration+10f);
         while (_gameManager.CurrentGameState != GameState.Finish)
         {
+            //弾を撃つ間隔を再指定
+            _fireDuration = Random.Range(6.0f, 10.0f);
             if (_gameManager.CurrentGameState == GameState.Playing)
             {
                 //侍との相対座標
