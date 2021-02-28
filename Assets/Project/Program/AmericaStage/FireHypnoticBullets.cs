@@ -27,7 +27,7 @@ public class FireHypnoticBullets : MonoBehaviour
 
         //弾を撃つ間隔を指定
         _fireDuration = Random.Range(6.0f,10.0f);
-        StartCoroutine(FireBulletSycle());
+        StartCoroutineForPlayingState.AddTaskIEnumrator(FireBulletSycle());
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ public class FireHypnoticBullets : MonoBehaviour
     /// <returns></returns>
     IEnumerator FireBulletSycle()
     {
-        yield return new WaitForSeconds(_fireDuration+10f);
+        yield return _fireDuration+4f;
         while (_gameManager.CurrentGameState != GameState.Finish)
         {
             //弾を撃つ間隔を再指定
@@ -45,15 +45,16 @@ public class FireHypnoticBullets : MonoBehaviour
             {
                 //侍との相対座標
                 Vector3 firedirection = _Samurai.transform.position - gameObject.transform.position;
+                firedirection.y = 0f;
                 //敵選手が向く方向を計算し、反映
                 Quaternion firelotation = Quaternion.LookRotation(firedirection);
                 gameObject.transform.localRotation = firelotation;
                 //弾を生成し、発射
                 GameObject Bullet = Instantiate(HypnoticBullets);
-                Bullet.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * 10;
-                Bullet.transform.position = gameObject.transform.position;
+                Bullet.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * 8;
+                Bullet.transform.position = gameObject.transform.position + gameObject.transform.forward *3f + new Vector3(0f,-0.5f,0f);
             }
-            yield return new WaitForSeconds(_fireDuration);
+            yield return _fireDuration;
         }
     }
 }

@@ -8,7 +8,10 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class BulletFunction : MonoBehaviour
 {
+    private bool _isActive = true;//true 稼働中
+
     private GameManager _gameManager;
+    private BallControler _ball;
 
     private AudioSource _audioSource;//弾丸についてるAudioSource
 
@@ -17,7 +20,9 @@ public class BulletFunction : MonoBehaviour
     void Start()
     {
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
         _audioSource = gameObject.GetComponent<AudioSource>();
+        _ball.Goal += InActiveFunction;
         StartCoroutine(DestroyOneself());
     }
 
@@ -33,7 +38,7 @@ public class BulletFunction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //プレイヤ―との衝突処理
-        if (_gameManager.CurrentGameState != GameState.Finish)
+        if (_gameManager.CurrentGameState != GameState.Finish && _isActive)
         {
             if (other.gameObject.tag == "Player")
             {
@@ -56,7 +61,7 @@ public class BulletFunction : MonoBehaviour
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.SetResult(Result.Lose, "睡眠弾に撃たれた！");
+        resultManager.SetResult(Result.Lose, "砲弾に撃たれた！");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
@@ -73,12 +78,23 @@ public class BulletFunction : MonoBehaviour
     }
 
     /// <summary>
+    /// ゴールが入ったら衝突時の機能を停止する
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="goalEventArgs"></param>
+    public void InActiveFunction(object sender, GoalEventArgs goalEventArgs)
+    {
+        _isActive = false;
+        _ball.Goal -= InActiveFunction;
+    }
+
+    /// <summary>
     /// 時間がたつと勝手に消滅する
     /// </summary>
     /// <returns></returns>
     IEnumerator DestroyOneself()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         Destroy(gameObject);
     }
 }
