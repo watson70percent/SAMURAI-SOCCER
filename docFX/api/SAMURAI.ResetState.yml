@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.ResetState
+  commentId: T:SAMURAI.ResetState
+  id: ResetState
+  parent: SAMURAI
+  children:
+  - SAMURAI.ResetState.Enter
+  - SAMURAI.ResetState.Exit
+  - SAMURAI.ResetState.Update
+  langs:
+  - csharp
+  - vb
+  name: ResetState
+  nameWithType: ResetState
+  fullName: SAMURAI.ResetState
+  type: Class
+  source:
+    id: ResetState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\ResetState.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class ResetState : ImtStateMachine<GameManager>.State'
+    content.vb: >-
+      Public Class ResetState
+          Inherits ImtStateMachine(Of GameManager).State
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.ResetState.Enter
+  commentId: M:SAMURAI.ResetState.Enter
+  id: Enter
+  parent: SAMURAI.ResetState
+  langs:
+  - csharp
+  - vb
+  name: Enter()
+  nameWithType: ResetState.Enter()
+  fullName: SAMURAI.ResetState.Enter()
+  type: Method
+  source:
+    id: Enter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\ResetState.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Enter()
+    content.vb: Protected Overrides Sub Enter
+  overload: SAMURAI.ResetState.Enter*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SAMURAI.ResetState.Update
+  commentId: M:SAMURAI.ResetState.Update
+  id: Update
+  parent: SAMURAI.ResetState
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: ResetState.Update()
+  fullName: SAMURAI.ResetState.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\ResetState.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Update()
+    content.vb: Protected Overrides Sub Update
+  overload: SAMURAI.ResetState.Update*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SAMURAI.ResetState.Exit
+  commentId: M:SAMURAI.ResetState.Exit
+  id: Exit
+  parent: SAMURAI.ResetState
+  langs:
+  - csharp
+  - vb
+  name: Exit()
+  nameWithType: ResetState.Exit()
+  fullName: SAMURAI.ResetState.Exit()
+  type: Method
+  source:
+    id: Exit
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\ResetState.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected override void Exit()
+    content.vb: Protected Overrides Sub Exit
+  overload: SAMURAI.ResetState.Exit*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.ResetState.Enter*
+  commentId: Overload:SAMURAI.ResetState.Enter
+  name: Enter
+  nameWithType: ResetState.Enter
+  fullName: SAMURAI.ResetState.Enter
+- uid: SAMURAI.ResetState.Update*
+  commentId: Overload:SAMURAI.ResetState.Update
+  name: Update
+  nameWithType: ResetState.Update
+  fullName: SAMURAI.ResetState.Update
+- uid: SAMURAI.ResetState.Exit*
+  commentId: Overload:SAMURAI.ResetState.Exit
+  name: Exit
+  nameWithType: ResetState.Exit
+  fullName: SAMURAI.ResetState.Exit

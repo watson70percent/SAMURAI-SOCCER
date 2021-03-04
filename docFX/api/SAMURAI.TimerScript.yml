@@ -1,0 +1,464 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.TimerScript
+  commentId: T:SAMURAI.TimerScript
+  id: TimerScript
+  parent: SAMURAI
+  children:
+  - SAMURAI.TimerScript.displayText
+  - SAMURAI.TimerScript.elapsedTime
+  - SAMURAI.TimerScript.gameManager
+  - SAMURAI.TimerScript.isTimeUp
+  - SAMURAI.TimerScript.limitTime
+  - SAMURAI.TimerScript.Pause
+  - SAMURAI.TimerScript.playing
+  - SAMURAI.TimerScript.Playing
+  - SAMURAI.TimerScript.Reset
+  - SAMURAI.TimerScript.setTimer(System.Int32)
+  - SAMURAI.TimerScript.Timer(SAMURAI.StateChangedArg)
+  - SAMURAI.TimerScript.timeText
+  langs:
+  - csharp
+  - vb
+  name: TimerScript
+  nameWithType: TimerScript
+  fullName: SAMURAI.TimerScript
+  type: Class
+  source:
+    id: TimerScript
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class TimerScript : MonoBehaviour'
+    content.vb: >-
+      Public Class TimerScript
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.TimerScript.playing
+  commentId: F:SAMURAI.TimerScript.playing
+  id: playing
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: playing
+  nameWithType: TimerScript.playing
+  fullName: SAMURAI.TimerScript.playing
+  type: Field
+  source:
+    id: playing
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public bool playing
+    return:
+      type: System.Boolean
+    content.vb: Public playing As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.elapsedTime
+  commentId: F:SAMURAI.TimerScript.elapsedTime
+  id: elapsedTime
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: elapsedTime
+  nameWithType: TimerScript.elapsedTime
+  fullName: SAMURAI.TimerScript.elapsedTime
+  type: Field
+  source:
+    id: elapsedTime
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float elapsedTime
+    return:
+      type: System.Single
+    content.vb: Public elapsedTime As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.limitTime
+  commentId: F:SAMURAI.TimerScript.limitTime
+  id: limitTime
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: limitTime
+  nameWithType: TimerScript.limitTime
+  fullName: SAMURAI.TimerScript.limitTime
+  type: Field
+  source:
+    id: limitTime
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public float limitTime
+    return:
+      type: System.Single
+    content.vb: Public limitTime As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.displayText
+  commentId: F:SAMURAI.TimerScript.displayText
+  id: displayText
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: displayText
+  nameWithType: TimerScript.displayText
+  fullName: SAMURAI.TimerScript.displayText
+  type: Field
+  source:
+    id: displayText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject displayText
+    return:
+      type: GameObject
+    content.vb: Public displayText As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.timeText
+  commentId: F:SAMURAI.TimerScript.timeText
+  id: timeText
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: timeText
+  nameWithType: TimerScript.timeText
+  fullName: SAMURAI.TimerScript.timeText
+  type: Field
+  source:
+    id: timeText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Text timeText
+    return:
+      type: Text
+    content.vb: Public timeText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.gameManager
+  commentId: F:SAMURAI.TimerScript.gameManager
+  id: gameManager
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: TimerScript.gameManager
+  fullName: SAMURAI.TimerScript.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: Public gameManager As GameManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.Timer(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.TimerScript.Timer(SAMURAI.StateChangedArg)
+  id: Timer(SAMURAI.StateChangedArg)
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Timer(StateChangedArg)
+  nameWithType: TimerScript.Timer(StateChangedArg)
+  fullName: SAMURAI.TimerScript.Timer(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: Timer
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Timer(StateChangedArg stateChangedArg)
+    parameters:
+    - id: stateChangedArg
+      type: SAMURAI.StateChangedArg
+    content.vb: Public Sub Timer(stateChangedArg As StateChangedArg)
+  overload: SAMURAI.TimerScript.Timer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.Reset
+  commentId: M:SAMURAI.TimerScript.Reset
+  id: Reset
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: TimerScript.Reset()
+  fullName: SAMURAI.TimerScript.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset
+  overload: SAMURAI.TimerScript.Reset*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.isTimeUp
+  commentId: M:SAMURAI.TimerScript.isTimeUp
+  id: isTimeUp
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: isTimeUp()
+  nameWithType: TimerScript.isTimeUp()
+  fullName: SAMURAI.TimerScript.isTimeUp()
+  type: Method
+  source:
+    id: isTimeUp
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public bool isTimeUp()
+    return:
+      type: System.Boolean
+    content.vb: Public Function isTimeUp As Boolean
+  overload: SAMURAI.TimerScript.isTimeUp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.setTimer(System.Int32)
+  commentId: M:SAMURAI.TimerScript.setTimer(System.Int32)
+  id: setTimer(System.Int32)
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: setTimer(Int32)
+  nameWithType: TimerScript.setTimer(Int32)
+  fullName: SAMURAI.TimerScript.setTimer(System.Int32)
+  type: Method
+  source:
+    id: setTimer
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void setTimer(int sec)
+    parameters:
+    - id: sec
+      type: System.Int32
+    content.vb: Public Sub setTimer(sec As Integer)
+  overload: SAMURAI.TimerScript.setTimer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.Pause
+  commentId: M:SAMURAI.TimerScript.Pause
+  id: Pause
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: TimerScript.Pause()
+  fullName: SAMURAI.TimerScript.Pause()
+  type: Method
+  source:
+    id: Pause
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 57
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Pause()
+    content.vb: Public Sub Pause
+  overload: SAMURAI.TimerScript.Pause*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.TimerScript.Playing
+  commentId: M:SAMURAI.TimerScript.Playing
+  id: Playing
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Playing()
+  nameWithType: TimerScript.Playing()
+  fullName: SAMURAI.TimerScript.Playing()
+  type: Method
+  source:
+    id: Playing
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 62
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Playing()
+    content.vb: Public Sub Playing
+  overload: SAMURAI.TimerScript.Playing*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.TimerScript.Timer*
+  commentId: Overload:SAMURAI.TimerScript.Timer
+  name: Timer
+  nameWithType: TimerScript.Timer
+  fullName: SAMURAI.TimerScript.Timer
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.TimerScript.Reset*
+  commentId: Overload:SAMURAI.TimerScript.Reset
+  name: Reset
+  nameWithType: TimerScript.Reset
+  fullName: SAMURAI.TimerScript.Reset
+- uid: SAMURAI.TimerScript.isTimeUp*
+  commentId: Overload:SAMURAI.TimerScript.isTimeUp
+  name: isTimeUp
+  nameWithType: TimerScript.isTimeUp
+  fullName: SAMURAI.TimerScript.isTimeUp
+- uid: SAMURAI.TimerScript.setTimer*
+  commentId: Overload:SAMURAI.TimerScript.setTimer
+  name: setTimer
+  nameWithType: TimerScript.setTimer
+  fullName: SAMURAI.TimerScript.setTimer
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SAMURAI.TimerScript.Pause*
+  commentId: Overload:SAMURAI.TimerScript.Pause
+  name: Pause
+  nameWithType: TimerScript.Pause
+  fullName: SAMURAI.TimerScript.Pause
+- uid: SAMURAI.TimerScript.Playing*
+  commentId: Overload:SAMURAI.TimerScript.Playing
+  name: Playing
+  nameWithType: TimerScript.Playing
+  fullName: SAMURAI.TimerScript.Playing

@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.LoadAnyScene
+  commentId: T:SAMURAI.LoadAnyScene
+  id: LoadAnyScene
+  parent: SAMURAI
+  children:
+  - SAMURAI.LoadAnyScene.LoadScene(System.String)
+  langs:
+  - csharp
+  - vb
+  name: LoadAnyScene
+  nameWithType: LoadAnyScene
+  fullName: SAMURAI.LoadAnyScene
+  type: Class
+  source:
+    id: LoadAnyScene
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\LoadAnyScene.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class LoadAnyScene : MonoBehaviour'
+    content.vb: >-
+      Public Class LoadAnyScene
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.LoadAnyScene.LoadScene(System.String)
+  commentId: M:SAMURAI.LoadAnyScene.LoadScene(System.String)
+  id: LoadScene(System.String)
+  parent: SAMURAI.LoadAnyScene
+  langs:
+  - csharp
+  - vb
+  name: LoadScene(String)
+  nameWithType: LoadAnyScene.LoadScene(String)
+  fullName: SAMURAI.LoadAnyScene.LoadScene(System.String)
+  type: Method
+  source:
+    id: LoadScene
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\LoadAnyScene.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nScene遷移\n"
+  example: []
+  syntax:
+    content: public void LoadScene(string targetSceneName)
+    parameters:
+    - id: targetSceneName
+      type: System.String
+      description: "\nロード先のScene\n"
+    content.vb: Public Sub LoadScene(targetSceneName As String)
+  overload: SAMURAI.LoadAnyScene.LoadScene*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.LoadAnyScene.LoadScene*
+  commentId: Overload:SAMURAI.LoadAnyScene.LoadScene
+  name: LoadScene
+  nameWithType: LoadAnyScene.LoadScene
+  fullName: SAMURAI.LoadAnyScene.LoadScene
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

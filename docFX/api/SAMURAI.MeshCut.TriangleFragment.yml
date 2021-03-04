@@ -1,0 +1,301 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.MeshCut.TriangleFragment
+  commentId: T:SAMURAI.MeshCut.TriangleFragment
+  id: MeshCut.TriangleFragment
+  parent: SAMURAI
+  children:
+  - SAMURAI.MeshCut.TriangleFragment.#ctor(System.Int32,Vector3,Vector3,Vector2[],Vector3[])
+  - SAMURAI.MeshCut.TriangleFragment.cutLine
+  - SAMURAI.MeshCut.TriangleFragment.cutPoints
+  - SAMURAI.MeshCut.TriangleFragment.normals
+  - SAMURAI.MeshCut.TriangleFragment.notCutPointIndecies
+  - SAMURAI.MeshCut.TriangleFragment.uvs
+  langs:
+  - csharp
+  - vb
+  name: MeshCut.TriangleFragment
+  nameWithType: MeshCut.TriangleFragment
+  fullName: SAMURAI.MeshCut.TriangleFragment
+  type: Class
+  source:
+    id: TriangleFragment
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 980
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public class TriangleFragment
+    content.vb: Public Class TriangleFragment
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.MeshCut.TriangleFragment.cutLine
+  commentId: F:SAMURAI.MeshCut.TriangleFragment.cutLine
+  id: cutLine
+  parent: SAMURAI.MeshCut.TriangleFragment
+  langs:
+  - csharp
+  - vb
+  name: cutLine
+  nameWithType: MeshCut.TriangleFragment.cutLine
+  fullName: SAMURAI.MeshCut.TriangleFragment.cutLine
+  type: Field
+  source:
+    id: cutLine
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 982
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3 cutLine
+    return:
+      type: Vector3
+    content.vb: Public cutLine As Vector3
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.TriangleFragment.cutPoints
+  commentId: F:SAMURAI.MeshCut.TriangleFragment.cutPoints
+  id: cutPoints
+  parent: SAMURAI.MeshCut.TriangleFragment
+  langs:
+  - csharp
+  - vb
+  name: cutPoints
+  nameWithType: MeshCut.TriangleFragment.cutPoints
+  fullName: SAMURAI.MeshCut.TriangleFragment.cutPoints
+  type: Field
+  source:
+    id: cutPoints
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 983
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3[] cutPoints
+    return:
+      type: Vector3[]
+    content.vb: Public cutPoints As Vector3()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.TriangleFragment.notCutPointIndecies
+  commentId: F:SAMURAI.MeshCut.TriangleFragment.notCutPointIndecies
+  id: notCutPointIndecies
+  parent: SAMURAI.MeshCut.TriangleFragment
+  langs:
+  - csharp
+  - vb
+  name: notCutPointIndecies
+  nameWithType: MeshCut.TriangleFragment.notCutPointIndecies
+  fullName: SAMURAI.MeshCut.TriangleFragment.notCutPointIndecies
+  type: Field
+  source:
+    id: notCutPointIndecies
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 984
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public int notCutPointIndecies
+    return:
+      type: System.Int32
+    content.vb: Public notCutPointIndecies As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.TriangleFragment.normals
+  commentId: F:SAMURAI.MeshCut.TriangleFragment.normals
+  id: normals
+  parent: SAMURAI.MeshCut.TriangleFragment
+  langs:
+  - csharp
+  - vb
+  name: normals
+  nameWithType: MeshCut.TriangleFragment.normals
+  fullName: SAMURAI.MeshCut.TriangleFragment.normals
+  type: Field
+  source:
+    id: normals
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 985
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3[] normals
+    return:
+      type: Vector3[]
+    content.vb: Public normals As Vector3()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.TriangleFragment.uvs
+  commentId: F:SAMURAI.MeshCut.TriangleFragment.uvs
+  id: uvs
+  parent: SAMURAI.MeshCut.TriangleFragment
+  langs:
+  - csharp
+  - vb
+  name: uvs
+  nameWithType: MeshCut.TriangleFragment.uvs
+  fullName: SAMURAI.MeshCut.TriangleFragment.uvs
+  type: Field
+  source:
+    id: uvs
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 986
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector2[] uvs
+    return:
+      type: Vector2[]
+    content.vb: Public uvs As Vector2()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.MeshCut.TriangleFragment.#ctor(System.Int32,Vector3,Vector3,Vector2[],Vector3[])
+  commentId: M:SAMURAI.MeshCut.TriangleFragment.#ctor(System.Int32,Vector3,Vector3,Vector2[],Vector3[])
+  id: '#ctor(System.Int32,Vector3,Vector3,Vector2[],Vector3[])'
+  parent: SAMURAI.MeshCut.TriangleFragment
+  langs:
+  - csharp
+  - vb
+  name: TriangleFragment(Int32, Vector3, Vector3, Vector2[], Vector3[])
+  nameWithType: MeshCut.TriangleFragment.TriangleFragment(Int32, Vector3, Vector3, Vector2[], Vector3[])
+  fullName: SAMURAI.MeshCut.TriangleFragment.TriangleFragment(System.Int32, Vector3, Vector3, Vector2[], Vector3[])
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 987
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public TriangleFragment(int notCutPoint1Index, Vector3 cutPoint1, Vector3 cutPoint2, Vector2[] uvs, Vector3[] normals)
+    parameters:
+    - id: notCutPoint1Index
+      type: System.Int32
+    - id: cutPoint1
+      type: Vector3
+    - id: cutPoint2
+      type: Vector3
+    - id: uvs
+      type: Vector2[]
+    - id: normals
+      type: Vector3[]
+    content.vb: Public Sub New(notCutPoint1Index As Integer, cutPoint1 As Vector3, cutPoint2 As Vector3, uvs As Vector2(), normals As Vector3())
+  overload: SAMURAI.MeshCut.TriangleFragment.#ctor*
+  nameWithType.vb: MeshCut.TriangleFragment.TriangleFragment(Int32, Vector3, Vector3, Vector2(), Vector3())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: SAMURAI.MeshCut.TriangleFragment.TriangleFragment(System.Int32, Vector3, Vector3, Vector2(), Vector3())
+  name.vb: TriangleFragment(Int32, Vector3, Vector3, Vector2(), Vector3())
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.MeshCut.TriangleFragment.#ctor*
+  commentId: Overload:SAMURAI.MeshCut.TriangleFragment.#ctor
+  name: TriangleFragment
+  nameWithType: MeshCut.TriangleFragment.TriangleFragment
+  fullName: SAMURAI.MeshCut.TriangleFragment.TriangleFragment

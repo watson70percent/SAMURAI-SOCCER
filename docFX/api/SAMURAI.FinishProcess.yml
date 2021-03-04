@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.FinishProcess
+  commentId: T:SAMURAI.FinishProcess
+  id: FinishProcess
+  parent: SAMURAI
+  children:
+  - SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
+  - SAMURAI.FinishProcess.ResultSceneName
+  langs:
+  - csharp
+  - vb
+  name: FinishProcess
+  nameWithType: FinishProcess
+  fullName: SAMURAI.FinishProcess
+  type: Class
+  source:
+    id: FinishProcess
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class FinishProcess : MonoBehaviour'
+    content.vb: >-
+      Public Class FinishProcess
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.FinishProcess.ResultSceneName
+  commentId: F:SAMURAI.FinishProcess.ResultSceneName
+  id: ResultSceneName
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: ResultSceneName
+  nameWithType: FinishProcess.ResultSceneName
+  fullName: SAMURAI.FinishProcess.ResultSceneName
+  type: Field
+  source:
+    id: ResultSceneName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public string ResultSceneName
+    return:
+      type: System.String
+    content.vb: Public ResultSceneName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
+  id: FinishProcessContent(SAMURAI.StateChangedArg)
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: FinishProcessContent(StateChangedArg)
+  nameWithType: FinishProcess.FinishProcessContent(StateChangedArg)
+  fullName: SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: FinishProcessContent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void FinishProcessContent(StateChangedArg stateChangedArg)
+    parameters:
+    - id: stateChangedArg
+      type: SAMURAI.StateChangedArg
+    content.vb: Public Sub FinishProcessContent(stateChangedArg As StateChangedArg)
+  overload: SAMURAI.FinishProcess.FinishProcessContent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SAMURAI.FinishProcess.FinishProcessContent*
+  commentId: Overload:SAMURAI.FinishProcess.FinishProcessContent
+  name: FinishProcessContent
+  nameWithType: FinishProcess.FinishProcessContent
+  fullName: SAMURAI.FinishProcess.FinishProcessContent
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg

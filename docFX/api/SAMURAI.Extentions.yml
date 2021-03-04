@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Extentions
+  commentId: T:SAMURAI.Extentions
+  id: Extentions
+  parent: SAMURAI
+  children:
+  - SAMURAI.Extentions.ToVector2Int(GameObject)
+  langs:
+  - csharp
+  - vb
+  name: Extentions
+  nameWithType: Extentions
+  fullName: SAMURAI.Extentions
+  type: Class
+  source:
+    id: Extentions
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Extentions.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public static class Extentions
+    content.vb: Public Module Extentions
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: SAMURAI.Extentions.ToVector2Int(GameObject)
+  commentId: M:SAMURAI.Extentions.ToVector2Int(GameObject)
+  id: ToVector2Int(GameObject)
+  isExtensionMethod: true
+  parent: SAMURAI.Extentions
+  langs:
+  - csharp
+  - vb
+  name: ToVector2Int(GameObject)
+  nameWithType: Extentions.ToVector2Int(GameObject)
+  fullName: SAMURAI.Extentions.ToVector2Int(GameObject)
+  type: Method
+  source:
+    id: ToVector2Int
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Extentions.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public static Vector2Int ToVector2Int(this GameObject obj)
+    parameters:
+    - id: obj
+      type: GameObject
+    return:
+      type: Vector2Int
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToVector2Int(obj As GameObject) As Vector2Int
+  overload: SAMURAI.Extentions.ToVector2Int*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.Extentions.ToVector2Int*
+  commentId: Overload:SAMURAI.Extentions.ToVector2Int
+  name: ToVector2Int
+  nameWithType: Extentions.ToVector2Int
+  fullName: SAMURAI.Extentions.ToVector2Int
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Vector2Int
+  commentId: '!:Vector2Int'
+  isExternal: true
+  name: Vector2Int
+  nameWithType: Vector2Int
+  fullName: Vector2Int

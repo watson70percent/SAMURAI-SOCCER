@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.FieldMaker
+  commentId: T:SAMURAI.FieldMaker
+  id: FieldMaker
+  parent: SAMURAI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FieldMaker
+  nameWithType: FieldMaker
+  fullName: SAMURAI.FieldMaker
+  type: Class
+  source:
+    id: FieldMaker
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\Editor\FieldMaker.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: SAMURAI
+  summary: "\nフィールドを作るためのクラス。メニューウィンドウに出るけど実行用。スクリプトで内容を書く。\n"
+  example: []
+  syntax:
+    content: 'public class FieldMaker : EditorWindow'
+    content.vb: >-
+      Public Class FieldMaker
+          Inherits EditorWindow
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

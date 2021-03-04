@@ -284,11 +284,11 @@ public class EasyCPUManager : MonoBehaviour
         setting.manager = this;
         setting.field = field;
         setting.rb = temp.GetComponent<Rigidbody>();
+        setting.status = status;
         setting.SetMass();
 
         rbs.Add(temp, setting.rb);
 
-        setting.status = status;
         if (status.ally)
         {
             team.Add(temp);

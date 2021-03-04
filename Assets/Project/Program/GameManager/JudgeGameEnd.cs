@@ -32,7 +32,7 @@ public class JudgeGameEnd : MonoBehaviour
                 //SceneManagerのイベントに勝利リザルト処理を追加
                 SceneManager.sceneLoaded += GameSceneLoaded;
                 _gameManager.StateChangeSignal(GameState.Finish);
-                Time.timeScale = 0.2f;                
+                Time.timeScale = 0.2f;
                 audioSource.PlayOneShot(finishSound);
                 StartCoroutine(GoResult());
             }
@@ -40,7 +40,11 @@ public class JudgeGameEnd : MonoBehaviour
 
     }
 
-    //勝利リザルト用の処理
+    /// <summary>
+    /// 勝利リザルト用の処理
+    /// </summary>
+    /// <param name="next"></param>
+    /// <param name="mode"></param>
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
@@ -49,6 +53,10 @@ public class JudgeGameEnd : MonoBehaviour
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 
+    /// <summary>
+    /// リザルトへ移動するためのコルーチン
+    /// </summary>
+    /// <returns></returns>
     IEnumerator GoResult()
     {
         yield return new WaitForSeconds(1);

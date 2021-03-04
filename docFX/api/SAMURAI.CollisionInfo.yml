@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.CollisionInfo
+  commentId: T:SAMURAI.CollisionInfo
+  id: CollisionInfo
+  parent: SAMURAI
+  children:
+  - SAMURAI.CollisionInfo.#ctor(SAMURAI.Polygon,Vector3,SAMURAI.CollisionManager.ColliderType)
+  - SAMURAI.CollisionInfo.colliderType
+  - SAMURAI.CollisionInfo.hitPoint
+  - SAMURAI.CollisionInfo.polygon
+  langs:
+  - csharp
+  - vb
+  name: CollisionInfo
+  nameWithType: CollisionInfo
+  fullName: SAMURAI.CollisionInfo
+  type: Class
+  source:
+    id: CollisionInfo
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 277
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public class CollisionInfo
+    content.vb: Public Class CollisionInfo
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.CollisionInfo.polygon
+  commentId: F:SAMURAI.CollisionInfo.polygon
+  id: polygon
+  parent: SAMURAI.CollisionInfo
+  langs:
+  - csharp
+  - vb
+  name: polygon
+  nameWithType: CollisionInfo.polygon
+  fullName: SAMURAI.CollisionInfo.polygon
+  type: Field
+  source:
+    id: polygon
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 279
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Polygon polygon
+    return:
+      type: SAMURAI.Polygon
+    content.vb: Public polygon As Polygon
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.CollisionInfo.hitPoint
+  commentId: F:SAMURAI.CollisionInfo.hitPoint
+  id: hitPoint
+  parent: SAMURAI.CollisionInfo
+  langs:
+  - csharp
+  - vb
+  name: hitPoint
+  nameWithType: CollisionInfo.hitPoint
+  fullName: SAMURAI.CollisionInfo.hitPoint
+  type: Field
+  source:
+    id: hitPoint
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 280
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Vector3 hitPoint
+    return:
+      type: Vector3
+    content.vb: Public hitPoint As Vector3
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.CollisionInfo.colliderType
+  commentId: F:SAMURAI.CollisionInfo.colliderType
+  id: colliderType
+  parent: SAMURAI.CollisionInfo
+  langs:
+  - csharp
+  - vb
+  name: colliderType
+  nameWithType: CollisionInfo.colliderType
+  fullName: SAMURAI.CollisionInfo.colliderType
+  type: Field
+  source:
+    id: colliderType
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 281
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public CollisionManager.ColliderType colliderType
+    return:
+      type: SAMURAI.CollisionManager.ColliderType
+    content.vb: Public colliderType As CollisionManager.ColliderType
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.CollisionInfo.#ctor(SAMURAI.Polygon,Vector3,SAMURAI.CollisionManager.ColliderType)
+  commentId: M:SAMURAI.CollisionInfo.#ctor(SAMURAI.Polygon,Vector3,SAMURAI.CollisionManager.ColliderType)
+  id: '#ctor(SAMURAI.Polygon,Vector3,SAMURAI.CollisionManager.ColliderType)'
+  parent: SAMURAI.CollisionInfo
+  langs:
+  - csharp
+  - vb
+  name: CollisionInfo(Polygon, Vector3, CollisionManager.ColliderType)
+  nameWithType: CollisionInfo.CollisionInfo(Polygon, Vector3, CollisionManager.ColliderType)
+  fullName: SAMURAI.CollisionInfo.CollisionInfo(SAMURAI.Polygon, Vector3, SAMURAI.CollisionManager.ColliderType)
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\CollisionManager.cs
+    startLine: 283
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public CollisionInfo(Polygon _polygon, Vector3 _hitPoint, CollisionManager.ColliderType _colliderType)
+    parameters:
+    - id: _polygon
+      type: SAMURAI.Polygon
+    - id: _hitPoint
+      type: Vector3
+    - id: _colliderType
+      type: SAMURAI.CollisionManager.ColliderType
+    content.vb: Public Sub New(_polygon As Polygon, _hitPoint As Vector3, _colliderType As CollisionManager.ColliderType)
+  overload: SAMURAI.CollisionInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SAMURAI.Polygon
+  commentId: T:SAMURAI.Polygon
+  parent: SAMURAI
+  name: Polygon
+  nameWithType: Polygon
+  fullName: SAMURAI.Polygon
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: SAMURAI.CollisionManager.ColliderType
+  commentId: T:SAMURAI.CollisionManager.ColliderType
+  parent: SAMURAI
+  name: CollisionManager.ColliderType
+  nameWithType: CollisionManager.ColliderType
+  fullName: SAMURAI.CollisionManager.ColliderType
+- uid: SAMURAI.CollisionInfo.#ctor*
+  commentId: Overload:SAMURAI.CollisionInfo.#ctor
+  name: CollisionInfo
+  nameWithType: CollisionInfo.CollisionInfo
+  fullName: SAMURAI.CollisionInfo.CollisionInfo

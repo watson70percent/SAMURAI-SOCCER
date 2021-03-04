@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.Panda
+  commentId: T:SAMURAI.Panda
+  id: Panda
+  parent: SAMURAI
+  children:
+  - SAMURAI.Panda.GameOver
+  - SAMURAI.Panda.gameOverPanel
+  langs:
+  - csharp
+  - vb
+  name: Panda
+  nameWithType: Panda
+  fullName: SAMURAI.Panda
+  type: Class
+  source:
+    id: Panda
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class Panda : MonoBehaviour'
+    content.vb: >-
+      Public Class Panda
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.Panda.gameOverPanel
+  commentId: F:SAMURAI.Panda.gameOverPanel
+  id: gameOverPanel
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: gameOverPanel
+  nameWithType: Panda.gameOverPanel
+  fullName: SAMURAI.Panda.gameOverPanel
+  type: Field
+  source:
+    id: gameOverPanel
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject gameOverPanel
+    return:
+      type: GameObject
+    content.vb: Public gameOverPanel As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.Panda.GameOver
+  commentId: M:SAMURAI.Panda.GameOver
+  id: GameOver
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: GameOver()
+  nameWithType: Panda.GameOver()
+  fullName: SAMURAI.Panda.GameOver()
+  type: Method
+  source:
+    id: GameOver
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 63
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void GameOver()
+    content.vb: Public Sub GameOver
+  overload: SAMURAI.Panda.GameOver*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.Panda.GameOver*
+  commentId: Overload:SAMURAI.Panda.GameOver
+  name: GameOver
+  nameWithType: Panda.GameOver
+  fullName: SAMURAI.Panda.GameOver

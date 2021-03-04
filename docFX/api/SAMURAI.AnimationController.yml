@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: SAMURAI.AnimationController
+  commentId: T:SAMURAI.AnimationController
+  id: AnimationController
+  parent: SAMURAI
+  children:
+  - SAMURAI.AnimationController.Attack
+  - SAMURAI.AnimationController.AttackEvent
+  - SAMURAI.AnimationController.Run
+  - SAMURAI.AnimationController.slash
+  - SAMURAI.AnimationController.Stay
+  langs:
+  - csharp
+  - vb
+  name: AnimationController
+  nameWithType: AnimationController
+  fullName: SAMURAI.AnimationController
+  type: Class
+  source:
+    id: AnimationController
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\AnimationController.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: 'public class AnimationController : MonoBehaviour'
+    content.vb: >-
+      Public Class AnimationController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SAMURAI.AnimationController.slash
+  commentId: F:SAMURAI.AnimationController.slash
+  id: slash
+  parent: SAMURAI.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: slash
+  nameWithType: AnimationController.slash
+  fullName: SAMURAI.AnimationController.slash
+  type: Field
+  source:
+    id: slash
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\AnimationController.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public GameObject slash
+    return:
+      type: GameObject
+    content.vb: Public slash As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.AnimationController.AttackEvent
+  commentId: E:SAMURAI.AnimationController.AttackEvent
+  id: AttackEvent
+  parent: SAMURAI.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: AttackEvent
+  nameWithType: AnimationController.AttackEvent
+  fullName: SAMURAI.AnimationController.AttackEvent
+  type: Event
+  source:
+    id: AttackEvent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\AnimationController.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public event EventHandler AttackEvent
+    return:
+      type: System.EventHandler
+    content.vb: Public Event AttackEvent As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.AnimationController.Attack
+  commentId: M:SAMURAI.AnimationController.Attack
+  id: Attack
+  parent: SAMURAI.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Attack()
+  nameWithType: AnimationController.Attack()
+  fullName: SAMURAI.AnimationController.Attack()
+  type: Method
+  source:
+    id: Attack
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\AnimationController.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Attack()
+    content.vb: Public Sub Attack
+  overload: SAMURAI.AnimationController.Attack*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.AnimationController.Run
+  commentId: M:SAMURAI.AnimationController.Run
+  id: Run
+  parent: SAMURAI.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: AnimationController.Run()
+  fullName: SAMURAI.AnimationController.Run()
+  type: Method
+  source:
+    id: Run
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\AnimationController.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run
+  overload: SAMURAI.AnimationController.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SAMURAI.AnimationController.Stay
+  commentId: M:SAMURAI.AnimationController.Stay
+  id: Stay
+  parent: SAMURAI.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Stay()
+  nameWithType: AnimationController.Stay()
+  fullName: SAMURAI.AnimationController.Stay()
+  type: Method
+  source:
+    id: Stay
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\AnimationController.cs
+    startLine: 52
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public void Stay()
+    content.vb: Public Sub Stay
+  overload: SAMURAI.AnimationController.Stay*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SAMURAI
+  commentId: N:SAMURAI
+  name: SAMURAI
+  nameWithType: SAMURAI
+  fullName: SAMURAI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: SAMURAI.AnimationController.Attack*
+  commentId: Overload:SAMURAI.AnimationController.Attack
+  name: Attack
+  nameWithType: AnimationController.Attack
+  fullName: SAMURAI.AnimationController.Attack
+- uid: SAMURAI.AnimationController.Run*
+  commentId: Overload:SAMURAI.AnimationController.Run
+  name: Run
+  nameWithType: AnimationController.Run
+  fullName: SAMURAI.AnimationController.Run
+- uid: SAMURAI.AnimationController.Stay*
+  commentId: Overload:SAMURAI.AnimationController.Stay
+  name: Stay
+  nameWithType: AnimationController.Stay
+  fullName: SAMURAI.AnimationController.Stay
