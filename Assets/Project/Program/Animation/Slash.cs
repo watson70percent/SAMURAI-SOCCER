@@ -53,6 +53,7 @@ public class Slash : MonoBehaviour
             
             var dir = other.transform.position - transform.position;
             other.gameObject.GetComponent<Rigidbody>()?.AddForce(dir * 1000);
+            other.GetComponent<EasyCPU>().Attacked();
             GameObject.Find("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
         }
     }
