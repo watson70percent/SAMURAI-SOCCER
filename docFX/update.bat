@@ -20,4 +20,4 @@ for /f "usebackq" %%a in (`dir src\Assets\*.cs /b /s`) do (
 )
 
 set dirName=%~dp0
-docfx %dirName%docfx.json
+docfx %dirName%docfx.json --debug
