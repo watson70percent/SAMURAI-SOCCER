@@ -7,10 +7,18 @@ public class TargetWorldData : MonoBehaviour
 {
     [SerializeField]
     private float _cameraDistance = 5f;//カメラと対象オブジェクトとの距離
-    public float FocusStrength
+    public float CameraDistance
     {
         get { return _cameraDistance; }
         private set { _cameraDistance = value; }
+    }
+
+    [SerializeField]
+    private WorldName _worldName = WorldName.UK;
+    public WorldName WorldName
+    {
+        get { return _worldName; }
+        private set { _worldName = value; }
     }
 
     private void Start()

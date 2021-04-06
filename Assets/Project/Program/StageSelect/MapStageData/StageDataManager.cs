@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 各ステージの名前と順番
+/// </summary>
 public enum WorldName
 {
     UK = 0,
     China = 1,
     America = 2,
     Russia = 3,
+    WholeMap = 99,
 }
 
 /// <summary>

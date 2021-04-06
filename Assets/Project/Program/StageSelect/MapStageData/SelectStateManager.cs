@@ -12,7 +12,7 @@ public enum SelectState
     StageSelect,
     StagePreview,
 }
-[RequireComponent(typeof(StageSelectCamera))]
+[RequireComponent(typeof(SelectStateInput))]
 public class SelectStateManager : MonoBehaviour
 {
     //このクラスのステートマシーン
@@ -29,7 +29,7 @@ public class SelectStateManager : MonoBehaviour
 
     //以下各ステートで使用するクラス
     [System.NonSerialized]
-    public StageSelectCamera stageSelectCamera;
+    public SelectStateInput stageSelectCamera;
 
     private void Awake()
     {
@@ -44,7 +44,7 @@ public class SelectStateManager : MonoBehaviour
 
     private void Start()
     {
-        stageSelectCamera = GetComponent<StageSelectCamera>();
+        stageSelectCamera = GetComponent<SelectStateInput>();
     }
     private void Update()
     {
