@@ -16,28 +16,34 @@ public class StageIconButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        (string stName, string summary, Sprite stagePreview, SceneObject scene)buttonData = stageSelectMng.ButtonDataSet(indexOfButton);
-        stageName = buttonData.stName;
-        stageSummary = buttonData.summary;
-        stImage = buttonData.stagePreview;
-        gameScene = buttonData.scene;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (stageSelectMng.state == StageSelectManager.StageSelectState.preview)
+        /*if (stageSelectMng.state == StageSelectManager.StageSelectState.preview)
         {
             GetComponent<Button>().interactable = false;
         }
         else
         {
             GetComponent<Button>().interactable = true;
-        }
+        }*/
+    }
+
+    private void DataSet()
+    {
+        (string stName, string summary, Sprite stagePreview, SceneObject scene) buttonData = stageSelectMng.ButtonDataSet(indexOfButton);
+        stageName = buttonData.stName;
+        stageSummary = buttonData.summary;
+        stImage = buttonData.stagePreview;
+        gameScene = buttonData.scene;
     }
 
     public void OnClick()
     {
+        DataSet();
         stageSelectMng.previewState(stageName, stageSummary, stImage, gameScene);
 
     }
