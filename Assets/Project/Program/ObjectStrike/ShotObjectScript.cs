@@ -53,6 +53,7 @@ public class ShotObjectScript : MonoBehaviour
             //    //衝突がプレイヤーだったらゲームオーバー
             if (other.gameObject.tag == "Player")
             {
+                GetComponent<AudioSource>().Play();
                 other.transform.GetComponent<Rigidbody>();
                 //SceneManagerのイベントに勝利リザルト処理を追加
                 isEnd = true;
