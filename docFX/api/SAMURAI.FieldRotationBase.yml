@@ -7,8 +7,8 @@ items:
   children:
   - SAMURAI.FieldRotationBase.AdaptInversePosition(Vector3)
   - SAMURAI.FieldRotationBase.AdaptPosition(Vector3)
+  - SAMURAI.FieldRotationBase.Awake
   - SAMURAI.FieldRotationBase.rotation
-  - SAMURAI.FieldRotationBase.Start
   langs:
   - csharp
   - vb
@@ -71,19 +71,19 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: SAMURAI.FieldRotationBase.Start
-  commentId: M:SAMURAI.FieldRotationBase.Start
-  id: Start
+- uid: SAMURAI.FieldRotationBase.Awake
+  commentId: M:SAMURAI.FieldRotationBase.Awake
+  id: Awake
   parent: SAMURAI.FieldRotationBase
   langs:
   - csharp
   - vb
-  name: Start()
-  nameWithType: FieldRotationBase.Start()
-  fullName: SAMURAI.FieldRotationBase.Start()
+  name: Awake()
+  nameWithType: FieldRotationBase.Awake()
+  fullName: SAMURAI.FieldRotationBase.Awake()
   type: Method
   source:
-    id: Start
+    id: Awake
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldRotationBase.cs
     startLine: 19
   assemblies:
@@ -92,9 +92,9 @@ items:
   summary: "\n初期化。ご自由に。\n"
   example: []
   syntax:
-    content: protected virtual void Start()
-    content.vb: Protected Overridable Sub Start
-  overload: SAMURAI.FieldRotationBase.Start*
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake
+  overload: SAMURAI.FieldRotationBase.Awake*
   modifiers.csharp:
   - protected
   - virtual
@@ -188,11 +188,11 @@ references:
   name: Quaternion
   nameWithType: Quaternion
   fullName: Quaternion
-- uid: SAMURAI.FieldRotationBase.Start*
-  commentId: Overload:SAMURAI.FieldRotationBase.Start
-  name: Start
-  nameWithType: FieldRotationBase.Start
-  fullName: SAMURAI.FieldRotationBase.Start
+- uid: SAMURAI.FieldRotationBase.Awake*
+  commentId: Overload:SAMURAI.FieldRotationBase.Awake
+  name: Awake
+  nameWithType: FieldRotationBase.Awake
+  fullName: SAMURAI.FieldRotationBase.Awake
 - uid: SAMURAI.FieldRotationBase.AdaptPosition*
   commentId: Overload:SAMURAI.FieldRotationBase.AdaptPosition
   name: AdaptPosition

@@ -55,8 +55,8 @@ public class StagePrefabManager : MonoBehaviour
         }
 
         //審判の挙動
-        refereeArea.maxang = refereeMaxAng;
-        refereeArea.areaSize = refereeAreaSize;
+        refereeArea.SerMaxAngle( refereeMaxAng);
+        refereeArea.SerAreaSize(refereeAreaSize);
         refereeArea.useObstacles = useObstacles;
         refereeMove.runningspeed = runningSpeed;
         refereeMove.lookatspeed = lookAtSpeed;

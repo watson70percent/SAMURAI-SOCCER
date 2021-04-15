@@ -25,7 +25,7 @@ public class RefereeMove : MonoBehaviour
         state = a.gameState;
     }
 
-    void Start()
+    protected virtual void Start()
     {
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -38,7 +38,7 @@ public class RefereeMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         switch(state){
             case GameState.Standby :
@@ -87,7 +87,7 @@ public class RefereeMove : MonoBehaviour
 
 
 
-    void LookAtBall() {
+    protected virtual void LookAtBall() {
 
         Vector3 dir = ball.transform.position - this.transform.position; //向きたい方向のベクトル
         Quaternion rotation = Quaternion.LookRotation(dir); //向きたい方向になったときの回転

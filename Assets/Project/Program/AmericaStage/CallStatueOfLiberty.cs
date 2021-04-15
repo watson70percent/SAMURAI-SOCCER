@@ -26,10 +26,11 @@ public class CallStatueOfLiberty : MonoBehaviour
     /// <returns></returns>
     IEnumerator CallStatueCoroutine()
     {
+        yield return 3.0f;
         while (_gameManager.CurrentGameState != GameState.Finish)
         {
-            yield return 10.0f;
             Instantiate(StatuePrefab, new Vector3(60f, -70.0f, 50+Random.Range(-40f, 40f)), Quaternion.identity);
+            yield return 6.0f;
         }
 
     }

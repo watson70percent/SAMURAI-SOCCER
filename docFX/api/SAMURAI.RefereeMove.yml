@@ -5,6 +5,7 @@ items:
   id: RefereeMove
   parent: SAMURAI
   children:
+  - SAMURAI.RefereeMove.anicon
   - SAMURAI.RefereeMove.ball
   - SAMURAI.RefereeMove.lookatspeed
   - SAMURAI.RefereeMove.radius
@@ -172,6 +173,33 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.RefereeMove.anicon
+  commentId: F:SAMURAI.RefereeMove.anicon
+  id: anicon
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: anicon
+  nameWithType: RefereeMove.anicon
+  fullName: SAMURAI.RefereeMove.anicon
+  type: Field
+  source:
+    id: anicon
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Animator anicon
+    return:
+      type: Animator
+    content.vb: Public anicon As Animator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -209,3 +237,8 @@ references:
   name: RefereeArea
   nameWithType: RefereeArea
   fullName: SAMURAI.RefereeArea
+- uid: Animator
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: Animator

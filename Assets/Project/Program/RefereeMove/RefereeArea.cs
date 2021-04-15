@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class RefereeArea : MonoBehaviour
 {
     [Tooltip("審判の視界の視野角")]
-    public float maxang = 60;
+    float maxang = 60;
+    public float MaxAngle { get { return maxang; } }
+    public void SerMaxAngle(float newValue) { maxang = newValue; }
     [Tooltip("審判の視界の距離")]
-    public float areaSize = 10;
+    float areaSize = 10;
+    public float AreaSize { get { return areaSize; } }
+    public void SerAreaSize(float newValue) { areaSize = newValue; }
     public AnimationController anicom;
     public ParticleSystem surprisedMark;
     public Button attackButton;

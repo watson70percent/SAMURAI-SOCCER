@@ -11,6 +11,49 @@
 			Tags { "RenderType" = "Opaque" }
 			LOD 100
 
+
+			Pass{
+
+			Tags{ "LightMode" = "ShadowCaster" }   	//影を落とすにはこの1文を追加したPassを用意すればよい(シェーダー内で形を変化させてないときはもっと短く書くコードがある)
+													//このPassは影を描写するPassだから実体は描写されない
+
+			CGPROGRAM
+
+			#pragma vertex vert
+			#pragma fragment frag
+			#include "UnityCG.cginc"
+
+			fixed4 _Color;
+
+			struct appdata
+			{
+				float4 vertex: POSITION;
+			};
+
+			struct v2f
+			{
+				float4 pos: SV_POSITION;
+			};
+
+			v2f vert(appdata v)
+			{
+				v2f o;
+				o.pos = UnityObjectToClipPos(v.vertex);
+				return o;
+			}
+
+			fixed4 frag(v2f i) : SV_Target
+			{
+				fixed4 col;
+				col = fixed4(1,1,1,1);
+				return col;
+			}
+
+			ENDCG
+		}
+
+
+
 			Pass{
 
 				Tags {"LightMode" = "ForwardBase"} //このタグがないと影が描写されない時がある(描写順?)
@@ -90,11 +133,14 @@
 					float3 light = normalize(i.lightDir);
 					float diff = max(0, dot(normal, light));
 					col *= shadow * (diff*0.5+0.9);
+					
 					return col;
 				}
 
 					ENDCG
 			}
+
+
 		}
 
 }
