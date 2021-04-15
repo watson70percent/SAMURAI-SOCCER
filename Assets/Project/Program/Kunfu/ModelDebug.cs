@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ModelDebug : MonoBehaviour
 {
+
+    public string prefabNameAndjsonName;
     private void Awake()
     {
-        OpponentName.name = "SugiTest";
+        OpponentName.name = prefabNameAndjsonName;
     }
 }
