@@ -109,7 +109,6 @@ public class StageSelectManager : MonoBehaviour
         //相手選手のデータ、ステージ名をstaticにセットしておく
         FieldNumber.no = item.fieldNumber;
         OpponentName.name = item.oppnentName;
-        StandbyStateProcess.OpponentInfo=item.opponentInfo;
         return (stName:item.previewName, summary:item.summary, stagePreview:item.stageImage, scene:item.gameScene);
 
 
