@@ -28,4 +28,10 @@ public class StageData : MonoBehaviour
     [SerializeField]
     private StageState _stageState;
     public StageState StageState { get { return _stageState; } set { _stageState = value; } }
+
+
+    public BaseStageData ToBaseStageData()
+    {
+        return new BaseStageData(_worldName, _stageNumber);
+    } 
 }
