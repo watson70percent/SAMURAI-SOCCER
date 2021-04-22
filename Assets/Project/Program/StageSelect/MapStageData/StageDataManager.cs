@@ -35,7 +35,7 @@ public class StageDataManager : MonoBehaviour
     /// <summary>
     /// すべてのステージを検索し、状態管理する
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         TargetObjects = GameObject.FindGameObjectsWithTag("TargetStage");
         BaseStageData currentStageData = LoadStageData();
