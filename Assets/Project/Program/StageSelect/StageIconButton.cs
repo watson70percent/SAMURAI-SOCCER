@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(StageData))]
 public class StageIconButton : MonoBehaviour
 {
     string stageName;
@@ -13,23 +14,16 @@ public class StageIconButton : MonoBehaviour
     SceneObject gameScene;
     public int indexOfButton;
 
+    private StageData _stageData;
+
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (stageSelectMng.state == StageSelectManager.StageSelectState.preview)
+        _stageData = GetComponent<StageData>();
+        if (_stageData.StageState == StageState.NotPlayable)
         {
-            GetComponent<Button>().interactable = false;
+            _stageData.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.5f);
         }
-        else
-        {
-            GetComponent<Button>().interactable = true;
-        }*/
     }
 
     private void DataSet()
