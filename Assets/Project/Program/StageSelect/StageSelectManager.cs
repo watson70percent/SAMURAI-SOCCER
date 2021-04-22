@@ -88,11 +88,11 @@ public class StageSelectManager : MonoBehaviour
         //}
     }
 
-    public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene)
+    public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene,BaseStageData baseStageData)
     {
         //previewを見せる
         state = StageSelectState.preview;
-        stagePreviwScript.previewDisplay(stageName, summary, stImage, gameScene);
+        stagePreviwScript.previewDisplay(stageName, summary, stImage, gameScene,baseStageData);
     }
 
     public void selectState()

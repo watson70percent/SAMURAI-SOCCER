@@ -38,7 +38,8 @@ public class StageIconButton : MonoBehaviour
     public void OnClick()
     {
         DataSet();
-        stageSelectMng.previewState(stageName, stageSummary, stImage, gameScene);
+        BaseStageData basestageData = GetComponent<StageData>().ToBaseStageData();
+        stageSelectMng.previewState(stageName, stageSummary, stImage, gameScene,basestageData);
 
     }
 }
