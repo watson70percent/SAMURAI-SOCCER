@@ -33,7 +33,7 @@ public class StageSelectBGM : MonoBehaviour
             bgm.loop = true;
         }
 
-        if (cleared.StageNumber == 0 && cleared.StageNumber == 0)
+        if (cleared.StageNumber == 0 && cleared.StageNumber < 0)
         {
             start.Play();
         }
