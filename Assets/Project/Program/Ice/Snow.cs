@@ -14,6 +14,7 @@ public class Snow : MonoBehaviour
     public ParticleSystem particle;
     public Image gameover;
     public AudioSource audioSource;
+    [SerializeField]
     private float damage = 0;
     private Vector3 beforePoint = Vector3.zero;
 
@@ -52,15 +53,14 @@ public class Snow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var pos = snow.position;
+        pos.z = mainCamera.position.z;
+        snow.position = pos;
+
         if (gm.CurrentGameState == GameState.Playing)
         {
-            var pos = snow.position;
-            pos.z = mainCamera.position.z;
-            snow.position = pos;
-
             var diff = samurai.position - beforePoint;
-
-            if(diff.sqrMagnitude < 1.0 / 9 * Time.deltaTime * Time.deltaTime)
+            if(diff.sqrMagnitude < 5 * Time.deltaTime * Time.deltaTime)
             {
                 damage += 4.0f / 30 * Time.deltaTime;
                 if(damage > 4.8)
@@ -70,7 +70,7 @@ public class Snow : MonoBehaviour
                     StartCoroutine(GameOver());
                 }
             }
-            else if(diff.sqrMagnitude > 4.0 / 9 * Time.deltaTime * Time.deltaTime)
+            else if(diff.sqrMagnitude > 15 * Time.deltaTime * Time.deltaTime)
             {
                 if(damage > 0)
                 {
