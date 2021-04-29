@@ -14,6 +14,8 @@ public class StagePreviwScript : MonoBehaviour
 
     bool isPreview;
 
+    BaseStageData baseStageData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class StagePreviwScript : MonoBehaviour
     }
 
     //プレビューを表示する
-    public void previewDisplay(string stageName, string summary, Sprite image, SceneObject scene)
+    public void previewDisplay(string stageName, string summary, Sprite image, SceneObject scene,BaseStageData baseStageData)
     {
         
         nameText.text = stageName;
@@ -35,6 +37,8 @@ public class StagePreviwScript : MonoBehaviour
         stageImage.GetComponent <Image>().sprite = image;
         gameScene = scene;
         this.gameObject.SetActive(true);
+
+        this.baseStageData = baseStageData;
     }
 
     //x押されたら閉じる
@@ -48,7 +52,18 @@ public class StagePreviwScript : MonoBehaviour
     public void OnClickStart()
     {
         Debug.Log("ゲームスタート");
+
+        SceneManager.sceneLoaded += GameSceneLoaded;
+
         SceneManager.LoadScene(gameScene);
     }
+
+    void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    {
+        GameObject.Find("DefaultStage").GetComponent<StageDataHolder>().SetStageData(baseStageData);
+
+        SceneManager.sceneLoaded -= GameSceneLoaded;
+    }
+
 
 }

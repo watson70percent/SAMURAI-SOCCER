@@ -8,6 +8,7 @@ using System.Linq;
 [RequireComponent(typeof(SelectStateManager))]
 public class SelectStateInput : MonoBehaviour
 {
+    public StageSelectBGM bgm;
     private List<CinemachineVirtualCamera> _virtualCameras = new List<CinemachineVirtualCamera>();//StageSelectに使用するカメラ群
     private CinemachineBrain _cinemachineBrain;//メインカメラについているやつ
     private WorldName _focusWorld;//今どのワールドを見ているのか
@@ -56,6 +57,7 @@ public class SelectStateInput : MonoBehaviour
                 {
                     StartCoroutine(ChangeCameraView(raycastHit.collider.gameObject.GetComponentInChildren<CinemachineVirtualCamera>(), _cinemachineBrain.m_DefaultBlend.m_Time));
                     _focusWorld = raycastHit.collider.gameObject.GetComponent<TargetWorldData>().WorldName;
+                    bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
                     _selectStateManager.StateChangeSignal(SelectState.StageSelect);
                 }
             }
@@ -89,6 +91,7 @@ public class SelectStateInput : MonoBehaviour
                 {
                     StartCoroutine(ChangeCameraView(raycastResult.gameObject.GetComponent<BackWholeMap>().WholeMapVirtualCamera, _cinemachineBrain.m_DefaultBlend.m_Time));
                     _focusWorld = WorldName.WholeMap;
+                    bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
                     _selectStateManager.StateChangeSignal(SelectState.WorldSelect);
                 }
                 else
