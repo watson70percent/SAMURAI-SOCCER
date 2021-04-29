@@ -15,9 +15,11 @@ public class SamuraiDebugger : EditorWindow
     string _gameManagerName = "GameManager";
     GameState _gameState;
     GameManager _gameManager;
+    WorldName _worldName;
+    int _stageNumber;
     private void OnGUI()
     {
-        if (_foldinglist = EditorGUILayout.Foldout(_foldinglist, "StateDebugger"))
+        if (_foldinglist = EditorGUILayout.Foldout(_foldinglist, "GameStateDebugger"))
         {
             EditorGUI.indentLevel++;
 
@@ -60,6 +62,30 @@ public class SamuraiDebugger : EditorWindow
             EditorGUILayout.EndHorizontal();
             EditorGUI.indentLevel--;
         }
+        if(_foldinglist = EditorGUILayout.Foldout(_foldinglist, "SaveDataDebugger"))
+        {
+            EditorGUI.indentLevel++;
+            _worldName = (WorldName)EditorGUILayout.EnumPopup("TargetWorldName", _worldName);
+            _stageNumber = EditorGUILayout.IntField("TargetWorldNumber", _stageNumber);
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
+            if (GUILayout.Button("ChanegeToSaveData"))
+            {
+                PlayerPrefs.SetInt("worldName", (int)_worldName);
+                PlayerPrefs.SetInt("stageNumber", _stageNumber);
+                Debug.Log("デバッグ関数の使用、("+_worldName+","+_stageNumber+")にSaveしました。");
+            }
+            EditorGUILayout.EndHorizontal();
 
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
+            if (GUILayout.Button("  CurrentSaveData  "))
+            {
+                Debug.Log("現在のSaveDataは("+StageDataManager.LoadStageData().WorldName+","+StageDataManager.LoadStageData().StageNumber+")です");
+            }
+            GUILayout.FlexibleSpace();
+            EditorGUILayout.EndHorizontal();
+            EditorGUI.indentLevel--;
+        }
     }
 }
