@@ -21,6 +21,7 @@ public class StageSelectBGM : MonoBehaviour
     private AudioSource ru;
 
     private WorldName current;
+    private bool isNotCleared = true;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class StageSelectBGM : MonoBehaviour
         if (cleared.WorldName == WorldName.UK && cleared.StageNumber < 0)
         {
             start.Play();
+            isNotCleared = true;
         }
         else
         {
@@ -48,11 +50,17 @@ public class StageSelectBGM : MonoBehaviour
             cn.Play();
             us.Play();
             ru.Play();
+            isNotCleared = false;
         }
     }
 
     public void ChangeBGM(WorldName next, float delayTime)
     {
+        if (isNotCleared)
+        {
+            return;
+        }
+
         if(next == WorldName.WholeMap)
         {
             switch (current)
