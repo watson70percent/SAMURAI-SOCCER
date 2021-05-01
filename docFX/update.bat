@@ -19,5 +19,4 @@ for /f "usebackq" %%a in (`dir src\Assets\*.cs /b /s`) do (
     del /Q !tmpName1!
 )
 
-docfx metadata --filter filterConfig.yml
-docfx build
+docfx docfx\docfx.json
