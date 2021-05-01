@@ -6,19 +6,23 @@ items:
   children:
   - SAMURAI.AnimationController
   - SAMURAI.AvoidCarScript
+  - SAMURAI.BackWholeMap
   - SAMURAI.Ball_Temp
+  - SAMURAI.BaseStageData
+  - SAMURAI.BulletFunction
   - SAMURAI.CallStatueOfLiberty
   - SAMURAI.ColliderInputData
   - SAMURAI.CollisionInfo
   - SAMURAI.CollisionManager
   - SAMURAI.CollisionManager.ColliderType
   - SAMURAI.CollisionObject
+  - SAMURAI.CollisionWithStatue
   - SAMURAI.Constants
   - SAMURAI.CrowdMenber
-  - SAMURAI.CrushedToDeath
   - SAMURAI.EasyCPU
   - SAMURAI.EasyCPUManager
   - SAMURAI.EMoveScript
+  - SAMURAI.EMoveScript.moveDirection
   - SAMURAI.Extentions
   - SAMURAI.FieldInfo
   - SAMURAI.FieldMaker
@@ -27,6 +31,7 @@ items:
   - SAMURAI.FieldRotationBase
   - SAMURAI.FinishProcess
   - SAMURAI.FinishState
+  - SAMURAI.FireHypnoticBullets
   - SAMURAI.Flag
   - SAMURAI.GameManager
   - SAMURAI.GameOverPanel
@@ -36,19 +41,26 @@ items:
   - SAMURAI.GoalView
   - SAMURAI.GroundTexture
   - SAMURAI.IceStageManager
+  - SAMURAI.JiangshiPostProcessing
   - SAMURAI.JiangshiSceneManager
   - SAMURAI.JudgeGameEnd
+  - SAMURAI.KunfuReferee
+  - SAMURAI.KunfuSceneManager
   - SAMURAI.LoadAnyScene
   - SAMURAI.MeshCut
   - SAMURAI.MeshCut.MeshData
   - SAMURAI.MeshCut.RectangleFragment
   - SAMURAI.MeshCut.TriangleFragment
+  - SAMURAI.ModelDebug
   - SAMURAI.NonRotation
   - SAMURAI.NonWind
   - SAMURAI.NumberManager
   - SAMURAI.OpponentName
   - SAMURAI.Panda
   - SAMURAI.PandaMaker
+  - SAMURAI.PanjanExplode
+  - SAMURAI.PanjanMake
+  - SAMURAI.PanjanRoll
   - SAMURAI.particle
   - SAMURAI.PauseBackScript
   - SAMURAI.PauseButton
@@ -68,37 +80,57 @@ items:
   - SAMURAI.SamuraiWordBase
   - SAMURAI.SamuraiWordBaseEditor
   - SAMURAI.SceneObject
+  - SAMURAI.SelectState
+  - SAMURAI.SelectStateInput
+  - SAMURAI.SelectStateManager
   - SAMURAI.ShotObjectScript
   - SAMURAI.SkinnedMeshCut
   - SAMURAI.SkinnedMeshCut.MeshData
   - SAMURAI.Slash
   - SAMURAI.slidepad
+  - SAMURAI.slidepad.Boundy
   - SAMURAI.Snow
+  - SAMURAI.StageData
+  - SAMURAI.StageDataHolder
+  - SAMURAI.StageDataManager
+  - SAMURAI.StageDataReceiver
+  - SAMURAI.StageDataSave
   - SAMURAI.StageIcon
   - SAMURAI.StageIconButton
   - SAMURAI.StagePrefabManager
   - SAMURAI.StagePrefabManagerEditor
+  - SAMURAI.StagePreviewState
   - SAMURAI.StagePreviwScript
   - SAMURAI.StageSelect
+  - SAMURAI.StageSelectBGM
   - SAMURAI.StageSelectData
   - SAMURAI.StageSelectManager
   - SAMURAI.StageSelectManager.StageSelectState
+  - SAMURAI.StageSelectState
+  - SAMURAI.StageState
   - SAMURAI.StandardFade
   - SAMURAI.StandbyState
   - SAMURAI.StandbyStateProcess
   - SAMURAI.StartCoroutineForPlayingState
   - SAMURAI.StateChangedArg
   - SAMURAI.StateChangedHandler
+  - SAMURAI.StatueMode
   - SAMURAI.StrikeObjectScript
   - SAMURAI.SugiTemp
+  - SAMURAI.SwitchCPU
+  - SAMURAI.SwitchCPU.WeightSet
   - SAMURAI.Sword
+  - SAMURAI.TargetWorldData
   - SAMURAI.Team
   - SAMURAI.TeamMaker
   - SAMURAI.test
+  - SAMURAI.test_StageDataHolder
   - SAMURAI.TimerScript
   - SAMURAI.VanishAndBorn
   - SAMURAI.Wall_temp
   - SAMURAI.WindInfoBase
+  - SAMURAI.WorldName
+  - SAMURAI.WorldSelectState
   langs:
   - csharp
   - vb
@@ -180,18 +212,35 @@ references:
   name: WindInfoBase
   nameWithType: WindInfoBase
   fullName: SAMURAI.WindInfoBase
+- uid: SAMURAI.BulletFunction
+  commentId: T:SAMURAI.BulletFunction
+  name: BulletFunction
+  nameWithType: BulletFunction
+  fullName: SAMURAI.BulletFunction
 - uid: SAMURAI.CallStatueOfLiberty
   commentId: T:SAMURAI.CallStatueOfLiberty
   name: CallStatueOfLiberty
   nameWithType: CallStatueOfLiberty
   fullName: SAMURAI.CallStatueOfLiberty
-- uid: SAMURAI.CrushedToDeath
-  commentId: T:SAMURAI.CrushedToDeath
-  name: CrushedToDeath
-  nameWithType: CrushedToDeath
-  fullName: SAMURAI.CrushedToDeath
+- uid: SAMURAI.CollisionWithStatue
+  commentId: T:SAMURAI.CollisionWithStatue
+  name: CollisionWithStatue
+  nameWithType: CollisionWithStatue
+  fullName: SAMURAI.CollisionWithStatue
+- uid: SAMURAI.FireHypnoticBullets
+  commentId: T:SAMURAI.FireHypnoticBullets
+  name: FireHypnoticBullets
+  nameWithType: FireHypnoticBullets
+  fullName: SAMURAI.FireHypnoticBullets
+- uid: SAMURAI.StatueMode
+  commentId: T:SAMURAI.StatueMode
+  parent: SAMURAI
+  name: StatueMode
+  nameWithType: StatueMode
+  fullName: SAMURAI.StatueMode
 - uid: SAMURAI.RiseStatue
   commentId: T:SAMURAI.RiseStatue
+  parent: SAMURAI
   name: RiseStatue
   nameWithType: RiseStatue
   fullName: SAMURAI.RiseStatue
@@ -226,6 +275,12 @@ references:
   name: EMoveScript
   nameWithType: EMoveScript
   fullName: SAMURAI.EMoveScript
+- uid: SAMURAI.EMoveScript.moveDirection
+  commentId: T:SAMURAI.EMoveScript.moveDirection
+  parent: SAMURAI
+  name: EMoveScript.moveDirection
+  nameWithType: EMoveScript.moveDirection
+  fullName: SAMURAI.EMoveScript.moveDirection
 - uid: SAMURAI.CrowdMenber
   commentId: T:SAMURAI.CrowdMenber
   name: CrowdMenber
@@ -241,6 +296,17 @@ references:
   name: GroundTexture
   nameWithType: GroundTexture
   fullName: SAMURAI.GroundTexture
+- uid: SAMURAI.StageDataReceiver
+  commentId: T:SAMURAI.StageDataReceiver
+  parent: SAMURAI
+  name: StageDataReceiver
+  nameWithType: StageDataReceiver
+  fullName: SAMURAI.StageDataReceiver
+- uid: SAMURAI.StageDataHolder
+  commentId: T:SAMURAI.StageDataHolder
+  name: StageDataHolder
+  nameWithType: StageDataHolder
+  fullName: SAMURAI.StageDataHolder
 - uid: SAMURAI.StagePrefabManager
   commentId: T:SAMURAI.StagePrefabManager
   parent: SAMURAI
@@ -252,6 +318,11 @@ references:
   name: SugiTemp
   nameWithType: SugiTemp
   fullName: SAMURAI.SugiTemp
+- uid: SAMURAI.test_StageDataHolder
+  commentId: T:SAMURAI.test_StageDataHolder
+  name: test_StageDataHolder
+  nameWithType: test_StageDataHolder
+  fullName: SAMURAI.test_StageDataHolder
 - uid: SAMURAI.NumberManager
   commentId: T:SAMURAI.NumberManager
   name: NumberManager
@@ -293,6 +364,7 @@ references:
   fullName: SAMURAI.GameManager
 - uid: SAMURAI.JudgeGameEnd
   commentId: T:SAMURAI.JudgeGameEnd
+  parent: SAMURAI
   name: JudgeGameEnd
   nameWithType: JudgeGameEnd
   fullName: SAMURAI.JudgeGameEnd
@@ -356,11 +428,31 @@ references:
   name: Snow
   nameWithType: Snow
   fullName: SAMURAI.Snow
+- uid: SAMURAI.JiangshiPostProcessing
+  commentId: T:SAMURAI.JiangshiPostProcessing
+  name: JiangshiPostProcessing
+  nameWithType: JiangshiPostProcessing
+  fullName: SAMURAI.JiangshiPostProcessing
 - uid: SAMURAI.JiangshiSceneManager
   commentId: T:SAMURAI.JiangshiSceneManager
   name: JiangshiSceneManager
   nameWithType: JiangshiSceneManager
   fullName: SAMURAI.JiangshiSceneManager
+- uid: SAMURAI.KunfuReferee
+  commentId: T:SAMURAI.KunfuReferee
+  name: KunfuReferee
+  nameWithType: KunfuReferee
+  fullName: SAMURAI.KunfuReferee
+- uid: SAMURAI.KunfuSceneManager
+  commentId: T:SAMURAI.KunfuSceneManager
+  name: KunfuSceneManager
+  nameWithType: KunfuSceneManager
+  fullName: SAMURAI.KunfuSceneManager
+- uid: SAMURAI.ModelDebug
+  commentId: T:SAMURAI.ModelDebug
+  name: ModelDebug
+  nameWithType: ModelDebug
+  fullName: SAMURAI.ModelDebug
 - uid: SAMURAI.CollisionManager
   commentId: T:SAMURAI.CollisionManager
   name: CollisionManager
@@ -408,6 +500,7 @@ references:
   fullName: SAMURAI.MeshCut
 - uid: SAMURAI.MeshCut.MeshData
   commentId: T:SAMURAI.MeshCut.MeshData
+  parent: SAMURAI
   name: MeshCut.MeshData
   nameWithType: MeshCut.MeshData
   fullName: SAMURAI.MeshCut.MeshData
@@ -428,6 +521,7 @@ references:
   fullName: SAMURAI.SkinnedMeshCut
 - uid: SAMURAI.SkinnedMeshCut.MeshData
   commentId: T:SAMURAI.SkinnedMeshCut.MeshData
+  parent: SAMURAI
   name: SkinnedMeshCut.MeshData
   nameWithType: SkinnedMeshCut.MeshData
   fullName: SAMURAI.SkinnedMeshCut.MeshData
@@ -456,6 +550,21 @@ references:
   name: PandaMaker
   nameWithType: PandaMaker
   fullName: SAMURAI.PandaMaker
+- uid: SAMURAI.PanjanExplode
+  commentId: T:SAMURAI.PanjanExplode
+  name: PanjanExplode
+  nameWithType: PanjanExplode
+  fullName: SAMURAI.PanjanExplode
+- uid: SAMURAI.PanjanMake
+  commentId: T:SAMURAI.PanjanMake
+  name: PanjanMake
+  nameWithType: PanjanMake
+  fullName: SAMURAI.PanjanMake
+- uid: SAMURAI.PanjanRoll
+  commentId: T:SAMURAI.PanjanRoll
+  name: PanjanRoll
+  nameWithType: PanjanRoll
+  fullName: SAMURAI.PanjanRoll
 - uid: SAMURAI.Ball_Temp
   commentId: T:SAMURAI.Ball_Temp
   name: Ball_Temp
@@ -511,12 +620,95 @@ references:
   name: SamuraiWordBase
   nameWithType: SamuraiWordBase
   fullName: SAMURAI.SamuraiWordBase
+- uid: SAMURAI.StageDataSave
+  commentId: T:SAMURAI.StageDataSave
+  name: StageDataSave
+  nameWithType: StageDataSave
+  fullName: SAMURAI.StageDataSave
 - uid: SAMURAI.slidepad
   commentId: T:SAMURAI.slidepad
   parent: SAMURAI
   name: slidepad
   nameWithType: slidepad
   fullName: SAMURAI.slidepad
+- uid: SAMURAI.slidepad.Boundy
+  commentId: T:SAMURAI.slidepad.Boundy
+  parent: SAMURAI
+  name: slidepad.Boundy
+  nameWithType: slidepad.Boundy
+  fullName: SAMURAI.slidepad.Boundy
+- uid: SAMURAI.BackWholeMap
+  commentId: T:SAMURAI.BackWholeMap
+  name: BackWholeMap
+  nameWithType: BackWholeMap
+  fullName: SAMURAI.BackWholeMap
+- uid: SAMURAI.SelectStateInput
+  commentId: T:SAMURAI.SelectStateInput
+  parent: SAMURAI
+  name: SelectStateInput
+  nameWithType: SelectStateInput
+  fullName: SAMURAI.SelectStateInput
+- uid: SAMURAI.SelectState
+  commentId: T:SAMURAI.SelectState
+  parent: SAMURAI
+  name: SelectState
+  nameWithType: SelectState
+  fullName: SAMURAI.SelectState
+- uid: SAMURAI.SelectStateManager
+  commentId: T:SAMURAI.SelectStateManager
+  parent: SAMURAI
+  name: SelectStateManager
+  nameWithType: SelectStateManager
+  fullName: SAMURAI.SelectStateManager
+- uid: SAMURAI.StageState
+  commentId: T:SAMURAI.StageState
+  parent: SAMURAI
+  name: StageState
+  nameWithType: StageState
+  fullName: SAMURAI.StageState
+- uid: SAMURAI.StageData
+  commentId: T:SAMURAI.StageData
+  parent: SAMURAI
+  name: StageData
+  nameWithType: StageData
+  fullName: SAMURAI.StageData
+- uid: SAMURAI.WorldName
+  commentId: T:SAMURAI.WorldName
+  parent: SAMURAI
+  name: WorldName
+  nameWithType: WorldName
+  fullName: SAMURAI.WorldName
+- uid: SAMURAI.BaseStageData
+  commentId: T:SAMURAI.BaseStageData
+  parent: SAMURAI
+  name: BaseStageData
+  nameWithType: BaseStageData
+  fullName: SAMURAI.BaseStageData
+- uid: SAMURAI.StageDataManager
+  commentId: T:SAMURAI.StageDataManager
+  name: StageDataManager
+  nameWithType: StageDataManager
+  fullName: SAMURAI.StageDataManager
+- uid: SAMURAI.StagePreviewState
+  commentId: T:SAMURAI.StagePreviewState
+  name: StagePreviewState
+  nameWithType: StagePreviewState
+  fullName: SAMURAI.StagePreviewState
+- uid: SAMURAI.StageSelectState
+  commentId: T:SAMURAI.StageSelectState
+  name: StageSelectState
+  nameWithType: StageSelectState
+  fullName: SAMURAI.StageSelectState
+- uid: SAMURAI.TargetWorldData
+  commentId: T:SAMURAI.TargetWorldData
+  name: TargetWorldData
+  nameWithType: TargetWorldData
+  fullName: SAMURAI.TargetWorldData
+- uid: SAMURAI.WorldSelectState
+  commentId: T:SAMURAI.WorldSelectState
+  name: WorldSelectState
+  nameWithType: WorldSelectState
+  fullName: SAMURAI.WorldSelectState
 - uid: SAMURAI.SceneObject
   commentId: T:SAMURAI.SceneObject
   parent: SAMURAI
@@ -535,9 +727,16 @@ references:
   fullName: SAMURAI.StageIconButton
 - uid: SAMURAI.StagePreviwScript
   commentId: T:SAMURAI.StagePreviwScript
+  parent: SAMURAI
   name: StagePreviwScript
   nameWithType: StagePreviwScript
   fullName: SAMURAI.StagePreviwScript
+- uid: SAMURAI.StageSelectBGM
+  commentId: T:SAMURAI.StageSelectBGM
+  parent: SAMURAI
+  name: StageSelectBGM
+  nameWithType: StageSelectBGM
+  fullName: SAMURAI.StageSelectBGM
 - uid: SAMURAI.StageSelectData
   commentId: T:SAMURAI.StageSelectData
   parent: SAMURAI
@@ -546,6 +745,7 @@ references:
   fullName: SAMURAI.StageSelectData
 - uid: SAMURAI.StageSelect
   commentId: T:SAMURAI.StageSelect
+  parent: SAMURAI
   name: StageSelect
   nameWithType: StageSelect
   fullName: SAMURAI.StageSelect
@@ -561,6 +761,16 @@ references:
   name: StageSelectManager.StageSelectState
   nameWithType: StageSelectManager.StageSelectState
   fullName: SAMURAI.StageSelectManager.StageSelectState
+- uid: SAMURAI.SwitchCPU
+  commentId: T:SAMURAI.SwitchCPU
+  name: SwitchCPU
+  nameWithType: SwitchCPU
+  fullName: SAMURAI.SwitchCPU
+- uid: SAMURAI.SwitchCPU.WeightSet
+  commentId: T:SAMURAI.SwitchCPU.WeightSet
+  name: SwitchCPU.WeightSet
+  nameWithType: SwitchCPU.WeightSet
+  fullName: SAMURAI.SwitchCPU.WeightSet
 - uid: SAMURAI.PauseBackScript
   commentId: T:SAMURAI.PauseBackScript
   name: PauseBackScript

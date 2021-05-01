@@ -5,7 +5,15 @@ items:
   id: JudgeGameEnd
   parent: SAMURAI
   children:
+  - SAMURAI.JudgeGameEnd._easyCPUManager
+  - SAMURAI.JudgeGameEnd._gameManager
+  - SAMURAI.JudgeGameEnd.audioSource
+  - SAMURAI.JudgeGameEnd.finishSound
+  - SAMURAI.JudgeGameEnd.GameSceneLoaded(Scene,LoadSceneMode)
+  - SAMURAI.JudgeGameEnd.GoResult
   - SAMURAI.JudgeGameEnd.ResultSceneName
+  - SAMURAI.JudgeGameEnd.Start
+  - SAMURAI.JudgeGameEnd.Update
   langs:
   - csharp
   - vb
@@ -33,6 +41,52 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.JudgeGameEnd._gameManager
+  commentId: F:SAMURAI.JudgeGameEnd._gameManager
+  id: _gameManager
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: _gameManager
+  nameWithType: JudgeGameEnd._gameManager
+  fullName: SAMURAI.JudgeGameEnd._gameManager
+  type: Field
+  source:
+    id: _gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager _gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: _gameManager As GameManager
+- uid: SAMURAI.JudgeGameEnd._easyCPUManager
+  commentId: F:SAMURAI.JudgeGameEnd._easyCPUManager
+  id: _easyCPUManager
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: _easyCPUManager
+  nameWithType: JudgeGameEnd._easyCPUManager
+  fullName: SAMURAI.JudgeGameEnd._easyCPUManager
+  type: Field
+  source:
+    id: _easyCPUManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: EasyCPUManager _easyCPUManager
+    return:
+      type: SAMURAI.EasyCPUManager
+    content.vb: _easyCPUManager As EasyCPUManager
 - uid: SAMURAI.JudgeGameEnd.ResultSceneName
   commentId: F:SAMURAI.JudgeGameEnd.ResultSceneName
   id: ResultSceneName
@@ -60,6 +114,154 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.JudgeGameEnd.finishSound
+  commentId: F:SAMURAI.JudgeGameEnd.finishSound
+  id: finishSound
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: finishSound
+  nameWithType: JudgeGameEnd.finishSound
+  fullName: SAMURAI.JudgeGameEnd.finishSound
+  type: Field
+  source:
+    id: finishSound
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioClip finishSound
+    return:
+      type: AudioClip
+    content.vb: finishSound As AudioClip
+- uid: SAMURAI.JudgeGameEnd.audioSource
+  commentId: F:SAMURAI.JudgeGameEnd.audioSource
+  id: audioSource
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: JudgeGameEnd.audioSource
+  fullName: SAMURAI.JudgeGameEnd.audioSource
+  type: Field
+  source:
+    id: audioSource
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioSource audioSource
+    return:
+      type: AudioSource
+    content.vb: audioSource As AudioSource
+- uid: SAMURAI.JudgeGameEnd.Start
+  commentId: M:SAMURAI.JudgeGameEnd.Start
+  id: Start
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: JudgeGameEnd.Start()
+  fullName: SAMURAI.JudgeGameEnd.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.JudgeGameEnd.Start*
+- uid: SAMURAI.JudgeGameEnd.Update
+  commentId: M:SAMURAI.JudgeGameEnd.Update
+  id: Update
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: JudgeGameEnd.Update()
+  fullName: SAMURAI.JudgeGameEnd.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.JudgeGameEnd.Update*
+- uid: SAMURAI.JudgeGameEnd.GameSceneLoaded(Scene,LoadSceneMode)
+  commentId: M:SAMURAI.JudgeGameEnd.GameSceneLoaded(Scene,LoadSceneMode)
+  id: GameSceneLoaded(Scene,LoadSceneMode)
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: GameSceneLoaded(Scene, LoadSceneMode)
+  nameWithType: JudgeGameEnd.GameSceneLoaded(Scene, LoadSceneMode)
+  fullName: SAMURAI.JudgeGameEnd.GameSceneLoaded(Scene, LoadSceneMode)
+  type: Method
+  source:
+    id: GameSceneLoaded
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 48
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n勝利リザルト用の処理\n"
+  example: []
+  syntax:
+    content: void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    parameters:
+    - id: next
+      type: Scene
+      description: ''
+    - id: mode
+      type: LoadSceneMode
+      description: ''
+    content.vb: Sub GameSceneLoaded(next As Scene, mode As LoadSceneMode)
+  overload: SAMURAI.JudgeGameEnd.GameSceneLoaded*
+- uid: SAMURAI.JudgeGameEnd.GoResult
+  commentId: M:SAMURAI.JudgeGameEnd.GoResult
+  id: GoResult
+  parent: SAMURAI.JudgeGameEnd
+  langs:
+  - csharp
+  - vb
+  name: GoResult()
+  nameWithType: JudgeGameEnd.GoResult()
+  fullName: SAMURAI.JudgeGameEnd.GoResult()
+  type: Method
+  source:
+    id: GoResult
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\JudgeGameEnd.cs
+    startLine: 60
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\nリザルトへ移動するためのコルーチン\n"
+  example: []
+  syntax:
+    content: IEnumerator GoResult()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Function GoResult As IEnumerator
+  overload: SAMURAI.JudgeGameEnd.GoResult*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -79,6 +281,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.EasyCPUManager
+  commentId: T:SAMURAI.EasyCPUManager
+  parent: SAMURAI
+  name: EasyCPUManager
+  nameWithType: EasyCPUManager
+  fullName: SAMURAI.EasyCPUManager
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -86,3 +300,56 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
+- uid: AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: SAMURAI.JudgeGameEnd.Start*
+  commentId: Overload:SAMURAI.JudgeGameEnd.Start
+  name: Start
+  nameWithType: JudgeGameEnd.Start
+  fullName: SAMURAI.JudgeGameEnd.Start
+- uid: SAMURAI.JudgeGameEnd.Update*
+  commentId: Overload:SAMURAI.JudgeGameEnd.Update
+  name: Update
+  nameWithType: JudgeGameEnd.Update
+  fullName: SAMURAI.JudgeGameEnd.Update
+- uid: SAMURAI.JudgeGameEnd.GameSceneLoaded*
+  commentId: Overload:SAMURAI.JudgeGameEnd.GameSceneLoaded
+  name: GameSceneLoaded
+  nameWithType: JudgeGameEnd.GameSceneLoaded
+  fullName: SAMURAI.JudgeGameEnd.GameSceneLoaded
+- uid: Scene
+  isExternal: true
+  name: Scene
+  nameWithType: Scene
+  fullName: Scene
+- uid: LoadSceneMode
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: LoadSceneMode
+- uid: SAMURAI.JudgeGameEnd.GoResult*
+  commentId: Overload:SAMURAI.JudgeGameEnd.GoResult
+  name: GoResult
+  nameWithType: JudgeGameEnd.GoResult
+  fullName: SAMURAI.JudgeGameEnd.GoResult
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

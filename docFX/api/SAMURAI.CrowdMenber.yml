@@ -8,6 +8,7 @@ items:
   - SAMURAI.CrowdMenber.crowdMaterial
   - SAMURAI.CrowdMenber.crowdRenderers
   - SAMURAI.CrowdMenber.crowdTextures
+  - SAMURAI.CrowdMenber.Start
   langs:
   - csharp
   - vb
@@ -116,6 +117,28 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.CrowdMenber.Start
+  commentId: M:SAMURAI.CrowdMenber.Start
+  id: Start
+  parent: SAMURAI.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: CrowdMenber.Start()
+  fullName: SAMURAI.CrowdMenber.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\CrowdMenber.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.CrowdMenber.Start*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -192,3 +215,8 @@ references:
   name: Material
   nameWithType: Material
   fullName: Material
+- uid: SAMURAI.CrowdMenber.Start*
+  commentId: Overload:SAMURAI.CrowdMenber.Start
+  name: Start
+  nameWithType: CrowdMenber.Start
+  fullName: SAMURAI.CrowdMenber.Start

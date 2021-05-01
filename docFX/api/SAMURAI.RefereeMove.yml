@@ -7,10 +7,18 @@ items:
   children:
   - SAMURAI.RefereeMove.anicon
   - SAMURAI.RefereeMove.ball
+  - SAMURAI.RefereeMove.gameManager
+  - SAMURAI.RefereeMove.LookAtBall
   - SAMURAI.RefereeMove.lookatspeed
+  - SAMURAI.RefereeMove.MoveAroundBall
   - SAMURAI.RefereeMove.radius
   - SAMURAI.RefereeMove.refereeArea
+  - SAMURAI.RefereeMove.rig
   - SAMURAI.RefereeMove.runningspeed
+  - SAMURAI.RefereeMove.Start
+  - SAMURAI.RefereeMove.state
+  - SAMURAI.RefereeMove.SwitchState(SAMURAI.StateChangedArg)
+  - SAMURAI.RefereeMove.Update
   langs:
   - csharp
   - vb
@@ -32,6 +40,8 @@ items:
           Inherits MonoBehaviour
   inheritance:
   - System.Object
+  derivedClasses:
+  - SAMURAI.KunfuReferee
   modifiers.csharp:
   - public
   - class
@@ -146,6 +156,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.RefereeMove.rig
+  commentId: F:SAMURAI.RefereeMove.rig
+  id: rig
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: rig
+  nameWithType: RefereeMove.rig
+  fullName: SAMURAI.RefereeMove.rig
+  type: Field
+  source:
+    id: rig
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Rigidbody rig
+    return:
+      type: Rigidbody
+    content.vb: rig As Rigidbody
 - uid: SAMURAI.RefereeMove.refereeArea
   commentId: F:SAMURAI.RefereeMove.refereeArea
   id: refereeArea
@@ -173,6 +206,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.RefereeMove.gameManager
+  commentId: F:SAMURAI.RefereeMove.gameManager
+  id: gameManager
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: RefereeMove.gameManager
+  fullName: SAMURAI.RefereeMove.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: gameManager As GameManager
+- uid: SAMURAI.RefereeMove.state
+  commentId: F:SAMURAI.RefereeMove.state
+  id: state
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: RefereeMove.state
+  fullName: SAMURAI.RefereeMove.state
+  type: Field
+  source:
+    id: state
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameState state
+    return:
+      type: SAMURAI.GameState
+    content.vb: state As GameState
 - uid: SAMURAI.RefereeMove.anicon
   commentId: F:SAMURAI.RefereeMove.anicon
   id: anicon
@@ -200,6 +279,137 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.RefereeMove.SwitchState(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.RefereeMove.SwitchState(SAMURAI.StateChangedArg)
+  id: SwitchState(SAMURAI.StateChangedArg)
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: SwitchState(StateChangedArg)
+  nameWithType: RefereeMove.SwitchState(StateChangedArg)
+  fullName: SAMURAI.RefereeMove.SwitchState(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: SwitchState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void SwitchState(StateChangedArg a)
+    parameters:
+    - id: a
+      type: SAMURAI.StateChangedArg
+    content.vb: Sub SwitchState(a As StateChangedArg)
+  overload: SAMURAI.RefereeMove.SwitchState*
+- uid: SAMURAI.RefereeMove.Start
+  commentId: M:SAMURAI.RefereeMove.Start
+  id: Start
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: RefereeMove.Start()
+  fullName: SAMURAI.RefereeMove.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start
+  overload: SAMURAI.RefereeMove.Start*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: SAMURAI.RefereeMove.Update
+  commentId: M:SAMURAI.RefereeMove.Update
+  id: Update
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: RefereeMove.Update()
+  fullName: SAMURAI.RefereeMove.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected virtual void Update()
+    content.vb: Protected Overridable Sub Update
+  overload: SAMURAI.RefereeMove.Update*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: SAMURAI.RefereeMove.MoveAroundBall
+  commentId: M:SAMURAI.RefereeMove.MoveAroundBall
+  id: MoveAroundBall
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: MoveAroundBall()
+  nameWithType: RefereeMove.MoveAroundBall()
+  fullName: SAMURAI.RefereeMove.MoveAroundBall()
+  type: Method
+  source:
+    id: MoveAroundBall
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 64
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void MoveAroundBall()
+    content.vb: Sub MoveAroundBall
+  overload: SAMURAI.RefereeMove.MoveAroundBall*
+- uid: SAMURAI.RefereeMove.LookAtBall
+  commentId: M:SAMURAI.RefereeMove.LookAtBall
+  id: LookAtBall
+  parent: SAMURAI.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: LookAtBall()
+  nameWithType: RefereeMove.LookAtBall()
+  fullName: SAMURAI.RefereeMove.LookAtBall()
+  type: Method
+  source:
+    id: LookAtBall
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\RefereeMove.cs
+    startLine: 90
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: protected virtual void LookAtBall()
+    content.vb: Protected Overridable Sub LookAtBall
+  overload: SAMURAI.RefereeMove.LookAtBall*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -231,14 +441,62 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
+- uid: Rigidbody
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: Rigidbody
 - uid: SAMURAI.RefereeArea
   commentId: T:SAMURAI.RefereeArea
   parent: SAMURAI
   name: RefereeArea
   nameWithType: RefereeArea
   fullName: SAMURAI.RefereeArea
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.GameState
+  commentId: T:SAMURAI.GameState
+  parent: SAMURAI
+  name: GameState
+  nameWithType: GameState
+  fullName: SAMURAI.GameState
 - uid: Animator
   isExternal: true
   name: Animator
   nameWithType: Animator
   fullName: Animator
+- uid: SAMURAI.RefereeMove.SwitchState*
+  commentId: Overload:SAMURAI.RefereeMove.SwitchState
+  name: SwitchState
+  nameWithType: RefereeMove.SwitchState
+  fullName: SAMURAI.RefereeMove.SwitchState
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.RefereeMove.Start*
+  commentId: Overload:SAMURAI.RefereeMove.Start
+  name: Start
+  nameWithType: RefereeMove.Start
+  fullName: SAMURAI.RefereeMove.Start
+- uid: SAMURAI.RefereeMove.Update*
+  commentId: Overload:SAMURAI.RefereeMove.Update
+  name: Update
+  nameWithType: RefereeMove.Update
+  fullName: SAMURAI.RefereeMove.Update
+- uid: SAMURAI.RefereeMove.MoveAroundBall*
+  commentId: Overload:SAMURAI.RefereeMove.MoveAroundBall
+  name: MoveAroundBall
+  nameWithType: RefereeMove.MoveAroundBall
+  fullName: SAMURAI.RefereeMove.MoveAroundBall
+- uid: SAMURAI.RefereeMove.LookAtBall*
+  commentId: Overload:SAMURAI.RefereeMove.LookAtBall
+  name: LookAtBall
+  nameWithType: RefereeMove.LookAtBall
+  fullName: SAMURAI.RefereeMove.LookAtBall

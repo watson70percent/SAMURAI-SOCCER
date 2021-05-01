@@ -4,7 +4,9 @@ items:
   commentId: T:SAMURAI.StageIcon
   id: StageIcon
   parent: SAMURAI
-  children: []
+  children:
+  - SAMURAI.StageIcon.Start
+  - SAMURAI.StageIcon.Update
   langs:
   - csharp
   - vb
@@ -32,6 +34,50 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.StageIcon.Start
+  commentId: M:SAMURAI.StageIcon.Start
+  id: Start
+  parent: SAMURAI.StageIcon
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StageIcon.Start()
+  fullName: SAMURAI.StageIcon.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIcon.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.StageIcon.Start*
+- uid: SAMURAI.StageIcon.Update
+  commentId: M:SAMURAI.StageIcon.Update
+  id: Update
+  parent: SAMURAI.StageIcon
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StageIcon.Update()
+  fullName: SAMURAI.StageIcon.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageIcon.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.StageIcon.Update*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -51,3 +97,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.StageIcon.Start*
+  commentId: Overload:SAMURAI.StageIcon.Start
+  name: Start
+  nameWithType: StageIcon.Start
+  fullName: SAMURAI.StageIcon.Start
+- uid: SAMURAI.StageIcon.Update*
+  commentId: Overload:SAMURAI.StageIcon.Update
+  name: Update
+  nameWithType: StageIcon.Update
+  fullName: SAMURAI.StageIcon.Update

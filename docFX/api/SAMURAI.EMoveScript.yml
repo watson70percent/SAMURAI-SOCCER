@@ -6,6 +6,8 @@ items:
   parent: SAMURAI
   children:
   - SAMURAI.EMoveScript.field
+  - SAMURAI.EMoveScript.Start
+  - SAMURAI.EMoveScript.Update
   langs:
   - csharp
   - vb
@@ -60,6 +62,50 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.EMoveScript.Start
+  commentId: M:SAMURAI.EMoveScript.Start
+  id: Start
+  parent: SAMURAI.EMoveScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EMoveScript.Start()
+  fullName: SAMURAI.EMoveScript.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\CPUMove\Scripts\EMoveScript.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.EMoveScript.Start*
+- uid: SAMURAI.EMoveScript.Update
+  commentId: M:SAMURAI.EMoveScript.Update
+  id: Update
+  parent: SAMURAI.EMoveScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: EMoveScript.Update()
+  fullName: SAMURAI.EMoveScript.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\CPUMove\Scripts\EMoveScript.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.EMoveScript.Update*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -105,3 +151,13 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: SAMURAI.EMoveScript.Start*
+  commentId: Overload:SAMURAI.EMoveScript.Start
+  name: Start
+  nameWithType: EMoveScript.Start
+  fullName: SAMURAI.EMoveScript.Start
+- uid: SAMURAI.EMoveScript.Update*
+  commentId: Overload:SAMURAI.EMoveScript.Update
+  name: Update
+  nameWithType: EMoveScript.Update
+  fullName: SAMURAI.EMoveScript.Update

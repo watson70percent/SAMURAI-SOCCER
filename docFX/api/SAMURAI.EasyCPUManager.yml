@@ -6,29 +6,40 @@ items:
   parent: SAMURAI
   children:
   - SAMURAI.EasyCPUManager.audioSource
+  - SAMURAI.EasyCPUManager.Awake
   - SAMURAI.EasyCPUManager.ball
   - SAMURAI.EasyCPUManager.Boost(System.Boolean,System.Single,System.Int32)
+  - SAMURAI.EasyCPUManager.field
+  - SAMURAI.EasyCPUManager.FinBoost(System.Boolean,System.Single,System.Int32)
   - SAMURAI.EasyCPUManager.gm
+  - SAMURAI.EasyCPUManager.GoalAction(GoalEventArgs)
   - SAMURAI.EasyCPUManager.goalCanvas
+  - SAMURAI.EasyCPUManager.goalEvent
   - SAMURAI.EasyCPUManager.goalSound
   - SAMURAI.EasyCPUManager.Init(System.Boolean)
   - SAMURAI.EasyCPUManager.kill(GameObject)
+  - SAMURAI.EasyCPUManager.LoadMember
   - SAMURAI.EasyCPUManager.near_opp
   - SAMURAI.EasyCPUManager.near_team
   - SAMURAI.EasyCPUManager.opp
   - SAMURAI.EasyCPUManager.opp_p
   - SAMURAI.EasyCPUManager.opp_stock
+  - SAMURAI.EasyCPUManager.opponent
   - SAMURAI.EasyCPUManager.OpponentMemberCount
   - SAMURAI.EasyCPUManager.rbs
   - SAMURAI.EasyCPUManager.referee
   - SAMURAI.EasyCPUManager.samurai
   - SAMURAI.EasyCPUManager.Sporn(PersonalStatus,Vector3)
+  - SAMURAI.EasyCPUManager.Start
   - SAMURAI.EasyCPUManager.startSound
+  - SAMURAI.EasyCPUManager.StateChanged(SAMURAI.StateChangedArg)
   - SAMURAI.EasyCPUManager.team
   - SAMURAI.EasyCPUManager.team_p
   - SAMURAI.EasyCPUManager.team_stock
+  - SAMURAI.EasyCPUManager.teammate
   - SAMURAI.EasyCPUManager.TeamMemberCount
   - SAMURAI.EasyCPUManager.timer
+  - SAMURAI.EasyCPUManager.Update
   langs:
   - csharp
   - vb
@@ -328,6 +339,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.EasyCPUManager.teammate
+  commentId: F:SAMURAI.EasyCPUManager.teammate
+  id: teammate
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: teammate
+  nameWithType: EasyCPUManager.teammate
+  fullName: SAMURAI.EasyCPUManager.teammate
+  type: Field
+  source:
+    id: teammate
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameObject teammate
+    return:
+      type: GameObject
+    content.vb: teammate As GameObject
+- uid: SAMURAI.EasyCPUManager.opponent
+  commentId: F:SAMURAI.EasyCPUManager.opponent
+  id: opponent
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: opponent
+  nameWithType: EasyCPUManager.opponent
+  fullName: SAMURAI.EasyCPUManager.opponent
+  type: Field
+  source:
+    id: opponent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameObject opponent
+    return:
+      type: GameObject
+    content.vb: opponent As GameObject
 - uid: SAMURAI.EasyCPUManager.near_team
   commentId: F:SAMURAI.EasyCPUManager.near_team
   id: near_team
@@ -429,6 +486,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.EasyCPUManager.field
+  commentId: F:SAMURAI.EasyCPUManager.field
+  id: field
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: field
+  nameWithType: EasyCPUManager.field
+  fullName: SAMURAI.EasyCPUManager.field
+  type: Field
+  source:
+    id: field
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 38
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: FieldManager field
+    return:
+      type: SAMURAI.FieldManager
+    content.vb: field As FieldManager
+- uid: SAMURAI.EasyCPUManager.goalEvent
+  commentId: F:SAMURAI.EasyCPUManager.goalEvent
+  id: goalEvent
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: goalEvent
+  nameWithType: EasyCPUManager.goalEvent
+  fullName: SAMURAI.EasyCPUManager.goalEvent
+  type: Field
+  source:
+    id: goalEvent
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: BallControler.GoalEventHandler goalEvent
+    return:
+      type: BallControler.GoalEventHandler
+    content.vb: goalEvent As BallControler.GoalEventHandler
 - uid: SAMURAI.EasyCPUManager.audioSource
   commentId: F:SAMURAI.EasyCPUManager.audioSource
   id: audioSource
@@ -668,6 +771,179 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.EasyCPUManager.FinBoost(System.Boolean,System.Single,System.Int32)
+  commentId: M:SAMURAI.EasyCPUManager.FinBoost(System.Boolean,System.Single,System.Int32)
+  id: FinBoost(System.Boolean,System.Single,System.Int32)
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: FinBoost(Boolean, Single, Int32)
+  nameWithType: EasyCPUManager.FinBoost(Boolean, Single, Int32)
+  fullName: SAMURAI.EasyCPUManager.FinBoost(System.Boolean, System.Single, System.Int32)
+  type: Method
+  source:
+    id: FinBoost
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 112
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator FinBoost(bool isTeam, float coeff, int fin)
+    parameters:
+    - id: isTeam
+      type: System.Boolean
+    - id: coeff
+      type: System.Single
+    - id: fin
+      type: System.Int32
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function FinBoost(isTeam As Boolean, coeff As Single, fin As Integer) As IEnumerator
+  overload: SAMURAI.EasyCPUManager.FinBoost*
+- uid: SAMURAI.EasyCPUManager.Awake
+  commentId: M:SAMURAI.EasyCPUManager.Awake
+  id: Awake
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: EasyCPUManager.Awake()
+  fullName: SAMURAI.EasyCPUManager.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 119
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Awake()
+    content.vb: Sub Awake
+  overload: SAMURAI.EasyCPUManager.Awake*
+- uid: SAMURAI.EasyCPUManager.Update
+  commentId: M:SAMURAI.EasyCPUManager.Update
+  id: Update
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: EasyCPUManager.Update()
+  fullName: SAMURAI.EasyCPUManager.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 131
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.EasyCPUManager.Update*
+- uid: SAMURAI.EasyCPUManager.StateChanged(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.EasyCPUManager.StateChanged(SAMURAI.StateChangedArg)
+  id: StateChanged(SAMURAI.StateChangedArg)
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: StateChanged(StateChangedArg)
+  nameWithType: EasyCPUManager.StateChanged(StateChangedArg)
+  fullName: SAMURAI.EasyCPUManager.StateChanged(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: StateChanged
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 137
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void StateChanged(StateChangedArg e)
+    parameters:
+    - id: e
+      type: SAMURAI.StateChangedArg
+    content.vb: Sub StateChanged(e As StateChangedArg)
+  overload: SAMURAI.EasyCPUManager.StateChanged*
+- uid: SAMURAI.EasyCPUManager.Start
+  commentId: M:SAMURAI.EasyCPUManager.Start
+  id: Start
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EasyCPUManager.Start()
+  fullName: SAMURAI.EasyCPUManager.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 177
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.EasyCPUManager.Start*
+- uid: SAMURAI.EasyCPUManager.GoalAction(GoalEventArgs)
+  commentId: M:SAMURAI.EasyCPUManager.GoalAction(GoalEventArgs)
+  id: GoalAction(GoalEventArgs)
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: GoalAction(GoalEventArgs)
+  nameWithType: EasyCPUManager.GoalAction(GoalEventArgs)
+  fullName: SAMURAI.EasyCPUManager.GoalAction(GoalEventArgs)
+  type: Method
+  source:
+    id: GoalAction
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 183
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator GoalAction(GoalEventArgs e)
+    parameters:
+    - id: e
+      type: GoalEventArgs
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function GoalAction(e As GoalEventArgs) As IEnumerator
+  overload: SAMURAI.EasyCPUManager.GoalAction*
+- uid: SAMURAI.EasyCPUManager.LoadMember
+  commentId: M:SAMURAI.EasyCPUManager.LoadMember
+  id: LoadMember
+  parent: SAMURAI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMember()
+  nameWithType: EasyCPUManager.LoadMember()
+  fullName: SAMURAI.EasyCPUManager.LoadMember()
+  type: Method
+  source:
+    id: LoadMember
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\EasyCPUManager.cs
+    startLine: 201
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator LoadMember()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function LoadMember As IEnumerator
+  overload: SAMURAI.EasyCPUManager.LoadMember*
 - uid: SAMURAI.EasyCPUManager.kill(GameObject)
   commentId: M:SAMURAI.EasyCPUManager.kill(GameObject)
   id: kill(GameObject)
@@ -1014,6 +1290,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: SAMURAI.FieldManager
+  commentId: T:SAMURAI.FieldManager
+  parent: SAMURAI
+  name: FieldManager
+  nameWithType: FieldManager
+  fullName: SAMURAI.FieldManager
+- uid: BallControler.GoalEventHandler
+  commentId: T:BallControler.GoalEventHandler
+  name: BallControler.GoalEventHandler
+  nameWithType: BallControler.GoalEventHandler
+  fullName: BallControler.GoalEventHandler
 - uid: AudioSource
   isExternal: true
   name: AudioSource
@@ -1066,6 +1353,65 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
+- uid: SAMURAI.EasyCPUManager.FinBoost*
+  commentId: Overload:SAMURAI.EasyCPUManager.FinBoost
+  name: FinBoost
+  nameWithType: EasyCPUManager.FinBoost
+  fullName: SAMURAI.EasyCPUManager.FinBoost
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: SAMURAI.EasyCPUManager.Awake*
+  commentId: Overload:SAMURAI.EasyCPUManager.Awake
+  name: Awake
+  nameWithType: EasyCPUManager.Awake
+  fullName: SAMURAI.EasyCPUManager.Awake
+- uid: SAMURAI.EasyCPUManager.Update*
+  commentId: Overload:SAMURAI.EasyCPUManager.Update
+  name: Update
+  nameWithType: EasyCPUManager.Update
+  fullName: SAMURAI.EasyCPUManager.Update
+- uid: SAMURAI.EasyCPUManager.StateChanged*
+  commentId: Overload:SAMURAI.EasyCPUManager.StateChanged
+  name: StateChanged
+  nameWithType: EasyCPUManager.StateChanged
+  fullName: SAMURAI.EasyCPUManager.StateChanged
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.EasyCPUManager.Start*
+  commentId: Overload:SAMURAI.EasyCPUManager.Start
+  name: Start
+  nameWithType: EasyCPUManager.Start
+  fullName: SAMURAI.EasyCPUManager.Start
+- uid: SAMURAI.EasyCPUManager.GoalAction*
+  commentId: Overload:SAMURAI.EasyCPUManager.GoalAction
+  name: GoalAction
+  nameWithType: EasyCPUManager.GoalAction
+  fullName: SAMURAI.EasyCPUManager.GoalAction
+- uid: GoalEventArgs
+  commentId: T:GoalEventArgs
+  name: GoalEventArgs
+  nameWithType: GoalEventArgs
+  fullName: GoalEventArgs
+- uid: SAMURAI.EasyCPUManager.LoadMember*
+  commentId: Overload:SAMURAI.EasyCPUManager.LoadMember
+  name: LoadMember
+  nameWithType: EasyCPUManager.LoadMember
+  fullName: SAMURAI.EasyCPUManager.LoadMember
 - uid: SAMURAI.EasyCPUManager.kill*
   commentId: Overload:SAMURAI.EasyCPUManager.kill
   name: kill

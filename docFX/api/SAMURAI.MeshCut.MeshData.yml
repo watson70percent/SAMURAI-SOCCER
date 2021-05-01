@@ -8,11 +8,16 @@ items:
   - SAMURAI.MeshCut.MeshData.AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
   - SAMURAI.MeshCut.MeshData.AddTriangle(System.Int32,System.Int32,Vector3,Vector3,Vector2,System.Int32)
   - SAMURAI.MeshCut.MeshData.AddTriangle(System.Int32,Vector3,Vector3,Vector3[],Vector2[],System.Int32)
+  - SAMURAI.MeshCut.MeshData.CheckIndex(System.Int32)
   - SAMURAI.MeshCut.MeshData.ClearAll
   - SAMURAI.MeshCut.MeshData.ConnectFragments
   - SAMURAI.MeshCut.MeshData.normals
   - SAMURAI.MeshCut.MeshData.rectangleFragments
   - SAMURAI.MeshCut.MeshData.subMeshIndices
+  - SAMURAI.MeshCut.MeshData.threshold
+  - SAMURAI.MeshCut.MeshData.trackedArray
+  - SAMURAI.MeshCut.MeshData.trackedVertexNum
+  - SAMURAI.MeshCut.MeshData.trackNum
   - SAMURAI.MeshCut.MeshData.triangleFragments
   - SAMURAI.MeshCut.MeshData.triangles
   - SAMURAI.MeshCut.MeshData.uvs
@@ -37,6 +42,14 @@ items:
     content.vb: Public Class MeshData
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -259,6 +272,102 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.MeshCut.MeshData.trackedArray
+  commentId: F:SAMURAI.MeshCut.MeshData.trackedArray
+  id: trackedArray
+  parent: SAMURAI.MeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: trackedArray
+  nameWithType: MeshCut.MeshData.trackedArray
+  fullName: SAMURAI.MeshCut.MeshData.trackedArray
+  type: Field
+  source:
+    id: trackedArray
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 598
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int[] trackedArray
+    return:
+      type: System.Int32[]
+    content.vb: trackedArray As Integer()
+- uid: SAMURAI.MeshCut.MeshData.trackedVertexNum
+  commentId: F:SAMURAI.MeshCut.MeshData.trackedVertexNum
+  id: trackedVertexNum
+  parent: SAMURAI.MeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: trackedVertexNum
+  nameWithType: MeshCut.MeshData.trackedVertexNum
+  fullName: SAMURAI.MeshCut.MeshData.trackedVertexNum
+  type: Field
+  source:
+    id: trackedVertexNum
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 599
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int trackedVertexNum
+    return:
+      type: System.Int32
+    content.vb: trackedVertexNum As Integer
+- uid: SAMURAI.MeshCut.MeshData.CheckIndex(System.Int32)
+  commentId: M:SAMURAI.MeshCut.MeshData.CheckIndex(System.Int32)
+  id: CheckIndex(System.Int32)
+  parent: SAMURAI.MeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: CheckIndex(Int32)
+  nameWithType: MeshCut.MeshData.CheckIndex(Int32)
+  fullName: SAMURAI.MeshCut.MeshData.CheckIndex(System.Int32)
+  type: Method
+  source:
+    id: CheckIndex
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 603
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool CheckIndex(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Function CheckIndex(target As Integer) As Boolean
+  overload: SAMURAI.MeshCut.MeshData.CheckIndex*
+- uid: SAMURAI.MeshCut.MeshData.trackNum
+  commentId: F:SAMURAI.MeshCut.MeshData.trackNum
+  id: trackNum
+  parent: SAMURAI.MeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: trackNum
+  nameWithType: MeshCut.MeshData.trackNum
+  fullName: SAMURAI.MeshCut.MeshData.trackNum
+  type: Field
+  source:
+    id: trackNum
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 617
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int trackNum
+    return:
+      type: System.Int32
+    content.vb: trackNum As Integer
 - uid: SAMURAI.MeshCut.MeshData.AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
   commentId: M:SAMURAI.MeshCut.MeshData.AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
   id: AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
@@ -294,6 +403,33 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.MeshCut.MeshData.threshold
+  commentId: F:SAMURAI.MeshCut.MeshData.threshold
+  id: threshold
+  parent: SAMURAI.MeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: threshold
+  nameWithType: MeshCut.MeshData.threshold
+  fullName: SAMURAI.MeshCut.MeshData.threshold
+  type: Field
+  source:
+    id: threshold
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\MeshCut.cs
+    startLine: 670
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: const float threshold = 0.0001F
+    return:
+      type: System.Single
+    content.vb: Const threshold As Single = 0.0001F
+  modifiers.csharp:
+  - const
+  modifiers.vb:
+  - Const
 - uid: SAMURAI.MeshCut.MeshData.ConnectFragments
   commentId: M:SAMURAI.MeshCut.MeshData.ConnectFragments
   id: ConnectFragments
@@ -440,6 +576,285 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -843,11 +1258,32 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: SAMURAI.MeshCut.MeshData.AddTriangle*
-  commentId: Overload:SAMURAI.MeshCut.MeshData.AddTriangle
-  name: AddTriangle
-  nameWithType: MeshCut.MeshData.AddTriangle
-  fullName: SAMURAI.MeshCut.MeshData.AddTriangle
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -855,6 +1291,30 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: SAMURAI.MeshCut.MeshData.CheckIndex*
+  commentId: Overload:SAMURAI.MeshCut.MeshData.CheckIndex
+  name: CheckIndex
+  nameWithType: MeshCut.MeshData.CheckIndex
+  fullName: SAMURAI.MeshCut.MeshData.CheckIndex
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SAMURAI.MeshCut.MeshData.AddTriangle*
+  commentId: Overload:SAMURAI.MeshCut.MeshData.AddTriangle
+  name: AddTriangle
+  nameWithType: MeshCut.MeshData.AddTriangle
+  fullName: SAMURAI.MeshCut.MeshData.AddTriangle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: SAMURAI.MeshCut.MeshData.ConnectFragments*
   commentId: Overload:SAMURAI.MeshCut.MeshData.ConnectFragments
   name: ConnectFragments

@@ -8,11 +8,15 @@ items:
   - SAMURAI.StageSelectManager.ButtonDataSet(System.Int32)
   - SAMURAI.StageSelectManager.canvas
   - SAMURAI.StageSelectManager.prefabButton
-  - SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
+  - SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject,SAMURAI.BaseStageData)
   - SAMURAI.StageSelectManager.selectState
   - SAMURAI.StageSelectManager.stagePreview
+  - SAMURAI.StageSelectManager.stagePreviwScript
+  - SAMURAI.StageSelectManager.stageSelect
   - SAMURAI.StageSelectManager.stageSelectData
+  - SAMURAI.StageSelectManager.Start
   - SAMURAI.StageSelectManager.state
+  - SAMURAI.StageSelectManager.Update
   langs:
   - csharp
   - vb
@@ -121,6 +125,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.StageSelectManager.stagePreviwScript
+  commentId: F:SAMURAI.StageSelectManager.stagePreviwScript
+  id: stagePreviwScript
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: stagePreviwScript
+  nameWithType: StageSelectManager.stagePreviwScript
+  fullName: SAMURAI.StageSelectManager.stagePreviwScript
+  type: Field
+  source:
+    id: stagePreviwScript
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: StagePreviwScript stagePreviwScript
+    return:
+      type: SAMURAI.StagePreviwScript
+    content.vb: stagePreviwScript As StagePreviwScript
 - uid: SAMURAI.StageSelectManager.prefabButton
   commentId: F:SAMURAI.StageSelectManager.prefabButton
   id: prefabButton
@@ -175,16 +202,83 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
-  commentId: M:SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
-  id: previewState(System.String,System.String,Sprite,SAMURAI.SceneObject)
+- uid: SAMURAI.StageSelectManager.stageSelect
+  commentId: F:SAMURAI.StageSelectManager.stageSelect
+  id: stageSelect
   parent: SAMURAI.StageSelectManager
   langs:
   - csharp
   - vb
-  name: previewState(String, String, Sprite, SceneObject)
-  nameWithType: StageSelectManager.previewState(String, String, Sprite, SceneObject)
-  fullName: SAMURAI.StageSelectManager.previewState(System.String, System.String, Sprite, SAMURAI.SceneObject)
+  name: stageSelect
+  nameWithType: StageSelectManager.stageSelect
+  fullName: SAMURAI.StageSelectManager.stageSelect
+  type: Field
+  source:
+    id: stageSelect
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: StageSelect stageSelect
+    return:
+      type: SAMURAI.StageSelect
+    content.vb: stageSelect As StageSelect
+- uid: SAMURAI.StageSelectManager.Start
+  commentId: M:SAMURAI.StageSelectManager.Start
+  id: Start
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StageSelectManager.Start()
+  fullName: SAMURAI.StageSelectManager.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 59
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.StageSelectManager.Start*
+- uid: SAMURAI.StageSelectManager.Update
+  commentId: M:SAMURAI.StageSelectManager.Update
+  id: Update
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StageSelectManager.Update()
+  fullName: SAMURAI.StageSelectManager.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\StageSelect\StageSelectManager.cs
+    startLine: 68
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.StageSelectManager.Update*
+- uid: SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject,SAMURAI.BaseStageData)
+  commentId: M:SAMURAI.StageSelectManager.previewState(System.String,System.String,Sprite,SAMURAI.SceneObject,SAMURAI.BaseStageData)
+  id: previewState(System.String,System.String,Sprite,SAMURAI.SceneObject,SAMURAI.BaseStageData)
+  parent: SAMURAI.StageSelectManager
+  langs:
+  - csharp
+  - vb
+  name: previewState(String, String, Sprite, SceneObject, BaseStageData)
+  nameWithType: StageSelectManager.previewState(String, String, Sprite, SceneObject, BaseStageData)
+  fullName: SAMURAI.StageSelectManager.previewState(System.String, System.String, Sprite, SAMURAI.SceneObject, SAMURAI.BaseStageData)
   type: Method
   source:
     id: previewState
@@ -194,7 +288,7 @@ items:
   - Assembly-CSharp
   namespace: SAMURAI
   syntax:
-    content: public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene)
+    content: public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene, BaseStageData baseStageData)
     parameters:
     - id: stageName
       type: System.String
@@ -204,7 +298,9 @@ items:
       type: Sprite
     - id: gameScene
       type: SAMURAI.SceneObject
-    content.vb: Public Sub previewState(stageName As String, summary As String, stImage As Sprite, gameScene As SceneObject)
+    - id: baseStageData
+      type: SAMURAI.BaseStageData
+    content.vb: Public Sub previewState(stageName As String, summary As String, stImage As Sprite, gameScene As SceneObject, baseStageData As BaseStageData)
   overload: SAMURAI.StageSelectManager.previewState*
   modifiers.csharp:
   - public
@@ -297,12 +393,34 @@ references:
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: SAMURAI.StagePreviwScript
+  commentId: T:SAMURAI.StagePreviwScript
+  parent: SAMURAI
+  name: StagePreviwScript
+  nameWithType: StagePreviwScript
+  fullName: SAMURAI.StagePreviwScript
 - uid: SAMURAI.StageSelectData
   commentId: T:SAMURAI.StageSelectData
   parent: SAMURAI
   name: StageSelectData
   nameWithType: StageSelectData
   fullName: SAMURAI.StageSelectData
+- uid: SAMURAI.StageSelect
+  commentId: T:SAMURAI.StageSelect
+  parent: SAMURAI
+  name: StageSelect
+  nameWithType: StageSelect
+  fullName: SAMURAI.StageSelect
+- uid: SAMURAI.StageSelectManager.Start*
+  commentId: Overload:SAMURAI.StageSelectManager.Start
+  name: Start
+  nameWithType: StageSelectManager.Start
+  fullName: SAMURAI.StageSelectManager.Start
+- uid: SAMURAI.StageSelectManager.Update*
+  commentId: Overload:SAMURAI.StageSelectManager.Update
+  name: Update
+  nameWithType: StageSelectManager.Update
+  fullName: SAMURAI.StageSelectManager.Update
 - uid: SAMURAI.StageSelectManager.previewState*
   commentId: Overload:SAMURAI.StageSelectManager.previewState
   name: previewState
@@ -326,6 +444,12 @@ references:
   name: SceneObject
   nameWithType: SceneObject
   fullName: SAMURAI.SceneObject
+- uid: SAMURAI.BaseStageData
+  commentId: T:SAMURAI.BaseStageData
+  parent: SAMURAI
+  name: BaseStageData
+  nameWithType: BaseStageData
+  fullName: SAMURAI.BaseStageData
 - uid: SAMURAI.StageSelectManager.selectState*
   commentId: Overload:SAMURAI.StageSelectManager.selectState
   name: selectState

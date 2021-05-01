@@ -5,7 +5,9 @@ items:
   id: GoalView
   parent: SAMURAI
   children:
+  - SAMURAI.GoalView.ColorChange
   - SAMURAI.GoalView.image
+  - SAMURAI.GoalView.OnEnable
   langs:
   - csharp
   - vb
@@ -60,6 +62,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.GoalView.OnEnable
+  commentId: M:SAMURAI.GoalView.OnEnable
+  id: OnEnable
+  parent: SAMURAI.GoalView
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: GoalView.OnEnable()
+  fullName: SAMURAI.GoalView.OnEnable()
+  type: Method
+  source:
+    id: OnEnable
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\GoalView.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void OnEnable()
+    content.vb: Sub OnEnable
+  overload: SAMURAI.GoalView.OnEnable*
+- uid: SAMURAI.GoalView.ColorChange
+  commentId: M:SAMURAI.GoalView.ColorChange
+  id: ColorChange
+  parent: SAMURAI.GoalView
+  langs:
+  - csharp
+  - vb
+  name: ColorChange()
+  nameWithType: GoalView.ColorChange()
+  fullName: SAMURAI.GoalView.ColorChange()
+  type: Method
+  source:
+    id: ColorChange
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\GoalView.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator ColorChange()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function ColorChange As IEnumerator
+  overload: SAMURAI.GoalView.ColorChange*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -84,3 +132,26 @@ references:
   name: Image
   nameWithType: Image
   fullName: Image
+- uid: SAMURAI.GoalView.OnEnable*
+  commentId: Overload:SAMURAI.GoalView.OnEnable
+  name: OnEnable
+  nameWithType: GoalView.OnEnable
+  fullName: SAMURAI.GoalView.OnEnable
+- uid: SAMURAI.GoalView.ColorChange*
+  commentId: Overload:SAMURAI.GoalView.ColorChange
+  name: ColorChange
+  nameWithType: GoalView.ColorChange
+  fullName: SAMURAI.GoalView.ColorChange
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

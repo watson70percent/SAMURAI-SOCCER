@@ -9,9 +9,13 @@ items:
   - SAMURAI.SkinnedMeshCut.MeshData.AddTriangle(System.Int32,System.Int32,Vector3,Vector3,Vector2,System.Int32)
   - SAMURAI.SkinnedMeshCut.MeshData.AddTriangle(System.Int32,Vector3,Vector3,Vector3[],Vector2[],System.Int32)
   - SAMURAI.SkinnedMeshCut.MeshData.boneWeights
+  - SAMURAI.SkinnedMeshCut.MeshData.CheckIndex(System.Int32)
   - SAMURAI.SkinnedMeshCut.MeshData.ClearAll
   - SAMURAI.SkinnedMeshCut.MeshData.normals
   - SAMURAI.SkinnedMeshCut.MeshData.subMeshIndices
+  - SAMURAI.SkinnedMeshCut.MeshData.trackedArray
+  - SAMURAI.SkinnedMeshCut.MeshData.trackedVertexNum
+  - SAMURAI.SkinnedMeshCut.MeshData.trackNum
   - SAMURAI.SkinnedMeshCut.MeshData.triangles
   - SAMURAI.SkinnedMeshCut.MeshData.uvs
   - SAMURAI.SkinnedMeshCut.MeshData.vertices
@@ -34,6 +38,14 @@ items:
     content.vb: Public Class MeshData
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -202,6 +214,102 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.SkinnedMeshCut.MeshData.trackedArray
+  commentId: F:SAMURAI.SkinnedMeshCut.MeshData.trackedArray
+  id: trackedArray
+  parent: SAMURAI.SkinnedMeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: trackedArray
+  nameWithType: SkinnedMeshCut.MeshData.trackedArray
+  fullName: SAMURAI.SkinnedMeshCut.MeshData.trackedArray
+  type: Field
+  source:
+    id: trackedArray
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 299
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int[] trackedArray
+    return:
+      type: System.Int32[]
+    content.vb: trackedArray As Integer()
+- uid: SAMURAI.SkinnedMeshCut.MeshData.trackedVertexNum
+  commentId: F:SAMURAI.SkinnedMeshCut.MeshData.trackedVertexNum
+  id: trackedVertexNum
+  parent: SAMURAI.SkinnedMeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: trackedVertexNum
+  nameWithType: SkinnedMeshCut.MeshData.trackedVertexNum
+  fullName: SAMURAI.SkinnedMeshCut.MeshData.trackedVertexNum
+  type: Field
+  source:
+    id: trackedVertexNum
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 300
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int trackedVertexNum
+    return:
+      type: System.Int32
+    content.vb: trackedVertexNum As Integer
+- uid: SAMURAI.SkinnedMeshCut.MeshData.CheckIndex(System.Int32)
+  commentId: M:SAMURAI.SkinnedMeshCut.MeshData.CheckIndex(System.Int32)
+  id: CheckIndex(System.Int32)
+  parent: SAMURAI.SkinnedMeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: CheckIndex(Int32)
+  nameWithType: SkinnedMeshCut.MeshData.CheckIndex(Int32)
+  fullName: SAMURAI.SkinnedMeshCut.MeshData.CheckIndex(System.Int32)
+  type: Method
+  source:
+    id: CheckIndex
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 304
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool CheckIndex(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Function CheckIndex(target As Integer) As Boolean
+  overload: SAMURAI.SkinnedMeshCut.MeshData.CheckIndex*
+- uid: SAMURAI.SkinnedMeshCut.MeshData.trackNum
+  commentId: F:SAMURAI.SkinnedMeshCut.MeshData.trackNum
+  id: trackNum
+  parent: SAMURAI.SkinnedMeshCut.MeshData
+  langs:
+  - csharp
+  - vb
+  name: trackNum
+  nameWithType: SkinnedMeshCut.MeshData.trackNum
+  fullName: SAMURAI.SkinnedMeshCut.MeshData.trackNum
+  type: Field
+  source:
+    id: trackNum
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 318
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int trackNum
+    return:
+      type: System.Int32
+    content.vb: trackNum As Integer
 - uid: SAMURAI.SkinnedMeshCut.MeshData.AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
   commentId: M:SAMURAI.SkinnedMeshCut.MeshData.AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
   id: AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)
@@ -357,6 +465,285 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -650,11 +1037,32 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: SAMURAI.SkinnedMeshCut.MeshData.AddTriangle*
-  commentId: Overload:SAMURAI.SkinnedMeshCut.MeshData.AddTriangle
-  name: AddTriangle
-  nameWithType: SkinnedMeshCut.MeshData.AddTriangle
-  fullName: SAMURAI.SkinnedMeshCut.MeshData.AddTriangle
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -662,6 +1070,23 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: SAMURAI.SkinnedMeshCut.MeshData.CheckIndex*
+  commentId: Overload:SAMURAI.SkinnedMeshCut.MeshData.CheckIndex
+  name: CheckIndex
+  nameWithType: SkinnedMeshCut.MeshData.CheckIndex
+  fullName: SAMURAI.SkinnedMeshCut.MeshData.CheckIndex
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SAMURAI.SkinnedMeshCut.MeshData.AddTriangle*
+  commentId: Overload:SAMURAI.SkinnedMeshCut.MeshData.AddTriangle
+  name: AddTriangle
+  nameWithType: SkinnedMeshCut.MeshData.AddTriangle
+  fullName: SAMURAI.SkinnedMeshCut.MeshData.AddTriangle
 - uid: Vector3
   isExternal: true
   name: Vector3
