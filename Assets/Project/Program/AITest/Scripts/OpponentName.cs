@@ -10,5 +10,5 @@ public static class OpponentName
     /// <summary>
     /// 敵チームの名前
     /// </summary>
-    public static string name = "test";
+    public static string name = "opponent";
 }

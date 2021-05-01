@@ -153,7 +153,7 @@ public class slidepad : MonoBehaviour
     {
         float xmin, xmax, zmin, zmax;
 
-        int childCount = flagsParent.GetChildCount();
+        int childCount = flagsParent.childCount;
         Vector3 temp = flagsParent.GetChild(0).transform.position;
         xmin = xmax = temp.x;
         zmin = zmax = temp.z;

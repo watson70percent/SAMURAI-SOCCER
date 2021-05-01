@@ -5,7 +5,7 @@ items:
   id: NonRotation
   parent: SAMURAI
   children:
-  - SAMURAI.NonRotation.Start
+  - SAMURAI.NonRotation.Awake
   langs:
   - csharp
   - vb
@@ -38,29 +38,29 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: SAMURAI.NonRotation.Start
-  commentId: M:SAMURAI.NonRotation.Start
-  id: Start
+- uid: SAMURAI.NonRotation.Awake
+  commentId: M:SAMURAI.NonRotation.Awake
+  id: Awake
   parent: SAMURAI.NonRotation
   langs:
   - csharp
   - vb
-  name: Start()
-  nameWithType: NonRotation.Start()
-  fullName: SAMURAI.NonRotation.Start()
+  name: Awake()
+  nameWithType: NonRotation.Awake()
+  fullName: SAMURAI.NonRotation.Awake()
   type: Method
   source:
-    id: Start
+    id: Awake
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\NonRotation.cs
     startLine: 7
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
   syntax:
-    content: protected override void Start()
-    content.vb: Protected Overrides Sub Start
-  overridden: SAMURAI.FieldRotationBase.Start
-  overload: SAMURAI.NonRotation.Start*
+    content: protected override void Awake()
+    content.vb: Protected Overrides Sub Awake
+  overridden: SAMURAI.FieldRotationBase.Awake
+  overload: SAMURAI.NonRotation.Awake*
   modifiers.csharp:
   - protected
   - override
@@ -176,17 +176,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: SAMURAI.FieldRotationBase.Start
-  commentId: M:SAMURAI.FieldRotationBase.Start
+- uid: SAMURAI.FieldRotationBase.Awake
+  commentId: M:SAMURAI.FieldRotationBase.Awake
   parent: SAMURAI.FieldRotationBase
-  name: Start()
-  nameWithType: FieldRotationBase.Start()
-  fullName: SAMURAI.FieldRotationBase.Start()
+  name: Awake()
+  nameWithType: FieldRotationBase.Awake()
+  fullName: SAMURAI.FieldRotationBase.Awake()
   spec.csharp:
-  - uid: SAMURAI.FieldRotationBase.Start
-    name: Start
-    nameWithType: FieldRotationBase.Start
-    fullName: SAMURAI.FieldRotationBase.Start
+  - uid: SAMURAI.FieldRotationBase.Awake
+    name: Awake
+    nameWithType: FieldRotationBase.Awake
+    fullName: SAMURAI.FieldRotationBase.Awake
   - name: (
     nameWithType: (
     fullName: (
@@ -194,18 +194,18 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: SAMURAI.FieldRotationBase.Start
-    name: Start
-    nameWithType: FieldRotationBase.Start
-    fullName: SAMURAI.FieldRotationBase.Start
+  - uid: SAMURAI.FieldRotationBase.Awake
+    name: Awake
+    nameWithType: FieldRotationBase.Awake
+    fullName: SAMURAI.FieldRotationBase.Awake
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: SAMURAI.NonRotation.Start*
-  commentId: Overload:SAMURAI.NonRotation.Start
-  name: Start
-  nameWithType: NonRotation.Start
-  fullName: SAMURAI.NonRotation.Start
+- uid: SAMURAI.NonRotation.Awake*
+  commentId: Overload:SAMURAI.NonRotation.Awake
+  name: Awake
+  nameWithType: NonRotation.Awake
+  fullName: SAMURAI.NonRotation.Awake

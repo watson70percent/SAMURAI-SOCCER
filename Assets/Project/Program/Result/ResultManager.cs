@@ -8,13 +8,14 @@ public enum Result
 {
     Win,
     Lose,
-    Draw
+    Draw,
+    Undefined
 }
 
 public class ResultManager : MonoBehaviour
 {
 
-    Result resultState;
+    public Result ResultState { get; private set; } = Result.Undefined;
     [SerializeField]Text result;
     public string resultText;
     [SerializeField]
@@ -30,7 +31,7 @@ public class ResultManager : MonoBehaviour
     void Start()
     {
         //勝敗に応じてテキスト変更
-        switch (resultState) 
+        switch (ResultState) 
         {
             case Result.Win:
                 result.text = "勝利";
@@ -50,7 +51,7 @@ public class ResultManager : MonoBehaviour
 
     public void SetResult(Result resultState,string resultText)
     {
-        this.resultState = resultState;
+        this.ResultState = resultState;
         this.resultText = resultText;
         if (resultState == Result.Win) {
             foreach (var txt in texts)

@@ -10,6 +10,7 @@ public class RefereeMove : MonoBehaviour
     public float radius;
     Rigidbody rig;
     public RefereeArea refereeArea;
+    
     //public AnimationController animcon;
     //ParticleSystem bikkuri;
     // Start is called before the first frame update
@@ -18,19 +19,17 @@ public class RefereeMove : MonoBehaviour
 
     GameState state = GameState.Reset;
 
-    Animator anicon;
+    public Animator anicon;
     void SwitchState(StateChangedArg a)
     {
         state = a.gameState;
     }
 
-    void Start()
+    protected virtual void Start()
     {
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.StateChange += SwitchState;
-        anicon = GetComponent<Animator>();
-
 
 
         rig = GetComponent<Rigidbody>();
@@ -39,10 +38,13 @@ public class RefereeMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         switch(state){
             case GameState.Standby :
+                anicon.speed = 0;
+                break;
+            case GameState.Pause:
                 anicon.speed = 0;
                 break;
             case GameState.Playing:
@@ -85,7 +87,7 @@ public class RefereeMove : MonoBehaviour
 
 
 
-    void LookAtBall() {
+    protected virtual void LookAtBall() {
 
         Vector3 dir = ball.transform.position - this.transform.position; //向きたい方向のベクトル
         Quaternion rotation = Quaternion.LookRotation(dir); //向きたい方向になったときの回転

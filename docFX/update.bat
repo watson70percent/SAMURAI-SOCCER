@@ -20,4 +20,4 @@ for /f "usebackq" %%a in (`dir docFX\src\Assets\*.cs /b /s`) do (
 )
 
 cd docFX
-docfx docfx.json
+docfx docfx.json --debug

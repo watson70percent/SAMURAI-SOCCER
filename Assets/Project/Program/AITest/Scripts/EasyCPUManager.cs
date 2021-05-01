@@ -124,7 +124,7 @@ public class EasyCPUManager : MonoBehaviour
         gm.StateChange += StateChanged;
         field = GetComponent<FieldManager>();
         // opponent = Resources.Load<GameObject>(OpponentName.name);
-        LoadMember();
+        StartCoroutine(LoadMember());
 
     }
 
@@ -178,7 +178,6 @@ public class EasyCPUManager : MonoBehaviour
     {
         goalEvent = (sender, e) => { StartCoroutine(GoalAction(e)); };
         ball.Goal += goalEvent;
-        Init();
     }
 
     private IEnumerator GoalAction(GoalEventArgs e)
@@ -198,12 +197,42 @@ public class EasyCPUManager : MonoBehaviour
         gm.StateChangeSignal(GameState.Playing);
     }
 
-    private void LoadMember()
+
+    private IEnumerator LoadMember()
     {
-        var team_string = File.ReadAllText(Application.streamingAssetsPath + "/our.json");
-        team_stock = JsonUtility.FromJson<Team>(team_string);
-        var opp_string = File.ReadAllText(Application.streamingAssetsPath + "/" + OpponentName.name + ".json");
-        opp_stock = JsonUtility.FromJson<Team>(opp_string);
+        var file_path1 = Path.Combine(Application.streamingAssetsPath, "our.json");
+        string json = "";
+        Debug.Log("filepath is " + file_path1);
+        if (file_path1.Contains("://"))
+        {
+            var www1 = UnityEngine.Networking.UnityWebRequest.Get(file_path1);
+            yield return www1.SendWebRequest();
+            json = www1.downloadHandler.text;
+        }
+        else
+        {
+            json = File.ReadAllText(file_path1);
+        }
+        team_stock = JsonUtility.FromJson<Team>(json);
+
+        var file_path2 = Path.Combine(Application.streamingAssetsPath, OpponentName.name + ".json");
+        print(Application.streamingAssetsPath);
+        if (file_path2.Contains("://"))
+        {
+            var www2 = UnityEngine.Networking.UnityWebRequest.Get(file_path2);
+            yield return www2.SendWebRequest();
+            json = www2.downloadHandler.text;
+        }
+        else
+        {
+            json = File.ReadAllText(file_path2);
+        }
+        opp_stock = JsonUtility.FromJson<Team>(json);
+
+        Init();
+
+        yield return null;
+
     }
 
     /// <summary>
@@ -255,11 +284,11 @@ public class EasyCPUManager : MonoBehaviour
         setting.manager = this;
         setting.field = field;
         setting.rb = temp.GetComponent<Rigidbody>();
+        setting.status = status;
         setting.SetMass();
 
         rbs.Add(temp, setting.rb);
 
-        setting.status = status;
         if (status.ally)
         {
             team.Add(temp);

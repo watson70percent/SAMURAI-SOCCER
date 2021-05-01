@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class ShotObjectScript : MonoBehaviour
 {
     private string ResultSceneName = "Result";
+
     float velocity = 30;//速さ
 	//float size;
     float movedLength;//動いた距離
     float groundWidth=120;//グラウンドの幅
     GameManager gameManager;
+    bool isEnd;
 
     //   public ShotObjectScript()
     //{
@@ -23,44 +25,53 @@ public class ShotObjectScript : MonoBehaviour
         //移動距離の初期化
         movedLength = 0;
         //gameManager取得
-        gameManager = this.gameObject.transform.root.GetComponent<StrikeObjectScript>().gameManager;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //一定スピードで動かす
-		gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
-        movedLength+= Time.deltaTime * velocity;
-
-        //グラウンドを通り過ぎたら消す
-        if ((movedLength) > (groundWidth + 2))
+        if (gameManager.CurrentGameState != GameState.Standby)
         {
-            Destroy(this.gameObject);
+            //一定スピードで動かす
+            gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
+            movedLength += Time.deltaTime * velocity;
+
+            //グラウンドを通り過ぎたら消す
+            if ((movedLength) > (groundWidth + 2) && !isEnd)
+            {
+                Destroy(this.gameObject);
+            }
         }
+        
 
     }
-
-	private void OnCollisionEnter(Collision collision)
-	{
-
-        //衝突が人間だったら吹っ飛ばす
-
-            Rigidbody rb = collision.transform.GetComponent<Rigidbody>();
-            Vector3 v3 = transform.forward * velocity * velocity;
-            v3.y += velocity * 5;
-            rb.AddForce(v3);
-        //衝突がプレイヤーだったらゲームオーバー
-        if (collision.gameObject.tag == "Player")
+    private void OnTriggerEnter(Collider other)
+    {
+        if(gameManager.CurrentGameState == GameState.Playing)
         {
-            SceneManager.sceneLoaded += GameSceneLoaded;
-            gameManager.StateChangeSignal(GameState.Finish);
-            //リザルトへのシーン遷移
-            StartCoroutine(GoResult());
+            //    //衝突がプレイヤーだったらゲームオーバー
+            if (other.gameObject.tag == "Player")
+            {
+                GetComponent<AudioSource>().Play();
+                other.transform.GetComponent<Rigidbody>();
+                //SceneManagerのイベントに勝利リザルト処理を追加
+                isEnd = true;
+                GetComponent<AudioSource>().Play();
+                SceneManager.sceneLoaded += GameSceneLoaded;
+                gameManager.StateChangeSignal(GameState.Finish);
+                Time.timeScale = 0.2f;
+
+                //リザルトへのシーン遷移
+                StartCoroutine(BlowAway(other.gameObject));
+                StartCoroutine(GoResult());
+
+            }
         }
-
-
+   
     }
+
+
 
     //スロー演出からのシーン遷移
     IEnumerator GoResult()
@@ -70,7 +81,24 @@ public class ShotObjectScript : MonoBehaviour
         SceneManager.LoadScene(ResultSceneName);
     }
 
+    IEnumerator BlowAway(GameObject player)
+    {
+        Debug.Log("blowAwayObject = " + player.tag);
+        float velocity0 = 300;
+        float ang = 20*Mathf.Deg2Rad;
+        Vector3 rotateVec = new Vector3(4, 7, 5);
+        for (int i = 0; i < 100; i++)
+        {
+            Vector3 pos = player.transform.position;
 
+            pos.x -= velocity0 * Mathf.Cos(ang) * Time.deltaTime;
+            pos.y += velocity0 * Mathf.Sin(ang) * Time.deltaTime;
+            player.transform.position = pos;
+            player.transform.Rotate(rotateVec * velocity *velocity* Time.deltaTime);
+            yield return null;
+        }
+        
+    }
 
     //交通事故リザルト用の処理
     void GameSceneLoaded(Scene next, LoadSceneMode mode)

@@ -45,15 +45,18 @@ public class StagePrefabManager : MonoBehaviour
             crowdRenderers[i].material = _crowdMaterial;
         }
 
-        //サッカーグラウンド
-        var _groundMaterial = new Material(groundMaterial);
-        if (groundTexture != null) _groundMaterial.mainTexture = groundTexture;
-        if (groundNormalMap != null) _groundMaterial.SetTexture("_BumpMap", groundNormalMap);
-        groundRenderer.material = _groundMaterial;
+        //サッカーグラウンド//テクスチャがなければ何もしない
+        if (groundTexture != null)
+        {
+            var _groundMaterial = new Material(groundMaterial);
+            _groundMaterial.mainTexture = groundTexture;
+            if (groundNormalMap != null) _groundMaterial.SetTexture("_BumpMap", groundNormalMap);
+            groundRenderer.material = _groundMaterial;
+        }
 
         //審判の挙動
-        refereeArea.maxang = refereeMaxAng;
-        refereeArea.areaSize = refereeAreaSize;
+        refereeArea.SerMaxAngle( refereeMaxAng);
+        refereeArea.SerAreaSize(refereeAreaSize);
         refereeArea.useObstacles = useObstacles;
         refereeMove.runningspeed = runningSpeed;
         refereeMove.lookatspeed = lookAtSpeed;

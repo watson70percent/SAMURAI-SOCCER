@@ -88,11 +88,11 @@ public class StageSelectManager : MonoBehaviour
         //}
     }
 
-    public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene)
+    public void previewState(string stageName, string summary, Sprite stImage, SceneObject gameScene,BaseStageData baseStageData)
     {
         //previewを見せる
         state = StageSelectState.preview;
-        stagePreviwScript.previewDisplay(stageName, summary, stImage, gameScene);
+        stagePreviwScript.previewDisplay(stageName, summary, stImage, gameScene,baseStageData);
     }
 
     public void selectState()
@@ -109,7 +109,6 @@ public class StageSelectManager : MonoBehaviour
         //相手選手のデータ、ステージ名をstaticにセットしておく
         FieldNumber.no = item.fieldNumber;
         OpponentName.name = item.oppnentName;
-        StandbyStateProcess.OpponentInfo=item.opponentInfo;
         return (stName:item.previewName, summary:item.summary, stagePreview:item.stageImage, scene:item.gameScene);
 
 
