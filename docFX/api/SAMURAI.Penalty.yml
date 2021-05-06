@@ -5,8 +5,16 @@ items:
   id: Penalty
   parent: SAMURAI
   children:
+  - SAMURAI.Penalty.gameManager
   - SAMURAI.Penalty.gameOverPanel
+  - SAMURAI.Penalty.GameSceneLoaded(Scene,LoadSceneMode)
+  - SAMURAI.Penalty.penaltycount
   - SAMURAI.Penalty.redAudioClip
+  - SAMURAI.Penalty.refereeAudio
+  - SAMURAI.Penalty.Reset(SAMURAI.StateChangedArg)
+  - SAMURAI.Penalty.Start
+  - SAMURAI.Penalty.state
+  - SAMURAI.Penalty.Update
   - SAMURAI.Penalty.yellowAudioClip
   - SAMURAI.Penalty.yellowCard
   - SAMURAI.Penalty.YellowCard
@@ -64,6 +72,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Penalty.penaltycount
+  commentId: F:SAMURAI.Penalty.penaltycount
+  id: penaltycount
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: penaltycount
+  nameWithType: Penalty.penaltycount
+  fullName: SAMURAI.Penalty.penaltycount
+  type: Field
+  source:
+    id: penaltycount
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int penaltycount
+    return:
+      type: System.Int32
+    content.vb: penaltycount As Integer
+- uid: SAMURAI.Penalty.gameManager
+  commentId: F:SAMURAI.Penalty.gameManager
+  id: gameManager
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: Penalty.gameManager
+  fullName: SAMURAI.Penalty.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: gameManager As GameManager
 - uid: SAMURAI.Penalty.gameOverPanel
   commentId: F:SAMURAI.Penalty.gameOverPanel
   id: gameOverPanel
@@ -91,6 +145,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Penalty.state
+  commentId: F:SAMURAI.Penalty.state
+  id: state
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: Penalty.state
+  fullName: SAMURAI.Penalty.state
+  type: Field
+  source:
+    id: state
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameState state
+    return:
+      type: SAMURAI.GameState
+    content.vb: state As GameState
+- uid: SAMURAI.Penalty.refereeAudio
+  commentId: F:SAMURAI.Penalty.refereeAudio
+  id: refereeAudio
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: refereeAudio
+  nameWithType: Penalty.refereeAudio
+  fullName: SAMURAI.Penalty.refereeAudio
+  type: Field
+  source:
+    id: refereeAudio
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioSource refereeAudio
+    return:
+      type: AudioSource
+    content.vb: refereeAudio As AudioSource
 - uid: SAMURAI.Penalty.yellowAudioClip
   commentId: F:SAMURAI.Penalty.yellowAudioClip
   id: yellowAudioClip
@@ -145,6 +245,75 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Penalty.Reset(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.Penalty.Reset(SAMURAI.StateChangedArg)
+  id: Reset(SAMURAI.StateChangedArg)
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: Reset(StateChangedArg)
+  nameWithType: Penalty.Reset(StateChangedArg)
+  fullName: SAMURAI.Penalty.Reset(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: Reset
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Reset(StateChangedArg a)
+    parameters:
+    - id: a
+      type: SAMURAI.StateChangedArg
+    content.vb: Sub Reset(a As StateChangedArg)
+  overload: SAMURAI.Penalty.Reset*
+- uid: SAMURAI.Penalty.Start
+  commentId: M:SAMURAI.Penalty.Start
+  id: Start
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Penalty.Start()
+  fullName: SAMURAI.Penalty.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.Penalty.Start*
+- uid: SAMURAI.Penalty.Update
+  commentId: M:SAMURAI.Penalty.Update
+  id: Update
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Penalty.Update()
+  fullName: SAMURAI.Penalty.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.Penalty.Update*
 - uid: SAMURAI.Penalty.YellowCard
   commentId: M:SAMURAI.Penalty.YellowCard
   id: YellowCard
@@ -171,6 +340,33 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Penalty.GameSceneLoaded(Scene,LoadSceneMode)
+  commentId: M:SAMURAI.Penalty.GameSceneLoaded(Scene,LoadSceneMode)
+  id: GameSceneLoaded(Scene,LoadSceneMode)
+  parent: SAMURAI.Penalty
+  langs:
+  - csharp
+  - vb
+  name: GameSceneLoaded(Scene, LoadSceneMode)
+  nameWithType: Penalty.GameSceneLoaded(Scene, LoadSceneMode)
+  fullName: SAMURAI.Penalty.GameSceneLoaded(Scene, LoadSceneMode)
+  type: Method
+  source:
+    id: GameSceneLoaded
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\RefereeMove\Penalty.cs
+    startLine: 63
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    parameters:
+    - id: next
+      type: Scene
+    - id: mode
+      type: LoadSceneMode
+    content.vb: Sub GameSceneLoaded(next As Scene, mode As LoadSceneMode)
+  overload: SAMURAI.Penalty.GameSceneLoaded*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -216,18 +412,78 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
 - uid: GameObject
   isExternal: true
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: SAMURAI.GameState
+  commentId: T:SAMURAI.GameState
+  parent: SAMURAI
+  name: GameState
+  nameWithType: GameState
+  fullName: SAMURAI.GameState
+- uid: AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
 - uid: AudioClip
   isExternal: true
   name: AudioClip
   nameWithType: AudioClip
   fullName: AudioClip
+- uid: SAMURAI.Penalty.Reset*
+  commentId: Overload:SAMURAI.Penalty.Reset
+  name: Reset
+  nameWithType: Penalty.Reset
+  fullName: SAMURAI.Penalty.Reset
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.Penalty.Start*
+  commentId: Overload:SAMURAI.Penalty.Start
+  name: Start
+  nameWithType: Penalty.Start
+  fullName: SAMURAI.Penalty.Start
+- uid: SAMURAI.Penalty.Update*
+  commentId: Overload:SAMURAI.Penalty.Update
+  name: Update
+  nameWithType: Penalty.Update
+  fullName: SAMURAI.Penalty.Update
 - uid: SAMURAI.Penalty.YellowCard*
   commentId: Overload:SAMURAI.Penalty.YellowCard
   name: YellowCard
   nameWithType: Penalty.YellowCard
   fullName: SAMURAI.Penalty.YellowCard
+- uid: SAMURAI.Penalty.GameSceneLoaded*
+  commentId: Overload:SAMURAI.Penalty.GameSceneLoaded
+  name: GameSceneLoaded
+  nameWithType: Penalty.GameSceneLoaded
+  fullName: SAMURAI.Penalty.GameSceneLoaded
+- uid: Scene
+  isExternal: true
+  name: Scene
+  nameWithType: Scene
+  fullName: Scene
+- uid: LoadSceneMode
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: LoadSceneMode

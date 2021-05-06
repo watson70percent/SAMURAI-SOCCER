@@ -5,12 +5,17 @@ items:
   id: GameManager
   parent: SAMURAI
   children:
+  - SAMURAI.GameManager._gameManagerStateMachine
+  - SAMURAI.GameManager.Awake
   - SAMURAI.GameManager.CurrentGameState
   - SAMURAI.GameManager.CurrentStateChanger(SAMURAI.GameState)
   - SAMURAI.GameManager.CurrentStateResercher
+  - SAMURAI.GameManager.Start
   - SAMURAI.GameManager.StartStateChangeEvent(SAMURAI.GameState)
+  - SAMURAI.GameManager.state
   - SAMURAI.GameManager.StateChange
   - SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
+  - SAMURAI.GameManager.Update
   langs:
   - csharp
   - vb
@@ -67,6 +72,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.GameManager._gameManagerStateMachine
+  commentId: F:SAMURAI.GameManager._gameManagerStateMachine
+  id: _gameManagerStateMachine
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: _gameManagerStateMachine
+  nameWithType: GameManager._gameManagerStateMachine
+  fullName: SAMURAI.GameManager._gameManagerStateMachine
+  type: Field
+  source:
+    id: _gameManagerStateMachine
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: ImtStateMachine<GameManager> _gameManagerStateMachine
+    return:
+      type: ImtStateMachine{SAMURAI.GameManager}
+    content.vb: _gameManagerStateMachine As ImtStateMachine(Of GameManager)
+- uid: SAMURAI.GameManager.state
+  commentId: F:SAMURAI.GameManager.state
+  id: state
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: GameManager.state
+  fullName: SAMURAI.GameManager.state
+  type: Field
+  source:
+    id: state
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 37
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameState state
+    return:
+      type: SAMURAI.GameState
+    content.vb: state As GameState
 - uid: SAMURAI.GameManager.CurrentGameState
   commentId: P:SAMURAI.GameManager.CurrentGameState
   id: CurrentGameState
@@ -98,6 +149,72 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: SAMURAI.GameManager.Awake
+  commentId: M:SAMURAI.GameManager.Awake
+  id: Awake
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: GameManager.Awake()
+  fullName: SAMURAI.GameManager.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Awake()
+    content.vb: Sub Awake
+  overload: SAMURAI.GameManager.Awake*
+- uid: SAMURAI.GameManager.Start
+  commentId: M:SAMURAI.GameManager.Start
+  id: Start
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GameManager.Start()
+  fullName: SAMURAI.GameManager.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.GameManager.Start*
+- uid: SAMURAI.GameManager.Update
+  commentId: M:SAMURAI.GameManager.Update
+  id: Update
+  parent: SAMURAI.GameManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: GameManager.Update()
+  fullName: SAMURAI.GameManager.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\GameManager.cs
+    startLine: 63
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.GameManager.Update*
 - uid: SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
   commentId: M:SAMURAI.GameManager.StateChangeSignal(SAMURAI.GameState)
   id: StateChangeSignal(SAMURAI.GameState)
@@ -245,17 +362,111 @@ references:
   name: StateChangedHandler
   nameWithType: StateChangedHandler
   fullName: SAMURAI.StateChangedHandler
-- uid: SAMURAI.GameManager.CurrentGameState*
-  commentId: Overload:SAMURAI.GameManager.CurrentGameState
-  name: CurrentGameState
-  nameWithType: GameManager.CurrentGameState
-  fullName: SAMURAI.GameManager.CurrentGameState
+- uid: ImtStateMachine{SAMURAI.GameManager}
+  commentId: '!:ImtStateMachine{SAMURAI.GameManager}'
+  definition: ImtStateMachine`1
+  name: ImtStateMachine<GameManager>
+  nameWithType: ImtStateMachine<GameManager>
+  fullName: ImtStateMachine<SAMURAI.GameManager>
+  nameWithType.vb: ImtStateMachine(Of GameManager)
+  fullName.vb: ImtStateMachine(Of SAMURAI.GameManager)
+  name.vb: ImtStateMachine(Of GameManager)
+  spec.csharp:
+  - uid: ImtStateMachine`1
+    name: ImtStateMachine
+    nameWithType: ImtStateMachine
+    fullName: ImtStateMachine
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SAMURAI.GameManager
+    name: GameManager
+    nameWithType: GameManager
+    fullName: SAMURAI.GameManager
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ImtStateMachine`1
+    name: ImtStateMachine
+    nameWithType: ImtStateMachine
+    fullName: ImtStateMachine
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SAMURAI.GameManager
+    name: GameManager
+    nameWithType: GameManager
+    fullName: SAMURAI.GameManager
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ImtStateMachine`1
+  isExternal: true
+  name: ImtStateMachine<>
+  nameWithType: ImtStateMachine<>
+  fullName: ImtStateMachine<>
+  nameWithType.vb: ImtStateMachine(Of )
+  fullName.vb: ImtStateMachine(Of )
+  name.vb: ImtStateMachine(Of )
+  spec.csharp:
+  - uid: ImtStateMachine`1
+    name: ImtStateMachine
+    nameWithType: ImtStateMachine
+    fullName: ImtStateMachine
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ImtStateMachine`1
+    name: ImtStateMachine
+    nameWithType: ImtStateMachine
+    fullName: ImtStateMachine
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: SAMURAI.GameState
   commentId: T:SAMURAI.GameState
   parent: SAMURAI
   name: GameState
   nameWithType: GameState
   fullName: SAMURAI.GameState
+- uid: SAMURAI.GameManager.CurrentGameState*
+  commentId: Overload:SAMURAI.GameManager.CurrentGameState
+  name: CurrentGameState
+  nameWithType: GameManager.CurrentGameState
+  fullName: SAMURAI.GameManager.CurrentGameState
+- uid: SAMURAI.GameManager.Awake*
+  commentId: Overload:SAMURAI.GameManager.Awake
+  name: Awake
+  nameWithType: GameManager.Awake
+  fullName: SAMURAI.GameManager.Awake
+- uid: SAMURAI.GameManager.Start*
+  commentId: Overload:SAMURAI.GameManager.Start
+  name: Start
+  nameWithType: GameManager.Start
+  fullName: SAMURAI.GameManager.Start
+- uid: SAMURAI.GameManager.Update*
+  commentId: Overload:SAMURAI.GameManager.Update
+  name: Update
+  nameWithType: GameManager.Update
+  fullName: SAMURAI.GameManager.Update
 - uid: SAMURAI.GameManager.StateChangeSignal*
   commentId: Overload:SAMURAI.GameManager.StateChangeSignal
   name: StateChangeSignal

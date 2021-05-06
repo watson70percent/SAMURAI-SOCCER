@@ -5,7 +5,10 @@ items:
   id: particle
   parent: SAMURAI
   children:
+  - SAMURAI.particle.OnParticleCollision(GameObject)
   - SAMURAI.particle.PA
+  - SAMURAI.particle.Start
+  - SAMURAI.particle.Update
   langs:
   - csharp
   - vb
@@ -33,6 +36,50 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.particle.Start
+  commentId: M:SAMURAI.particle.Start
+  id: Start
+  parent: SAMURAI.particle
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: particle.Start()
+  fullName: SAMURAI.particle.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\particle.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.particle.Start*
+- uid: SAMURAI.particle.Update
+  commentId: M:SAMURAI.particle.Update
+  id: Update
+  parent: SAMURAI.particle
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: particle.Update()
+  fullName: SAMURAI.particle.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\particle.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.particle.Update*
 - uid: SAMURAI.particle.PA
   commentId: M:SAMURAI.particle.PA
   id: PA
@@ -59,6 +106,31 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.particle.OnParticleCollision(GameObject)
+  commentId: M:SAMURAI.particle.OnParticleCollision(GameObject)
+  id: OnParticleCollision(GameObject)
+  parent: SAMURAI.particle
+  langs:
+  - csharp
+  - vb
+  name: OnParticleCollision(GameObject)
+  nameWithType: particle.OnParticleCollision(GameObject)
+  fullName: SAMURAI.particle.OnParticleCollision(GameObject)
+  type: Method
+  source:
+    id: OnParticleCollision
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\particle.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void OnParticleCollision(GameObject other)
+    parameters:
+    - id: other
+      type: GameObject
+    content.vb: Sub OnParticleCollision(other As GameObject)
+  overload: SAMURAI.particle.OnParticleCollision*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -78,8 +150,28 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.particle.Start*
+  commentId: Overload:SAMURAI.particle.Start
+  name: Start
+  nameWithType: particle.Start
+  fullName: SAMURAI.particle.Start
+- uid: SAMURAI.particle.Update*
+  commentId: Overload:SAMURAI.particle.Update
+  name: Update
+  nameWithType: particle.Update
+  fullName: SAMURAI.particle.Update
 - uid: SAMURAI.particle.PA*
   commentId: Overload:SAMURAI.particle.PA
   name: PA
   nameWithType: particle.PA
   fullName: SAMURAI.particle.PA
+- uid: SAMURAI.particle.OnParticleCollision*
+  commentId: Overload:SAMURAI.particle.OnParticleCollision
+  name: OnParticleCollision
+  nameWithType: particle.OnParticleCollision
+  fullName: SAMURAI.particle.OnParticleCollision
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject

@@ -5,10 +5,13 @@ items:
   id: StandbyStateProcess
   parent: SAMURAI
   children:
+  - SAMURAI.StandbyStateProcess._gameManager
+  - SAMURAI.StandbyStateProcess._opponentInfoText
   - SAMURAI.StandbyStateProcess.audioSource
   - SAMURAI.StandbyStateProcess.katana
   - SAMURAI.StandbyStateProcess.OpponentInfo
   - SAMURAI.StandbyStateProcess.StandbyProcessContent(SAMURAI.StateChangedArg)
+  - SAMURAI.StandbyStateProcess.Start
   - SAMURAI.StandbyStateProcess.whistle
   langs:
   - csharp
@@ -37,6 +40,52 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.StandbyStateProcess._gameManager
+  commentId: F:SAMURAI.StandbyStateProcess._gameManager
+  id: _gameManager
+  parent: SAMURAI.StandbyStateProcess
+  langs:
+  - csharp
+  - vb
+  name: _gameManager
+  nameWithType: StandbyStateProcess._gameManager
+  fullName: SAMURAI.StandbyStateProcess._gameManager
+  type: Field
+  source:
+    id: _gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState\StandbyStateProcess.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager _gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: _gameManager As GameManager
+- uid: SAMURAI.StandbyStateProcess._opponentInfoText
+  commentId: F:SAMURAI.StandbyStateProcess._opponentInfoText
+  id: _opponentInfoText
+  parent: SAMURAI.StandbyStateProcess
+  langs:
+  - csharp
+  - vb
+  name: _opponentInfoText
+  nameWithType: StandbyStateProcess._opponentInfoText
+  fullName: SAMURAI.StandbyStateProcess._opponentInfoText
+  type: Field
+  source:
+    id: _opponentInfoText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState\StandbyStateProcess.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: TextMeshProUGUI _opponentInfoText
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: _opponentInfoText As TextMeshProUGUI
 - uid: SAMURAI.StandbyStateProcess.OpponentInfo
   commentId: P:SAMURAI.StandbyStateProcess.OpponentInfo
   id: OpponentInfo
@@ -151,6 +200,28 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.StandbyStateProcess.Start
+  commentId: M:SAMURAI.StandbyStateProcess.Start
+  id: Start
+  parent: SAMURAI.StandbyStateProcess
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StandbyStateProcess.Start()
+  fullName: SAMURAI.StandbyStateProcess.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StandbyState\StandbyStateProcess.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.StandbyStateProcess.Start*
 - uid: SAMURAI.StandbyStateProcess.StandbyProcessContent(SAMURAI.StateChangedArg)
   commentId: M:SAMURAI.StandbyStateProcess.StandbyProcessContent(SAMURAI.StateChangedArg)
   id: StandbyProcessContent(SAMURAI.StateChangedArg)
@@ -202,6 +273,25 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
 - uid: SAMURAI.StandbyStateProcess.OpponentInfo*
   commentId: Overload:SAMURAI.StandbyStateProcess.OpponentInfo
   name: OpponentInfo
@@ -224,6 +314,11 @@ references:
   name: AudioClip
   nameWithType: AudioClip
   fullName: AudioClip
+- uid: SAMURAI.StandbyStateProcess.Start*
+  commentId: Overload:SAMURAI.StandbyStateProcess.Start
+  name: Start
+  nameWithType: StandbyStateProcess.Start
+  fullName: SAMURAI.StandbyStateProcess.Start
 - uid: SAMURAI.StandbyStateProcess.StandbyProcessContent*
   commentId: Overload:SAMURAI.StandbyStateProcess.StandbyProcessContent
   name: StandbyProcessContent

@@ -6,9 +6,13 @@ items:
   parent: SAMURAI
   children:
   - SAMURAI.ResultManager.background
+  - SAMURAI.ResultManager.result
+  - SAMURAI.ResultManager.ResultState
   - SAMURAI.ResultManager.resultText
+  - SAMURAI.ResultManager.samuraiPhrase
   - SAMURAI.ResultManager.samuraiWordBase
   - SAMURAI.ResultManager.SetResult(SAMURAI.Result,System.String)
+  - SAMURAI.ResultManager.Start
   - SAMURAI.ResultManager.texts
   langs:
   - csharp
@@ -20,7 +24,7 @@ items:
   source:
     id: ResultManager
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
@@ -37,6 +41,60 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.ResultManager.ResultState
+  commentId: P:SAMURAI.ResultManager.ResultState
+  id: ResultState
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: ResultState
+  nameWithType: ResultManager.ResultState
+  fullName: SAMURAI.ResultManager.ResultState
+  type: Property
+  source:
+    id: ResultState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: public Result ResultState { get; }
+    parameters: []
+    return:
+      type: SAMURAI.Result
+    content.vb: Public ReadOnly Property ResultState As Result
+  overload: SAMURAI.ResultManager.ResultState*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SAMURAI.ResultManager.result
+  commentId: F:SAMURAI.ResultManager.result
+  id: result
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: result
+  nameWithType: ResultManager.result
+  fullName: SAMURAI.ResultManager.result
+  type: Field
+  source:
+    id: result
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Text result
+    return:
+      type: Text
+    content.vb: result As Text
 - uid: SAMURAI.ResultManager.resultText
   commentId: F:SAMURAI.ResultManager.resultText
   id: resultText
@@ -51,7 +109,7 @@ items:
   source:
     id: resultText
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
@@ -64,6 +122,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.ResultManager.samuraiPhrase
+  commentId: F:SAMURAI.ResultManager.samuraiPhrase
+  id: samuraiPhrase
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: samuraiPhrase
+  nameWithType: ResultManager.samuraiPhrase
+  fullName: SAMURAI.ResultManager.samuraiPhrase
+  type: Field
+  source:
+    id: samuraiPhrase
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Text samuraiPhrase
+    return:
+      type: Text
+    content.vb: samuraiPhrase As Text
 - uid: SAMURAI.ResultManager.samuraiWordBase
   commentId: F:SAMURAI.ResultManager.samuraiWordBase
   id: samuraiWordBase
@@ -78,7 +159,7 @@ items:
   source:
     id: samuraiWordBase
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
@@ -105,7 +186,7 @@ items:
   source:
     id: texts
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
@@ -132,7 +213,7 @@ items:
   source:
     id: background
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
@@ -145,6 +226,28 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.ResultManager.Start
+  commentId: M:SAMURAI.ResultManager.Start
+  id: Start
+  parent: SAMURAI.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ResultManager.Start()
+  fullName: SAMURAI.ResultManager.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.ResultManager.Start*
 - uid: SAMURAI.ResultManager.SetResult(SAMURAI.Result,System.String)
   commentId: M:SAMURAI.ResultManager.SetResult(SAMURAI.Result,System.String)
   id: SetResult(SAMURAI.Result,System.String)
@@ -159,7 +262,7 @@ items:
   source:
     id: SetResult
     path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - Assembly-CSharp
   namespace: SAMURAI
@@ -195,6 +298,22 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.ResultManager.ResultState*
+  commentId: Overload:SAMURAI.ResultManager.ResultState
+  name: ResultState
+  nameWithType: ResultManager.ResultState
+  fullName: SAMURAI.ResultManager.ResultState
+- uid: SAMURAI.Result
+  commentId: T:SAMURAI.Result
+  parent: SAMURAI
+  name: Result
+  nameWithType: Result
+  fullName: SAMURAI.Result
+- uid: Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -303,14 +422,13 @@ references:
   name: Camera
   nameWithType: Camera
   fullName: Camera
+- uid: SAMURAI.ResultManager.Start*
+  commentId: Overload:SAMURAI.ResultManager.Start
+  name: Start
+  nameWithType: ResultManager.Start
+  fullName: SAMURAI.ResultManager.Start
 - uid: SAMURAI.ResultManager.SetResult*
   commentId: Overload:SAMURAI.ResultManager.SetResult
   name: SetResult
   nameWithType: ResultManager.SetResult
   fullName: SAMURAI.ResultManager.SetResult
-- uid: SAMURAI.Result
-  commentId: T:SAMURAI.Result
-  parent: SAMURAI
-  name: Result
-  nameWithType: Result
-  fullName: SAMURAI.Result

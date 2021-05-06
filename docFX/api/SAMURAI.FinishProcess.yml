@@ -5,8 +5,13 @@ items:
   id: FinishProcess
   parent: SAMURAI
   children:
+  - SAMURAI.FinishProcess._gameManager
+  - SAMURAI.FinishProcess.audioSource
   - SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
+  - SAMURAI.FinishProcess.finishSound
+  - SAMURAI.FinishProcess.GoResult
   - SAMURAI.FinishProcess.ResultSceneName
+  - SAMURAI.FinishProcess.Start
   langs:
   - csharp
   - vb
@@ -61,6 +66,97 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.FinishProcess.finishSound
+  commentId: F:SAMURAI.FinishProcess.finishSound
+  id: finishSound
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: finishSound
+  nameWithType: FinishProcess.finishSound
+  fullName: SAMURAI.FinishProcess.finishSound
+  type: Field
+  source:
+    id: finishSound
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioClip finishSound
+    return:
+      type: AudioClip
+    content.vb: finishSound As AudioClip
+- uid: SAMURAI.FinishProcess.audioSource
+  commentId: F:SAMURAI.FinishProcess.audioSource
+  id: audioSource
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: FinishProcess.audioSource
+  fullName: SAMURAI.FinishProcess.audioSource
+  type: Field
+  source:
+    id: audioSource
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioSource audioSource
+    return:
+      type: AudioSource
+    content.vb: audioSource As AudioSource
+- uid: SAMURAI.FinishProcess._gameManager
+  commentId: F:SAMURAI.FinishProcess._gameManager
+  id: _gameManager
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: _gameManager
+  nameWithType: FinishProcess._gameManager
+  fullName: SAMURAI.FinishProcess._gameManager
+  type: Field
+  source:
+    id: _gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager _gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: _gameManager As GameManager
+- uid: SAMURAI.FinishProcess.Start
+  commentId: M:SAMURAI.FinishProcess.Start
+  id: Start
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: FinishProcess.Start()
+  fullName: SAMURAI.FinishProcess.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.FinishProcess.Start*
 - uid: SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
   commentId: M:SAMURAI.FinishProcess.FinishProcessContent(SAMURAI.StateChangedArg)
   id: FinishProcessContent(SAMURAI.StateChangedArg)
@@ -90,6 +186,30 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.FinishProcess.GoResult
+  commentId: M:SAMURAI.FinishProcess.GoResult
+  id: GoResult
+  parent: SAMURAI.FinishProcess
+  langs:
+  - csharp
+  - vb
+  name: GoResult()
+  nameWithType: FinishProcess.GoResult()
+  fullName: SAMURAI.FinishProcess.GoResult()
+  type: Method
+  source:
+    id: GoResult
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\FinishState\FinishProcess.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator GoResult()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function GoResult As IEnumerator
+  overload: SAMURAI.FinishProcess.GoResult*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -116,6 +236,27 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
+- uid: AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.FinishProcess.Start*
+  commentId: Overload:SAMURAI.FinishProcess.Start
+  name: Start
+  nameWithType: FinishProcess.Start
+  fullName: SAMURAI.FinishProcess.Start
 - uid: SAMURAI.FinishProcess.FinishProcessContent*
   commentId: Overload:SAMURAI.FinishProcess.FinishProcessContent
   name: FinishProcessContent
@@ -127,3 +268,21 @@ references:
   name: StateChangedArg
   nameWithType: StateChangedArg
   fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.FinishProcess.GoResult*
+  commentId: Overload:SAMURAI.FinishProcess.GoResult
+  name: GoResult
+  nameWithType: FinishProcess.GoResult
+  fullName: SAMURAI.FinishProcess.GoResult
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

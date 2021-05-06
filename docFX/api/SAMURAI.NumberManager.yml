@@ -7,6 +7,7 @@ items:
   children:
   - SAMURAI.NumberManager.cpuManager
   - SAMURAI.NumberManager.enemyNumber
+  - SAMURAI.NumberManager.Update
   langs:
   - csharp
   - vb
@@ -88,6 +89,28 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.NumberManager.Update
+  commentId: M:SAMURAI.NumberManager.Update
+  id: Update
+  parent: SAMURAI.NumberManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: NumberManager.Update()
+  fullName: SAMURAI.NumberManager.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\EnemyNumber\NumberManager.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.NumberManager.Update*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -118,3 +141,8 @@ references:
   name: Text
   nameWithType: Text
   fullName: Text
+- uid: SAMURAI.NumberManager.Update*
+  commentId: Overload:SAMURAI.NumberManager.Update
+  name: Update
+  nameWithType: NumberManager.Update
+  fullName: SAMURAI.NumberManager.Update

@@ -5,6 +5,9 @@ items:
   id: CallStatueOfLiberty
   parent: SAMURAI
   children:
+  - SAMURAI.CallStatueOfLiberty._gameManager
+  - SAMURAI.CallStatueOfLiberty.CallStatueCoroutine
+  - SAMURAI.CallStatueOfLiberty.Start
   - SAMURAI.CallStatueOfLiberty.StatuePrefab
   langs:
   - csharp
@@ -33,6 +36,29 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.CallStatueOfLiberty._gameManager
+  commentId: F:SAMURAI.CallStatueOfLiberty._gameManager
+  id: _gameManager
+  parent: SAMURAI.CallStatueOfLiberty
+  langs:
+  - csharp
+  - vb
+  name: _gameManager
+  nameWithType: CallStatueOfLiberty._gameManager
+  fullName: SAMURAI.CallStatueOfLiberty._gameManager
+  type: Field
+  source:
+    id: _gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AmericaStage\CallStatueOfLiberty.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager _gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: _gameManager As GameManager
 - uid: SAMURAI.CallStatueOfLiberty.StatuePrefab
   commentId: F:SAMURAI.CallStatueOfLiberty.StatuePrefab
   id: StatuePrefab
@@ -60,6 +86,55 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.CallStatueOfLiberty.Start
+  commentId: M:SAMURAI.CallStatueOfLiberty.Start
+  id: Start
+  parent: SAMURAI.CallStatueOfLiberty
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: CallStatueOfLiberty.Start()
+  fullName: SAMURAI.CallStatueOfLiberty.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AmericaStage\CallStatueOfLiberty.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.CallStatueOfLiberty.Start*
+- uid: SAMURAI.CallStatueOfLiberty.CallStatueCoroutine
+  commentId: M:SAMURAI.CallStatueOfLiberty.CallStatueCoroutine
+  id: CallStatueCoroutine
+  parent: SAMURAI.CallStatueOfLiberty
+  langs:
+  - csharp
+  - vb
+  name: CallStatueCoroutine()
+  nameWithType: CallStatueOfLiberty.CallStatueCoroutine()
+  fullName: SAMURAI.CallStatueOfLiberty.CallStatueCoroutine()
+  type: Method
+  source:
+    id: CallStatueCoroutine
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AmericaStage\CallStatueOfLiberty.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\n自由の女神を呼び出す\n"
+  example: []
+  syntax:
+    content: IEnumerator CallStatueCoroutine()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Function CallStatueCoroutine As IEnumerator
+  overload: SAMURAI.CallStatueOfLiberty.CallStatueCoroutine*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -79,8 +154,37 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
 - uid: GameObject
   isExternal: true
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: SAMURAI.CallStatueOfLiberty.Start*
+  commentId: Overload:SAMURAI.CallStatueOfLiberty.Start
+  name: Start
+  nameWithType: CallStatueOfLiberty.Start
+  fullName: SAMURAI.CallStatueOfLiberty.Start
+- uid: SAMURAI.CallStatueOfLiberty.CallStatueCoroutine*
+  commentId: Overload:SAMURAI.CallStatueOfLiberty.CallStatueCoroutine
+  name: CallStatueCoroutine
+  nameWithType: CallStatueOfLiberty.CallStatueCoroutine
+  fullName: SAMURAI.CallStatueOfLiberty.CallStatueCoroutine
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
