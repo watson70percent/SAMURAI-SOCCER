@@ -5,8 +5,11 @@ items:
   id: StartCoroutineForPlayingState
   parent: SAMURAI
   children:
+  - SAMURAI.StartCoroutineForPlayingState._gameManager
   - SAMURAI.StartCoroutineForPlayingState.AddTaskIEnumrator(System.Collections.IEnumerator)
   - SAMURAI.StartCoroutineForPlayingState.Start
+  - SAMURAI.StartCoroutineForPlayingState.taskEnumerators
+  - SAMURAI.StartCoroutineForPlayingState.taskWaitTime
   - SAMURAI.StartCoroutineForPlayingState.Update
   langs:
   - csharp
@@ -35,6 +38,83 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.StartCoroutineForPlayingState.taskEnumerators
+  commentId: F:SAMURAI.StartCoroutineForPlayingState.taskEnumerators
+  id: taskEnumerators
+  parent: SAMURAI.StartCoroutineForPlayingState
+  langs:
+  - csharp
+  - vb
+  name: taskEnumerators
+  nameWithType: StartCoroutineForPlayingState.taskEnumerators
+  fullName: SAMURAI.StartCoroutineForPlayingState.taskEnumerators
+  type: Field
+  source:
+    id: taskEnumerators
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static List<IEnumerator> taskEnumerators
+    return:
+      type: System.Collections.Generic.List{System.Collections.IEnumerator}
+    content.vb: Shared taskEnumerators As List(Of IEnumerator)
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.StartCoroutineForPlayingState.taskWaitTime
+  commentId: F:SAMURAI.StartCoroutineForPlayingState.taskWaitTime
+  id: taskWaitTime
+  parent: SAMURAI.StartCoroutineForPlayingState
+  langs:
+  - csharp
+  - vb
+  name: taskWaitTime
+  nameWithType: StartCoroutineForPlayingState.taskWaitTime
+  fullName: SAMURAI.StartCoroutineForPlayingState.taskWaitTime
+  type: Field
+  source:
+    id: taskWaitTime
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Dictionary<IEnumerator, float> taskWaitTime
+    return:
+      type: System.Collections.Generic.Dictionary{System.Collections.IEnumerator,System.Single}
+    content.vb: Shared taskWaitTime As Dictionary(Of IEnumerator, Single)
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.StartCoroutineForPlayingState._gameManager
+  commentId: F:SAMURAI.StartCoroutineForPlayingState._gameManager
+  id: _gameManager
+  parent: SAMURAI.StartCoroutineForPlayingState
+  langs:
+  - csharp
+  - vb
+  name: _gameManager
+  nameWithType: StartCoroutineForPlayingState._gameManager
+  fullName: SAMURAI.StartCoroutineForPlayingState._gameManager
+  type: Field
+  source:
+    id: _gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\GameManager\StartCoroutineForPlayingState.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager _gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: _gameManager As GameManager
 - uid: SAMURAI.StartCoroutineForPlayingState.Start
   commentId: M:SAMURAI.StartCoroutineForPlayingState.Start
   id: Start
@@ -140,6 +220,212 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Collections.Generic.List{System.Collections.IEnumerator}
+  commentId: T:System.Collections.Generic.List{System.Collections.IEnumerator}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IEnumerator>
+  nameWithType: List<IEnumerator>
+  fullName: System.Collections.Generic.List<System.Collections.IEnumerator>
+  nameWithType.vb: List(Of IEnumerator)
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.IEnumerator)
+  name.vb: List(Of IEnumerator)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.IEnumerator
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.IEnumerator
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.IEnumerator
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.IEnumerator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.Dictionary{System.Collections.IEnumerator,System.Single}
+  commentId: T:System.Collections.Generic.Dictionary{System.Collections.IEnumerator,System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<IEnumerator, Single>
+  nameWithType: Dictionary<IEnumerator, Single>
+  fullName: System.Collections.Generic.Dictionary<System.Collections.IEnumerator, System.Single>
+  nameWithType.vb: Dictionary(Of IEnumerator, Single)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Collections.IEnumerator, System.Single)
+  name.vb: Dictionary(Of IEnumerator, Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.IEnumerator
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.IEnumerator
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.IEnumerator
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.IEnumerator
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
 - uid: SAMURAI.StartCoroutineForPlayingState.Start*
   commentId: Overload:SAMURAI.StartCoroutineForPlayingState.Start
   name: Start

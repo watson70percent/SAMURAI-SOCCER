@@ -6,6 +6,9 @@ items:
   parent: SAMURAI
   children:
   - SAMURAI.Wall_temp.normalVec
+  - SAMURAI.Wall_temp.OnTriggerEnter(Collider)
+  - SAMURAI.Wall_temp.Start
+  - SAMURAI.Wall_temp.Update
   langs:
   - csharp
   - vb
@@ -60,6 +63,75 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Wall_temp.Start
+  commentId: M:SAMURAI.Wall_temp.Start
+  id: Start
+  parent: SAMURAI.Wall_temp
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Wall_temp.Start()
+  fullName: SAMURAI.Wall_temp.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Wall_temp.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.Wall_temp.Start*
+- uid: SAMURAI.Wall_temp.Update
+  commentId: M:SAMURAI.Wall_temp.Update
+  id: Update
+  parent: SAMURAI.Wall_temp
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Wall_temp.Update()
+  fullName: SAMURAI.Wall_temp.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Wall_temp.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.Wall_temp.Update*
+- uid: SAMURAI.Wall_temp.OnTriggerEnter(Collider)
+  commentId: M:SAMURAI.Wall_temp.OnTriggerEnter(Collider)
+  id: OnTriggerEnter(Collider)
+  parent: SAMURAI.Wall_temp
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: Wall_temp.OnTriggerEnter(Collider)
+  fullName: SAMURAI.Wall_temp.OnTriggerEnter(Collider)
+  type: Method
+  source:
+    id: OnTriggerEnter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Wall_temp.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: Collider
+    content.vb: Sub OnTriggerEnter(other As Collider)
+  overload: SAMURAI.Wall_temp.OnTriggerEnter*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -84,3 +156,23 @@ references:
   name: Vector3
   nameWithType: Vector3
   fullName: Vector3
+- uid: SAMURAI.Wall_temp.Start*
+  commentId: Overload:SAMURAI.Wall_temp.Start
+  name: Start
+  nameWithType: Wall_temp.Start
+  fullName: SAMURAI.Wall_temp.Start
+- uid: SAMURAI.Wall_temp.Update*
+  commentId: Overload:SAMURAI.Wall_temp.Update
+  name: Update
+  nameWithType: Wall_temp.Update
+  fullName: SAMURAI.Wall_temp.Update
+- uid: SAMURAI.Wall_temp.OnTriggerEnter*
+  commentId: Overload:SAMURAI.Wall_temp.OnTriggerEnter
+  name: OnTriggerEnter
+  nameWithType: Wall_temp.OnTriggerEnter
+  fullName: SAMURAI.Wall_temp.OnTriggerEnter
+- uid: Collider
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: Collider

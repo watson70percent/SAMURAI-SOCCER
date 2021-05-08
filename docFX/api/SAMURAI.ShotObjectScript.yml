@@ -4,7 +4,19 @@ items:
   commentId: T:SAMURAI.ShotObjectScript
   id: ShotObjectScript
   parent: SAMURAI
-  children: []
+  children:
+  - SAMURAI.ShotObjectScript.BlowAway(GameObject)
+  - SAMURAI.ShotObjectScript.gameManager
+  - SAMURAI.ShotObjectScript.GameSceneLoaded(Scene,LoadSceneMode)
+  - SAMURAI.ShotObjectScript.GoResult
+  - SAMURAI.ShotObjectScript.groundWidth
+  - SAMURAI.ShotObjectScript.isEnd
+  - SAMURAI.ShotObjectScript.movedLength
+  - SAMURAI.ShotObjectScript.OnTriggerEnter(Collider)
+  - SAMURAI.ShotObjectScript.ResultSceneName
+  - SAMURAI.ShotObjectScript.Start
+  - SAMURAI.ShotObjectScript.Update
+  - SAMURAI.ShotObjectScript.velocity
   langs:
   - csharp
   - vb
@@ -32,6 +44,291 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.ShotObjectScript.ResultSceneName
+  commentId: F:SAMURAI.ShotObjectScript.ResultSceneName
+  id: ResultSceneName
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: ResultSceneName
+  nameWithType: ShotObjectScript.ResultSceneName
+  fullName: SAMURAI.ShotObjectScript.ResultSceneName
+  type: Field
+  source:
+    id: ResultSceneName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: string ResultSceneName
+    return:
+      type: System.String
+    content.vb: ResultSceneName As String
+- uid: SAMURAI.ShotObjectScript.velocity
+  commentId: F:SAMURAI.ShotObjectScript.velocity
+  id: velocity
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: velocity
+  nameWithType: ShotObjectScript.velocity
+  fullName: SAMURAI.ShotObjectScript.velocity
+  type: Field
+  source:
+    id: velocity
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float velocity
+    return:
+      type: System.Single
+    content.vb: velocity As Single
+- uid: SAMURAI.ShotObjectScript.movedLength
+  commentId: F:SAMURAI.ShotObjectScript.movedLength
+  id: movedLength
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: movedLength
+  nameWithType: ShotObjectScript.movedLength
+  fullName: SAMURAI.ShotObjectScript.movedLength
+  type: Field
+  source:
+    id: movedLength
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float movedLength
+    return:
+      type: System.Single
+    content.vb: movedLength As Single
+- uid: SAMURAI.ShotObjectScript.groundWidth
+  commentId: F:SAMURAI.ShotObjectScript.groundWidth
+  id: groundWidth
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: groundWidth
+  nameWithType: ShotObjectScript.groundWidth
+  fullName: SAMURAI.ShotObjectScript.groundWidth
+  type: Field
+  source:
+    id: groundWidth
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float groundWidth
+    return:
+      type: System.Single
+    content.vb: groundWidth As Single
+- uid: SAMURAI.ShotObjectScript.gameManager
+  commentId: F:SAMURAI.ShotObjectScript.gameManager
+  id: gameManager
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: ShotObjectScript.gameManager
+  fullName: SAMURAI.ShotObjectScript.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: gameManager As GameManager
+- uid: SAMURAI.ShotObjectScript.isEnd
+  commentId: F:SAMURAI.ShotObjectScript.isEnd
+  id: isEnd
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: isEnd
+  nameWithType: ShotObjectScript.isEnd
+  fullName: SAMURAI.ShotObjectScript.isEnd
+  type: Field
+  source:
+    id: isEnd
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool isEnd
+    return:
+      type: System.Boolean
+    content.vb: isEnd As Boolean
+- uid: SAMURAI.ShotObjectScript.Start
+  commentId: M:SAMURAI.ShotObjectScript.Start
+  id: Start
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ShotObjectScript.Start()
+  fullName: SAMURAI.ShotObjectScript.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.ShotObjectScript.Start*
+- uid: SAMURAI.ShotObjectScript.Update
+  commentId: M:SAMURAI.ShotObjectScript.Update
+  id: Update
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: ShotObjectScript.Update()
+  fullName: SAMURAI.ShotObjectScript.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.ShotObjectScript.Update*
+- uid: SAMURAI.ShotObjectScript.OnTriggerEnter(Collider)
+  commentId: M:SAMURAI.ShotObjectScript.OnTriggerEnter(Collider)
+  id: OnTriggerEnter(Collider)
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: ShotObjectScript.OnTriggerEnter(Collider)
+  fullName: SAMURAI.ShotObjectScript.OnTriggerEnter(Collider)
+  type: Method
+  source:
+    id: OnTriggerEnter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: Collider
+    content.vb: Sub OnTriggerEnter(other As Collider)
+  overload: SAMURAI.ShotObjectScript.OnTriggerEnter*
+- uid: SAMURAI.ShotObjectScript.GoResult
+  commentId: M:SAMURAI.ShotObjectScript.GoResult
+  id: GoResult
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: GoResult()
+  nameWithType: ShotObjectScript.GoResult()
+  fullName: SAMURAI.ShotObjectScript.GoResult()
+  type: Method
+  source:
+    id: GoResult
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 77
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator GoResult()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function GoResult As IEnumerator
+  overload: SAMURAI.ShotObjectScript.GoResult*
+- uid: SAMURAI.ShotObjectScript.BlowAway(GameObject)
+  commentId: M:SAMURAI.ShotObjectScript.BlowAway(GameObject)
+  id: BlowAway(GameObject)
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: BlowAway(GameObject)
+  nameWithType: ShotObjectScript.BlowAway(GameObject)
+  fullName: SAMURAI.ShotObjectScript.BlowAway(GameObject)
+  type: Method
+  source:
+    id: BlowAway
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 84
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator BlowAway(GameObject player)
+    parameters:
+    - id: player
+      type: GameObject
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function BlowAway(player As GameObject) As IEnumerator
+  overload: SAMURAI.ShotObjectScript.BlowAway*
+- uid: SAMURAI.ShotObjectScript.GameSceneLoaded(Scene,LoadSceneMode)
+  commentId: M:SAMURAI.ShotObjectScript.GameSceneLoaded(Scene,LoadSceneMode)
+  id: GameSceneLoaded(Scene,LoadSceneMode)
+  parent: SAMURAI.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: GameSceneLoaded(Scene, LoadSceneMode)
+  nameWithType: ShotObjectScript.GameSceneLoaded(Scene, LoadSceneMode)
+  fullName: SAMURAI.ShotObjectScript.GameSceneLoaded(Scene, LoadSceneMode)
+  type: Method
+  source:
+    id: GameSceneLoaded
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\ShotObjectScript.cs
+    startLine: 104
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    parameters:
+    - id: next
+      type: Scene
+    - id: mode
+      type: LoadSceneMode
+    content.vb: Sub GameSceneLoaded(next As Scene, mode As LoadSceneMode)
+  overload: SAMURAI.ShotObjectScript.GameSceneLoaded*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -51,3 +348,93 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SAMURAI.ShotObjectScript.Start*
+  commentId: Overload:SAMURAI.ShotObjectScript.Start
+  name: Start
+  nameWithType: ShotObjectScript.Start
+  fullName: SAMURAI.ShotObjectScript.Start
+- uid: SAMURAI.ShotObjectScript.Update*
+  commentId: Overload:SAMURAI.ShotObjectScript.Update
+  name: Update
+  nameWithType: ShotObjectScript.Update
+  fullName: SAMURAI.ShotObjectScript.Update
+- uid: SAMURAI.ShotObjectScript.OnTriggerEnter*
+  commentId: Overload:SAMURAI.ShotObjectScript.OnTriggerEnter
+  name: OnTriggerEnter
+  nameWithType: ShotObjectScript.OnTriggerEnter
+  fullName: SAMURAI.ShotObjectScript.OnTriggerEnter
+- uid: Collider
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: Collider
+- uid: SAMURAI.ShotObjectScript.GoResult*
+  commentId: Overload:SAMURAI.ShotObjectScript.GoResult
+  name: GoResult
+  nameWithType: ShotObjectScript.GoResult
+  fullName: SAMURAI.ShotObjectScript.GoResult
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: SAMURAI.ShotObjectScript.BlowAway*
+  commentId: Overload:SAMURAI.ShotObjectScript.BlowAway
+  name: BlowAway
+  nameWithType: ShotObjectScript.BlowAway
+  fullName: SAMURAI.ShotObjectScript.BlowAway
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: SAMURAI.ShotObjectScript.GameSceneLoaded*
+  commentId: Overload:SAMURAI.ShotObjectScript.GameSceneLoaded
+  name: GameSceneLoaded
+  nameWithType: ShotObjectScript.GameSceneLoaded
+  fullName: SAMURAI.ShotObjectScript.GameSceneLoaded
+- uid: Scene
+  isExternal: true
+  name: Scene
+  nameWithType: Scene
+  fullName: Scene
+- uid: LoadSceneMode
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: LoadSceneMode

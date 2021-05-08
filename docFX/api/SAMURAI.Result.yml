@@ -7,6 +7,7 @@ items:
   children:
   - SAMURAI.Result.Draw
   - SAMURAI.Result.Lose
+  - SAMURAI.Result.Undefined
   - SAMURAI.Result.Win
   langs:
   - csharp
@@ -107,6 +108,34 @@ items:
   namespace: SAMURAI
   syntax:
     content: Draw = 2
+    return:
+      type: SAMURAI.Result
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SAMURAI.Result.Undefined
+  commentId: F:SAMURAI.Result.Undefined
+  id: Undefined
+  parent: SAMURAI.Result
+  langs:
+  - csharp
+  - vb
+  name: Undefined
+  nameWithType: Result.Undefined
+  fullName: SAMURAI.Result.Undefined
+  type: Field
+  source:
+    id: Undefined
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Result\ResultManager.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Undefined = 3
     return:
       type: SAMURAI.Result
   modifiers.csharp:

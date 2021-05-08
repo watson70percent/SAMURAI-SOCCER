@@ -6,8 +6,14 @@
     name: AnimationController
   - uid: SAMURAI.AvoidCarScript
     name: AvoidCarScript
+  - uid: SAMURAI.BackWholeMap
+    name: BackWholeMap
   - uid: SAMURAI.Ball_Temp
     name: Ball_Temp
+  - uid: SAMURAI.BaseStageData
+    name: BaseStageData
+  - uid: SAMURAI.BulletFunction
+    name: BulletFunction
   - uid: SAMURAI.CallStatueOfLiberty
     name: CallStatueOfLiberty
   - uid: SAMURAI.ColliderInputData
@@ -20,18 +26,20 @@
     name: CollisionManager.ColliderType
   - uid: SAMURAI.CollisionObject
     name: CollisionObject
+  - uid: SAMURAI.CollisionWithStatue
+    name: CollisionWithStatue
   - uid: SAMURAI.Constants
     name: Constants
   - uid: SAMURAI.CrowdMenber
     name: CrowdMenber
-  - uid: SAMURAI.CrushedToDeath
-    name: CrushedToDeath
   - uid: SAMURAI.EasyCPU
     name: EasyCPU
   - uid: SAMURAI.EasyCPUManager
     name: EasyCPUManager
   - uid: SAMURAI.EMoveScript
     name: EMoveScript
+  - uid: SAMURAI.EMoveScript.moveDirection
+    name: EMoveScript.moveDirection
   - uid: SAMURAI.Extentions
     name: Extentions
   - uid: SAMURAI.FieldInfo
@@ -48,6 +56,8 @@
     name: FinishProcess
   - uid: SAMURAI.FinishState
     name: FinishState
+  - uid: SAMURAI.FireHypnoticBullets
+    name: FireHypnoticBullets
   - uid: SAMURAI.Flag
     name: Flag
   - uid: SAMURAI.GameManager
@@ -66,10 +76,16 @@
     name: GroundTexture
   - uid: SAMURAI.IceStageManager
     name: IceStageManager
+  - uid: SAMURAI.JiangshiPostProcessing
+    name: JiangshiPostProcessing
   - uid: SAMURAI.JiangshiSceneManager
     name: JiangshiSceneManager
   - uid: SAMURAI.JudgeGameEnd
     name: JudgeGameEnd
+  - uid: SAMURAI.KunfuReferee
+    name: KunfuReferee
+  - uid: SAMURAI.KunfuSceneManager
+    name: KunfuSceneManager
   - uid: SAMURAI.LoadAnyScene
     name: LoadAnyScene
   - uid: SAMURAI.MeshCut
@@ -80,6 +96,8 @@
     name: MeshCut.RectangleFragment
   - uid: SAMURAI.MeshCut.TriangleFragment
     name: MeshCut.TriangleFragment
+  - uid: SAMURAI.ModelDebug
+    name: ModelDebug
   - uid: SAMURAI.NonRotation
     name: NonRotation
   - uid: SAMURAI.NonWind
@@ -92,6 +110,12 @@
     name: Panda
   - uid: SAMURAI.PandaMaker
     name: PandaMaker
+  - uid: SAMURAI.PanjanExplode
+    name: PanjanExplode
+  - uid: SAMURAI.PanjanMake
+    name: PanjanMake
+  - uid: SAMURAI.PanjanRoll
+    name: PanjanRoll
   - uid: SAMURAI.particle
     name: particle
   - uid: SAMURAI.PauseBackScript
@@ -130,6 +154,12 @@
     name: SamuraiWordBaseEditor
   - uid: SAMURAI.SceneObject
     name: SceneObject
+  - uid: SAMURAI.SelectState
+    name: SelectState
+  - uid: SAMURAI.SelectStateInput
+    name: SelectStateInput
+  - uid: SAMURAI.SelectStateManager
+    name: SelectStateManager
   - uid: SAMURAI.ShotObjectScript
     name: ShotObjectScript
   - uid: SAMURAI.SkinnedMeshCut
@@ -140,8 +170,20 @@
     name: Slash
   - uid: SAMURAI.slidepad
     name: slidepad
+  - uid: SAMURAI.slidepad.Boundy
+    name: slidepad.Boundy
   - uid: SAMURAI.Snow
     name: Snow
+  - uid: SAMURAI.StageData
+    name: StageData
+  - uid: SAMURAI.StageDataHolder
+    name: StageDataHolder
+  - uid: SAMURAI.StageDataManager
+    name: StageDataManager
+  - uid: SAMURAI.StageDataReceiver
+    name: StageDataReceiver
+  - uid: SAMURAI.StageDataSave
+    name: StageDataSave
   - uid: SAMURAI.StageIcon
     name: StageIcon
   - uid: SAMURAI.StageIconButton
@@ -150,16 +192,24 @@
     name: StagePrefabManager
   - uid: SAMURAI.StagePrefabManagerEditor
     name: StagePrefabManagerEditor
+  - uid: SAMURAI.StagePreviewState
+    name: StagePreviewState
   - uid: SAMURAI.StagePreviwScript
     name: StagePreviwScript
   - uid: SAMURAI.StageSelect
     name: StageSelect
+  - uid: SAMURAI.StageSelectBGM
+    name: StageSelectBGM
   - uid: SAMURAI.StageSelectData
     name: StageSelectData
   - uid: SAMURAI.StageSelectManager
     name: StageSelectManager
   - uid: SAMURAI.StageSelectManager.StageSelectState
     name: StageSelectManager.StageSelectState
+  - uid: SAMURAI.StageSelectState
+    name: StageSelectState
+  - uid: SAMURAI.StageState
+    name: StageState
   - uid: SAMURAI.StandardFade
     name: StandardFade
   - uid: SAMURAI.StandbyState
@@ -172,18 +222,28 @@
     name: StateChangedArg
   - uid: SAMURAI.StateChangedHandler
     name: StateChangedHandler
+  - uid: SAMURAI.StatueMode
+    name: StatueMode
   - uid: SAMURAI.StrikeObjectScript
     name: StrikeObjectScript
   - uid: SAMURAI.SugiTemp
     name: SugiTemp
+  - uid: SAMURAI.SwitchCPU
+    name: SwitchCPU
+  - uid: SAMURAI.SwitchCPU.WeightSet
+    name: SwitchCPU.WeightSet
   - uid: SAMURAI.Sword
     name: Sword
+  - uid: SAMURAI.TargetWorldData
+    name: TargetWorldData
   - uid: SAMURAI.Team
     name: Team
   - uid: SAMURAI.TeamMaker
     name: TeamMaker
   - uid: SAMURAI.test
     name: test
+  - uid: SAMURAI.test_StageDataHolder
+    name: test_StageDataHolder
   - uid: SAMURAI.TimerScript
     name: TimerScript
   - uid: SAMURAI.VanishAndBorn
@@ -192,6 +252,10 @@
     name: Wall_temp
   - uid: SAMURAI.WindInfoBase
     name: WindInfoBase
+  - uid: SAMURAI.WorldName
+    name: WorldName
+  - uid: SAMURAI.WorldSelectState
+    name: WorldSelectState
 - uid: SAMURAI.UnityEngine.UI
   name: SAMURAI.UnityEngine.UI
   items:

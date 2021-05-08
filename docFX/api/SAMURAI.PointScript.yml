@@ -5,13 +5,17 @@ items:
   id: PointScript
   parent: SAMURAI
   children:
+  - SAMURAI.PointScript.Awake
   - SAMURAI.PointScript.ballControler
   - SAMURAI.PointScript.GainPoint(GoalEventArgs)
   - SAMURAI.PointScript.GetPoint(System.Int32)
   - SAMURAI.PointScript.leftSide
+  - SAMURAI.PointScript.point
   - SAMURAI.PointScript.Point(System.Object,GoalEventArgs)
   - SAMURAI.PointScript.ResetPoint(System.Boolean)
+  - SAMURAI.PointScript.Start
   - SAMURAI.PointScript.text
+  - SAMURAI.PointScript.Update
   langs:
   - csharp
   - vb
@@ -93,6 +97,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.PointScript.point
+  commentId: F:SAMURAI.PointScript.point
+  id: point
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: point
+  nameWithType: PointScript.point
+  fullName: SAMURAI.PointScript.point
+  type: Field
+  source:
+    id: point
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: int[] point
+    return:
+      type: System.Int32[]
+    content.vb: point As Integer()
 - uid: SAMURAI.PointScript.ballControler
   commentId: F:SAMURAI.PointScript.ballControler
   id: ballControler
@@ -151,6 +178,72 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.PointScript.Start
+  commentId: M:SAMURAI.PointScript.Start
+  id: Start
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PointScript.Start()
+  fullName: SAMURAI.PointScript.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.PointScript.Start*
+- uid: SAMURAI.PointScript.Awake
+  commentId: M:SAMURAI.PointScript.Awake
+  id: Awake
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: PointScript.Awake()
+  fullName: SAMURAI.PointScript.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Awake()
+    content.vb: Sub Awake
+  overload: SAMURAI.PointScript.Awake*
+- uid: SAMURAI.PointScript.Update
+  commentId: M:SAMURAI.PointScript.Update
+  id: Update
+  parent: SAMURAI.PointScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: PointScript.Update()
+  fullName: SAMURAI.PointScript.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Goal\PointScript.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.PointScript.Update*
 - uid: SAMURAI.PointScript.GainPoint(GoalEventArgs)
   commentId: M:SAMURAI.PointScript.GainPoint(GoalEventArgs)
   id: GainPoint(GoalEventArgs)
@@ -271,6 +364,32 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: BallControler
   commentId: T:BallControler
   name: BallControler
@@ -286,6 +405,21 @@ references:
   name: GoalEventArgs
   nameWithType: GoalEventArgs
   fullName: GoalEventArgs
+- uid: SAMURAI.PointScript.Start*
+  commentId: Overload:SAMURAI.PointScript.Start
+  name: Start
+  nameWithType: PointScript.Start
+  fullName: SAMURAI.PointScript.Start
+- uid: SAMURAI.PointScript.Awake*
+  commentId: Overload:SAMURAI.PointScript.Awake
+  name: Awake
+  nameWithType: PointScript.Awake
+  fullName: SAMURAI.PointScript.Awake
+- uid: SAMURAI.PointScript.Update*
+  commentId: Overload:SAMURAI.PointScript.Update
+  name: Update
+  nameWithType: PointScript.Update
+  fullName: SAMURAI.PointScript.Update
 - uid: SAMURAI.PointScript.GainPoint*
   commentId: Overload:SAMURAI.PointScript.GainPoint
   name: GainPoint

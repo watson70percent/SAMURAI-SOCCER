@@ -21,6 +21,7 @@ items:
   - SAMURAI.StagePrefabManager.refereeMaxAng
   - SAMURAI.StagePrefabManager.refereeMove
   - SAMURAI.StagePrefabManager.runningSpeed
+  - SAMURAI.StagePrefabManager.Start
   - SAMURAI.StagePrefabManager.useObstacles
   langs:
   - csharp
@@ -508,6 +509,28 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.StagePrefabManager.Start
+  commentId: M:SAMURAI.StagePrefabManager.Start
+  id: Start
+  parent: SAMURAI.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StagePrefabManager.Start()
+  fullName: SAMURAI.StagePrefabManager.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\StagePrefabManager.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.StagePrefabManager.Start*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -533,7 +556,6 @@ references:
   nameWithType: Texture
   fullName: Texture
 - uid: Shader
-  commentId: '!:Shader'
   isExternal: true
   name: Shader
   nameWithType: Shader
@@ -660,3 +682,8 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
+- uid: SAMURAI.StagePrefabManager.Start*
+  commentId: Overload:SAMURAI.StagePrefabManager.Start
+  name: Start
+  nameWithType: StagePrefabManager.Start
+  fullName: SAMURAI.StagePrefabManager.Start
