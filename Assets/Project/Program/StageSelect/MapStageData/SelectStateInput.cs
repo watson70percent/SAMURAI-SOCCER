@@ -11,7 +11,7 @@ public class SelectStateInput : MonoBehaviour
     public StageSelectBGM bgm;
     private List<CinemachineVirtualCamera> _virtualCameras = new List<CinemachineVirtualCamera>();//StageSelectに使用するカメラ群
     private CinemachineBrain _cinemachineBrain;//メインカメラについているやつ
-    private WorldName _focusWorld;//今どのワールドを見ているのか
+    private WorldName _focusWorld = WorldName.WholeMap;//今どのワールドを見ているのか
 
     private bool _canTouchWorld = true;//ワールド移動可能かどうか
     public bool CanTouchWorld
