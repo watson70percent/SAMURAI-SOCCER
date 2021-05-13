@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 /// <summary>
 /// 各ステージの名前と順番
@@ -38,12 +39,13 @@ public class StageDataManager : MonoBehaviour
     private void Awake()
     {
         TargetObjects = GameObject.FindGameObjectsWithTag("TargetStage");
+        var TargetStageDataGroup = TargetObjects.Select(x => x.GetComponent<StageData>()).ToList();
         BaseStageData currentStageData = LoadStageData();
         int currentWorldCount = 0;
         //現在いるワールドのステージ数を検索
         for (int i = 0; i < TargetObjects.Length; i++)
         {
-            if (TargetObjects[i].GetComponent<StageData>().WorldName == currentStageData.WorldName)
+            if (TargetStageDataGroup[i].WorldName == currentStageData.WorldName)
             {
                 currentWorldCount++;
             }
@@ -51,25 +53,26 @@ public class StageDataManager : MonoBehaviour
         //条件によってステージの状態を設定
         for (int i = 0; i < TargetObjects.Length; i++)
         {
-            if (TargetObjects[i].GetComponent<StageData>().WorldName < currentStageData.WorldName)
+
+            if (TargetStageDataGroup[i].WorldName < currentStageData.WorldName)
             {
-                TargetObjects[i].GetComponent<StageData>().StageState = StageState.Cleared;
+                TargetStageDataGroup[i].StageState = StageState.Cleared;
             }
-            else if (TargetObjects[i].GetComponent<StageData>().WorldName == currentStageData.WorldName && (int)TargetObjects[i].GetComponent<StageData>().StageNumber <= currentStageData.StageNumber)
+            else if (TargetStageDataGroup[i].WorldName == currentStageData.WorldName && TargetStageDataGroup[i].StageNumber <= currentStageData.StageNumber)
             {
-                TargetObjects[i].GetComponent<StageData>().StageState = StageState.Cleared;
+                TargetStageDataGroup[i].StageState = StageState.Cleared;
             }
-            else if (TargetObjects[i].GetComponent<StageData>().WorldName == currentStageData.WorldName && (int)TargetObjects[i].GetComponent<StageData>().StageNumber == currentStageData.StageNumber + 1)
+            else if (TargetStageDataGroup[i].WorldName == currentStageData.WorldName && TargetStageDataGroup[i].StageNumber == currentStageData.StageNumber + 1)
             {
-                TargetObjects[i].GetComponent<StageData>().StageState = StageState.Playable;
+                TargetStageDataGroup[i].StageState = StageState.Playable;
             }
-            else if (currentStageData.StageNumber == currentWorldCount - 1 && TargetObjects[i].GetComponent<StageData>().WorldName == currentStageData.WorldName + 1 && (int)TargetObjects[i].GetComponent<StageData>().StageNumber == 0)
+            else if (currentStageData.StageNumber == currentWorldCount - 1 && TargetStageDataGroup[i].WorldName == currentStageData.WorldName + 1 && TargetStageDataGroup[i].StageNumber == 0)
             {
-                TargetObjects[i].GetComponent<StageData>().StageState = StageState.Playable;
+                TargetStageDataGroup[i].StageState = StageState.Playable;
             }
             else
             {
-                TargetObjects[i].GetComponent<StageData>().StageState = StageState.NotPlayable;
+                TargetStageDataGroup[i].StageState = StageState.NotPlayable;
             }
         }
     }
