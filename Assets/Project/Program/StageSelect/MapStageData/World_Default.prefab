@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 317358285869326328}
   - component: {fileID: 1568917437769434268}
   - component: {fileID: 4056347173007167717}
-  - component: {fileID: 7440926725280441665}
+  - component: {fileID: 6149052761540809753}
   m_Layer: 0
   m_Name: Stage2
   m_TagString: TargetStage
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522901510037949693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.15, y: 4.03, z: 99}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.15, y: 4, z: 99}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 7834140883403755771}
   m_Father: {fileID: 7355159684546736821}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c5f0437f5ebf6249bb03016b81a9d5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 807f86cb652cbf948bf7193d87546805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,11 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6b046b9f7e74531b0c57b32c481110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preview: {fileID: 7834140883403755751}
-  stageSelectMng: {fileID: 1402496259957483356}
-  indexOfButton: 0
---- !u!65 &7440926725280441665
-BoxCollider:
+  Preview: {fileID: 7834140882578909943}
+  StageSelectMng: {fileID: 1402496259957483356}
+  IndexOfButton: 0
+  SpriteRenderer: {fileID: 317358285869326328}
+  MonoImage: {fileID: 21300000, guid: 807f86cb652cbf948bf7193d87546805, type: 3}
+--- !u!135 &6149052761540809753
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,7 +128,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 1}
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6879106903463018435
 GameObject:
@@ -140,7 +142,7 @@ GameObject:
   - component: {fileID: 6194268848666242153}
   - component: {fileID: 6884420424408267227}
   - component: {fileID: 1918176713130563499}
-  - component: {fileID: 5187713291221648407}
+  - component: {fileID: 2422656084945266178}
   m_Layer: 0
   m_Name: Stage3
   m_TagString: TargetStage
@@ -156,8 +158,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6879106903463018435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.35, y: 6.25, z: 99}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 18, y: 6.5, z: 99}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 7986127359883581527}
   m_Father: {fileID: 7355159684546736821}
@@ -202,7 +204,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c5f0437f5ebf6249bb03016b81a9d5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 807f86cb652cbf948bf7193d87546805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -240,11 +242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6b046b9f7e74531b0c57b32c481110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preview: {fileID: 7986127359883581515}
-  stageSelectMng: {fileID: 1232495150598631408}
-  indexOfButton: 0
---- !u!65 &5187713291221648407
-BoxCollider:
+  Preview: {fileID: 7986127361768546907}
+  StageSelectMng: {fileID: 1232495150598631408}
+  IndexOfButton: 0
+  SpriteRenderer: {fileID: 6194268848666242153}
+  MonoImage: {fileID: 21300000, guid: 807f86cb652cbf948bf7193d87546805, type: 3}
+--- !u!135 &2422656084945266178
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -254,7 +258,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 1}
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7355159684546736819
 GameObject:
@@ -484,7 +488,7 @@ GameObject:
   - component: {fileID: 2696696452674507454}
   - component: {fileID: 2750262733788514220}
   - component: {fileID: 5431986810372127094}
-  - component: {fileID: 1117550346418366269}
+  - component: {fileID: 8240512945904766168}
   m_Layer: 0
   m_Name: Stage1
   m_TagString: TargetStage
@@ -500,8 +504,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8245613482412832833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 99}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5, y: 1, z: 99}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 2491528358048174299}
   m_Father: {fileID: 7355159684546736821}
@@ -546,7 +550,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c5f0437f5ebf6249bb03016b81a9d5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 807f86cb652cbf948bf7193d87546805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -584,11 +588,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6b046b9f7e74531b0c57b32c481110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preview: {fileID: 2491528358048174279}
-  stageSelectMng: {fileID: 6727657242259564412}
-  indexOfButton: 0
---- !u!65 &1117550346418366269
-BoxCollider:
+  Preview: {fileID: 2491528357768358615}
+  StageSelectMng: {fileID: 6727657242259564412}
+  IndexOfButton: 0
+  SpriteRenderer: {fileID: 2696696452674507454}
+  MonoImage: {fileID: 21300000, guid: 807f86cb652cbf948bf7193d87546805, type: 3}
+--- !u!135 &8240512945904766168
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -598,7 +604,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 1}
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4324078809026653225
 PrefabInstance:
@@ -724,15 +730,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69cbf7c134a8f4200b9974d9f340b59d, type: 3}
---- !u!1 &7834140883403755751 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5817035965670538446, guid: 69cbf7c134a8f4200b9974d9f340b59d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4324078809026653225}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7834140883403755771 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5817035965670538450, guid: 69cbf7c134a8f4200b9974d9f340b59d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4324078809026653225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7834140882578909943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817035967536088798, guid: 69cbf7c134a8f4200b9974d9f340b59d,
     type: 3}
   m_PrefabInstance: {fileID: 4324078809026653225}
   m_PrefabAsset: {fileID: 0}
@@ -872,15 +878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69cbf7c134a8f4200b9974d9f340b59d, type: 3}
---- !u!1 &7986127359883581515 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5817035965670538446, guid: 69cbf7c134a8f4200b9974d9f340b59d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4498585723545658501}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7986127359883581527 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5817035965670538450, guid: 69cbf7c134a8f4200b9974d9f340b59d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4498585723545658501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7986127361768546907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817035967536088798, guid: 69cbf7c134a8f4200b9974d9f340b59d,
     type: 3}
   m_PrefabInstance: {fileID: 4498585723545658501}
   m_PrefabAsset: {fileID: 0}
@@ -1032,15 +1038,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3729ce34ce1f40cdbc576b1cfecd02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &2491528358048174299 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5817035965670538450, guid: 69cbf7c134a8f4200b9974d9f340b59d,
+--- !u!1 &2491528357768358615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817035967536088798, guid: 69cbf7c134a8f4200b9974d9f340b59d,
     type: 3}
   m_PrefabInstance: {fileID: 8226366449022708745}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2491528358048174279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5817035965670538446, guid: 69cbf7c134a8f4200b9974d9f340b59d,
+--- !u!224 &2491528358048174299 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5817035965670538450, guid: 69cbf7c134a8f4200b9974d9f340b59d,
     type: 3}
   m_PrefabInstance: {fileID: 8226366449022708745}
   m_PrefabAsset: {fileID: 0}

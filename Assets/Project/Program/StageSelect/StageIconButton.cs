@@ -8,13 +8,15 @@ public class StageIconButton : MonoBehaviour
 {
     string stageName;
     string stageSummary;
-    public GameObject preview;
-    public StageSelectManager stageSelectMng;
+    public GameObject Preview;
+    public StageSelectManager StageSelectMng;
     Sprite stImage;
     SceneObject gameScene;
-    public int indexOfButton;
+    public int IndexOfButton;
 
     private StageData _stageData;
+    public SpriteRenderer SpriteRenderer;
+    public Sprite MonoImage;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +24,13 @@ public class StageIconButton : MonoBehaviour
         _stageData = GetComponent<StageData>();
         if (_stageData.StageState == StageState.NotPlayable)
         {
-            _stageData.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.5f);
+            SpriteRenderer.sprite = MonoImage;
         }
     }
 
     private void DataSet()
     {
-        (string stName, string summary, Sprite stagePreview, SceneObject scene) buttonData = stageSelectMng.ButtonDataSet(indexOfButton);
+        (string stName, string summary, Sprite stagePreview, SceneObject scene) buttonData = StageSelectMng.ButtonDataSet(IndexOfButton);
         stageName = buttonData.stName;
         stageSummary = buttonData.summary;
         stImage = buttonData.stagePreview;
@@ -39,7 +41,7 @@ public class StageIconButton : MonoBehaviour
     {
         DataSet();
         BaseStageData basestageData = GetComponent<StageData>().ToBaseStageData();
-        stageSelectMng.previewState(stageName, stageSummary, stImage, gameScene,basestageData);
+        StageSelectMng.previewState(stageName, stageSummary, stImage, gameScene,basestageData);
 
     }
 }
