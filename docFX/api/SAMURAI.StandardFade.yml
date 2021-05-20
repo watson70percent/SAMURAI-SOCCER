@@ -7,6 +7,7 @@ items:
   children:
   - SAMURAI.StandardFade.FadeIn(TMPro.TextMeshProUGUI,System.Int32)
   - SAMURAI.StandardFade.FadeOut(TMPro.TextMeshProUGUI,System.Int32)
+  - SAMURAI.StandardFade.SetColor(TMPro.TextMeshProUGUI,System.Single)
   langs:
   - csharp
   - vb
@@ -114,6 +115,41 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: SAMURAI.StandardFade.SetColor(TMPro.TextMeshProUGUI,System.Single)
+  commentId: M:SAMURAI.StandardFade.SetColor(TMPro.TextMeshProUGUI,System.Single)
+  id: SetColor(TMPro.TextMeshProUGUI,System.Single)
+  parent: SAMURAI.StandardFade
+  langs:
+  - csharp
+  - vb
+  name: SetColor(TextMeshProUGUI, Single)
+  nameWithType: StandardFade.SetColor(TextMeshProUGUI, Single)
+  fullName: SAMURAI.StandardFade.SetColor(TMPro.TextMeshProUGUI, System.Single)
+  type: Method
+  source:
+    id: SetColor
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\StandardFade.cs
+    startLine: 57
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  summary: "\ncolorのα値をセットする\n"
+  example: []
+  syntax:
+    content: static void SetColor(TextMeshProUGUI text, float alpha)
+    parameters:
+    - id: text
+      type: TMPro.TextMeshProUGUI
+      description: ''
+    - id: alpha
+      type: System.Single
+      description: ''
+    content.vb: Shared Sub SetColor(text As TextMeshProUGUI, alpha As Single)
+  overload: SAMURAI.StandardFade.SetColor*
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -176,3 +212,15 @@ references:
   name: FadeOut
   nameWithType: StandardFade.FadeOut
   fullName: SAMURAI.StandardFade.FadeOut
+- uid: SAMURAI.StandardFade.SetColor*
+  commentId: Overload:SAMURAI.StandardFade.SetColor
+  name: SetColor
+  nameWithType: StandardFade.SetColor
+  fullName: SAMURAI.StandardFade.SetColor
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

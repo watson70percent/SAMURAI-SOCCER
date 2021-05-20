@@ -5,7 +5,19 @@ items:
   id: SkinnedMeshCut
   parent: SAMURAI
   children:
+  - SAMURAI.SkinnedMeshCut._backMeshData
+  - SAMURAI.SkinnedMeshCut._convertedVertices
+  - SAMURAI.SkinnedMeshCut._frontMeshData
+  - SAMURAI.SkinnedMeshCut._isFront
+  - SAMURAI.SkinnedMeshCut._slashPlane
+  - SAMURAI.SkinnedMeshCut._targetBindPoses
+  - SAMURAI.SkinnedMeshCut._targetBoneWeights
+  - SAMURAI.SkinnedMeshCut._targetMesh
+  - SAMURAI.SkinnedMeshCut._targetNormals
+  - SAMURAI.SkinnedMeshCut._targetUVs
+  - SAMURAI.SkinnedMeshCut._targetVertices
   - SAMURAI.SkinnedMeshCut.CutMesh(SkinnedMeshRenderer,Vector3,Vector3)
+  - SAMURAI.SkinnedMeshCut.Sepalate(System.Boolean[],System.Int32[],System.Int32)
   langs:
   - csharp
   - vb
@@ -33,6 +45,303 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.SkinnedMeshCut._targetMesh
+  commentId: F:SAMURAI.SkinnedMeshCut._targetMesh
+  id: _targetMesh
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetMesh
+  nameWithType: SkinnedMeshCut._targetMesh
+  fullName: SAMURAI.SkinnedMeshCut._targetMesh
+  type: Field
+  source:
+    id: _targetMesh
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Mesh _targetMesh
+    return:
+      type: Mesh
+    content.vb: Shared _targetMesh As Mesh
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._targetVertices
+  commentId: F:SAMURAI.SkinnedMeshCut._targetVertices
+  id: _targetVertices
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetVertices
+  nameWithType: SkinnedMeshCut._targetVertices
+  fullName: SAMURAI.SkinnedMeshCut._targetVertices
+  type: Field
+  source:
+    id: _targetVertices
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Vector3[] _targetVertices
+    return:
+      type: Vector3[]
+    content.vb: Shared _targetVertices As Vector3()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._convertedVertices
+  commentId: F:SAMURAI.SkinnedMeshCut._convertedVertices
+  id: _convertedVertices
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _convertedVertices
+  nameWithType: SkinnedMeshCut._convertedVertices
+  fullName: SAMURAI.SkinnedMeshCut._convertedVertices
+  type: Field
+  source:
+    id: _convertedVertices
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Vector3[] _convertedVertices
+    return:
+      type: Vector3[]
+    content.vb: Shared _convertedVertices As Vector3()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._targetNormals
+  commentId: F:SAMURAI.SkinnedMeshCut._targetNormals
+  id: _targetNormals
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetNormals
+  nameWithType: SkinnedMeshCut._targetNormals
+  fullName: SAMURAI.SkinnedMeshCut._targetNormals
+  type: Field
+  source:
+    id: _targetNormals
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Vector3[] _targetNormals
+    return:
+      type: Vector3[]
+    content.vb: Shared _targetNormals As Vector3()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._targetUVs
+  commentId: F:SAMURAI.SkinnedMeshCut._targetUVs
+  id: _targetUVs
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetUVs
+  nameWithType: SkinnedMeshCut._targetUVs
+  fullName: SAMURAI.SkinnedMeshCut._targetUVs
+  type: Field
+  source:
+    id: _targetUVs
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Vector2[] _targetUVs
+    return:
+      type: Vector2[]
+    content.vb: Shared _targetUVs As Vector2()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._targetBoneWeights
+  commentId: F:SAMURAI.SkinnedMeshCut._targetBoneWeights
+  id: _targetBoneWeights
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetBoneWeights
+  nameWithType: SkinnedMeshCut._targetBoneWeights
+  fullName: SAMURAI.SkinnedMeshCut._targetBoneWeights
+  type: Field
+  source:
+    id: _targetBoneWeights
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static BoneWeight[] _targetBoneWeights
+    return:
+      type: BoneWeight[]
+    content.vb: Shared _targetBoneWeights As BoneWeight()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._targetBindPoses
+  commentId: F:SAMURAI.SkinnedMeshCut._targetBindPoses
+  id: _targetBindPoses
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetBindPoses
+  nameWithType: SkinnedMeshCut._targetBindPoses
+  fullName: SAMURAI.SkinnedMeshCut._targetBindPoses
+  type: Field
+  source:
+    id: _targetBindPoses
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Matrix4x4[] _targetBindPoses
+    return:
+      type: Matrix4x4[]
+    content.vb: Shared _targetBindPoses As Matrix4x4()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._frontMeshData
+  commentId: F:SAMURAI.SkinnedMeshCut._frontMeshData
+  id: _frontMeshData
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _frontMeshData
+  nameWithType: SkinnedMeshCut._frontMeshData
+  fullName: SAMURAI.SkinnedMeshCut._frontMeshData
+  type: Field
+  source:
+    id: _frontMeshData
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static SkinnedMeshCut.MeshData _frontMeshData
+    return:
+      type: SAMURAI.SkinnedMeshCut.MeshData
+    content.vb: Shared _frontMeshData As SkinnedMeshCut.MeshData
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._backMeshData
+  commentId: F:SAMURAI.SkinnedMeshCut._backMeshData
+  id: _backMeshData
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _backMeshData
+  nameWithType: SkinnedMeshCut._backMeshData
+  fullName: SAMURAI.SkinnedMeshCut._backMeshData
+  type: Field
+  source:
+    id: _backMeshData
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static SkinnedMeshCut.MeshData _backMeshData
+    return:
+      type: SAMURAI.SkinnedMeshCut.MeshData
+    content.vb: Shared _backMeshData As SkinnedMeshCut.MeshData
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._slashPlane
+  commentId: F:SAMURAI.SkinnedMeshCut._slashPlane
+  id: _slashPlane
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _slashPlane
+  nameWithType: SkinnedMeshCut._slashPlane
+  fullName: SAMURAI.SkinnedMeshCut._slashPlane
+  type: Field
+  source:
+    id: _slashPlane
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static Plane _slashPlane
+    return:
+      type: Plane
+    content.vb: Shared _slashPlane As Plane
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+- uid: SAMURAI.SkinnedMeshCut._isFront
+  commentId: F:SAMURAI.SkinnedMeshCut._isFront
+  id: _isFront
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: _isFront
+  nameWithType: SkinnedMeshCut._isFront
+  fullName: SAMURAI.SkinnedMeshCut._isFront
+  type: Field
+  source:
+    id: _isFront
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static bool[] _isFront
+    return:
+      type: System.Boolean[]
+    content.vb: Shared _isFront As Boolean()
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
 - uid: SAMURAI.SkinnedMeshCut.CutMesh(SkinnedMeshRenderer,Vector3,Vector3)
   commentId: M:SAMURAI.SkinnedMeshCut.CutMesh(SkinnedMeshRenderer,Vector3,Vector3)
   id: CutMesh(SkinnedMeshRenderer,Vector3,Vector3)
@@ -76,6 +385,42 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: SAMURAI.SkinnedMeshCut.Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  commentId: M:SAMURAI.SkinnedMeshCut.Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  id: Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  parent: SAMURAI.SkinnedMeshCut
+  langs:
+  - csharp
+  - vb
+  name: Sepalate(Boolean[], Int32[], Int32)
+  nameWithType: SkinnedMeshCut.Sepalate(Boolean[], Int32[], Int32)
+  fullName: SAMURAI.SkinnedMeshCut.Sepalate(System.Boolean[], System.Int32[], System.Int32)
+  type: Method
+  source:
+    id: Sepalate
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\MeshCut\SkinnedMeshCut.cs
+    startLine: 164
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: static void Sepalate(bool[] sides, int[] vertexIndices, int submesh)
+    parameters:
+    - id: sides
+      type: System.Boolean[]
+    - id: vertexIndices
+      type: System.Int32[]
+    - id: submesh
+      type: System.Int32
+    content.vb: Shared Sub Sepalate(sides As Boolean(), vertexIndices As Integer(), submesh As Integer)
+  overload: SAMURAI.SkinnedMeshCut.Sepalate*
+  nameWithType.vb: SkinnedMeshCut.Sepalate(Boolean(), Int32(), Int32)
+  modifiers.csharp:
+  - static
+  modifiers.vb:
+  - Shared
+  fullName.vb: SAMURAI.SkinnedMeshCut.Sepalate(System.Boolean(), System.Int32(), System.Int32)
+  name.vb: Sepalate(Boolean(), Int32(), Int32)
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -95,13 +440,158 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Mesh
+  isExternal: true
+  name: Mesh
+  nameWithType: Mesh
+  fullName: Mesh
+- uid: Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: BoneWeight[]
+  isExternal: true
+  name: BoneWeight[]
+  nameWithType: BoneWeight[]
+  fullName: BoneWeight[]
+  nameWithType.vb: BoneWeight()
+  fullName.vb: BoneWeight()
+  name.vb: BoneWeight()
+  spec.csharp:
+  - uid: BoneWeight
+    name: BoneWeight
+    nameWithType: BoneWeight
+    fullName: BoneWeight
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: BoneWeight
+    name: BoneWeight
+    nameWithType: BoneWeight
+    fullName: BoneWeight
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Matrix4x4[]
+  isExternal: true
+  name: Matrix4x4[]
+  nameWithType: Matrix4x4[]
+  fullName: Matrix4x4[]
+  nameWithType.vb: Matrix4x4()
+  fullName.vb: Matrix4x4()
+  name.vb: Matrix4x4()
+  spec.csharp:
+  - uid: Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Matrix4x4
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Matrix4x4
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SAMURAI.SkinnedMeshCut.MeshData
+  commentId: T:SAMURAI.SkinnedMeshCut.MeshData
+  parent: SAMURAI
+  name: SkinnedMeshCut.MeshData
+  nameWithType: SkinnedMeshCut.MeshData
+  fullName: SAMURAI.SkinnedMeshCut.MeshData
+- uid: Plane
+  isExternal: true
+  name: Plane
+  nameWithType: Plane
+  fullName: Plane
+- uid: System.Boolean[]
+  isExternal: true
+  name: Boolean[]
+  nameWithType: Boolean[]
+  fullName: System.Boolean[]
+  nameWithType.vb: Boolean()
+  fullName.vb: System.Boolean()
+  name.vb: Boolean()
+  spec.csharp:
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: SAMURAI.SkinnedMeshCut.CutMesh*
   commentId: Overload:SAMURAI.SkinnedMeshCut.CutMesh
   name: CutMesh
   nameWithType: SkinnedMeshCut.CutMesh
   fullName: SAMURAI.SkinnedMeshCut.CutMesh
 - uid: SkinnedMeshRenderer
-  commentId: '!:SkinnedMeshRenderer'
   isExternal: true
   name: SkinnedMeshRenderer
   nameWithType: SkinnedMeshRenderer
@@ -137,3 +627,41 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: SAMURAI.SkinnedMeshCut.Sepalate*
+  commentId: Overload:SAMURAI.SkinnedMeshCut.Sepalate
+  name: Sepalate
+  nameWithType: SkinnedMeshCut.Sepalate
+  fullName: SAMURAI.SkinnedMeshCut.Sepalate
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

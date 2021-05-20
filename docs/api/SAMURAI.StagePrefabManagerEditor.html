@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StagePrefabManagerEditor
    ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,16 +88,466 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StagePrefabManagerEditor</span></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.ScriptableObject</span></div>
+    <div class="level3"><span class="xref">UnityEditor.Editor</span></div>
+    <div class="level4"><span class="xref">StagePrefabManagerEditor</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEditor.IPreviewable</span></div>
+    <div><span class="xref">UnityEditor.IToolModeOwner</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">UnityEditor.Editor.HasLargeHeader()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[], UnityEngine.Object, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[], UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object, UnityEngine.Object, System.Type, UnityEditor.Editor)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[], UnityEngine.Object, System.Type, UnityEditor.Editor)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object, System.Type, UnityEditor.Editor)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[], System.Type, UnityEditor.Editor)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateEditor(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateEditor(UnityEngine.Object, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateEditor(UnityEngine.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateEditor(UnityEngine.Object[], System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.GetSerializedObjectInternal()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.UnityEditor.IToolModeOwner.GetWorldBoundsOfTargets()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.UnityEditor.IToolModeOwner.ModeSurvivesSelectionChange(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnForceReloadInspector()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.GetOptimizedGUIBlock(System.Boolean, System.Boolean, System.Single)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject, System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.DrawDefaultInspector()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.Repaint()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.CreateInspectorGUI()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.RequiresConstantRepaint()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.DrawHeader()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnHeaderGUI()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnHeaderControlsGUI()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.ShouldHideOpenButton()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object, UnityEditor.Editor)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.HasPreviewGUI()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.GetPreviewTitle()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.RenderStaticPreview(System.String, UnityEngine.Object[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect, UnityEngine.GUIStyle)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect, UnityEngine.GUIStyle)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnPreviewSettings()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.GetInfoString()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.DrawPreview(UnityEngine.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.ReloadPreviewInstances()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.IsEnabled()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.UseDefaultMargins()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.Initialize(UnityEngine.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.MoveNextTarget()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.ResetTarget()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.OnAssetStoreInspectorGUI()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.UnityEditor.IToolModeOwner.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.preview</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.UnityEditor.IToolModeOwner.areToolModesAvailable</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.target</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.targets</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.referenceTargetIndex</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.targetTitle</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.serializedObject</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Editor.finishedDefaultHeaderGUI</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.ScriptableObject.SetDirty()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.ScriptableObject.CreateInstance(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.ScriptableObject.CreateInstance(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.ScriptableObject.CreateInstance&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Vector3, UnityEngine.Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Transform)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Transform)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Transform, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Vector3, UnityEngine.Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Transform)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Transform)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Transform, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Destroy(UnityEngine.Object, System.Single)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.Destroy(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.DestroyImmediate(UnityEngine.Object, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.DestroyImmediate(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.DestroyObject(UnityEngine.Object, System.Single)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.DestroyObject(UnityEngine.Object)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindSceneObjectsOfType(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectsOfTypeIncludingAssets(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectsOfTypeAll(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectOfType(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.name</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.hideFlags</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SAMURAI.html">SAMURAI</a></h6>
   <h6><strong>Assembly</strong>: Assembly-CSharp-Editor.dll</h6>
   <h5 id="SAMURAI_StagePrefabManagerEditor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StagePrefabManagerEditor : Editor</code></pre>
+    <pre><code class="lang-csharp hljs">[CustomEditor(typeof(StagePrefabManager))]
+public class StagePrefabManagerEditor : Editor, IPreviewable, IToolModeOwner</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="SAMURAI_StagePrefabManagerEditor__isOpen" data-uid="SAMURAI.StagePrefabManagerEditor._isOpen">_isOpen</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool _isOpen</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_StagePrefabManagerEditor__num" data-uid="SAMURAI.StagePrefabManagerEditor._num">_num</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int _num</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_StagePrefabManagerEditor__target" data-uid="SAMURAI.StagePrefabManagerEditor._target">_target</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">StagePrefabManager _target</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SAMURAI.StagePrefabManager.html">StagePrefabManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_StagePrefabManagerEditor__textures" data-uid="SAMURAI.StagePrefabManagerEditor._textures">_textures</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Texture[] _textures</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Texture</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_StagePrefabManagerEditor_crowd" data-uid="SAMURAI.StagePrefabManagerEditor.crowd">crowd</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool crowd</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SAMURAI_StagePrefabManagerEditor_useNormalMap" data-uid="SAMURAI.StagePrefabManagerEditor.useNormalMap">useNormalMap</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool useNormalMap</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="SAMURAI_StagePrefabManagerEditor_Awake_" data-uid="SAMURAI.StagePrefabManagerEditor.Awake*"></a>
+  <h4 id="SAMURAI_StagePrefabManagerEditor_Awake" data-uid="SAMURAI.StagePrefabManagerEditor.Awake">Awake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Awake()</code></pre>
+  </div>
   
   
   <a id="SAMURAI_StagePrefabManagerEditor_OnInspectorGUI_" data-uid="SAMURAI.StagePrefabManagerEditor.OnInspectorGUI*"></a>
@@ -107,6 +557,15 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEditor.Editor.OnInspectorGUI()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEditor.IPreviewable</span>
+  </div>
+  <div>
+      <span class="xref">UnityEditor.IToolModeOwner</span>
   </div>
 </article>
           </div>

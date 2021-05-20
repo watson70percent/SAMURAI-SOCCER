@@ -5,13 +5,19 @@ items:
   id: PauseButtonScript
   parent: SAMURAI
   children:
+  - SAMURAI.PauseButtonScript.Awake
+  - SAMURAI.PauseButtonScript.button
+  - SAMURAI.PauseButtonScript.end
   - SAMURAI.PauseButtonScript.gameManager
+  - SAMURAI.PauseButtonScript.judgeGameEnd
   - SAMURAI.PauseButtonScript.OnClick
   - SAMURAI.PauseButtonScript.Pause
   - SAMURAI.PauseButtonScript.PauseButton(SAMURAI.StateChangedArg)
   - SAMURAI.PauseButtonScript.playing
   - SAMURAI.PauseButtonScript.Playing
   - SAMURAI.PauseButtonScript.Reset
+  - SAMURAI.PauseButtonScript.Start
+  - SAMURAI.PauseButtonScript.Update
   langs:
   - csharp
   - vb
@@ -66,6 +72,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.PauseButtonScript.end
+  commentId: F:SAMURAI.PauseButtonScript.end
+  id: end
+  parent: SAMURAI.PauseButtonScript
+  langs:
+  - csharp
+  - vb
+  name: end
+  nameWithType: PauseButtonScript.end
+  fullName: SAMURAI.PauseButtonScript.end
+  type: Field
+  source:
+    id: end
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\PauseButtonScript.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool end
+    return:
+      type: System.Boolean
+    content.vb: end As Boolean
 - uid: SAMURAI.PauseButtonScript.gameManager
   commentId: F:SAMURAI.PauseButtonScript.gameManager
   id: gameManager
@@ -93,6 +122,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.PauseButtonScript.judgeGameEnd
+  commentId: F:SAMURAI.PauseButtonScript.judgeGameEnd
+  id: judgeGameEnd
+  parent: SAMURAI.PauseButtonScript
+  langs:
+  - csharp
+  - vb
+  name: judgeGameEnd
+  nameWithType: PauseButtonScript.judgeGameEnd
+  fullName: SAMURAI.PauseButtonScript.judgeGameEnd
+  type: Field
+  source:
+    id: judgeGameEnd
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\PauseButtonScript.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: JudgeGameEnd judgeGameEnd
+    return:
+      type: SAMURAI.JudgeGameEnd
+    content.vb: judgeGameEnd As JudgeGameEnd
+- uid: SAMURAI.PauseButtonScript.button
+  commentId: F:SAMURAI.PauseButtonScript.button
+  id: button
+  parent: SAMURAI.PauseButtonScript
+  langs:
+  - csharp
+  - vb
+  name: button
+  nameWithType: PauseButtonScript.button
+  fullName: SAMURAI.PauseButtonScript.button
+  type: Field
+  source:
+    id: button
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\PauseButtonScript.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Button button
+    return:
+      type: Button
+    content.vb: button As Button
 - uid: SAMURAI.PauseButtonScript.PauseButton(SAMURAI.StateChangedArg)
   commentId: M:SAMURAI.PauseButtonScript.PauseButton(SAMURAI.StateChangedArg)
   id: PauseButton(SAMURAI.StateChangedArg)
@@ -122,6 +197,28 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.PauseButtonScript.Awake
+  commentId: M:SAMURAI.PauseButtonScript.Awake
+  id: Awake
+  parent: SAMURAI.PauseButtonScript
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: PauseButtonScript.Awake()
+  fullName: SAMURAI.PauseButtonScript.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\PauseButtonScript.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Awake()
+    content.vb: Sub Awake
+  overload: SAMURAI.PauseButtonScript.Awake*
 - uid: SAMURAI.PauseButtonScript.OnClick
   commentId: M:SAMURAI.PauseButtonScript.OnClick
   id: OnClick
@@ -226,6 +323,50 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.PauseButtonScript.Start
+  commentId: M:SAMURAI.PauseButtonScript.Start
+  id: Start
+  parent: SAMURAI.PauseButtonScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PauseButtonScript.Start()
+  fullName: SAMURAI.PauseButtonScript.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\PauseButtonScript.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.PauseButtonScript.Start*
+- uid: SAMURAI.PauseButtonScript.Update
+  commentId: M:SAMURAI.PauseButtonScript.Update
+  id: Update
+  parent: SAMURAI.PauseButtonScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: PauseButtonScript.Update()
+  fullName: SAMURAI.PauseButtonScript.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\PauseButtonScript.cs
+    startLine: 64
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.PauseButtonScript.Update*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -258,6 +399,17 @@ references:
   name: GameManager
   nameWithType: GameManager
   fullName: SAMURAI.GameManager
+- uid: SAMURAI.JudgeGameEnd
+  commentId: T:SAMURAI.JudgeGameEnd
+  parent: SAMURAI
+  name: JudgeGameEnd
+  nameWithType: JudgeGameEnd
+  fullName: SAMURAI.JudgeGameEnd
+- uid: Button
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: Button
 - uid: SAMURAI.PauseButtonScript.PauseButton*
   commentId: Overload:SAMURAI.PauseButtonScript.PauseButton
   name: PauseButton
@@ -269,6 +421,11 @@ references:
   name: StateChangedArg
   nameWithType: StateChangedArg
   fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.PauseButtonScript.Awake*
+  commentId: Overload:SAMURAI.PauseButtonScript.Awake
+  name: Awake
+  nameWithType: PauseButtonScript.Awake
+  fullName: SAMURAI.PauseButtonScript.Awake
 - uid: SAMURAI.PauseButtonScript.OnClick*
   commentId: Overload:SAMURAI.PauseButtonScript.OnClick
   name: OnClick
@@ -289,3 +446,13 @@ references:
   name: Reset
   nameWithType: PauseButtonScript.Reset
   fullName: SAMURAI.PauseButtonScript.Reset
+- uid: SAMURAI.PauseButtonScript.Start*
+  commentId: Overload:SAMURAI.PauseButtonScript.Start
+  name: Start
+  nameWithType: PauseButtonScript.Start
+  fullName: SAMURAI.PauseButtonScript.Start
+- uid: SAMURAI.PauseButtonScript.Update*
+  commentId: Overload:SAMURAI.PauseButtonScript.Update
+  name: Update
+  nameWithType: PauseButtonScript.Update
+  fullName: SAMURAI.PauseButtonScript.Update

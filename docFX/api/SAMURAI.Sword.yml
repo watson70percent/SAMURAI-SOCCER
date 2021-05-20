@@ -4,7 +4,10 @@ items:
   commentId: T:SAMURAI.Sword
   id: Sword
   parent: SAMURAI
-  children: []
+  children:
+  - SAMURAI.Sword.OnTriggerEnter(Collider)
+  - SAMURAI.Sword.Start
+  - SAMURAI.Sword.Update
   langs:
   - csharp
   - vb
@@ -32,6 +35,75 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.Sword.Start
+  commentId: M:SAMURAI.Sword.Start
+  id: Start
+  parent: SAMURAI.Sword
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Sword.Start()
+  fullName: SAMURAI.Sword.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\Sword.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.Sword.Start*
+- uid: SAMURAI.Sword.Update
+  commentId: M:SAMURAI.Sword.Update
+  id: Update
+  parent: SAMURAI.Sword
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Sword.Update()
+  fullName: SAMURAI.Sword.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\Sword.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.Sword.Update*
+- uid: SAMURAI.Sword.OnTriggerEnter(Collider)
+  commentId: M:SAMURAI.Sword.OnTriggerEnter(Collider)
+  id: OnTriggerEnter(Collider)
+  parent: SAMURAI.Sword
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: Sword.OnTriggerEnter(Collider)
+  fullName: SAMURAI.Sword.OnTriggerEnter(Collider)
+  type: Method
+  source:
+    id: OnTriggerEnter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Animation\Sword.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: Collider
+    content.vb: Sub OnTriggerEnter(other As Collider)
+  overload: SAMURAI.Sword.OnTriggerEnter*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -51,3 +123,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.Sword.Start*
+  commentId: Overload:SAMURAI.Sword.Start
+  name: Start
+  nameWithType: Sword.Start
+  fullName: SAMURAI.Sword.Start
+- uid: SAMURAI.Sword.Update*
+  commentId: Overload:SAMURAI.Sword.Update
+  name: Update
+  nameWithType: Sword.Update
+  fullName: SAMURAI.Sword.Update
+- uid: SAMURAI.Sword.OnTriggerEnter*
+  commentId: Overload:SAMURAI.Sword.OnTriggerEnter
+  name: OnTriggerEnter
+  nameWithType: Sword.OnTriggerEnter
+  fullName: SAMURAI.Sword.OnTriggerEnter
+- uid: Collider
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: Collider

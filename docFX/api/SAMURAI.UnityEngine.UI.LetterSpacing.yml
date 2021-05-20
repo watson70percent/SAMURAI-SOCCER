@@ -6,9 +6,13 @@ items:
   parent: SAMURAI.UnityEngine.UI
   children:
   - SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
+  - SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)
+  - SAMURAI.UnityEngine.UI.LetterSpacing.m_spacing
   - SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh(VertexHelper)
   - SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UIVertex})
   - SAMURAI.UnityEngine.UI.LetterSpacing.spacing
+  - SAMURAI.UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  - SAMURAI.UnityEngine.UI.LetterSpacing.useRichText
   langs:
   - csharp
   - vb
@@ -36,6 +40,79 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  commentId: F:SAMURAI.UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  id: SupportedTagRegexPattersn
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: SupportedTagRegexPattersn
+  nameWithType: LetterSpacing.SupportedTagRegexPattersn
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  type: Field
+  source:
+    id: SupportedTagRegexPattersn
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 44
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: const string SupportedTagRegexPattersn = "<b>|</b>|<i>|</i>|<size=.*?>|</size>|<color=.*?>|</color>|<material=.*?>|</material>"
+    return:
+      type: System.String
+    content.vb: Const SupportedTagRegexPattersn As String = "<b>|</b>|<i>|</i>|<size=.*?>|</size>|<color=.*?>|</color>|<material=.*?>|</material>"
+  modifiers.csharp:
+  - const
+  modifiers.vb:
+  - Const
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.useRichText
+  commentId: F:SAMURAI.UnityEngine.UI.LetterSpacing.useRichText
+  id: useRichText
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: useRichText
+  nameWithType: LetterSpacing.useRichText
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.useRichText
+  type: Field
+  source:
+    id: useRichText
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: bool useRichText
+    return:
+      type: System.Boolean
+    content.vb: useRichText As Boolean
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.m_spacing
+  commentId: F:SAMURAI.UnityEngine.UI.LetterSpacing.m_spacing
+  id: m_spacing
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: m_spacing
+  nameWithType: LetterSpacing.m_spacing
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.m_spacing
+  type: Field
+  source:
+    id: m_spacing
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: float m_spacing
+    return:
+      type: System.Single
+    content.vb: m_spacing As Single
 - uid: SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
   commentId: M:SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
   id: '#ctor'
@@ -157,6 +234,38 @@ items:
   - Public
   fullName.vb: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List(Of UIVertex))
   name.vb: ModifyVertices(List(Of UIVertex))
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)
+  commentId: M:SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)
+  id: GetRegexMatchedTagCollection(System.String,System.Int32@)
+  parent: SAMURAI.UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: GetRegexMatchedTagCollection(String, out Int32)
+  nameWithType: LetterSpacing.GetRegexMatchedTagCollection(String, out Int32)
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String, out System.Int32)
+  type: Method
+  source:
+    id: GetRegexMatchedTagCollection
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\UIEffects\LetterSpacing.cs
+    startLine: 229
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI.UnityEngine.UI
+  syntax:
+    content: IEnumerator GetRegexMatchedTagCollection(string line, out int lineLengthWithoutTags)
+    parameters:
+    - id: line
+      type: System.String
+    - id: lineLengthWithoutTags
+      type: System.Int32
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function GetRegexMatchedTagCollection(line As String, ByRef lineLengthWithoutTags As Integer) As IEnumerator
+  overload: SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection*
+  nameWithType.vb: LetterSpacing.GetRegexMatchedTagCollection(String, ByRef Int32)
+  fullName.vb: SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String, ByRef System.Int32)
+  name.vb: GetRegexMatchedTagCollection(String, ByRef Int32)
 references:
 - uid: SAMURAI.UnityEngine.UI
   commentId: N:SAMURAI.UnityEngine.UI
@@ -176,6 +285,27 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: SAMURAI.UnityEngine.UI.LetterSpacing.#ctor*
   commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.#ctor
   name: LetterSpacing
@@ -186,13 +316,6 @@ references:
   name: spacing
   nameWithType: LetterSpacing.spacing
   fullName: SAMURAI.UnityEngine.UI.LetterSpacing.spacing
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
 - uid: SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh*
   commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.ModifyMesh
   name: ModifyMesh
@@ -298,3 +421,28 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection*
+  commentId: Overload:SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection
+  name: GetRegexMatchedTagCollection
+  nameWithType: LetterSpacing.GetRegexMatchedTagCollection
+  fullName: SAMURAI.UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

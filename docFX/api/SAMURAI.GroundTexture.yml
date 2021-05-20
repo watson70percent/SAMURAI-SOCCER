@@ -4,7 +4,10 @@ items:
   commentId: T:SAMURAI.GroundTexture
   id: GroundTexture
   parent: SAMURAI
-  children: []
+  children:
+  - SAMURAI.GroundTexture.groundNormalMap
+  - SAMURAI.GroundTexture.groundTexture
+  - SAMURAI.GroundTexture.Start
   langs:
   - csharp
   - vb
@@ -32,6 +35,74 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.GroundTexture.groundTexture
+  commentId: F:SAMURAI.GroundTexture.groundTexture
+  id: groundTexture
+  parent: SAMURAI.GroundTexture
+  langs:
+  - csharp
+  - vb
+  name: groundTexture
+  nameWithType: GroundTexture.groundTexture
+  fullName: SAMURAI.GroundTexture.groundTexture
+  type: Field
+  source:
+    id: groundTexture
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\GroundTexture.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Texture groundTexture
+    return:
+      type: Texture
+    content.vb: groundTexture As Texture
+- uid: SAMURAI.GroundTexture.groundNormalMap
+  commentId: F:SAMURAI.GroundTexture.groundNormalMap
+  id: groundNormalMap
+  parent: SAMURAI.GroundTexture
+  langs:
+  - csharp
+  - vb
+  name: groundNormalMap
+  nameWithType: GroundTexture.groundNormalMap
+  fullName: SAMURAI.GroundTexture.groundNormalMap
+  type: Field
+  source:
+    id: groundNormalMap
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\GroundTexture.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Texture groundNormalMap
+    return:
+      type: Texture
+    content.vb: groundNormalMap As Texture
+- uid: SAMURAI.GroundTexture.Start
+  commentId: M:SAMURAI.GroundTexture.Start
+  id: Start
+  parent: SAMURAI.GroundTexture
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GroundTexture.Start()
+  fullName: SAMURAI.GroundTexture.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\DefaultStage\GroundTexture.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.GroundTexture.Start*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -51,3 +122,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Texture
+  isExternal: true
+  name: Texture
+  nameWithType: Texture
+  fullName: Texture
+- uid: SAMURAI.GroundTexture.Start*
+  commentId: Overload:SAMURAI.GroundTexture.Start
+  name: Start
+  nameWithType: GroundTexture.Start
+  fullName: SAMURAI.GroundTexture.Start

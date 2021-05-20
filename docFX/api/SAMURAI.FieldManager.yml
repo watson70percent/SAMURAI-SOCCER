@@ -7,12 +7,20 @@ items:
   children:
   - SAMURAI.FieldManager.AdaptInversePosition(Vector3)
   - SAMURAI.FieldManager.AdaptPosition(Vector3)
+  - SAMURAI.FieldManager.Awake
   - SAMURAI.FieldManager.ball
+  - SAMURAI.FieldManager.ball_rb
+  - SAMURAI.FieldManager.FixedUpdate
   - SAMURAI.FieldManager.gm
   - SAMURAI.FieldManager.info
+  - SAMURAI.FieldManager.isPlaying
+  - SAMURAI.FieldManager.LoadField
   - SAMURAI.FieldManager.manager
   - SAMURAI.FieldManager.root
   - SAMURAI.FieldManager.rotation
+  - SAMURAI.FieldManager.StateChanged(SAMURAI.StateChangedArg)
+  - SAMURAI.FieldManager.Update
+  - SAMURAI.FieldManager.wind
   langs:
   - csharp
   - vb
@@ -187,6 +195,52 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.FieldManager.ball_rb
+  commentId: F:SAMURAI.FieldManager.ball_rb
+  id: ball_rb
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: ball_rb
+  nameWithType: FieldManager.ball_rb
+  fullName: SAMURAI.FieldManager.ball_rb
+  type: Field
+  source:
+    id: ball_rb
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Rigidbody ball_rb
+    return:
+      type: Rigidbody
+    content.vb: ball_rb As Rigidbody
+- uid: SAMURAI.FieldManager.wind
+  commentId: F:SAMURAI.FieldManager.wind
+  id: wind
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: wind
+  nameWithType: FieldManager.wind
+  fullName: SAMURAI.FieldManager.wind
+  type: Field
+  source:
+    id: wind
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: WindInfoBase wind
+    return:
+      type: SAMURAI.WindInfoBase
+    content.vb: wind As WindInfoBase
 - uid: SAMURAI.FieldManager.rotation
   commentId: F:SAMURAI.FieldManager.rotation
   id: rotation
@@ -214,6 +268,119 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.FieldManager.isPlaying
+  commentId: F:SAMURAI.FieldManager.isPlaying
+  id: isPlaying
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: isPlaying
+  nameWithType: FieldManager.isPlaying
+  fullName: SAMURAI.FieldManager.isPlaying
+  type: Field
+  source:
+    id: isPlaying
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool isPlaying
+    return:
+      type: System.Boolean
+    content.vb: isPlaying As Boolean
+- uid: SAMURAI.FieldManager.Awake
+  commentId: M:SAMURAI.FieldManager.Awake
+  id: Awake
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: FieldManager.Awake()
+  fullName: SAMURAI.FieldManager.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Awake()
+    content.vb: Sub Awake
+  overload: SAMURAI.FieldManager.Awake*
+- uid: SAMURAI.FieldManager.Update
+  commentId: M:SAMURAI.FieldManager.Update
+  id: Update
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: FieldManager.Update()
+  fullName: SAMURAI.FieldManager.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.FieldManager.Update*
+- uid: SAMURAI.FieldManager.FixedUpdate
+  commentId: M:SAMURAI.FieldManager.FixedUpdate
+  id: FixedUpdate
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: FixedUpdate()
+  nameWithType: FieldManager.FixedUpdate()
+  fullName: SAMURAI.FieldManager.FixedUpdate()
+  type: Method
+  source:
+    id: FixedUpdate
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void FixedUpdate()
+    content.vb: Sub FixedUpdate
+  overload: SAMURAI.FieldManager.FixedUpdate*
+- uid: SAMURAI.FieldManager.LoadField
+  commentId: M:SAMURAI.FieldManager.LoadField
+  id: LoadField
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: LoadField()
+  nameWithType: FieldManager.LoadField()
+  fullName: SAMURAI.FieldManager.LoadField()
+  type: Method
+  source:
+    id: LoadField
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 65
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator LoadField()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function LoadField As IEnumerator
+  overload: SAMURAI.FieldManager.LoadField*
 - uid: SAMURAI.FieldManager.AdaptPosition(Vector3)
   commentId: M:SAMURAI.FieldManager.AdaptPosition(Vector3)
   id: AdaptPosition(Vector3)
@@ -284,6 +451,31 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.FieldManager.StateChanged(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.FieldManager.StateChanged(SAMURAI.StateChangedArg)
+  id: StateChanged(SAMURAI.StateChangedArg)
+  parent: SAMURAI.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: StateChanged(StateChangedArg)
+  nameWithType: FieldManager.StateChanged(StateChangedArg)
+  fullName: SAMURAI.FieldManager.StateChanged(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: StateChanged
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\AITest\Scripts\FieldManager.cs
+    startLine: 109
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void StateChanged(StateChangedArg e)
+    parameters:
+    - id: e
+      type: SAMURAI.StateChangedArg
+    content.vb: Sub StateChanged(e As StateChangedArg)
+  overload: SAMURAI.FieldManager.StateChanged*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -326,12 +518,63 @@ references:
   name: GameManager
   nameWithType: GameManager
   fullName: SAMURAI.GameManager
+- uid: Rigidbody
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: Rigidbody
+- uid: SAMURAI.WindInfoBase
+  commentId: T:SAMURAI.WindInfoBase
+  parent: SAMURAI
+  name: WindInfoBase
+  nameWithType: WindInfoBase
+  fullName: SAMURAI.WindInfoBase
 - uid: SAMURAI.FieldRotationBase
   commentId: T:SAMURAI.FieldRotationBase
   parent: SAMURAI
   name: FieldRotationBase
   nameWithType: FieldRotationBase
   fullName: SAMURAI.FieldRotationBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SAMURAI.FieldManager.Awake*
+  commentId: Overload:SAMURAI.FieldManager.Awake
+  name: Awake
+  nameWithType: FieldManager.Awake
+  fullName: SAMURAI.FieldManager.Awake
+- uid: SAMURAI.FieldManager.Update*
+  commentId: Overload:SAMURAI.FieldManager.Update
+  name: Update
+  nameWithType: FieldManager.Update
+  fullName: SAMURAI.FieldManager.Update
+- uid: SAMURAI.FieldManager.FixedUpdate*
+  commentId: Overload:SAMURAI.FieldManager.FixedUpdate
+  name: FixedUpdate
+  nameWithType: FieldManager.FixedUpdate
+  fullName: SAMURAI.FieldManager.FixedUpdate
+- uid: SAMURAI.FieldManager.LoadField*
+  commentId: Overload:SAMURAI.FieldManager.LoadField
+  name: LoadField
+  nameWithType: FieldManager.LoadField
+  fullName: SAMURAI.FieldManager.LoadField
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
 - uid: SAMURAI.FieldManager.AdaptPosition*
   commentId: Overload:SAMURAI.FieldManager.AdaptPosition
   name: AdaptPosition
@@ -347,3 +590,14 @@ references:
   name: AdaptInversePosition
   nameWithType: FieldManager.AdaptInversePosition
   fullName: SAMURAI.FieldManager.AdaptInversePosition
+- uid: SAMURAI.FieldManager.StateChanged*
+  commentId: Overload:SAMURAI.FieldManager.StateChanged
+  name: StateChanged
+  nameWithType: FieldManager.StateChanged
+  fullName: SAMURAI.FieldManager.StateChanged
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg

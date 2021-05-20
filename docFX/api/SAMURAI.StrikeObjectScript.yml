@@ -5,10 +5,14 @@ items:
   id: StrikeObjectScript
   parent: SAMURAI
   children:
+  - SAMURAI.StrikeObjectScript.elapsedTime
   - SAMURAI.StrikeObjectScript.emergencySign
   - SAMURAI.StrikeObjectScript.gameManager
   - SAMURAI.StrikeObjectScript.shotInterval
   - SAMURAI.StrikeObjectScript.ShotObject
+  - SAMURAI.StrikeObjectScript.shotPosZ
+  - SAMURAI.StrikeObjectScript.Start
+  - SAMURAI.StrikeObjectScript.Update
   langs:
   - csharp
   - vb
@@ -63,6 +67,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.StrikeObjectScript.elapsedTime
+  commentId: F:SAMURAI.StrikeObjectScript.elapsedTime
+  id: elapsedTime
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: elapsedTime
+  nameWithType: StrikeObjectScript.elapsedTime
+  fullName: SAMURAI.StrikeObjectScript.elapsedTime
+  type: Field
+  source:
+    id: elapsedTime
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float elapsedTime
+    return:
+      type: System.Single
+    content.vb: elapsedTime As Single
 - uid: SAMURAI.StrikeObjectScript.ShotObject
   commentId: F:SAMURAI.StrikeObjectScript.ShotObject
   id: ShotObject
@@ -90,6 +117,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.StrikeObjectScript.shotPosZ
+  commentId: F:SAMURAI.StrikeObjectScript.shotPosZ
+  id: shotPosZ
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: shotPosZ
+  nameWithType: StrikeObjectScript.shotPosZ
+  fullName: SAMURAI.StrikeObjectScript.shotPosZ
+  type: Field
+  source:
+    id: shotPosZ
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float[] shotPosZ
+    return:
+      type: System.Single[]
+    content.vb: shotPosZ As Single()
 - uid: SAMURAI.StrikeObjectScript.gameManager
   commentId: F:SAMURAI.StrikeObjectScript.gameManager
   id: gameManager
@@ -144,6 +194,50 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.StrikeObjectScript.Start
+  commentId: M:SAMURAI.StrikeObjectScript.Start
+  id: Start
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StrikeObjectScript.Start()
+  fullName: SAMURAI.StrikeObjectScript.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.StrikeObjectScript.Start*
+- uid: SAMURAI.StrikeObjectScript.Update
+  commentId: M:SAMURAI.StrikeObjectScript.Update
+  id: Update
+  parent: SAMURAI.StrikeObjectScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StrikeObjectScript.Update()
+  fullName: SAMURAI.StrikeObjectScript.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\ObjectStrike\StrikeObjectScript.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.StrikeObjectScript.Update*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -175,9 +269,45 @@ references:
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: System.Single[]
+  isExternal: true
+  name: Single[]
+  nameWithType: Single[]
+  fullName: System.Single[]
+  nameWithType.vb: Single()
+  fullName.vb: System.Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: SAMURAI.GameManager
   commentId: T:SAMURAI.GameManager
   parent: SAMURAI
   name: GameManager
   nameWithType: GameManager
   fullName: SAMURAI.GameManager
+- uid: SAMURAI.StrikeObjectScript.Start*
+  commentId: Overload:SAMURAI.StrikeObjectScript.Start
+  name: Start
+  nameWithType: StrikeObjectScript.Start
+  fullName: SAMURAI.StrikeObjectScript.Start
+- uid: SAMURAI.StrikeObjectScript.Update*
+  commentId: Overload:SAMURAI.StrikeObjectScript.Update
+  name: Update
+  nameWithType: StrikeObjectScript.Update
+  fullName: SAMURAI.StrikeObjectScript.Update

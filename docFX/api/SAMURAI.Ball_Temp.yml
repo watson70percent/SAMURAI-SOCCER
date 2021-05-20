@@ -4,7 +4,9 @@ items:
   commentId: T:SAMURAI.Ball_Temp
   id: Ball_Temp
   parent: SAMURAI
-  children: []
+  children:
+  - SAMURAI.Ball_Temp.Start
+  - SAMURAI.Ball_Temp.Update
   langs:
   - csharp
   - vb
@@ -32,6 +34,50 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.Ball_Temp.Start
+  commentId: M:SAMURAI.Ball_Temp.Start
+  id: Start
+  parent: SAMURAI.Ball_Temp
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Ball_Temp.Start()
+  fullName: SAMURAI.Ball_Temp.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Ball_Temp.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.Ball_Temp.Start*
+- uid: SAMURAI.Ball_Temp.Update
+  commentId: M:SAMURAI.Ball_Temp.Update
+  id: Update
+  parent: SAMURAI.Ball_Temp
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Ball_Temp.Update()
+  fullName: SAMURAI.Ball_Temp.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Prototype\Ball_Temp.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.Ball_Temp.Update*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -51,3 +97,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: SAMURAI.Ball_Temp.Start*
+  commentId: Overload:SAMURAI.Ball_Temp.Start
+  name: Start
+  nameWithType: Ball_Temp.Start
+  fullName: SAMURAI.Ball_Temp.Start
+- uid: SAMURAI.Ball_Temp.Update*
+  commentId: Overload:SAMURAI.Ball_Temp.Update
+  name: Update
+  nameWithType: Ball_Temp.Update
+  fullName: SAMURAI.Ball_Temp.Update

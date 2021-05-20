@@ -5,8 +5,20 @@ items:
   id: Panda
   parent: SAMURAI
   children:
+  - SAMURAI.Panda.anim
+  - SAMURAI.Panda.gameManager
   - SAMURAI.Panda.GameOver
   - SAMURAI.Panda.gameOverPanel
+  - SAMURAI.Panda.GameSceneLoaded(Scene,LoadSceneMode)
+  - SAMURAI.Panda.hit
+  - SAMURAI.Panda.m_expandAmount
+  - SAMURAI.Panda.OnTriggerEnter(Collider)
+  - SAMURAI.Panda.skin
+  - SAMURAI.Panda.speed
+  - SAMURAI.Panda.Start
+  - SAMURAI.Panda.state
+  - SAMURAI.Panda.SwitchState(SAMURAI.StateChangedArg)
+  - SAMURAI.Panda.Update
   langs:
   - csharp
   - vb
@@ -34,6 +46,167 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.Panda.m_expandAmount
+  commentId: F:SAMURAI.Panda.m_expandAmount
+  id: m_expandAmount
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_expandAmount
+  nameWithType: Panda.m_expandAmount
+  fullName: SAMURAI.Panda.m_expandAmount
+  type: Field
+  source:
+    id: m_expandAmount
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float m_expandAmount
+    return:
+      type: System.Single
+    content.vb: m_expandAmount As Single
+- uid: SAMURAI.Panda.speed
+  commentId: F:SAMURAI.Panda.speed
+  id: speed
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: Panda.speed
+  fullName: SAMURAI.Panda.speed
+  type: Field
+  source:
+    id: speed
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float speed
+    return:
+      type: System.Single
+    content.vb: speed As Single
+- uid: SAMURAI.Panda.hit
+  commentId: F:SAMURAI.Panda.hit
+  id: hit
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: hit
+  nameWithType: Panda.hit
+  fullName: SAMURAI.Panda.hit
+  type: Field
+  source:
+    id: hit
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool hit
+    return:
+      type: System.Boolean
+    content.vb: hit As Boolean
+- uid: SAMURAI.Panda.gameManager
+  commentId: F:SAMURAI.Panda.gameManager
+  id: gameManager
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: Panda.gameManager
+  fullName: SAMURAI.Panda.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: gameManager As GameManager
+- uid: SAMURAI.Panda.state
+  commentId: F:SAMURAI.Panda.state
+  id: state
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: Panda.state
+  fullName: SAMURAI.Panda.state
+  type: Field
+  source:
+    id: state
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameState state
+    return:
+      type: SAMURAI.GameState
+    content.vb: state As GameState
+- uid: SAMURAI.Panda.anim
+  commentId: F:SAMURAI.Panda.anim
+  id: anim
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: anim
+  nameWithType: Panda.anim
+  fullName: SAMURAI.Panda.anim
+  type: Field
+  source:
+    id: anim
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: Animator anim
+    return:
+      type: Animator
+    content.vb: anim As Animator
+- uid: SAMURAI.Panda.skin
+  commentId: F:SAMURAI.Panda.skin
+  id: skin
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: skin
+  nameWithType: Panda.skin
+  fullName: SAMURAI.Panda.skin
+  type: Field
+  source:
+    id: skin
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: SkinnedMeshRenderer skin
+    return:
+      type: SkinnedMeshRenderer
+    content.vb: skin As SkinnedMeshRenderer
 - uid: SAMURAI.Panda.gameOverPanel
   commentId: F:SAMURAI.Panda.gameOverPanel
   id: gameOverPanel
@@ -61,6 +234,100 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Panda.SwitchState(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.Panda.SwitchState(SAMURAI.StateChangedArg)
+  id: SwitchState(SAMURAI.StateChangedArg)
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: SwitchState(StateChangedArg)
+  nameWithType: Panda.SwitchState(StateChangedArg)
+  fullName: SAMURAI.Panda.SwitchState(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: SwitchState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void SwitchState(StateChangedArg a)
+    parameters:
+    - id: a
+      type: SAMURAI.StateChangedArg
+    content.vb: Sub SwitchState(a As StateChangedArg)
+  overload: SAMURAI.Panda.SwitchState*
+- uid: SAMURAI.Panda.Start
+  commentId: M:SAMURAI.Panda.Start
+  id: Start
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Panda.Start()
+  fullName: SAMURAI.Panda.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.Panda.Start*
+- uid: SAMURAI.Panda.Update
+  commentId: M:SAMURAI.Panda.Update
+  id: Update
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Panda.Update()
+  fullName: SAMURAI.Panda.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.Panda.Update*
+- uid: SAMURAI.Panda.OnTriggerEnter(Collider)
+  commentId: M:SAMURAI.Panda.OnTriggerEnter(Collider)
+  id: OnTriggerEnter(Collider)
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: Panda.OnTriggerEnter(Collider)
+  fullName: SAMURAI.Panda.OnTriggerEnter(Collider)
+  type: Method
+  source:
+    id: OnTriggerEnter
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: Collider
+    content.vb: Sub OnTriggerEnter(other As Collider)
+  overload: SAMURAI.Panda.OnTriggerEnter*
 - uid: SAMURAI.Panda.GameOver
   commentId: M:SAMURAI.Panda.GameOver
   id: GameOver
@@ -87,6 +354,33 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.Panda.GameSceneLoaded(Scene,LoadSceneMode)
+  commentId: M:SAMURAI.Panda.GameSceneLoaded(Scene,LoadSceneMode)
+  id: GameSceneLoaded(Scene,LoadSceneMode)
+  parent: SAMURAI.Panda
+  langs:
+  - csharp
+  - vb
+  name: GameSceneLoaded(Scene, LoadSceneMode)
+  nameWithType: Panda.GameSceneLoaded(Scene, LoadSceneMode)
+  fullName: SAMURAI.Panda.GameSceneLoaded(Scene, LoadSceneMode)
+  type: Method
+  source:
+    id: GameSceneLoaded
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\Panda.cs
+    startLine: 72
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    parameters:
+    - id: next
+      type: Scene
+    - id: mode
+      type: LoadSceneMode
+    content.vb: Sub GameSceneLoaded(next As Scene, mode As LoadSceneMode)
+  overload: SAMURAI.Panda.GameSceneLoaded*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -106,13 +400,95 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.GameState
+  commentId: T:SAMURAI.GameState
+  parent: SAMURAI
+  name: GameState
+  nameWithType: GameState
+  fullName: SAMURAI.GameState
+- uid: Animator
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: Animator
+- uid: SkinnedMeshRenderer
+  isExternal: true
+  name: SkinnedMeshRenderer
+  nameWithType: SkinnedMeshRenderer
+  fullName: SkinnedMeshRenderer
 - uid: GameObject
   isExternal: true
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: SAMURAI.Panda.SwitchState*
+  commentId: Overload:SAMURAI.Panda.SwitchState
+  name: SwitchState
+  nameWithType: Panda.SwitchState
+  fullName: SAMURAI.Panda.SwitchState
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.Panda.Start*
+  commentId: Overload:SAMURAI.Panda.Start
+  name: Start
+  nameWithType: Panda.Start
+  fullName: SAMURAI.Panda.Start
+- uid: SAMURAI.Panda.Update*
+  commentId: Overload:SAMURAI.Panda.Update
+  name: Update
+  nameWithType: Panda.Update
+  fullName: SAMURAI.Panda.Update
+- uid: SAMURAI.Panda.OnTriggerEnter*
+  commentId: Overload:SAMURAI.Panda.OnTriggerEnter
+  name: OnTriggerEnter
+  nameWithType: Panda.OnTriggerEnter
+  fullName: SAMURAI.Panda.OnTriggerEnter
+- uid: Collider
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: Collider
 - uid: SAMURAI.Panda.GameOver*
   commentId: Overload:SAMURAI.Panda.GameOver
   name: GameOver
   nameWithType: Panda.GameOver
   fullName: SAMURAI.Panda.GameOver
+- uid: SAMURAI.Panda.GameSceneLoaded*
+  commentId: Overload:SAMURAI.Panda.GameSceneLoaded
+  name: GameSceneLoaded
+  nameWithType: Panda.GameSceneLoaded
+  fullName: SAMURAI.Panda.GameSceneLoaded
+- uid: Scene
+  isExternal: true
+  name: Scene
+  nameWithType: Scene
+  fullName: Scene
+- uid: LoadSceneMode
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: LoadSceneMode

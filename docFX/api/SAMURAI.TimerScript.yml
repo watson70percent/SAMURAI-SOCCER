@@ -5,18 +5,27 @@ items:
   id: TimerScript
   parent: SAMURAI
   children:
+  - SAMURAI.TimerScript.audioSource
+  - SAMURAI.TimerScript.Awake
   - SAMURAI.TimerScript.displayText
   - SAMURAI.TimerScript.elapsedTime
+  - SAMURAI.TimerScript.end
+  - SAMURAI.TimerScript.finishSound
   - SAMURAI.TimerScript.gameManager
+  - SAMURAI.TimerScript.GameSceneLoaded(Scene,LoadSceneMode)
+  - SAMURAI.TimerScript.GoResult
   - SAMURAI.TimerScript.isTimeUp
   - SAMURAI.TimerScript.limitTime
   - SAMURAI.TimerScript.Pause
   - SAMURAI.TimerScript.playing
   - SAMURAI.TimerScript.Playing
   - SAMURAI.TimerScript.Reset
+  - SAMURAI.TimerScript.ResultSceneName
   - SAMURAI.TimerScript.setTimer(System.Int32)
+  - SAMURAI.TimerScript.Start
   - SAMURAI.TimerScript.Timer(SAMURAI.StateChangedArg)
   - SAMURAI.TimerScript.timeText
+  - SAMURAI.TimerScript.Update
   langs:
   - csharp
   - vb
@@ -44,6 +53,75 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.TimerScript.ResultSceneName
+  commentId: F:SAMURAI.TimerScript.ResultSceneName
+  id: ResultSceneName
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: ResultSceneName
+  nameWithType: TimerScript.ResultSceneName
+  fullName: SAMURAI.TimerScript.ResultSceneName
+  type: Field
+  source:
+    id: ResultSceneName
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: string ResultSceneName
+    return:
+      type: System.String
+    content.vb: ResultSceneName As String
+- uid: SAMURAI.TimerScript.finishSound
+  commentId: F:SAMURAI.TimerScript.finishSound
+  id: finishSound
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: finishSound
+  nameWithType: TimerScript.finishSound
+  fullName: SAMURAI.TimerScript.finishSound
+  type: Field
+  source:
+    id: finishSound
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioClip finishSound
+    return:
+      type: AudioClip
+    content.vb: finishSound As AudioClip
+- uid: SAMURAI.TimerScript.audioSource
+  commentId: F:SAMURAI.TimerScript.audioSource
+  id: audioSource
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: TimerScript.audioSource
+  fullName: SAMURAI.TimerScript.audioSource
+  type: Field
+  source:
+    id: audioSource
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: AudioSource audioSource
+    return:
+      type: AudioSource
+    content.vb: audioSource As AudioSource
 - uid: SAMURAI.TimerScript.playing
   commentId: F:SAMURAI.TimerScript.playing
   id: playing
@@ -71,6 +149,29 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.TimerScript.end
+  commentId: F:SAMURAI.TimerScript.end
+  id: end
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: end
+  nameWithType: TimerScript.end
+  fullName: SAMURAI.TimerScript.end
+  type: Field
+  source:
+    id: end
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: bool end
+    return:
+      type: System.Boolean
+    content.vb: end As Boolean
 - uid: SAMURAI.TimerScript.elapsedTime
   commentId: F:SAMURAI.TimerScript.elapsedTime
   id: elapsedTime
@@ -370,6 +471,123 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: SAMURAI.TimerScript.Awake
+  commentId: M:SAMURAI.TimerScript.Awake
+  id: Awake
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: TimerScript.Awake()
+  fullName: SAMURAI.TimerScript.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 67
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Awake()
+    content.vb: Sub Awake
+  overload: SAMURAI.TimerScript.Awake*
+- uid: SAMURAI.TimerScript.Start
+  commentId: M:SAMURAI.TimerScript.Start
+  id: Start
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TimerScript.Start()
+  fullName: SAMURAI.TimerScript.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 73
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.TimerScript.Start*
+- uid: SAMURAI.TimerScript.Update
+  commentId: M:SAMURAI.TimerScript.Update
+  id: Update
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: TimerScript.Update()
+  fullName: SAMURAI.TimerScript.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 79
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.TimerScript.Update*
+- uid: SAMURAI.TimerScript.GoResult
+  commentId: M:SAMURAI.TimerScript.GoResult
+  id: GoResult
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: GoResult()
+  nameWithType: TimerScript.GoResult()
+  fullName: SAMURAI.TimerScript.GoResult()
+  type: Method
+  source:
+    id: GoResult
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 112
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: IEnumerator GoResult()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function GoResult As IEnumerator
+  overload: SAMURAI.TimerScript.GoResult*
+- uid: SAMURAI.TimerScript.GameSceneLoaded(Scene,LoadSceneMode)
+  commentId: M:SAMURAI.TimerScript.GameSceneLoaded(Scene,LoadSceneMode)
+  id: GameSceneLoaded(Scene,LoadSceneMode)
+  parent: SAMURAI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: GameSceneLoaded(Scene, LoadSceneMode)
+  nameWithType: TimerScript.GameSceneLoaded(Scene, LoadSceneMode)
+  fullName: SAMURAI.TimerScript.GameSceneLoaded(Scene, LoadSceneMode)
+  type: Method
+  source:
+    id: GameSceneLoaded
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Timer\TimerScript.cs
+    startLine: 120
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    parameters:
+    - id: next
+      type: Scene
+    - id: mode
+      type: LoadSceneMode
+    content.vb: Sub GameSceneLoaded(next As Scene, mode As LoadSceneMode)
+  overload: SAMURAI.TimerScript.GameSceneLoaded*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -389,6 +607,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
+- uid: AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -462,3 +697,51 @@ references:
   name: Playing
   nameWithType: TimerScript.Playing
   fullName: SAMURAI.TimerScript.Playing
+- uid: SAMURAI.TimerScript.Awake*
+  commentId: Overload:SAMURAI.TimerScript.Awake
+  name: Awake
+  nameWithType: TimerScript.Awake
+  fullName: SAMURAI.TimerScript.Awake
+- uid: SAMURAI.TimerScript.Start*
+  commentId: Overload:SAMURAI.TimerScript.Start
+  name: Start
+  nameWithType: TimerScript.Start
+  fullName: SAMURAI.TimerScript.Start
+- uid: SAMURAI.TimerScript.Update*
+  commentId: Overload:SAMURAI.TimerScript.Update
+  name: Update
+  nameWithType: TimerScript.Update
+  fullName: SAMURAI.TimerScript.Update
+- uid: SAMURAI.TimerScript.GoResult*
+  commentId: Overload:SAMURAI.TimerScript.GoResult
+  name: GoResult
+  nameWithType: TimerScript.GoResult
+  fullName: SAMURAI.TimerScript.GoResult
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: SAMURAI.TimerScript.GameSceneLoaded*
+  commentId: Overload:SAMURAI.TimerScript.GameSceneLoaded
+  name: GameSceneLoaded
+  nameWithType: TimerScript.GameSceneLoaded
+  fullName: SAMURAI.TimerScript.GameSceneLoaded
+- uid: Scene
+  isExternal: true
+  name: Scene
+  nameWithType: Scene
+  fullName: Scene
+- uid: LoadSceneMode
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: LoadSceneMode

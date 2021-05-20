@@ -9,6 +9,8 @@ public class StageDataSave : MonoBehaviour,StageDataReceiver
         StartCoroutine(Save(stageData));
     }
 
+
+
     IEnumerator Save(BaseStageData stageData)
     {
         Result result;
@@ -21,6 +23,9 @@ public class StageDataSave : MonoBehaviour,StageDataReceiver
         {
             StageDataManager.SaveStageData(stageData);
         }
-        //print(result.ToString() + "," + stageData.WorldName);
+
+
+        print(stageData.WorldName);
+
     }
 }

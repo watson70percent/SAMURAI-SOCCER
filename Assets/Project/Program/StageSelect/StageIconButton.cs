@@ -3,38 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(StageData))]
 public class StageIconButton : MonoBehaviour
 {
     string stageName;
     string stageSummary;
-    public GameObject preview;
-    public StageSelectManager stageSelectMng;
+    public GameObject Preview;
+    public StageSelectManager StageSelectMng;
     Sprite stImage;
     SceneObject gameScene;
-    public int indexOfButton;
+    public int IndexOfButton;
+
+    private StageData _stageData;
+    public SpriteRenderer SpriteRenderer;
+    public Sprite MonoImage;
 
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (stageSelectMng.state == StageSelectManager.StageSelectState.preview)
+        _stageData = GetComponent<StageData>();
+        if (_stageData.StageState == StageState.NotPlayable)
         {
-            GetComponent<Button>().interactable = false;
+            SpriteRenderer.sprite = MonoImage;
         }
-        else
-        {
-            GetComponent<Button>().interactable = true;
-        }*/
     }
 
     private void DataSet()
     {
-        (string stName, string summary, Sprite stagePreview, SceneObject scene) buttonData = stageSelectMng.ButtonDataSet(indexOfButton);
+        (string stName, string summary, Sprite stagePreview, SceneObject scene) buttonData = StageSelectMng.ButtonDataSet(IndexOfButton);
         stageName = buttonData.stName;
         stageSummary = buttonData.summary;
         stImage = buttonData.stagePreview;
@@ -44,7 +40,8 @@ public class StageIconButton : MonoBehaviour
     public void OnClick()
     {
         DataSet();
-        stageSelectMng.previewState(stageName, stageSummary, stImage, gameScene);
+        BaseStageData basestageData = GetComponent<StageData>().ToBaseStageData();
+        StageSelectMng.previewState(stageName, stageSummary, stImage, gameScene,basestageData);
 
     }
 }

@@ -4,7 +4,16 @@ items:
   commentId: T:SAMURAI.PandaMaker
   id: PandaMaker
   parent: SAMURAI
-  children: []
+  children:
+  - SAMURAI.PandaMaker.gameManager
+  - SAMURAI.PandaMaker.maxSize
+  - SAMURAI.PandaMaker.minSize
+  - SAMURAI.PandaMaker.panda
+  - SAMURAI.PandaMaker.Spawn
+  - SAMURAI.PandaMaker.Start
+  - SAMURAI.PandaMaker.state
+  - SAMURAI.PandaMaker.SwitchState(SAMURAI.StateChangedArg)
+  - SAMURAI.PandaMaker.Update
   langs:
   - csharp
   - vb
@@ -32,6 +41,212 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: SAMURAI.PandaMaker.panda
+  commentId: F:SAMURAI.PandaMaker.panda
+  id: panda
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: panda
+  nameWithType: PandaMaker.panda
+  fullName: SAMURAI.PandaMaker.panda
+  type: Field
+  source:
+    id: panda
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameObject panda
+    return:
+      type: GameObject
+    content.vb: panda As GameObject
+- uid: SAMURAI.PandaMaker.minSize
+  commentId: F:SAMURAI.PandaMaker.minSize
+  id: minSize
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: minSize
+  nameWithType: PandaMaker.minSize
+  fullName: SAMURAI.PandaMaker.minSize
+  type: Field
+  source:
+    id: minSize
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float minSize
+    return:
+      type: System.Single
+    content.vb: minSize As Single
+- uid: SAMURAI.PandaMaker.maxSize
+  commentId: F:SAMURAI.PandaMaker.maxSize
+  id: maxSize
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: maxSize
+  nameWithType: PandaMaker.maxSize
+  fullName: SAMURAI.PandaMaker.maxSize
+  type: Field
+  source:
+    id: maxSize
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: float maxSize
+    return:
+      type: System.Single
+    content.vb: maxSize As Single
+- uid: SAMURAI.PandaMaker.gameManager
+  commentId: F:SAMURAI.PandaMaker.gameManager
+  id: gameManager
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: PandaMaker.gameManager
+  fullName: SAMURAI.PandaMaker.gameManager
+  type: Field
+  source:
+    id: gameManager
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameManager gameManager
+    return:
+      type: SAMURAI.GameManager
+    content.vb: gameManager As GameManager
+- uid: SAMURAI.PandaMaker.state
+  commentId: F:SAMURAI.PandaMaker.state
+  id: state
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: PandaMaker.state
+  fullName: SAMURAI.PandaMaker.state
+  type: Field
+  source:
+    id: state
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: GameState state
+    return:
+      type: SAMURAI.GameState
+    content.vb: state As GameState
+- uid: SAMURAI.PandaMaker.SwitchState(SAMURAI.StateChangedArg)
+  commentId: M:SAMURAI.PandaMaker.SwitchState(SAMURAI.StateChangedArg)
+  id: SwitchState(SAMURAI.StateChangedArg)
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: SwitchState(StateChangedArg)
+  nameWithType: PandaMaker.SwitchState(StateChangedArg)
+  fullName: SAMURAI.PandaMaker.SwitchState(SAMURAI.StateChangedArg)
+  type: Method
+  source:
+    id: SwitchState
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void SwitchState(StateChangedArg a)
+    parameters:
+    - id: a
+      type: SAMURAI.StateChangedArg
+    content.vb: Sub SwitchState(a As StateChangedArg)
+  overload: SAMURAI.PandaMaker.SwitchState*
+- uid: SAMURAI.PandaMaker.Start
+  commentId: M:SAMURAI.PandaMaker.Start
+  id: Start
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PandaMaker.Start()
+  fullName: SAMURAI.PandaMaker.Start()
+  type: Method
+  source:
+    id: Start
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Start()
+    content.vb: Sub Start
+  overload: SAMURAI.PandaMaker.Start*
+- uid: SAMURAI.PandaMaker.Update
+  commentId: M:SAMURAI.PandaMaker.Update
+  id: Update
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: PandaMaker.Update()
+  fullName: SAMURAI.PandaMaker.Update()
+  type: Method
+  source:
+    id: Update
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Update()
+    content.vb: Sub Update
+  overload: SAMURAI.PandaMaker.Update*
+- uid: SAMURAI.PandaMaker.Spawn
+  commentId: M:SAMURAI.PandaMaker.Spawn
+  id: Spawn
+  parent: SAMURAI.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: Spawn()
+  nameWithType: PandaMaker.Spawn()
+  fullName: SAMURAI.PandaMaker.Spawn()
+  type: Method
+  source:
+    id: Spawn
+    path: D:\Program\Unity\SAMURAI-SOCCER\docFX\src\Assets\Project\Program\Panda\PandaMaker.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: SAMURAI
+  syntax:
+    content: void Spawn()
+    content.vb: Sub Spawn
+  overload: SAMURAI.PandaMaker.Spawn*
 references:
 - uid: SAMURAI
   commentId: N:SAMURAI
@@ -51,3 +266,53 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SAMURAI.GameManager
+  commentId: T:SAMURAI.GameManager
+  parent: SAMURAI
+  name: GameManager
+  nameWithType: GameManager
+  fullName: SAMURAI.GameManager
+- uid: SAMURAI.GameState
+  commentId: T:SAMURAI.GameState
+  parent: SAMURAI
+  name: GameState
+  nameWithType: GameState
+  fullName: SAMURAI.GameState
+- uid: SAMURAI.PandaMaker.SwitchState*
+  commentId: Overload:SAMURAI.PandaMaker.SwitchState
+  name: SwitchState
+  nameWithType: PandaMaker.SwitchState
+  fullName: SAMURAI.PandaMaker.SwitchState
+- uid: SAMURAI.StateChangedArg
+  commentId: T:SAMURAI.StateChangedArg
+  parent: SAMURAI
+  name: StateChangedArg
+  nameWithType: StateChangedArg
+  fullName: SAMURAI.StateChangedArg
+- uid: SAMURAI.PandaMaker.Start*
+  commentId: Overload:SAMURAI.PandaMaker.Start
+  name: Start
+  nameWithType: PandaMaker.Start
+  fullName: SAMURAI.PandaMaker.Start
+- uid: SAMURAI.PandaMaker.Update*
+  commentId: Overload:SAMURAI.PandaMaker.Update
+  name: Update
+  nameWithType: PandaMaker.Update
+  fullName: SAMURAI.PandaMaker.Update
+- uid: SAMURAI.PandaMaker.Spawn*
+  commentId: Overload:SAMURAI.PandaMaker.Spawn
+  name: Spawn
+  nameWithType: PandaMaker.Spawn
+  fullName: SAMURAI.PandaMaker.Spawn
