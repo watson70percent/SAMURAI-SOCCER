@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageDataSave : MonoBehaviour,StageDataReceiver
+public class StageDataSave : MonoBehaviour
 {
-    public void StageDataReceive(BaseStageData stageData)
+
+    private void Start()
     {
-        StartCoroutine(Save(stageData));
+        StartCoroutine(Save());
     }
 
 
-
-    IEnumerator Save(BaseStageData stageData)
+    IEnumerator Save()
     {
         Result result;
         while ((result=GetComponent<ResultManager>().ResultState) == Result.Undefined)
@@ -21,11 +21,15 @@ public class StageDataSave : MonoBehaviour,StageDataReceiver
 
         if (result == Result.Win)
         {
-            StageDataManager.SaveStageData(stageData);
+            while (GetComponent<ResultManager>().NowStageData ==null )
+            {
+                yield return null;
+            }
+
+            StageDataManager.SaveStageData(GetComponent<ResultManager>().NowStageData);
+
+           
         }
-
-
-        print(stageData.WorldName);
 
     }
 }
