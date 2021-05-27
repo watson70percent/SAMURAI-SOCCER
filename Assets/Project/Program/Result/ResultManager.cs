@@ -12,8 +12,13 @@ public enum Result
     Undefined
 }
 
-public class ResultManager : MonoBehaviour
+public class ResultManager : MonoBehaviour, StageDataReceiver
 {
+    public BaseStageData NowStageData { get; private set; } = null;
+    public void StageDataReceive(BaseStageData stageData)
+    {
+        NowStageData = stageData;
+    }
 
     public Result ResultState { get; private set; } = Result.Undefined;
     [SerializeField]Text result;
