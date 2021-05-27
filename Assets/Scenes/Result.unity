@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 85973011}
   - component: {fileID: 85973010}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: RetryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,15 +270,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810134307}
+      - m_Target: {fileID: 1810134309}
         m_MethodName: LoadScene
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Panda
+          m_StringArgument: Select
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &85973011
@@ -15051,7 +15051,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B21\u306E\u6226\u3078"
+  m_Text: "\u518D\u6226"
 --- !u!222 &1453404591
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15293,6 +15293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810134306}
   - component: {fileID: 1810134305}
+  - component: {fileID: 1810134309}
   - component: {fileID: 1810134307}
   - component: {fileID: 1810134308}
   m_Layer: 0
@@ -15362,6 +15363,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7aefb10865de4b4ab5f6280832b90d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1810134309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810134304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980c8110cd9afc459f4b46fc7f54bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageSelectData: {fileID: 11400000, guid: 2d51b772d8aa4cb478486acf73e004a5, type: 2}
 --- !u!1 &1881278016
 GameObject:
   m_ObjectHideFlags: 0
@@ -15506,7 +15520,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30E1\u30CB\u30E5\u30FC\u3078"
+  m_Text: "\u5E30\u53C2\r"
 --- !u!222 &1969274113
 CanvasRenderer:
   m_ObjectHideFlags: 0
