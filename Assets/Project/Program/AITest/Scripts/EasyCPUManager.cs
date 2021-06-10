@@ -10,6 +10,7 @@ using System;
 /// <summary>
 /// CPUを操作するクラス
 /// </summary>
+[DefaultExecutionOrder(5)]
 [RequireComponent(typeof(FieldManager))]
 public class EasyCPUManager : MonoBehaviour
 {
