@@ -114,7 +114,7 @@ public class Tutorial : MonoBehaviour
         textAnimator.SetTrigger("ReturnText");
         tutorialText.text = "しまった！れふぇりーに見られてしまった";
         yield return new WaitForSeconds(3f);
-        tutorialText.text = "もう一度見つかると退場になってしまう、気をつけろ";
+        tutorialText.text = "もう一度見つかると退場だ、気をつけろ";
         yield return new WaitForSeconds(3f);
         tutorialText.text = "最後に確認する";
         yield return new WaitForSeconds(3f);
