@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LoadRetryScene : MonoBehaviour
 {
     public StageSelectData stageSelectData;
+    BaseStageData baseStageData;
     private ResultManager _resultManager;
     private void Start()
     {
@@ -18,8 +19,16 @@ public class LoadRetryScene : MonoBehaviour
     public void LoadScene()
     {
         if (_resultManager.NowStageData == null) return;
-        BaseStageData baseStageData = _resultManager.NowStageData;
+        baseStageData = _resultManager.NowStageData;
         string retrySceneName = stageSelectData.stageSelectList[(int)baseStageData.WorldName * 3 + baseStageData.StageNumber].gameScene;
+        SceneManager.sceneLoaded += GameSceneLoaded;
         SceneManager.LoadScene(retrySceneName);
+    }
+
+    void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    {
+        GameObject.Find("DefaultStage").GetComponent<StageDataHolder>().SetStageData(baseStageData);
+
+        SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 }
