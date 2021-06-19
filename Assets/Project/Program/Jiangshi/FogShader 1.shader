@@ -1,4 +1,4 @@
-﻿Shader "Custom/FogShader"
+﻿Shader "Custom/FogShader1"
 {
 	Properties
 	{
@@ -49,14 +49,13 @@
 
 				fixed4 col;
 				col = tex2D(_MainTex, i.uv);
-				fixed depth = UNITY_SAMPLE_DEPTH(tex2D(_CameraDepthTexture,i.uv));
 				
-				
-				depth *= 100;
-				depth = saturate(depth-0.2);
-				depth *= 3;
+				float x = i.uv.x-0.5;
+				float y = i.uv.y-0.5;
+				float parameter = sqrt(x*x + y * y)*2+0.2;
 
-				fixed parameter = saturate(1 - depth);
+
+				parameter = saturate(parameter);
 				return lerp(col,fixed4(0.3,0.3,0.5,1),parameter);
 			}
 
