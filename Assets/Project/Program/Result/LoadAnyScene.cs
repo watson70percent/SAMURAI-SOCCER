@@ -15,4 +15,18 @@ public class LoadAnyScene : MonoBehaviour
     {
         SceneManager.LoadScene(targetSceneName);
     }
+
+
+    public void LoadStartScene(string targetSceneName)
+    {
+        if (PlayerPrefs.GetInt("DoneTutorial") == 0)
+        {
+            PlayerPrefs.SetInt("DoneTutorial", 1);
+            LoadScene("Tutorial");
+        }
+        else
+        {
+            LoadScene(targetSceneName);
+        }
+    }
 }
