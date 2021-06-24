@@ -32,6 +32,7 @@ public class Tutorial : MonoBehaviour
         gameManager.StateChangeSignal(GameState.Pause);
         //テキスト表示1
         yield return new WaitForSeconds(5f);
+        tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
         tutorialText.text = "ここではこの世界で戦うちゅーとりあるを行う";
         yield return new WaitForSeconds(3f); 
         tutorialText.text = "サムライは残された日本の希望だ";
