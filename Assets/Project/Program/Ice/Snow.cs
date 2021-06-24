@@ -17,6 +17,7 @@ public class Snow : MonoBehaviour
     [SerializeField]
     private float damage = 0;
     private Vector3 beforePoint = Vector3.zero;
+    private float time = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,11 @@ public class Snow : MonoBehaviour
         gm.StateChange += OnStateCanged;
         beforePoint = samurai.position;
         audioSource.volume = 0.05f;
+    }
+
+    public void TimerReset()
+    {
+        time = 3;
     }
     
     private void OnStateCanged(StateChangedArg e)
@@ -56,10 +62,16 @@ public class Snow : MonoBehaviour
         var pos = snow.position;
         pos.z = mainCamera.position.z;
         snow.position = pos;
+        time -= Time.deltaTime;
 
         if (gm.CurrentGameState == GameState.Playing)
         {
             var diff = samurai.position - beforePoint;
+            if(time < 0)
+            {
+                damage += 4.0f / 30 * Time.deltaTime;
+            }
+
             if(diff.sqrMagnitude < 5 * Time.deltaTime * Time.deltaTime)
             {
                 damage += 4.0f / 30 * Time.deltaTime;
@@ -72,7 +84,7 @@ public class Snow : MonoBehaviour
             }
             else if(diff.sqrMagnitude > 15 * Time.deltaTime * Time.deltaTime)
             {
-                if(damage > 0)
+                if(damage > 0 && time > 0)
                 {
                     damage -= 4.0f / 30 * Time.deltaTime;
                 }
