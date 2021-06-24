@@ -21,7 +21,6 @@ public class LoadAnyScene : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("DoneTutorial") == 0)
         {
-            PlayerPrefs.SetInt("DoneTutorial", 1);
             LoadScene("Tutorial");
         }
         else

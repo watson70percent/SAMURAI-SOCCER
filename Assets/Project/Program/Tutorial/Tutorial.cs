@@ -133,6 +133,7 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(3f);
         arrowAnimator.gameObject.SetActive(false);
         tutorialText.text = "必ず日本に勝利を持ち帰れ";
+        PlayerPrefs.SetInt("DoneTutorial", 1);
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("StageSelect");
     }
