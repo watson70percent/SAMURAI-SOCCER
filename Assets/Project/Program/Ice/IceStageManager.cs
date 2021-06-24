@@ -15,19 +15,19 @@ public class IceStageManager : MonoBehaviour
 
     private void Awake()
     {
-        switch (no)
+        switch (StageDataHolder.NowStageData.StageNumber)
         {
-            case 1:
+            case 0:
                 stageManager.groundTexture = greenTexture;
                 stageManager.groundMaterial = greenMaterial;
                 eclanoplan.SetActive(false);
                 break;
-            case 2:
+            case 1:
                 stageManager.groundTexture = iceTexture;
                 stageManager.groundMaterial = iceMaterial;
                 eclanoplan.SetActive(false);
                 break;
-            case 3:
+            case 2:
                 stageManager.groundTexture = iceTexture;
                 stageManager.groundMaterial = iceMaterial;
                 eclanoplan.SetActive(true);
