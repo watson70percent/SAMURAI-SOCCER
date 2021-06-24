@@ -53,7 +53,7 @@
 				
 				
 				depth *= 100;
-				depth = saturate(depth-0.3);
+				depth = saturate(depth-0.2);
 				depth *= 3;
 
 				fixed parameter = saturate(1 - depth);

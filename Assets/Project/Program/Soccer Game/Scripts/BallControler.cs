@@ -35,7 +35,7 @@ public class BallControler : MonoBehaviour
     public event DribbleEventHandler DribbleKick;
     public event TrapEventHandler Trapping;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }

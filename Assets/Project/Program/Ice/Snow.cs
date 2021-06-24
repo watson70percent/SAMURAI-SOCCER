@@ -35,7 +35,7 @@ public class Snow : MonoBehaviour
         switch (e.gameState)
         {
             case GameState.Playing :
-                shape.scale = new Vector3(30, 50, 1);
+                shape.scale = new Vector3(60, 50, 1);
                 emission.rateOverTimeMultiplier = 800 / 3.0f * Mathf.Exp(damage);
                 particle.Play(true);
                 break;
