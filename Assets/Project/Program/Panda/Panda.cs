@@ -53,9 +53,7 @@ public class Panda : MonoBehaviour
         if (other.tag == "Player" && !hit)
         {
             hit = true;
-            //GameObject.Find("YellowCard").GetComponent<Penalty>().YellowCard();
             GameOver();
-            other.transform.Rotate(90, 0, 0);
         }
     }
 
