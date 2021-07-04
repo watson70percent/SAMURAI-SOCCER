@@ -13,6 +13,7 @@ public class UISafeAreaSupport : MonoBehaviour
         if (safeArea != screenArea)
         {
             var scale = new Vector2(safeArea.width / screenArea.width, safeArea.height / screenArea.height);
+            var s = scale.x < scale.y ? scale.x : scale.y;
             var diff = new Vector2(safeArea.x, safeArea.y);
             foreach (var obj in FindObjectsOfType<CanvasScaler>())
             {
@@ -29,8 +30,8 @@ public class UISafeAreaSupport : MonoBehaviour
                             child.localPosition = pos;
                         }
                         var delta = child.sizeDelta;
-                        delta.x = delta.x * scale.x;
-                        delta.y = delta.y * scale.y;
+                        delta.x = delta.x * s;
+                        delta.y = delta.y * s;
                         child.sizeDelta = delta;
                     }
                 }

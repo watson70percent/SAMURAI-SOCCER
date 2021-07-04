@@ -9,6 +9,7 @@ using System.Linq;
 public class SelectStateInput : MonoBehaviour
 {
     public StageSelectBGM bgm;
+    public GameObject backWholeMap;
     private List<CinemachineVirtualCamera> _virtualCameras = new List<CinemachineVirtualCamera>();//StageSelectに使用するカメラ群
     private CinemachineBrain _cinemachineBrain;//メインカメラについているやつ
     private WorldName _focusWorld = WorldName.WholeMap;//今どのワールドを見ているのか
@@ -34,6 +35,7 @@ public class SelectStateInput : MonoBehaviour
         }
         _cinemachineBrain = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CinemachineBrain>();
         _selectStateManager = GetComponent<SelectStateManager>();
+        backWholeMap.SetActive(false);
     }
 
     /// <summary>
@@ -59,6 +61,7 @@ public class SelectStateInput : MonoBehaviour
                     _focusWorld = raycastHit.collider.gameObject.GetComponent<TargetWorldData>().WorldName;
                     bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
                     _selectStateManager.StateChangeSignal(SelectState.StageSelect);
+                    backWholeMap.SetActive(true);
                 }
             }
         }
@@ -93,6 +96,7 @@ public class SelectStateInput : MonoBehaviour
                     _focusWorld = WorldName.WholeMap;
                     bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
                     _selectStateManager.StateChangeSignal(SelectState.WorldSelect);
+                    backWholeMap.SetActive(false);
                 }
                 else
                 {

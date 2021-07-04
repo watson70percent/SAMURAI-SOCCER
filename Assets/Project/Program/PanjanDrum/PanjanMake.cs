@@ -7,6 +7,7 @@ public class PanjanMake : MonoBehaviour
     GameManager gameManager;
     public GameObject panjan;
     bool panjanExist;
+    Vector3 respone = new Vector3(30, 2.0f, 110);
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class PanjanMake : MonoBehaviour
     {
         if(gameManager.CurrentGameState == GameState.Playing && !panjanExist)
         {
-            Instantiate(panjan);
+            Instantiate(panjan,respone,Quaternion.identity);
             panjanExist = true;
         }
         if(gameManager.CurrentGameState == GameState.Standby)
