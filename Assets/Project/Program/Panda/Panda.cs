@@ -11,6 +11,7 @@ public class Panda : MonoBehaviour
     Animator anim;
     [SerializeField] SkinnedMeshRenderer skin;
     public GameObject gameOverPanel;
+    public AudioClip hitSound;
 
     void SwitchState(StateChangedArg a)
     {
@@ -53,7 +54,7 @@ public class Panda : MonoBehaviour
         if (other.tag == "Player" && !hit)
         {
             hit = true;
-            GameOver();
+            Invoke("GameOver", 0.2f);
         }
     }
 
@@ -63,6 +64,7 @@ public class Panda : MonoBehaviour
 
         SceneManager.sceneLoaded += GameSceneLoaded;
         gameManager.StateChangeSignal(GameState.Finish);
+        SoundBoxUtil.SetSoundBox(transform.position, hitSound);
         Instantiate(gameOverPanel);
 
     }
