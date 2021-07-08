@@ -10,7 +10,8 @@ public class FireHypnoticBullets : MonoBehaviour
     [SerializeField]
     private GameObject HypnoticBullets;//撃つ催眠弾
 
-    private float _fireDuration = 10.0f;//弾を撃つ間隔
+    [SerializeField]
+    private float _fireDuration;//弾を撃つ間隔(初期値はInspectorで指定)
     private GameManager _gameManager;//Scene内のGameManagerクラス
     private GameObject _Samurai;//侍のオブジェクト
 
@@ -25,8 +26,6 @@ public class FireHypnoticBullets : MonoBehaviour
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         _Samurai = GameObject.FindGameObjectWithTag("Player");
 
-        //弾を撃つ間隔を指定
-        _fireDuration = Random.Range(6.0f,10.0f);
         StartCoroutineForPlayingState.AddTaskIEnumrator(FireBulletSycle());
     }
 
@@ -40,11 +39,11 @@ public class FireHypnoticBullets : MonoBehaviour
         while (_gameManager.CurrentGameState != GameState.Finish)
         {
             //弾を撃つ間隔を再指定
-            _fireDuration = Random.Range(6.0f, 10.0f);
+            _fireDuration = Random.Range(15.0f, 15.5f);
             if (_gameManager.CurrentGameState == GameState.Playing)
             {
                 //侍との相対座標
-                Vector3 firedirection = _Samurai.transform.position - gameObject.transform.position;
+                Vector3 firedirection = (_Samurai.transform.position - gameObject.transform.position).normalized;
                 firedirection.y = 0f;
                 //敵選手が向く方向を計算し、反映
                 Quaternion firelotation = Quaternion.LookRotation(firedirection);
