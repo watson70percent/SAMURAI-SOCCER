@@ -8,7 +8,7 @@ public class JiangshiSceneManager : MonoBehaviour
     GameObject jianshi;
     [SerializeField] RefereeMove refereeMove;
     [SerializeField] RefereeArea refereeArea;
-    public int areaSize;
+    public int areaSize,areaAngle;
     private void Awake()
     {
         jianshi = Instantiate(prefab);
@@ -17,13 +17,19 @@ public class JiangshiSceneManager : MonoBehaviour
         Destroy(referee);
 
         refereeMove.anicon = jianshi.GetComponent<Animator>();
-        areaSize = GameObject.Find("DefaultStage").GetComponent<StagePrefabManager>().refereeAreaSize;
+          var stagePrefabManager=  GameObject.Find("DefaultStage").GetComponent<StagePrefabManager>();
+        areaSize = stagePrefabManager.refereeAreaSize;
+        areaAngle = stagePrefabManager.refereeMaxAng;
     }
 
     private void Update()
     {
         float height = jianshi.transform.position.y;
         refereeArea.SerAreaSize( areaSize + height*20);
+
+        var angle = areaAngle + height * 6;
+        angle = Mathf.Min(angle, 180);
+        refereeArea.SerMaxAngle(angle);
         refereeArea.MeshMaker();
     }
 

@@ -181,11 +181,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3124a73485ec40d4a9a888d3eb0d6f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referee: {fileID: 1168161231}
+  referee: {fileID: 117980284}
   prefab: {fileID: 5477138919375982951, guid: ca66a89868ebeb046b3685a7260b2f13, type: 3}
   refereeMove: {fileID: 955321687}
   refereeArea: {fileID: 841889690}
   areaSize: 0
+  areaAngle: 0
+--- !u!1 &117980284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5899290123464971054, guid: f0c17f2fc41c12044b2143319858dbd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 329565133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &215434177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,12 +1012,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 247.88}
   m_SizeDelta: {x: 160, y: 57.4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1168161231 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3332375493396395894, guid: f0c17f2fc41c12044b2143319858dbd4,
-    type: 3}
-  m_PrefabInstance: {fileID: 329565133}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381247559
 GameObject:
   m_ObjectHideFlags: 0
