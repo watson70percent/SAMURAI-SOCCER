@@ -1403,6 +1403,8 @@ MonoBehaviour:
   skin: {fileID: 1774144095571254688}
   gameOverPanel: {fileID: 1437930072099322810, guid: 1148f0b8da751ec4288144c09dd6da3e,
     type: 3}
+  hitSound: {fileID: 8300000, guid: dc2c7c853baf14245a877264957cf26a, type: 3}
+  blood: {fileID: 8693500279105437369, guid: eb7f1347bdb11da4286267f4df147aba, type: 3}
 --- !u!54 &-886859504509083727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1600,6 +1602,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1611,6 +1614,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

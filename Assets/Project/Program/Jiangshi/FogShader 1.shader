@@ -52,7 +52,7 @@
 				
 				float x = i.uv.x-0.5;
 				float y = i.uv.y-0.5;
-				float parameter = sqrt(x*x + y * y)*2+0.2;
+				float parameter = sqrt(x*x + y * y)*1.2+0.2;
 
 
 				parameter = saturate(parameter);

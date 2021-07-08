@@ -11,6 +11,9 @@ public class Panda : MonoBehaviour
     Animator anim;
     [SerializeField] SkinnedMeshRenderer skin;
     public GameObject gameOverPanel;
+    public AudioClip hitSound;
+    public GameObject blood;
+    GameObject player;
 
     void SwitchState(StateChangedArg a)
     {
@@ -23,8 +26,8 @@ public class Panda : MonoBehaviour
         gameManager.StateChange += SwitchState;
         state = gameManager.CurrentGameState;
         anim = GetComponent<Animator>();
-        
 
+        player = GameObject.FindGameObjectWithTag("Player");
         
     }
 
@@ -53,9 +56,7 @@ public class Panda : MonoBehaviour
         if (other.tag == "Player" && !hit)
         {
             hit = true;
-            //GameObject.Find("YellowCard").GetComponent<Penalty>().YellowCard();
-            GameOver();
-            other.transform.Rotate(90, 0, 0);
+            Invoke("GameOver", 0.2f);
         }
     }
 
@@ -65,6 +66,9 @@ public class Panda : MonoBehaviour
 
         SceneManager.sceneLoaded += GameSceneLoaded;
         gameManager.StateChangeSignal(GameState.Finish);
+        SoundBoxUtil.SetSoundBox(transform.position, hitSound);
+
+        Instantiate(blood, player.transform.position + Vector3.up * 0.1f, Quaternion.identity);
         Instantiate(gameOverPanel);
 
     }
