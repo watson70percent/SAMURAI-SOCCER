@@ -107,7 +107,7 @@ public class SelectStateInput : MonoBehaviour
 
             //GameObjectについて
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            foreach (RaycastHit raycastHit in Physics.RaycastAll(ray, 200.0f))
+            foreach (RaycastHit raycastHit in Physics.RaycastAll(ray, 2000.0f))
             {
                 //当たったオブジェクトが適切なものならStagePreview画面へ
                 if (raycastHit.collider.gameObject.tag == "TargetStage")
