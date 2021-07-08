@@ -32,6 +32,7 @@ public class Tutorial : MonoBehaviour
         gameManager.StateChangeSignal(GameState.Pause);
         //テキスト表示1
         yield return new WaitForSeconds(5f);
+        tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
         tutorialText.text = "ここではこの世界で戦うちゅーとりあるを行う";
         yield return new WaitForSeconds(3f); 
         tutorialText.text = "サムライは残された日本の希望だ";
@@ -133,6 +134,7 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(3f);
         arrowAnimator.gameObject.SetActive(false);
         tutorialText.text = "必ず日本に勝利を持ち帰れ";
+        PlayerPrefs.SetInt("DoneTutorial", 1);
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("StageSelect");
     }

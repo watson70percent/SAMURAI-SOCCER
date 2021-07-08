@@ -12,6 +12,8 @@ public class StageDataHolder : MonoBehaviour
 {
 
     static BaseStageData nowStageData;
+
+    public static BaseStageData NowStageData { get => nowStageData; }
     public void SetStageData(BaseStageData stageData)
     {
         nowStageData = stageData;
