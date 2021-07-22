@@ -134,7 +134,7 @@ public class EasyCPU : MonoBehaviour
                         {
                             Vector2 t = gameObject.ToVector2Int() - value.ToVector2Int();
                             float tmp = status.seelen - t.magnitude > 0 ? status.seelen - t.magnitude : 0;
-                            vec += t.normalized * tmp * 2;
+                            vec += 2 * tmp * t.normalized;
                         }
                     });
                 }
@@ -154,7 +154,7 @@ public class EasyCPU : MonoBehaviour
                         {
                             Vector2 t = gameObject.ToVector2Int() - value.ToVector2Int();
                             float tmp = status.seelen - t.magnitude > 0 ? status.seelen - t.magnitude : 0;
-                            vec += t.normalized * tmp * 2;
+                            vec += 2 * tmp * t.normalized;
                         }
                     });
 
@@ -175,7 +175,7 @@ public class EasyCPU : MonoBehaviour
         }
         else
         {
-            vec = vec.normalized * Mathf.Log10(dis + 1) * status.fast;
+            vec = Mathf.Log10(dis + 1) * status.fast * vec.normalized;
         }
 
         if (FieldNumber.no == 1)
@@ -263,7 +263,7 @@ public class EasyCPU : MonoBehaviour
         float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
         if(diff.sqrMagnitude > status.fast * status.fast * coeff * coeff / 180 / 180)
         {
-            diff = diff.normalized * status.fast * coeff / 180;
+            diff = coeff * status.fast * diff.normalized / 180;
         }
 
         return before_velocity + diff;

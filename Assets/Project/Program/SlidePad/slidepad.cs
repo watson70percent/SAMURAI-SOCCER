@@ -26,6 +26,8 @@ public class slidepad : MonoBehaviour
     int fingerID;
     Vector2 velocity;
 
+    public FieldManager field;
+
     void SwitchState(StateChangedArg a)
     {
         state = a.gameState;
@@ -52,7 +54,7 @@ public class slidepad : MonoBehaviour
 
         switch (state)
         {
-            case GameState.Standby: PlayingState(); break;
+            case GameState.Standby: PlayingState(); velocity = Vector3.zero; break;
             case GameState.Playing: PlayingState(); break;
             default: break;
         }
@@ -75,11 +77,15 @@ public class slidepad : MonoBehaviour
 
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
-                Controller(dir / radius);
+                Controller(5 / radius * dir);
 
                 joyrect.localPosition = joystartposition + dir / scale;
 
             }
+        }
+        else
+        {
+            Controller(Vector2.zero);
         }
     }
 
@@ -120,7 +126,7 @@ public class slidepad : MonoBehaviour
 
 
         Vector3 direction = new Vector3(dir.x, 0, dir.y);
-
+        CalcRealVec(direction.x, direction.z);
         direction = (direction != Vector3.zero) ? direction : player.transform.forward;
         playerrig.rotation = Quaternion.LookRotation(direction);
 
@@ -130,12 +136,22 @@ public class slidepad : MonoBehaviour
         //playerrig.position = direction3d;
 
         CheckBoundy(player.transform.position, ref direction);//範囲外に出てかつ外に行こうとしているときは動かさない
-
-        Vector3 force = direction * speed;
-        if (Vector3.Dot(playerrig.velocity,force.normalized)<speed)
+        if (velocity.sqrMagnitude > 0.001)
         {
-            playerrig.AddForce(force*30);
+            player.transform.Translate(velocity.x * Time.deltaTime, 0, velocity.y * Time.deltaTime, Space.World);
         }
+    }
+
+    private void CalcRealVec(float x, float y)
+    {
+        var diff = new Vector2(x, y) - velocity;
+        float deg = Vector2.Dot(velocity, diff) / velocity.magnitude / diff.magnitude;
+        float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
+        if (diff.sqrMagnitude > 25 * coeff * coeff / 180 / 180)
+        {
+            diff = coeff * 25 * diff.normalized / 180;
+        }
+        velocity += diff;
     }
 
 

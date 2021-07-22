@@ -13,7 +13,7 @@ public class IceStageManager : MonoBehaviour
     public GameObject eclanoplan;
     static public int no = 2;
 
-    private void Awake()
+    private void Start()
     {
         switch (StageDataHolder.NowStageData.StageNumber)
         {
