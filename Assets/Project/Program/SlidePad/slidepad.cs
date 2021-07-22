@@ -105,7 +105,7 @@ public class slidepad : MonoBehaviour
 
     void Controller(Vector2 dir)
     {
-        dir = new Vector2(dir.y, -dir.x);
+        dir = new Vector2(2.0f*dir.y, -dir.x);
 
         Move(dir);
 
