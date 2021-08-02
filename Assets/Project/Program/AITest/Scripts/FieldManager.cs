@@ -77,9 +77,7 @@ public class FieldManager : MonoBehaviour
         {
             json = File.ReadAllText(file_path1);
         }
-        info = JsonUtility.FromJson<FieldInfo>(json);
-
-        
+        info = JsonConvert.DeserializeObject<FieldInfo>(json);
 
         yield return null;
 
