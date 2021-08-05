@@ -135,7 +135,7 @@ public class slidepad : MonoBehaviour
         //Vector3 direction3d = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
         //playerrig.position = direction3d;
 
-        CheckBoundy(player.transform.position, ref direction);//範囲外に出てかつ外に行こうとしているときは動かさない
+        CheckBoundy(player.transform.position, ref velocity);//範囲外に出てかつ外に行こうとしているときは動かさない
         if (velocity.sqrMagnitude > 0.001)
         {
             player.transform.Translate(velocity.x * Time.deltaTime, 0, velocity.y * Time.deltaTime, Space.World);
@@ -147,9 +147,10 @@ public class slidepad : MonoBehaviour
         var diff = new Vector2(x, y) - velocity;
         float deg = Vector2.Dot(velocity, diff) / velocity.magnitude / diff.magnitude;
         float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
-        if (diff.sqrMagnitude > 25 * coeff * coeff / 180 / 180)
+        coeff = coeff * coeff * coeff;
+        if (diff.sqrMagnitude > coeff * coeff)
         {
-            diff = coeff * 25 * diff.normalized / 180;
+            diff = coeff * diff.normalized;
         }
         velocity += diff;
     }
@@ -185,7 +186,7 @@ public class slidepad : MonoBehaviour
     }
     
 
-    void CheckBoundy(Vector3 pos,ref Vector3 dir)
+    void CheckBoundy(Vector3 pos,ref Vector2 dir)
     {
 
         Boundy bound = boundy;
@@ -200,11 +201,11 @@ public class slidepad : MonoBehaviour
         }
         if(pos.z < bound.z_min)
         {
-            if (pos.z + dir.z < pos.z) { dir.z = 0; }
+            if (pos.z + dir.y < pos.z) { dir.y = 0; }
         }
         if(pos.z > bound.z_max)
         {
-            if (pos.z + dir.z > pos.z) { dir.z = 0; }
+            if (pos.z + dir.y > pos.z) { dir.y = 0; }
         }
 
     }
