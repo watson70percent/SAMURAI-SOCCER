@@ -12,13 +12,14 @@ public class Tutorial : MonoBehaviour
     public GameObject samurai;
     public GameObject ball;
     public GameObject firstYellowCard;
-    public GameObject enemy;
-    public Text tutorialText;
-    public Text enemyNumber;
-    public Animator textAnimator;
-    public Animator arrowAnimator;
+    public GameObject enemy;//召喚する敵
+    public Text tutorialText;//チュートリアルで流れるテキスト
+    public Text enemyNumber;//残り敵数(手動で変更)
+    public Animator textAnimator;//テキストを動かして画面外までスライドするアニメーター
+    public Animator arrowAnimator;//チュートリアル中に表示される矢印用のアニメーター
     public CinemachineVirtualCamera spotCamera; //何か焦点を当てるためのカメラ
     public CinemachineVirtualCamera samuraiCamera; //侍を追尾するためのカメラ
+    public GameObject exclamationMark;//敵の位置を指示してくれる！マーク
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,8 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Vector3 destination = new Vector3(10f, 3f, 30f);
         var enemyPrefab = Instantiate(enemy,destination,Quaternion.identity);
+        exclamationMark.transform.position = destination + new Vector3(0f,3f,0f);
+        exclamationMark.SetActive(true);
         //カメラを生成された選手に向ける
         spotCamera.Follow = enemyPrefab.transform;
         spotCamera.LookAt = enemyPrefab.transform;
@@ -46,6 +49,7 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(3f);
         tutorialText.text = "まずはここまで行こう";
         yield return new WaitForSeconds(3f);
+        exclamationMark.SetActive(false);
         //カメラをもとに戻す
         spotCamera.Priority = 9;
         samuraiCamera.Priority = 11;
@@ -87,6 +91,8 @@ public class Tutorial : MonoBehaviour
         destination = new Vector3(50f, 3f, 60f);
         ball.transform.position = destination;
         enemyPrefab = Instantiate(enemy, destination, Quaternion.identity);
+        exclamationMark.transform.position = destination + new Vector3(0f, 3f, 0f);
+        exclamationMark.SetActive(true);
         yield return new WaitForSeconds(1f);
         //カメラを生成された選手に向ける
         spotCamera.Follow = enemyPrefab.transform;
@@ -96,6 +102,7 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(3f);
         tutorialText.text = "次はこいつを斬れ";
         yield return new WaitForSeconds(3f);
+        exclamationMark.SetActive(false);
         //カメラをもとに戻す
         spotCamera.Priority = 9;
         samuraiCamera.Priority = 11;
