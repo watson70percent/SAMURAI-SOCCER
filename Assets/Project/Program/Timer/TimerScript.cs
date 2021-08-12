@@ -26,6 +26,9 @@ public class TimerScript : MonoBehaviour
     public void Timer(StateChangedArg stateChangedArg) {
         switch (stateChangedArg.gameState)
         {
+            case GameState.Standby://時間初期設定
+                Standby();
+                break;
             case GameState.Pause:
                 Pause();
                 break;
@@ -36,6 +39,11 @@ public class TimerScript : MonoBehaviour
                 Reset();
                 break;
         }
+    }
+
+    void Standby()//時間初期設定
+    {
+        timeText.text = ((int)(limitTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(limitTime % 60).ToString("00");
     }
 
     public void Reset()
@@ -69,11 +77,7 @@ public class TimerScript : MonoBehaviour
         gameManager.StateChange += Timer;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
