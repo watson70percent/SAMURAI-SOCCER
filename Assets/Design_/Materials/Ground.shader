@@ -5,6 +5,7 @@
 		[NoScaleOffset]_MainTex("Texture", 2D) = "white" {}
 		[Normal]_BumpMap("NormalMap",2D)="bump"{}
 		_BumpScale("Normal Scale", Range(0, 1)) = 1.0
+		_Color("Color", Color) = (1,1,1,1)
 	}
 		SubShader
 		{
@@ -33,7 +34,7 @@
 				sampler2D _MainTex;
 				sampler2D _BumpMap;
 				half _BumpScale;
-
+				fixed4 _Color;
 
 				struct appdata
 				{
@@ -95,7 +96,8 @@
 					float3 light = normalize(i.lightDir);
 					float diff = max(0, dot(normal, light));
 					col *= shadow * (diff*0.5+0.9);
-					
+					col *= _Color;
+
 					return col;
 				}
 
