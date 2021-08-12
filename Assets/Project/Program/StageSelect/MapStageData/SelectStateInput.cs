@@ -10,6 +10,7 @@ public class SelectStateInput : MonoBehaviour
 {
     public StageSelectBGM bgm;
     public GameObject backWholeMap;
+    public AudioSource audioSourceSE;//SE用のAudioSource
     private List<CinemachineVirtualCamera> _virtualCameras = new List<CinemachineVirtualCamera>();//StageSelectに使用するカメラ群
     private CinemachineBrain _cinemachineBrain;//メインカメラについているやつ
     private WorldName _focusWorld = WorldName.WholeMap;//今どのワールドを見ているのか
@@ -57,6 +58,7 @@ public class SelectStateInput : MonoBehaviour
                 //当たったオブジェクトが適切なものなら画面を拡大し、StageSelect画面へ
                 if (raycastHit.collider.gameObject.tag == "TargetWorld" && raycastHit.collider.gameObject.GetComponent<TargetWorldData>().WorldName != _focusWorld)
                 {
+                    audioSourceSE.Play();
                     StartCoroutine(ChangeCameraView(raycastHit.collider.gameObject.GetComponentInChildren<CinemachineVirtualCamera>(), _cinemachineBrain.m_DefaultBlend.m_Time));
                     _focusWorld = raycastHit.collider.gameObject.GetComponent<TargetWorldData>().WorldName;
                     bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
@@ -92,6 +94,7 @@ public class SelectStateInput : MonoBehaviour
                 //当たったオブジェクトが適切なものなら画面を縮小し、WorldSelect画面へ
                 if (raycastResult.gameObject.GetComponent<BackWholeMap>())
                 {
+                    audioSourceSE.Play();
                     StartCoroutine(ChangeCameraView(raycastResult.gameObject.GetComponent<BackWholeMap>().WholeMapVirtualCamera, _cinemachineBrain.m_DefaultBlend.m_Time));
                     _focusWorld = WorldName.WholeMap;
                     bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
@@ -114,6 +117,7 @@ public class SelectStateInput : MonoBehaviour
                 {
                     if (raycastHit.collider.gameObject.GetComponent<StageData>().StageState != StageState.NotPlayable)
                     {
+                        audioSourceSE.Play();
                         raycastHit.collider.gameObject.GetComponent<StageIconButton>().OnClick();
                         _selectStateManager.StateChangeSignal(SelectState.StagePreview);
                     }
@@ -151,12 +155,14 @@ public class SelectStateInput : MonoBehaviour
             {
                 if (raycastResult.gameObject.name == "Start" && raycastResult.gameObject.GetComponentInParent<StagePreviwScript>())
                 {
+                    audioSourceSE.Play();
                     raycastResult.gameObject.GetComponentInParent<StagePreviwScript>().OnClickStart();
                     _focusWorld = WorldName.WholeMap;
                     _selectStateManager.StateChangeSignal(SelectState.WorldSelect);
                 }
                 else if (raycastResult.gameObject.name == "Close" && raycastResult.gameObject.GetComponentInParent<StagePreviwScript>())
                 {
+                    audioSourceSE.Play();
                     raycastResult.gameObject.GetComponentInParent<StagePreviwScript>().OnClickClose();
                     _selectStateManager.StateChangeSignal(SelectState.StageSelect);
                 }
