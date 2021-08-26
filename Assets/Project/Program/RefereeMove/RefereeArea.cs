@@ -60,12 +60,21 @@ public class RefereeArea : MonoBehaviour
         float ang;
         int count=0;
 
+        Vector3 vec;
+
         for (ang = -maxang; ang <= maxang; ang += deltaang) {
 
             count++;
-            var vec = new Vector3(Mathf.Sin(ang / 360 * 2 * Mathf.PI), 0, Mathf.Cos(ang / 360 * 2 * Mathf.PI))*areaSize;
+            vec = new Vector3(Mathf.Sin(ang / 360 * 2 * Mathf.PI), 0, Mathf.Cos(ang / 360 * 2 * Mathf.PI))*areaSize;
             verticles.Add(vec);
         }
+
+
+        vec = new Vector3(Mathf.Sin(maxang / 360 * 2 * Mathf.PI), 0, Mathf.Cos(maxang / 360 * 2 * Mathf.PI)) * areaSize;
+        verticles.Add(vec);
+        count++;
+
+
         mesh.SetVertices(verticles);
 
         int[] triangles = new int[(count - 1) * 3];

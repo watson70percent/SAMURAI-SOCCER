@@ -26,6 +26,8 @@ public class slidepad : MonoBehaviour
     int fingerID;
     Vector2 velocity;
 
+    public FieldManager field;
+
     void SwitchState(StateChangedArg a)
     {
         state = a.gameState;
@@ -52,7 +54,7 @@ public class slidepad : MonoBehaviour
 
         switch (state)
         {
-            case GameState.Standby: PlayingState(); break;
+            case GameState.Standby: PlayingState(); velocity = Vector3.zero; break;
             case GameState.Playing: PlayingState(); break;
             default: break;
         }
@@ -75,11 +77,15 @@ public class slidepad : MonoBehaviour
 
                 if (dir.magnitude > radius) { dir = dir.normalized * radius; }
 
-                Controller(dir / radius);
+                Controller(5 / radius * dir);
 
                 joyrect.localPosition = joystartposition + dir / scale;
 
             }
+        }
+        else
+        {
+            Controller(Vector2.zero);
         }
     }
 
@@ -105,7 +111,7 @@ public class slidepad : MonoBehaviour
 
     void Controller(Vector2 dir)
     {
-        dir = new Vector2(dir.y, -dir.x);
+        dir = new Vector2(2.0f*dir.y, -dir.x);
 
         Move(dir);
 
@@ -120,7 +126,7 @@ public class slidepad : MonoBehaviour
 
 
         Vector3 direction = new Vector3(dir.x, 0, dir.y);
-
+        CalcRealVec(direction.x, direction.z);
         direction = (direction != Vector3.zero) ? direction : player.transform.forward;
         playerrig.rotation = Quaternion.LookRotation(direction);
 
@@ -129,13 +135,24 @@ public class slidepad : MonoBehaviour
         //Vector3 direction3d = new Vector3(playerrig.position.x + velocity.x * Time.deltaTime, playerrig.position.y, playerrig.position.z + velocity.y * Time.deltaTime);
         //playerrig.position = direction3d;
 
-        CheckBoundy(player.transform.position, ref direction);//範囲外に出てかつ外に行こうとしているときは動かさない
-
-        Vector3 force = direction * speed;
-        if (Vector3.Dot(playerrig.velocity,force.normalized)<speed)
+        CheckBoundy(player.transform.position, ref velocity);//範囲外に出てかつ外に行こうとしているときは動かさない
+        if (velocity.sqrMagnitude > 0.001)
         {
-            playerrig.AddForce(force*30);
+            player.transform.Translate(velocity.x * Time.deltaTime, 0, velocity.y * Time.deltaTime, Space.World);
         }
+    }
+
+    private void CalcRealVec(float x, float y)
+    {
+        var diff = new Vector2(x, y) - velocity;
+        float deg = Vector2.Dot(velocity, diff) / velocity.magnitude / diff.magnitude;
+        float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
+        coeff = coeff * coeff * coeff;
+        if (diff.sqrMagnitude > coeff * coeff)
+        {
+            diff = coeff * diff.normalized;
+        }
+        velocity += diff;
     }
 
 
@@ -169,7 +186,7 @@ public class slidepad : MonoBehaviour
     }
     
 
-    void CheckBoundy(Vector3 pos,ref Vector3 dir)
+    void CheckBoundy(Vector3 pos,ref Vector2 dir)
     {
 
         Boundy bound = boundy;
@@ -184,11 +201,11 @@ public class slidepad : MonoBehaviour
         }
         if(pos.z < bound.z_min)
         {
-            if (pos.z + dir.z < pos.z) { dir.z = 0; }
+            if (pos.z + dir.y < pos.z) { dir.y = 0; }
         }
         if(pos.z > bound.z_max)
         {
-            if (pos.z + dir.z > pos.z) { dir.z = 0; }
+            if (pos.z + dir.y > pos.z) { dir.y = 0; }
         }
 
     }

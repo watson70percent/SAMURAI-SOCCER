@@ -57,6 +57,7 @@ public class SelectStateInput : MonoBehaviour
                 //当たったオブジェクトが適切なものなら画面を拡大し、StageSelect画面へ
                 if (raycastHit.collider.gameObject.tag == "TargetWorld" && raycastHit.collider.gameObject.GetComponent<TargetWorldData>().WorldName != _focusWorld)
                 {
+                    SoundMaster.Instance.PlaySE(0);
                     StartCoroutine(ChangeCameraView(raycastHit.collider.gameObject.GetComponentInChildren<CinemachineVirtualCamera>(), _cinemachineBrain.m_DefaultBlend.m_Time));
                     _focusWorld = raycastHit.collider.gameObject.GetComponent<TargetWorldData>().WorldName;
                     bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
@@ -92,6 +93,7 @@ public class SelectStateInput : MonoBehaviour
                 //当たったオブジェクトが適切なものなら画面を縮小し、WorldSelect画面へ
                 if (raycastResult.gameObject.GetComponent<BackWholeMap>())
                 {
+                    SoundMaster.Instance.PlaySE(0);
                     StartCoroutine(ChangeCameraView(raycastResult.gameObject.GetComponent<BackWholeMap>().WholeMapVirtualCamera, _cinemachineBrain.m_DefaultBlend.m_Time));
                     _focusWorld = WorldName.WholeMap;
                     bgm.ChangeBGM(_focusWorld, _cinemachineBrain.m_DefaultBlend.m_Time);
@@ -114,6 +116,7 @@ public class SelectStateInput : MonoBehaviour
                 {
                     if (raycastHit.collider.gameObject.GetComponent<StageData>().StageState != StageState.NotPlayable)
                     {
+                        SoundMaster.Instance.PlaySE(0);
                         raycastHit.collider.gameObject.GetComponent<StageIconButton>().OnClick();
                         _selectStateManager.StateChangeSignal(SelectState.StagePreview);
                     }
@@ -151,12 +154,14 @@ public class SelectStateInput : MonoBehaviour
             {
                 if (raycastResult.gameObject.name == "Start" && raycastResult.gameObject.GetComponentInParent<StagePreviwScript>())
                 {
+                    SoundMaster.Instance.PlaySE(0);
                     raycastResult.gameObject.GetComponentInParent<StagePreviwScript>().OnClickStart();
                     _focusWorld = WorldName.WholeMap;
                     _selectStateManager.StateChangeSignal(SelectState.WorldSelect);
                 }
                 else if (raycastResult.gameObject.name == "Close" && raycastResult.gameObject.GetComponentInParent<StagePreviwScript>())
                 {
+                    SoundMaster.Instance.PlaySE(0);
                     raycastResult.gameObject.GetComponentInParent<StagePreviwScript>().OnClickClose();
                     _selectStateManager.StateChangeSignal(SelectState.StageSelect);
                 }
