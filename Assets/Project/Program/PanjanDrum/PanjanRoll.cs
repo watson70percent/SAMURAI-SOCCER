@@ -14,8 +14,6 @@ public class PanjanRoll : MonoBehaviour
     public int partMax;
 
     GameManager gameManager;
-    bool isEnd;
-    private string ResultSceneName = "Result";
 
     // Start is called before the first frame update
     void Start()
