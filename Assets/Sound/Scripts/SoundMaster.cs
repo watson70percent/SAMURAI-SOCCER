@@ -37,7 +37,7 @@ public class SoundMaster : MonoBehaviour
     /// <param name="soundIndex">音源番号</param>
     public void PlaySE(int soundIndex)
     {
-        seAudioSource.volume = soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().soundIndex;
+        seAudioSource.volume = soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().soundVolume;
         seAudioSource.PlayOneShot(soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().baseSound);
     }
 

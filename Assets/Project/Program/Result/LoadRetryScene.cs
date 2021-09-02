@@ -18,6 +18,7 @@ public class LoadRetryScene : MonoBehaviour
     /// </summary>
     public void LoadScene()
     {
+        SoundMaster.Instance.PlaySE(0);
         if (_resultManager.NowStageData == null) return;
         baseStageData = _resultManager.NowStageData;
         string retrySceneName = stageSelectData.stageSelectList[(int)baseStageData.WorldName * 3 + baseStageData.StageNumber].gameScene;
