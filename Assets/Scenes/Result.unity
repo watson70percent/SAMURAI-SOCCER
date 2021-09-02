@@ -223,7 +223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -118, y: -122}
+  m_AnchoredPosition: {x: -119, y: -122}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85973010
@@ -15280,7 +15280,7 @@ GameObject:
   - component: {fileID: 1712834232}
   - component: {fileID: 1712834230}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15411,6 +15411,8 @@ MonoBehaviour:
   - {fileID: 1969274112}
   - {fileID: 1453404590}
   background: {fileID: 1029053017}
+  retryButtonTransform: {fileID: 85973009}
+  nextButtonTransform: {fileID: 1712834229}
 --- !u!4 &1810134306
 Transform:
   m_ObjectHideFlags: 0
