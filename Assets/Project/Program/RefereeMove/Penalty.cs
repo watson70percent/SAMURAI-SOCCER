@@ -12,7 +12,7 @@ public class Penalty : MonoBehaviour
     public GameObject gameOverPanel;
 
     GameState state = GameState.Reset;
-    AudioSource refereeAudio;
+    public AudioSource refereeAudio;
     public AudioClip yellowAudioClip, redAudioClip;
 
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class Penalty : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.StateChange += Reset;
 
-        refereeAudio = GameObject.Find("Referee").GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -49,10 +49,15 @@ public class Penalty : MonoBehaviour
         penaltycount++;
         if (penaltycount == 2)
         {
-            refereeAudio.PlayOneShot(redAudioClip);
+            print("A");
+            refereeAudio.PlayOneShot(redAudioClip); //ここがバグの原因
+            print("B");
             SceneManager.sceneLoaded += GameSceneLoaded;
+            print("C");
             gameManager.StateChangeSignal(GameState.Finish);
+            print("D");
             Instantiate(gameOverPanel);
+            print("E");
         }
         else
         {
