@@ -8,6 +8,7 @@ using System.Linq;
 /// </summary>
 public enum WorldName
 {
+    Japan = -1,
     UK = 0,
     China = 1,
     America = 2,

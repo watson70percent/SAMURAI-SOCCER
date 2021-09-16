@@ -12,6 +12,7 @@ public class StageSelectData : ScriptableObject
 [System.Serializable]
 public class StageSelect
 {
+    public int stagenumber;
     public string name;
     public string previewName;
     [TextArea(1, 5)]
