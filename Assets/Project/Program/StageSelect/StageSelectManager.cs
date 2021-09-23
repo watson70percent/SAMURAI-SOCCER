@@ -53,7 +53,7 @@ public class StageSelectManager : MonoBehaviour
         //押されたボタンの番号のデータを返す
         foreach (StageSelect stageSelect in stageSelectData.stageSelectList)
         {
-            if (stageSelect.fieldNumber == index)
+            if (stageSelect.stagenumber == index)
             {
                 item = stageSelect;
             }
