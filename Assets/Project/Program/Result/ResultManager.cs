@@ -30,6 +30,11 @@ public class ResultManager : MonoBehaviour, StageDataReceiver
     public List<Text> texts;
     public Camera background;
 
+    [SerializeField]
+    private RectTransform retryButtonTransform;
+    [SerializeField]
+    private RectTransform nextButtonTransform;
+
 
 
     // Start is called before the first frame update
@@ -43,6 +48,9 @@ public class ResultManager : MonoBehaviour, StageDataReceiver
                 break;
             case Result.Lose:
                 result.text = "敗北";
+                //負けたときはボタンの位置を反転する(左右対称を仮定)
+                retryButtonTransform.anchoredPosition = new Vector2(-retryButtonTransform.anchoredPosition.x, retryButtonTransform.anchoredPosition.y);
+                nextButtonTransform.anchoredPosition = new Vector2(-nextButtonTransform.anchoredPosition.x, nextButtonTransform.anchoredPosition.y);
                 break;
             case Result.Draw:
                 result.text = "引分";

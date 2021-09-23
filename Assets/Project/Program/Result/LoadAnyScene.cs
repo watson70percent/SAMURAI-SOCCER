@@ -13,12 +13,14 @@ public class LoadAnyScene : MonoBehaviour
     /// </param>
     public void LoadScene(string targetSceneName)
     {
+        SoundMaster.Instance.PlaySE(0);
         SceneManager.LoadScene(targetSceneName);
     }
 
 
     public void LoadStartScene(string targetSceneName)
     {
+        SoundMaster.Instance.PlaySE(0);
         if (PlayerPrefs.GetInt("DoneTutorial") == 0)
         {
             LoadScene("Tutorial");

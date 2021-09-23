@@ -114,7 +114,7 @@ public class SelectStateInput : MonoBehaviour
                 //当たったオブジェクトが適切なものならStagePreview画面へ
                 if (raycastHit.collider.gameObject.tag == "TargetStage")
                 {
-                    if (raycastHit.collider.gameObject.GetComponent<StageData>().StageState != StageState.NotPlayable)
+                    if (raycastHit.collider.gameObject.GetComponent<StageData>().WorldName == _focusWorld && raycastHit.collider.gameObject.GetComponent<StageData>().StageState != StageState.NotPlayable)
                     {
                         SoundMaster.Instance.PlaySE(0);
                         raycastHit.collider.gameObject.GetComponent<StageIconButton>().OnClick();
