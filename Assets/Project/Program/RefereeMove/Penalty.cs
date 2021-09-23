@@ -49,15 +49,11 @@ public class Penalty : MonoBehaviour
         penaltycount++;
         if (penaltycount == 2)
         {
-            print("A");
             refereeAudio.PlayOneShot(redAudioClip); //ここがバグの原因
-            print("B");
             SceneManager.sceneLoaded += GameSceneLoaded;
-            print("C");
             gameManager.StateChangeSignal(GameState.Finish);
-            print("D");
             Instantiate(gameOverPanel);
-            print("E");
+
         }
         else
         {
