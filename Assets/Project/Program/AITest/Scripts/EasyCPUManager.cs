@@ -43,7 +43,7 @@ public class EasyCPUManager : MonoBehaviour
     public AudioClip goalSound;
     public AudioClip startSound;
     public TimerScript timer;
-    public GameObject goalCanvas;
+    public GoalText goalCanvas;
 
     /// <summary>
     /// 味方の人数
@@ -186,13 +186,12 @@ public class EasyCPUManager : MonoBehaviour
         audioSource.PlayOneShot(goalSound);
         timer.Pause();
         ball.Goal -= goalEvent;
-        goalCanvas.SetActive(true);
+        goalCanvas.TextContent = "Goal";
         yield return new WaitForSeconds(4);
         ball.Goal += goalEvent;
         gm.StateChangeSignal(GameState.Standby);
         Init(e.Ally);
         yield return new WaitForSeconds(2);
-        goalCanvas.SetActive(false);
         timer.Playing();
         audioSource.PlayOneShot(startSound);
         gm.StateChangeSignal(GameState.Playing);

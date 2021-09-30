@@ -805,8 +805,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2677264473472736779}
-  m_LocalRotation: {x: 0.069676615, y: 0.7036655, z: -0.06967661, w: 0.70366555}
-  m_LocalPosition: {x: -16.57, y: 10, z: 63.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.476051, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596590460850391705}
@@ -835,9 +835,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2654,7 +2654,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8172940443766869344}
-  m_LocalRotation: {x: 0.08639662, y: 0.70180887, z: -0.08639662, w: 0.70180887}
+  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.0863966, w: 0.7018089}
   m_LocalPosition: {x: -36.57, y: 20, z: 63.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7870,19 +7870,30 @@ PrefabInstance:
     - target: {fileID: 2433001006624056906, guid: 3481aaf22b85c304f8086076a27c93b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070350093014370961, guid: 3481aaf22b85c304f8086076a27c93b2,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190220
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3481aaf22b85c304f8086076a27c93b2, type: 3}
---- !u!224 &2677264474702395587 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2433001006624056901, guid: 3481aaf22b85c304f8086076a27c93b2,
+--- !u!114 &6008674687175126277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6307103907673961347, guid: 3481aaf22b85c304f8086076a27c93b2,
     type: 3}
   m_PrefabInstance: {fileID: 352490631036542598}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2677264474702395596 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2433001006624056906, guid: 3481aaf22b85c304f8086076a27c93b2,
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b3e793fe8dc03438815f731ed9a0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &2677264474702395587 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2433001006624056901, guid: 3481aaf22b85c304f8086076a27c93b2,
     type: 3}
   m_PrefabInstance: {fileID: 352490631036542598}
   m_PrefabAsset: {fileID: 0}
@@ -8195,7 +8206,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalCanvas
       value: 
-      objectReference: {fileID: 2677264474702395596}
+      objectReference: {fileID: 6008674687175126277}
     - target: {fileID: 4220772580559016567, guid: adc7cc280ff34dd4aae0a9c929b10607,
         type: 3}
       propertyPath: audioSource
@@ -11301,6 +11312,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295732961764217033, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 295732961764217033, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 295732961764217033, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 295732961764217033, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -11823,6 +11849,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
+        type: 3}
+      propertyPath: goalCanvas
+      value: 
+      objectReference: {fileID: 6008674687175126277}
+    - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
+        type: 3}
+      propertyPath: fadeAnimator
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
         type: 3}
