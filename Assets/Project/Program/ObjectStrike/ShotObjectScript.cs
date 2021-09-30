@@ -7,7 +7,7 @@ public class ShotObjectScript : MonoBehaviour
 {
     private string ResultSceneName = "Result";
 
-    float velocity = 30;//速さ
+    [SerializeField]float velocity = 30;//速さ
 	//float size;
     float movedLength;//動いた距離
     float groundWidth=120;//グラウンドの幅
