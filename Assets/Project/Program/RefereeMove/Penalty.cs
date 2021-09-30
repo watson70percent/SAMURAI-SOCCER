@@ -14,6 +14,9 @@ public class Penalty : MonoBehaviour
     GameState state = GameState.Reset;
     public AudioSource refereeAudio;
     public AudioClip yellowAudioClip, redAudioClip;
+    [SerializeField]
+    private Animator fadeAnimator; //警告文のfadeを行うanimator
+    public GoalText goalCanvas;
 
     // Start is called before the first frame update
 
@@ -31,22 +34,16 @@ public class Penalty : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        gameManager.StateChange += Reset;
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameManager.StateChange += Reset;        
     }
 
     public void YellowCard()
     {
         if (state != GameState.Playing) { return; }
+        goalCanvas.TextContent = "反則";
         yellowCard[penaltycount].SetActive(true);
         penaltycount++;
+        StartCoroutine(FadeStart());
         if (penaltycount == 2)
         {
             refereeAudio.PlayOneShot(redAudioClip); //ここがバグの原因
@@ -66,5 +63,12 @@ public class Penalty : MonoBehaviour
         ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
         resultManager.SetResult(Result.Lose, "反則負け!");
         SceneManager.sceneLoaded -= GameSceneLoaded;
+    }
+
+    IEnumerator FadeStart()
+    {
+        fadeAnimator.SetBool("Fade", true);
+        yield return new WaitForSeconds(1.5f);
+        fadeAnimator.SetBool("Fade", false);
     }
 }
