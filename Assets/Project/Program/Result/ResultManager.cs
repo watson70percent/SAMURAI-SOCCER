@@ -18,6 +18,7 @@ public class ResultManager : MonoBehaviour, StageDataReceiver
     public void StageDataReceive(BaseStageData stageData)
     {
         NowStageData = stageData;
+        Debug.Log("Set stage data : worldName = " + NowStageData.WorldName + ", StageNumber = " + NowStageData.StageNumber);
     }
 
     public Result ResultState { get; private set; } = Result.Undefined;
@@ -59,7 +60,7 @@ public class ResultManager : MonoBehaviour, StageDataReceiver
 
         //今日のひとこと
         samuraiPhrase.text = samuraiWordBase.samuraiwords[Random.Range(0,samuraiWordBase.samuraiwords.Count)];
-
+        Debug.Log("Now data : worldName = " + NowStageData.WorldName + ", StageNumber = " + NowStageData.StageNumber + ", Result = " + ResultState);
     }
 
     public void SetResult(Result resultState,string resultText)

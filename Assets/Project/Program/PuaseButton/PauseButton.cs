@@ -39,6 +39,8 @@ public class PauseButton : MonoBehaviour
 
     public void RestartButton()
     {
+        var data = GameObject.Find("DefaultStage").GetComponent<StageDataHolder>();
+        data.SetStageData(StageDataHolder.NowStageData);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
