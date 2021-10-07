@@ -14,6 +14,7 @@ public class UISafeAreaSupport : MonoBehaviour
         {
             var scale = new Vector2(safeArea.width / screenArea.width, safeArea.height / screenArea.height);
             var s = scale.x < scale.y ? scale.x : scale.y;
+            Debug.Log("Scaled to " + s);
             var diff = new Vector2(safeArea.x, safeArea.y);
             foreach (var obj in FindObjectsOfType<CanvasScaler>())
             {

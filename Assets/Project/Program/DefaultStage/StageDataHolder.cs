@@ -17,6 +17,7 @@ public class StageDataHolder : MonoBehaviour
     public void SetStageData(BaseStageData stageData)
     {
         nowStageData = stageData;
+        Debug.Log("Hold stage data : worldName = " + nowStageData.WorldName + ", StageNumber = " + nowStageData.StageNumber);
         SceneManager.sceneLoaded += GameSceneLoaded;
     }
 
@@ -24,7 +25,10 @@ public class StageDataHolder : MonoBehaviour
     void GameSceneLoaded(Scene next, LoadSceneMode mode)
     {
         var resultManager=GameObject.Find("ResultManager");
-        resultManager.GetComponent<StageDataReceiver>().StageDataReceive(nowStageData);
+        if (resultManager != null)
+        {
+            resultManager.GetComponent<StageDataReceiver>().StageDataReceive(nowStageData);
+        }
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
     }

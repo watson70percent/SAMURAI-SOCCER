@@ -239,7 +239,7 @@ public class EasyCPUManager : MonoBehaviour
     /// 選手を殺す。一応瞬時復活もさせる。
     /// </summary>
     /// <param name="dead">死ぬ対象の選手</param>
-    public void kill(GameObject dead)
+    public void Kill(GameObject dead)
     {
         bool ally = dead.GetComponent<EasyCPU>().status.ally;
         opp.Remove(dead);
@@ -250,13 +250,19 @@ public class EasyCPUManager : MonoBehaviour
 
         if (ally)
         {
-            Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateSpornPoint));
-            team_stock.member.RemoveAt(0);
+            if (team_stock.member.Any())
+            {
+                Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateSpornPoint));
+                team_stock.member.RemoveAt(0);
+            }
         }
         else
         {
-            Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OppornentSpornPoint));
-            opp_stock.member.RemoveAt(0);
+            if (opp_stock.member.Any())
+            {
+                Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OppornentSpornPoint));
+                opp_stock.member.RemoveAt(0);
+            }
         }
     }
 
@@ -268,7 +274,7 @@ public class EasyCPUManager : MonoBehaviour
     /// <return>復活した選手</return>
     public GameObject Sporn(PersonalStatus status, Vector3 pos)
     {
-        GameObject temp = default;
+        GameObject temp;
         if (status.ally)
         {
             temp = Instantiate(teammate, pos, Quaternion.identity * field.rotation.rotation , team_p);
