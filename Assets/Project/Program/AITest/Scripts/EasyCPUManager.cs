@@ -6,6 +6,7 @@ using System.Linq;
 using System.IO;
 using Unity.Collections;
 using System;
+using UnityEngine.UI;
 
 /// <summary>
 /// CPUを操作するクラス
@@ -44,6 +45,7 @@ public class EasyCPUManager : MonoBehaviour
     public AudioClip startSound;
     public TimerScript timer;
     public GoalText goalCanvas;
+    public Image goalImage;
 
     /// <summary>
     /// 味方の人数
@@ -187,6 +189,7 @@ public class EasyCPUManager : MonoBehaviour
         timer.Pause();
         ball.Goal -= goalEvent;
         goalCanvas.TextContent = "Goal";
+        StartCoroutine(GoalBlack());
         yield return new WaitForSeconds(4);
         ball.Goal += goalEvent;
         gm.StateChangeSignal(GameState.Standby);
@@ -195,6 +198,17 @@ public class EasyCPUManager : MonoBehaviour
         timer.Playing();
         audioSource.PlayOneShot(startSound);
         gm.StateChangeSignal(GameState.Playing);
+    }
+
+    private IEnumerator GoalBlack()
+    {
+        float time = 0;
+        while (time < 5)
+        {
+            goalImage.color = new Color(0, 0, 0, 1 - Mathf.Abs(4 - time) * 2);
+            yield return null;
+            time += Time.deltaTime;
+        }
     }
 
 
