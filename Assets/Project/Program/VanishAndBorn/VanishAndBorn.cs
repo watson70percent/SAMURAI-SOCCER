@@ -24,7 +24,11 @@ public class VanishAndBorn : MonoBehaviour
         var dis = (transform.position-center).magnitude;
         if (dis > 100)
         {
-            GameObject.Find("GameManager").GetComponent<EasyCPUManager>().Kill(this.gameObject);
+            var easyCpuManager = GameObject.Find("GameManager").GetComponent<EasyCPUManager>();
+            if (easyCpuManager != null)
+            {
+                easyCpuManager.Kill(this.gameObject);
+            }
         }
     }
 }
