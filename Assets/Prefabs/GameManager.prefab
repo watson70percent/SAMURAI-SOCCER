@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5439825935636402346}
   - component: {fileID: 7159700491716796176}
   - component: {fileID: 351355455175569090}
+  - component: {fileID: 6587844239011527973}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -32,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4220772580559016566}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 97.94543, y: -104.79692, z: 68.94157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -64,6 +65,7 @@ MonoBehaviour:
   startSound: {fileID: 8300000, guid: af0d39a7d4c92de478a0630662715e0a, type: 3}
   timer: {fileID: 4220772580559016563}
   goalCanvas: {fileID: 0}
+  goalImage: {fileID: 0}
 --- !u!114 &4220772580559016561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,5 +184,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 774cfac75860f034cae736d88c719e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6587844239011527973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220772580559016566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f078313a25fbe74a901a1d88cbe9323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
