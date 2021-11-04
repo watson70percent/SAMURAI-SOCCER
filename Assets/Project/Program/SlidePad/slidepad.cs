@@ -96,8 +96,15 @@ public class slidepad : MonoBehaviour
         PointerEventData pointerEventData = baseEventData as PointerEventData;
         fingerID = pointerEventData.pointerId;
         isdragged = true;
-        Touch touch = Input.GetTouch(fingerID);
-        slidestartposition = touch.position;
+        try
+        {
+            Touch touch = Input.GetTouch(fingerID);
+            slidestartposition = touch.position;
+        }
+        catch
+        {
+
+        }
     }
 
 
