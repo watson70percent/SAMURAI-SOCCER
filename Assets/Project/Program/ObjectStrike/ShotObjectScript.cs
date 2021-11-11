@@ -31,8 +31,6 @@ public class ShotObjectScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.CurrentGameState != GameState.Standby)
-        {
             //一定スピードで動かす
             gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
             movedLength += Time.deltaTime * velocity;
@@ -42,10 +40,9 @@ public class ShotObjectScript : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
-        }
-        
-
+            if(gameManager.CurrentGameState == GameState.Standby) Destroy(this.gameObject);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(gameManager.CurrentGameState == GameState.Playing)
