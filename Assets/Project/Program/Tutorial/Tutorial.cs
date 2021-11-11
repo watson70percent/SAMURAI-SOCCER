@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,18 +11,21 @@ public class Tutorial : MonoBehaviour
     public GameObject samurai;
     public GameObject ball;
     public GameObject firstYellowCard;
-    public GameObject enemy;//召喚する敵
-    public Text tutorialText;//チュートリアルで流れるテキスト
-    public Text enemyNumber;//残り敵数(手動で変更)
-    public Animator textAnimator;//テキストを動かして画面外までスライドするアニメーター
-    public Animator arrowAnimator;//チュートリアル中に表示される矢印用のアニメーター
+    public GameObject enemy; //召喚する敵
+    public Text tutorialText; //チュートリアルで流れるテキスト
+    public Text enemyNumber; //残り敵数(手動で変更)
+    public Text timerText; //残り時間表示テキスト
+    public Animator textAnimator; //テキストを動かして画面外までスライドするアニメーター
+    public Animator arrowAnimator; //チュートリアル中に表示される矢印用のアニメーター
     public CinemachineVirtualCamera spotCamera; //何か焦点を当てるためのカメラ
     public CinemachineVirtualCamera samuraiCamera; //侍を追尾するためのカメラ
-    public GameObject exclamationMark;//敵の位置を指示してくれる！マーク
+    public GameObject exclamationMark; //敵の位置を指示してくれる！マーク
 
     // Start is called before the first frame update
     void Start()
     {
+        timerText.text = "∞";
+        timerText.fontSize = 45;
         gameManager = GetComponent<GameManager>();
         StartCoroutine(Runner());
     }
@@ -69,7 +71,7 @@ public class Tutorial : MonoBehaviour
         textAnimator.SetTrigger("ReturnText");
         tutorialText.text = "サムライが行うのはただ斬ることのみ";
         yield return new WaitForSeconds(3f);
-        tutorialText.text = "試しにこいつをひとおもいに斬れ";
+        tutorialText.text = "試しに目の前の人をひとおもいに斬れ";
         yield return new WaitForSeconds(3f);
         textAnimator.SetTrigger("SlideText");
         yield return new WaitForSeconds(2f);
@@ -77,7 +79,7 @@ public class Tutorial : MonoBehaviour
         tutorialText.text = "";
         gameManager.StateChangeSignal(GameState.Playing);
         //敵を切り倒して行って距離移動するまで待機
-        while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400)
+        while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
         {
             yield return null;
         }
@@ -100,7 +102,7 @@ public class Tutorial : MonoBehaviour
         spotCamera.Priority = 11;
         samuraiCamera.Priority = 9;
         yield return new WaitForSeconds(3f);
-        tutorialText.text = "次はこいつを斬れ";
+        tutorialText.text = "次は奥のやつを斬れ";
         yield return new WaitForSeconds(3f);
         exclamationMark.SetActive(false);
         //カメラをもとに戻す
@@ -122,12 +124,12 @@ public class Tutorial : MonoBehaviour
         textAnimator.SetTrigger("ReturnText");
         tutorialText.text = "しまった！れふぇりーに見られてしまった";
         yield return new WaitForSeconds(3f);
-        tutorialText.text = "もう一度見つかると退場だ、気をつけろ";
+        tutorialText.text = "2回見つかると退場だ、気をつけろ";
         yield return new WaitForSeconds(3f);
         tutorialText.text = "最後に確認する";
         yield return new WaitForSeconds(3f);
         arrowAnimator.gameObject.SetActive(true);
-        tutorialText.text = "これは残りの敵数だ";
+        tutorialText.text = "これは残りの敵の数だ";
         yield return new WaitForSeconds(3f);
         tutorialText.text = "0になれば日本の勝利だ";
         yield return new WaitForSeconds(3f);
