@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class AvoidCarScript : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag != "Ball" && other.tag != "Player")
         {
             Rigidbody rb = other.transform.GetComponent<Rigidbody>();
-            Vector3 v3 = Vector3.zero;
-            v3.y += 300;
+           
             if (rb!=null)
             {
-                rb.AddForce(v3);
+                Vector3 v3 = rb.velocity;
+                v3.y = 10;
+                rb.velocity = v3;
             }
         }
     }
