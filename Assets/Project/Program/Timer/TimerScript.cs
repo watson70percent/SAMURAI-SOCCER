@@ -13,7 +13,7 @@ public class TimerScript : MonoBehaviour
     private AudioSource audioSource;
     public bool playing;//試合中のフラグ
     bool end = false;//試合終了のフラグ
-    public float elapsedTime;//経過時間
+    public float elapsedTime=0;//経過時間
     public float limitTime;//制限時間
 
     public GameObject displayText;//時間を表示させるもの
@@ -43,7 +43,8 @@ public class TimerScript : MonoBehaviour
 
     void Standby()//時間初期設定
     {
-        timeText.text = ((int)(limitTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(limitTime % 60).ToString("00");
+        int displayTime = (int)(limitTime - elapsedTime);
+        timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
     }
 
     public void Reset()
