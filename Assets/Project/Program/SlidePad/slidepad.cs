@@ -152,20 +152,20 @@ public class slidepad : MonoBehaviour
     private void CalcRealVec(float x, float y)
     {
         var diff = new Vector2(x, y) - velocity;
-        float deg = Vector2.Dot(velocity.normalized, diff.normalized);
+        var deg = Mathf.Acos(Vector2.Dot(velocity.normalized, diff.normalized));
+        var c = Mathf.Pow((deg - Mathf.PI) / Mathf.PI, 4) * 2 - 1;
 
         float coeff=0;
         if (field != null)
         {
-            coeff = (1 + deg) / 2 * field.info.GetAccUpCoeff(player.transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(player.transform.position);
+            coeff = (1 + c) / 2 * field.info.GetAccUpCoeff(player.transform.position) + (1 - c) / 2 * field.info.GetAccDownCoeff(player.transform.position);
         }
         else
         {
             coeff = 1;//よくわからんけどnull用にくっつけた
         }
         coeff *= coeff;
-        coeff *= coeff;
-        if (diff.sqrMagnitude > coeff * coeff * 25)
+        if (diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 25)
         {
             diff = coeff * diff.normalized;
         }
