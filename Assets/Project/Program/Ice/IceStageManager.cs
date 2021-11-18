@@ -11,6 +11,8 @@ public class IceStageManager : MonoBehaviour
     public Material greenMaterial;
     public Material iceMaterial;
     public GameObject eclanoplan;
+    public GameObject mountObject;
+    public GameObject iceObject;
     static public int no = 2;
 
     private void Start()
@@ -21,16 +23,22 @@ public class IceStageManager : MonoBehaviour
                 stageManager.groundTexture = greenTexture;
                 stageManager.groundMaterial = greenMaterial;
                 eclanoplan.SetActive(false);
+                iceObject.SetActive(false);
+                mountObject.SetActive(true);
                 break;
             case 1:
                 stageManager.groundTexture = iceTexture;
                 stageManager.groundMaterial = iceMaterial;
                 eclanoplan.SetActive(false);
+                iceObject.SetActive(true);
+                mountObject.SetActive(false);
                 break;
             case 2:
                 stageManager.groundTexture = iceTexture;
                 stageManager.groundMaterial = iceMaterial;
                 eclanoplan.SetActive(true);
+                iceObject.SetActive(true);
+                mountObject.SetActive(false);
                 break;
 
         }

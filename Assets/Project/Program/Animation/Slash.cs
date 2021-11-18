@@ -51,9 +51,15 @@ public class Slash : MonoBehaviour
         if (other.gameObject.GetComponent<EasyCPU>()?.status.ally == false)
         {
             var dir = other.transform.position - transform.position;
-            other.gameObject.GetComponent<Rigidbody>()?.AddForce(dir * 1000);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
             GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
             other.GetComponent<EasyCPU>().Attacked();
+        }
+        else if (other.gameObject.tag == "TutorialEnemy")
+        {
+            var dir = other.transform.position - transform.position;
+            other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+            GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
         }
     }
 }

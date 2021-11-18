@@ -96,7 +96,8 @@ public class Snow : MonoBehaviour
             emission.rateOverTimeMultiplier = 800 / 3.0f * Mathf.Exp(damage);
             pad.speed = 10 - (damage < 1.6 ? 0 : (damage - 1.6f) * 2);
             var volume = damage / 4.8f;
-            audioSource.volume = (volume < 0.05) ? 0.05f : volume;
+            audioSource.volume = (volume < 0.2) ? 0 : volume;
+            SoundMaster.Instance.BGMBolume = (volume < 0.05) ? 1 : 1 - volume;
         }
     }
 
