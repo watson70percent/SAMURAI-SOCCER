@@ -13,9 +13,9 @@ public class SoundMaster : MonoBehaviour
     private static AudioSource seAudioSource;
 
     private static SoundMaster instance;
-    public static SoundMaster Instance 
+    public static SoundMaster Instance
     {
-        get 
+        get
         {
             if (instance == null)
             {
@@ -31,14 +31,33 @@ public class SoundMaster : MonoBehaviour
         }
     }
 
+    public float seBolume = 1;
+
+    private int bgmSelectedIndex = -1;
+    private float bgmBolume = 1;
+
+    public float BGMBolume { 
+        get { 
+            return bgmBolume; 
+        } 
+        set { 
+            bgmBolume = value;
+            var bgm = soundDatabase.soundDatas.FirstOrDefault(x => x.soundIndex == bgmSelectedIndex);
+            if(bgm != default)
+            {
+                bgmAudioSource.volume = bgm.soundVolume * bgmBolume;
+            }
+        } 
+    }
+
     /// <summary>
     /// SEを流す
     /// </summary>
     /// <param name="soundIndex">音源番号</param>
     public void PlaySE(int soundIndex)
     {
-        seAudioSource.volume = soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().soundVolume;
-        seAudioSource.PlayOneShot(soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().baseSound);
+        seAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume * seBolume;
+        seAudioSource.PlayOneShot(soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound);
     }
 
     /// <summary>
@@ -47,8 +66,9 @@ public class SoundMaster : MonoBehaviour
     /// <param name="soundIndex">音源番号</param>
     public void PlayBGM(int soundIndex)
     {
-        bgmAudioSource.volume = soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().soundVolume;
-        bgmAudioSource.PlayOneShot(soundDatabase.soundDatas.Where(x => x.soundIndex == soundIndex).First().baseSound);
+        bgmSelectedIndex = soundIndex;
+        bgmAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume;
+        bgmAudioSource.PlayOneShot(soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound);
     }
 
     private void OnDestroy()
