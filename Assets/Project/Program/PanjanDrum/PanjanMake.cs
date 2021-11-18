@@ -9,8 +9,9 @@ public class PanjanMake : MonoBehaviour
     public GameObject panjan;
     bool panjanExist;
     bool isEnd;
-    Vector3 respone = new Vector3(30, 2.0f, 110);
+    Vector3 respone = new Vector3(30, 2, 95);
     private string ResultSceneName = "Result";
+    Quaternion quaternion = new Quaternion(0,1,0,0);
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class PanjanMake : MonoBehaviour
     {
         if(gameManager.CurrentGameState == GameState.Playing && !panjanExist)
         {
-            Instantiate(panjan,respone,Quaternion.identity);
+            Instantiate(panjan,respone,quaternion);
             panjanExist = true;
         }
         if(gameManager.CurrentGameState == GameState.Standby)
@@ -38,7 +39,6 @@ public class PanjanMake : MonoBehaviour
         {
             //SceneManagerのイベントに勝利リザルト処理を追加
             isEnd = true;
-            //GetComponent<AudioSource>().Play();
             SceneManager.sceneLoaded += GameSceneLoaded;
             gameManager.StateChangeSignal(GameState.Finish);
             Time.timeScale = 0.2f;
