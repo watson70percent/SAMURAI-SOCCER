@@ -26,12 +26,12 @@ public class PanjanRoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Move();
     }
 
     void Move()
     {
+        if (gameManager.CurrentGameState == GameState.Pause) return;
         if (gameManager.CurrentGameState == GameState.Standby && !exploded) {
             selfExplode();
         }
@@ -42,8 +42,6 @@ public class PanjanRoll : MonoBehaviour
         // その回転角を_maxAngleまでに制限した回転を作り、それをrotationにセットする
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotSpeed * Time.deltaTime);
 
-        //transform.rotation = RotateTowards(this.transform.rotation, player.rotation, 10*Time.deltaTime);
-        //    LookAt(player, Vector3.up);
         rot.transform.Rotate(moveSpeed, 0, 0);
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
@@ -71,17 +69,14 @@ public class PanjanRoll : MonoBehaviour
         int index = 0;
         foreach (Transform part in rot.transform)
         {
-            if (index < 5) Instantiate(fire, part.position,Quaternion.identity,part);
-            //part.gameObject.AddComponent<Rigidbody>().AddForce(Random.Range(-1000, 1000), Random.Range(0, 1000), Random.Range(-1000, 1000));
-            part.gameObject.AddComponent<PanjanExplode>();
-            //part.gameObject.AddComponent<Rigidbody>().AddForce((player.transform.position + Vector3.up * 2 - part.position).normalized*1000);
+            if (index < 15)
+            {
+                Instantiate(fire, part.position, Quaternion.identity, part);
+                part.gameObject.AddComponent<PanjanExplode>();
+            }
             part.gameObject.AddComponent<Rigidbody>().AddForce(transform.forward * 1000);
             index++;
         }
-        //for (int i = 0; i < partMax; i++)
-        //{
-        //    Instantiate(part, transform.position, Quaternion.identity, null).GetComponent<Rigidbody>().AddForce(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
-        //}
         StartCoroutine(waitDestroy());
     }
 
@@ -91,9 +86,6 @@ public class PanjanRoll : MonoBehaviour
         exploded = true;
         foreach (Transform part in rot.transform)
         {
-            //part.gameObject.AddComponent<Rigidbody>().AddForce(Random.Range(-1000, 1000), Random.Range(0, 1000), Random.Range(-1000, 1000));
-            //part.gameObject.AddComponent<PanjanExplode>();
-            //part.gameObject.AddComponent<Rigidbody>().AddForce((player.transform.position + Vector3.up * 2 - part.position).normalized*1000);
             part.gameObject.AddComponent<Rigidbody>().AddForce(transform.up * 1000);
         }
         StartCoroutine(waitDestroy());

@@ -14,10 +14,6 @@ public class ShotObjectScript : MonoBehaviour
     GameManager gameManager;
     bool isEnd;
 
-    //   public ShotObjectScript()
-    //{
-
-    //}
 
     // Start is called before the first frame update
     void Start()
@@ -31,16 +27,17 @@ public class ShotObjectScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            //一定スピードで動かす
-            gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
-            movedLength += Time.deltaTime * velocity;
+        if (gameManager.CurrentGameState == GameState.Standby) Destroy(this.gameObject);
+        if (gameManager.CurrentGameState == GameState.Pause) return;
+        //一定スピードで動かす
+        gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
+        movedLength += Time.deltaTime * velocity;
 
-            //グラウンドを通り過ぎたら消す
-            if ((movedLength) > (groundWidth + 2) && !isEnd)
-            {
-                Destroy(this.gameObject);
-            }
-            if(gameManager.CurrentGameState == GameState.Standby) Destroy(this.gameObject);
+        //グラウンドを通り過ぎたら消す
+        if ((movedLength) > (groundWidth + 2) && !isEnd)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,12 +59,9 @@ public class ShotObjectScript : MonoBehaviour
                 //リザルトへのシーン遷移
                 StartCoroutine(BlowAway(other.gameObject));
                 StartCoroutine(GoResult());
-
             }
         }
-   
     }
-
 
 
     //スロー演出からのシーン遷移
