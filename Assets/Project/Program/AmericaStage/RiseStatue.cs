@@ -39,17 +39,28 @@ public class RiseStatue : MonoBehaviour
         CurrentStatueMode = StatueMode.Rise;
         while (gameObject.transform.position.y < 0.95f)
         {
-            if (_gameManager.CurrentGameState == GameState.Standby) yield break;
             yield return 0.1f;
-            gameObject.transform.position += new Vector3(0f, 1.0f, 0f);
+            try
+            {
+                gameObject.transform.position += new Vector3(0f, 1.0f, 0f);
+            }
+            catch
+            {
+                yield break;
+            }
         }
         CurrentStatueMode = StatueMode.FallDown;
         while (gameObject.transform.eulerAngles.z < 90)
         {
-            if (_gameManager.CurrentGameState == GameState.Standby) yield break;
             yield return 0.01f;
-            gameObject.transform.eulerAngles += new Vector3(0f, 0f, 1.0f);
-
+            try
+            {
+                gameObject.transform.eulerAngles += new Vector3(0f, 0f, 1.0f);
+            }
+            catch
+            {
+                yield break;
+            }
         }
         CurrentStatueMode = StatueMode.Idle;
         yield return 3.0f;
