@@ -13,6 +13,7 @@ public enum StatueMode {Idle, Rise, FallDown };
 public class RiseStatue : MonoBehaviour
 {
     private GameManager _gameManager;
+    public GameObject _parentObj;
 
     /// <summary>
     /// 現在の自由の女神の状態
@@ -30,7 +31,7 @@ public class RiseStatue : MonoBehaviour
         //もしゴールが入ったらこのオブジェクトを消去
         if (_gameManager.CurrentGameState == GameState.Standby)
         {
-            Destroy(gameObject);
+            Destroy(_parentObj);
         }
     }
 
@@ -64,6 +65,6 @@ public class RiseStatue : MonoBehaviour
         }
         CurrentStatueMode = StatueMode.Idle;
         yield return 3.0f;
-        Destroy(gameObject);
+        Destroy(_parentObj);
     }
 }
