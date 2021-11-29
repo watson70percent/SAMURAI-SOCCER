@@ -32,7 +32,7 @@ public class ShadeInStatue : MonoBehaviour
                 yield break;
             }
         }
-        while (_riseStatue.CurrentStatueMode == StatueMode.FallDown)
+        if (_riseStatue.CurrentStatueMode == StatueMode.FallDown)
         {
             _spriteRenderer.color = new Color(1f, 1f, 1f, 0.8f);
         }
