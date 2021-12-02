@@ -9,9 +9,11 @@ using UnityEngine.SceneManagement;
 public class BulletFunction : MonoBehaviour
 {
     private bool _isActive = true;//true 稼働中
+    private Vector3 _tmpvelocity = Vector3.zero; //一時的に速度を保持する
 
     private GameManager _gameManager;
     private BallControler _ball;
+    private Rigidbody _rb;
 
     private AudioSource _audioSource;//弾丸についてるAudioSource
 
@@ -21,6 +23,7 @@ public class BulletFunction : MonoBehaviour
     {
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
+        _rb = GetComponent<Rigidbody>();
         _audioSource = gameObject.GetComponent<AudioSource>();
         _ball.Goal += InActiveFunction;
         StartCoroutine(DestroyOneself());
@@ -32,6 +35,22 @@ public class BulletFunction : MonoBehaviour
         if (_gameManager.CurrentGameState == GameState.Standby)
         {
             Destroy(gameObject);
+        }
+        else if (_gameManager.CurrentGameState == GameState.Pause)
+        {
+            if (_rb.velocity != Vector3.zero)
+            {
+                _tmpvelocity = _rb.velocity;
+                _rb.velocity = Vector3.zero;
+            }
+        }
+        else if (_gameManager.CurrentGameState == GameState.Playing)
+        {
+            if (_rb.velocity == Vector3.zero)
+            {
+                _rb.velocity = _tmpvelocity;
+                _tmpvelocity = Vector3.zero;
+            }
         }
     }
 
