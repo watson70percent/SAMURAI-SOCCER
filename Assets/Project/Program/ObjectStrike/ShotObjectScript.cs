@@ -12,7 +12,8 @@ public class ShotObjectScript : MonoBehaviour
     float movedLength;//動いた距離
     float groundWidth=120;//グラウンドの幅
     GameManager gameManager;
-    bool isEnd;
+    bool isEnd,_isActive=true;
+    private BallControler _ball;
 
 
     // Start is called before the first frame update
@@ -22,6 +23,9 @@ public class ShotObjectScript : MonoBehaviour
         movedLength = 0;
         //gameManager取得
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
+        _ball.Goal += InActiveFunction;
     }
 
     // Update is called once per frame
@@ -40,9 +44,15 @@ public class ShotObjectScript : MonoBehaviour
         }
     }
 
+    public void InActiveFunction(object sender, GoalEventArgs goalEventArgs)
+    {
+        _isActive = false;
+        _ball.Goal -= InActiveFunction;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(gameManager.CurrentGameState == GameState.Playing)
+        if(gameManager.CurrentGameState == GameState.Playing && _isActive == true) 
         {
             //    //衝突がプレイヤーだったらゲームオーバー
             if (other.gameObject.tag == "Player")
