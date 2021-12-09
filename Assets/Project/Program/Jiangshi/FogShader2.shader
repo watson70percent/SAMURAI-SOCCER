@@ -49,11 +49,12 @@
 
 				float x = i.uv.x - 0.5;
 				float y = i.uv.y - 0.5;
-				float parameter = sqrt(x*x + y * y)*2;
+				float parameter = sqrt(x*x + y * y) * 2 + abs(sin(_Time * 50 * i.uv.x*i.uv.y))*0.2 + abs(sin(_Time * 78* (1 - i.uv.x*0.3)*(1 - i.uv.y*0.3)))*0.2 + 0.3;
+
 
 
 				parameter = saturate(parameter);
-				return lerp(col,fixed4(0.3,0.3,0.5,1),0.6);
+				return lerp(col,fixed4(0.3,0.3,0.5,1),parameter);
 			}
 
 			ENDCG
