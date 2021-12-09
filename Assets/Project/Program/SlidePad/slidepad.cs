@@ -154,6 +154,10 @@ public class slidepad : MonoBehaviour
         var diff = new Vector2(x, y) - velocity;
         var deg = Mathf.Acos(Vector2.Dot(velocity.normalized, diff.normalized));
         var c = Mathf.Pow((deg - Mathf.PI) / Mathf.PI, 4) * 2 - 1;
+        if(Mathf.Abs(x) < 0.01 && Mathf.Abs(y) < 0.01)
+        {
+            c = -1;
+        }
 
         float coeff=0;
         if (field != null)
