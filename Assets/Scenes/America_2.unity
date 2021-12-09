@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ef5beb930969a403fb5fd22b5983aa3b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -666,7 +666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1066013496
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -751,23 +751,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c9166b198d6d91f468f73149da2a880d,
+        type: 2}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 887207981733908625, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -922,7 +928,7 @@ PrefabInstance:
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70180887
+      value: 0.7018089
       objectReference: {fileID: 0}
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -932,12 +938,12 @@ PrefabInstance:
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70180887
+      value: 0.7018088
       objectReference: {fileID: 0}
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.08639662
+      value: -0.086396605
       objectReference: {fileID: 0}
     - target: {fileID: 6943768959257520682, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -978,6 +984,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720120096575165463, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c9166b198d6d91f468f73149da2a880d,
+        type: 2}
+    - target: {fileID: 8720120096575165463, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720120096575165463, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8812370543220125398, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
