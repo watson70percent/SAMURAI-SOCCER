@@ -8,9 +8,13 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class CollisionWithStatue : MonoBehaviour
 {
+    private bool _isActive = true; //true稼働状態
+
     private GameManager _gameManager;
 
     private RiseStatue _riseStatue;
+
+    private BallControler _ball;
 
     private AudioSource _audioSource;//自由の女神についてるAudioSource
 
@@ -20,14 +24,16 @@ public class CollisionWithStatue : MonoBehaviour
     void Start()
     {
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
         _riseStatue = gameObject.GetComponentInParent<RiseStatue>();
         _audioSource = gameObject.GetComponentInParent<AudioSource>();
+        _ball.Goal += DisableFunction;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         //プレイヤ―との衝突処理
-        if (_gameManager.CurrentGameState != GameState.Finish && _riseStatue.CurrentStatueMode == StatueMode.FallDown)
+        if (_gameManager.CurrentGameState != GameState.Finish && _riseStatue.CurrentStatueMode == StatueMode.FallDown && _isActive)
         {
             if (other.gameObject.tag == "Player")
             {
@@ -58,6 +64,17 @@ public class CollisionWithStatue : MonoBehaviour
         resultManager.SetResult(Result.Lose, "つぶされてしまった!");
 
         SceneManager.sceneLoaded -= GameSceneLoaded;
+    }
+
+    /// <summary>
+    /// ゴールが入ったら衝突時の機能を停止する
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="goalEventArgs"></param>
+    public void DisableFunction(object sender, GoalEventArgs goalEventArgs)
+    {
+        _isActive = false;
+        _ball.Goal -= DisableFunction;
     }
 
     /// <summary>
