@@ -25,7 +25,7 @@ public class BulletFunction : MonoBehaviour
         _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
         _rb = GetComponent<Rigidbody>();
         _audioSource = gameObject.GetComponent<AudioSource>();
-        _ball.Goal += InActiveFunction;
+        _ball.Goal += DisableFunction;
         StartCoroutine(DestroyOneself());
     }
 
@@ -101,10 +101,10 @@ public class BulletFunction : MonoBehaviour
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="goalEventArgs"></param>
-    public void InActiveFunction(object sender, GoalEventArgs goalEventArgs)
+    public void DisableFunction(object sender, GoalEventArgs goalEventArgs)
     {
         _isActive = false;
-        _ball.Goal -= InActiveFunction;
+        _ball.Goal -= DisableFunction;
     }
 
     /// <summary>
