@@ -6,6 +6,7 @@ using UnityEngine;
 public class CallStatueOfLiberty : MonoBehaviour
 {
     private GameManager _gameManager;//Scene内のGameManagerクラス
+    private IEnumerator _enumerator; //コルーチンに追加するIEnumratorを保持しておく
 
     public GameObject StatuePrefab;//自由の女神プレハブ 
 
@@ -17,7 +18,13 @@ public class CallStatueOfLiberty : MonoBehaviour
             Debug.LogError("GameManagerが存在しません");
         }
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        StartCoroutineForPlayingState.AddTaskIEnumrator(CallStatueCoroutine());
+        _enumerator = CallStatueCoroutine();
+        StartCoroutineForPlayingState.AddTaskIEnumrator(_enumerator);
+    }
+
+    private void OnDestroy()
+    {
+        StartCoroutineForPlayingState.RemoveTaskIEnumrator(_enumerator);
     }
 
     /// <summary>

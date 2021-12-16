@@ -73,4 +73,16 @@ public class StartCoroutineForPlayingState : MonoBehaviour
         taskEnumerators.Add(enumerator);
         taskWaitTime.Add(enumerator, 0);
     }
+
+    /// <summary>
+    /// 追加したIEnumratorの破棄
+    /// </summary>
+    /// <param name="enumerator">
+    /// 処理してほしいIEnumerator
+    /// </param>
+    public static void RemoveTaskIEnumrator(IEnumerator enumerator)
+    {
+        taskWaitTime.Remove(enumerator);
+        taskEnumerators.Remove(enumerator);
+    }
 }

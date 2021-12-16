@@ -9,12 +9,20 @@ public class ShadeInStatue : MonoBehaviour
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
 
+    private IEnumerator _enumerator;
+
     private float time = 0f;
 
     private void Start()
     {
-        StartCoroutineForPlayingState.AddTaskIEnumrator(ShadeStatueCoroutine());
+        _enumerator = ShadeStatueCoroutine();
+        StartCoroutineForPlayingState.AddTaskIEnumrator(_enumerator);
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.1f, gameObject.transform.position.z);
+    }
+
+    private void OnDestroy()
+    {
+        StartCoroutineForPlayingState.RemoveTaskIEnumrator(_enumerator);
     }
 
     IEnumerator ShadeStatueCoroutine()

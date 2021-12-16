@@ -14,6 +14,7 @@ public class FireHypnoticBullets : MonoBehaviour
     private float _fireDuration;//弾を撃つ間隔(初期値はInspectorで指定)
     private GameManager _gameManager;//Scene内のGameManagerクラス
     private GameObject _Samurai;//侍のオブジェクト
+    private IEnumerator _enumerator; //コルーチンに追加するIEnumratorを保持しておく
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,13 @@ public class FireHypnoticBullets : MonoBehaviour
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         _Samurai = GameObject.FindGameObjectWithTag("Player");
 
-        StartCoroutineForPlayingState.AddTaskIEnumrator(FireBulletSycle());
+        _enumerator = FireBulletSycle();
+        StartCoroutineForPlayingState.AddTaskIEnumrator(_enumerator);
+    }
+
+    private void OnDestroy()
+    {
+        StartCoroutineForPlayingState.RemoveTaskIEnumrator(_enumerator);
     }
 
     /// <summary>

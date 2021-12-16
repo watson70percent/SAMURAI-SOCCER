@@ -13,6 +13,7 @@ public enum StatueMode {Idle, Rise, FallDown };
 public class RiseStatue : MonoBehaviour
 {
     private GameManager _gameManager;
+    private IEnumerator _enumerator;
     public GameObject _parentObj;
 
     /// <summary>
@@ -23,7 +24,8 @@ public class RiseStatue : MonoBehaviour
     private void Start()
     {
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        StartCoroutineForPlayingState.AddTaskIEnumrator(RiseStatueCoroutine());
+        _enumerator = RiseStatueCoroutine();
+        StartCoroutineForPlayingState.AddTaskIEnumrator(_enumerator);
     }
 
     private void Update()
@@ -33,6 +35,11 @@ public class RiseStatue : MonoBehaviour
         {
             Destroy(_parentObj);
         }
+    }
+
+    private void OnDestroy()
+    {
+        StartCoroutineForPlayingState.RemoveTaskIEnumrator(_enumerator);
     }
 
     IEnumerator RiseStatueCoroutine()
