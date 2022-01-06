@@ -46,6 +46,7 @@ public class slidepad : MonoBehaviour
         velocity = Vector3.zero;
         scale = transform.localScale.x;
         radius = 50 * scale;
+        Debug.Log("radius : " + radius);
     }
 
     // Update is called once per frame
@@ -168,10 +169,11 @@ public class slidepad : MonoBehaviour
         {
             coeff = 1;//よくわからんけどnull用にくっつけた
         }
-        coeff *= coeff;
-        if (diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 25)
+
+        if (diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 50)
         {
-            diff = coeff * diff.normalized;
+            Debug.LogWarning("滑ってる : " + (diff.x * diff.x / 4 + diff.y * diff.y) + ", " + coeff * coeff * 50);
+            diff = coeff * 0.1f * diff.normalized;
         }
         velocity += diff;
     }
