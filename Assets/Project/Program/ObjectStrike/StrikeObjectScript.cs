@@ -11,13 +11,23 @@ public class StrikeObjectScript : MonoBehaviour
     float[] shotPosZ = {15.5f, 50, 84.3f };//グラウンドの道路の座標
     public GameManager gameManager;
     public GameObject emergencySign;
-    
 
+    bool isEnd, _isActive = true;
+    private BallControler _ball;
+
+    private void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
+        _ball.Goal += InActiveFunction;
+
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(gameManager.CurrentGameState == GameState.Playing)
+        if(gameManager.CurrentGameState == GameState.Playing && _isActive==true)
         {
             emergencySign.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x + 1, 6.0f, transform.position.z);
             //時間が経ったらobject生成まで警告
@@ -39,8 +49,19 @@ public class StrikeObjectScript : MonoBehaviour
             //時間増やす
             elapsedTime += Time.deltaTime;
         }
-        
+        if(gameManager.CurrentGameState == GameState.Standby && _isActive ==false)
+        {
+            _isActive = true;
+        }
     }
+
+    public void InActiveFunction(object sender, GoalEventArgs goalEventArgs)
+    {
+        _isActive = false;
+        _ball.Goal -= InActiveFunction;
+    }
+
+
 
 
 
