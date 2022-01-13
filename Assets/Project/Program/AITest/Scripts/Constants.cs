@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+
 using UnityEngine;
 
 /// <summary>
@@ -17,6 +18,17 @@ public static class Constants
     /// 相手のゴール
     /// </summary>
     public static readonly Vector3 OppornentGoalPoint = new Vector3(30, 0, 100);
+
+    /// <summary>
+    /// 相手がスポーンするランダム幅
+    /// </summary>
+    public static readonly float OppornentSpornRandMinX = -30;
+
+    public static readonly float OppornentSpornRandMaxX = 30;
+
+    public static readonly float OppornentSpornRandMinZ = 0;
+
+    public static readonly float OppornentSpornRandMaxZ = 20;
 
     /// <summary>
     /// フィールドの幅
@@ -48,7 +60,7 @@ public static class Constants
         get
         {
             var vec = OurGoalPoint - OppornentGoalPoint;
-            return OurGoalPoint + vec * 0.01f+Vector3.up;
+            return OurGoalPoint + vec * 0.01f + Vector3.up;
         }
     }
 
@@ -60,7 +72,8 @@ public static class Constants
         get
         {
             var vec = OppornentGoalPoint - OurGoalPoint;
-            return OppornentGoalPoint + vec * 0.01f+Vector3.up;
+            var rand = new Vector3(Random.Range(OppornentSpornRandMinX, OppornentSpornRandMaxX), 0, Random.Range(OppornentSpornRandMinZ, OppornentSpornRandMaxZ));
+            return OppornentGoalPoint + rand + vec * 0.01f + Vector3.up;
         }
     }
 
