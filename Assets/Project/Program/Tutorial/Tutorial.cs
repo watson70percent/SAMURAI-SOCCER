@@ -102,7 +102,7 @@ public class Tutorial : MonoBehaviour
         spotCamera.Priority = 11;
         samuraiCamera.Priority = 9;
         yield return new WaitForSeconds(3f);
-        tutorialText.text = "次は奥のやつを斬れ";
+        tutorialText.text = "次はあっちのやつを斬れ";
         yield return new WaitForSeconds(3f);
         exclamationMark.SetActive(false);
         //カメラをもとに戻す
