@@ -68,7 +68,8 @@ public class SoundMaster : MonoBehaviour
     {
         bgmSelectedIndex = soundIndex;
         bgmAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume;
-        bgmAudioSource.PlayOneShot(soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound);
+        bgmAudioSource.clip = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound;
+        bgmAudioSource.Play();
     }
 
     private void OnDestroy()
