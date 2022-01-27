@@ -154,7 +154,7 @@ public class slidepad : MonoBehaviour
     {
         var diff = new Vector2(x, y) - velocity;
         var deg = Mathf.Acos(Vector2.Dot(velocity.normalized, diff.normalized));
-        var c = Mathf.Pow((deg - Mathf.PI) / Mathf.PI, 4) * 2 - 1;
+        var c = (deg - Mathf.PI) / Mathf.PI * 2 - 1;
         if(Mathf.Abs(x) < 0.01 && Mathf.Abs(y) < 0.01)
         {
             c = -1;
@@ -170,10 +170,10 @@ public class slidepad : MonoBehaviour
             coeff = 1;//よくわからんけどnull用にくっつけた
         }
 
-        if (diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 50)
+        if (velocity.sqrMagnitude > 1 && diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 50)
         {
-            Debug.LogWarning("滑ってる : " + (diff.x * diff.x / 4 + diff.y * diff.y) + ", " + coeff * coeff * 50);
-            diff = coeff * 0.1f * diff.normalized;
+            Debug.LogWarning("滑ってる : " + (diff.x * diff.x / 4 + diff.y * diff.y) + ", " + coeff * coeff * 50  + "," + (x * x * 0.1f + y * y * 0.4f + 3));
+            diff = coeff / (x * x * 0.1f + y * y * 0.4f + 3) * diff.normalized;
         }
         velocity += diff;
     }
