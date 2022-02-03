@@ -1,4 +1,7 @@
 apiRules:
+- include:
+    uidRegex: ^Global
+    type: Namespace
 - exclude:
     uidRegex: ^System\.Object
     type: Type
@@ -15,4 +18,11 @@ apiRules:
     uidRegex: ^UnityEngine\.MonoBehaviour
     type: Type
 - exclude:
+    uidRegex: ^UnityEditor\.AssetPostprocessor
+    type: Type
+- exclude:
     uidRegex: ^UnityEditor\.EditorWindow
+    type: Type
+- exclude:
+    uidRegex: ^UnityEngine\.ScriptableObject
+    type: Type

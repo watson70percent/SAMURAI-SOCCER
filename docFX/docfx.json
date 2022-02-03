@@ -2,12 +2,16 @@
     "metadata": [{
         "src": [{
             "files": [
-                "src/**.csproj"
-            ]
+                "**/Assembly-CSharp.csproj",
+                "**/Assembly-CSharp-Editor.csproj"
+            ],
+            "src": "../"
         }],
         "dest": "api",
+        "filter": "filterConfig.yml",
+        "shouldSkipMarkup": false,
         "disableGitFeatures": false,
-        "disableDefaultFilter": true,
+        "disableDefaultFilter": false,
         "force": true
     }],
     "build": {
@@ -20,7 +24,7 @@
             {
                 "files": [
                     "articles/**.md",
-                    "articles/**/toc.yml",
+                    "articles/toc.yml",
                     "toc.yml",
                     "*.md"
                 ]
@@ -41,7 +45,6 @@
             ]
         }],
         "dest": "../docs/",
-        "filter": "filterConfig.yml",
         "globalMetadataFiles": [],
         "fileMetadataFiles": [],
         "template": [
