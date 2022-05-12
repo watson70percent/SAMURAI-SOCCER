@@ -9,113 +9,119 @@ namespace SamuraiSoccer.Event
     /// <summary>
     /// 試合中のイベントを管理
     /// </summary>
-    public class InGameEvent
+    public static class InGameEvent
     {
-        private Subject<Unit> m_resetSubject = new Subject<Unit>();
+        private static Subject<Unit> m_resetSubject = new Subject<Unit>();
+        private static IObservable<Unit> m_resetShareObservable = m_resetSubject.Share();
 
         /// <summary>
         /// ResetイベントのSubscribe先
         /// </summary>
-        public IObservable<Unit> Reset
+        public static IObservable<Unit> Reset
         {
-            get { return m_resetSubject; }
+            get { return m_resetShareObservable; }
         }
 
         /// <summary>
         /// Resetのイベントを発行
         /// </summary>
-        public void ResetOnNext()
+        public static void ResetOnNext()
         {
             m_resetSubject.OnNext(Unit.Default);
         }
 
-        private Subject<Unit> m_standbySubject = new Subject<Unit>();
+        private static Subject<Unit> m_standbySubject = new Subject<Unit>();
+        private static IObservable<Unit> m_standbyShareObservable = m_standbySubject.Share();
 
         /// <summary>
         /// StandbyイベントのSubscribe先
         /// </summary>
-        public IObservable<Unit> Standby
+        public static IObservable<Unit> Standby
         {
-            get { return m_standbySubject; }
+            get { return m_standbyShareObservable; }
         }
 
         /// <summary>
         /// Standbyイベントを発行
         /// </summary>
-        public void StandbyOnNext()
+        public static void StandbyOnNext()
         {
             m_standbySubject.OnNext(Unit.Default);
         }
 
-        private Subject<Unit> m_playSubject = new Subject<Unit>();
+        private static Subject<Unit> m_playSubject = new Subject<Unit>();
+        private static IObservable<Unit> m_playShareObservable = m_playSubject.Share();
 
         /// <summary>
         /// PlayイベントのSubscribe先
         /// </summary>
-        public IObservable<Unit> Play
+        public static IObservable<Unit> Play
         {
-            get { return m_playSubject; }
+            get { return m_playShareObservable; }
         }
 
         /// <summary>
         /// Playイベントを発行
         /// </summary>
-        public void PlayOnNext()
+        public static void PlayOnNext()
         {
             m_playSubject.OnNext(Unit.Default);
         }
 
-        private Subject<Unit> m_goalSubject = new Subject<Unit>();
+        private static Subject<Unit> m_goalSubject = new Subject<Unit>();
+        private static IObservable<Unit> m_goalShareObservable = m_goalSubject.Share();
 
         /// <summary>
         /// GoalイベントのSubscribe先
         /// </summary>
-        public IObservable<Unit> Goal
+        public static IObservable<Unit> Goal
         {
-            get { return m_goalSubject; }
+            get { return m_goalShareObservable; }
         }
 
         /// <summary>
         /// Goalイベントの発行
         /// </summary>
-        public void GoalOnNext()
+        public static void GoalOnNext()
         {
             m_goalSubject.OnNext(Unit.Default);
         }
 
-        private Subject<bool> m_pauseSubject = new Subject<bool>();
+        private static Subject<bool> m_pauseSubject = new Subject<bool>();
+        private static IObservable<bool> m_pauseShareObservable = m_pauseSubject.Share();
 
         /// <summary>
         /// PauseイベントのSubscribe先 true:一時停止, false:解除 
         /// </summary>
-        public IObservable<bool> Pause
+        public static IObservable<bool> Pause
         {
-            get { return m_pauseSubject; }
+            get { return m_pauseShareObservable; }
         }
 
         /// <summary>
         /// Pauseイベントの発行
         /// </summary>
         /// <param name="isPause">true:一時停止, false:解除</param>
-        public void PauseOnNext(bool isPause)
+        public static void PauseOnNext(bool isPause)
         {
             m_pauseSubject.OnNext(isPause);
         }
 
-        private Subject<Unit> m_finishSubject = new Subject<Unit>();
+        private static Subject<Unit> m_finishSubject = new Subject<Unit>();
+        private static IObservable<Unit> m_finishShareObservable = m_finishSubject.Share();
 
         /// <summary>
         /// FinishイベントのSubscribe先
         /// </summary>
-        public IObservable<Unit> Finish
+        public static IObservable<Unit> Finish
         {
-            get { return m_finishSubject; }
+            get { return m_finishShareObservable; }
         }
 
         /// <summary>
         /// Finishイベントの発行
         /// </summary>
-        public void FinishOnNext()
+        public static void FinishOnNext()
         {
             m_finishSubject.OnNext(Unit.Default);
         }
