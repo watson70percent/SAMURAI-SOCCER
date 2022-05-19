@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UniRx;
 
 public class TimerScript : MonoBehaviour
 {
@@ -19,9 +20,11 @@ public class TimerScript : MonoBehaviour
     public GameObject displayText;//時間を表示させるもの
     public Text timeText;//時間を表示させるもの
 
-
+    InGameEvent inGameEvent;
 
     public GameManager gameManager;
+
+
 
     public void Timer(StateChangedArg stateChangedArg) {
         switch (stateChangedArg.gameState)
