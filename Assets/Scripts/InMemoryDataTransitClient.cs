@@ -15,13 +15,15 @@ namespace SamuraiSoccer
         /// <inheritdoc/>
         public T Get(string key)
         {
-            return strage[key];
+            var ret = strage[key];
+            strage.Remove(key);
+            return ret;
         }
 
         /// <inheritdoc/>
         public bool TryGet(string key, out T value)
         {
-            return strage.TryGetValue(key, out value);
+            return strage.Remove(key, out value);
         }
 
         /// <inheritdoc/>
@@ -34,7 +36,9 @@ namespace SamuraiSoccer
         /// <inheritdoc/>
         public async UniTask<T> GetAsync(string key)
         {
-            return strage[key];
+            var ret = strage[key];
+            strage.Remove(key);
+            return ret;
         }
 
         /// <inheritdoc/>
