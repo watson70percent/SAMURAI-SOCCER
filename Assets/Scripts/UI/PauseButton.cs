@@ -1,61 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 using UnityEngine.SceneManagement;
-
+using SamuraiSoccer.Event;
 
 public class PauseButton : MonoBehaviour
 {
     public GameObject pausePanel;
-    GameManager gameManager;
+
     
 
-    public bool goalFlag = false;
+    public bool enablePause = false;
 
-    GameState state = GameState.Reset;
-    void SwitchState(StateChangedArg a)
-    {
-        state = a.gameState;
-        print(this.gameObject.name);
-        if (state == GameState.Playing)
-        {
-            goalFlag = false;
-        }
-    }
+
     int countTest=0;
 
-    public void Goal(object sender, GoalEventArgs e)
-    {
-        goalFlag = true;
-        
-    }
+
 
 
 
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        gameManager.StateChange += SwitchState;
-        var ballControler = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
-        ballControler.Goal += Goal;
+        InGameEvent.Goal.Subscribe(x => { enablePause = false; });
+        InGameEvent.Play.Subscribe(x => { enablePause = true; });
+        InGameEvent.Finish.Subscribe(x => { enablePause = false; });
+        InGameEvent.Standby.Subscribe(x => { enablePause = false; });
+        InGameEvent.Pause.Subscribe(isPause => { enablePause = !isPause; });
 
     }
 
     public void OnClick()
     {
-        if (state != GameState.Playing || goalFlag) { return; }
+        if (!enablePause) { return; }
 
         pausePanel.SetActive(true);
-        gameManager.StateChangeSignal(GameState.Pause);
         this.gameObject.SetActive(false);
-        
+
+        InGameEvent.PauseOnNext(true);
+
         Time.timeScale = 1e-10f;
+
     }
 
     public void ContinueButton()
     {
         Time.timeScale = 1;
-        gameManager.StateChangeSignal(GameState.Playing);
+        InGameEvent.PauseOnNext(false);
         pausePanel.SetActive(false);
         this.gameObject.SetActive(true);
     }
@@ -63,8 +54,8 @@ public class PauseButton : MonoBehaviour
     public void RestartButton()
     {
         Time.timeScale = 1;
-        var data = GameObject.Find("DefaultStage").GetComponent<StageDataHolder>();
-        data.SetStageData(StageDataHolder.NowStageData);
+        
+        InGameEvent.ResetOnNext();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
