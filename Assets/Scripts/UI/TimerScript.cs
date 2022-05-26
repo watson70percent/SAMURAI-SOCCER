@@ -1,4 +1,4 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,12 +9,12 @@ namespace SamuraiSoccer.UI
 {
     public class TimerScript : MonoBehaviour
     {
-        bool playing;//è©¦åˆä¸­ã®ãƒ•ãƒ©ã‚°
-        bool end = false;//è©¦åˆçµ‚äº†ã®ãƒ•ãƒ©ã‚°
-        float elapsedTime = 0;//çµŒéæ™‚é–“
-        [SerializedField] float limitTime;//åˆ¶é™æ™‚é–“
-        [SerializedField] GameObject displayText;//æ™‚é–“ã‚’è¡¨ç¤ºã•ã›ã‚‹ã‚‚ã®
-        public Text timeText;//æ™‚é–“ã‚’è¡¨ç¤ºã•ã›ã‚‹ã‚‚ã®
+        bool playing;//‡’†‚Ìƒtƒ‰ƒO
+        bool end = false;//‡I—¹‚Ìƒtƒ‰ƒO
+        float elapsedTime = 0;//Œo‰ßŠÔ
+        [SerializedField] float limitTime;//§ŒÀŠÔ
+        [SerializedField] GameObject displayText;//ŠÔ‚ğ•\¦‚³‚¹‚é‚à‚Ì
+        public Text timeText;//ŠÔ‚ğ•\¦‚³‚¹‚é‚à‚Ì
 
         private void Start()
         {
