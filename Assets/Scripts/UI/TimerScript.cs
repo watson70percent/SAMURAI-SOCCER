@@ -1,132 +1,64 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UniRx;
+using SamuraiSoccer.Event;
 
-public class TimerScript : MonoBehaviour
+namespace SamuraiSoccer.UI
 {
-    private string ResultSceneName = "Result";
-    [SerializeField]
-    private AudioClip finishSound;
-    [SerializeField]
-    private AudioSource audioSource;
-    public bool playing;//試合中のフラグ
-    bool end = false;//試合終了のフラグ
-    public float elapsedTime=0;//経過時間
-    public float limitTime;//制限時間
+    public class TimerScript : MonoBehaviour
+    {
+        bool playing;//�������̃t���O
+        bool end = false;//�����I���̃t���O
+        float elapsedTime = 0;//�o�ߎ���
+        [SerializedField] float limitTime;//��������
+        [SerializedField] GameObject displayText;//���Ԃ�\�����������
+        public Text timeText;//���Ԃ�\�����������
 
-    public GameObject displayText;//時間を表示させるもの
-    public Text timeText;//時間を表示させるもの
-
-
-
-    public GameManager gameManager;
-
-    public void Timer(StateChangedArg stateChangedArg) {
-        switch (stateChangedArg.gameState)
+        private void Start()
         {
-            case GameState.Standby://時間初期設定
-                Standby();
-                break;
-            case GameState.Pause:
-                Pause();
-                break;
-            case GameState.Playing:
-                Playing();
-                break;
-            case GameState.Reset:
-                Reset();
-                break;
-        }
-    }
-
-    void Standby()//時間初期設定
-    {
-        int displayTime = (int)(limitTime - elapsedTime);
-        timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
-    }
-
-    public void Reset()
-    {
-        elapsedTime = 0;
-    }
-
-    public bool isTimeUp()//タイムアップか否かを返す  true:タイムアップ false:まだ
-    {
-        return end;
-    }
-
-    public void setTimer(int sec)//時間をセットする  (int 分　int 秒)
-    {
-        limitTime = sec;
-        //end = false;
-    }
-
-    public void Pause()//停止する
-    {
-        playing = false;
-    }
-
-    public void Playing()//停止解除する
-    {
-        playing = true;
-    }
-
-    private void Awake()
-    {
-        gameManager.StateChange += Timer;
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (playing && !end)
-        {
-            if (limitTime > elapsedTime)
+            InGameEvent.Reset.Subscribe(_ =>
             {
-                elapsedTime += Time.deltaTime;
-                //Debug.Log(elapsedTime);
+                elapsedTime = 0;
+            });
+            InGameEvent.Standby.Subscribe(_ =>
+            {
                 int displayTime = (int)(limitTime - elapsedTime);
                 timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
-
-            }
-            else
+            });
+            InGameEvent.Pause.Subscribe(_ =>
+            {
+                playing = false;
+            });
+            InGameEvent.Play.Subscribe(_ =>
+            {
+                playing = true;
+            });
+            InGameEvent.Finish.Subscribe(_ =>
             {
                 playing = false;
                 end = true;
-                //FinishStateに移動していないなら(移動したらもうこの辺の処理は止める)
-                if (gameManager.CurrentGameState != GameState.Finish)
+            });
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (playing && !end)
+            {
+                if (limitTime > elapsedTime)
                 {
-                    //SceneManagerのイベントにTimeUpリザルト処理を追加
-                    SceneManager.sceneLoaded += GameSceneLoaded;
-                    gameManager.StateChangeSignal(GameState.Finish);
-                    Time.timeScale = 0.2f;
-                    audioSource.clip = finishSound;
-                    audioSource.Play();
-                    //リザルトへのシーン遷移
-                    StartCoroutine(GoResult());
+                    elapsedTime += Time.deltaTime;
+                    //Debug.Log(elapsedTime);
+                    int displayTime = (int)(limitTime - elapsedTime);
+                    timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
+                }
+                else
+                {
+                    InGameEvent.FinishOnNext();
                 }
             }
         }
-       
-    }
-
-    IEnumerator GoResult()
-    {
-        yield return new WaitForSeconds(1);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(ResultSceneName);
-    }
-
-    //TimeUpリザルト用の処理
-    void GameSceneLoaded(Scene next, LoadSceneMode mode)
-    {
-        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.SetResult(Result.Lose,"時間切れ!");
-
-        SceneManager.sceneLoaded -= GameSceneLoaded;
     }
 }
