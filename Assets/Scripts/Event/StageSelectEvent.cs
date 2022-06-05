@@ -60,10 +60,11 @@ namespace SamuraiSoccer.Event
     }
 
     /// <summary>
-    /// ステージ(国名)
+    /// ステージ(国名or全体)
     /// </summary>
     public enum Stage
     {
+        World,
         UK,
         China,
         USA,

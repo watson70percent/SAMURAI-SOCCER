@@ -24,7 +24,7 @@ public class StageSelectManager : MonoBehaviour
     public GameObject prefabButton;
 
     //stageselectのデータ(public)
-    public StageSelectData stageSelectData;
+    public StagePreviewDatas stageSelectData;
 
 
     // Start is called before the first frame update
@@ -49,9 +49,9 @@ public class StageSelectManager : MonoBehaviour
 
     public (string stName, string summary, Sprite stagePreview, SceneObject scene)ButtonDataSet(int index)
     {
-        StageSelect item = new StageSelect();
+        StagePreviewData item = new StagePreviewData();
         //押されたボタンの番号のデータを返す
-        foreach (StageSelect stageSelect in stageSelectData.stageSelectList)
+        foreach (StagePreviewData stageSelect in stageSelectData.stageSelectList)
         {
             if (stageSelect.stagenumber == index)
             {
