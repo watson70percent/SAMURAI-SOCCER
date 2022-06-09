@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Team
+
+namespace SamuraiSoccer.SoccerGame.AI
 {
-    public List<PersonalStatus> member = new List<PersonalStatus>();
+    public class Team
+    {
+        public List<PersonalStatus> member = new List<PersonalStatus>();
+    }
 }
