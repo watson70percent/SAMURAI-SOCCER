@@ -53,6 +53,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             //試合Sceneに必要データの転送
             InMemoryDataTransitClient<int> fieldNumberTransitClient = new InMemoryDataTransitClient<int>();
             fieldNumberTransitClient.Set("fieldNumber", m_currentStagePreviewData.fieldNumber);
+            fieldNumberTransitClient.Set("stageNumber", m_currentStagePreviewData.stageNumber);
             InMemoryDataTransitClient<string> opponentNameTransmitClient = new InMemoryDataTransitClient<string>();
             opponentNameTransmitClient.Set("oppnentName", m_currentStagePreviewData.oppnentName);
             SceneManager.LoadScene(m_currentStagePreviewData.gameScene);

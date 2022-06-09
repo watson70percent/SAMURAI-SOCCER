@@ -13,7 +13,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
     [System.Serializable]
     public class StagePreviewData
     {
-        public int stagenumber; //ステージ番号(全ステージで通し番号)
+        public int stageNumber; //ステージ番号(全ステージで通し番号)
         public string name;
         public string previewName; //表示名
         [TextArea(1, 5)]
