@@ -3,34 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public interface StageDataReceiver
+namespace SamuraiSoccer.StageContents
 {
-    void StageDataReceive(BaseStageData stageData);
-}
-
-public class StageDataHolder : MonoBehaviour
-{
-
-    static BaseStageData nowStageData;
-
-    public static BaseStageData NowStageData { get => nowStageData; }
-    public void SetStageData(BaseStageData stageData)
+    public interface StageDataReceiver
     {
-        nowStageData = stageData;
-        Debug.Log("Hold stage data : worldName = " + nowStageData.WorldName + ", StageNumber = " + nowStageData.StageNumber);
-        SceneManager.sceneLoaded += GameSceneLoaded;
+        void StageDataReceive(BaseStageData stageData);
     }
 
-
-    void GameSceneLoaded(Scene next, LoadSceneMode mode)
+    public class StageDataHolder : MonoBehaviour
     {
-        var resultManager=GameObject.Find("ResultManager");
-        if (resultManager != null)
+
+        static BaseStageData nowStageData;
+
+        public static BaseStageData NowStageData { get => nowStageData; }
+        public void SetStageData(BaseStageData stageData)
         {
-            resultManager.GetComponent<StageDataReceiver>().StageDataReceive(nowStageData);
+            nowStageData = stageData;
+            Debug.Log("Hold stage data : worldName = " + nowStageData.WorldName + ", StageNumber = " + nowStageData.StageNumber);
+            SceneManager.sceneLoaded += GameSceneLoaded;
         }
 
-        SceneManager.sceneLoaded -= GameSceneLoaded;
-    }
 
+        void GameSceneLoaded(Scene next, LoadSceneMode mode)
+        {
+            var resultManager = GameObject.Find("ResultManager");
+            if (resultManager != null)
+            {
+                resultManager.GetComponent<StageDataReceiver>().StageDataReceive(nowStageData);
+            }
+
+            SceneManager.sceneLoaded -= GameSceneLoaded;
+        }
+
+    }
 }

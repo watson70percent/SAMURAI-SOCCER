@@ -1,35 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
+using System.Threading;
+using SamuraiSoccer;
 
-public class StageDataSave : MonoBehaviour
+
+
+namespace SamuraiSoccer.StageContents.Result
 {
-
-    private void Start()
+    public class StageDataSave : MonoBehaviour
     {
-        StartCoroutine(Save());
-    }
 
-
-    IEnumerator Save()
-    {
-        Result result;
-        while ((result=GetComponent<ResultManager>().ResultState) == Result.Undefined)
+        private void Start()
         {
-            yield return null;
+            Save(this.GetCancellationTokenOnDestroy()).Forget();
         }
 
-        if (result == Result.Win)
+
+
+        async UniTask Save(CancellationToken cancellation_token)
         {
-            while (GetComponent<ResultManager>().NowStageData ==null )
+            Result result;
+            while ((result = GetComponent<ResultManager>().ResultState) == Result.Undefined)
             {
-                yield return null;
+                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
 
-            StageDataManager.SaveStageData(GetComponent<ResultManager>().NowStageData);
+            if (result == Result.Win)
+            {
+                InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
+                int fieldNumber = stageNumberTransitionClient.Get(StorageKey.KEY_FIELDNUMBER);
+                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
 
-           
+
+                new InFileTransmitClient<int>().Set(StorageKey.KEY_FIELDNUMBER, stageNumber);
+
+            }
         }
-
     }
 }
+

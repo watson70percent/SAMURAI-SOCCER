@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UniRx;
-using SamuraiSoccer.Event;
 using System;
 
 namespace SamuraiSoccer.UI
