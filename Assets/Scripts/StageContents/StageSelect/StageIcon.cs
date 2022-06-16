@@ -21,6 +21,13 @@ namespace SamuraiSoccer.StageContents.StageSelect
     {
         [SerializeField]
         private int m_stageNumber;
+
+        [SerializeField]
+        private SpriteRenderer m_spriteRenderer;
+
+        [SerializeField]
+        private Sprite m_monoImage;
+
         /// <summary>
         ///  Inspectorから設定するこのステージの番号
         /// </summary>
@@ -41,6 +48,10 @@ namespace SamuraiSoccer.StageContents.StageSelect
         private void Start()
         {
             //状態によってステージのアイコンを変更
+            if (StageState == StageState.NotPlayable)
+            {
+                m_spriteRenderer.sprite = m_monoImage;
+            }
         }
     }
 }
