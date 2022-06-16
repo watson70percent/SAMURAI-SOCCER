@@ -6,6 +6,7 @@ using System.Threading;
 using SamuraiSoccer;
 
 
+
 namespace SamuraiSoccer.StageContents.Result
 {
     public class StageDataSave : MonoBehaviour
@@ -29,10 +30,11 @@ namespace SamuraiSoccer.StageContents.Result
             if (result == Result.Win)
             {
                 InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
-                int stageNumber =stageNumberTransitionClient.Get(TODO)
+                int fieldNumber = stageNumberTransitionClient.Get(StorageKey.KEY_FIELDNUMBER);
+                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
 
 
-                new InFileTransmitClient<int>().Set(TODO, stageNumber);
+                new InFileTransmitClient<int>().Set(StorageKey.KEY_FIELDNUMBER, stageNumber);
 
             }
         }
