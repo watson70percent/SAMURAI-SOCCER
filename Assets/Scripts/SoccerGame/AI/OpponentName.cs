@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 敵チームの名前の保存場所
-/// </summary>
-public static class OpponentName
+
+namespace SamuraiSoccer.SoccerGame.AI
 {
     /// <summary>
-    /// 敵チームの名前
+    /// 敵チームの名前の保存場所
     /// </summary>
-    public static string name = "opponent";
+    public static class OpponentName
+    {
+        /// <summary>
+        /// 敵チームの名前
+        /// </summary>
+        public static string name = "opponent";
+    }
 }
