@@ -2,34 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using SamuraiSoccer.Event;
+using Cysharp.Threading.Tasks;
 
-public class PanjanExplode : MonoBehaviour
+namespace SamuraiSoccer.UK
 {
-    GameManager gameManager;
-    PanjanMake panjanMake;
-    // Start is called before the first frame update
-    void Start()
+    public class PanjanExplode : MonoBehaviour
     {
-        //gameManager取得
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        panjanMake=GameObject.Find("PanjanMaker").GetComponent<PanjanMake>();
-    }
-
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (gameManager.CurrentGameState == GameState.Playing)
+        bool isBurn = true;
+        PanjanMake panjanMake;
+        GameObject fire;
+        // Start is called before the first frame update
+        void Start()
         {
-            //    //衝突がプレイヤーだったらゲームオーバー
-            if (other.gameObject.tag == "Player")
+            InGameEvent.Reset.Subscribe(_ =>
             {
-                other.transform.Find("Fire").gameObject.SetActive(true);
-                other.transform.GetComponent<Rigidbody>();
-                panjanMake.Burn();
+
+            });
+            InGameEvent.Standby.Subscribe(_ =>
+            {
+
+            });
+            InGameEvent.Pause.Subscribe(_ =>
+            {
+
+            });
+            InGameEvent.Play.Subscribe(_ =>
+            {
+
+            });
+            InGameEvent.Finish.Subscribe(_ =>
+            {
+                
+            });
+            InGameEvent.Goal.Subscribe(_ =>
+            {
+                isBurn = false;
+            });
+        }
+
+
+        private void OnCollisionEnter(Collision other)
+        {
+            //衝突がプレイヤーだったらゲームオーバー
+            if (isBurn && other.gameObject.tag == "Player")
+            {
+                fire.SetActive(true);
             }
         }
+
+        public void SetFireObject(GameObject fire){
+            this.fire = fire;
+        }
     }
-
-   
-
 }

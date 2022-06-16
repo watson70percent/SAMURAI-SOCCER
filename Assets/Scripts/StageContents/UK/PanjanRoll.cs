@@ -21,6 +21,9 @@ namespace SamuraiSoccer.UK
         [SerializedField] AudioSource audio;
         [SerializedField] CapsuleCollider capsuleCollider;
 
+        GameObject fire;
+        PanjanExplode panjanExplode;
+
         // Start is called before the first frame update
 
         private void Start()
@@ -94,8 +97,9 @@ namespace SamuraiSoccer.UK
                 if (index < 15)
                 {
                     Instantiate(fire, part.position, Quaternion.identity, part);
-                    //part.gameObject.AddComponent<PanjanExplode>();
-                    //part.gameObject
+                    panjanExplode = part.gameObject.GetComponent<PanjanExplode>();
+                    panjanExplode.SetActive(true);
+                    panjanExplode.SetFireObject();
                 }
                 RigidBody rbPart = part.gameObject.GetComponent<RigidBody>();
                 rbPart.isKinematic = false;
@@ -117,5 +121,10 @@ namespace SamuraiSoccer.UK
             }
             Destroy(gameObject, 4.0f);
         }
+
+        void SetFireObject(GameObject fire){
+            this.fire = fire;
+        }
+
     }
 }
