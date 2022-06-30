@@ -7,14 +7,6 @@ using UnityEngine.UI;
 
 namespace SamuraiSoccer.StageContents.Result
 {
-    public enum Result
-    {
-        Win,
-        Lose,
-        Draw,
-        Undefined
-    }
-
     /// <summary>
     /// ゲームの結果を取得・表示
     /// </summary>
