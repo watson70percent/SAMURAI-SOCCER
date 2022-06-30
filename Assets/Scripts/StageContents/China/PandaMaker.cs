@@ -1,46 +1,71 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-usi
+using SamuraiSoccer.Event;
+using UniRx;
 
-public class PandaMaker : MonoBehaviour
+using System;
+using Cysharp.Threading.Tasks;
+using System.Threading;
+
+namespace SamuraiSoccer.StageContents.China
 {
-    [SerializeField] GameObject panda;
-    [SerializeField] float minSize, maxSize;
-    GameManager gameManager;
-    [SerializeField] GameState state = GameState.Reset;
-    void SwitchState(StateChangedArg a)
-    {
-        state = a.gameState;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        InvokeRepeating("Spawn", 1, 0.4f);
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        gameManager.StateChange += SwitchState;
-    }
 
-    // Update is called once per frame
-    void Update()
+    public class PandaMaker : MonoBehaviour
     {
-    }
+        [SerializeField] GameObject panda;
+        [SerializeField] float minSize, maxSize;
 
-
-    void Spawn()
-    {
-        switch (state)
+        enum State
         {
-            case GameState.Playing:
+            On, Off
+        }
+        State state;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            InvokeRepeating("Spawn", 1, 0.4f);
+            InGameEvent.Play.Subscribe(x => { state = State.On; }).AddTo(this);
+            InGameEvent.Pause.Subscribe(isPause => { state = isPause ? State.Off : State.On; }).AddTo(this);
+            InGameEvent.Goal.Subscribe(x => { state = State.Off; }).AddTo(this);
+
+            var token = this.GetCancellationTokenOnDestroy();
+            PandaSpawn(token).Forget();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+        }
+
+        async UniTask PandaSpawn(CancellationToken token)
+        {
+            while (true)
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(1));
+
+
+                if (token.IsCancellationRequested)
                 {
-                    Vector3 pos = new Vector3(58 * Random.value, 100, 100 * Random.value);
-                    GameObject p = Instantiate(panda, pos, Quaternion.Euler(Random.value * 360, Random.value * 360, Random.value * 360));
-                    p.transform.localScale = Vector3.one * (Random.value * (maxSize-minSize) + minSize);
                     break;
                 }
-            default: break;
+
+                    if (state == State.On)
+                {
+
+                    Vector3 pos = new Vector3(58 * UnityEngine.Random.value, 100, 100 * UnityEngine.Random.value);
+                    GameObject p = Instantiate(panda, pos, Quaternion.Euler(UnityEngine.Random.value * 360, UnityEngine.Random.value * 360, UnityEngine.Random.value * 360));
+                    p.transform.localScale = Vector3.one * (UnityEngine.Random.value * (maxSize - minSize) + minSize);
+
+                }
 
 
+            }
         }
+
+
+
     }
+
 }
