@@ -9,7 +9,9 @@ namespace SamuraiSoccer
     /// </summary>
     public class StorageKey
     {
-        public const string KEY_FIELDNUMBER = "filedNumber"; 
-        public const string KEY_STAGENUMBER = "stageNumber";
+        public const string KEY_FIELDNUMBER = nameof(KEY_FIELDNUMBER);
+        public const string KEY_STAGENUMBER = nameof(KEY_STAGENUMBER);
+        public const string KEY_WINORLOSE = nameof(KEY_WINORLOSE);
+        public const string KEY_RESULTMESSAGE = nameof(KEY_RESULTMESSAGE);
     }
 }

@@ -1,90 +1,115 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Snow : MonoBehaviour
+using SamuraiSoccer.Event;
+using UniRx;
+using Cysharp.Threading.Tasks;
+
+namespace SamuraiSoccer.StageContents.Rossia
 {
-    public Transform mainCamera;
-    public Transform snow;
-    public Transform samurai;
-    public slidepad pad;
-    public GameManager gm;
-    public ParticleSystem particle;
-    public Image gameover;
-    public AudioSource audioSource;
-    [SerializeField]
-    private float damage = 0;
-    private Vector3 beforePoint = Vector3.zero;
-    private float time = 3;
+    /// <summary>
+    /// 雪を制御する．
+    /// </summary>
+    public class Snow : MonoBehaviour
+    {
+        public Transform mainCamera;
+        public Transform snow;
+        public Transform samurai;
+        public ParticleSystem particle;
+        public Image gameover;
+        public AudioSource audioSource;
+        [SerializeField]
+        private float damage = 0;
+        private Vector3 beforePoint = Vector3.zero;
+        private float time = 3;
+        private bool isPlaying = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        var emission = particle.emission;
-        emission.rateOverTimeMultiplier = 4000;
-        gm.StateChange += OnStateCanged;
-        beforePoint = samurai.position;
-        audioSource.volume = 0.05f;
-    }
-
-    public void TimerReset()
-    {
-        time = 3;
-    }
-    
-    private void OnStateCanged(StateChangedArg e)
-    {
-        var shape = particle.shape;
-        var emission = particle.emission;
-        switch (e.gameState)
+        // Start is called before the first frame update
+        void Start()
         {
-            case GameState.Playing :
-                shape.scale = new Vector3(60, 50, 1);
-                emission.rateOverTimeMultiplier = 800 / 3.0f * Mathf.Exp(damage);
-                particle.Play(true);
-                break;
-            case GameState.Pause:
-                particle.Stop(true);
-                break;
-            case GameState.Reset:
-                snow.position = new Vector3(30, 0, 59.6f);
-                shape.scale = new Vector3(150, 100, 1);
-                emission.rateOverTimeMultiplier = 4000;
-                break;
+            var emission = particle.emission;
+            emission.rateOverTimeMultiplier = 4000;
+            beforePoint = samurai.position;
+            audioSource.volume = 0.05f;
+            InGameEvent.Play.Subscribe(OnPlaySnow).AddTo(this);
+            InGameEvent.Pause.Subscribe(OnPauseSnow).AddTo(this);
+            InGameEvent.Reset.Subscribe(OnReset).AddTo(this);
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        var pos = snow.position;
-        pos.z = mainCamera.position.z;
-        snow.position = pos;
-        time -= Time.deltaTime;
-
-        if (gm.CurrentGameState == GameState.Playing)
+        public void TimerReset()
         {
+            time = 3;
+        }
+
+        void OnPlaySnow(Unit unit)
+        {
+            var shape = particle.shape;
+            var emission = particle.emission;
+            shape.scale = new Vector3(60, 50, 1);
+            emission.rateOverTimeMultiplier = 800 / 3.0f * Mathf.Exp(damage);
+            particle.Play(true);
+            isPlaying = true;
+        }
+
+        void OnPauseSnow(bool isPause)
+        {
+            if (isPause)
+            {
+                particle.Play(false);
+                isPlaying = false;
+                return;
+            }
+            OnPlaySnow(Unit.Default);
+        }
+
+        void OnReset(Unit unit)
+        {
+            var shape = particle.shape;
+            var emission = particle.emission;
+            snow.position = new Vector3(30, 0, 59.6f);
+            shape.scale = new Vector3(150, 100, 1);
+            emission.rateOverTimeMultiplier = 4000;
+            isPlaying = true;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            var pos = snow.position;
+            pos.z = mainCamera.position.z;
+            snow.position = pos;
+            time -= Time.deltaTime;
+
+            if (!isPlaying)
+            {
+                return;
+            }
             var diff = samurai.position - beforePoint;
-            if(time < 0)
+            if (time < 0)
             {
                 damage += 4.0f / 30 * Time.deltaTime;
             }
 
-            if(diff.sqrMagnitude < 5 * Time.deltaTime * Time.deltaTime)
+            if (diff.sqrMagnitude < 5 * Time.deltaTime * Time.deltaTime)
             {
                 damage += 4.0f / 30 * Time.deltaTime;
-                if(damage > 4.8)
+                if (damage > 4.8)
                 {
-                    SceneManager.sceneLoaded += GameSceneLoaded;
-                    gm.StateChangeSignal(GameState.Finish);
-                    StartCoroutine(GameOver());
+                    var lose = new InMemoryDataTransitClient<Result>();
+                    lose.Set(StorageKey.KEY_WINORLOSE, Result.Lose);
+                    var message = new InMemoryDataTransitClient<string>();
+                    message.Set(StorageKey.KEY_RESULTMESSAGE, "凍ってしまった!");
+                    InGameEvent.FinishOnNext();
+                    _ = GameOver();
                 }
             }
-            else if(diff.sqrMagnitude > 15 * Time.deltaTime * Time.deltaTime)
+            else if (diff.sqrMagnitude > 15 * Time.deltaTime * Time.deltaTime)
             {
-                if(damage > 0 && time > 0)
+                if (damage > 0 && time > 0)
                 {
                     damage -= 4.0f / 30 * Time.deltaTime;
                 }
@@ -94,42 +119,36 @@ public class Snow : MonoBehaviour
 
             var emission = particle.emission;
             emission.rateOverTimeMultiplier = 800 / 3.0f * Mathf.Exp(damage);
-            pad.speed = 10 - (damage < 1.6 ? 0 : (damage - 1.6f) * 2);
+            // TODO: 遅くなるスピード反映．
+            //pad.speed = 10 - (damage < 1.6 ? 0 : (damage - 1.6f) * 2);
             var volume = damage / 4.8f;
             audioSource.volume = (volume < 0.2) ? 0 : volume;
             SoundMaster.Instance.BGMBolume = (volume < 0.05) ? 1 : 1 - volume;
+
         }
-    }
 
-    private void GameSceneLoaded(Scene next, LoadSceneMode mode)
-    {
-        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.SetResult(Result.Lose, "凍ってしまった!");
-
-        SceneManager.sceneLoaded -= GameSceneLoaded;
-    }
-
-    private IEnumerator GameOver()
-    {
-        gameover.gameObject.SetActive(true);
-        float time = 0;
-        while(time < 2)
+        private async UniTask GameOver()
         {
-            gameover.color = new Color(1, 1, 1, time / 2);
-            yield return null;
-            time += Time.deltaTime;
+            gameover.gameObject.SetActive(true);
+            float time = 0;
+            while (time < 2)
+            {
+                gameover.color = new Color(1, 1, 1, time / 2);
+                await UniTask.Yield();
+                time += Time.deltaTime;
+            }
+
+            await UniTask.Delay(2000);
+            time = 0;
+
+            while (time < 1)
+            {
+                gameover.color = new Color(1 - time, 1 - time, 1 - time, 1);
+                await UniTask.Yield();
+                time += Time.deltaTime;
+            }
+
+            SceneManager.LoadScene("Result");
         }
-
-        yield return new WaitForSeconds(2);
-        time = 0;
-
-        while(time < 1)
-        {
-            gameover.color = new Color(1 - time, 1 - time, 1 - time, 1);
-            yield return null;
-            time += Time.deltaTime;
-        }
-
-        SceneManager.LoadScene("Result");
     }
 }
