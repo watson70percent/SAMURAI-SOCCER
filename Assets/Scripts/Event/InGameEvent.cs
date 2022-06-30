@@ -11,6 +11,8 @@ namespace SamuraiSoccer.Event
     /// </summary>
     public static class InGameEvent
     {
+        private static bool m_isPlaying = false; //Play状態かどうか 
+
         private static Subject<Unit> m_resetSubject = new Subject<Unit>();
         private static IObservable<Unit> m_resetShareObservable = m_resetSubject.Share();
 
@@ -27,6 +29,7 @@ namespace SamuraiSoccer.Event
         /// </summary>
         public static void ResetOnNext()
         {
+            m_isPlaying = false;
             m_resetSubject.OnNext(Unit.Default);
         }
 
@@ -46,6 +49,7 @@ namespace SamuraiSoccer.Event
         /// </summary>
         public static void StandbyOnNext()
         {
+            m_isPlaying = false;
             m_standbySubject.OnNext(Unit.Default);
         }
 
@@ -65,7 +69,17 @@ namespace SamuraiSoccer.Event
         /// </summary>
         public static void PlayOnNext()
         {
+            m_isPlaying = true;
             m_playSubject.OnNext(Unit.Default);
+        }
+
+        private static IObservable<long> m_updateDuringPlayObservable = Observable.EveryUpdate().Where(_ => m_isPlaying).Share();
+        /// <summary>
+        /// Play中にUpdateタイミングで発行され続けるストリーム
+        /// </summary>
+        public static IObservable<long> UpdateDuringPlay
+        {
+            get { return m_updateDuringPlayObservable; }
         }
 
         private static Subject<Unit> m_goalSubject = new Subject<Unit>();
@@ -84,6 +98,7 @@ namespace SamuraiSoccer.Event
         /// </summary>
         public static void GoalOnNext()
         {
+            m_isPlaying = false;
             m_goalSubject.OnNext(Unit.Default);
         }
 
@@ -104,6 +119,14 @@ namespace SamuraiSoccer.Event
         /// <param name="isPause">true:一時停止, false:解除</param>
         public static void PauseOnNext(bool isPause)
         {
+            if (isPause)
+            {
+                m_isPlaying = false;
+            }
+            else
+            {
+                m_isPlaying = true;
+            }
             m_pauseSubject.OnNext(isPause);
         }
 
@@ -123,6 +146,7 @@ namespace SamuraiSoccer.Event
         /// </summary>
         public static void FinishOnNext()
         {
+            m_isPlaying = false;
             m_finishSubject.OnNext(Unit.Default);
         }
     }
