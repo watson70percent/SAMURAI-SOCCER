@@ -8,7 +8,7 @@ using SamuraiSoccer.Event;
 /// <summary>
 /// 自由の女神の状態
 /// </summary>
-public enum StatueMode {Idle, Rise, FallDown };
+public enum StatueMode { Idle, Rise, FallDown };
 
 namespace SamuraiSoccer.StageContents.USA
 {
@@ -25,6 +25,11 @@ namespace SamuraiSoccer.StageContents.USA
 
         [SerializeField]
         private SpriteRenderer m_spriteRenderer; //影についているSpriteRenderer
+
+        /// <summary>
+        /// 自由の女神の状態を管理する内部変数
+        /// </summary>
+        public StatueMode CurrentStatueMode { get; private set; } = StatueMode.Idle;
 
         private float m_time = 0f; //影のために経過時間を保存
 
@@ -51,20 +56,26 @@ namespace SamuraiSoccer.StageContents.USA
             //自由の女神が上昇、影が点滅
             if (m_bodyObj.transform.position.y < 0.95f)
             {
+                CurrentStatueMode = StatueMode.Rise;
                 m_bodyObj.transform.position += new Vector3(0f, 1.0f, 0f);
                 m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f * (1f + Mathf.Sin(10 * m_time * m_time)));
                 return;
             }
             //影を一定値で固定、自由の女神が倒れる
-            m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.8f);
             if (m_bodyObj.transform.eulerAngles.z < 90)
             {
+                CurrentStatueMode = StatueMode.FallDown;
+                m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.8f);
                 m_bodyObj.transform.eulerAngles += new Vector3(0f, 0f, 1.0f);
                 return;
             }
             //3秒静止して削除
-            Observable.Timer(System.TimeSpan.FromSeconds(3))
-                .Subscribe(_ => Destroy(gameObject));
+            if (CurrentStatueMode != StatueMode.Idle)
+            {
+                CurrentStatueMode = StatueMode.Idle;
+                Observable.Timer(System.TimeSpan.FromSeconds(3))
+                    .Subscribe(_ => Destroy(gameObject));
+            }
         }
     }
 }

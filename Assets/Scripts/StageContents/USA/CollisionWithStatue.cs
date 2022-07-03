@@ -1,99 +1,71 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UniRx;
+using Cysharp.Threading.Tasks;
+using SamuraiSoccer.Event;
 
-/// <summary>
-/// 自由の女神との衝突の処理
-/// </summary>
-public class CollisionWithStatue : MonoBehaviour
+namespace SamuraiSoccer.StageContents.USA
 {
-    private bool _isActive = true; //true稼働状態
-
-    private GameManager _gameManager;
-
-    private RiseStatue _riseStatue;
-
-    private BallControler _ball;
-
-    private AudioSource _audioSource;//自由の女神についてるAudioSource
-
-    public string ResultSceneName = "Result";//リザルトシーン名
-
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// 自由の女神との衝突の処理
+    /// </summary>
+    public class CollisionWithStatue : MonoBehaviour
     {
-        _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
-        _riseStatue = gameObject.GetComponentInParent<RiseStatue>();
-        _audioSource = gameObject.GetComponentInParent<AudioSource>();
-        _ball.Goal += DisableFunction;
-    }
+        [SerializeField]
+        private StatueMove m_statueMove; //親オブジェクトについているStatueMove
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //プレイヤ―との衝突処理
-        if (_gameManager.CurrentGameState != GameState.Finish && _riseStatue.CurrentStatueMode == StatueMode.FallDown && _isActive)
+        [SerializeField]
+        private int m_soundIndex; //衝突時のSE
+
+        private bool m_isActive = true; //true:稼働状態, false:衝突判定停止
+
+        public string ResultSceneName = "Result"; //リザルトシーン名
+
+        // Start is called before the first frame update
+        void Start()
         {
-            if (other.gameObject.tag == "Player")
+            //ゴール時に機能停止
+            InGameEvent.Goal.Subscribe(_ =>
             {
-                //死亡音の再生
-                _audioSource.Play();
-                //SceneManagerのイベントに圧死リザルト処理を追加
-                SceneManager.sceneLoaded += GameSceneLoaded;
-                _gameManager.StateChangeSignal(GameState.Finish);
-                Time.timeScale = 0.2f;
-                StartCoroutine(GoResult());
+                m_isActive = false;
+            }).AddTo(this);
+        }
+
+        /// <summary>
+        /// 自由の女神の衝突判定部とオブジェクトとの衝突処理
+        /// </summary>
+        /// <param name="other"></param>
+        private async void OnTriggerEnter(Collider other)
+        {
+            //プレイヤ―との衝突処理
+            if (m_statueMove.CurrentStatueMode == StatueMode.FallDown && m_isActive)
+            {
+                if (other.gameObject.tag == "Player")
+                {
+                    //衝突音の再生
+                    SoundMaster.Instance.PlaySE(m_soundIndex);
+                }
+            }
+            //ボールとの衝突処理
+            if (other.gameObject.tag == "Ball")
+            {
+               await ResetBall(other.gameObject);
             }
         }
-        //ボールとの衝突処理
-        if(other.gameObject.tag == "Ball")
+
+        /// <summary>
+        /// ボールが押しつぶされて貫通した場合にコート内に戻す
+        /// </summary>
+        /// <param name="Ball"></param>
+        /// <returns></returns>
+        async UniTask ResetBall(GameObject Ball)
         {
-            StartCoroutine(ResetBall(other.gameObject));
-        }
-    }
-
-    /// <summary>
-    /// 圧死リザルト用の処理
-    /// </summary>
-    /// <param name="next"></param>
-    /// <param name="mode"></param>
-    void GameSceneLoaded(Scene next, LoadSceneMode mode)
-    {
-        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.SetResult(Result.Lose, "つぶされてしまった!");
-
-        SceneManager.sceneLoaded -= GameSceneLoaded;
-    }
-
-    /// <summary>
-    /// ゴールが入ったら衝突時の機能を停止する
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="goalEventArgs"></param>
-    public void DisableFunction(object sender, GoalEventArgs goalEventArgs)
-    {
-        _isActive = false;
-        _ball.Goal -= DisableFunction;
-    }
-
-    /// <summary>
-    /// リザルトへ移動するためのコルーチン
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator GoResult()
-    {
-        yield return new WaitForSeconds(1f);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(ResultSceneName);
-    }
-
-    IEnumerator ResetBall(GameObject Ball)
-    {
-        yield return new WaitForSeconds(1f);
-        if (Ball.transform.position.y < 0)
-        {
-            Ball.transform.position = new Vector3(Ball.transform.position.x, 5f, Ball.transform.position.z);
+            await UniTask.Delay(1000);
+            if (Ball.transform.position.y < 0)
+            {
+                Ball.transform.position = new Vector3(Ball.transform.position.x, 5f, Ball.transform.position.z);
+            }
         }
     }
 }
+
