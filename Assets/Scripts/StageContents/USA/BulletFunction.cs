@@ -1,119 +1,78 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UniRx;
+using Cysharp.Threading.Tasks;
+using SamuraiSoccer.Event;
 
-/// <summary>
-/// 弾丸との衝突の処理,自滅処理
-/// </summary>
-public class BulletFunction : MonoBehaviour
+namespace SamuraiSoccer.StageContents.USA
 {
-    private bool _isActive = true;//true 稼働中
-    private Vector3 _tmpvelocity = Vector3.zero; //一時的に速度を保持する
-
-    private GameManager _gameManager;
-    private BallControler _ball;
-    private Rigidbody _rb;
-
-    private AudioSource _audioSource;//弾丸についてるAudioSource
-
-    public string ResultSceneName = "Result";//リザルトシーン名
-
-    void Start()
+    /// <summary>
+    /// 弾丸との衝突の処理,自滅処理
+    /// </summary>
+    public class BulletFunction : MonoBehaviour
     {
-        _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
-        _rb = GetComponent<Rigidbody>();
-        _audioSource = gameObject.GetComponent<AudioSource>();
-        _ball.Goal += DisableFunction;
-        StartCoroutine(DestroyOneself());
-    }
+        [SerializeField]
+        private Rigidbody m_rb; //このオブジェクトのRigidbody
 
-    private void Update()
-    {
-        //ゴールしたり、リセットしたらこの弾丸は削除
-        if (_gameManager.CurrentGameState == GameState.Standby)
+        [SerializeField]
+        private int m_soundIndex; //衝突時のSE
+
+        private float m_timer = 0f; //自動削除タイマー
+        private Vector3 m_tmpVelocity = Vector3.zero; //一時的に速度を保持する
+
+        void Start()
         {
-            Destroy(gameObject);
+            //20秒後に自動で削除
+            InGameEvent.UpdateDuringPlay.Subscribe(_ => DestroyTimer()).AddTo(this);
+            //ゴールが入ったら削除
+            InGameEvent.Goal.Subscribe(_ => Destroy(gameObject)).AddTo(this);
+            //一時停止処理
+            InGameEvent.Pause.Subscribe(x => PauseMove(x)).AddTo(this);
         }
-        else if (_gameManager.CurrentGameState == GameState.Pause)
+
+        private void DestroyTimer()
         {
-            if (_rb.velocity != Vector3.zero)
+            m_timer += Time.deltaTime;
+            if (m_timer > 20)
             {
-                _tmpvelocity = _rb.velocity;
-                _rb.velocity = Vector3.zero;
+                Destroy(gameObject);
             }
         }
-        else if (_gameManager.CurrentGameState == GameState.Playing)
+
+        /// <summary>
+        /// ポーズ時の処理
+        /// </summary>
+        /// <param name="ispause">true:一時停止, false:解除</param>
+        private void PauseMove(bool ispause)
         {
-            if (_rb.velocity == Vector3.zero)
+            if (ispause)
             {
-                _rb.velocity = _tmpvelocity;
-                _tmpvelocity = Vector3.zero;
+                //一時停止時は弾丸の速度を0にする
+                m_tmpVelocity = m_rb.velocity;
+                m_rb.velocity = Vector3.zero;
+            }
+            else
+            {
+                //解除時は元に戻す
+                m_rb.velocity = m_tmpVelocity;
+                m_tmpVelocity = Vector3.zero;
             }
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //プレイヤ―との衝突処理
-        if (_gameManager.CurrentGameState != GameState.Finish && _isActive)
+
+
+        private void OnTriggerEnter(Collider other)
         {
+            //プレイヤ―との衝突処理
             if (other.gameObject.tag == "Player")
             {
-                //死亡音の再生
-                _audioSource.Play();
-                //SceneManagerのイベントに圧死リザルト処理を追加
-                SceneManager.sceneLoaded += GameSceneLoaded;
-                _gameManager.StateChangeSignal(GameState.Finish);
-                Time.timeScale = 0.2f;
-                StartCoroutine(GoResult());
+                InGameEvent.FinishOnNext();
+                //衝突音の再生
+                SoundMaster.Instance.PlaySE(m_soundIndex);
             }
         }
     }
-
-    /// <summary>
-    /// 圧死リザルト用の処理
-    /// </summary>
-    /// <param name="next"></param>
-    /// <param name="mode"></param>
-    void GameSceneLoaded(Scene next, LoadSceneMode mode)
-    {
-        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.SetResult(Result.Lose, "砲弾に撃たれた！");
-
-        SceneManager.sceneLoaded -= GameSceneLoaded;
-    }
-
-    /// <summary>
-    /// リザルトへ移動するためのコルーチン
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator GoResult()
-    {
-        yield return new WaitForSeconds(1f);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(ResultSceneName);
-    }
-
-    /// <summary>
-    /// ゴールが入ったら衝突時の機能を停止する
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="goalEventArgs"></param>
-    public void DisableFunction(object sender, GoalEventArgs goalEventArgs)
-    {
-        _isActive = false;
-        _ball.Goal -= DisableFunction;
-    }
-
-    /// <summary>
-    /// 時間がたつと勝手に消滅する
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator DestroyOneself()
-    {
-        yield return new WaitForSeconds(20f);
-        Destroy(gameObject);
-    }
 }
+
+
