@@ -13,7 +13,7 @@ public class CallStatueOfLiberty : MonoBehaviour
         InGameEvent.UpdateDuringPlay.ThrottleFirst(System.TimeSpan.FromSeconds(6)).Subscribe(_ =>
         {
             Instantiate(StatuePrefab, new Vector3(60f, -70.0f, 50 + Random.Range(-40f, 40f)), Quaternion.identity);
-        });
+        }).AddTo(this);
     }
 
 }
