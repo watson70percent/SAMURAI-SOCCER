@@ -23,7 +23,7 @@ namespace SamuraiSoccer.Player
         Vector2 velocity;
         private Boundy boundy;
         public Transform flagsParent;
-        [SerializeField] private Slidepad m_slidepad;
+
 
         // Start is called before the first frame update
         void Start()
@@ -31,15 +31,15 @@ namespace SamuraiSoccer.Player
             SetBoundy();
             velocity = Vector3.zero;
             
-            InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; });
-            InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; });
-            InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; });
-            InGameEvent.Play.Subscribe(x => { m_state = State.Playing; });
+            InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
+            InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; }).AddTo(this);
+            InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; }).AddTo(this);
+            InGameEvent.Play.Subscribe(x => { m_state = State.Playing; }).AddTo(this);
 
 
-            m_slidepad.StickControllerSubject.Subscribe(
+            PlayerEvent.StickControllerSubject.Subscribe(
                     stickDir => { ReceiveStick(stickDir); }
-                );
+                ).AddTo(this);
         }
 
 

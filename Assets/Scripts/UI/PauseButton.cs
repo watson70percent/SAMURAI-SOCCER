@@ -22,11 +22,11 @@ public class PauseButton : MonoBehaviour
 
     private void Start()
     {
-        InGameEvent.Goal.Subscribe(x => { enablePause = false; });
-        InGameEvent.Play.Subscribe(x => { enablePause = true; });
-        InGameEvent.Finish.Subscribe(x => { enablePause = false; });
-        InGameEvent.Standby.Subscribe(x => { enablePause = false; });
-        InGameEvent.Pause.Subscribe(isPause => { enablePause = !isPause; });
+        InGameEvent.Goal.Subscribe(x => { enablePause = false; }).AddTo(this);
+        InGameEvent.Play.Subscribe(x => { enablePause = true; }).AddTo(this);
+        InGameEvent.Finish.Subscribe(x => { enablePause = false; }).AddTo(this);
+        InGameEvent.Standby.Subscribe(x => { enablePause = false; }).AddTo(this);
+        InGameEvent.Pause.Subscribe(isPause => { enablePause = !isPause; }).AddTo(this);
 
     }
 
