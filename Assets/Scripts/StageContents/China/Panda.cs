@@ -54,6 +54,7 @@ public class Panda : MonoBehaviour
     {
         switch (state)
         {
+
             case State.Active:
                 var pos = transform.position;
                 pos.y -= speed * Time.deltaTime;
@@ -66,6 +67,7 @@ public class Panda : MonoBehaviour
                 break;
             case State.Stop:
                 anim.speed = 0; break;
+
         }
 
 

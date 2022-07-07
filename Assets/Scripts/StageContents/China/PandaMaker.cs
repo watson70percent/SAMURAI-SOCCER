@@ -32,6 +32,7 @@ namespace SamuraiSoccer.StageContents.China
 
             var token = this.GetCancellationTokenOnDestroy();
             PandaSpawn(token).Forget();
+
         }
 
         // Update is called once per frame
