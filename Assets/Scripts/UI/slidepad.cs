@@ -5,18 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UniRx;
 using System;
+using SamuraiSoccer.Event;
 
 namespace SamuraiSoccer.UI
 {
     public class Slidepad : MonoBehaviour
     {
 
-        private Subject<Vector3> m_stickControllerSubject = new Subject<Vector3>();
-
-        public IObservable<Vector3> StickControllerSubject
-        {
-            get { return m_stickControllerSubject; }
-        }
+        
 
         float radius;
         float scale;
@@ -123,7 +119,7 @@ namespace SamuraiSoccer.UI
         {
             dir = new Vector2(2.0f * dir.y, -dir.x);
 
-            m_stickControllerSubject.OnNext(new Vector3(dir.x, 0, dir.y));
+            PlayerEvent.StickControllerOnNext(new Vector3(dir.x, 0, dir.y));
  
         }
 
