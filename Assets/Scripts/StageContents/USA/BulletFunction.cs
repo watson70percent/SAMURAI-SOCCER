@@ -16,9 +16,10 @@ namespace SamuraiSoccer.StageContents.USA
         private Rigidbody m_rb; //このオブジェクトのRigidbody
 
         [SerializeField]
-        private int m_soundIndex; //衝突時のSE
+        private int m_SEIndex; //衝突時のSE
 
         private float m_timer = 0f; //自動削除タイマー
+
         private Vector3 m_tmpVelocity = Vector3.zero; //一時的に速度を保持する
 
         void Start()
@@ -69,7 +70,7 @@ namespace SamuraiSoccer.StageContents.USA
             {
                 InGameEvent.FinishOnNext();
                 //衝突音の再生
-                SoundMaster.Instance.PlaySE(m_soundIndex);
+                SoundMaster.Instance.PlaySE(m_SEIndex);
             }
         }
     }
