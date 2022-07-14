@@ -38,6 +38,7 @@ namespace SamuraiSoccer.StageContents.Rossia
             InGameEvent.Play.Subscribe(OnPlaySnow).AddTo(this);
             InGameEvent.Pause.Subscribe(OnPauseSnow).AddTo(this);
             InGameEvent.Reset.Subscribe(OnReset).AddTo(this);
+            InGameEvent.UpdateDuringPlay.Subscribe(OnUpdateDuringPlay).AddTo(this);
         }
 
         public void TimerReset()
@@ -76,18 +77,9 @@ namespace SamuraiSoccer.StageContents.Rossia
             isPlaying = true;
         }
 
-        // Update is called once per frame
-        void Update()
+        void OnUpdateDuringPlay(long __)
         {
-            var pos = snow.position;
-            pos.z = mainCamera.position.z;
-            snow.position = pos;
             time -= Time.deltaTime;
-
-            if (!isPlaying)
-            {
-                return;
-            }
             var diff = samurai.position - beforePoint;
             if (time < 0)
             {
@@ -124,9 +116,20 @@ namespace SamuraiSoccer.StageContents.Rossia
             var volume = damage / 4.8f;
             audioSource.volume = (volume < 0.2) ? 0 : volume;
             SoundMaster.Instance.BGMBolume = (volume < 0.05) ? 1 : 1 - volume;
-
         }
 
+        // Update is called once per frame
+        void Update()
+        {
+            var pos = snow.position;
+            pos.z = mainCamera.position.z;
+            snow.position = pos;
+        }
+
+        /// <summary>
+        /// 凍ってゲームオーバー時の処理．
+        /// </summary>
+        /// <returns></returns>
         private async UniTask GameOver()
         {
             gameover.gameObject.SetActive(true);
