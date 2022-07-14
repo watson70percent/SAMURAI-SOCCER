@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using UniRx.Triggers;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
 
@@ -30,6 +31,17 @@ namespace SamuraiSoccer.StageContents.USA
             InGameEvent.Goal.Subscribe(_ => Destroy(gameObject)).AddTo(this);
             //一時停止処理
             InGameEvent.Pause.Subscribe(x => PauseMove(x)).AddTo(this);
+            //衝突時の処理
+            this.OnTriggerEnterAsObservable().Subscribe(other =>
+            {
+                //プレイヤ―との衝突処理
+                if (other.gameObject.tag == "Player")
+                {
+                    InGameEvent.FinishOnNext();
+                    //衝突音の再生
+                    SoundMaster.Instance.PlaySE(m_SEIndex);
+                }
+            });
         }
 
         private void DestroyTimer()
@@ -58,19 +70,6 @@ namespace SamuraiSoccer.StageContents.USA
                 //解除時は元に戻す
                 m_rb.velocity = m_tmpVelocity;
                 m_tmpVelocity = Vector3.zero;
-            }
-        }
-
-
-
-        private void OnTriggerEnter(Collider other)
-        {
-            //プレイヤ―との衝突処理
-            if (other.gameObject.tag == "Player")
-            {
-                InGameEvent.FinishOnNext();
-                //衝突音の再生
-                SoundMaster.Instance.PlaySE(m_SEIndex);
             }
         }
     }
