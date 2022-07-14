@@ -15,11 +15,9 @@ namespace SamuraiSoccer.StageContents.USA
         private StatueMove m_statueMove; //親オブジェクトについているStatueMove
 
         [SerializeField]
-        private int m_soundIndex; //衝突時のSE
+        private int m_SEIndex; //衝突時のSE
 
         private bool m_isActive = true; //true:稼働状態, false:衝突判定停止
-
-        public string ResultSceneName = "Result"; //リザルトシーン名
 
         // Start is called before the first frame update
         void Start()
@@ -42,8 +40,9 @@ namespace SamuraiSoccer.StageContents.USA
             {
                 if (other.gameObject.tag == "Player")
                 {
+                    InGameEvent.FinishOnNext();
                     //衝突音の再生
-                    SoundMaster.Instance.PlaySE(m_soundIndex);
+                    SoundMaster.Instance.PlaySE(m_SEIndex);
                 }
             }
             //ボールとの衝突処理
