@@ -1,29 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SamuraiSoccer.SoccerGame;
 
-public class KunfuSceneManager : MonoBehaviour
+namespace SamuraiSoccer.StageContents.China
 {
-    [SerializeField] GameObject referee, prefab;
-    GameObject kunfu;
-    private void Start()
+    public class KunfuSceneManager : MonoBehaviour
     {
-        kunfu = Instantiate(prefab);
-        kunfu.transform.parent = referee.transform.parent;
-        kunfu.transform.localPosition = referee.transform.localPosition;
+        [SerializeField] GameObject referee, prefab;
+        GameObject kunfu;
+        private void Start()
+        {
+            kunfu = Instantiate(prefab);
+            kunfu.transform.parent = referee.transform.parent;
+            kunfu.transform.localPosition = referee.transform.localPosition;
 
-        var parent= referee.transform.parent;
+            var parent = referee.transform.parent;
 
-        Destroy(parent.GetComponent<RefereeMove>());
-        parent.gameObject.AddComponent<KunfuReferee>();
+            Destroy(parent.GetComponent<RefereeMove>());
+            parent.gameObject.AddComponent<KunfuReferee>();
 
 
-        Destroy(referee);
+            Destroy(referee);
+        }
+
+        private void Update()
+        {
+            float height = kunfu.transform.position.y;
+        }
+
     }
-
-    private void Update()
-    {
-        float height = kunfu.transform.position.y;
-    }
-
 }

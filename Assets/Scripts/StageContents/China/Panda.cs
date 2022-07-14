@@ -2,23 +2,17 @@
 using UnityEngine.SceneManagement;
 using SamuraiSoccer.Event;
 using UniRx;
-using SamuraiSoccer;
+using SamuraiSoccer.StageContents.Result;
+using SamuraiSoccer.StageContents;
 
 namespace SamuraiSoccer.StageContents.China
 {
     public class Panda : MonoBehaviour
     {
-
-        enum State
-        {
-            Moving, Stop
-        }
-
         private float m_expandAmount = 400.0f;
         [SerializeField] private float speed;
         bool hit;
 
-        State state = State.Moving;
         Animator anim;
         [SerializeField] SkinnedMeshRenderer skin;
         public GameObject gameOverPanel;
@@ -26,16 +20,37 @@ namespace SamuraiSoccer.StageContents.China
         public GameObject blood;
         GameObject player;
 
+        enum State
+        {
+            Active,
+            Non_Interference,
+            Stop,
+            Vanish
+        }
 
-
+        State state = State.Stop;
+        State tempState = State.Stop;
         private void Start()
         {
-            InGameEvent.Pause.Subscribe(isPause => { state = isPause ? State.Stop : State.Moving; });
-            InGameEvent.Standby.Subscribe(x => { Destroy(gameObject); });
 
             anim = GetComponent<Animator>();
 
             player = GameObject.FindGameObjectWithTag("Player");
+
+            InGameEvent.Pause.Subscribe(isPause => {
+                if (isPause)
+                {
+                    tempState = state;
+                    state = State.Stop;
+                }
+                else
+                {
+                    state = tempState;
+                }
+            });
+            InGameEvent.Play.Subscribe(x => { state = State.Active; });
+            InGameEvent.Standby.Subscribe(x => { state = State.Vanish; });
+            InGameEvent.Goal.Subscribe(x => { state = State.Non_Interference; });
 
         }
 
@@ -43,15 +58,20 @@ namespace SamuraiSoccer.StageContents.China
         {
             switch (state)
             {
-                case State.Moving:
+
+                case State.Active:
                     var pos = transform.position;
                     pos.y -= speed * Time.deltaTime;
                     transform.position = pos;
                     if (pos.y < -50) { Destroy(gameObject); }
                     anim.speed = 1;
                     break;
+                case State.Vanish:
+                    Destroy(gameObject);
+                    break;
                 case State.Stop:
-                    default: anim.speed = 0; break;
+                    anim.speed = 0; break;
+
             }
 
 
@@ -59,7 +79,7 @@ namespace SamuraiSoccer.StageContents.China
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player" && !hit)
+            if (other.tag == "Player" && !hit && state == State.Active)
             {
                 hit = true;
                 Invoke("GameOver", 0.2f);
@@ -70,6 +90,7 @@ namespace SamuraiSoccer.StageContents.China
         public void GameOver()
         {
 
+            SceneManager.sceneLoaded += GameSceneLoaded;
             InGameEvent.FinishOnNext();
             SoundBoxUtil.SetSoundBox(transform.position, hitSound);
 
@@ -81,7 +102,7 @@ namespace SamuraiSoccer.StageContents.China
         void GameSceneLoaded(Scene next, LoadSceneMode mode)
         {
             ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-            resultManager.SetResult(Result.Lose, "パンダに潰されてしもた!");
+            resultManager.SetResult(GameResult.Lose, "パンダに潰されてしもた!");
 
             SceneManager.sceneLoaded -= GameSceneLoaded;
         }

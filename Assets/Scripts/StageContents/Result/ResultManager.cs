@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SamuraiSoccer.StageContents;
 
 
 
@@ -19,7 +20,7 @@ namespace SamuraiSoccer.StageContents.Result
             Debug.Log("Set stage data : worldName = " + NowStageData.WorldName + ", StageNumber = " + NowStageData.StageNumber);
         }
 
-        public Result ResultState { get; private set; } = Result.Undefined;
+        public GameResult ResultState { get; private set; } = Result.Undefined;
         [SerializeField] Text result;
         public string resultText;
         [SerializeField]
@@ -42,16 +43,16 @@ namespace SamuraiSoccer.StageContents.Result
             //勝敗に応じてテキスト変更
             switch (ResultState)
             {
-                case Result.Win:
+                case GameResult.Win:
                     result.text = "勝利";
                     break;
-                case Result.Lose:
+                case GameResult.Lose:
                     result.text = "敗北";
                     //負けたときはボタンの位置を反転する(左右対称を仮定)
                     retryButtonTransform.anchoredPosition = new Vector2(-retryButtonTransform.anchoredPosition.x, retryButtonTransform.anchoredPosition.y);
                     nextButtonTransform.anchoredPosition = new Vector2(-nextButtonTransform.anchoredPosition.x, nextButtonTransform.anchoredPosition.y);
                     break;
-                case Result.Draw:
+                case GameResult.Draw:
                     result.text = "引分";
                     break;
             }
@@ -61,11 +62,11 @@ namespace SamuraiSoccer.StageContents.Result
             Debug.Log("Now data : worldName = " + NowStageData.WorldName + ", StageNumber = " + NowStageData.StageNumber + ", Result = " + ResultState);
         }
 
-        public void SetResult(Result resultState, string resultText)
+        public void SetResult(GameResult resultState, string resultText)
         {
             this.ResultState = resultState;
             this.resultText = resultText;
-            if (resultState == Result.Win)
+            if (resultState == GameResult.Win)
             {
                 foreach (var txt in texts)
                 {

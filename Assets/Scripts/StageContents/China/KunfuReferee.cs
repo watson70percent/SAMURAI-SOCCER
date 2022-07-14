@@ -1,29 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SamuraiSoccer.SoccerGame;
 
-public class KunfuReferee : RefereeMove
+namespace SamuraiSoccer.StageContents.China
 {
-
-
-    protected override void Start()
+    public class KunfuReferee : RefereeMove
     {
-        ball = GameObject.FindGameObjectWithTag("Ball");
-        for(int i = 0; i < transform.childCount; i++)
+
+
+        protected override void Start()
         {
-            var child = transform.GetChild(i);
+            ball = GameObject.FindGameObjectWithTag("Ball");
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                var child = transform.GetChild(i);
 
-            if (child.name == "RefereeArea") { refereeArea = child.GetComponent<RefereeArea>(); }
-            if (child.name == "KunfuReferee(Clone)") { anicon = child.GetComponent<Animator>(); }
+                if (child.name == "RefereeArea") { refereeArea = child.GetComponent<RefereeArea>(); }
+                if (child.name == "KunfuReferee(Clone)") { anicon = child.GetComponent<Animator>(); }
+            }
+            base.Start();
+            runningspeed = 7;
+            radius = 5;
         }
-        base.Start();
-        runningspeed = 7;
-        radius = 5;
-    }
 
-    protected override void LookAtBall()
-    {
-        transform.Rotate(0, 400 * Time.deltaTime, 0);
-    }
+        protected override void LookAtBall()
+        {
+            transform.Rotate(0, 400 * Time.deltaTime, 0);
+        }
 
+    }
 }

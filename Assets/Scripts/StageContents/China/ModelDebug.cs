@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SamuraiSoccer.SoccerGame.AI;
 
-public class ModelDebug : MonoBehaviour
+namespace SamuraiSoccer.StageContents.China
 {
-
-    public string prefabNameAndjsonName;
-    private void Awake()
+    public class ModelDebug : MonoBehaviour
     {
-        OpponentName.name = prefabNameAndjsonName;
+
+        public string prefabNameAndjsonName;
+        private void Awake()
+        {
+            OpponentName.name = prefabNameAndjsonName;
+        }
     }
 }
