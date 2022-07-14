@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace SamuraiSoccer.StageContents.China
 {
     public class JiangshiPostProcessing : MonoBehaviour
