@@ -5,7 +5,8 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
-
+using SamuraiSoccer.Event;
+using UniRx;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -19,8 +20,6 @@ namespace SamuraiSoccer.SoccerGame
 
         [NonSerialized]
         public FieldInfo info = default;
-        //public EasyCPUManager manager;
-        public GameManager gm;
 
         public GameObject ball;
         private Rigidbody ball_rb = default;
@@ -38,7 +37,8 @@ namespace SamuraiSoccer.SoccerGame
             wind = GetComponents<WindInfoBase>().First();
             gameObject.AddComponent(typeof(NonRotation));
             rotation = GetComponents<FieldRotationBase>().First();
-            gm.StateChange += StateChanged;
+            InGameEvent.Pause.Subscribe(OnPause).AddTo(this);
+            InGameEvent.Play.Subscribe(_ => isPlaying = true);
         }
 
         private void Update()
@@ -107,17 +107,9 @@ namespace SamuraiSoccer.SoccerGame
             return rotation.AdaptInversePosition(pos);
         }
 
-        private void StateChanged(StateChangedArg e)
+        private void OnPause(bool isPause)
         {
-            if (e.gameState == GameState.Pause)
-            {
-                isPlaying = false;
-            }
-
-            if (e.gameState == GameState.Playing)
-            {
-                isPlaying = true;
-            }
+            isPlaying = !isPause;
         }
     }
 }
