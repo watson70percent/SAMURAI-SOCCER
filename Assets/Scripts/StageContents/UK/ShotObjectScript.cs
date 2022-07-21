@@ -1,113 +1,76 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UniRx;
+using Cysharp.Threading.Tasks;
+using UniRx.Triggers;
+using SamuraiSoccer.Event;
 
-public class ShotObjectScript : MonoBehaviour
+namespace SamuraiSoccer.StageContents.UK
 {
-    private string ResultSceneName = "Result";
-
-    [SerializeField]float velocity = 30;//速さ
-	//float size;
-    float movedLength;//動いた距離
-    float groundWidth=120;//グラウンドの幅
-    GameManager gameManager;
-    bool isEnd,_isActive=true;
-    private BallControler _ball;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class ShotObjectScript : MonoBehaviour
     {
-        //移動距離の初期化
-        movedLength = 0;
-        //gameManager取得
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
-        _ball.Goal += InActiveFunction;
-    }
+        [SerializeField] float velocity = 30;//速さ
+        float movedLength;//動いた距離
+        float groundWidth = 120;//グラウンドの幅
+        bool isEnd, _isActive = true;
+        [SerializeField] AudioSource audio;
+        [SerializeField] GameObject player;
+        [SerializeField] 
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (gameManager.CurrentGameState == GameState.Standby) Destroy(this.gameObject);
-        if (gameManager.CurrentGameState == GameState.Pause) return;
-        //一定スピードで動かす
-        gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
-        movedLength += Time.deltaTime * velocity;
-
-        //グラウンドを通り過ぎたら消す
-        if ((movedLength) > (groundWidth + 2) && !isEnd)
+        // Start is called before the first frame update
+        void Start()
         {
-            Destroy(this.gameObject);
-        }
-    }
-
-    public void InActiveFunction(object sender, GoalEventArgs goalEventArgs)
-    {
-        _isActive = false;
-        _ball.Goal -= InActiveFunction;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(gameManager.CurrentGameState == GameState.Playing && _isActive == true) 
-        {
-            //    //衝突がプレイヤーだったらゲームオーバー
-            if (other.gameObject.tag == "Player")
+            //移動距離の初期化
+            movedLength = 0;
+            InGameEvent.Standby.Subscribe(_ =>
             {
-                GetComponent<AudioSource>().Play();
-                other.transform.GetComponent<Rigidbody>();
-                //SceneManagerのイベントに勝利リザルト処理を追加
-                isEnd = true;
-                GetComponent<AudioSource>().Play();
-                SceneManager.sceneLoaded += GameSceneLoaded;
-                gameManager.StateChangeSignal(GameState.Finish);
-                Time.timeScale = 0.2f;
+                Destroy(this.gameObject);
+            }).AddTo(this);
+            InGameEvent.UpdateDuringPlay.Subscribe(_ =>
+            {
+                Move();
+            }).AddTo(this);
+            this.OnTriggerEnterAsObservable().Where(x => x.gameObject.tag == "Player")
+            .Subscribe(async _ => await BlowAway(this.GetCancellationTokenOnDestroy()));
+        }
 
-                //リザルトへのシーン遷移
-                StartCoroutine(BlowAway(other.gameObject));
-                StartCoroutine(GoResult());
+        // Update is called once per frame
+        void Move()
+        {
+            //一定スピードで動かす
+            gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
+            movedLength += Time.deltaTime * velocity;
+            //グラウンドを通り過ぎたら消す
+            if ((movedLength) > (groundWidth + 2) && !isEnd)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        //スロー演出からのシーン遷移
+
+
+        async UniTask BlowAway(CancellationToken cancellationToken = default)
+        {
+            Time.timeScale = 0.2f;
+            audio.Play();
+            InGameEvent.FinishOnNext();
+            float velocity0 = 300;
+            float ang = 20 * Mathf.Deg2Rad;
+            Vector3 rotateVec = new Vector3(4, 7, 5);
+            for (int i = 0; i < 100; i++)
+            {
+                Vector3 pos = player.transform.position;
+                pos.x -= velocity0 * Mathf.Cos(ang) * Time.deltaTime;
+                pos.y += velocity0 * Mathf.Sin(ang) * Time.deltaTime;
+                player.transform.position = pos;
+                player.transform.Rotate(rotateVec * velocity * velocity * Time.deltaTime);
+                await UniTask.Yield( PlayerLoopTiming.Update, cancellationToken );
             }
         }
     }
-
-
-    //スロー演出からのシーン遷移
-    IEnumerator GoResult()
-    {
-        yield return new WaitForSeconds(0.8f);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(ResultSceneName);
-    }
-
-    IEnumerator BlowAway(GameObject player)
-    {
-        Debug.Log("blowAwayObject = " + player.tag);
-        float velocity0 = 300;
-        float ang = 20*Mathf.Deg2Rad;
-        Vector3 rotateVec = new Vector3(4, 7, 5);
-        for (int i = 0; i < 100; i++)
-        {
-            Vector3 pos = player.transform.position;
-
-            pos.x -= velocity0 * Mathf.Cos(ang) * Time.deltaTime;
-            pos.y += velocity0 * Mathf.Sin(ang) * Time.deltaTime;
-            player.transform.position = pos;
-            player.transform.Rotate(rotateVec * velocity *velocity* Time.deltaTime);
-            yield return null;
-        }
-        
-    }
-
-    //交通事故リザルト用の処理
-    void GameSceneLoaded(Scene next, LoadSceneMode mode)
-    {
-        ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-        resultManager.SetResult(Result.Lose, "交通事故");
-
-        SceneManager.sceneLoaded -= GameSceneLoaded;
-    }
-
 }
