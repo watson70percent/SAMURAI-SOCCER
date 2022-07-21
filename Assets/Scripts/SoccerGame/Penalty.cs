@@ -2,67 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UniRx;
+using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents;
 
 
 namespace SamuraiSoccer.SoccerGame
 {
     public class Penalty : MonoBehaviour
     {
+        [SerializeField]
+        private GameObject[] m_yellowCard = new GameObject[2];
 
-        public GameObject[] yellowCard = new GameObject[2];
-        int penaltycount = 0;
-        GameManager gameManager;
-        public GameObject gameOverPanel;
+        [SerializeField]
+        private GameObject m_gameOverPanel;
 
-        GameState state = GameState.Reset;
-        public AudioSource refereeAudio;
-        public AudioClip yellowAudioClip, redAudioClip;
-        public GoalText goalCanvas;
+        [SerializeField]
+        private int m_yellowcardSENumber;
 
-        // Start is called before the first frame update
+        [SerializeField]
+        private int m_redcardSENumber;
 
-        private void Reset(StateChangedArg a)
-        {
-            state = a.gameState;
-            if (a.gameState == GameState.Reset)
-            {
-                penaltycount = 0;
-                yellowCard[0].SetActive(false);
-                yellowCard[1].SetActive(false);
-            }
-
-        }
         void Start()
         {
-            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-            gameManager.StateChange += Reset;
+            InGameEvent.Reset.Subscribe(OnReset).AddTo(this);
+            InGameEvent.Penalty.Subscribe(YellowCard).AddTo(this);
         }
 
-        public void YellowCard()
+        private void OnReset(Unit _)
         {
-            if (state != GameState.Playing) { return; }
-            goalCanvas.TextContent = "反則";
-            yellowCard[penaltycount].SetActive(true);
-            penaltycount++;
-            if (penaltycount == 2)
-            {
-                refereeAudio.PlayOneShot(redAudioClip); //ここがバグの原因
-                SceneManager.sceneLoaded += GameSceneLoaded;
-                gameManager.StateChangeSignal(GameState.Finish);
-                Instantiate(gameOverPanel);
+            m_yellowCard[0].SetActive(false);
+            m_yellowCard[1].SetActive(false);
+        }
 
+        public void YellowCard(int penaltynumber)
+        {
+            m_yellowCard[penaltynumber].SetActive(true);
+            if (penaltynumber == 1)
+            {
+                SoundMaster.Instance.PlaySE(m_redcardSENumber);
+                InMemoryDataTransitClient<Result> lose = new InMemoryDataTransitClient<Result>();
+                lose.Set(StorageKey.KEY_WINORLOSE, Result.Lose);
+                InMemoryDataTransitClient<string> message = new InMemoryDataTransitClient<string>();
+                message.Set(StorageKey.KEY_RESULTMESSAGE, "反則負け！");
+                InGameEvent.FinishOnNext();
+                Instantiate(m_gameOverPanel);
             }
             else
             {
-                refereeAudio.PlayOneShot(yellowAudioClip);
+                SoundMaster.Instance.PlaySE(m_yellowcardSENumber);
             }
-        }
-
-        void GameSceneLoaded(Scene next, LoadSceneMode mode)
-        {
-            ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-            resultManager.SetResult(Result.Lose, "反則負け!");
-            SceneManager.sceneLoaded -= GameSceneLoaded;
         }
     }
 }

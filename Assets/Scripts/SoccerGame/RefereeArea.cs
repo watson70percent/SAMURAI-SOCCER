@@ -20,13 +20,14 @@ namespace SamuraiSoccer.SoccerGame
 
         public ParticleSystem surprisedMark;
         public Button attackButton;
-        public Penalty penaltyManager;
         private MeshFilter meshFilter;
         [Space(10)]
         public bool useObstacles = false;
         Transform player;
 
-        
+        private int m_penaltyCount = 0; //反則回数 0:警告, 1:退場
+
+
         enum State
         {
             Playing,Else
@@ -58,9 +59,6 @@ namespace SamuraiSoccer.SoccerGame
 
         public void MeshMaker()
         {
-
-
-
             var mesh = new Mesh();
             var verticles = new List<Vector3> { Vector3.zero };
 
@@ -154,10 +152,11 @@ namespace SamuraiSoccer.SoccerGame
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, areaSize) ? (hit.collider.tag == "Player") : false)
             {
+                InGameEvent.PenaltyOnNext(m_penaltyCount);
+                m_penaltyCount = 1; //ペナルティ回数は0or1のため強制的に1に変更
                 surprisedMark.Play();
                 attackButton.enabled = false;
                 Invoke("PenaltyRemoval", 1);
-                penaltyManager.YellowCard();
             }
 
         }

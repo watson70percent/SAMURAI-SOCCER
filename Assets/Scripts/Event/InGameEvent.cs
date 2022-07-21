@@ -102,6 +102,26 @@ namespace SamuraiSoccer.Event
             m_goalSubject.OnNext(Unit.Default);
         }
 
+        private static Subject<int> m_penaltySubject = new Subject<int>();
+        private static IObservable<int> m_penaltySubjectObservable = m_penaltySubject.Share();
+
+        /// <summary>
+        /// PenaltyイベントのSubscribe先 0:警告, 1:退場
+        /// </summary>
+        public static IObservable<int> Penalty
+        {
+            get { return m_penaltySubjectObservable; }
+        }
+
+        /// <summary>
+        /// Penaltyイベントの発行
+        /// </summary>
+        /// <param name="penaltycount">0:警告, 1:退場</param>
+        public static void PenaltyOnNext(int penaltycount)
+        {
+            m_penaltySubject.OnNext(penaltycount);
+        }
+
         private static Subject<bool> m_pauseSubject = new Subject<bool>();
         private static IObservable<bool> m_pauseShareObservable = m_pauseSubject.Share();
 
