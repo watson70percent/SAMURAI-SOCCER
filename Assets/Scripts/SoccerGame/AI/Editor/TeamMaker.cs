@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using System.IO;
 using System;
 using System.Linq;
+using SamuraiSoccer.SoccerGame.AI;
+using SamuraiSoccer.SoccerGame;
 
 public class TeamMaker : EditorWindow
 {
