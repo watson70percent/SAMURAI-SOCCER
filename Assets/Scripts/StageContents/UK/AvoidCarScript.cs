@@ -1,21 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using UniRx.Triggers;
+using SamuraiSoccer.Event;
 
-public class AvoidCarScript : MonoBehaviour
+namespace Name
 {
-    private void OnTriggerStay(Collider other)
+    public class AvoidCarScript : MonoBehaviour
     {
-        if (other.tag != "Ball" && other.tag != "Player")
+        void Start()
         {
-            Rigidbody rb = other.transform.GetComponent<Rigidbody>();
-           
-            if (rb!=null)
+            this.OnTriggerStayAsObservable().Where(x => x.gameObject.tag == "Untagged")
+            .Subscribe(_ =>
             {
-                Vector3 v3 = rb.velocity;
-                v3.y = 10;
-                rb.velocity = v3;
-            }
+                Rigidbody rb = _.transform.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    Vector3 v3 = rb.velocity;
+                    v3.y = 10;
+                    rb.velocity = v3;
+                }
+            });
         }
     }
 }

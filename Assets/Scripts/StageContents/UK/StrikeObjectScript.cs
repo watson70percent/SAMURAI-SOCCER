@@ -1,68 +1,56 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using SamuraiSoccer.Event;
 
-public class StrikeObjectScript : MonoBehaviour
+namespace SamuraiSoccer.StageContents.UK
 {
-    public float shotInterval = 4.0f; //éšœå®³ç‰©ç”Ÿæˆé–“éš”
-    public float emergencyInterval = 2.0f; //è­¦å‘Šæ™‚é–“é–“éš”
-    float elapsedTime;//ç”Ÿæˆå¾ŒçµŒéã—ãŸæ™‚é–“
-    public GameObject ShotObject;//ç”Ÿæˆã™ã‚‹object
-    float[] shotPosZ = {15.5f, 50, 84.3f };//ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã®é“è·¯ã®åº§æ¨™
-    public GameManager gameManager;
-    public GameObject emergencySign;
-
-    bool isEnd, _isActive = true;
-    private BallControler _ball;
-
-    private void Start()
+    public class StrikeObjectScript : MonoBehaviour
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        [SerializeField] float shotInterval = 4.0f; //áŠQ•¨¶¬ŠÔŠu
+        [SerializeField] float emergencyInterval = 2.0f; //ŒxŠÔŠÔŠu
+        float elapsedTime;//¶¬ŒãŒo‰ß‚µ‚½ŠÔ
+        [SerializeField] GameObject ShotObject;//¶¬‚·‚éobject
+        //float[] shotPosZ = { 15.5f, 50, 84.3f };//ƒOƒ‰ƒEƒ“ƒh‚Ì“¹˜H‚ÌÀ•W
+        [SerializeField] Transform[] Cannons;//¶¬‚µ‚½‚¢êŠ‚ÉƒIƒuƒWƒFƒNƒg’u‚¢‚ÄƒAƒ^ƒbƒ`
+        [SerializeField] GameObject emergencySign;
+        [SerializeField] Transform player;
 
-        _ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallControler>();
-        _ball.Goal += InActiveFunction;
+        int index, maxIndex;
+        Vector3 emergePos;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(gameManager.CurrentGameState == GameState.Playing && _isActive==true)
+        private void Start()
         {
-            emergencySign.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x + 1, 6.0f, transform.position.z);
-            //æ™‚é–“ãŒçµŒã£ãŸã‚‰objectç”Ÿæˆã¾ã§è­¦å‘Š
-            if (elapsedTime >= shotInterval - emergencyInterval)
+            maxIndex = Cannons.Length;
+            InGameEvent.Standby.Subscribe(_ =>
             {
-                emergencySign.SetActive(true);
-            }
-            //æ™‚é–“ãŒçµŒã£ãŸã‚‰objectç”Ÿæˆ
-            if (elapsedTime >= shotInterval)
-            {
-                Vector3 pos = transform.position;
-
-                Instantiate(ShotObject, this.transform.position, transform.rotation);
-                pos.z = shotPosZ[(int)Random.Range(0, 3)];
-                transform.position = pos;
-                emergencySign.SetActive(false);
-                elapsedTime = 0.0f;
-            }
-            //æ™‚é–“å¢—ã‚„ã™
-            elapsedTime += Time.deltaTime;
+                elapsedTime = 0;
+            }).AddTo(this);
+            InGameEvent.UpdateDuringPlay.Subscribe(_ =>
+            {//ŠÔ‚ªŒo‚Á‚½‚çobject¶¬‚Ü‚ÅŒx
+                if (elapsedTime >= shotInterval - emergencyInterval) ShowEmerge();
+                //ŠÔ‚ªŒo‚Á‚½‚çobject¶¬
+                if (elapsedTime >= shotInterval) Shot();
+                //ŠÔ‘‚â‚·
+                elapsedTime += Time.deltaTime;
+            }).AddTo(this);
         }
-        if(gameManager.CurrentGameState == GameState.Standby && _isActive ==false)
+
+        //ŠÔ‚ªŒo‚Á‚½‚çobject¶¬‚Ü‚ÅŒx
+        void ShowEmerge()
         {
-            _isActive = true;
+            emergePos.x = player.position.x + 1;
+            emergencySign.transform.position = player.position;
+            emergencySign.SetActive(true);
+        }
+        //ŠÔ‚ªŒo‚Á‚½‚çobject¶¬
+        void Shot()
+        {
+            index = (int)Random.Range(0, maxIndex);
+            Instantiate(ShotObject, Cannons[index].position, Cannons[index].rotation);
+            emergencySign.SetActive(false);
+            elapsedTime = 0.0f;
         }
     }
-
-    public void InActiveFunction(object sender, GoalEventArgs goalEventArgs)
-    {
-        _isActive = false;
-        _ball.Goal -= InActiveFunction;
-    }
-
-
-
-
-
 }
