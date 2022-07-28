@@ -1,50 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using Cysharp.Threading.Tasks;
 
-public class ResultBGM : MonoBehaviour
+namespace SamuraiSoccer.StageContents.Result
 {
-    [SerializeField]
-    private ResultManager rm;
-    [SerializeField]
-    private AudioSource source;
-    [SerializeField]
-    private AudioClip loseSE;
-    [SerializeField]
-    private AudioClip lose;
-    [SerializeField]
-    private AudioClip winSE;
-    [SerializeField]
-    private AudioClip win;
-
-    // Start is called before the first frame update
-    void Start()
+    public class ResultBGM : MonoBehaviour
     {
-        if(rm.ResultState == Result.Win)
+        [SerializeField]
+        private ResultManager m_rm;
+        [SerializeField]
+        private int m_winSENum; //勝利時SE番号
+        [SerializeField]
+        private int m_winBGMNum; //勝利時BGM番号
+        [SerializeField]
+        private int m_loseSENum; //敗北時SE番号
+        [SerializeField]
+        private int m_loseBGMNum; //敗北時BGM番号
+
+        // Start is called before the first frame update
+        async void Start()
         {
-            StartCoroutine(PlayWinBGM());
+            if (m_rm.ResultState == GameResult.Win)
+            {
+                await PlayWinBGM();
+            }
+            else
+            {
+                await PlayLoseBGM();
+            }
         }
-        else
+
+        private async UniTask PlayWinBGM()
         {
-            StartCoroutine(PlayLoseBGM());
+            await SoundMaster.Instance.PlaySE(m_winSENum);
+            SoundMaster.Instance.PlayBGM(m_winBGMNum);
+        }
+
+        private async UniTask PlayLoseBGM()
+        {
+            await SoundMaster.Instance.PlaySE(m_loseSENum);
+            SoundMaster.Instance.PlayBGM(m_loseBGMNum);
         }
     }
-
-    private IEnumerator PlayWinBGM()
-    {
-        source.PlayOneShot(winSE);
-        yield return new WaitForSeconds(winSE.length);
-        source.clip = win;
-        source.loop = true;
-        source.Play();
-    }
-
-    private IEnumerator PlayLoseBGM()
-    {
-        source.PlayOneShot(loseSE);
-        yield return new WaitForSeconds(loseSE.length);
-        source.clip = lose;
-        source.loop = true;
-        source.Play();
-    } 
 }
+
