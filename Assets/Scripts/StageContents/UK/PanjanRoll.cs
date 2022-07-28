@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UniRX;
+using UniRx;
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 
@@ -10,18 +10,17 @@ namespace SamuraiSoccer.UK
 {
     public class PanjanRoll : MonoBehaviour
     {
-        [SerializedField] Transform player;
-        [SerializedField] float moveSpeed;
-        [SerializedField] float rotSpeed;
+        [SerializeField] Transform player;
+        [SerializeField] float moveSpeed;
+        [SerializeField] float rotSpeed;
         bool exploded, playing;
-        [SerializedField] GameObject rot;
-        [SerializedField] GameObject fire;
-        [SerializedField] int partMax;
-        [SerializedField] RigidBody rb;
-        [SerializedField] AudioSource audio;
-        [SerializedField] CapsuleCollider capsuleCollider;
+        [SerializeField] GameObject rot;
+        [SerializeField] GameObject fire;
+        [SerializeField] int partMax;
+        [SerializeField] Rigidbody rb;
+        [SerializeField] AudioSource audio;
+        [SerializeField] CapsuleCollider capsuleCollider;
 
-        GameObject fire;
         PanjanExplode panjanExplode;
 
         // Start is called before the first frame update
@@ -98,10 +97,10 @@ namespace SamuraiSoccer.UK
                 {
                     Instantiate(fire, part.position, Quaternion.identity, part);
                     panjanExplode = part.gameObject.GetComponent<PanjanExplode>();
-                    panjanExplode.SetActive(true);
-                    panjanExplode.SetFireObject();
+                    panjanExplode.gameObject.SetActive(true);
+                    panjanExplode.SetFireObject(fire);
                 }
-                RigidBody rbPart = part.gameObject.GetComponent<RigidBody>();
+                Rigidbody rbPart = part.gameObject.GetComponent<Rigidbody>();
                 rbPart.isKinematic = false;
                 rbPart.AddForce(transform.forward * 1000);
                 index++;
@@ -115,7 +114,7 @@ namespace SamuraiSoccer.UK
             exploded = true;
             foreach (Transform part in rot.transform)
             {
-                RigidBody rbPart = part.gameObject.GetComponent<RigidBody>();
+                Rigidbody rbPart = part.gameObject.GetComponent<Rigidbody>();
                 rbPart.isKinematic = false;
                 rbPart.AddForce(transform.up * 1000);
             }

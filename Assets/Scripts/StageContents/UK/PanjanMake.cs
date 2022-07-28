@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UniRX;
+using UniRx;
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 
@@ -10,7 +10,7 @@ namespace SamuraiSoccer.UK
 {
     public class PanjanMake : MonoBehaviour
     {
-   [SerializedField]GameObject panjan;
+   [SerializeField]GameObject panjan;
     bool panjanExist;
     bool isEnd;
     Vector3 respone = new Vector3(30, 2, 95);

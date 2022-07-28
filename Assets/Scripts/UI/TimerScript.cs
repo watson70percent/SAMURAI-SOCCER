@@ -12,8 +12,8 @@ namespace SamuraiSoccer.UI
         bool playing;//試合中のフラグ
         bool end = false;//試合終了のフラグ
         float elapsedTime = 0;//経過時間
-        [SerializedField] float limitTime;//制限時間
-        [SerializedField] GameObject displayText;//時間を表示させるもの
+        [SerializeField] float limitTime;//制限時間
+        [SerializeField] GameObject displayText;//時間を表示させるもの
         public Text timeText;//時間を表示させるもの
 
         private void Start()

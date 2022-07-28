@@ -11,75 +11,51 @@ namespace SamuraiSoccer.UI
 {
     public class Slidepad : MonoBehaviour
     {
-
-        
-
-        float radius;
-        float scale;
-        bool isdragged;
-        public GameObject joystick;
-        RectTransform joyrect;
-        Vector2 joystartposition;
-        Vector2 slidestartposition;
-        public GameObject player;
-        Rigidbody playerrig;
-        public float speed;
-
-        
-        
-
-
-
-        int fingerID;
-        
-
-        public FieldManager field;
-
-
+        private float m_radius;
+        private float m_scale;
+        private bool m_isDragged;
+        [SerializeField]
+        private GameObject m_joystick;
+        private RectTransform m_joyrect;
+        private Vector2 m_joyStartPosition;
+        private Vector2 m_slideStartPosition;
+        [SerializeField]
+        private GameObject m_player;
+        [SerializeField]
+        private Rigidbody m_playerrig;
+        [SerializeField]
+        private float m_speed;
+        private int m_fingerID;
 
         // Start is called before the first frame update
         void Start()
         {
-            
+            m_joyrect = m_joystick.GetComponent<RectTransform>();
+            m_joyStartPosition = m_joyrect.localPosition;
+            m_playerrig = m_player.GetComponent<Rigidbody>();
 
-            
-
-            joyrect = joystick.GetComponent<RectTransform>();
-            joystartposition = joyrect.localPosition;
-            playerrig = player.GetComponent<Rigidbody>();
-            
-            scale = transform.localScale.x;
-            radius = 50 * scale;
-            Debug.Log("radius : " + radius);
+            m_scale = transform.localScale.x;
+            m_radius = 50 * m_scale;
+            Debug.Log("radius : " + m_radius);
         }
 
         // Update is called once per frame
         void LateUpdate()
         {
-
             PlayingState();
-
         }
-
-
 
         void PlayingState()
         {
-            if (isdragged == true)
+            if (m_isDragged == true)
             {
                 if (Input.touchCount > 0)
                 {
                     Touch touch = FindFinger();
-
-                    Vector2 dir = touch.position - slidestartposition;
-
-
-                    if (dir.magnitude > radius) { dir = dir.normalized * radius; }
-
-                    Controller(5 / radius * dir);
-
-                    joyrect.localPosition = joystartposition + dir / scale;
-
+                    Vector2 dir = touch.position - m_slideStartPosition;
+                    if (dir.magnitude > m_radius) { dir = dir.normalized * m_radius; }
+                    Controller(5 / m_radius * dir);
+                    m_joyrect.localPosition = m_joyStartPosition + dir / m_scale;
                 }
             }
             else
@@ -88,17 +64,15 @@ namespace SamuraiSoccer.UI
             }
         }
 
-
-
         public void DragStart(BaseEventData baseEventData)
         {
             PointerEventData pointerEventData = baseEventData as PointerEventData;
-            fingerID = pointerEventData.pointerId;
-            isdragged = true;
+            m_fingerID = pointerEventData.pointerId;
+            m_isDragged = true;
             try
             {
-                Touch touch = Input.GetTouch(fingerID);
-                slidestartposition = touch.position;
+                Touch touch = Input.GetTouch(m_fingerID);
+                m_slideStartPosition = touch.position;
             }
             catch
             {
@@ -106,38 +80,26 @@ namespace SamuraiSoccer.UI
             }
         }
 
-
-
-
         public void DragEnd()
         {
-            isdragged = false;
-            joyrect.localPosition = joystartposition;
+            m_isDragged = false;
+            m_joyrect.localPosition = m_joyStartPosition;
         }
 
         void Controller(Vector2 dir)
         {
             dir = new Vector2(2.0f * dir.y, -dir.x);
-
             PlayerEvent.StickControllerOnNext(new Vector3(dir.x, 0, dir.y));
- 
         }
-
-        
-
 
         Touch FindFinger()
         {
             foreach (Touch t in Input.touches)
             {
-                if (t.fingerId == fingerID) { return t; }
-
+                if (t.fingerId == m_fingerID) { return t; }
             }
             return new Touch();
         }
-
-        
     }
-
 }
 

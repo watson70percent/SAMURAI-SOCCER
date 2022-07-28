@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
+using UniRx;
 
 namespace SamuraiSoccer.UK
 {

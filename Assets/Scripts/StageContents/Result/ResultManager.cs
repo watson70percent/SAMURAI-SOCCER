@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using SamuraiSoccer.StageContents;
 
-
-
 namespace SamuraiSoccer.StageContents.Result
 {
     /// <summary>
