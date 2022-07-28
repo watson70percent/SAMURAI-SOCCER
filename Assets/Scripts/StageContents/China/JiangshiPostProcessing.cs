@@ -7,11 +7,11 @@ namespace SamuraiSoccer.StageContents.China
 {
     public class JiangshiPostProcessing : MonoBehaviour
     {
-        public Material material;
+        [SerializeField]
+        private Material m_material;
         private void OnRenderImage(RenderTexture src, RenderTexture dest)
         {
-
-            Graphics.Blit(src, dest, material);
+            Graphics.Blit(src, dest, m_material);
         }
 
         private void Start()
