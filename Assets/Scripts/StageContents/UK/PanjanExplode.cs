@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 using UniRx;
+using UniRx.Triggers;
 
 namespace SamuraiSoccer.UK
 {
@@ -16,40 +17,17 @@ namespace SamuraiSoccer.UK
         // Start is called before the first frame update
         void Start()
         {
-            InGameEvent.Reset.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Standby.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Pause.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Play.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Finish.Subscribe(_ =>
-            {
-                
-            });
             InGameEvent.Goal.Subscribe(_ =>
             {
                 isBurn = false;
-            });
-        }
-
-
-        private void OnCollisionEnter(Collision other)
-        {
-            //衝突がプレイヤーだったらゲームオーバー
-            if (isBurn && other.gameObject.tag == "Player")
-            {
+            }).AddTo(this);
+            this.OnCollisionEnterAsObservable()
+            .Select(hit => hit.gameObject.tag)
+            .Where(tag => tag == "Player")
+            .Subscribe(_ => {
                 fire.SetActive(true);
-            }
+                InGameEvent.FinishOnNext();
+            }).AddTo(this);
         }
 
         public void SetFireObject(GameObject fire){

@@ -35,7 +35,7 @@ namespace SamuraiSoccer.StageContents.UK
                 Move();
             }).AddTo(this);
             this.OnTriggerEnterAsObservable().Where(x => x.gameObject.tag == "Player")
-            .Subscribe(async _ => await BlowAway(this.GetCancellationTokenOnDestroy()));
+            .Subscribe(async _ => await BlowAway(this.GetCancellationTokenOnDestroy())).AddTo(this);
         }
 
         // Update is called once per frame
