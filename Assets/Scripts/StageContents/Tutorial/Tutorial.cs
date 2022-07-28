@@ -4,10 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Cinemachine;
 
-[RequireComponent(typeof(GameManager))]
 public class Tutorial : MonoBehaviour
 {
-    private GameManager gameManager;
     public GameObject samurai;
     public GameObject ball;
     public GameObject firstYellowCard;
@@ -26,13 +24,12 @@ public class Tutorial : MonoBehaviour
     {
         timerText.text = "∞";
         timerText.fontSize = 45;
-        gameManager = GetComponent<GameManager>();
         StartCoroutine(Runner());
     }
 
     IEnumerator Runner()
     {
-        gameManager.StateChangeSignal(GameState.Pause);
+        //gameManager.StateChangeSignal(GameState.Pause);
         //テキスト表示1
         yield return new WaitForSeconds(5f);
         tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
@@ -60,13 +57,13 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(2f);
         //テキストを非表示に
         tutorialText.text = "";
-        gameManager.StateChangeSignal(GameState.Playing);
+        //gameManager.StateChangeSignal(GameState.Playing);
         //敵に一定距離近づくまで待機
         while ((samurai.transform.position-destination).sqrMagnitude > 100)
         {
             yield return null;
         }
-        gameManager.StateChangeSignal(GameState.Standby);
+        //gameManager.StateChangeSignal(GameState.Standby);
         //テキスト表示2
         textAnimator.SetTrigger("ReturnText");
         tutorialText.text = "サムライが行うのはただ斬ることのみ";
@@ -77,13 +74,13 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(2f);
         //テキストを非表示に
         tutorialText.text = "";
-        gameManager.StateChangeSignal(GameState.Playing);
+        //gameManager.StateChangeSignal(GameState.Playing);
         //敵を切り倒して行って距離移動するまで待機
         while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
         {
             yield return null;
         }
-        gameManager.StateChangeSignal(GameState.Pause);
+        //gameManager.StateChangeSignal(GameState.Pause);
         enemyNumber.text = 1.ToString();
         //テキスト表示2
         textAnimator.SetTrigger("ReturnText");
@@ -113,13 +110,13 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(2f);
         //テキストを非表示に
         tutorialText.text = "";
-        gameManager.StateChangeSignal(GameState.Playing);
+        //gameManager.StateChangeSignal(GameState.Playing);
         //イエローカードが出るまで待機
         while (!firstYellowCard.activeSelf)
         {
             yield return null;
         }
-        gameManager.StateChangeSignal(GameState.Pause);
+        //gameManager.StateChangeSignal(GameState.Pause);
         //テキスト表示3
         textAnimator.SetTrigger("ReturnText");
         tutorialText.text = "しまった！れふぇりーに見られてしまった";

@@ -3,26 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class TargetWorldData : MonoBehaviour
+namespace SamuraiSoccer.UI
 {
-    [SerializeField]
-    private float _cameraDistance = 5f;//カメラと対象オブジェクトとの距離
-    public float CameraDistance
+    public class TargetWorldData : MonoBehaviour
     {
-        get { return _cameraDistance; }
-        private set { _cameraDistance = value; }
-    }
+        [SerializeField]
+        private float m_cameraDistance = 5f; //カメラと対象オブジェクトとの距離
+        public float CameraDistance
+        {
+            get { return m_cameraDistance; }
+            private set { m_cameraDistance = value; }
+        }
 
-    [SerializeField]
-    private WorldName _worldName = WorldName.UK;
-    public WorldName WorldName
-    {
-        get { return _worldName; }
-        private set { _worldName = value; }
-    }
+        [SerializeField]
+        private int m_stageNumber;
+        public int StageNumber
+        {
+            get { return m_stageNumber; }
+            private set { m_stageNumber = value; }
+        }
 
-    private void Start()
-    {
-        GetComponentInChildren<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = _cameraDistance;
+        private void Start()
+        {
+            GetComponentInChildren<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = m_cameraDistance;
+        }
     }
 }
+

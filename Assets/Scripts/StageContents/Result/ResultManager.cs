@@ -9,16 +9,9 @@ namespace SamuraiSoccer.StageContents.Result
     /// <summary>
     /// ゲームの結果を取得・表示
     /// </summary>
-    public class ResultManager : MonoBehaviour, StageDataReceiver
+    public class ResultManager : MonoBehaviour
     {
-        public BaseStageData NowStageData { get; private set; } = null;
-        public void StageDataReceive(BaseStageData stageData)
-        {
-            NowStageData = stageData;
-            Debug.Log("Set stage data : worldName = " + NowStageData.WorldName + ", StageNumber = " + NowStageData.StageNumber);
-        }
-
-        public GameResult ResultState { get; private set; } = Result.Undefined;
+        public GameResult ResultState { get; private set; } = GameResult.Undefined;
         [SerializeField] Text result;
         public string resultText;
         [SerializeField]
@@ -57,7 +50,6 @@ namespace SamuraiSoccer.StageContents.Result
 
             //今日のひとこと
             samuraiPhrase.text = samuraiWordBase.samuraiwords[Random.Range(0, samuraiWordBase.samuraiwords.Count)];
-            Debug.Log("Now data : worldName = " + NowStageData.WorldName + ", StageNumber = " + NowStageData.StageNumber + ", Result = " + ResultState);
         }
 
         public void SetResult(GameResult resultState, string resultText)
