@@ -41,8 +41,8 @@ namespace SamuraiSoccer.SoccerGame
             if (penaltynumber == 1)
             {
                 SoundMaster.Instance.PlaySE(m_redcardSENumber);
-                InMemoryDataTransitClient<Result> lose = new InMemoryDataTransitClient<Result>();
-                lose.Set(StorageKey.KEY_WINORLOSE, Result.Lose);
+                InMemoryDataTransitClient<GameResult> lose = new InMemoryDataTransitClient<GameResult>();
+                lose.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                 InMemoryDataTransitClient<string> message = new InMemoryDataTransitClient<string>();
                 message.Set(StorageKey.KEY_RESULTMESSAGE, "反則負け！");
                 InGameEvent.FinishOnNext();
