@@ -19,30 +19,10 @@ namespace SamuraiSoccer.UK
     // Start is called before the first frame update
         private void Start()
         {
-            InGameEvent.Reset.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Standby.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Pause.Subscribe(_ =>
-            {
-
-            });
             InGameEvent.Play.Subscribe(_ =>
             {
                 Instantiate(panjan,respone,quaternion).GetComponent<PanjanRoll>();
-            });
-            InGameEvent.Finish.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Goal.Subscribe(_ =>
-            {
-
-            });
+            }).AddTo(this);
         }
     }
 }

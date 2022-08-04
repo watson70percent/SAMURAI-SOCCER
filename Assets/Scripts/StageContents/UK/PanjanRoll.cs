@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UniRx;
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
+using UniRx.Triggers;
 
 namespace SamuraiSoccer.UK
 {
@@ -27,30 +28,25 @@ namespace SamuraiSoccer.UK
 
         private void Start()
         {
-            InGameEvent.Reset.Subscribe(_ =>
-            {
-
-            });
-            InGameEvent.Standby.Subscribe(_ =>
-            {
-
-            });
             InGameEvent.Pause.Subscribe(_ =>
             {
                 playing = false;
-            });
+            }).AddTo(this);
             InGameEvent.Play.Subscribe(_ =>
             {
                 playing = true;
-            });
-            InGameEvent.Finish.Subscribe(_ =>
-            {
-
-            });
+            }).AddTo(this);
             InGameEvent.Goal.Subscribe(_ =>
             {
                 selfExplode();
-            });
+            }).AddTo(this);
+            this.OnTriggerEnterAsObservable()
+            .Select(hit => hit.gameObject.tag)
+            .Where(tag => tag == "Player")
+            .Subscribe(_ => {
+                fire.SetActive(true);
+                InGameEvent.FinishOnNext();
+            }).AddTo(this);
         }
 
         // Update is called once per frame
@@ -69,8 +65,6 @@ namespace SamuraiSoccer.UK
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
             }
         }
-
-
 
         private void OnTriggerEnter(Collider other)
         {

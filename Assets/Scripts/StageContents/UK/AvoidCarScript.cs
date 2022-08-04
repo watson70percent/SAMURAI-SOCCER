@@ -21,7 +21,7 @@ namespace Name
                     v3.y = 10;
                     rb.velocity = v3;
                 }
-            });
+            }).AddTo(this);
         }
     }
 }
