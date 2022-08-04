@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,8 +25,10 @@ namespace SamuraiSoccer.UK
             .Select(hit => hit.gameObject.tag)
             .Where(tag => tag == "Player")
             .Subscribe(_ => {
-                fire.SetActive(true);
-                InGameEvent.FinishOnNext();
+                if(isBurn){
+                    fire.SetActive(true);
+                    InGameEvent.FinishOnNext();
+                }
             }).AddTo(this);
         }
 

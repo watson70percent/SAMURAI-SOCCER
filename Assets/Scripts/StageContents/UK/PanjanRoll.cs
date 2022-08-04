@@ -19,7 +19,7 @@ namespace SamuraiSoccer.UK
         [SerializeField] GameObject fire;
         [SerializeField] int partMax;
         [SerializeField] Rigidbody rb;
-        [SerializeField] AudioSource audio;
+        [SerializeField] AudioSource soundEffect;
         [SerializeField] CapsuleCollider capsuleCollider;
 
         PanjanExplode panjanExplode;
@@ -80,7 +80,7 @@ namespace SamuraiSoccer.UK
 
         void Explode()
         {
-            audio.Play();
+            soundEffect.Play();
             rb.isKinematic = false;
             rb.AddForce(0, 2000, 0);
             capsuleCollider.enabled = false;
@@ -104,7 +104,7 @@ namespace SamuraiSoccer.UK
 
         void selfExplode()
         {
-            audio.Play();
+            soundEffect.Play();
             exploded = true;
             foreach (Transform part in rot.transform)
             {
