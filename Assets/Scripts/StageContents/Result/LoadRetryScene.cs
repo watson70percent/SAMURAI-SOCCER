@@ -2,37 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using SamuraiSoccer.StageContents.StageSelect;
 
 namespace SamuraiSoccer.StageContents.Result
 {
     [RequireComponent(typeof(ResultManager))]
     public class LoadRetryScene : MonoBehaviour
     {
-        public StageSelectData stageSelectData;
-        BaseStageData baseStageData;
-        private ResultManager _resultManager;
-        private void Start()
-        {
-            _resultManager = GetComponent<ResultManager>();
-        }
+        [SerializeField]
+        private StagePreviewDatas m_stagePreviewDatas;
         /// <summary>
-        /// 今遊んだSceneをStageSelectDataから取得しそのSceneへ移動
+        /// 今遊んだSceneをStagePreviewDatasから取得しそのSceneへ移動
         /// </summary>
         public void LoadScene()
         {
             SoundMaster.Instance.PlaySE(0);
-            if (_resultManager.NowStageData == null) return;
-            baseStageData = _resultManager.NowStageData;
-            string retrySceneName = stageSelectData.stageSelectList[(int)baseStageData.WorldName * 3 + baseStageData.StageNumber].gameScene;
-            SceneManager.sceneLoaded += GameSceneLoaded;
+            InMemoryDataTransitClient<int> stageNumDataTransitClient = new InMemoryDataTransitClient<int>();
+            string retrySceneName = m_stagePreviewDatas.stageSelectList[stageNumDataTransitClient.Get(StorageKey.KEY_STAGENUMBER)].gameScene;
             SceneManager.LoadScene(retrySceneName);
-        }
-
-        void GameSceneLoaded(Scene next, LoadSceneMode mode)
-        {
-            GameObject.Find("DefaultStage").GetComponent<StageDataHolder>().SetStageData(baseStageData);
-
-            SceneManager.sceneLoaded -= GameSceneLoaded;
         }
     }
 }
