@@ -3,31 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadAnyScene : MonoBehaviour
+namespace SamuraiSoccer.StageContents.Result
 {
-    /// <summary>
-    /// Scene遷移
-    /// </summary>
-    /// <param name="targetSceneName">
-    /// ロード先のScene
-    /// </param>
-    public void LoadScene(string targetSceneName)
+    public class LoadAnyScene : MonoBehaviour
     {
-        SoundMaster.Instance.PlaySE(0);
-        SceneManager.LoadScene(targetSceneName);
-    }
-
-
-    public void LoadStartScene(string targetSceneName)
-    {
-        SoundMaster.Instance.PlaySE(0);
-        if (PlayerPrefs.GetInt("DoneTutorial") == 0)
+        /// <summary>
+        /// Scene遷移
+        /// </summary>
+        /// <param name="targetSceneName">
+        /// ロード先のScene
+        /// </param>
+        public void LoadScene(string targetSceneName)
         {
-            LoadScene("Tutorial");
+            SoundMaster.Instance.PlaySE(0);
+            SceneManager.LoadScene(targetSceneName);
         }
-        else
+
+
+        public void LoadStartScene(string targetSceneName)
         {
-            LoadScene(targetSceneName);
+            SoundMaster.Instance.PlaySE(0);
+            if (PlayerPrefs.GetInt("DoneTutorial") == 0)
+            {
+                LoadScene("Tutorial");
+            }
+            else
+            {
+                LoadScene(targetSceneName);
+            }
         }
     }
 }
+
