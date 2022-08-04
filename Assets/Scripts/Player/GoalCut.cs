@@ -5,6 +5,9 @@ using SamuraiSoccer;
 
 namespace SamuraiSoccer.Player
 {
+    /// <summary>
+    /// ゴールを斬撃で切れるように
+    /// </summary>
     public class GoalCut : MonoBehaviour
     {
 

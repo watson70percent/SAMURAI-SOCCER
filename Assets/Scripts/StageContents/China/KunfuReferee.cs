@@ -5,6 +5,9 @@ using SamuraiSoccer.SoccerGame;
 
 namespace SamuraiSoccer.StageContents.China
 {
+    /// <summary>
+    /// カンフーシーンのレフェリー
+    /// </summary>
     public class KunfuReferee : RefereeMove
     {
         protected override void Start()

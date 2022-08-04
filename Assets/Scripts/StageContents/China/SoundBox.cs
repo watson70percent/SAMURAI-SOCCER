@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace SamuraiSoccer.StageContents.China
 {
+    /// <summary>
+    /// 音を鳴らして消えるオブジェクト
+    /// </summary>
     public class SoundBox : MonoBehaviour
     {
         public void StartSoundBox(AudioClip clip)

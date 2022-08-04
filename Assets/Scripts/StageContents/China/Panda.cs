@@ -71,10 +71,10 @@ namespace SamuraiSoccer.StageContents.China
                     if (pos.y < -50) { Destroy(gameObject); }
                     m_anim.speed = 1;
                     break;
-                case State.Vanish:
+                case State.Vanish: 
                     Destroy(gameObject);
                     break;
-                case State.Stop:
+                case State.Stop: //ポーズ時は静止
                     m_anim.speed = 0; break;
 
             }
@@ -84,6 +84,7 @@ namespace SamuraiSoccer.StageContents.China
 
         private void OnTriggerEnter(Collider other)
         {
+            //プレイヤーとぶつかったらゲームオーバー
             if (other.tag == "Player" && !m_hit && m_state == State.Active)
             {
                 m_hit = true;
@@ -94,7 +95,6 @@ namespace SamuraiSoccer.StageContents.China
 
         public void GameOver()
         {
-
             SceneManager.sceneLoaded += GameSceneLoaded;
             InGameEvent.FinishOnNext();
             SoundBoxUtil.SetSoundBox(transform.position, m_hitSound);
