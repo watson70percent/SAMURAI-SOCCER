@@ -91,8 +91,8 @@ namespace SamuraiSoccer.StageContents.Rossia
                 damage += 4.0f / 30 * Time.deltaTime;
                 if (damage > 4.8)
                 {
-                    var lose = new InMemoryDataTransitClient<Result>();
-                    lose.Set(StorageKey.KEY_WINORLOSE, Result.Lose);
+                    var lose = new InMemoryDataTransitClient<GameResult>();
+                    lose.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                     var message = new InMemoryDataTransitClient<string>();
                     message.Set(StorageKey.KEY_RESULTMESSAGE, "凍ってしまった!");
                     InGameEvent.FinishOnNext();
