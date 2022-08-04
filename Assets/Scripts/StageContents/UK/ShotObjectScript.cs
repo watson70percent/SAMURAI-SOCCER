@@ -45,7 +45,7 @@ namespace SamuraiSoccer.StageContents.UK
             }).AddTo(this);
             this.OnTriggerEnterAsObservable().Where(x => x.gameObject.tag == "Player")
             .Subscribe(async _ => {
-                    if(isActive)await BlowAway(this.GetCancellationTokenOnDestroy())
+                if (isActive) await BlowAway(this.GetCancellationTokenOnDestroy());
                 }).AddTo(this);
         }
 
