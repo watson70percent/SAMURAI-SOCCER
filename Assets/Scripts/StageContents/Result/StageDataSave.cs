@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using System.Threading;
-using SamuraiSoccer;
+using SamuraiSoccer.StageContents;
 
 
 
@@ -21,13 +21,13 @@ namespace SamuraiSoccer.StageContents.Result
 
         async UniTask Save(CancellationToken cancellation_token)
         {
-            Result result;
-            while ((result = GetComponent<ResultManager>().ResultState) == Result.Undefined)
+            GameResult result;
+            while ((result = GetComponent<ResultManager>().ResultState) == GameResult.Undefined)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
 
-            if (result == Result.Win)
+            if (result == GameResult.Win)
             {
                 InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
                 int fieldNumber = stageNumberTransitionClient.Get(StorageKey.KEY_FIELDNUMBER);
