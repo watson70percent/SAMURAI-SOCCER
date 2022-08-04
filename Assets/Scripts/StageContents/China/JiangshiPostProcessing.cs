@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace SamuraiSoccer.StageContents.China
 {
+    /// <summary>
+    /// キョンシーシーンにおいてカメラにポストエフェクトをかける
+    /// </summary>
     public class JiangshiPostProcessing : MonoBehaviour
     {
         [SerializeField]

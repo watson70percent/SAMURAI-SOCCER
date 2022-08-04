@@ -5,6 +5,9 @@ using SamuraiSoccer.SoccerGame;
 
 namespace SamuraiSoccer.StageContents.China
 {
+    /// <summary>
+    /// 審判をカンフーに置き換える
+    /// </summary>
     public class KunfuSceneManager : MonoBehaviour
     {
         [SerializeField]

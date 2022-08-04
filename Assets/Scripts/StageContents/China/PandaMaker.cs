@@ -34,6 +34,7 @@ namespace SamuraiSoccer.StageContents.China
 
         }
 
+        //パンダ生成
         async UniTask PandaSpawn(CancellationToken token)
         {
             while (true)

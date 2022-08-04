@@ -2,64 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slash : MonoBehaviour
+namespace SamuraiSoccer.Player
 {
-
-    public Animator animator;
-    ParticleSystem.MainModule particle;
-    float time;
-    float alpha;
-    public AudioClip slash;
-    // Start is called before the first frame update
-    void Start()
+    public class Slash : MonoBehaviour
     {
-        particle = GetComponent<ParticleSystem>().main;
-        alpha = particle.startColor.color.a;
-    }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        time += Time.deltaTime;
-        particle.startColor = new Color(particle.startColor.color.r, particle.startColor.color.g, particle.startColor.color.b, alpha - time);
-
-
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Finish")) {
-            Destroy(transform.root.gameObject);
-        } 
-
-
-    }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-
-    //    if (collision.gameObject.GetComponent<EasyCPU>()?.status.ally==false)
-    //    {
-    //        var contact = collision.contacts[0];
-    //        var dir = contact.point - transform.position;
-    //        collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-    //    }
-
-        
-
-    //}
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<EasyCPU>()?.status.ally == false)
+        public Animator animator;
+        ParticleSystem.MainModule particle;
+        float time;
+        float alpha;
+        public AudioClip slash;
+        // Start is called before the first frame update
+        void Start()
         {
-            var dir = other.transform.position - transform.position;
-            other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-            GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
-            other.GetComponent<EasyCPU>().Attacked();
+            particle = GetComponent<ParticleSystem>().main;
+            alpha = particle.startColor.color.a;
         }
-        else if (other.gameObject.tag == "TutorialEnemy")
+
+
+        // Update is called once per frame
+        void Update()
         {
-            var dir = other.transform.position - transform.position;
-            other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-            GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
+            time += Time.deltaTime;
+            particle.startColor = new Color(particle.startColor.color.r, particle.startColor.color.g, particle.startColor.color.b, alpha - time);
+
+
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Finish"))
+            {
+                Destroy(transform.root.gameObject);
+            }
+
+
+        }
+
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.GetComponent<EasyCPU>()?.status.ally == false)
+            {
+                var dir = other.transform.position - transform.position;
+                other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
+                other.GetComponent<EasyCPU>().Attacked();
+            }
+            else if (other.gameObject.tag == "TutorialEnemy")
+            {
+                var dir = other.transform.position - transform.position;
+                other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
+            }
         }
     }
+
 }

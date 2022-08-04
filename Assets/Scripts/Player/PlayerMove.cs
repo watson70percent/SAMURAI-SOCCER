@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.UI;
+using SamuraiSoccer.SoccerGame;
 
 namespace SamuraiSoccer.Player
 {
@@ -98,6 +99,9 @@ namespace SamuraiSoccer.Player
         }
 
 
+        /// <summary>
+        /// コーナーフラッグの位置を境界に設定
+        /// </summary>
         void SetBoundy()
         {
             float xmin, xmax, zmin, zmax;
