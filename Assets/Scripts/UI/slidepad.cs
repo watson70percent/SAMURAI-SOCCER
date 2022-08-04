@@ -36,7 +36,6 @@ namespace SamuraiSoccer.UI
 
             m_scale = transform.localScale.x;
             m_radius = 50 * m_scale;
-            Debug.Log("radius : " + m_radius);
         }
 
         // Update is called once per frame
@@ -54,8 +53,8 @@ namespace SamuraiSoccer.UI
                     Touch touch = FindFinger();
                     Vector2 dir = touch.position - m_slideStartPosition;
                     if (dir.magnitude > m_radius) { dir = dir.normalized * m_radius; }
-                    Controller(5 / m_radius * dir);
-                    m_joyrect.localPosition = m_joyStartPosition + dir / m_scale;
+                    Controller(5 / m_radius * dir); //移動イベント発行
+                    m_joyrect.localPosition = m_joyStartPosition + dir / m_scale; //コントローラのスティックを移動
                 }
             }
             else
@@ -64,10 +63,15 @@ namespace SamuraiSoccer.UI
             }
         }
 
+        /// <summary>
+        /// おそらくEventTriggerで呼びだす
+        /// 最初のタッチの検出
+        /// </summary>
+        /// <param name="baseEventData"></param>
         public void DragStart(BaseEventData baseEventData)
         {
-            PointerEventData pointerEventData = baseEventData as PointerEventData;
-            m_fingerID = pointerEventData.pointerId;
+            PointerEventData pointerEventData = baseEventData as PointerEventData; //多分タッチ情報
+            m_fingerID = pointerEventData.pointerId; //次フレーム以降でのタッチ識別に用いる
             m_isDragged = true;
             try
             {
@@ -76,10 +80,14 @@ namespace SamuraiSoccer.UI
             }
             catch
             {
-
+                m_isDragged = false; //問題が生じたらタッチ無効
             }
         }
 
+        /// <summary>
+        /// おそらくEventTriggerで呼びだす
+        /// タッチ終了検出
+        /// </summary>
         public void DragEnd()
         {
             m_isDragged = false;
@@ -92,11 +100,16 @@ namespace SamuraiSoccer.UI
             PlayerEvent.StickControllerOnNext(new Vector3(dir.x, 0, dir.y));
         }
 
+        /// <summary>
+        /// タッチ情報から前フレームと同じタッチがあればそれを返す
+        /// 初回タッチは別のところで登録するのでreturn new Touch();は呼ばれない
+        /// </summary>
+        /// <returns></returns>
         Touch FindFinger()
         {
             foreach (Touch t in Input.touches)
             {
-                if (t.fingerId == m_fingerID) { return t; }
+                if (t.fingerId == m_fingerID) { return t; } 
             }
             return new Touch();
         }

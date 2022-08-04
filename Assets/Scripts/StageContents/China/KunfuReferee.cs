@@ -7,8 +7,6 @@ namespace SamuraiSoccer.StageContents.China
 {
     public class KunfuReferee : RefereeMove
     {
-
-
         protected override void Start()
         {
             ball = GameObject.FindGameObjectWithTag("Ball");
@@ -26,7 +24,7 @@ namespace SamuraiSoccer.StageContents.China
 
         protected override void LookAtBall()
         {
-            transform.Rotate(0, 400 * Time.deltaTime, 0);
+            transform.Rotate(0, 400 * Time.deltaTime, 0); //ぐるぐる回転
         }
 
     }

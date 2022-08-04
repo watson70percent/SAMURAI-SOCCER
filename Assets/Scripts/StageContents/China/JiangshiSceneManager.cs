@@ -8,33 +8,39 @@ namespace SamuraiSoccer.StageContents.China
 {
     public class JiangshiSceneManager : MonoBehaviour
     {
-        [SerializeField] GameObject referee, prefab;
-        GameObject jianshi;
-        [SerializeField] RefereeMove refereeMove;
-        [SerializeField] RefereeArea refereeArea;
-        public int areaSize, areaAngle;
+        [SerializeField]
+        private GameObject m_referee, m_prefab;
+        private GameObject m_jianshi;
+        [SerializeField]
+        private RefereeMove m_refereeMove;
+        [SerializeField]
+        private RefereeArea m_refereeArea;
+        [SerializeField]
+        private int m_areaSize, m_areaAngle;
         private void Awake()
         {
-            jianshi = Instantiate(prefab);
-            jianshi.transform.parent = referee.transform.parent;
-            jianshi.transform.localPosition = referee.transform.localPosition;
-            Destroy(referee);
+            //レフェリーを消して代わりにキョンシーをレフェリーに
+            m_jianshi = Instantiate(m_prefab);
+            m_jianshi.transform.parent = m_referee.transform.parent;
+            m_jianshi.transform.localPosition = m_referee.transform.localPosition;
+            Destroy(m_referee);
 
-            refereeMove.anicon = jianshi.GetComponent<Animator>();
+            m_refereeMove.anicon = m_jianshi.GetComponent<Animator>();
             var stagePrefabManager = GameObject.Find("DefaultStage").GetComponent<StagePrefabManager>();
-            areaSize = stagePrefabManager.refereeAreaSize;
-            areaAngle = stagePrefabManager.refereeMaxAng;
+            m_areaSize = stagePrefabManager.refereeAreaSize;
+            m_areaAngle = stagePrefabManager.refereeMaxAng;
         }
 
         private void Update()
         {
-            float height = jianshi.transform.position.y;
-            refereeArea.SerAreaSize(areaSize + height * 20);
+            //アニメーションによるy座標の変化からRefereeAreaの大きさと角度を変更
+            float height = m_jianshi.transform.position.y;
+            m_refereeArea.SerAreaSize(m_areaSize + height * 20);
 
-            var angle = areaAngle + height * 6;
+            var angle = m_areaAngle + height * 6;
             angle = Mathf.Min(angle, 180);
-            refereeArea.SerMaxAngle(angle);
-            refereeArea.MeshMaker();
+            m_refereeArea.SerMaxAngle(angle);
+            m_refereeArea.MeshMaker();
         }
 
     }

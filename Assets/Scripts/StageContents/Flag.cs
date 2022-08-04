@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flag : MonoBehaviour
+namespace SamuraiSoccer.StageContents
 {
-    [SerializeField] Texture texture;
-    [SerializeField] Shader shader;
-    [SerializeField] MeshRenderer[] meshes;
-    // Start is called before the first frame update
-    void Start()
+    public class Flag : MonoBehaviour
     {
-        Material material = new Material(shader);
-        material.SetTexture("_Texture", texture);
-
-        for (int i = 0; i < 4; i++)
+        [SerializeField]
+        private Texture m_texture;
+        [SerializeField]
+        private Shader m_shader;
+        [SerializeField]
+        private MeshRenderer[] m_meshes;
+        // Start is called before the first frame update
+        void Start()
         {
-            meshes[i].material = material;
+            Material material = new Material(m_shader);
+            material.SetTexture("_Texture", m_texture);
+
+            for (int i = 0; i < 4; i++)
+            {
+                m_meshes[i].material = material;
+            }
         }
-
-
     }
-
-
 }

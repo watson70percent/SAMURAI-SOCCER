@@ -5,64 +5,68 @@ using UniRx;
 using UnityEngine.SceneManagement;
 using SamuraiSoccer.Event;
 
-public class PauseButton : MonoBehaviour
+namespace SamuraiSoccer.UI
 {
-    public GameObject pausePanel;
-
-    
-
-    public bool enablePause = false;
-
-
-    int countTest=0;
-
-
-
-
-
-    private void Start()
+    public class PauseButton : MonoBehaviour
     {
-        InGameEvent.Goal.Subscribe(x => { enablePause = false; }).AddTo(this);
-        InGameEvent.Play.Subscribe(x => { enablePause = true; }).AddTo(this);
-        InGameEvent.Finish.Subscribe(x => { enablePause = false; }).AddTo(this);
-        InGameEvent.Standby.Subscribe(x => { enablePause = false; }).AddTo(this);
-        InGameEvent.Pause.Subscribe(isPause => { enablePause = !isPause; }).AddTo(this);
+        [SerializeField]
+        GameObject m_pausePanel;
+        [SerializeField]
+        bool m_enablePause = false;
 
-    }
 
-    public void OnClick()
-    {
-        if (!enablePause) { return; }
+        private void Start()
+        {
+            InGameEvent.Goal.Subscribe(x => { m_enablePause = false; }).AddTo(this);
+            InGameEvent.Play.Subscribe(x => { m_enablePause = true; }).AddTo(this);
+            InGameEvent.Finish.Subscribe(x => { m_enablePause = false; }).AddTo(this);
+            InGameEvent.Standby.Subscribe(x => { m_enablePause = false; }).AddTo(this);
+            InGameEvent.Pause.Subscribe(isPause => { m_enablePause = !isPause; }).AddTo(this);
+        }
 
-        pausePanel.SetActive(true);
-        this.gameObject.SetActive(false);
-
-        InGameEvent.PauseOnNext(true);
-
-        Time.timeScale = 1e-10f;
-
-    }
-
-    public void ContinueButton()
-    {
-        Time.timeScale = 1;
-        InGameEvent.PauseOnNext(false);
-        pausePanel.SetActive(false);
-        this.gameObject.SetActive(true);
-    }
-
-    public void RestartButton()
-    {
-        Time.timeScale = 1;
+        public void OnClick()
+        {
+            if (!m_enablePause) { return; }
         
-        InGameEvent.ResetOnNext();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+            //ポーズパネルを表示して自身は非表示
+            m_pausePanel.SetActive(true); 
+            this.gameObject.SetActive(false); 
+       
+            InGameEvent.PauseOnNext(true);
+            Time.timeScale = 1e-10f; //時を止める...
 
-    public void MenuBackButton()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("StageSelect");
+        }
+
+        /// <summary>
+        /// "ゲームに戻る"ボタンを押したときの処理
+        /// </summary>
+        public void ContinueButton()
+        {
+            Time.timeScale = 1;
+            InGameEvent.PauseOnNext(false);
+            m_pausePanel.SetActive(false);
+            this.gameObject.SetActive(true);
+        }
+
+        /// <summary>
+        /// "ゲームをやり直す"ボタンを押したときの処理
+        /// </summary>
+        public void RestartButton()
+        {
+            Time.timeScale = 1;
+
+            InGameEvent.ResetOnNext();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        /// <summary>
+        /// "メニューに戻る"ボタンを押したときの処理
+        /// </summary>
+        public void MenuBackButton()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("StageSelect");
+        }
+
     }
 
 }

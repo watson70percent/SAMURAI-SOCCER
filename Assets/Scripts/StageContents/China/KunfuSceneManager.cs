@@ -7,27 +7,26 @@ namespace SamuraiSoccer.StageContents.China
 {
     public class KunfuSceneManager : MonoBehaviour
     {
-        [SerializeField] GameObject referee, prefab;
-        GameObject kunfu;
+        [SerializeField]
+        private GameObject m_referee, m_prefab;
+        [SerializeField]
+        private GameObject m_kunfu; //審判とすげ替えるカンフー
         private void Start()
         {
-            kunfu = Instantiate(prefab);
-            kunfu.transform.parent = referee.transform.parent;
-            kunfu.transform.localPosition = referee.transform.localPosition;
+            //レフェリーを消してカンフーを入れる
+            m_kunfu = Instantiate(m_prefab);
+            m_kunfu.transform.parent = m_referee.transform.parent;
+            m_kunfu.transform.localPosition = m_referee.transform.localPosition;
 
-            var parent = referee.transform.parent;
-
+            var parent = m_referee.transform.parent;
             Destroy(parent.GetComponent<RefereeMove>());
             parent.gameObject.AddComponent<KunfuReferee>();
-
-
-            Destroy(referee);
+            Destroy(m_referee);
         }
 
         private void Update()
         {
-            float height = kunfu.transform.position.y;
+            float height = m_kunfu.transform.position.y;
         }
-
     }
 }

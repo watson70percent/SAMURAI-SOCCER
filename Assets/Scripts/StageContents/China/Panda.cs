@@ -10,15 +10,20 @@ namespace SamuraiSoccer.StageContents.China
     public class Panda : MonoBehaviour
     {
         private float m_expandAmount = 400.0f;
-        [SerializeField] private float speed;
-        bool hit;
-
-        Animator anim;
-        [SerializeField] SkinnedMeshRenderer skin;
-        public GameObject gameOverPanel;
-        public AudioClip hitSound;
-        public GameObject blood;
-        GameObject player;
+        [SerializeField]
+        private float m_speed;
+        private bool m_hit;
+        private Animator m_anim;
+        [SerializeField]
+        private SkinnedMeshRenderer m_skin;
+        [SerializeField]
+        private GameObject m_gameOverPanel;
+        [SerializeField]
+        private AudioClip m_hitSound;
+        [SerializeField]
+        private GameObject m_blood;
+        [SerializeField]
+        private GameObject m_player;
 
         enum State
         {
@@ -28,49 +33,49 @@ namespace SamuraiSoccer.StageContents.China
             Vanish
         }
 
-        State state = State.Stop;
-        State tempState = State.Stop;
+        State m_state = State.Stop;
+        State m_tempState = State.Stop;
         private void Start()
         {
 
-            anim = GetComponent<Animator>();
+            m_anim = GetComponent<Animator>();
 
-            player = GameObject.FindGameObjectWithTag("Player");
+            m_player = GameObject.FindGameObjectWithTag("Player");
 
             InGameEvent.Pause.Subscribe(isPause => {
                 if (isPause)
                 {
-                    tempState = state;
-                    state = State.Stop;
+                    m_tempState = m_state;
+                    m_state = State.Stop;
                 }
                 else
                 {
-                    state = tempState;
+                    m_state = m_tempState;
                 }
             });
-            InGameEvent.Play.Subscribe(x => { state = State.Active; });
-            InGameEvent.Standby.Subscribe(x => { state = State.Vanish; });
-            InGameEvent.Goal.Subscribe(x => { state = State.Non_Interference; });
+            InGameEvent.Play.Subscribe(x => { m_state = State.Active; });
+            InGameEvent.Standby.Subscribe(x => { m_state = State.Vanish; });
+            InGameEvent.Goal.Subscribe(x => { m_state = State.Non_Interference; });
 
         }
 
         private void Update()
         {
-            switch (state)
+            switch (m_state)
             {
 
                 case State.Active:
                     var pos = transform.position;
-                    pos.y -= speed * Time.deltaTime;
+                    pos.y -= m_speed * Time.deltaTime;
                     transform.position = pos;
                     if (pos.y < -50) { Destroy(gameObject); }
-                    anim.speed = 1;
+                    m_anim.speed = 1;
                     break;
                 case State.Vanish:
                     Destroy(gameObject);
                     break;
                 case State.Stop:
-                    anim.speed = 0; break;
+                    m_anim.speed = 0; break;
 
             }
 
@@ -79,9 +84,9 @@ namespace SamuraiSoccer.StageContents.China
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player" && !hit && state == State.Active)
+            if (other.tag == "Player" && !m_hit && m_state == State.Active)
             {
-                hit = true;
+                m_hit = true;
                 Invoke("GameOver", 0.2f);
             }
         }
@@ -92,10 +97,10 @@ namespace SamuraiSoccer.StageContents.China
 
             SceneManager.sceneLoaded += GameSceneLoaded;
             InGameEvent.FinishOnNext();
-            SoundBoxUtil.SetSoundBox(transform.position, hitSound);
+            SoundBoxUtil.SetSoundBox(transform.position, m_hitSound);
 
-            Instantiate(blood, player.transform.position + Vector3.up * 0.1f, Quaternion.identity);
-            Instantiate(gameOverPanel);
+            Instantiate(m_blood, m_player.transform.position + Vector3.up * 0.1f, Quaternion.identity);
+            Instantiate(m_gameOverPanel);
 
         }
 

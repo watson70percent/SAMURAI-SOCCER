@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundTexture : MonoBehaviour
+namespace SamuraiSoccer.StageContents
 {
-    [SerializeField] Texture groundTexture;
-    [SerializeField] Texture groundNormalMap;
-
-    private void Start()
+    public class GroundTexture : MonoBehaviour
     {
-        var groundMaterial = new Material(GetComponent<Renderer>().material);
-        if (groundTexture != null) groundMaterial.mainTexture = groundTexture;
-        if (groundNormalMap != null) groundMaterial.SetTexture("_BumpMap", groundNormalMap);
-        GetComponent<Renderer>().material=groundMaterial;
+        [SerializeField]
+        private Texture m_groundTexture;
+        [SerializeField]
+        private Texture m_groundNormalMap;
+
+        private void Start()
+        {
+            var groundMaterial = new Material(GetComponent<Renderer>().material);
+            if (m_groundTexture != null) groundMaterial.mainTexture = m_groundTexture;
+            if (m_groundNormalMap != null) groundMaterial.SetTexture("_BumpMap", m_groundNormalMap);
+            GetComponent<Renderer>().material = groundMaterial;
+        }
     }
 }
