@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using SamuraiSoccer.Event;
+using SamuraiSoccer.SoccerGame;
 
 namespace SamuraiSoccer.StageContents.Rossia
 {
