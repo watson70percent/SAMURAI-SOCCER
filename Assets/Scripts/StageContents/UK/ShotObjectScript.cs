@@ -13,55 +13,63 @@ namespace SamuraiSoccer.StageContents.UK
     public class ShotObjectScript : MonoBehaviour
     {
 
-        [SerializeField] float velocity = 30;//é€Ÿã•
-        float movedLength;//å‹•ã„ãŸè·é›¢
-        float groundWidth = 120;//ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã®å¹…
-        bool isEnd, _isActive = true;
-        [SerializeField] AudioSource audio;
+        [SerializeField] float velocity = 30;//‘¬‚³
+        float movedLength;//“®‚¢‚½‹——£
+        float groundWidth = 120;//ƒOƒ‰ƒEƒ“ƒh‚Ì•
+        bool isEnd, isActive = true;
+        [SerializeField] AudioSource soundEffect;
         [SerializeField] GameObject player;
-        [SerializeField] 
+        Vector3 rotateVec {get{return new Vector3(4, 7, 5);}}
+        float velocity0 = 300;
 
         // Start is called before the first frame update
         void Start()
         {
-            //ç§»å‹•è·é›¢ã®åˆæœŸåŒ–
+            //ˆÚ“®‹——£‚Ì‰Šú‰»
             movedLength = 0;
             InGameEvent.Standby.Subscribe(_ =>
             {
                 Destroy(this.gameObject);
             }).AddTo(this);
+            InGameEvent.Goal.Subscribe(_=>
+            {
+                isActive=false;
+            }).AddTo(this.gameObject);
+            InGameEvent.Finish.Subscribe(_ =>
+            {
+                isActive = false;
+            });
             InGameEvent.UpdateDuringPlay.Subscribe(_ =>
             {
                 Move();
             }).AddTo(this);
             this.OnTriggerEnterAsObservable().Where(x => x.gameObject.tag == "Player")
-            .Subscribe(async _ => await BlowAway(this.GetCancellationTokenOnDestroy())).AddTo(this);
+            .Subscribe(async _ => {
+                    if(isActive)await BlowAway(this.GetCancellationTokenOnDestroy())
+                }).AddTo(this);
         }
 
         // Update is called once per frame
         void Move()
         {
-            //ä¸€å®šã‚¹ãƒ”ãƒ¼ãƒ‰ã§å‹•ã‹ã™
+            //ˆê’èƒXƒs[ƒh‚Å“®‚©‚·
             gameObject.transform.position += transform.forward * Time.deltaTime * velocity;
             movedLength += Time.deltaTime * velocity;
-            //ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã‚’é€šã‚ŠéããŸã‚‰æ¶ˆã™
-            if ((movedLength) > (groundWidth + 2) && !isEnd)
+            //ƒOƒ‰ƒEƒ“ƒh‚ğ’Ê‚è‰ß‚¬‚½‚çÁ‚·
+            if ((movedLength) > (groundWidth + 2) && !isEnd)//‚Ô‚Â‚©‚Á‚½Œã‚É‚ÍÁ‚¦‚È‚¢‚æ‚¤‚É
             {
                 Destroy(this.gameObject);
             }
         }
 
-        //ã‚¹ãƒ­ãƒ¼æ¼”å‡ºã‹ã‚‰ã®ã‚·ãƒ¼ãƒ³é·ç§»
-
-
+        //ƒXƒ[‰‰o‚©‚ç‚ÌƒV[ƒ“‘JˆÚ
         async UniTask BlowAway(CancellationToken cancellationToken = default)
         {
+            isEnd=true;
             Time.timeScale = 0.2f;
-            audio.Play();
+            soundEffect.Play();
             InGameEvent.FinishOnNext();
-            float velocity0 = 300;
             float ang = 20 * Mathf.Deg2Rad;
-            Vector3 rotateVec = new Vector3(4, 7, 5);
             for (int i = 0; i < 100; i++)
             {
                 Vector3 pos = player.transform.position;
