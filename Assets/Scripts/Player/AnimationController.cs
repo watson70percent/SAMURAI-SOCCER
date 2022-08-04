@@ -6,31 +6,23 @@ using SamuraiSoccer.Event;
 using UniRx;
 
 
+
 namespace SamuraiSoccer.Player
 {
     public class AnimationController : MonoBehaviour
     {
         Animator animator;
         public GameObject slash;
-        //public event EventHandler AttackEvent;
 
-        GameManager gameManager;
-
-        GameState state = GameState.Reset;
-
-
-        void SwitchState(StateChangedArg a)
-        {
-            state = a.gameState;
-        }
+        bool m_isEnableAttack = false;
 
         // Start is called before the first frame update
         void Start()
         {
             animator = GetComponent<Animator>();
-            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-            gameManager.StateChange += SwitchState;
-
+            InGameEvent.Play.Subscribe(x=> { m_isEnableAttack = true; }).AddTo(this);
+            InGameEvent.Goal.Subscribe(x=> { m_isEnableAttack = false; }).AddTo(this);
+            InGameEvent.Finish.Subscribe(x=> { m_isEnableAttack = false; }).AddTo(this);
             PlayerEvent.Attack.Subscribe(x => { Attack(); }).AddTo(this);
         }
 
@@ -42,7 +34,7 @@ namespace SamuraiSoccer.Player
 
         public void Attack()
         {
-            if (state != GameState.Playing) { return; }
+            if (!m_isEnableAttack) { return; }
             animator.SetTrigger("Attack");
             Instantiate(slash, transform.position, transform.rotation);
         }
