@@ -22,29 +22,43 @@ namespace SamuraiSoccer.Event
             get { return m_attackShareObservable; }
         }
 
+        //ReactivePropertyを定義して攻撃できるかどうかのフラグをつくる
+        private static IReadOnlyReactiveProperty<bool> m_isEnableAttack = Observable.Merge(
+                InGameEvent.Play.Select(_ => true), //Playのときだけtrueに
+                InGameEvent.Goal.Select(_ => false),
+                InGameEvent.Finish.Select(_ => false)
+            ).ToReactiveProperty<bool>(false);
+
         /// <summary>
         /// Attackのイベントを発行
         /// </summary>
         public static void AttackOnNext()
         {
-            m_attackSubject.OnNext(Unit.Default);
+            if(m_isEnableAttack.Value) m_attackSubject.OnNext(Unit.Default);
         }
 
 
-        private static Subject<Vector3> m_stickControllerSubject = new Subject<Vector3>();
-        private static IObservable<Vector3> m_stickControllerShareObservable = m_stickControllerSubject.Share();
+        private static Subject<Vector3> m_stickInputSubject = new Subject<Vector3>();
+        private static IObservable<Vector3> m_stickInputShareObservable = m_stickInputSubject.Share();
 
         /// <summary>
         /// 移動イベントを発行
         /// </summary>
-        public static IObservable<Vector3> StickControllerSubject
+        public static IObservable<Vector3> StickInput
         {
-            get { return m_stickControllerShareObservable; }
+            get { return m_stickInputShareObservable; }
         }
 
         public static void StickControllerOnNext(Vector3 dir)
         {
-            m_stickControllerSubject.OnNext(dir);
+            m_stickInputSubject.OnNext(dir);
         }
+
+        
+
+        
+
+
+        
     }
 }
