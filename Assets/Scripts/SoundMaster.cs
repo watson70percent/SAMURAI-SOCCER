@@ -61,8 +61,9 @@ namespace SamuraiSoccer
         public async UniTask PlaySE(int soundIndex)
         {
             seAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume * seBolume;
-            seAudioSource.PlayOneShot(soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound);
-            await UniTask.Delay((int)(seAudioSource.clip.length*1000)); //msなので1000をかけて単位変換
+            var targetClip = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound;
+            seAudioSource.PlayOneShot(targetClip);
+            await UniTask.Delay((int)(targetClip.length*1000)); //msなので1000をかけて単位変換
         }
 
         /// <summary>
