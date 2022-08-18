@@ -21,7 +21,6 @@ namespace SamuraiSoccer.UI
         private Vector2 m_slideStartPosition;
         [SerializeField]
         private GameObject m_player;
-        [SerializeField]
         private Rigidbody m_playerrig;
         [SerializeField]
         private float m_speed;
@@ -32,7 +31,6 @@ namespace SamuraiSoccer.UI
         {
             m_joyrect = m_joystick.GetComponent<RectTransform>();
             m_joyStartPosition = m_joyrect.localPosition;
-            m_playerrig = m_player.GetComponent<Rigidbody>();
 
             m_scale = transform.localScale.x;
             m_radius = 50 * m_scale;

@@ -38,7 +38,7 @@ namespace SamuraiSoccer.Player
             InGameEvent.Play.Subscribe(x => { m_state = State.Playing; }).AddTo(this);
 
 
-            PlayerEvent.StickControllerSubject.Subscribe(
+            PlayerEvent.StickInput.Subscribe(
                     stickDir => { ReceiveStick(stickDir); }
                 ).AddTo(this);
         }
