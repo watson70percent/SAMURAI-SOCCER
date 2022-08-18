@@ -19,21 +19,12 @@ namespace SamuraiSoccer.StageContents.StageSelect
         // Start is called before the first frame update
         void Start()
         {
-            StageSelectEvent.World.Subscribe(async _ =>
+            //初期状態としてWorldを発行しておき保留、ストリームが発行されるたびに前回の状態と比較して変更があれば処理する
+            StageSelectEvent.Stage.StartWith(Stage.World).Where(_=> m_canTouchWorld).Buffer(2, 1)
+                .Where(stage => stage[0] != stage[1]).Subscribe(async stage =>
             {
-                if (m_canTouchWorld)
-                {
-                    SoundMaster.Instance.PlaySE(0);
-                    await ChangeCameraView(Stage.World);
-                }
-            });
-            StageSelectEvent.Stage.Subscribe(async x =>
-            {
-                if (m_canTouchWorld)
-                {
-                    SoundMaster.Instance.PlaySE(0);
-                    await ChangeCameraView(x);
-                }
+                SoundMaster.Instance.PlaySE(0);
+                await ChangeCameraView(stage[1]);
             });
         }
 
@@ -71,7 +62,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
     {
         public Stage stage; //どのステージか
         public CinemachineVirtualCamera camera; //そのステージで使用されているカメラ
-
     }
 
 }
