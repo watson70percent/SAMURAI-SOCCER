@@ -5,23 +5,6 @@ namespace SamuraiSoccer.Event
 {
     public static class StageSelectEvent
     {
-        private static Subject<Unit> m_world = new Subject<Unit>();
-        private static IObservable<Unit> m_worldShareObservable = m_world.Share();
-        /// <summary>
-        /// WorldイベントのSubcribe先
-        /// </summary>
-        public static IObservable<Unit> World
-        {
-            get { return m_worldShareObservable; }
-        }
-        /// <summary>
-        /// Worldのイベントを発行
-        /// </summary>
-        public static void WorldOnNext()
-        {
-            m_world.OnNext(Unit.Default);
-        }
-
         private static Subject<Stage> m_stage = new Subject<Stage>();
         private static IObservable<Stage> m_stageShareObservable = m_stage.Share();
         /// <summary>
@@ -43,7 +26,7 @@ namespace SamuraiSoccer.Event
         private static Subject<int> m_preview = new Subject<int>();
         private static IObservable<int> m_previewShareObservable = m_preview.Share();
         /// <summary>
-        /// PreviewイベントのSubscribe先
+        /// Previewイベントを発行
         /// </summary>
         public static IObservable<int> Preview
         {
@@ -68,6 +51,7 @@ namespace SamuraiSoccer.Event
         UK,
         China,
         USA,
-        Rossia
+        Rossia,
+        Japan
     }
 }

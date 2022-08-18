@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
+using SamuraiSoccer.Event;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
@@ -23,13 +24,14 @@ namespace SamuraiSoccer.StageContents.StageSelect
         [SerializeField]
         private AudioSource ru;
 
-        private WorldName current = WorldName.WholeMap;
+        private Stage current = Stage.World;
         private bool isNotCleared = true;
 
         void Start()
         {
             InFileTransmitClient<int> clearedStageNumFileTransitClient = new InFileTransmitClient<int>();
-            var cleared = clearedStageNumFileTransitClient.Get(StorageKey.KEY_STAGENUMBER);
+            int cleared = 0;
+            clearedStageNumFileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out cleared);
             var all = new AudioSource[] { start, jp, gb, cn, us, ru };
             foreach (var bgm in all)
             {
@@ -58,31 +60,31 @@ namespace SamuraiSoccer.StageContents.StageSelect
             }
         }
 
-        public void ChangeBGM(WorldName next, float delayTime)
+        public void ChangeBGM(Stage next, float delayTime)
         {
             if (isNotCleared)
             {
                 return;
             }
 
-            if (next == WorldName.WholeMap)
+            if (next == Stage.World)
             {
                 switch (current)
                 {
-                    case WorldName.UK: _ = FadeOut(gb, delayTime); break;
-                    case WorldName.China: _ = FadeOut(cn, delayTime); break;
-                    case WorldName.USA: _ = FadeOut(us, delayTime); break;
-                    case WorldName.Russia: _ = FadeOut(ru, delayTime); break;
+                    case Stage.UK: _ = FadeOut(gb, delayTime); break;
+                    case Stage.China: _ = FadeOut(cn, delayTime); break;
+                    case Stage.USA: _ = FadeOut(us, delayTime); break;
+                    case Stage.Rossia: _ = FadeOut(ru, delayTime); break;
                 }
             }
             else
             {
                 switch (next)
                 {
-                    case WorldName.UK: _ = FadeIn(gb, delayTime); break;
-                    case WorldName.China: _ = FadeIn(cn, delayTime); break;
-                    case WorldName.USA: _ = FadeIn(us, delayTime); break;
-                    case WorldName.Russia: _ = FadeIn(ru, delayTime); break;
+                    case Stage.UK: _ = FadeIn(gb, delayTime); break;
+                    case Stage.China: _ = FadeIn(cn, delayTime); break;
+                    case Stage.USA: _ = FadeIn(us, delayTime); break;
+                    case Stage.Rossia: _ = FadeIn(ru, delayTime); break;
                 }
             }
 
