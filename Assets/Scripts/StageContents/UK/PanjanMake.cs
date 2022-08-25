@@ -10,7 +10,9 @@ namespace SamuraiSoccer.UK
 {
     public class PanjanMake : MonoBehaviour
     {
-   [SerializeField]GameObject panjan;
+    [SerializeField]GameObject panjan;
+    [SerializeField] Transform player;
+    [SerializeField] GameObject fire;
     bool panjanExist;
     bool isEnd;
     Vector3 respone = new Vector3(30, 2, 95);
@@ -21,7 +23,8 @@ namespace SamuraiSoccer.UK
         {
             InGameEvent.Play.Subscribe(_ =>
             {
-                Instantiate(panjan,respone,quaternion).GetComponent<PanjanRoll>();
+                PanjanRoll panjanRoll = Instantiate(panjan,respone,quaternion).GetComponent<PanjanRoll>();
+                panjanRoll.SetObjects(fire,player);
             }).AddTo(this);
         }
     }

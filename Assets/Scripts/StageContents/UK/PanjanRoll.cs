@@ -11,18 +11,19 @@ namespace SamuraiSoccer.UK
 {
     public class PanjanRoll : MonoBehaviour
     {
-        [SerializeField] Transform player;
+ 
         [SerializeField] float moveSpeed;
         [SerializeField] float rotSpeed;
-        bool exploded, playing;
+        bool exploded, playing=true;
         [SerializeField] GameObject rot;
-        [SerializeField] GameObject fire;
         [SerializeField] int partMax;
         [SerializeField] Rigidbody rb;
         [SerializeField] AudioSource soundEffect;
         [SerializeField] CapsuleCollider capsuleCollider;
 
         PanjanExplode panjanExplode;
+        GameObject fire;
+        Transform player;
 
         // Start is called before the first frame update
 
@@ -42,10 +43,10 @@ namespace SamuraiSoccer.UK
             }).AddTo(this);
             this.OnTriggerEnterAsObservable()
             .Select(hit => hit.gameObject.tag)
-            .Where(tag => tag == "Player")
+            .Where(tag => tag == "Player" || tag == "Slash")
             .Subscribe(_ => {
-                fire.SetActive(true);
-                InGameEvent.FinishOnNext();
+                Explode();
+                exploded = true;
             }).AddTo(this);
         }
 
@@ -63,18 +64,6 @@ namespace SamuraiSoccer.UK
 
                 rot.transform.Rotate(moveSpeed, 0, 0);
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            }
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (!exploded)
-            {
-                if (other.transform.root.tag == "Slash" || other.gameObject.tag == "Player")
-                {
-                    Explode();
-                    exploded = true;
-                }
             }
         }
 
@@ -115,8 +104,9 @@ namespace SamuraiSoccer.UK
             Destroy(gameObject, 4.0f);
         }
 
-        void SetFireObject(GameObject fire){
+        public void SetObjects(GameObject fire,Transform player){
             this.fire = fire;
+            this.player = player;
         }
 
     }
