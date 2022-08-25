@@ -12,7 +12,7 @@ namespace SamuraiSoccer.StageContents.China
     {
         [SerializeField]
         private GameObject m_referee, m_prefab;
-        [SerializeField]
+
         private GameObject m_kunfu; //審判とすげ替えるカンフー
         private void Start()
         {
