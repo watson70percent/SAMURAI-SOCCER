@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using SamuraiSoccer.Event;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
@@ -23,7 +25,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         private int m_stageNumber;
 
         [SerializeField]
-        private SpriteRenderer m_spriteRenderer;
+        private Image m_image;
 
         [SerializeField]
         private Sprite m_monoImage;
@@ -50,8 +52,13 @@ namespace SamuraiSoccer.StageContents.StageSelect
             //状態によってステージのアイコンを変更
             if (StageState == StageState.NotPlayable)
             {
-                m_spriteRenderer.sprite = m_monoImage;
+                m_image.sprite = m_monoImage;
             }
+        }
+
+        public void OnClick()
+        {
+            StageSelectEvent.PreviewOnNext(m_stageNumber);
         }
     }
 }
