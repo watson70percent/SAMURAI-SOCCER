@@ -24,12 +24,16 @@ namespace SamuraiSoccer
                 {
                     var client = new InFileTransmitClient<SaveData>();
                     client.TryGet(StorageKey.KEY_STAGENUMBER, out m_data);
+                    if (m_data == null)
+                    {
+                        m_data = new SaveData();
+                    }
                 }
                 m_data.m_stageData = EditorGUILayout.IntField("Stage save data", m_data.m_stageData);
                 if (GUILayout.Button("Save"))
                 {
                     var client = new InFileTransmitClient<SaveData>();
-                    client.Set(StorageKey.KEY_STAGENUMBER, m_data.m_stageData);
+                    client.Set(StorageKey.KEY_STAGENUMBER, m_data);
                 }
             }
         }
