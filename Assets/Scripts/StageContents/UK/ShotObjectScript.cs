@@ -18,7 +18,7 @@ namespace SamuraiSoccer.StageContents.UK
         float groundWidth = 120;//グラウンドの幅
         bool isEnd, isActive = true;
         [SerializeField] AudioSource soundEffect;
-        [SerializeField] GameObject player;
+        //[SerializeField] GameObject player;
         Vector3 rotateVec {get{return new Vector3(4, 7, 5);}}
         float velocity0 = 300;
 
@@ -45,7 +45,7 @@ namespace SamuraiSoccer.StageContents.UK
             }).AddTo(this);
             this.OnTriggerEnterAsObservable().Where(x => x.gameObject.tag == "Player")
             .Subscribe(async _ => {
-                if (isActive) await BlowAway(this.GetCancellationTokenOnDestroy());
+                if (isActive) await BlowAway(_.gameObject,this.GetCancellationTokenOnDestroy());
                 }).AddTo(this);
         }
 
@@ -63,7 +63,7 @@ namespace SamuraiSoccer.StageContents.UK
         }
 
         //スロー演出からのシーン遷移
-        async UniTask BlowAway(CancellationToken cancellationToken = default)
+        async UniTask BlowAway(GameObject player,CancellationToken cancellationToken = default)
         {
             isEnd=true;
             Time.timeScale = 0.2f;
