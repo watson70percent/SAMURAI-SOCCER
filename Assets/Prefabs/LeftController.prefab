@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6685322031242971613}
   - component: {fileID: 6685322031242971553}
   - component: {fileID: 6685322031242971552}
-  - component: {fileID: 6685322031242971615}
+  - component: {fileID: 2002116683090807113}
   - component: {fileID: 6685322031242971614}
   m_Layer: 5
   m_Name: LeftController
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6685322031242971615
+--- !u!114 &2002116683090807113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_joystick: {fileID: 6685322032685566829}
-  m_player: {fileID: 0}
-  m_speed: 5
 --- !u!114 &6685322031242971614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,8 +109,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6685322031242971615}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 2002116683090807113}
+          m_TargetAssemblyTypeName: SamuraiSoccer.UI.SlidePad, SamuraiSoccer.UI
           m_MethodName: DragEnd
           m_Mode: 1
           m_Arguments:
@@ -127,8 +125,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6685322031242971615}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 2002116683090807113}
+          m_TargetAssemblyTypeName: SamuraiSoccer.UI.SlidePad, SamuraiSoccer.UI
           m_MethodName: DragStart
           m_Mode: 0
           m_Arguments:

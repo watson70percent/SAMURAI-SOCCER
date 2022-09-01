@@ -15,7 +15,6 @@ namespace SamuraiSoccer.StageContents.China
         private RefereeMove m_refereeMove;
         [SerializeField]
         private RefereeArea m_refereeArea;
-        [SerializeField]
         private int m_areaSize, m_areaAngle;
         private void Awake()
         {

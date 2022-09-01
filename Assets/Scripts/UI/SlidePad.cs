@@ -9,7 +9,7 @@ using SamuraiSoccer.Event;
 
 namespace SamuraiSoccer.UI
 {
-    public class Slidepad : MonoBehaviour
+    public class SlidePad : MonoBehaviour
     {
         private float m_radius;
         private float m_scale;
@@ -19,11 +19,6 @@ namespace SamuraiSoccer.UI
         private RectTransform m_joyrect;
         private Vector2 m_joyStartPosition;
         private Vector2 m_slideStartPosition;
-        [SerializeField]
-        private GameObject m_player;
-        private Rigidbody m_playerrig;
-        [SerializeField]
-        private float m_speed;
         private int m_fingerID;
 
         // Start is called before the first frame update

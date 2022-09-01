@@ -16,19 +16,19 @@ namespace SamuraiSoccer.StageContents.China
         [SerializeField]
         private float m_minSize, m_maxSize;//パンダの最大最小サイズ
 
-        enum State
-        {
-            On, Off
-        }
-        State m_state;
+ 
+
+        private IReadOnlyReactiveProperty<bool> m_isActive =
+            Observable.Merge(
+                    InGameEvent.Play.Select(x => true),
+                    InGameEvent.Pause.Select(isPause => !isPause),
+                    InGameEvent.Goal.Select(x => false)
+                ).ToReactiveProperty(false);
 
         // Start is called before the first frame update
         void Start()
         {
-            InGameEvent.Play.Subscribe(x => { m_state = State.On; }).AddTo(this);
-            InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Off : State.On; }).AddTo(this);
-            InGameEvent.Goal.Subscribe(x => { m_state = State.Off; }).AddTo(this);
-
+            
             var token = this.GetCancellationTokenOnDestroy();
             PandaSpawn(token).Forget();
 
@@ -47,7 +47,7 @@ namespace SamuraiSoccer.StageContents.China
                     break;
                 }
 
-                if (m_state == State.On)
+                if (m_isActive.Value)
                 {
                     Vector3 pos = new Vector3(58 * UnityEngine.Random.value, 100, 100 * UnityEngine.Random.value);
                     GameObject p = Instantiate(m_panda, pos, Quaternion.Euler(UnityEngine.Random.value * 360, UnityEngine.Random.value * 360, UnityEngine.Random.value * 360));

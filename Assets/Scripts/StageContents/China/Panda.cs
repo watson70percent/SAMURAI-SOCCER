@@ -15,14 +15,11 @@ namespace SamuraiSoccer.StageContents.China
         private bool m_hit;
         private Animator m_anim;
         [SerializeField]
-        private SkinnedMeshRenderer m_skin;
-        [SerializeField]
         private GameObject m_gameOverPanel;
         [SerializeField]
         private AudioClip m_hitSound;
         [SerializeField]
         private GameObject m_blood;
-        [SerializeField]
         private GameObject m_player;
 
         enum State
@@ -33,8 +30,19 @@ namespace SamuraiSoccer.StageContents.China
             Vanish
         }
 
-        State m_state = State.Stop;
-        State m_tempState = State.Stop;
+
+
+        private IReadOnlyReactiveProperty<State> m_state =
+            Observable.CombineLatest(
+                    Observable.Merge( //ストリームの合流
+                       InGameEvent.Play.Select(_ => State.Active),
+                       InGameEvent.Standby.Select(_ => State.Vanish),
+                       InGameEvent.Goal.Select(_ => State.Non_Interference)
+                    ),
+                    InGameEvent.Pause.StartWith(false), //Pauseイベントとも合流
+                    (state, isPause) => isPause ? State.Stop : state //PauseがtrueのときはState.Stop
+            ).ToReactiveProperty<State>(State.Stop);
+            
         private void Start()
         {
 
@@ -42,26 +50,12 @@ namespace SamuraiSoccer.StageContents.China
 
             m_player = GameObject.FindGameObjectWithTag("Player");
 
-            InGameEvent.Pause.Subscribe(isPause => {
-                if (isPause)
-                {
-                    m_tempState = m_state;
-                    m_state = State.Stop;
-                }
-                else
-                {
-                    m_state = m_tempState;
-                }
-            });
-            InGameEvent.Play.Subscribe(x => { m_state = State.Active; });
-            InGameEvent.Standby.Subscribe(x => { m_state = State.Vanish; });
-            InGameEvent.Goal.Subscribe(x => { m_state = State.Non_Interference; });
 
         }
 
         private void Update()
         {
-            switch (m_state)
+            switch (m_state.Value)
             {
 
                 case State.Active:
@@ -71,7 +65,7 @@ namespace SamuraiSoccer.StageContents.China
                     if (pos.y < -50) { Destroy(gameObject); }
                     m_anim.speed = 1;
                     break;
-                case State.Vanish: 
+                case State.Vanish:
                     Destroy(gameObject);
                     break;
                 case State.Stop: //ポーズ時は静止
@@ -85,7 +79,7 @@ namespace SamuraiSoccer.StageContents.China
         private void OnTriggerEnter(Collider other)
         {
             //プレイヤーとぶつかったらゲームオーバー
-            if (other.tag == "Player" && !m_hit && m_state == State.Active)
+            if (other.tag == "Player" && !m_hit && m_state.Value == State.Active)
             {
                 m_hit = true;
                 Invoke("GameOver", 0.2f);

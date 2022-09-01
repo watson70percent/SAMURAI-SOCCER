@@ -35,6 +35,7 @@ namespace SamuraiSoccer.StageContents.USA
 
         private void Start()
         {
+            m_shadeObj.transform.position = new Vector3(m_shadeObj.transform.position.x, 0.1f, m_shadeObj.transform.position.z);
             //ゴールが入ったら削除
             InGameEvent.Goal.Subscribe(_ =>
             {
@@ -58,7 +59,7 @@ namespace SamuraiSoccer.StageContents.USA
             {
                 CurrentStatueMode = StatueMode.Rise;
                 m_bodyObj.transform.position += new Vector3(0f, 1.0f, 0f);
-                m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f * (1f + Mathf.Sin(10 * m_time * m_time)));
+                m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f * (1f + Mathf.Sin(1000 * m_time * m_time)));
                 return;
             }
             //影を一定値で固定、自由の女神が倒れる
