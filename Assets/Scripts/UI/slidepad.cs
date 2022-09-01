@@ -9,7 +9,7 @@ using SamuraiSoccer.Event;
 
 namespace SamuraiSoccer.UI
 {
-    public class Slidepad : MonoBehaviour
+    public class SlidePad : MonoBehaviour
     {
         private float m_radius;
         private float m_scale;
