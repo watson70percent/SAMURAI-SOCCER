@@ -17,12 +17,13 @@ namespace SamuraiSoccer
 
         private string GetSavePath(string key)
         {
-            return Path.Combine(folderPath, typeName + ".json");
+            return Path.Combine(folderPath, typeName + "_" + key + ".json");
         }
 
         /// <inheritdoc/>
         public T Get(string key)
         {
+            ThrowIfInvalidType();
             var savePath = GetSavePath(key);
             if (!File.Exists(savePath))
             {
@@ -35,6 +36,7 @@ namespace SamuraiSoccer
         /// <inheritdoc/>
         public bool TryGet(string key, out T value)
         {
+            ThrowIfInvalidType();
             var savePath = GetSavePath(key);
             if (!File.Exists(savePath))
             {
@@ -49,6 +51,7 @@ namespace SamuraiSoccer
         /// <inheritdoc/>
         public void Set(string key, T value)
         {
+            ThrowIfInvalidType();
             var savePath = GetSavePath(key);
             var content = JsonUtility.ToJson(value);
             File.WriteAllText(savePath, content);
@@ -57,6 +60,7 @@ namespace SamuraiSoccer
         /// <inheritdoc/>
         public async UniTask<T> GetAsync(string key)
         {
+            ThrowIfInvalidType();
             var savePath = GetSavePath(key);
             if (!File.Exists(savePath))
             {
@@ -69,9 +73,18 @@ namespace SamuraiSoccer
         /// <inheritdoc/>
         public async UniTask SetAsync(string key, T value)
         {
+            ThrowIfInvalidType();
             var savePath = GetSavePath(key);
             var content = JsonUtility.ToJson(value);
             await File.WriteAllTextAsync(savePath, content);
+        }
+
+        private void ThrowIfInvalidType()
+        {
+            if (Attribute.GetCustomAttribute(typeof(T), typeof(SerializableAttribute)) == null)
+            {
+                throw new InvalidDataException("å^" + typeName + "ÇÕ Serializable Ç≈ÇÕÇ†ÇËÇ‹ÇπÇÒÅB");
+            }
         }
     }
 }
