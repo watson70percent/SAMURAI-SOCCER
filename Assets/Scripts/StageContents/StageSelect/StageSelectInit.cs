@@ -11,7 +11,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         private void Awake()
         {
             InNetworkTransmitClient<int> inNetworkTransmitClient = new InNetworkTransmitClient<int>();
-            int clearNumber = inNetworkTransmitClient.Get("clearNumber");
+            int clearNumber = inNetworkTransmitClient.Get(StorageKey.KEY_STAGENUMBER);
             foreach (StageIcon icon in m_stageIcon)
             {
                 if (icon.StageNumber < clearNumber)
