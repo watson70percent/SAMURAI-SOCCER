@@ -13,6 +13,7 @@ namespace SamuraiSoccer.Player
         float time;
         float alpha;
         public AudioClip slash;
+        bool m_isAttackBall = true;
         // Start is called before the first frame update
         void Start()
         {
@@ -51,6 +52,16 @@ namespace SamuraiSoccer.Player
                 var dir = other.transform.position - transform.position;
                 other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
                 GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
+            }
+            else if(other.gameObject.tag == "Ball" && m_isAttackBall) // ボールに当たったとき
+            {
+                var dir = other.transform.position - transform.position;
+                dir = dir.normalized;
+                dir = new Vector3(dir.x,0.3f,dir.z);
+                other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                m_isAttackBall = false;
+
+                print("hithti");
             }
         }
     }
