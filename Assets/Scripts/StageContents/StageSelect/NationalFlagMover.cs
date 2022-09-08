@@ -12,10 +12,9 @@ public class NationalFlagMover : MonoBehaviour
     void Update()
     {
         var direction = cameraPoint.position - ankerPoint.position;
-        if (direction.magnitude >= distance*1.7)
+        if (direction.magnitude >= distance * 1.7)
         {
             gameObject.transform.position = direction.normalized * distance + ankerPoint.position;
         }
-
     }
 }
