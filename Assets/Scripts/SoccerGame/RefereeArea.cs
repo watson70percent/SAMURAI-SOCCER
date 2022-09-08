@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using SamuraiSoccer.Event;
+using Cysharp.Threading.Tasks;
+using System.Threading;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -43,11 +45,13 @@ namespace SamuraiSoccer.SoccerGame
 
             //MeshMaker();
 
-            PlayerEvent.Attack.Subscribe(x=> { FoulCheck(); }).AddTo(this);
+            PlayerEvent.Attack.Subscribe(x=> {
+                var token = this.GetCancellationTokenOnDestroy();
+                FoulCheck(token).Forget();
+            }).AddTo(this);
             
             meshFilter = GetComponent<MeshFilter>();
             player = GameObject.FindGameObjectWithTag("Player").transform;
-
         }
 
         // Update is called once per frame
@@ -135,29 +139,51 @@ namespace SamuraiSoccer.SoccerGame
             meshFilter.mesh = mesh;
         }
 
-        void FoulCheck()
+
+        async UniTask FoulCheck(CancellationToken cancellationToken = default)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            for(int i = 0; i < 4; i++) // たまにRaycastをすり抜けるので4回くらいチェックを行う
+            {
+                bool result = Check();
+                if (result) return;
+
+                await UniTask.DelayFrame(1);
+            }
+        }
+
+        bool Check()
         {
 
             if (state != State.Playing)
             {
-                return;
+                return false;
             }
+            
 
-            var vec = player.position - transform.position;//審判からプレイヤーまでのベクトル
-            if (vec.magnitude > areaSize || Vector3.Dot(vec.normalized, transform.forward) < Mathf.Cos(maxang / 360 * 2 * Mathf.PI)) { return; }
-            print(areaSize);
+            var vec = player.position + Vector3.up - (transform.position + Vector3.up*0.5f);//審判からプレイヤーまでのベクトル
+            vec = vec.normalized;
+            if (vec.magnitude > areaSize || Vector3.Dot(vec.normalized, transform.forward) < Mathf.Cos(maxang / 360 * 2 * Mathf.PI)) { return false; } //審判の視界の範囲外ならfalse
 
-            print(vec.magnitude > areaSize);
-            Ray ray = new Ray(transform.position + Vector3.up, vec);
+            Ray ray = new Ray(transform.position + Vector3.up*0.5f, vec);
+
+            //プレイヤー以外の障害物がある場合にはプレイヤーが死角に入っていないか確認
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, areaSize) ? (hit.collider.tag == "Player") : false)
+            int layerMask = 1 << 8 | 1 << 10; 
+            if (Physics.Raycast(ray, out hit, areaSize,layerMask) ? (hit.collider.tag == "Player") : false)
             {
                 InGameEvent.PenaltyOnNext(m_penaltyCount);
                 m_penaltyCount = 1; //ペナルティ回数は0or1のため強制的に1に変更
                 surprisedMark.Play();
                 attackButton.enabled = false;
                 Invoke("PenaltyRemoval", 1);
+
+                return true;
             }
+            
+
+
+            return false;
 
         }
         void PenaltyRemoval()
