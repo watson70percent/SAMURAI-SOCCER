@@ -29,7 +29,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             StageSelectEvent.Preview.Subscribe(x =>
             {
                 //ScriptableObjectから今回のステージを取得し、表示器へ代入
-                m_currentStagePreviewData = m_stagePreviewDatas.stageSelectList.Where(num => num.fieldNumber == x).First();
+                m_currentStagePreviewData = m_stagePreviewDatas.stageSelectList.Where(num => num.stageNumber == x).First();
                 m_stageName.text = m_currentStagePreviewData.previewName;
                 m_stageSummary.text = m_currentStagePreviewData.summary;
                 m_stageImage.sprite = m_currentStagePreviewData.stageImage;
