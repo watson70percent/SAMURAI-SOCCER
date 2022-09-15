@@ -24,6 +24,8 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         private StagePreviewData m_currentStagePreviewData; //現在表示しているステージデータ
 
+        private int m_slashSE = 0;
+
         private void Start()
         {
             StageSelectEvent.Preview.Subscribe(x =>
@@ -42,6 +44,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         /// </summary>
         public void Close()
         {
+            SoundMaster.Instance.PlaySE(m_slashSE);
             m_previewObject.SetActive(false);
         }
 
@@ -50,12 +53,13 @@ namespace SamuraiSoccer.StageContents.StageSelect
         /// </summary>
         public void StartGame()
         {
+            SoundMaster.Instance.PlaySE(m_slashSE);
             //試合Sceneに必要データの転送
             InMemoryDataTransitClient<int> fieldNumberTransitClient = new InMemoryDataTransitClient<int>();
-            fieldNumberTransitClient.Set("fieldNumber", m_currentStagePreviewData.fieldNumber);
-            fieldNumberTransitClient.Set("stageNumber", m_currentStagePreviewData.stageNumber);
+            fieldNumberTransitClient.Set(StorageKey.KEY_FIELDNUMBER, m_currentStagePreviewData.fieldNumber);
+            fieldNumberTransitClient.Set(StorageKey.KEY_STAGENUMBER, m_currentStagePreviewData.stageNumber);
             InMemoryDataTransitClient<string> opponentNameTransmitClient = new InMemoryDataTransitClient<string>();
-            opponentNameTransmitClient.Set("oppnentName", m_currentStagePreviewData.oppnentName);
+            opponentNameTransmitClient.Set(StorageKey.KEY_OPPONENT_TYPE, m_currentStagePreviewData.opponentType);
             SceneManager.LoadScene(m_currentStagePreviewData.gameScene);
         }
     }
