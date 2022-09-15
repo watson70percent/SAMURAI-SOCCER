@@ -30,6 +30,8 @@ namespace SamuraiSoccer.StageContents.StageSelect
         [SerializeField]
         private Sprite m_monoImage;
 
+        private int m_slashSE = 0; //斬撃SEの番号
+
         /// <summary>
         ///  Inspectorから設定するこのステージの番号
         /// </summary>
@@ -58,6 +60,8 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         public void OnClick()
         {
+            if (StageState == StageState.NotPlayable) { return; }
+            SoundMaster.Instance.PlaySE(m_slashSE);
             StageSelectEvent.PreviewOnNext(m_stageNumber);
         }
     }

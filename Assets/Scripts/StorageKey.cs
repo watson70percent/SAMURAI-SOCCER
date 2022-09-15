@@ -13,5 +13,6 @@ namespace SamuraiSoccer
         public const string KEY_STAGENUMBER = nameof(KEY_STAGENUMBER);
         public const string KEY_WINORLOSE = nameof(KEY_WINORLOSE);
         public const string KEY_RESULTMESSAGE = nameof(KEY_RESULTMESSAGE);
+        public const string KEY_OPPONENT_TYPE = nameof(KEY_OPPONENT_TYPE);
     }
 }
