@@ -9,8 +9,13 @@ using SamuraiSoccer.Event;
 namespace SamuraiSoccer.SoccerGame
 {
     public class FinishProcess : MonoBehaviour
-    {       
-        public string ResultSceneName = "ResultScene";
+    {
+        [SerializeField]
+        private string m_resultSceneName = "Result";
+
+        [SerializeField]
+        private int m_delayMiliSec = 1000;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -23,9 +28,9 @@ namespace SamuraiSoccer.SoccerGame
         public async UniTask FinishContents()
         {
             //シーンの移動処理
-            await UniTask.Delay(1000);
+            await UniTask.Delay(m_delayMiliSec);
             Time.timeScale = 1;
-            SceneManager.LoadScene(ResultSceneName);
+            SceneManager.LoadScene(m_resultSceneName);
         }
     }
 }
