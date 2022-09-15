@@ -5,6 +5,8 @@ using UniRx;
 using UniRx.Triggers;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents;
+using System;
 
 namespace SamuraiSoccer.StageContents.USA
 {
@@ -17,11 +19,13 @@ namespace SamuraiSoccer.StageContents.USA
         private Rigidbody m_rb; //このオブジェクトのRigidbody
 
         [SerializeField]
-        private int m_SEIndex; //衝突時のSE
+        private int m_damageSEIndex; //衝突時のSE
 
         private float m_timer = 0f; //自動削除タイマー
 
         private Vector3 m_tmpVelocity = Vector3.zero; //一時的に速度を保持する
+
+        private IDisposable m_onTriggerDisposable;
 
         void Start()
         {
@@ -31,19 +35,26 @@ namespace SamuraiSoccer.StageContents.USA
             InGameEvent.Goal.Subscribe(_ => Destroy(gameObject)).AddTo(this);
             //一時停止処理
             InGameEvent.Pause.Subscribe(x => PauseMove(x)).AddTo(this);
+            //ゲーム終了時に機能しなくなる処理
+            InGameEvent.Finish.Subscribe(_ => StopFunction()).AddTo(this);
             //衝突時の処理
-            this.OnTriggerEnterAsObservable().Subscribe(other =>
+            m_onTriggerDisposable = this.OnTriggerEnterAsObservable().Subscribe(other =>
             {
                 //プレイヤ―との衝突処理
                 if (other.gameObject.tag == "Player")
                 {
+                    InMemoryDataTransitClient<GameResult> inMemoryDataTransitClient = new InMemoryDataTransitClient<GameResult>();
+                    inMemoryDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                     InGameEvent.FinishOnNext();
                     //衝突音の再生
-                    SoundMaster.Instance.PlaySE(m_SEIndex);
+                    SoundMaster.Instance.PlaySE(m_damageSEIndex);
                 }
-            });
+            }).AddTo(this);
         }
 
+        /// <summary>
+        /// タイマーに数字を加え続けて一定時間たつとオブジェクト消去
+        /// </summary>
         private void DestroyTimer()
         {
             m_timer += Time.deltaTime;
@@ -51,6 +62,14 @@ namespace SamuraiSoccer.StageContents.USA
             {
                 Destroy(gameObject);
             }
+        }
+
+        /// <summary>
+        /// プレイヤーとの衝突処理の購読を終了することで機能を停止
+        /// </summary>
+        private void StopFunction()
+        {
+            m_onTriggerDisposable.Dispose();
         }
 
         /// <summary>
