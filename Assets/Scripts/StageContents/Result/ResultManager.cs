@@ -31,6 +31,8 @@ namespace SamuraiSoccer.StageContents.Result
         // Start is called before the first frame update
         void Start()
         {
+            InMemoryDataTransitClient<GameResult> inMemoryDataTransitClient = new InMemoryDataTransitClient<GameResult>();
+            ResultState = inMemoryDataTransitClient.Get(StorageKey.KEY_WINORLOSE);
             //勝敗に応じてテキスト変更
             switch (ResultState)
             {
