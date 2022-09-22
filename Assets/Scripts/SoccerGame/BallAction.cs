@@ -255,7 +255,16 @@ namespace SamuraiSoccer.SoccerGame
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
-
+                var vel = rb.velocity;
+                if (transform.position.x <= 1 || transform.position.x >= 49)
+                {
+                    vel.x *= -1;
+                }
+                if (transform.position.z <= 1 || transform.position.z >= 99)
+                {
+                    vel.z *= -1;
+                }
+                rb.velocity = vel;
             }
         }
 
@@ -267,7 +276,16 @@ namespace SamuraiSoccer.SoccerGame
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
-
+                var vel = rb.velocity;
+                if (transform.position.x <= 1 || transform.position.x >= 49)
+                {
+                    vel.x *= -1;
+                }
+                if (transform.position.z <= 1 || transform.position.z >= 99)
+                {
+                    vel.z *= -1;
+                }
+                rb.velocity = vel;
             }
         }
     }
