@@ -40,14 +40,14 @@ namespace SamuraiSoccer.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<EasyCPU>()?.status.ally == false)
+            if (other.gameObject.GetComponent<EasyCPU>()?.status.ally == false) //敵にあたったとき
             {
                 var dir = other.transform.position - transform.position;
                 other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
                 GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
                 other.GetComponent<EasyCPU>().Attacked();
             }
-            else if (other.gameObject.tag == "TutorialEnemy")
+            else if (other.gameObject.tag == "TutorialEnemy") // チュートリアル用
             {
                 var dir = other.transform.position - transform.position;
                 other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
