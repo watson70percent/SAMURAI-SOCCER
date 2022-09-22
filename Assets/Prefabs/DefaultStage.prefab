@@ -759,8 +759,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2677264473472736779}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.7, y: 0, z: -300}
+  m_LocalRotation: {x: 0.069676615, y: 0.7036655, z: -0.06967661, w: 0.70366555}
+  m_LocalPosition: {x: -16.57, y: 10, z: 63.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,9 +790,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2486,7 +2486,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8172940443766869344}
-  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.0863966, w: 0.7018089}
+  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.086396605, w: 0.7018089}
   m_LocalPosition: {x: -36.57, y: 20, z: 63.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2842,6 +2842,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b3e793fe8dc03438815f731ed9a0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6529742489988852937 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6807756459654869583, guid: 3481aaf22b85c304f8086076a27c93b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 352490631036542598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &945774437329446498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3217,6 +3223,11 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1221269002}
+    - target: {fileID: 6002362736004586768, guid: adc7cc280ff34dd4aae0a9c929b10607,
+        type: 3}
+      propertyPath: m_goalFadeAnimator
+      value: 
+      objectReference: {fileID: 6529742489988852937}
     - target: {fileID: 7159700491716796176, guid: adc7cc280ff34dd4aae0a9c929b10607,
         type: 3}
       propertyPath: audioSource
