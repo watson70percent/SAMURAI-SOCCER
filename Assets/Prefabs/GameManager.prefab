@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4220772580559016567}
   - component: {fileID: 4220772580559016563}
   - component: {fileID: 4220772580559016461}
-  - component: {fileID: 5439825935636402346}
   - component: {fileID: 6587844239011527973}
+  - component: {fileID: 6002362736004586768}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -89,20 +89,6 @@ MonoBehaviour:
   root: {fileID: 0}
   ball: {fileID: 0}
   rotation: {fileID: 0}
---- !u!114 &5439825935636402346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e4ab564a574784caecdc5dc107c3c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_resultSceneName: Result
-  m_delayMiliSec: 1000
 --- !u!114 &6587844239011527973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,3 +101,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f078313a25fbe74a901a1d88cbe9323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6002362736004586768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220772580559016566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf72f4328c96654bb2434c12d5d326f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resultSceneName: Result
+  m_delayMiliSec: 1000
+  m_trumpetShellSENumber: 2
+  m_whistleSENumber: 10
+  m_gameBGM: 1
