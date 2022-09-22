@@ -11,6 +11,7 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 
 using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents;
 
 
 namespace SamuraiSoccer.SoccerGame.AI
@@ -126,11 +127,11 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         void Awake()
         {
+            var client = new InMemoryDataTransitClient<string>();
             teammate = Resources.Load<GameObject>("Teammate");
-            opponent = Resources.Load<GameObject>(OpponentName.name);
+            opponent = Resources.Load<GameObject>(client.Get(StorageKey.KEY_OPPONENT_TYPE));
 
             field = GetComponent<FieldManager>();
-            // opponent = Resources.Load<GameObject>(OpponentName.name);
             StartCoroutine(LoadMember());
         }
 
@@ -252,6 +253,12 @@ namespace SamuraiSoccer.SoccerGame.AI
                 {
                     Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OppornentSpornPoint));
                     opp_stock.member.RemoveAt(0);
+                }
+                else if(!opp.Any())
+                {
+                    var client = new InMemoryDataTransitClient<GameResult>();
+                    client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
+                    InGameEvent.FinishOnNext();
                 }
             }
         }
