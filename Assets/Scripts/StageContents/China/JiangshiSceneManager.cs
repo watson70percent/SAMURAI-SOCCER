@@ -28,17 +28,18 @@ namespace SamuraiSoccer.StageContents.China
             var stagePrefabManager = GameObject.Find("DefaultStage").GetComponent<StagePrefabManager>();
             m_areaSize = stagePrefabManager.refereeAreaSize;
             m_areaAngle = stagePrefabManager.refereeMaxAng;
+            stagePrefabManager.useObstacles = true;
         }
 
         private void Update()
         {
             //アニメーションによるy座標の変化からRefereeAreaの大きさと角度を変更
             float height = m_jianshi.transform.position.y;
-            m_refereeArea.SerAreaSize(m_areaSize + height * 20);
+            m_refereeArea.SetAreaSize(m_areaSize + height * 20);
 
-            var angle = m_areaAngle + height * 6;
+            var angle = m_areaAngle + height * 10;
             angle = Mathf.Min(angle, 180);
-            m_refereeArea.SerMaxAngle(angle);
+            m_refereeArea.SetMaxAngle(angle);
             m_refereeArea.MeshMaker();
         }
 
