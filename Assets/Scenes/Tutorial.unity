@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5370581, g: 0.85635304, b: 0.6740359, a: 1}
+  m_IndirectSpecularColor: {r: 0.53627825, g: 0.86241156, b: 0.67657644, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,7 +217,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.165725, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -434,6 +434,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904164068}
   m_CullTransparentMesh: 0
+--- !u!1 &1221141784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6787424403422131000, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4973113784900863983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1233471739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5cbdd730c6c80be4ea5d3ff7b55635f1,
@@ -522,7 +528,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.165725, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12728,7 +12734,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.165725, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13650,6 +13656,16 @@ PrefabInstance:
       propertyPath: refereeAudio
       value: 
       objectReference: {fileID: 4472716483648297464}
+    - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
+        type: 3}
+      propertyPath: m_yellowCard.Array.data[0]
+      value: 
+      objectReference: {fileID: 802938860}
+    - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
+        type: 3}
+      propertyPath: m_yellowCard.Array.data[1]
+      value: 
+      objectReference: {fileID: 1221141784}
     - target: {fileID: 6787424404838169159, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
         type: 3}
       propertyPath: m_Name
@@ -14526,7 +14542,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.165725, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
