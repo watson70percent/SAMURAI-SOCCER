@@ -22,7 +22,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         public PersonalStatus status;
         public FieldManager field;
         public Rigidbody rb;
-        private bool m_isPause = false;
+        private bool m_isPause = true;
         private Vector2 before_velocity = Vector2.zero;
         private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
 
@@ -49,11 +49,17 @@ namespace SamuraiSoccer.SoccerGame.AI
         private void Start()
         {
             InGameEvent.Pause.Subscribe(Pause);
+            InGameEvent.Play.Subscribe(Play);
         }
 
         private void Pause(bool isPause)
         {
             m_isPause = isPause;
+        }
+
+        private void Play(Unit _)
+        {
+            m_isPause = false;
         }
 
         public void SlowDown()
