@@ -17,11 +17,11 @@ namespace SamuraiSoccer.SoccerGame
         [SerializeField]
         private GameObject m_gameOverPanel;
 
-        [SerializeField]
-        private int m_yellowcardSENumber;
+        
+        private int m_yellowcardSENumber =12;
 
-        [SerializeField]
-        private int m_redcardSENumber;
+        
+        private int m_redcardSENumber =12;
 
         void Start()
         {
