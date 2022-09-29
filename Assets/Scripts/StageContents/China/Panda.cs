@@ -38,7 +38,7 @@ namespace SamuraiSoccer.StageContents.China
                        InGameEvent.Play.Select(_ => State.Active),
                        InGameEvent.Standby.Select(_ => State.Vanish),
                        InGameEvent.Goal.Select(_ => State.Non_Interference)
-                    ),
+                    ).StartWith(State.Active),//パンダは途中から場に出るので最初にState.Activeを勝手に発行してしまう
                     InGameEvent.Pause.StartWith(false), //Pauseイベントとも合流
                     (state, isPause) => isPause ? State.Stop : state //PauseがtrueのときはState.Stop
             ).ToReactiveProperty<State>(State.Stop);
@@ -55,9 +55,9 @@ namespace SamuraiSoccer.StageContents.China
 
         private void Update()
         {
+            print(m_state.Value);
             switch (m_state.Value)
             {
-
                 case State.Active:
                     var pos = transform.position;
                     pos.y -= m_speed * Time.deltaTime;
@@ -70,7 +70,9 @@ namespace SamuraiSoccer.StageContents.China
                     break;
                 case State.Stop: //ポーズ時は静止
                     m_anim.speed = 0; break;
-
+                case State.Non_Interference:
+                    m_anim.speed = 1;
+                    break;
             }
 
 
