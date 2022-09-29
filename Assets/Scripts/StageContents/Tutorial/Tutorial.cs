@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
 using System.Threading;
+using SamuraiSoccer.Event;
 
 namespace Tutorial
 {
@@ -35,14 +36,11 @@ namespace Tutorial
 
         async UniTask Runner(CancellationToken cancellation_token = default)
         {
-            //gameManager.StateChangeSignal(GameState.Pause);
             //テキスト表示1
             await UniTask.Delay(5000);
-            //yield return new WaitForSeconds(5f);
             tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
             tutorialText.text = "ここではこの世界で戦うちゅーとりあるを行う";
             await UniTask.Delay(3000);
-            // yield return new WaitForSeconds(3f); 
             tutorialText.text = "サムライは残された日本の希望だ";
             await UniTask.Delay(3000);
             Vector3 destination = new Vector3(10f, 3f, 30f);
@@ -54,28 +52,24 @@ namespace Tutorial
             spotCamera.LookAt = enemyPrefab.transform;
             spotCamera.Priority = 11;
             await UniTask.Delay(3000);
-            // yield return new WaitForSeconds(3f);
             tutorialText.text = "まずはここまで行こう";
-            // yield return new WaitForSeconds(3f);
             await UniTask.Delay(3000);
             exclamationMark.SetActive(false);
             //カメラをもとに戻す
             spotCamera.Priority = 9;
             samuraiCamera.Priority = 11;
-            // yield return new WaitForSeconds(3f);
             await UniTask.Delay(3000);
             textAnimator.SetTrigger("SlideText");
-            // yield return new WaitForSeconds(2f);
             await UniTask.Delay(2000);
             //テキストを非表示に
             tutorialText.text = "";
-            //gameManager.StateChangeSignal(GameState.Playing);
+            InGameEvent.PlayOnNext();
             //敵に一定距離近づくまで待機
             while ((samurai.transform.position - destination).sqrMagnitude > 100)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
-            //gameManager.StateChangeSignal(GameState.Standby);
+            InGameEvent.PauseOnNext(true);
             //テキスト表示2
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "サムライが行うのはただ斬ることのみ";
@@ -86,13 +80,13 @@ namespace Tutorial
             await UniTask.Delay(2000);
             //テキストを非表示に
             tutorialText.text = "";
-            //gameManager.StateChangeSignal(GameState.Playing);
+            InGameEvent.PlayOnNext();
             //敵を切り倒して行って距離移動するまで待機
             while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
-            //gameManager.StateChangeSignal(GameState.Pause);
+            InGameEvent.PauseOnNext(true);
             enemyNumber.text = 1.ToString();
             //テキスト表示2
             textAnimator.SetTrigger("ReturnText");
@@ -122,13 +116,13 @@ namespace Tutorial
             await UniTask.Delay(2000);
             //テキストを非表示に
             tutorialText.text = "";
-            //gameManager.StateChangeSignal(GameState.Playing);
+            InGameEvent.PlayOnNext();
             //イエローカードが出るまで待機
             while (!firstYellowCard.activeSelf)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
-            //gameManager.StateChangeSignal(GameState.Pause);
+            InGameEvent.PauseOnNext(true);
             //テキスト表示3
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "しまった！れふぇりーに見られてしまった";
