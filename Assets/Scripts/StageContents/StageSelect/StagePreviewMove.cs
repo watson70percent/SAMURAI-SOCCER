@@ -36,7 +36,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
                 m_stageSummary.text = m_currentStagePreviewData.summary;
                 m_stageImage.sprite = m_currentStagePreviewData.stageImage;
                 m_previewObject.SetActive(true);
-            });
+            }).AddTo(this);
         }
 
         /// <summary>
