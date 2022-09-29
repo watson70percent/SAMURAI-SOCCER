@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 using UniRx;
 
 using SamuraiSoccer.Event;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -99,14 +100,14 @@ namespace SamuraiSoccer.SoccerGame
         /// ドリブルっぽいもの。StartCorutineじゃなくてイテレーターで操作してほしい。
         /// </summary>
         /// <returns></returns>
-        public IEnumerator Dribble(DribbleCommand c)
+        public async UniTask Dribble(DribbleCommand c)
         {
             last_touch = c.m_status.ally;
             rb.AddForce(new Vector3(Mathf.Sin(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * 4, 0, Mathf.Cos(owner.transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * 4), ForceMode.Impulse);
-            yield return null;
+            await UniTask.Yield();
             for (int i = 0; i < 4; i++)
             {
-                yield return null;
+                await UniTask.Yield();
             }
             Vector3 pos = transform.position;
             for (int i = 0; i < 5; i++)
@@ -115,9 +116,8 @@ namespace SamuraiSoccer.SoccerGame
                 pos.z = Mathf.Lerp(pos.z, owner.transform.position.z, i / 20.0f);
                 transform.position = pos;
 
-                yield return null;
+                await UniTask.Yield();
             }
-
         }
 
         /// <summary>
