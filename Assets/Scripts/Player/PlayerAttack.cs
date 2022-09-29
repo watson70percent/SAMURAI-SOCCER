@@ -6,6 +6,7 @@ using UniRx;
 
 namespace SamuraiSoccer.Player
 {
+    //攻撃イベント発生時にSlashプレハブを設置
     public class PlayerAttack : MonoBehaviour
     {
         public GameObject slash;

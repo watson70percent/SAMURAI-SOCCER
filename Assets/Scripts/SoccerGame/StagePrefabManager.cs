@@ -57,8 +57,8 @@ namespace SamuraiSoccer.SoccerGame
             }
 
             //審判の挙動
-            refereeArea.SerMaxAngle(refereeMaxAng);
-            refereeArea.SerAreaSize(refereeAreaSize);
+            refereeArea.SetMaxAngle(refereeMaxAng);
+            refereeArea.SetAreaSize(refereeAreaSize);
             refereeArea.useObstacles = useObstacles;
             refereeMove.runningspeed = runningSpeed;
             refereeMove.lookatspeed = lookAtSpeed;
