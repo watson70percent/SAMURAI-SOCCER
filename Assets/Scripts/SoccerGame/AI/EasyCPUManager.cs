@@ -116,13 +116,13 @@ namespace SamuraiSoccer.SoccerGame.AI
 
             if (finishTime != 0)
             {
-                StartCoroutine(FinBoost(isTeam, coeff, finishTime));
+                _ = FinBoost(isTeam, coeff, finishTime);
             }
         }
 
-        private IEnumerator FinBoost(bool isTeam, float coeff, int fin)
+        private async UniTask FinBoost(bool isTeam, float coeff, int fin)
         {
-            yield return new WaitForSeconds(fin);
+            await UniTask.Delay(fin * 1000);
             Boost(isTeam, 1 / coeff);
         }
 
@@ -134,7 +134,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             opponent = Resources.Load<GameObject>(client.Get(StorageKey.KEY_OPPONENT_TYPE));
 
             field = GetComponent<FieldManager>();
-            StartCoroutine(LoadMember());
+            _ = LoadMember();
         }
 
         private void Start()
@@ -207,7 +207,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         }
 
 
-        private IEnumerator LoadMember()
+        private async UniTask LoadMember()
         {
             var file_path1 = Path.Combine(Application.streamingAssetsPath, "our.json");
             string json = "";
@@ -215,7 +215,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (file_path1.Contains("://"))
             {
                 var www1 = UnityEngine.Networking.UnityWebRequest.Get(file_path1);
-                yield return www1.SendWebRequest();
+                await www1.SendWebRequest();
                 json = www1.downloadHandler.text;
             }
             else
@@ -229,7 +229,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (file_path2.Contains("://"))
             {
                 var www2 = UnityEngine.Networking.UnityWebRequest.Get(file_path2);
-                yield return www2.SendWebRequest();
+                await www2.SendWebRequest();
                 json = www2.downloadHandler.text;
             }
             else
@@ -239,9 +239,6 @@ namespace SamuraiSoccer.SoccerGame.AI
             opp_stock = JsonUtility.FromJson<Team>(json);
 
             Init();
-
-            yield return null;
-
         }
 
         /// <summary>

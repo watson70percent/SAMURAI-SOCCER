@@ -9,6 +9,7 @@ using System.Runtime.Serialization;
 using UniRx;
 
 using SamuraiSoccer.Event;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.SoccerGame.AI
 {
@@ -78,17 +79,16 @@ namespace SamuraiSoccer.SoccerGame.AI
         public void SlowDown()
         {
             m_isPause = true;
-            StartCoroutine(SlowMove());
+            _ = SlowMove();
         }
 
-        private IEnumerator SlowMove()
+        private async UniTask SlowMove()
         {
             while (true)
             {
-                yield return null;
+                await UniTask.Yield();
                 gameObject.transform.Translate(before_velocity.x * 0.2f * Time.deltaTime, 0, before_velocity.y * 0.2f * Time.deltaTime, Space.World);
             }
-
         }
 
         // Update is called once per frame

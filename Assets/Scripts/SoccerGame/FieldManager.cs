@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using SamuraiSoccer.Event;
 using UniRx;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -34,7 +35,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             var client = new InMemoryDataTransitClient<int>();
             client.TryGet(StorageKey.KEY_GROUNDNUMBER, out groundNumber);
-            StartCoroutine(LoadField());
+            _ = LoadField();
             ball_rb = ball.GetComponent<Rigidbody>();
             gameObject.AddComponent(typeof(NonWind));
             wind = GetComponents<WindInfoBase>().First();
@@ -47,7 +48,7 @@ namespace SamuraiSoccer.SoccerGame
             root.transform.rotation = rotation.rotation;
         }
 
-        private IEnumerator LoadField()
+        private async UniTask LoadField()
         {
             var file_path1 = Path.Combine(Application.streamingAssetsPath, "Field_" + groundNumber + ".json");
             string json = "";
@@ -55,7 +56,7 @@ namespace SamuraiSoccer.SoccerGame
             if (file_path1.Contains("://"))
             {
                 var www1 = UnityEngine.Networking.UnityWebRequest.Get(file_path1);
-                yield return www1.SendWebRequest();
+                await www1.SendWebRequest();
                 json = www1.downloadHandler.text;
             }
             else
@@ -63,9 +64,6 @@ namespace SamuraiSoccer.SoccerGame
                 json = File.ReadAllText(file_path1);
             }
             info = JsonConvert.DeserializeObject<FieldInfo>(json);
-
-            yield return null;
-
         }
 
 
