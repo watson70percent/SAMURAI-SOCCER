@@ -9,6 +9,7 @@ namespace SamuraiSoccer
     /// </summary>
     public class StorageKey
     {
+        public const string KEY_GROUNDNUMBER = nameof(KEY_GROUNDNUMBER);
         public const string KEY_FIELDNUMBER = nameof(KEY_FIELDNUMBER);
         public const string KEY_STAGENUMBER = nameof(KEY_STAGENUMBER);
         public const string KEY_WINORLOSE = nameof(KEY_WINORLOSE);

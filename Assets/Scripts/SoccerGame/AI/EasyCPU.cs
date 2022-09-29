@@ -204,7 +204,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                 vec = Mathf.Log10(dis + 1) * status.fast * vec.normalized;
             }
 
-            if (FieldNumber.no == 1)
+            if (field.GroundNumber == 1)
             {
                 rot_chain.AddLast(vec);
                 if (rot_chain.Count > 30)
@@ -213,7 +213,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                 }
             }
             vec = CalcNextPoint(vec);
-            if (FieldNumber.no != 1)
+            if (field.GroundNumber != 1)
             {
                 rot_chain.AddLast(vec);
                 if (rot_chain.Count > 30)
