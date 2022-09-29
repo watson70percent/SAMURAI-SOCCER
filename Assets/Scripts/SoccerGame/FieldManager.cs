@@ -27,47 +27,29 @@ namespace SamuraiSoccer.SoccerGame
         private WindInfoBase wind = default;
         public FieldRotationBase rotation = default;
 
-        private bool isPlaying = false;
+        private int groundNumber  = 0;
+        public int  GroundNumber { get => groundNumber; }
 
         void Awake()
         {
+            var client = new InMemoryDataTransitClient<int>();
+            client.TryGet(StorageKey.KEY_GROUNDNUMBER, out groundNumber);
             StartCoroutine(LoadField());
             ball_rb = ball.GetComponent<Rigidbody>();
             gameObject.AddComponent(typeof(NonWind));
             wind = GetComponents<WindInfoBase>().First();
             gameObject.AddComponent(typeof(NonRotation));
             rotation = GetComponents<FieldRotationBase>().First();
-            InGameEvent.Pause.Subscribe(OnPause).AddTo(this);
-            InGameEvent.Play.Subscribe(_ => isPlaying = true);
         }
 
         private void Update()
         {
             root.transform.rotation = rotation.rotation;
         }
-        /*
-        private void FixedUpdate()
-        {
-            if (isPlaying)
-            {
-                manager.team.ForEach(member =>
-                {
-                    manager.rbs[member].AddForce(wind.WindEffect(member.transform.position));
-                });
-
-                manager.opp.ForEach(member =>
-                {
-                    manager.rbs[member].AddForce(wind.WindEffect(member.transform.position));
-                });
-
-                ball_rb.AddForce(wind.WindEffect(ball.transform.position));
-            }
-        }
-        */
 
         private IEnumerator LoadField()
         {
-            var file_path1 = Path.Combine(Application.streamingAssetsPath, "Field_" + FieldNumber.no + ".json");
+            var file_path1 = Path.Combine(Application.streamingAssetsPath, "Field_" + groundNumber + ".json");
             string json = "";
             Debug.Log("filepath is " + file_path1);
             if (file_path1.Contains("://"))
@@ -105,11 +87,6 @@ namespace SamuraiSoccer.SoccerGame
         public Vector3 AdaptInversePosition(Vector3 pos)
         {
             return rotation.AdaptInversePosition(pos);
-        }
-
-        private void OnPause(bool isPause)
-        {
-            isPlaying = !isPause;
         }
     }
 }
