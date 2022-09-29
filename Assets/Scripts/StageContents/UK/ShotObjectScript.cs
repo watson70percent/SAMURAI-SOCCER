@@ -23,7 +23,7 @@ namespace SamuraiSoccer.StageContents.UK
         [SerializeField] AudioSource soundEffect;
         //[SerializeField] GameObject player;
         Vector3 rotateVec {get{return new Vector3(4, 7, 5);}}
-        float velocity0 = 600;
+        float velocity0 = 300;
 
         // Start is called before the first frame update
         void Start()
@@ -75,14 +75,16 @@ namespace SamuraiSoccer.StageContents.UK
             lose.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
             InGameEvent.FinishOnNext();
             float ang = 20 * Mathf.Deg2Rad;
-            for (int i = 0; i < 100; i++)
+            float elapsedTime=0;
+            while (elapsedTime<1)
             {
                 Vector3 pos = player.transform.position;
                 pos.x -= velocity0 * Mathf.Cos(ang) * Time.deltaTime;
                 pos.y += velocity0 * Mathf.Sin(ang) * Time.deltaTime;
                 player.transform.position = pos;
                 player.transform.Rotate(rotateVec * velocity * velocity * Time.deltaTime);
-                await UniTask.Delay(17);
+                elapsedTime+=Time.deltaTime;
+                await UniTask.Yield(PlayerLoopTiming.Update,cancellationToken);
             }
             SceneManager.LoadScene("Result");
         }
