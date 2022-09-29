@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
-
+using UnityEngine.SceneManagement;
 
 namespace SamuraiSoccer.SoccerGame.AI
 {
@@ -274,8 +274,20 @@ namespace SamuraiSoccer.SoccerGame.AI
                     var client = new InMemoryDataTransitClient<GameResult>();
                     client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
                     InGameEvent.FinishOnNext();
+                    _ = WinEffect();
                 }
             }
+        }
+
+        /// <summary>
+        /// 勝ったときのエフェクト。
+        /// </summary>
+        private async UniTask WinEffect()
+        {
+            Time.timeScale = 0.3f;
+            await UniTask.Delay(1000);
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Result");
         }
 
         /// <summary>
