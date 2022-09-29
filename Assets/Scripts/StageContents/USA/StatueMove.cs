@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
+using System;
 
 /// <summary>
 /// 自由の女神の状態
@@ -36,8 +37,8 @@ namespace SamuraiSoccer.StageContents.USA
         private void Start()
         {
             m_shadeObj.transform.position = new Vector3(m_shadeObj.transform.position.x, 0.1f, m_shadeObj.transform.position.z);
-            //ゴールが入ったら削除
-            InGameEvent.Goal.Subscribe(_ =>
+            //ゴールが入ったらStandbyで削除
+            InGameEvent.Standby.Subscribe(_ =>
             {
                 Destroy(gameObject);
             }).AddTo(this);
