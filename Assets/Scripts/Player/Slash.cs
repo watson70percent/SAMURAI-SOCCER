@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SamuraiSoccer.SoccerGame.AI;
+using UniRx.Triggers;
+using UniRx;
 
 namespace SamuraiSoccer.Player
 {
@@ -19,6 +21,9 @@ namespace SamuraiSoccer.Player
         {
             particle = GetComponent<ParticleSystem>().main;
             alpha = particle.startColor.color.a;
+
+            this.OnTriggerEnterAsObservable().Subscribe(hit => OnHit(hit.gameObject));
+
         }
 
 
@@ -38,30 +43,30 @@ namespace SamuraiSoccer.Player
         }
 
 
-        private void OnTriggerEnter(Collider other)
+        private void OnHit(GameObject obj)
         {
-            if (other.gameObject.GetComponent<EasyCPU>()?.status.ally == false) //敵にあたったとき
+            if (obj.GetComponent<EasyCPU>()?.status.ally == false) //敵にあたったとき
             {
-                var dir = other.transform.position - transform.position;
-                other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                var dir = obj.transform.position - transform.position;
+                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
                 GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
-                other.GetComponent<EasyCPU>().Attacked();
+                obj.GetComponent<EasyCPU>().Attacked();
             }
-            else if (other.gameObject.tag == "TutorialEnemy") // チュートリアル用
+            else if (obj.gameObject.tag == "TutorialEnemy") // チュートリアル用
             {
-                var dir = other.transform.position - transform.position;
-                other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                var dir = obj.transform.position - transform.position;
+                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
                 GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
             }
-            else if(other.gameObject.tag == "Ball" && m_isAttackBall) // ボールに当たったとき
+            else if(obj.gameObject.tag == "Ball" && m_isAttackBall) // ボールに当たったとき
             {
-                var dir = other.transform.position - transform.position;
+                var dir = obj.transform.position - transform.position;
                 dir = dir.normalized;
                 dir = new Vector3(dir.x,0.3f,dir.z);
-                other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
                 m_isAttackBall = false;
 
-                print("hithti");
+                
             }
         }
     }
