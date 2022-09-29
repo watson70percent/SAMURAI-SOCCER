@@ -51,6 +51,8 @@ namespace SamuraiSoccer.SoccerGame.AI
         public AudioClip startSound;
         public Image goalImage;
 
+        private bool m_isPause = true;
+
         /// <summary>
         /// 味方の人数
         /// </summary>
@@ -137,8 +139,10 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         private void Start()
         {
-            InGameEvent.Pause.Subscribe(Pause);
-            InGameEvent.Standby.Subscribe(_ => SetAnimatorSpeed(0));
+            InGameEvent.Pause.Subscribe(Pause).AddTo(this);
+            InGameEvent.Play.Subscribe(Play).AddTo(this);
+            InGameEvent.Goal.Subscribe(async u => await GoalAction(u)).AddTo(this);
+            InGameEvent.Standby.Subscribe(Standby).AddTo(this);
         }
 
         private void Update()
@@ -149,7 +153,20 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         private void Pause(bool isPause)
         {
+            m_isPause = isPause;
             SetAnimatorSpeed(isPause ? 0 : 1);
+        }
+
+        private void Play(Unit _)
+        {
+            m_isPause = false;
+            SetAnimatorSpeed(1);
+        }
+
+        private void Standby(Unit _)
+        {
+            m_isPause = true;
+            SetAnimatorSpeed(0);
         }
 
         private void SetAnimatorSpeed(float speed)
@@ -172,7 +189,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext();
             Init(ball.transform.position.z < (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2);
-            await UniTask.Delay(2000);
+            await UniTask.Delay(3000);
             audioSource.PlayOneShot(startSound);
             InGameEvent.PlayOnNext();
         }
@@ -182,7 +199,8 @@ namespace SamuraiSoccer.SoccerGame.AI
             float time = 0;
             while (time < 5)
             {
-                goalImage.color = new Color(0, 0, 0, 1 - Mathf.Abs(4 - time) * 2);
+                var c = new Color(0, 0, 0, 1 - Mathf.Abs(4 - time));
+                goalImage.color = c;
                 await UniTask.Yield();
                 time += Time.deltaTime;
             }
@@ -285,6 +303,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             setting.ball = ball.transform;
             setting.manager = this;
             setting.field = field;
+            setting.SetPause(m_isPause);
             setting.rb = temp.GetComponent<Rigidbody>();
             setting.status = status;
             setting.SetMass();
@@ -365,6 +384,8 @@ namespace SamuraiSoccer.SoccerGame.AI
             ball.rb.velocity = Vector3.zero;
             samurai.transform.position = new Vector3(35.7f, 0, 59.6f);
             referee.transform.position = new Vector3(38, 0, 69);
+
+            SetAnimatorSpeed(0);
         }
 
     }
