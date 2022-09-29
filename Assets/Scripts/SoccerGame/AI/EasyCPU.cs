@@ -26,8 +26,6 @@ namespace SamuraiSoccer.SoccerGame.AI
         private Vector2 before_velocity = Vector2.zero;
         private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
 
-        private bool stop = false;
-
 
         /// <summary>
         /// 吹っ飛びやすさを再設定
@@ -46,10 +44,20 @@ namespace SamuraiSoccer.SoccerGame.AI
             SetMass();
         }
 
+        /// <summary>
+        /// ポーズ状態か設定する。初期化のとき呼ぶ。
+        /// </summary>
+        /// <param name="isPause">ポーズか。</param>
+        public void SetPause(bool isPause)
+        {
+            m_isPause = isPause;
+        }
+
         private void Start()
         {
-            InGameEvent.Pause.Subscribe(Pause);
-            InGameEvent.Play.Subscribe(Play);
+            InGameEvent.Pause.Subscribe(Pause).AddTo(this);
+            InGameEvent.Play.Subscribe(Play).AddTo(this);
+            InGameEvent.Standby.Subscribe(Standby).AddTo(this);
         }
 
         private void Pause(bool isPause)
@@ -60,6 +68,11 @@ namespace SamuraiSoccer.SoccerGame.AI
         private void Play(Unit _)
         {
             m_isPause = false;
+        }
+
+        private void Standby(Unit _)
+        {
+            m_isPause = true;
         }
 
         public void SlowDown()
