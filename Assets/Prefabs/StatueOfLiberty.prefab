@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6035256157890983346}
   - component: {fileID: 1006658163374586544}
+  - component: {fileID: 5070860635304689579}
   m_Layer: 0
   m_Name: DeadCollisionDetection (1)
   m_TagString: Untagged
@@ -45,6 +46,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5070860635304689579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434601328732685861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &1739227168206833872
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6684131592463720127}
   - component: {fileID: 9198105891498299519}
+  - component: {fileID: 4133869447601422750}
   m_Layer: 0
   m_Name: DeadCollisionDetection (3)
   m_TagString: Untagged
@@ -90,6 +107,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4133869447601422750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739227168206833872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &1990056226184712001
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4335557398980810910}
   - component: {fileID: 2785698943060617406}
+  - component: {fileID: 3492044989370398254}
   m_Layer: 0
   m_Name: DeadCollisionDetection (5)
   m_TagString: Untagged
@@ -135,6 +168,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3492044989370398254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990056226184712001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &2607129980401147943
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2500552841028243055}
   - component: {fileID: 987752706161218276}
+  - component: {fileID: 7297079052233077583}
   m_Layer: 0
   m_Name: DeadCollisionDetection (2)
   m_TagString: Untagged
@@ -313,6 +362,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7297079052233077583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050674481649214451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &5139327151025288034
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4469915358808593596}
   - component: {fileID: 1417134519624685548}
+  - component: {fileID: 7645568578937588608}
   m_Layer: 0
   m_Name: DeadCollisionDetection
   m_TagString: Untagged
@@ -358,6 +423,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7645568578937588608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139327151025288034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &5711641943621815051
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2835694958522735220}
   - component: {fileID: 4012586069853769896}
+  - component: {fileID: 934944828118755679}
   m_Layer: 0
   m_Name: DeadCollisionDetection (4)
   m_TagString: Untagged
@@ -403,6 +484,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &934944828118755679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711641943621815051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &6037561199736516363
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7067394405004317057}
   - component: {fileID: 202633737272824774}
+  - component: {fileID: 8011107740078512708}
   m_Layer: 0
   m_Name: DeadCollisionDetection (6)
   m_TagString: Untagged
@@ -519,6 +616,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8011107740078512708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720306188611826089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bf95e083aa81348981443035f0daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statueMove: {fileID: 319522678954449579}
+  m_damageSEIndex: 4
+  m_resultSceneName: Result
 --- !u!1 &7332607099403830894
 GameObject:
   m_ObjectHideFlags: 0

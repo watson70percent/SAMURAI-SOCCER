@@ -55,11 +55,12 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             SoundMaster.Instance.PlaySE(m_slashSE);
             //試合Sceneに必要データの転送
-            InMemoryDataTransitClient<int> fieldNumberTransitClient = new InMemoryDataTransitClient<int>();
-            fieldNumberTransitClient.Set(StorageKey.KEY_FIELDNUMBER, m_currentStagePreviewData.fieldNumber);
-            fieldNumberTransitClient.Set(StorageKey.KEY_STAGENUMBER, m_currentStagePreviewData.stageNumber);
-            InMemoryDataTransitClient<string> opponentNameTransmitClient = new InMemoryDataTransitClient<string>();
-            opponentNameTransmitClient.Set(StorageKey.KEY_OPPONENT_TYPE, m_currentStagePreviewData.opponentType);
+            InMemoryDataTransitClient<int> intNumberTransitClient = new InMemoryDataTransitClient<int>();
+            intNumberTransitClient.Set(StorageKey.KEY_FIELDNUMBER, m_currentStagePreviewData.fieldNumber);
+            intNumberTransitClient.Set(StorageKey.KEY_STAGENUMBER, m_currentStagePreviewData.stageNumber);
+            intNumberTransitClient.Set(StorageKey.KEY_GROUNDNUMBER, m_currentStagePreviewData.groundNumber);
+            InMemoryDataTransitClient<string> stringNameTransmitClient = new InMemoryDataTransitClient<string>();
+            stringNameTransmitClient.Set(StorageKey.KEY_OPPONENT_TYPE, m_currentStagePreviewData.opponentType);
             SceneManager.LoadScene(m_currentStagePreviewData.gameScene);
         }
     }

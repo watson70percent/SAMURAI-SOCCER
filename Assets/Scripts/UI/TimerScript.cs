@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using SamuraiSoccer.Event;
+using SamuraiSoccer;
+
 
 namespace SamuraiSoccer.UI
 {
@@ -57,6 +59,7 @@ namespace SamuraiSoccer.UI
                 else
                 {
                     InGameEvent.FinishOnNext();
+                    
                 }
             }
         }

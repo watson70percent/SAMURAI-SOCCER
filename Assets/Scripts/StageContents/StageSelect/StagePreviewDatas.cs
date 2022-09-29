@@ -22,6 +22,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         public SceneObject gameScene; //ステージのScene
 
         public int fieldNumber; //ステージ番号(ロシア用)
+        public int groundNumber; //フィールド番号(ロシア用)
         public string opponentType; //敵名(Prefab＋敵性能ファイル読み込み用)
     }
 }

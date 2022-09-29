@@ -3,7 +3,10 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 using Cysharp.Threading.Tasks;
+using SamuraiSoccer;
 using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents;
+using UnityEngine.SceneManagement;
 
 namespace SamuraiSoccer.StageContents.USA
 {
@@ -16,7 +19,10 @@ namespace SamuraiSoccer.StageContents.USA
         private StatueMove m_statueMove; //親オブジェクトについているStatueMove
 
         [SerializeField]
-        private int m_SEIndex; //衝突時のSE
+        private int m_damageSEIndex; //衝突時のSE
+
+        [SerializeField]
+        private string m_resultSceneName = "Result";
 
         private bool m_isActive = true; //true:稼働状態, false:衝突判定停止
 
@@ -36,9 +42,14 @@ namespace SamuraiSoccer.StageContents.USA
                 {
                     if (other.gameObject.tag == "Player")
                     {
-                        InGameEvent.FinishOnNext();
+                        InMemoryDataTransitClient<GameResult> gameresultDataTransitClient = new InMemoryDataTransitClient<GameResult>();
+                        gameresultDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                         //衝突音の再生
-                        SoundMaster.Instance.PlaySE(m_SEIndex);
+                        SoundMaster.Instance.PlaySE(m_damageSEIndex);
+                        InGameEvent.FinishOnNext();
+                        Time.timeScale = 0.2f;
+                        await UniTask.Delay(1000);
+                        SceneManager.LoadScene(m_resultSceneName);
                     }
                 }
                 //ボールとの衝突処理
