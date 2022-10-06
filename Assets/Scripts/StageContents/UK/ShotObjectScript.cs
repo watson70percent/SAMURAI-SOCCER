@@ -86,6 +86,7 @@ namespace SamuraiSoccer.StageContents.UK
                 elapsedTime+=Time.deltaTime;
                 await UniTask.Yield(PlayerLoopTiming.Update,cancellationToken);
             }
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Result");
         }
     }

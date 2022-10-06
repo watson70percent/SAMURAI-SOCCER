@@ -49,6 +49,7 @@ namespace SamuraiSoccer.StageContents.USA
                         InGameEvent.FinishOnNext();
                         Time.timeScale = 0.2f;
                         await UniTask.Delay(1000);
+                        Time.timeScale = 1f;
                         SceneManager.LoadScene(m_resultSceneName);
                     }
                 }
