@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UniRx.Triggers;
@@ -14,6 +15,10 @@ namespace SamuraiSoccer.UK
         bool isBurn = true;
         PanjanMake panjanMake;
         GameObject fire;
+
+        [SerializeField]
+        private string m_resultSceneName = "Result";
+
         // Start is called before the first frame update
         void Start()
         {
@@ -24,10 +29,16 @@ namespace SamuraiSoccer.UK
             this.OnCollisionEnterAsObservable()
             .Select(hit => hit.gameObject.tag)
             .Where(tag => tag == "Player")
-            .Subscribe(_ => {
+            .Subscribe(async _ => {
                 if(isBurn){
+                    InMemoryDataTransitClient<GameResult> gameresultDataTransitClient = new InMemoryDataTransitClient<GameResult>();
+                    gameresultDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                     fire.SetActive(true);
                     InGameEvent.FinishOnNext();
+                    Time.timeScale = 0.2f;
+                    await UniTask.Delay(700);
+                    Time.timeScale = 1f;
+                    SceneManager.LoadScene(m_resultSceneName);
                 }
             }).AddTo(this);
         }

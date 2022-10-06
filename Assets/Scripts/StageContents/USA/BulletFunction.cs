@@ -7,6 +7,7 @@ using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace SamuraiSoccer.StageContents.USA
 {
@@ -20,6 +21,9 @@ namespace SamuraiSoccer.StageContents.USA
 
         [SerializeField]
         private int m_damageSEIndex; //衝突時のSE
+
+        [SerializeField]
+        private string m_resultSceneName = "Result";
 
         private float m_timer = 0f; //自動削除タイマー
 
@@ -38,7 +42,7 @@ namespace SamuraiSoccer.StageContents.USA
             //ゲーム終了時に機能しなくなる処理
             InGameEvent.Finish.Subscribe(_ => StopFunction()).AddTo(this);
             //衝突時の処理
-            m_onTriggerDisposable = this.OnTriggerEnterAsObservable().Subscribe(other =>
+            m_onTriggerDisposable = this.OnTriggerEnterAsObservable().Subscribe(async other =>
             {
                 //プレイヤ―との衝突処理
                 if (other.gameObject.tag == "Player")
@@ -48,6 +52,10 @@ namespace SamuraiSoccer.StageContents.USA
                     InGameEvent.FinishOnNext();
                     //衝突音の再生
                     SoundMaster.Instance.PlaySE(m_damageSEIndex);
+                    Time.timeScale = 0.2f;
+                    await UniTask.Delay(1000);
+                    Time.timeScale = 1f;
+                    SceneManager.LoadScene(m_resultSceneName);
                 }
             }).AddTo(this);
         }

@@ -41,22 +41,15 @@ namespace SamuraiSoccer.UI
             {
                 m_isPlaying = true;
             }).AddTo(this);
-            InGameEvent.Finish.Subscribe(async _ =>
+            InGameEvent.Finish.Subscribe(_ =>
             {
                 m_isPlaying = false;
                 m_end = true;
-                InMemoryDataTransitClient<GameResult> gameResultTransitClient = new InMemoryDataTransitClient<GameResult>();
-                gameResultTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);               
-                Time.timeScale = 0.2f;
-                SoundMaster.Instance.PlaySE(m_longWhistleNum);
-                await UniTask.Delay(1000);
-                Time.timeScale = 1f;
-                SceneManager.LoadScene(m_resultSceneName);
             }).AddTo(this);
         }
 
         // Update is called once per frame
-        void Update()
+        async void Update()
         {
             if (m_isPlaying && !m_end)
             {
@@ -70,8 +63,20 @@ namespace SamuraiSoccer.UI
                 else
                 {
                     InGameEvent.FinishOnNext();
+                    await FinishProcess();
                 }
             }
+        }
+
+        async UniTask FinishProcess()
+        {
+            InMemoryDataTransitClient<GameResult> gameResultTransitClient = new InMemoryDataTransitClient<GameResult>();
+            gameResultTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
+            Time.timeScale = 0.2f;
+            SoundMaster.Instance.PlaySE(m_longWhistleNum);
+            await UniTask.Delay(1000);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(m_resultSceneName);
         }
     }
 }
