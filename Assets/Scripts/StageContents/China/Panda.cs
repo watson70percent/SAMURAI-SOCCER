@@ -105,8 +105,6 @@ namespace SamuraiSoccer.StageContents.China
 
         void GameSceneLoaded(Scene next, LoadSceneMode mode)
         {
-            ResultManager resultManager = GameObject.Find("ResultManager").GetComponent<ResultManager>();
-            resultManager.SetResult(GameResult.Lose, "パンダに潰されてしもた!");
 
             SceneManager.sceneLoaded -= GameSceneLoaded;
         }

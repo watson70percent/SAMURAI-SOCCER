@@ -38,12 +38,22 @@ namespace SamuraiSoccer.StageContents.Result
             {
                 case GameResult.Win:
                     result.text = "勝利";
+                    foreach (var txt in texts)
+                    {
+                        txt.color = Color.black;
+                    }
+                    background.backgroundColor = Color.white;
                     break;
                 case GameResult.Lose:
                     result.text = "敗北";
                     //負けたときはボタンの位置を反転する(左右対称を仮定)
                     retryButtonTransform.anchoredPosition = new Vector2(-retryButtonTransform.anchoredPosition.x, retryButtonTransform.anchoredPosition.y);
                     nextButtonTransform.anchoredPosition = new Vector2(-nextButtonTransform.anchoredPosition.x, nextButtonTransform.anchoredPosition.y);
+                    foreach (var txt in texts)
+                    {
+                        txt.color = Color.white;
+                    }
+                    background.backgroundColor = Color.black;
                     break;
                 case GameResult.Draw:
                     result.text = "引分";
@@ -52,28 +62,6 @@ namespace SamuraiSoccer.StageContents.Result
 
             //今日のひとこと
             samuraiPhrase.text = samuraiWordBase.samuraiwords[Random.Range(0, samuraiWordBase.samuraiwords.Count)];
-        }
-
-        public void SetResult(GameResult resultState, string resultText)
-        {
-            this.ResultState = resultState;
-            this.resultText = resultText;
-            if (resultState == GameResult.Win)
-            {
-                foreach (var txt in texts)
-                {
-                    txt.color = Color.black;
-                }
-                background.backgroundColor = Color.white;
-            }
-            else
-            {
-                foreach (var txt in texts)
-                {
-                    txt.color = Color.white;
-                }
-                background.backgroundColor = Color.black;
-            }
         }
     }
 
