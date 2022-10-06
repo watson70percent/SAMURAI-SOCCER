@@ -50,8 +50,8 @@ namespace SamuraiSoccer.SoccerGame
 
         private void Start()
         {
-            InGameEvent.Play.Subscribe(Play);
-            InGameEvent.Pause.Subscribe(Pause);
+            InGameEvent.Play.Subscribe(Play).AddTo(this);
+            InGameEvent.Pause.Subscribe(Pause).AddTo(this);
             commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1)).Subscribe(Command);
         }
 
