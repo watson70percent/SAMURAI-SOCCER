@@ -34,7 +34,10 @@ namespace SamuraiSoccer.SoccerGame
         void Awake()
         {
             var client = new InMemoryDataTransitClient<int>();
-            client.TryGet(StorageKey.KEY_GROUNDNUMBER, out groundNumber);
+            if (client.TryGet(StorageKey.KEY_GROUNDNUMBER, out groundNumber))
+            {
+                client.Set(StorageKey.KEY_GROUNDNUMBER, groundNumber);
+            }
             _ = LoadField();
             ball_rb = ball.GetComponent<Rigidbody>();
             gameObject.AddComponent(typeof(NonWind));
