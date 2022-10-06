@@ -4,6 +4,7 @@ using SamuraiSoccer.Event;
 using UniRx;
 using SamuraiSoccer.StageContents.Result;
 using SamuraiSoccer.StageContents;
+using SamuraiSoccer;
 
 namespace SamuraiSoccer.StageContents.China
 {
@@ -95,6 +96,8 @@ namespace SamuraiSoccer.StageContents.China
             InGameEvent.FinishOnNext();
             SoundBoxUtil.SetSoundBox(transform.position, m_hitSound);
 
+            InMemoryDataTransitClient<GameResult> inMemoryDataTransitClient = new InMemoryDataTransitClient<GameResult>();
+            inMemoryDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
             Instantiate(m_blood, m_player.transform.position + Vector3.up * 0.1f, Quaternion.identity);
             Instantiate(m_gameOverPanel);
 

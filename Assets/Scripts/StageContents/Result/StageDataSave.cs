@@ -4,6 +4,7 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using SamuraiSoccer.StageContents;
+using SamuraiSoccer;
 
 namespace SamuraiSoccer.StageContents.Result
 {
@@ -24,9 +25,11 @@ namespace SamuraiSoccer.StageContents.Result
 
             if (result == GameResult.Win)
             {
-                InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
-                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
-                new InFileTransmitClient<int>().Set(StorageKey.KEY_STAGENUMBER, stageNumber);
+                InMemoryDataTransitClient<SaveData> stageNumberTransitionClient = new InMemoryDataTransitClient<SaveData>();
+                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
+                SaveData saveData = new SaveData();
+                saveData.m_stageData = stageNumber;
+                new InFileTransmitClient<SaveData>().Set(StorageKey.KEY_STAGENUMBER, saveData);
 
             }
         }
