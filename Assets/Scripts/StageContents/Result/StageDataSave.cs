@@ -25,8 +25,8 @@ namespace SamuraiSoccer.StageContents.Result
 
             if (result == GameResult.Win)
             {
-                InMemoryDataTransitClient<SaveData> stageNumberTransitionClient = new InMemoryDataTransitClient<SaveData>();
-                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
+                InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
+                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
                 SaveData saveData = new SaveData();
                 saveData.m_stageData = stageNumber;
                 new InFileTransmitClient<SaveData>().Set(StorageKey.KEY_STAGENUMBER, saveData);
