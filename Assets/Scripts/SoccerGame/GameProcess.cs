@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
 using SamuraiSoccer;
 
-namespace SamuraiSoccer.Event
+namespace SamuraiSoccer.SoccerGame
 {
     public class GameProcess : MonoBehaviour
     {

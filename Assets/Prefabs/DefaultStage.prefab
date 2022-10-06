@@ -759,8 +759,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2677264473472736779}
-  m_LocalRotation: {x: 0.069676615, y: 0.7036655, z: -0.06967661, w: 0.70366555}
-  m_LocalPosition: {x: -16.57, y: 10, z: 63.9}
+  m_LocalRotation: {x: 0.08639662, y: 0.70180887, z: -0.08639662, w: 0.70180887}
+  m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -792,7 +792,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 10
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2421,7 +2421,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7786666, y: 1}
+    m_SensorSize: {x: 2.1653333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2486,7 +2486,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8172940443766869344}
-  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.086396605, w: 0.7018089}
+  m_LocalRotation: {x: 0.08639662, y: 0.70180887, z: -0.08639662, w: 0.70180887}
   m_LocalPosition: {x: -36.57, y: 20, z: 63.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2524,7 +2524,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7786666, y: 1}
+    m_SensorSize: {x: 2.1653333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3169,6 +3169,11 @@ PrefabInstance:
       objectReference: {fileID: 2677264473431589590}
     - target: {fileID: 4220772580559016563, guid: adc7cc280ff34dd4aae0a9c929b10607,
         type: 3}
+      propertyPath: m_timeText
+      value: 
+      objectReference: {fileID: 2677264473431589590}
+    - target: {fileID: 4220772580559016563, guid: adc7cc280ff34dd4aae0a9c929b10607,
+        type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1221269002}
@@ -3177,6 +3182,11 @@ PrefabInstance:
       propertyPath: displayText
       value: 
       objectReference: {fileID: 2677264473431589584}
+    - target: {fileID: 4220772580559016563, guid: adc7cc280ff34dd4aae0a9c929b10607,
+        type: 3}
+      propertyPath: m_longWhistleNum
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4220772580559016566, guid: adc7cc280ff34dd4aae0a9c929b10607,
         type: 3}
       propertyPath: m_Name
