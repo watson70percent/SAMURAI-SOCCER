@@ -130,8 +130,10 @@ namespace SamuraiSoccer.SoccerGame.AI
         void Awake()
         {
             var client = new InMemoryDataTransitClient<string>();
+            var oppType = client.Get(StorageKey.KEY_OPPONENT_TYPE);
             teammate = Resources.Load<GameObject>("Teammate");
-            opponent = Resources.Load<GameObject>(client.Get(StorageKey.KEY_OPPONENT_TYPE));
+            opponent = Resources.Load<GameObject>(oppType);
+            client.Set(StorageKey.KEY_OPPONENT_TYPE, oppType);
 
             field = GetComponent<FieldManager>();
             _ = LoadMember();
@@ -147,8 +149,27 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         private void Update()
         {
-            near_team = team.Aggregate((cur, next) => { return (ball.transform.position - cur.transform.position).sqrMagnitude > (ball.transform.position - next.transform.position).sqrMagnitude ? next : cur; });
-            near_opp = opp.Aggregate((cur, next) => { return (ball.transform.position - cur.transform.position).sqrMagnitude > (ball.transform.position - next.transform.position).sqrMagnitude ? next : cur; });
+            (GameObject, float) team_tmp = (default, float.MaxValue);
+            foreach(var t in team)
+            {
+                var d = (t.transform.position - ball.transform.position).sqrMagnitude;
+                if (team_tmp.Item2 > d)
+                {
+                    team_tmp = (t, d);
+                }
+            }
+
+            (GameObject, float) opp_tmp = (default, float.MaxValue);
+            foreach (var o in opp)
+            {
+                var d = (o.transform.position - ball.transform.position).sqrMagnitude;
+                if (opp_tmp.Item2 > d)
+                {
+                    opp_tmp = (o, d);
+                }
+            }
+            near_team = team_tmp.Item1; 
+            near_opp = opp_tmp.Item1;
         }
 
         private void Pause(bool isPause)
