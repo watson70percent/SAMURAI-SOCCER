@@ -18,7 +18,9 @@ namespace SamuraiSoccer.StageContents.Result
         {
             SoundMaster.Instance.PlaySE(0);
             InMemoryDataTransitClient<int> stageNumDataTransitClient = new InMemoryDataTransitClient<int>();
-            string retrySceneName = m_stagePreviewDatas.stageSelectList[stageNumDataTransitClient.Get(StorageKey.KEY_STAGENUMBER)].gameScene;
+            int stageNum = stageNumDataTransitClient.Get(StorageKey.KEY_STAGENUMBER);
+            string retrySceneName = m_stagePreviewDatas.stageSelectList[stageNum].gameScene;
+            stageNumDataTransitClient.Set(StorageKey.KEY_STAGENUMBER, stageNum);
             SceneManager.LoadScene(retrySceneName);
         }
     }
