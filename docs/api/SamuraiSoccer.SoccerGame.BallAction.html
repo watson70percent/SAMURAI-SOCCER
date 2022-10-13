@@ -1,0 +1,955 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BallAction
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BallAction
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.SoccerGame.BallAction">
+  
+  
+  <h1 id="SamuraiSoccer_SoccerGame_BallAction" data-uid="SamuraiSoccer.SoccerGame.BallAction" class="text-break">Class BallAction
+  </h1>
+  <div class="markdown level0 summary"><p>ボールに対するアクションをするクラス．（ボールにくっつける．）</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
+    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
+    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
+    <div class="level5"><span class="xref">BallAction</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.SoccerGame.html">SamuraiSoccer.SoccerGame</a></h6>
+  <h6><strong>Assembly</strong>: SamuraiSoccer.SoccerGame.dll</h6>
+  <h5 id="SamuraiSoccer_SoccerGame_BallAction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BallAction : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_angularVelocity" data-uid="SamuraiSoccer.SoccerGame.BallAction.angularVelocity">angularVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 angularVelocity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_commandStream" data-uid="SamuraiSoccer.SoccerGame.BallAction.commandStream">commandStream</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static Subject&lt;BallActionCommand&gt; commandStream</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniRx.Subject</span>&lt;<a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_gravity" data-uid="SamuraiSoccer.SoccerGame.BallAction.gravity">gravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static readonly float gravity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_info" data-uid="SamuraiSoccer.SoccerGame.BallAction.info">info</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FieldManager info</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.FieldManager.html">FieldManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_last_touch" data-uid="SamuraiSoccer.SoccerGame.BallAction.last_touch">last_touch</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public bool last_touch</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_owner" data-uid="SamuraiSoccer.SoccerGame.BallAction.owner">owner</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public GameObject owner</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_rb" data-uid="SamuraiSoccer.SoccerGame.BallAction.rb">rb</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Rigidbody rb</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Rigidbody</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_sqrt2" data-uid="SamuraiSoccer.SoccerGame.BallAction.sqrt2">sqrt2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static readonly float sqrt2</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_sqrt3" data-uid="SamuraiSoccer.SoccerGame.BallAction.sqrt3">sqrt3</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static readonly float sqrt3</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_velocity" data-uid="SamuraiSoccer.SoccerGame.BallAction.velocity">velocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 velocity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Awake_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Awake*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Awake" data-uid="SamuraiSoccer.SoccerGame.BallAction.Awake">Awake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Awake()</code></pre>
+  </div>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_CalcHighPass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcHighPass*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CalcHighPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">CalcHighPass(Vector2, Vector2, PersonalStatus)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">recever</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">self</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_CalcLowPass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcLowPass*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CalcLowPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">CalcLowPass(Vector2, Vector2, PersonalStatus)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">recever</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">self</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_CalcMiddlePass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CalcMiddlePass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">CalcMiddlePass(Vector2, Vector2, PersonalStatus)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">recever</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">self</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Command_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Command*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Command_SamuraiSoccer_SoccerGame_BallActionCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)">Command(BallActionCommand)</h4>
+  <div class="markdown level1 summary"><p>コマンドの処理を振り分け．</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Command(BallActionCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>コマンド．</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_CommandStreamOnNext_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CommandStreamOnNext_SamuraiSoccer_SoccerGame_BallActionCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)">CommandStreamOnNext(BallActionCommand)</h4>
+  <div class="markdown level1 summary"><p>ボールに対するアクションを行う．</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CommandStreamOnNext(BallActionCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>コマンド．</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Dribble_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Dribble*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Dribble_SamuraiSoccer_SoccerGame_DribbleCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)">Dribble(DribbleCommand)</h4>
+  <div class="markdown level1 summary"><p>ドリブルっぽいもの。StartCorutineじゃなくてイテレーターで操作してほしい。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask Dribble(DribbleCommand c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.DribbleCommand.html">DribbleCommand</a></td>
+        <td><span class="parametername">c</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_OnCollisionEnter_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_OnCollisionEnter_UnityEngine_Collision_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)">OnCollisionEnter(Collision)</h4>
+  <div class="markdown level1 summary"><p>特殊なイベント発生</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCollisionEnter(Collision other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Collision</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_OnTriggerEnter_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_OnTriggerEnter_UnityEngine_Collider_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)">OnTriggerEnter(Collider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnTriggerEnter(Collider other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Collider</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Pass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pass*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Pass_SamuraiSoccer_SoccerGame_PassCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)">Pass(PassCommand)</h4>
+  <div class="markdown level1 summary"><p>パスをするとき呼ぶ関数</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Pass(PassCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PassCommand.html">PassCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Pause_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pause*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Pause_System_Boolean_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pause(System.Boolean)">Pause(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Pause(bool isPause)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isPause</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Play_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Play*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Play_UniRx_Unit_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)">Play(Unit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Play(Unit _)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniRx.Unit</span></td>
+        <td><span class="parametername">_</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Shoot_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Shoot*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Shoot_SamuraiSoccer_SoccerGame_ShootCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)">Shoot(ShootCommand)</h4>
+  <div class="markdown level1 summary"><p>シュートを撃つ関数</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Shoot(ShootCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.ShootCommand.html">ShootCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Start_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Start*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Start" data-uid="SamuraiSoccer.SoccerGame.BallAction.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Start()</code></pre>
+  </div>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Steal_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Steal*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Steal_UnityEngine_GameObject_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)">Steal(GameObject, PersonalStatus, PersonalStatus)</h4>
+  <div class="markdown level1 summary"><p>ボールを盗むときの関数</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Steal(GameObject self, PersonalStatus holder = null, PersonalStatus tryer = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>ボール奪う人</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">holder</span></td>
+        <td><p>ボールを持っている人の能力値</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">tryer</span></td>
+        <td><p>ボールを奪う人の能力値</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_SuccessSteal_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessSteal*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_SuccessSteal_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)">SuccessSteal(PersonalStatus, PersonalStatus)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SuccessSteal(PersonalStatus holder, PersonalStatus tryer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">holder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">tryer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_SuccessTrap_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessTrap*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_SuccessTrap_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)">SuccessTrap(PersonalStatus)</h4>
+  <div class="markdown level1 summary"><p>トラップが成功するかの判定</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SuccessTrap(PersonalStatus self)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>能力値</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>成功のときtrue</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Trap_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Trap*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Trap_SamuraiSoccer_SoccerGame_TrapCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)">Trap(TrapCommand)</h4>
+  <div class="markdown level1 summary"><p>トラップするとき呼ぶ関数</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Trap(TrapCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SamuraiSoccer.SoccerGame.TrapCommand.html">TrapCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_SoccerGame_BallAction_Update_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Update*"></a>
+  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Update" data-uid="SamuraiSoccer.SoccerGame.BallAction.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Update()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
