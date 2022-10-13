@@ -37,6 +37,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         public BallAction ball;
         private GameObject teammate;
         private GameObject opponent;
+        private string oppName;
         [NonSerialized]
         public GameObject near_team;
         [NonSerialized]
@@ -133,6 +134,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             var oppType = client.Get(StorageKey.KEY_OPPONENT_TYPE);
             teammate = Resources.Load<GameObject>("Teammate");
             opponent = Resources.Load<GameObject>(oppType);
+            oppName = oppType;
             client.Set(StorageKey.KEY_OPPONENT_TYPE, oppType);
 
             field = GetComponent<FieldManager>();
@@ -245,7 +247,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             }
             team_stock = JsonUtility.FromJson<Team>(json);
 
-            var file_path2 = Path.Combine(Application.streamingAssetsPath, OpponentName.name + ".json");
+            var file_path2 = Path.Combine(Application.streamingAssetsPath, oppName + ".json");
             print(Application.streamingAssetsPath);
             if (file_path2.Contains("://"))
             {
