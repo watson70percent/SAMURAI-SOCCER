@@ -11,7 +11,7 @@ namespace SamuraiSoccer.StageContents.China
         public string prefabNameAndjsonName;
         private void Awake()
         {
-            OpponentName.name = prefabNameAndjsonName;
+            //OpponentName.name = prefabNameAndjsonName;
         }
     }
 }

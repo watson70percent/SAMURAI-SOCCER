@@ -58,6 +58,27 @@ namespace SamuraiSoccer.SoccerGame
         private void Update()
         {
             rb.angularDrag = info.info.Getdrag(gameObject.transform.position);
+            var vel = rb.velocity;
+            if (vel.sqrMagnitude < 1)
+            {
+                if (transform.position.x <= 0.5)
+                {
+                    vel.x += 1;
+                }
+                else if (transform.position.x >= 49.5)
+                {
+                    vel.x -= 1;
+                }
+                if (transform.position.z <= 0.5)
+                {
+                    vel.z += 1;
+                }
+                else if(transform.position.z >= 99.5)
+                {
+                    vel.z -= 1;
+                }
+                rb.velocity = vel;
+            }
         }
 
         private void Pause(bool isPause)
