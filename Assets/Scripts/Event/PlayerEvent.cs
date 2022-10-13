@@ -54,11 +54,6 @@ namespace SamuraiSoccer.Event
             m_stickInputSubject.OnNext(dir);
         }
 
-        
 
-        
-
-
-        
     }
 }

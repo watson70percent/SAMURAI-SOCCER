@@ -36,6 +36,7 @@ namespace SamuraiSoccer.Player
             InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; }).AddTo(this);
             InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; }).AddTo(this);
             InGameEvent.Play.Subscribe(x => { m_state = State.Playing; }).AddTo(this);
+            InGameEvent.Finish.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
 
 
             PlayerEvent.StickInput.Subscribe(
