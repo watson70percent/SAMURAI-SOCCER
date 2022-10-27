@@ -24,6 +24,8 @@ namespace SamuraiSoccer.Player
         Vector2 velocity;
         private Boundy boundy;
         public Transform flagsParent;
+        [SerializeField]
+        private float speed=1.0f;
 
 
         // Start is called before the first frame update
@@ -31,7 +33,7 @@ namespace SamuraiSoccer.Player
         {
             SetBoundy();
             velocity = Vector3.zero;
-            
+
             InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
             InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; }).AddTo(this);
             InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; }).AddTo(this);
@@ -47,6 +49,7 @@ namespace SamuraiSoccer.Player
 
         void ReceiveStick(Vector3 stickDir)
         {
+
             switch (m_state)
             {
                 case State.StandBy: Move(stickDir); velocity = Vector3.zero; break;
@@ -67,7 +70,7 @@ namespace SamuraiSoccer.Player
             CheckBoundy(transform.position, ref velocity);//範囲外に出てかつ外に行こうとしているときは動かさない
             if (velocity.sqrMagnitude > 0.001)
             {
-                transform.Translate(velocity.x * Time.deltaTime, 0, velocity.y * Time.deltaTime, Space.World);
+                transform.Translate(velocity.x * Time.deltaTime*speed, 0, velocity.y * Time.deltaTime * speed, Space.World);
             }
         }
 
