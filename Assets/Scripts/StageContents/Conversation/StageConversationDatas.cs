@@ -20,9 +20,18 @@ namespace SamuraiSoccer.StageContents.Conversation
     public class ConversationText 
     {
         [Tooltip("話す人の名前")]
-        public string m_characterName;
+        public CharacterName m_characterName;
         [Tooltip("話す内容"), TextArea(1,5)]
         public string m_text;
     }
 
+    [System.Serializable]
+    public enum CharacterName
+    {
+        ショーグン,
+        コクオー,
+        ソーショキ,
+        ダイトーリョー,
+        シドーシャ,
+    }
 }
