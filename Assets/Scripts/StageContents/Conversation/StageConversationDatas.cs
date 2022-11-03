@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SamuraiSoccer.StageContents
+namespace SamuraiSoccer.StageContents.Conversation
 {
     [CreateAssetMenu]
     public class StageConversationDatas : ScriptableObject
