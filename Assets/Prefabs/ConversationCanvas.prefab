@@ -118,7 +118,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 3472616890380064501}
   - component: {fileID: 3472616890380064507}
   - component: {fileID: 3472616890380064506}
+  - component: {fileID: 837690063741851198}
   m_Layer: 5
   m_Name: Manager
   m_TagString: Untagged
@@ -768,6 +769,18 @@ MonoBehaviour:
   - {fileID: 3472616890542016810}
   m_fadeSpeed: 1
   m_isStartEnabled: 0
+--- !u!114 &837690063741851198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472616890380064500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0cd653f6b6b9240bfeaba12796b90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3472616890507889720
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +792,7 @@ GameObject:
   - component: {fileID: 3472616890507889721}
   - component: {fileID: 3472616890507889727}
   - component: {fileID: 3472616890507889726}
+  - component: {fileID: 4080117291609422485}
   m_Layer: 5
   m_Name: TextBox
   m_TagString: Untagged
@@ -845,6 +859,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4080117291609422485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472616890507889720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3d1445c4b21c74884f2116dfe75296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_provider: {fileID: 837690063741851198}
+  m_text: {fileID: 3472616889308153551}
+  m_waitms4char: 40
+  m_guardTime: 500
 --- !u!1 &3472616890542016804
 GameObject:
   m_ObjectHideFlags: 0

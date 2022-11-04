@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
+using UniRx;
 
 namespace SamuraiSoccer.UI
 {
@@ -10,30 +11,34 @@ namespace SamuraiSoccer.UI
     public class TextScroller : MonoBehaviour
     {
         [SerializeField]
+        private TouchProvider m_provider;
+
+        [SerializeField]
         private Text m_text;
 
         [SerializeField]
-        private int m_waitms4char = 30;
+        private int m_waitms4char = 40;
+
+        [SerializeField]
+        private int m_guardTime = 500;
 
         private string m_fullText = "";
-        private bool m_isBeforeTouched = false;
+        private bool m_touchGuard = false;
         private bool m_isTouched = false;
 
         // Start is called before the first frame update
         void Start()
         {
+            m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(OnTouched).AddTo(this);
             m_text.text = "";
         }
 
         void Update()
         {
-            var isTouched = Input.touchCount > 0;
-            if (!m_isBeforeTouched && isTouched)
+            if (m_isTouched)
             {
-                m_isTouched = true;
                 m_text.text = m_fullText;
             }
-            m_isBeforeTouched = isTouched;
         }
 
         /// <summary>
@@ -55,12 +60,27 @@ namespace SamuraiSoccer.UI
             m_text.text = text;
         }
 
+        private void OnTouched(bool isTouch)
+        {
+            if (!m_touchGuard)
+            {
+                m_isTouched = true;
+            }
+        }
+
         private void InitializeState(string text)
         {
             m_text.text = "";
             m_fullText = text;
-            m_isBeforeTouched = Input.touchCount > 0;
             m_isTouched = false;
+            m_touchGuard = true;
+            _ = GuardTimer();
+        }
+
+        private async UniTask GuardTimer()
+        {
+            await UniTask.Delay(m_guardTime);
+            m_touchGuard = false;
         }
     }
 }
