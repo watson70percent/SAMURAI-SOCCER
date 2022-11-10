@@ -23,17 +23,19 @@ public class UISafeAreaSupport : MonoBehaviour
                     if (child.gameObject != obj.gameObject)
                     {
                         if (child.parent.gameObject == obj.gameObject)
+                            //CanvasScalerの直下にあるオブジェクトのサイズを変更
+                            //(孫オブジェクトは親オブジェクトのスケール変更の影響を受けるので孫オブジェクトのサイズはいじらない)
                         {
                             var pos = child.localPosition;
                             pos.x *= scale.x;
                             pos.y *= scale.y;
 
                             child.localPosition = pos;
+                            var localScale = child.localScale;
+                            localScale.x = localScale.x * s;
+                            localScale.y = localScale.y * s;
+                            child.localScale = localScale;
                         }
-                        var delta = child.sizeDelta;
-                        delta.x = delta.x * s;
-                        delta.y = delta.y * s;
-                        child.sizeDelta = delta;
                     }
                 }
             }
