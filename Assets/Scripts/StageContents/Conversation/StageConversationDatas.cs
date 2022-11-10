@@ -13,6 +13,8 @@ namespace SamuraiSoccer.StageContents.Conversation
     [System.Serializable]
     public class StageConversationData
     {
+        public CharacterName m_leftCharacterName;
+        public CharacterName m_rightCharacterName;
         public List<ConversationText> m_conversationTexts = new List<ConversationText>();
     }
 
