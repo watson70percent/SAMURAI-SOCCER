@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LetterSpacing
    ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,14 +88,78 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">LetterSpacing</span></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
+    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
+    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
+    <div class="level5"><span class="xref">UnityEngine.EventSystems.UIBehaviour</span></div>
+    <div class="level6"><span class="xref">UnityEngine.UI.BaseMeshEffect</span></div>
+    <div class="level7"><span class="xref">LetterSpacing</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEngine.UI.IMeshModifier</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">UnityEngine.UI.BaseMeshEffect.OnEnable()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UI.BaseMeshEffect.OnDisable()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UI.BaseMeshEffect.OnValidate()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UI.BaseMeshEffect.graphic</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.Awake()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.Start()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.OnDestroy()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.IsActive()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.Reset()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.EventSystems.UIBehaviour.IsDestroyed()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="UnityEngine.UI.html">UnityEngine.UI</a></h6>
-  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h6><strong>Assembly</strong>: SamuraiSoccer.UI.dll</h6>
   <h5 id="UnityEngine_UI_LetterSpacing_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AddComponentMenu(&quot;UI/Effects/Letter Spacing&quot;, 15)]
-public class LetterSpacing : BaseMeshEffect</code></pre>
+public class LetterSpacing : BaseMeshEffect, IMeshModifier</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -109,6 +173,82 @@ public class LetterSpacing : BaseMeshEffect</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected LetterSpacing()</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="UnityEngine_UI_LetterSpacing_m_spacing" data-uid="UnityEngine.UI.LetterSpacing.m_spacing">m_spacing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+float m_spacing</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="UnityEngine_UI_LetterSpacing_SupportedTagRegexPattersn" data-uid="UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn">SupportedTagRegexPattersn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">const string SupportedTagRegexPattersn = &quot;&lt;b&gt;|&lt;/b&gt;|&lt;i&gt;|&lt;/i&gt;|&lt;size=.*?&gt;|&lt;/size&gt;|&lt;color=.*?&gt;|&lt;/color&gt;|&lt;material=.*?&gt;|&lt;/material&gt;&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="UnityEngine_UI_LetterSpacing_useRichText" data-uid="UnityEngine.UI.LetterSpacing.useRichText">useRichText</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+bool useRichText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -140,8 +280,55 @@ public class LetterSpacing : BaseMeshEffect</code></pre>
   </h3>
   
   
+  <a id="UnityEngine_UI_LetterSpacing_GetRegexMatchedTagCollection_" data-uid="UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection*"></a>
+  <h4 id="UnityEngine_UI_LetterSpacing_GetRegexMatchedTagCollection_System_String_System_Int32__" data-uid="UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)">GetRegexMatchedTagCollection(String, out Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator GetRegexMatchedTagCollection(string line, out int lineLengthWithoutTags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">line</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">lineLengthWithoutTags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="UnityEngine_UI_LetterSpacing_ModifyMesh_" data-uid="UnityEngine.UI.LetterSpacing.ModifyMesh*"></a>
-  <h4 id="UnityEngine_UI_LetterSpacing_ModifyMesh_VertexHelper_" data-uid="UnityEngine.UI.LetterSpacing.ModifyMesh(VertexHelper)">ModifyMesh(VertexHelper)</h4>
+  <h4 id="UnityEngine_UI_LetterSpacing_ModifyMesh_UnityEngine_UI_VertexHelper_" data-uid="UnityEngine.UI.LetterSpacing.ModifyMesh(UnityEngine.UI.VertexHelper)">ModifyMesh(VertexHelper)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -159,12 +346,14 @@ public class LetterSpacing : BaseMeshEffect</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">VertexHelper</span></td>
+        <td><span class="xref">UnityEngine.UI.VertexHelper</span></td>
         <td><span class="parametername">vh</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)</span></div>
   
   
   <a id="UnityEngine_UI_LetterSpacing_ModifyVertices_" data-uid="UnityEngine.UI.LetterSpacing.ModifyVertices*"></a>
@@ -192,6 +381,10 @@ public class LetterSpacing : BaseMeshEffect</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEngine.UI.IMeshModifier</span>
+  </div>
 </article>
           </div>
           

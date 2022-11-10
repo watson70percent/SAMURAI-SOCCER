@@ -10,15 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4220772580559016560}
   - component: {fileID: 4220772580559016567}
-  - component: {fileID: 4220772580559016561}
-  - component: {fileID: 4220772580559016562}
   - component: {fileID: 4220772580559016563}
-  - component: {fileID: 4220772580559016460}
   - component: {fileID: 4220772580559016461}
-  - component: {fileID: 5439825935636402346}
-  - component: {fileID: 7159700491716796176}
-  - component: {fileID: 351355455175569090}
   - component: {fileID: 6587844239011527973}
+  - component: {fileID: 6002362736004586768}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -36,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 97.94543, y: -104.79692, z: 68.94157}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8dc2e9080befe44a47dbbba8e1f76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 4220772580559016561}
   samurai: {fileID: 0}
   referee: {fileID: 0}
   team: []
@@ -63,36 +58,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   goalSound: {fileID: 8300000, guid: 3fdbf0aefa5190242904f2ccc688f7d8, type: 3}
   startSound: {fileID: 8300000, guid: af0d39a7d4c92de478a0630662715e0a, type: 3}
-  timer: {fileID: 4220772580559016563}
-  goalCanvas: {fileID: 0}
   goalImage: {fileID: 0}
---- !u!114 &4220772580559016561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f570ef446bbd1a4988e0a7435ba64aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4220772580559016562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b4beb9f88ad6e048b15d043c1e777a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResultSceneName: Result
-  finishSound: {fileID: 8300000, guid: 07767b3374b47e5419c62ef53a89cac7, type: 3}
-  audioSource: {fileID: 0}
 --- !u!114 &4220772580559016563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,28 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f74646e8fbebdc4b88aaf643ed5ecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishSound: {fileID: 8300000, guid: 07767b3374b47e5419c62ef53a89cac7, type: 3}
-  audioSource: {fileID: 0}
-  playing: 0
-  elapsedTime: 0
   limitTime: 300
   displayText: {fileID: 0}
   timeText: {fileID: 0}
-  gameManager: {fileID: 4220772580559016561}
---- !u!114 &4220772580559016460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257add9a2f4a5ac408d2134a743b56bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cpuManager: {fileID: 4220772580559016567}
-  enemyNumber: {fileID: 0}
 --- !u!114 &4220772580559016461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,52 +87,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 0}
-  manager: {fileID: 4220772580559016567}
-  gm: {fileID: 4220772580559016561}
   ball: {fileID: 0}
   rotation: {fileID: 0}
---- !u!114 &5439825935636402346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e4ab564a574784caecdc5dc107c3c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResultSceneName: Result
-  finishSound: {fileID: 8300000, guid: 07767b3374b47e5419c62ef53a89cac7, type: 3}
-  audioSource: {fileID: 0}
---- !u!114 &7159700491716796176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9255adea1629f6f4a932ebc370096bd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  whistle: {fileID: 8300000, guid: af0d39a7d4c92de478a0630662715e0a, type: 3}
-  katana: {fileID: 8300000, guid: 11faf5729085eed4b90b09b5fe9c6a4a, type: 3}
---- !u!114 &351355455175569090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774cfac75860f034cae736d88c719e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6587844239011527973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +101,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f078313a25fbe74a901a1d88cbe9323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6002362736004586768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220772580559016566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf72f4328c96654bb2434c12d5d326f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resultSceneName: Result
+  m_goalDelayMiliSec: 5000
+  m_finishDelayMiliSec: 1000
+  m_goalFadeAnimator: {fileID: 0}
+  m_trumpetShellSENumber: 2
+  m_whistleSENumber: 10
+  m_shortWhistleSENumber: 12
+  m_gameBGM: 1
