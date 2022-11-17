@@ -14,19 +14,22 @@ namespace SamuraiSoccer.StageContents.Conversation
         private GameObject m_conversationContents;
 
         [SerializeField]
-        private Image m_rightCharacterImage;
+        private Image m_rightCharacterImage; //右会話キャラクターの画像
 
         [SerializeField]
-        private Image m_leftCharacterImage;
+        private Image m_leftCharacterImage; //左会話キャラクターの画像
 
         [SerializeField]
-        private Text m_rightCharacterNameText;
+        private Text m_rightCharacterNameText; //右会話キャラクターの名前表示テキスト
 
         [SerializeField]
-        private Text m_leftCharacterNameText;
+        private Text m_leftCharacterNameText; //左会話キャラクターの名前表示テキスト
 
         [SerializeField]
-        private Text m_conversationText;
+        private Text m_conversationText; //会話テキスト
+
+        [SerializeField]
+        private GameObject m_brushPen; //会話待機中の筆ペン
 
         [SerializeField]
         private StageConversationDatas m_conversationDatas;
@@ -36,6 +39,9 @@ namespace SamuraiSoccer.StageContents.Conversation
 
         [SerializeField]
         private UIFade m_uiFade;
+
+        [SerializeField]
+        private TouchProvider m_provider;
 
         [SerializeField]
         private TextScroller m_textScroller;
@@ -83,7 +89,12 @@ namespace SamuraiSoccer.StageContents.Conversation
             for (int i = 0; i < m_conversationDatas.ConversationDatas[conversatioNum].m_conversationTexts.Count; i++)
             {
                 await m_textScroller.ShowText(m_conversationDatas.ConversationDatas[conversatioNum].m_conversationTexts[i].m_text);
-                await UniTask.Delay(4000);
+                m_brushPen.SetActive(true);
+                while (!m_provider.IsTouchingReactiveProperty.Value)
+                {
+                    await UniTask.Yield();
+                }
+                m_brushPen.SetActive(false);
             }
             ActiveTextUI(false);
             await m_uiFade.FadeOutUI();
