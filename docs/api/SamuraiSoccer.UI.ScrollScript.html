@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class UIFade
+    <title>Class ScrollScript
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class UIFade
+    <meta name="title" content="Class ScrollScript
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,12 +78,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.UI.UIFade">
+            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.UI.ScrollScript">
   
   
-  <h1 id="SamuraiSoccer_UI_UIFade" data-uid="SamuraiSoccer.UI.UIFade" class="text-break">Class UIFade
+  <h1 id="SamuraiSoccer_UI_ScrollScript" data-uid="SamuraiSoccer.UI.ScrollScript" class="text-break">Class ScrollScript
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>巻物をなめらかに移動させる</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -92,25 +93,98 @@
     <div class="level2"><span class="xref">UnityEngine.Component</span></div>
     <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
     <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">UIFade</span></div>
+    <div class="level5"><span class="xref">ScrollScript</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.UI.html">SamuraiSoccer.UI</a></h6>
   <h6><strong>Assembly</strong>: SamuraiSoccer.UI.dll</h6>
-  <h5 id="SamuraiSoccer_UI_UIFade_syntax">Syntax</h5>
+  <h5 id="SamuraiSoccer_UI_ScrollScript_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UIFade : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class ScrollScript : MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="SamuraiSoccer_UI_UIFade_m_fadeSpeed" data-uid="SamuraiSoccer.UI.UIFade.m_fadeSpeed">m_fadeSpeed</h4>
+  <h4 id="SamuraiSoccer_UI_ScrollScript_goalVec" data-uid="SamuraiSoccer.UI.ScrollScript.goalVec">goalVec</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2 goalVec</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_UI_ScrollScript_rectra" data-uid="SamuraiSoccer.UI.ScrollScript.rectra">rectra</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SerializeField]
-float m_fadeSpeed</code></pre>
+RectTransform rectra</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.RectTransform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_UI_ScrollScript_rotVec" data-uid="SamuraiSoccer.UI.ScrollScript.rotVec">rotVec</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 rotVec</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_UI_ScrollScript_slideTime" data-uid="SamuraiSoccer.UI.ScrollScript.slideTime">slideTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+float slideTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,14 +203,12 @@ float m_fadeSpeed</code></pre>
   </table>
   
   
-  <h4 id="SamuraiSoccer_UI_UIFade_m_images" data-uid="SamuraiSoccer.UI.UIFade.m_images">m_images</h4>
+  <h4 id="SamuraiSoccer_UI_ScrollScript_startVec" data-uid="SamuraiSoccer.UI.ScrollScript.startVec">startVec</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-[Tooltip(&quot;&#12501;&#12455;&#12540;&#12489;&#12375;&#12383;&#12356;UI&quot;)]
-List&lt;Image&gt; m_images</code></pre>
+    <pre><code class="lang-csharp hljs">Vector2 startVec</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,32 +220,7 @@ List&lt;Image&gt; m_images</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">UnityEngine.UI.Image</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_UI_UIFade_m_isStartEnabled" data-uid="SamuraiSoccer.UI.UIFade.m_isStartEnabled">m_isStartEnabled</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-bool m_isStartEnabled</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -182,14 +229,77 @@ bool m_isStartEnabled</code></pre>
   </h3>
   
   
-  <a id="SamuraiSoccer_UI_UIFade_FadeInUI_" data-uid="SamuraiSoccer.UI.UIFade.FadeInUI*"></a>
-  <h4 id="SamuraiSoccer_UI_UIFade_FadeInUI" data-uid="SamuraiSoccer.UI.UIFade.FadeInUI">FadeInUI()</h4>
-  <div class="markdown level1 summary"><p>画像のα値を増やすことで画像を出現させる</p>
+  <a id="SamuraiSoccer_UI_ScrollScript_easeOutCubic_" data-uid="SamuraiSoccer.UI.ScrollScript.easeOutCubic*"></a>
+  <h4 id="SamuraiSoccer_UI_ScrollScript_easeOutCubic_System_Single_System_Single_System_Single_System_Single_" data-uid="SamuraiSoccer.UI.ScrollScript.easeOutCubic(System.Single,System.Single,System.Single,System.Single)">easeOutCubic(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>イージングの計算</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask FadeInUI()</code></pre>
+    <pre><code class="lang-csharp hljs">float easeOutCubic(float t, float goal, float start, float goalTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">t</span></td>
+        <td><p>現在の時刻</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">goal</span></td>
+        <td><p>最終地点のx座標</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>t=0のx座標</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">goalTime</span></td>
+        <td><p>最終地点の時刻</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>現在のx座標</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SamuraiSoccer_UI_ScrollScript_ScrollSlide_" data-uid="SamuraiSoccer.UI.ScrollScript.ScrollSlide*"></a>
+  <h4 id="SamuraiSoccer_UI_ScrollScript_ScrollSlide" data-uid="SamuraiSoccer.UI.ScrollScript.ScrollSlide">ScrollSlide()</h4>
+  <div class="markdown level1 summary"><p>巻物を初期位置から線対称の位置に移動させる</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask ScrollSlide()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,34 +318,8 @@ bool m_isStartEnabled</code></pre>
   </table>
   
   
-  <a id="SamuraiSoccer_UI_UIFade_FadeOutUI_" data-uid="SamuraiSoccer.UI.UIFade.FadeOutUI*"></a>
-  <h4 id="SamuraiSoccer_UI_UIFade_FadeOutUI" data-uid="SamuraiSoccer.UI.UIFade.FadeOutUI">FadeOutUI()</h4>
-  <div class="markdown level1 summary"><p>画像のα値を減らすことで画像を見えないようにする</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask FadeOutUI()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="SamuraiSoccer_UI_UIFade_Start_" data-uid="SamuraiSoccer.UI.UIFade.Start*"></a>
-  <h4 id="SamuraiSoccer_UI_UIFade_Start" data-uid="SamuraiSoccer.UI.UIFade.Start">Start()</h4>
+  <a id="SamuraiSoccer_UI_ScrollScript_Start_" data-uid="SamuraiSoccer.UI.ScrollScript.Start*"></a>
+  <h4 id="SamuraiSoccer_UI_ScrollScript_Start" data-uid="SamuraiSoccer.UI.ScrollScript.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

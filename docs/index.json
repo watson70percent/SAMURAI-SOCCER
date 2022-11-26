@@ -539,10 +539,15 @@
     "title": "Class AttackButton",
     "keywords": "Class AttackButton Inheritance System.Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour AttackButton Namespace : SamuraiSoccer.UI Assembly : SamuraiSoccer.UI.dll Syntax public class AttackButton : MonoBehaviour Methods OnPushAttackButton() Declaration public void OnPushAttackButton()"
   },
+  "api/SamuraiSoccer.UI.HidePanel.html": {
+    "href": "api/SamuraiSoccer.UI.HidePanel.html",
+    "title": "Class HidePanel",
+    "keywords": "Class HidePanel 巻物の右側をHideパネルで隠しておく UIのレンダー順はいじれなかったのでスクリプト側で解決した Inheritance System.Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour HidePanel Namespace : SamuraiSoccer.UI Assembly : SamuraiSoccer.UI.dll Syntax public class HidePanel : MonoBehaviour Fields m_parent Declaration [SerializeField] RectTransform m_parent Field Value Type Description UnityEngine.RectTransform m_pos Declaration [SerializeField] Vector3 m_pos Field Value Type Description UnityEngine.Vector3 Methods Start() Declaration void Start() Update() Declaration void Update()"
+  },
   "api/SamuraiSoccer.UI.html": {
     "href": "api/SamuraiSoccer.UI.html",
     "title": "Namespace SamuraiSoccer.UI",
-    "keywords": "Namespace SamuraiSoccer.UI Classes AttackButton OpponentNumber PauseButton SelectedStagePublisher SlidePad TargetWorldData TextScroller UIテキストの一文字ずつ送る動作を行う． TimerScript TouchProvider UIFade"
+    "keywords": "Namespace SamuraiSoccer.UI Classes AttackButton HidePanel 巻物の右側をHideパネルで隠しておく UIのレンダー順はいじれなかったのでスクリプト側で解決した OpponentNumber PauseButton ScrollScript 巻物をなめらかに移動させる SelectedStagePublisher SlidePad TargetWorldData TextScroller UIテキストの一文字ずつ送る動作を行う． TimerScript TouchProvider UIFade"
   },
   "api/SamuraiSoccer.UI.OpponentNumber.html": {
     "href": "api/SamuraiSoccer.UI.OpponentNumber.html",
@@ -553,6 +558,11 @@
     "href": "api/SamuraiSoccer.UI.PauseButton.html",
     "title": "Class PauseButton",
     "keywords": "Class PauseButton Inheritance System.Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour PauseButton Namespace : SamuraiSoccer.UI Assembly : SamuraiSoccer.UI.dll Syntax public class PauseButton : MonoBehaviour Fields m_enablePause Declaration [SerializeField] bool m_enablePause Field Value Type Description System.Boolean m_pausePanel Declaration [SerializeField] GameObject m_pausePanel Field Value Type Description UnityEngine.GameObject Methods ContinueButton() \"ゲームに戻る\"ボタンを押したときの処理 Declaration public void ContinueButton() MenuBackButton() \"メニューに戻る\"ボタンを押したときの処理 Declaration public void MenuBackButton() OnClick() Declaration public void OnClick() RestartButton() \"ゲームをやり直す\"ボタンを押したときの処理 Declaration public void RestartButton() Start() Declaration void Start()"
+  },
+  "api/SamuraiSoccer.UI.ScrollScript.html": {
+    "href": "api/SamuraiSoccer.UI.ScrollScript.html",
+    "title": "Class ScrollScript",
+    "keywords": "Class ScrollScript 巻物をなめらかに移動させる Inheritance System.Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour ScrollScript Namespace : SamuraiSoccer.UI Assembly : SamuraiSoccer.UI.dll Syntax public class ScrollScript : MonoBehaviour Fields goalVec Declaration Vector2 goalVec Field Value Type Description UnityEngine.Vector2 rectra Declaration [SerializeField] RectTransform rectra Field Value Type Description UnityEngine.RectTransform rotVec Declaration Vector3 rotVec Field Value Type Description UnityEngine.Vector3 slideTime Declaration [SerializeField] float slideTime Field Value Type Description System.Single startVec Declaration Vector2 startVec Field Value Type Description UnityEngine.Vector2 Methods easeOutCubic(Single, Single, Single, Single) イージングの計算 Declaration float easeOutCubic(float t, float goal, float start, float goalTime) Parameters Type Name Description System.Single t 現在の時刻 System.Single goal 最終地点のx座標 System.Single start t=0のx座標 System.Single goalTime 最終地点の時刻 Returns Type Description System.Single 現在のx座標 ScrollSlide() 巻物を初期位置から線対称の位置に移動させる Declaration public async UniTask ScrollSlide() Returns Type Description Cysharp.Threading.Tasks.UniTask Start() Declaration void Start()"
   },
   "api/SamuraiSoccer.UI.SelectedStagePublisher.html": {
     "href": "api/SamuraiSoccer.UI.SelectedStagePublisher.html",
@@ -587,7 +597,7 @@
   "api/SamuraiSoccer.UI.UIFade.html": {
     "href": "api/SamuraiSoccer.UI.UIFade.html",
     "title": "Class UIFade",
-    "keywords": "Class UIFade Inheritance System.Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour UIFade Namespace : SamuraiSoccer.UI Assembly : SamuraiSoccer.UI.dll Syntax public class UIFade : MonoBehaviour Fields m_fadeSpeed Declaration [SerializeField] float m_fadeSpeed Field Value Type Description System.Single m_images Declaration [SerializeField] [Tooltip(\"フェードしたいUI\")] List<Image> m_images Field Value Type Description System.Collections.Generic.List < UnityEngine.UI.Image > m_isStartEnabled Declaration [SerializeField] bool m_isStartEnabled Field Value Type Description System.Boolean Methods FadeInUI() Declaration public async UniTask FadeInUI() Returns Type Description Cysharp.Threading.Tasks.UniTask FadeOutUI() Declaration public async UniTask FadeOutUI() Returns Type Description Cysharp.Threading.Tasks.UniTask Start() Declaration void Start()"
+    "keywords": "Class UIFade Inheritance System.Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour UIFade Namespace : SamuraiSoccer.UI Assembly : SamuraiSoccer.UI.dll Syntax public class UIFade : MonoBehaviour Fields m_fadeSpeed Declaration [SerializeField] float m_fadeSpeed Field Value Type Description System.Single m_images Declaration [SerializeField] [Tooltip(\"フェードしたいUI\")] List<Image> m_images Field Value Type Description System.Collections.Generic.List < UnityEngine.UI.Image > m_isStartEnabled Declaration [SerializeField] bool m_isStartEnabled Field Value Type Description System.Boolean Methods FadeInUI() 画像のα値を増やすことで画像を出現させる Declaration public async UniTask FadeInUI() Returns Type Description Cysharp.Threading.Tasks.UniTask FadeOutUI() 画像のα値を減らすことで画像を見えないようにする Declaration public async UniTask FadeOutUI() Returns Type Description Cysharp.Threading.Tasks.UniTask Start() Declaration void Start()"
   },
   "api/SamuraiSoccer.UK.html": {
     "href": "api/SamuraiSoccer.UK.html",
