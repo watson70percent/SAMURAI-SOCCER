@@ -30,7 +30,10 @@ namespace SamuraiSoccer.UI
             }
         }
 
-        // 画像のα値を増やすことで画像を出現させる
+        /// <summary>
+        /// 画像のα値を増やすことで画像を出現させる 
+        /// </summary>
+        /// <returns></returns>
         public async UniTask FadeInUI()
         {
             bool needFade = true;
@@ -52,7 +55,10 @@ namespace SamuraiSoccer.UI
             }
         }
 
-        // 画像のα値を減らすことで画像を見えないようにする
+        /// <summary>
+        /// 画像のα値を減らすことで画像を見えないようにする
+        /// </summary>
+        /// <returns></returns>
         public async UniTask FadeOutUI()
         {
             bool needFade = true;
