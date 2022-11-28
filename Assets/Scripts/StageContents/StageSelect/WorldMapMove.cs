@@ -240,7 +240,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             for (var i = -1; i < 2; i++)
             {
                 possible.Add(new Vector2(dst.x + 1850 * i, dst.y));
-                possible.Add(new Vector2(dst.x + 1850 * i, -dst.y));
+                possible.Add(new Vector2(-dst.x + 1850 * (i + 1), -dst.y));
             }
 
             float distance = float.MaxValue;
