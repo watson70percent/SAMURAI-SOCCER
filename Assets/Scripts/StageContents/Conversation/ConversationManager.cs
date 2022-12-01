@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.UI;
-using UnityEngine.UI;
 using System.Linq;
 
 namespace SamuraiSoccer.StageContents.Conversation
@@ -49,10 +50,16 @@ namespace SamuraiSoccer.StageContents.Conversation
         [SerializeField]
         private ScrollScript m_scrollScript;
 
+        private bool m_isTouched = false; //‰æ–Ê‚ÉG‚ê‚½‚©‚Ç‚¤‚©
+
         // Start is called before the first frame update
         public async void Start()
         {
             m_conversationContents.SetActive(false);
+            m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(_ => 
+            { 
+                m_isTouched = true; 
+            }).AddTo(this);
             await PlayConversation(12);
         }
 
@@ -90,7 +97,8 @@ namespace SamuraiSoccer.StageContents.Conversation
             {
                 await m_textScroller.ShowText(m_conversationDatas.ConversationDatas[conversatioNum].m_conversationTexts[i].m_text);
                 m_brushPen.SetActive(true);
-                while (!m_provider.IsTouchingReactiveProperty.Value)
+                m_isTouched = false;
+                while (!m_isTouched)
                 {
                     await UniTask.Yield();
                 }
