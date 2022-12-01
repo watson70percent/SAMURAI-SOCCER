@@ -13,6 +13,8 @@ namespace SamuraiSoccer.UI
     {
         [SerializeField] RectTransform rectra;//動かす巻物のRectTransform
         [SerializeField] float slideTime;//移動にかける時間
+        [SerializeField] GameObject ScrollObject;//巻物の3Dオブジェクト
+        [SerializeField] float rotSpeed;//回転速度
         Vector3 rotVec;
         Vector2 startVec, goalVec;
 
@@ -34,6 +36,7 @@ namespace SamuraiSoccer.UI
                 elapsedTime += Time.deltaTime;
                 float x = easeOutCubic(elapsedTime, goalVec.x, startVec.x, slideTime);
                 rectra.anchoredPosition = new Vector2(x, startVec.y);
+                ScrollObject.transform.eulerAngles = new Vector3(0, -x * rotSpeed, 0);
                 await UniTask.Delay(1);
                 Debug.Log(elapsedTime);
             }
