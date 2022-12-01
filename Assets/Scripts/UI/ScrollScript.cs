@@ -19,12 +19,10 @@ namespace SamuraiSoccer.UI
         Vector2 startVec, goalVec;
 
         // Start is called before the first frame update
-        async void Start()
+        void Start()
         {
             startVec = rectra.anchoredPosition;
             goalVec = new Vector2(-startVec.x, startVec.y);
-            await UniTask.Delay(1000);
-            await ScrollSlide();
         }
         /// <summary>
         /// Šª•¨‚ğ‰ŠúˆÊ’u‚©‚çü‘ÎÌ‚ÌˆÊ’u‚ÉˆÚ“®‚³‚¹‚é
@@ -42,14 +40,6 @@ namespace SamuraiSoccer.UI
                 await UniTask.Delay(1);
                 Debug.Log(elapsedTime);
             }
-        }
-
-        /// <summary>
-        /// Šª•¨‚ğ‰ñ“]‚³‚¹‚é
-        /// </summary>
-        void ScrollRotate()
-        {
-            ScrollObject.transform.Rotate(0, rotSpeed, 0);
         }
 
         /// <summary>
