@@ -13,15 +13,11 @@ namespace SamuraiSoccer.UI
     {
         [SerializeField] RectTransform rectra;//動かす巻物のRectTransform
         [SerializeField] float slideTime;//移動にかける時間
-        Vector3 rotVec;
-        Vector2 startVec, goalVec;
+        [SerializeField] GameObject ScrollObject;//巻物の3Dオブジェクト
+        [SerializeField] float rotSpeed;//回転速度
+        [SerializeField] float startX, goalX;//巻物の初期位置と最終位置のX座標
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            startVec = rectra.anchoredPosition;
-            goalVec = new Vector2(-startVec.x, startVec.y);
-        }
+
         /// <summary>
         /// 巻物を初期位置から線対称の位置に移動させる
         /// </summary>
@@ -29,11 +25,22 @@ namespace SamuraiSoccer.UI
         public async UniTask ScrollSlide()
         {
             float elapsedTime = 0;
+            float y = rectra.anchoredPosition.y;
+            float rotSign;//回転の向き
+            if (startX > goalX)
+            {
+                rotSign = 1;
+            }
+            else
+            {
+                rotSign = -1;
+            };
             while (elapsedTime < slideTime)
             {
                 elapsedTime += Time.deltaTime;
-                float x = easeOutCubic(elapsedTime, goalVec.x, startVec.x, slideTime);
-                rectra.anchoredPosition = new Vector2(x, startVec.y);
+                float x = easeOutCubic(elapsedTime, goalX, startX, slideTime);
+                rectra.anchoredPosition = new Vector2(x, y);
+                ScrollObject.transform.eulerAngles = new Vector3(0, rotSign * x * rotSpeed, 0);
                 await UniTask.Delay(1);
                 Debug.Log(elapsedTime);
             }
