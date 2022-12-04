@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StageDataSave
+    <title>Class Bezier2Order3Points
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StageDataSave
+    <meta name="title" content="Class Bezier2Order3Points
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,66 +78,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave">
+            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points">
   
   
-  <h1 id="SamuraiSoccer_StageContents_Result_StageDataSave" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave" class="text-break">Class StageDataSave
+  <h1 id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points" class="text-break">Class Bezier2Order3Points
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>制御点三点の二次ベジェ曲線作製クラス．</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
-    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
-    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">StageDataSave</span></div>
+    <div class="level1"><span class="xref">Bezier2Order3Points</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.StageContents.Result.html">SamuraiSoccer.StageContents.Result</a></h6>
-  <h6><strong>Assembly</strong>: SamuraiSoccer.StageContents.Result.dll</h6>
-  <h5 id="SamuraiSoccer_StageContents_Result_StageDataSave_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.StageContents.StageSelect.html">SamuraiSoccer.StageContents.StageSelect</a></h6>
+  <h6><strong>Assembly</strong>: SamuraiSoccer.StageContents.StageSelect.dll</h6>
+  <h5 id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StageDataSave : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Bezier2Order3Points</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <h4 id="SamuraiSoccer_StageContents_Result_StageDataSave_m_conversationManager" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave.m_conversationManager">m_conversationManager</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points__ctor_" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor*"></a>
+  <h4 id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points__ctor_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)">Bezier2Order3Points(Vector2, Vector2, Vector2)</h4>
+  <div class="markdown level1 summary"><p>ベジェ曲線の作製．</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-ConversationManager m_conversationManager</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ConversationManager</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="SamuraiSoccer_StageContents_Result_StageDataSave_Save_" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave.Save*"></a>
-  <h4 id="SamuraiSoccer_StageContents_Result_StageDataSave_Save_System_Threading_CancellationToken_" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave.Save(System.Threading.CancellationToken)">Save(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">async UniTask Save(CancellationToken cancellation_token)</code></pre>
+    <pre><code class="lang-csharp hljs">public Bezier2Order3Points(Vector2 start, Vector2 medium, Vector2 end)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,9 +121,103 @@ ConversationManager m_conversationManager</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellation_token</span></td>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>始点</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">medium</span></td>
+        <td><p>制御点</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>終点</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points_m_lnCombi" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_lnCombi">m_lnCombi</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;float&gt; m_lnCombi</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Single</span>&gt;</td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points_m_points" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_points">m_points</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Vector2&gt; m_points</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">UnityEngine.Vector2</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points_GetPoint_" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint*"></a>
+  <h4 id="SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points_GetPoint_System_Single_" data-uid="SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint(System.Single)">GetPoint(Single)</h4>
+  <div class="markdown level1 summary"><p>ベジェ曲線の点を取得．</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 GetPoint(float t)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">t</span></td>
+        <td><p>地点</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -166,21 +231,28 @@ ConversationManager m_conversationManager</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
-        <td></td>
+        <td><span class="xref">UnityEngine.Vector2</span></td>
+        <td><p>点</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="SamuraiSoccer_StageContents_Result_StageDataSave_Start_" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave.Start*"></a>
-  <h4 id="SamuraiSoccer_StageContents_Result_StageDataSave_Start" data-uid="SamuraiSoccer.StageContents.Result.StageDataSave.Start">Start()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Start()</code></pre>
-  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>範囲外のtを入れたとき投げられる．</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
