@@ -17,6 +17,12 @@ namespace SamuraiSoccer.UI
         [SerializeField] float rotSpeed;//回転速度
         [SerializeField] float startX, goalX;//巻物の初期位置と最終位置のX座標
 
+        private Vector3 initRot;
+
+        private void Start()
+        {
+            initRot = ScrollObject.transform.eulerAngles;
+        }
 
         /// <summary>
         /// 巻物を初期位置から線対称の位置に移動させる
@@ -57,6 +63,12 @@ namespace SamuraiSoccer.UI
         float easeOutCubic(float t, float goal, float start, float goalTime)
         {
             return (goal - start) * (1 - Mathf.Pow(goalTime - t, 3)) + start;
+        }
+
+        public void ResetObject()
+        {
+            rectra.localPosition = new Vector3(startX, rectra.localPosition.y, rectra.localPosition.z);
+            ScrollObject.transform.eulerAngles = initRot;
         }
     }
 }

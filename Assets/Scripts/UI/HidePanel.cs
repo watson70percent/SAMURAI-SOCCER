@@ -21,7 +21,7 @@ namespace SamuraiSoccer.UI
         }
 
         // Update is called once per frame
-        void Update()
+        public void Update()
         {
             this.transform.position = m_parent.position + m_pos;
         }

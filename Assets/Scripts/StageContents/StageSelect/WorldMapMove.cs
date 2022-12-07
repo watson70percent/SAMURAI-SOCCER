@@ -83,13 +83,13 @@ namespace SamuraiSoccer.StageContents.StageSelect
             _ = ToFloating();
             await UniTask.Delay(3000);
             _ = GoTo(Stage.UK);
-            await UniTask.Delay(500);
-            _ = GoTo(Stage.China);
-            await UniTask.Delay(750);
+            await UniTask.Delay(3000);
+            //_ = GoTo(Stage.China);
+            //await UniTask.Delay(750);
             _ = GoTo(Stage.USA);
-            await UniTask.Delay(750);
+            await UniTask.Delay(3000);
             _ = GoTo(Stage.Rossia);
-            await UniTask.Delay(750);
+            await UniTask.Delay(3000);
             _ = GoTo(Stage.Japan);
         }
 
