@@ -29,11 +29,11 @@ namespace SamuraiSoccer.UI
             float rotSign;//‰ñ“]‚ÌŒü‚«
             if (startX > goalX)
             {
-                rotSign = 1;
+                rotSign = -1;
             }
             else
             {
-                rotSign = -1;
+                rotSign = 1;
             };
             while (elapsedTime < slideTime)
             {
