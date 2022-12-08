@@ -10,10 +10,15 @@ namespace SamuraiSoccer.StageContents.StageSelect
     {
         public List<ScrollMove> m_scrollMoves = new List<ScrollMove>();
 
+        [SerializeField]
+        private WorldMapMove m_worldMapMove;
+
+        private Stage m_currentStage;
+
         // Start is called before the first frame update
         void Start()
         {
-            StageSelectEvent.Stage.Subscribe(async stage =>
+            StageSelectEvent.Stage.Subscribe(stage =>
             {
                 for (int i=0; i<m_scrollMoves.Count; i++)
                 {
@@ -22,6 +27,11 @@ namespace SamuraiSoccer.StageContents.StageSelect
                         _ = m_scrollMoves[i].Move();
                     }
                 }
+            }).AddTo(this);
+
+            StageScrollScroller.SelectedStage.Where(x => x != m_currentStage).Subscribe(async stage =>
+            {
+                await m_worldMapMove.GoTo(stage);
             }).AddTo(this);
         }
     }

@@ -75,22 +75,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             // さいしょのデータを取得する．デフォルトでワールドの位置にしてる．
             SetPosition(m_worldPoint[Stage.World], m_worldSize[Stage.World]);
-            // テスト
-            await UniTask.Delay(3000);
-            SetPosition(m_worldPoint[Stage.Japan], m_worldSize[Stage.Japan]);
-            await UniTask.Delay(3000);
-            m_selectState = Stage.Japan;
-            _ = ToFloating();
-            await UniTask.Delay(3000);
-            _ = GoTo(Stage.UK);
-            await UniTask.Delay(3000);
-            //_ = GoTo(Stage.China);
-            //await UniTask.Delay(750);
-            _ = GoTo(Stage.USA);
-            await UniTask.Delay(3000);
-            _ = GoTo(Stage.Russian);
-            await UniTask.Delay(3000);
-            _ = GoTo(Stage.Japan);
         }
 
         /// <summary>

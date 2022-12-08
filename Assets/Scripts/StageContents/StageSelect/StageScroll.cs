@@ -26,7 +26,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             float xpos = GetComponent<RectTransform>().position.x;
             float centrality=Mathf.Abs(xpos-m_viewPort.position.x);
-            float coef = Mathf.Exp(-centrality * centrality / 1000000.0f);
+            float coef = Mathf.Exp(-centrality * centrality / 600000.0f);
 
             float color =  (coef+1)*0.5f;
             m_image.color = new Color(color,color,color);
