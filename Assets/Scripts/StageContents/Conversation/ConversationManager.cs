@@ -60,7 +60,6 @@ namespace SamuraiSoccer.StageContents.Conversation
             { 
                 m_isTouched = true; 
             }).AddTo(this);
-            await PlayConversation(12);
         }
 
         /// <summary>
