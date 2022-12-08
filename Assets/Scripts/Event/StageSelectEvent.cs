@@ -51,7 +51,7 @@ namespace SamuraiSoccer.Event
         UK,
         China,
         USA,
-        Rossia,
+        Russian,
         Japan
     }
 }
