@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using SamuraiSoccer.Event;
+using UniRx;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
@@ -20,16 +21,34 @@ namespace SamuraiSoccer.StageContents.StageSelect
         //スライダー調整をキャンセルするトークン
         CancellationTokenSource m_cancellationTokenSource = new CancellationTokenSource();
 
+
+        private static ReactiveProperty<Stage> m_selectingStageReactiveProperty = new ReactiveProperty<Stage>(Stage.Japan);
+
+        /// <summary>
+        /// 選択中のStageが変更されたときに発行するReactiveProperty
+        /// </summary>
+        public static IReadOnlyReactiveProperty<Stage> SelectedStage
+        {
+            get { return m_selectingStageReactiveProperty; }
+        }
+
+
         /// <summary>
         /// スライダーの中心にある国を取得
         /// </summary>
         /// <returns></returns>
-        public Stage GetSelectingStage()
+        private Stage GetSelectingStage()
         {
             int centerStageNum = (int)Mathf.Floor(horizontalNormalizedPosition * m_pageNumber);
             GameObject centerChild = content.GetChild(centerStageNum).gameObject;
 
             return centerChild.GetComponent<StageScroll>().Stage;
+        }
+
+
+        private void Update()
+        {
+            m_selectingStageReactiveProperty.Value = GetSelectingStage();
         }
 
 
@@ -39,6 +58,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             m_pageNumber = content.childCount;
             horizontalNormalizedPosition = 0.5f; //最初はスライダーを真ん中に
+
         }
 
 
