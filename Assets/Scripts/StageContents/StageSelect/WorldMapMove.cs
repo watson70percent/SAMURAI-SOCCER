@@ -40,7 +40,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             { Stage.UK, new Vector2(90, 572)},
             { Stage.China, new Vector2(600, 705) },
             { Stage.USA, new Vector2(1310, 685)},
-            { Stage.Rossia, new Vector2(550, 450) },
+            { Stage.Russian, new Vector2(550, 450) },
             { Stage.World, new Vector2(925, 650) }
         };
 
@@ -50,7 +50,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             { Stage.UK, 80},
             { Stage.China, 160 },
             { Stage.USA, 180 },
-            { Stage.Rossia, 300 },
+            { Stage.Russian, 300 },
             { Stage.World, 850 }
         };
 
@@ -88,7 +88,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             //await UniTask.Delay(750);
             _ = GoTo(Stage.USA);
             await UniTask.Delay(3000);
-            _ = GoTo(Stage.Rossia);
+            _ = GoTo(Stage.Russian);
             await UniTask.Delay(3000);
             _ = GoTo(Stage.Japan);
         }

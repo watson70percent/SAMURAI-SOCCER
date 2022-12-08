@@ -74,7 +74,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
                     case Stage.UK: _ = FadeOut(gb, delayTime); break;
                     case Stage.China: _ = FadeOut(cn, delayTime); break;
                     case Stage.USA: _ = FadeOut(us, delayTime); break;
-                    case Stage.Rossia: _ = FadeOut(ru, delayTime); break;
+                    case Stage.Russian: _ = FadeOut(ru, delayTime); break;
                 }
             }
             else
@@ -84,7 +84,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
                     case Stage.UK: _ = FadeIn(gb, delayTime); break;
                     case Stage.China: _ = FadeIn(cn, delayTime); break;
                     case Stage.USA: _ = FadeIn(us, delayTime); break;
-                    case Stage.Rossia: _ = FadeIn(ru, delayTime); break;
+                    case Stage.Russian: _ = FadeIn(ru, delayTime); break;
                 }
             }
 
