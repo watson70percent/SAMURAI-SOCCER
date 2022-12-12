@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 446102212}
   - component: {fileID: 446102211}
   - component: {fileID: 8143235519635089587}
+  - component: {fileID: 1964308768655521406}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -134,18 +135,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3151172922830957300}
-        m_TargetAssemblyTypeName: SamuraiSoccer.UI.SelectedStagePublisher, SamuraiSoccer.UI
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &1964308768655521406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446102209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7445b7af2fbdda14b9169f6f27403413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stageNumber: -1
+  m_colorCoef: 0.252
 --- !u!1 &1998780015
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +205,8 @@ MonoBehaviour:
   m_viewPort: {fileID: 167200548370686651}
   m_image: {fileID: 446102211}
   m_imageRect: {fileID: 446102210}
+  m_scrollIcon: {fileID: 1964308768655521406}
+  m_publisher: {fileID: 3151172922830957300}
 --- !u!114 &3151172922830957300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,6 +1041,7 @@ GameObject:
   - component: {fileID: 1458743501444114884}
   - component: {fileID: 6484908639224405888}
   - component: {fileID: 7419492755497001482}
+  - component: {fileID: 8877568897174928843}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1061,7 +1067,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 1000}
+  m_SizeDelta: {x: 500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1458743501444114884
 CanvasRenderer:
@@ -1091,7 +1097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b81803c84abbcd04587097b25e21fbc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d65023a12166b19469588fefa3ea349e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1158,18 +1164,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6460211834230798273}
-        m_TargetAssemblyTypeName: SamuraiSoccer.UI.SelectedStagePublisher, SamuraiSoccer.UI
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &8877568897174928843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299890718396555168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7445b7af2fbdda14b9169f6f27403413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stageNumber: 0
+  m_colorCoef: 0.252
 --- !u!1 &1653817490461006532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1310,8 @@ MonoBehaviour:
   m_viewPort: {fileID: 167200548370686651}
   m_image: {fileID: 9153821316100975840}
   m_imageRect: {fileID: 6527672516352403709}
+  m_scrollIcon: {fileID: 6969354589916232093}
+  m_publisher: {fileID: 6273788013779860037}
 --- !u!114 &6273788013779860037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,6 +1337,7 @@ GameObject:
   - component: {fileID: 1252443030375252726}
   - component: {fileID: 3720132976966305022}
   - component: {fileID: 2028050750202453481}
+  - component: {fileID: 6253097512094547203}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1352,7 +1363,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 1000}
+  m_SizeDelta: {x: 500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1252443030375252726
 CanvasRenderer:
@@ -1382,7 +1393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b81803c84abbcd04587097b25e21fbc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7592460347c7c254f9da116b604f7e34, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1449,18 +1460,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4704414742886312705}
-        m_TargetAssemblyTypeName: SamuraiSoccer.UI.SelectedStagePublisher, SamuraiSoccer.UI
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &6253097512094547203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664861483536046764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7445b7af2fbdda14b9169f6f27403413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stageNumber: 9
+  m_colorCoef: 0.252
 --- !u!1 &4145915122291110389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1486,7 @@ GameObject:
   - component: {fileID: 5594276525133989828}
   - component: {fileID: 7758275371962922023}
   - component: {fileID: 2602380435754280279}
+  - component: {fileID: 8081505967158956307}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1498,7 +1512,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 1000}
+  m_SizeDelta: {x: 500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5594276525133989828
 CanvasRenderer:
@@ -1528,7 +1542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b81803c84abbcd04587097b25e21fbc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4400c077a35d68847a5254bd9958e261, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1595,18 +1609,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7521316327584765424}
-        m_TargetAssemblyTypeName: SamuraiSoccer.UI.SelectedStagePublisher, SamuraiSoccer.UI
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &8081505967158956307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145915122291110389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7445b7af2fbdda14b9169f6f27403413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stageNumber: 6
+  m_colorCoef: 0.252
 --- !u!1 &4572283796945214967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1755,8 @@ MonoBehaviour:
   m_viewPort: {fileID: 167200548370686651}
   m_image: {fileID: 3720132976966305022}
   m_imageRect: {fileID: 4232808348569699051}
+  m_scrollIcon: {fileID: 6253097512094547203}
+  m_publisher: {fileID: 4704414742886312705}
 --- !u!114 &4704414742886312705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,6 +1902,8 @@ MonoBehaviour:
   m_viewPort: {fileID: 167200548370686651}
   m_image: {fileID: 6484908639224405888}
   m_imageRect: {fileID: 8799966689101903955}
+  m_scrollIcon: {fileID: 8877568897174928843}
+  m_publisher: {fileID: 6460211834230798273}
 --- !u!114 &6460211834230798273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1909,6 +1929,7 @@ GameObject:
   - component: {fileID: 8848266064731018331}
   - component: {fileID: 9153821316100975840}
   - component: {fileID: 5452558476503480681}
+  - component: {fileID: 6969354589916232093}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1934,7 +1955,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 1000}
+  m_SizeDelta: {x: 500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8848266064731018331
 CanvasRenderer:
@@ -1964,7 +1985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b81803c84abbcd04587097b25e21fbc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9c5f166f6315bb4d8055905a0716f22, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2031,18 +2052,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6273788013779860037}
-        m_TargetAssemblyTypeName: SamuraiSoccer.UI.SelectedStagePublisher, SamuraiSoccer.UI
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &6969354589916232093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702126596876706837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7445b7af2fbdda14b9169f6f27403413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stageNumber: 3
+  m_colorCoef: 0.252
 --- !u!1 &8344294792545573816
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2122,8 @@ MonoBehaviour:
   m_viewPort: {fileID: 167200548370686651}
   m_image: {fileID: 7758275371962922023}
   m_imageRect: {fileID: 3839371176449483553}
+  m_scrollIcon: {fileID: 8081505967158956307}
+  m_publisher: {fileID: 7521316327584765424}
 --- !u!114 &7521316327584765424
 MonoBehaviour:
   m_ObjectHideFlags: 0
