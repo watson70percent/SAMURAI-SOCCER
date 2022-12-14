@@ -14,41 +14,45 @@ namespace SamuraiSoccer.UI
         [SerializeField] RectTransform rectra;//動かす巻物のRectTransform
         [SerializeField] float slideTime;//移動にかける時間
         [SerializeField] GameObject ScrollObject;//巻物の3Dオブジェクト
-        [SerializeField] float rotSpeed;//回転速度
-        [SerializeField] float startX, goalX;//巻物の初期位置と最終位置のX座標
+        [SerializeField] float rotSpeed;//回転速度係数
+        [SerializeField] Material[] FlagMaterials;//旗のマテリアル
+        MeshRenderer ScrollMaterial;//巻物(3D)のMeshRenderer
+        public enum CountryNameForScroll//国と巻物のマテリアルの番号を一致させるenum
+        {
+            Japan,
+            UK,
+            China,
+            America,
+            Russia
+        }
 
         private Vector3 initRot;
 
-        private void Start()
+        private async void Start()
         {
             initRot = ScrollObject.transform.eulerAngles;
+            ScrollMaterial = ScrollObject.GetComponent<MeshRenderer>();
         }
 
         /// <summary>
-        /// 巻物を初期位置から線対称の位置に移動させる
+        /// 
         /// </summary>
+        /// <param name="startX">巻物の初期位置のX座標</param>
+        /// <param name="goalX">巻物の最終位置のX座標</param>
+        /// <param name="Y">巻物のY座標</param>
+        /// <param name="rollTime">移動、回転にかける時間</param>
         /// <returns></returns>
-        public async UniTask ScrollSlide()
+        public async UniTask ScrollSlide2(float startX, float goalX, float Y, float rollTime)
         {
             float elapsedTime = 0;
-            float y = rectra.anchoredPosition.y;
-            float rotSign;//回転の向き
-            if (startX > goalX)
-            {
-                rotSign = -1;
-            }
-            else
-            {
-                rotSign = 1;
-            };
-            while (elapsedTime < slideTime)
+            rectra.localPosition = new Vector3(startX, Y, rectra.localPosition.z);
+            while (elapsedTime < rollTime)
             {
                 elapsedTime += Time.deltaTime;
-                float x = easeOutCubic(elapsedTime, goalX, startX, slideTime);
-                rectra.anchoredPosition = new Vector2(x, y);
-                ScrollObject.transform.eulerAngles = new Vector3(0, rotSign * x * rotSpeed, 0);
+                float x = easeOutCubic(elapsedTime, goalX, startX, rollTime);
+                rectra.anchoredPosition = new Vector2(x, Y);
+                ScrollObject.transform.eulerAngles = new Vector3(0, -(x - startX) * rotSpeed, 0);
                 await UniTask.Delay(1);
-                Debug.Log(elapsedTime);
             }
         }
 
@@ -69,6 +73,15 @@ namespace SamuraiSoccer.UI
         {
             rectra.localPosition = new Vector3(startX, rectra.localPosition.y, rectra.localPosition.z);
             ScrollObject.transform.eulerAngles = initRot;
+        }
+
+        /// <summary>
+        /// 巻物のMaterialを変更する
+        /// </summary>
+        /// <param name="nowCountry">巻物に反映させる国(Japan,UK,China,America,Russia)</param>
+        public void ChangeMaterial(CountryNameForScroll nowCountry)
+        {
+            ScrollMaterial.material = FlagMaterials[(int)nowCountry];
         }
     }
 }
