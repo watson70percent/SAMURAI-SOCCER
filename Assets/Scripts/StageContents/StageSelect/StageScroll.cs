@@ -22,15 +22,28 @@ namespace SamuraiSoccer.StageContents.StageSelect
         }
 
 
+        bool m_isPlayable = false;
+        private void Start()
+        {
+
+            
+
+            InFileTransmitClient<SaveData> stageNumberTransitionClient = new InFileTransmitClient<SaveData>();
+            int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
+
+            
+            m_isPlayable = stageNumber/3 + 1 >= (int)m_stage;
+            if (m_stage == Stage.Japan) m_isPlayable = true;
+        }
+
+
         private void Update()
         {
             float xpos = GetComponent<RectTransform>().position.x;
             float centrality=Mathf.Abs(xpos-m_viewPort.position.x);
             float coef = Mathf.Exp(-centrality * centrality / 600000.0f);
-
-            float color =  (coef+1)*0.5f;
-            m_image.color = new Color(color,color,color);
-            m_imageRect.localScale = Vector3.one * coef;
+            
+            m_imageRect.localScale = Vector3.one * Mathf.Max(coef,0.5f);
             
         }
 
