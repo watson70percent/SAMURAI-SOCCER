@@ -39,7 +39,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         /// <returns></returns>
         private Stage GetSelectingStage()
         {
-            int centerStageNum = (int)Mathf.Floor(horizontalNormalizedPosition * m_pageNumber);
+            int centerStageNum = (int)Mathf.Round(horizontalNormalizedPosition * (m_pageNumber-1));
             GameObject centerChild = content.GetChild(centerStageNum).gameObject;
 
             return centerChild.GetComponent<StageScroll>().Stage;
@@ -57,7 +57,42 @@ namespace SamuraiSoccer.StageContents.StageSelect
         protected override void Start()
         {
             m_pageNumber = content.childCount;
-            horizontalNormalizedPosition = 0.5f; //最初はスライダーを真ん中に
+            horizontalNormalizedPosition = 0.5f;
+            setScrollPos();
+
+            
+
+        }
+
+
+        private void setScrollPos()
+        {
+            //現在のクリア状況から中央に配置する巻物を判断
+            InFileTransmitClient<SaveData> stageNumberTransitionClient = new InFileTransmitClient<SaveData>();
+            int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
+
+            Stage stage = Stage.Japan;
+
+            switch (stageNumber / 3)
+            {
+                case 0:stage = Stage.UK;break;
+                case 1:stage = Stage.China; break;
+                case 2: stage = Stage.USA; break;
+                case 3: stage = Stage.Russian; break;
+                default:break;
+            }
+
+            
+
+            int count = 0;
+
+            while(GetSelectingStage() != stage) //巻物の順番を入れ替えていって目的の位置に来たらループを抜ける
+            {
+                content.GetChild(0).SetSiblingIndex(100);
+
+                if (count > 100) break;//バグか何かでうまくいかないときはとりあえずループを抜ける
+                count++;
+            }
 
         }
 
@@ -76,7 +111,12 @@ namespace SamuraiSoccer.StageContents.StageSelect
         public override void OnDrag(PointerEventData eventData)
         {
             base.OnDrag(eventData);
+            ScrollRoop();
+        }
 
+
+        void ScrollRoop()
+        {
             //一定以上スライドさせると端っこのオブジェクトをもう一方の端へ移す(ヒエラルキーの順番を変える)
             if (horizontalNormalizedPosition > 0.7f + m_slideCount * 1.0f / (m_pageNumber - 1))
             {
@@ -92,14 +132,18 @@ namespace SamuraiSoccer.StageContents.StageSelect
             }
             //ヒエラルキーの順番を変えるだけだとスライダーの位置が変わってしまうので調整
             horizontalNormalizedPosition -= m_slideCount * 1.0f / (m_pageNumber - 1);
-
         }
 
 
-        async UniTask SliderAdjust(float targetPos, CancellationToken cancellationToken)
+        async UniTask SliderAdjust( CancellationToken cancellationToken)
         {
             //スライダーから手を離したら一定時間かけてキリのいい位置へ移動する
             //移動途中にもう一度スライダーに触ったら中断
+
+
+            //一番近いページを取得
+            float targetPos = (Mathf.Round(horizontalNormalizedPosition * (m_pageNumber - 1))) / (m_pageNumber - 1);
+
             while (!cancellationToken.IsCancellationRequested)
             {
                 float nowPos = horizontalNormalizedPosition;
@@ -125,12 +169,11 @@ namespace SamuraiSoccer.StageContents.StageSelect
             m_isDrugging = false;
             m_slideCount = 0;
 
-            //一番近いページを取得
-            float nextpage = (Mathf.Round(horizontalNormalizedPosition * (m_pageNumber - 1))) / (m_pageNumber - 1);
+            
 
 
             m_cancellationTokenSource = new CancellationTokenSource();
-            SliderAdjust(nextpage, m_cancellationTokenSource.Token);
+            SliderAdjust( m_cancellationTokenSource.Token);
 
         }
     }
