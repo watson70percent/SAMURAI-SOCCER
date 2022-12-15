@@ -28,12 +28,11 @@ namespace SamuraiSoccer.UI
 
         private Vector3 initRot;
 
-        private async void Start()
+        private void Start()
         {
             initRot = ScrollObject.transform.eulerAngles;
             ScrollMaterial = ScrollObject.GetComponent<MeshRenderer>();
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -42,7 +41,7 @@ namespace SamuraiSoccer.UI
         /// <param name="Y">Šª•¨‚ÌYÀ•W</param>
         /// <param name="rollTime">ˆÚ“®A‰ñ“]‚É‚©‚¯‚éŠÔ</param>
         /// <returns></returns>
-        public async UniTask ScrollSlide2(float startX, float goalX, float Y, float rollTime)
+        public async UniTask ScrollSlide(float startX, float goalX, float Y, float rollTime)
         {
             float elapsedTime = 0;
             rectra.localPosition = new Vector3(startX, Y, rectra.localPosition.z);
