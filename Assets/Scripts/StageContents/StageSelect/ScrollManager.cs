@@ -13,6 +13,9 @@ namespace SamuraiSoccer.StageContents.StageSelect
         [SerializeField]
         private WorldMapMove m_worldMapMove;
 
+        [SerializeField]
+        private StageSelectBGM m_stageSelectBGM;
+
         private Stage m_currentStage;
 
         // Start is called before the first frame update
@@ -32,6 +35,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             StageScrollScroller.SelectedStage.Where(x => x != m_currentStage).Subscribe(async stage =>
             {
                 await m_worldMapMove.GoTo(stage);
+                m_stageSelectBGM.ChangeBGM(stage, 1.0f);
             }).AddTo(this);
         }
     }

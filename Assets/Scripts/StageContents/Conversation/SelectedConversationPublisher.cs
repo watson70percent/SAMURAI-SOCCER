@@ -23,7 +23,7 @@ namespace SamuraiSoccer.StageContents.Conversation
                 InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
                 int clearNumber = fileTransitClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
                 // 該当会話番号 == クリア番号(初期は-1)を3で割った余り*4
-                if (m_conversationNum != clearNumber%3*4)
+                if (m_conversationNum != (clearNumber / 3 + clearNumber % 3) * 4)
                 {
                     return;
                 }
