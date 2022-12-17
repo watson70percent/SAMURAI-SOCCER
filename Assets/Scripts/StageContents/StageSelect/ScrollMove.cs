@@ -33,12 +33,14 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             m_scrollObjects.SetActive(true);
             await m_scrollScript.ScrollSlide(m_initPos.x, m_goalX, m_initPos.y, 1.0f);
+            m_hidePanel.gameObject.SetActive(false);
         }
 
         public void ResetMove()
         {
             m_scrollScript.ResetObject(m_initPos.x);
             m_hidePanel.Update();
+            m_hidePanel.gameObject.SetActive(true);
             m_scrollObjects.SetActive(false);
         }
     }

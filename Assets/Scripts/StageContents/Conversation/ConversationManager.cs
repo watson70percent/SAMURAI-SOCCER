@@ -55,9 +55,9 @@ namespace SamuraiSoccer.StageContents.Conversation
         public void Start()
         {
             m_conversationContents.SetActive(false);
-            m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(_ => 
-            { 
-                m_isTouched = true; 
+            m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(_ =>
+            {
+                m_isTouched = true;
             }).AddTo(this);
 
             m_initPos = m_scrollObject.transform.localPosition;
@@ -96,19 +96,23 @@ namespace SamuraiSoccer.StageContents.Conversation
             // 会話文の再生
             for (int i = 0; i < stageConversationData.m_conversationTexts.Count; i++)
             {
+                int speakerNum = 0;
                 // 会話しているキャラクターの表情を変化させる
                 if (stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_leftCharacterName)
                 {
+                    speakerNum = 0;
                     ChangeCharacterEmotion(m_characterImages[0], stageConversationData.m_conversationTexts[i].m_characterName, stageConversationData.m_conversationTexts[i].m_motionType);
                 }
-                else if(stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_rightCharacterName)
+                else if (stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_rightCharacterName)
                 {
+                    speakerNum = 1;
                     ChangeCharacterEmotion(m_characterImages[1], stageConversationData.m_conversationTexts[i].m_characterName, stageConversationData.m_conversationTexts[i].m_motionType);
                 }
                 else
                 {
                     Debug.LogError("会話しているキャラクター以外が会話の主として選択されているよ！");
                 }
+                _ = HopImage(m_characterImages[speakerNum]);
                 await m_textScroller.ShowText(stageConversationData.m_conversationTexts[i].m_text);
                 m_brushPen.SetActive(true);
                 m_isTouched = false;
@@ -116,6 +120,7 @@ namespace SamuraiSoccer.StageContents.Conversation
                 {
                     await UniTask.Yield();
                 }
+                m_isHopping = false;
                 m_brushPen.SetActive(false);
             }
             ActiveTextUI(false);
@@ -154,7 +159,7 @@ namespace SamuraiSoccer.StageContents.Conversation
         /// <param name="image"></param>
         /// <param name="name"></param>
         /// <param name="emotionType"></param>
-        private void ChangeCharacterEmotion(Image image, CharacterName name ,EmotionType emotionType)
+        private void ChangeCharacterEmotion(Image image, CharacterName name, EmotionType emotionType)
         {
             ConversationCharacter character = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == name).First();
             switch (emotionType)
@@ -178,6 +183,21 @@ namespace SamuraiSoccer.StageContents.Conversation
                     image.sprite = character.m_imageNormal;
                     break;
             }
+        }
+
+        private bool m_isHopping = false;
+        private async UniTask HopImage(Image image)
+        {
+            m_isHopping = true;
+            float elapsedtime = 0;
+            Vector3 initPos = image.transform.localPosition;
+            while (m_isHopping)
+            {
+                elapsedtime += Time.deltaTime;
+                image.transform.localPosition = new Vector3(initPos.x, initPos.y + 5 * (1 + Mathf.Sin(3 * Mathf.PI * elapsedtime)), initPos.z);
+                await UniTask.Yield();
+            }
+            image.transform.localPosition = initPos;
         }
     }
 }
