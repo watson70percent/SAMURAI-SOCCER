@@ -68,7 +68,11 @@ namespace SamuraiSoccer.UI
             return (goal - start) * (1 - Mathf.Pow(goalTime - t, 3)) + start;
         }
 
-        public void ResetObject()
+        /// <summary>
+        /// Šª•¨‚ğŒ³‰ŠúˆÊ’u‚É–ß‚·
+        /// </summary>
+        /// <param name="startX">Šª•¨‚Ì‰ŠúˆÊ’u</param>
+        public void ResetObject(float startX)
         {
             rectra.localPosition = new Vector3(startX, rectra.localPosition.y, rectra.localPosition.z);
             ScrollObject.transform.eulerAngles = initRot;

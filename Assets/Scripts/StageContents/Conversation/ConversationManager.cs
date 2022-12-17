@@ -33,6 +33,11 @@ namespace SamuraiSoccer.StageContents.Conversation
         private GameObject m_brushPen; //会話待機中の筆ペン
 
         [SerializeField]
+        private GameObject m_scrollObject; //会話用巻物
+
+        private Vector3 m_initPos; //会話用巻物の初期位置
+
+        [SerializeField]
         private StageConversationDatas m_conversationDatas;
 
         [SerializeField]
@@ -53,13 +58,15 @@ namespace SamuraiSoccer.StageContents.Conversation
         private bool m_isTouched = false; //画面に触れたかどうか
 
         // Start is called before the first frame update
-        public async void Start()
+        public void Start()
         {
             m_conversationContents.SetActive(false);
             m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(_ => 
             { 
                 m_isTouched = true; 
             }).AddTo(this);
+
+            m_initPos = m_scrollObject.transform.localPosition;
         }
 
         /// <summary>
@@ -87,7 +94,7 @@ namespace SamuraiSoccer.StageContents.Conversation
         private async UniTask ConversationProcess(int conversatioNum)
         {
             await UniTask.Delay(1000);
-            await m_scrollScript.ScrollSlide();
+            await m_scrollScript.ScrollSlide(m_initPos.x, -m_initPos.x, m_initPos.y, 1.0f);
             SetCharacterInfo(conversatioNum);
             await m_uiFade.FadeInUI();
             ActiveTextUI(true);
