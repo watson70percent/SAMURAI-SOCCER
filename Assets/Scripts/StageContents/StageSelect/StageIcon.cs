@@ -24,12 +24,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
         [SerializeField]
         private int m_stageNumber;
 
-        [SerializeField]
-        private Image m_image;
-
-        [SerializeField]
-        private Sprite m_monoImage;
-
         private int m_slashSE = 0; //斬撃SEの番号
 
         /// <summary>
@@ -40,27 +34,20 @@ namespace SamuraiSoccer.StageContents.StageSelect
             get { return m_stageNumber; }
         }
 
-        /// <summary>
-        /// このステージの状態
-        /// </summary>
-        public StageState StageState
-        {
-            get;
-            set;
-        }
+        public StageState State { get; set; }
 
         private void Start()
         {
             //状態によってステージのアイコンを変更
-            if (StageState == StageState.NotPlayable)
+            if (State == StageState.NotPlayable)
             {
-                m_image.sprite = m_monoImage;
+                gameObject.SetActive(false);
             }
         }
 
         public void OnClick()
         {
-            if (StageState == StageState.NotPlayable) { return; }
+            if (State == StageState.NotPlayable) { return; }
             SoundMaster.Instance.PlaySE(m_slashSE);
             StageSelectEvent.PreviewOnNext(m_stageNumber);
         }

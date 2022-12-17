@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
+using SamuraiSoccer.Event;
 
 namespace SamuraiSoccer.UI
 {
@@ -17,18 +18,10 @@ namespace SamuraiSoccer.UI
         [SerializeField] float rotSpeed;//回転速度係数
         [SerializeField] Material[] FlagMaterials;//旗のマテリアル
         MeshRenderer ScrollMaterial;//巻物(3D)のMeshRenderer
-        public enum CountryNameForScroll//国と巻物のマテリアルの番号を一致させるenum
-        {
-            Japan,
-            UK,
-            China,
-            America,
-            Russia
-        }
 
         private Vector3 initRot;
 
-        private void Start()
+        public void Start()
         {
             initRot = ScrollObject.transform.eulerAngles;
             ScrollMaterial = ScrollObject.GetComponent<MeshRenderer>();
@@ -68,7 +61,11 @@ namespace SamuraiSoccer.UI
             return (goal - start) * (1 - Mathf.Pow(goalTime - t, 3)) + start;
         }
 
-        public void ResetObject()
+        /// <summary>
+        /// 巻物を元初期位置に戻す
+        /// </summary>
+        /// <param name="startX">巻物の初期位置</param>
+        public void ResetObject(float startX)
         {
             rectra.localPosition = new Vector3(startX, rectra.localPosition.y, rectra.localPosition.z);
             ScrollObject.transform.eulerAngles = initRot;
@@ -77,10 +74,10 @@ namespace SamuraiSoccer.UI
         /// <summary>
         /// 巻物のMaterialを変更する
         /// </summary>
-        /// <param name="nowCountry">巻物に反映させる国(Japan,UK,China,America,Russia)</param>
-        public void ChangeMaterial(CountryNameForScroll nowCountry)
+        /// <param name="nowStage">巻物に反映させる国</param>
+        public void ChangeMaterial(Stage nowStage)
         {
-            ScrollMaterial.material = FlagMaterials[(int)nowCountry];
+            ScrollMaterial.material = FlagMaterials[(int)nowStage];
         }
     }
 }

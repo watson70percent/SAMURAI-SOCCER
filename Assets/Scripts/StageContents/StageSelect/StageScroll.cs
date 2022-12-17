@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SamuraiSoccer.Event;
 using UnityEngine.UI;
+using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents.Conversation;
+using SamuraiSoccer.UI;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
@@ -16,24 +18,17 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         [SerializeField] Image m_image;
         [SerializeField] RectTransform m_imageRect;
+
+        [SerializeField]
+        private ScrollIcon m_scrollIcon;
+        [SerializeField]
+        private SelectedStagePublisher m_publisher;
+        [SerializeField]
+        private SelectedConversationPublisher m_conversationPublisher;
+
         public Stage Stage
         {
             get { return m_stage; }
-        }
-
-
-        bool m_isPlayable = false;
-        private void Start()
-        {
-
-            
-
-            InFileTransmitClient<SaveData> stageNumberTransitionClient = new InFileTransmitClient<SaveData>();
-            int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
-
-            
-            m_isPlayable = stageNumber/3 + 1 >= (int)m_stage;
-            if (m_stage == Stage.Japan) m_isPlayable = true;
         }
 
 
@@ -49,7 +44,15 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         public void OnClick()
         {
-            print("clicked!");
+            if (m_scrollIcon.State == StageState.NotPlayable || Stage != StageScrollScroller.SelectedStage.Value)
+            {
+                return;
+            }
+            m_publisher.OnClick();
+            if (m_conversationPublisher!=null)
+            {
+                m_conversationPublisher.Onclick();
+            }
         }
     }
 }

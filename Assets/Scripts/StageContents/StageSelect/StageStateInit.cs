@@ -4,10 +4,11 @@ using UnityEngine;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
-    public class StageSelectInit : MonoBehaviour
+    public class StageStateInit : MonoBehaviour
     {
         [SerializeField]
         private StageIcon[] m_stageIcon;
+
         private void Awake()
         {
             InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
@@ -16,15 +17,15 @@ namespace SamuraiSoccer.StageContents.StageSelect
             {
                 if (icon.StageNumber < clearNumber)
                 {
-                    icon.StageState = StageState.Cleared;
+                    icon.State = StageState.Cleared;
                 }
                 else if (icon.StageNumber == clearNumber)
                 {
-                    icon.StageState = StageState.Playable;
+                    icon.State = StageState.Playable;
                 }
                 else
                 {
-                    icon.StageState = StageState.NotPlayable;
+                    icon.State = StageState.NotPlayable;
                 }
             }
         }
