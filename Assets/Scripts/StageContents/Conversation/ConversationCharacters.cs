@@ -15,7 +15,11 @@ namespace SamuraiSoccer.StageContents.Conversation
     public class ConversationCharacter
     {
         public CharacterName m_characterName;
-        public Sprite m_image;
+        public Sprite m_imageNormal;
+        public Sprite m_imageSilhouette;
+        public Sprite m_imageFunny;
+        public Sprite m_imageAngry;
+        public Sprite m_imageSad;
     }
 }
 

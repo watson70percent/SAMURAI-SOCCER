@@ -14,17 +14,11 @@ namespace SamuraiSoccer.StageContents.Conversation
         [SerializeField, Tooltip("会話文を表示するコンテンツ全体")]
         private GameObject m_conversationContents;
 
-        [SerializeField]
-        private Image m_rightCharacterImage; //右会話キャラクターの画像
+        [SerializeField, Tooltip("会話キャラクターの画像(左:0, 右:1)")]
+        private Image[] m_characterImages = new Image[2];
 
-        [SerializeField]
-        private Image m_leftCharacterImage; //左会話キャラクターの画像
-
-        [SerializeField]
-        private Text m_rightCharacterNameText; //右会話キャラクターの名前表示テキスト
-
-        [SerializeField]
-        private Text m_leftCharacterNameText; //左会話キャラクターの名前表示テキスト
+        [SerializeField, Tooltip("会話キャラクターの名前(左:0, 右:1)")]
+        private Text[] m_characterNameTexts = new Text[2];
 
         [SerializeField]
         private Text m_conversationText; //会話テキスト
@@ -98,10 +92,24 @@ namespace SamuraiSoccer.StageContents.Conversation
             SetCharacterInfo(conversatioNum);
             await m_uiFade.FadeInUI();
             ActiveTextUI(true);
+            StageConversationData stageConversationData = m_conversationDatas.ConversationDatas[conversatioNum];
             // 会話文の再生
-            for (int i = 0; i < m_conversationDatas.ConversationDatas[conversatioNum].m_conversationTexts.Count; i++)
+            for (int i = 0; i < stageConversationData.m_conversationTexts.Count; i++)
             {
-                await m_textScroller.ShowText(m_conversationDatas.ConversationDatas[conversatioNum].m_conversationTexts[i].m_text);
+                // 会話しているキャラクターの表情を変化させる
+                if (stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_leftCharacterName)
+                {
+                    ChangeCharacterEmotion(m_characterImages[0], stageConversationData.m_conversationTexts[i].m_characterName, stageConversationData.m_conversationTexts[i].m_motionType);
+                }
+                else if(stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_rightCharacterName)
+                {
+                    ChangeCharacterEmotion(m_characterImages[1], stageConversationData.m_conversationTexts[i].m_characterName, stageConversationData.m_conversationTexts[i].m_motionType);
+                }
+                else
+                {
+                    Debug.LogError("会話しているキャラクター以外が会話の主として選択されているよ！");
+                }
+                await m_textScroller.ShowText(stageConversationData.m_conversationTexts[i].m_text);
                 m_brushPen.SetActive(true);
                 m_isTouched = false;
                 while (!m_isTouched)
@@ -122,11 +130,11 @@ namespace SamuraiSoccer.StageContents.Conversation
         private void SetCharacterInfo(int conversationNum)
         {
             CharacterName leftCharacterName = m_conversationDatas.ConversationDatas[conversationNum].m_leftCharacterName;
-            m_leftCharacterNameText.text = leftCharacterName.ToString();
-            m_leftCharacterImage.sprite = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == leftCharacterName).First().m_image;
+            m_characterNameTexts[0].text = leftCharacterName.ToString();
+            m_characterImages[0].sprite = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == leftCharacterName).First().m_imageSilhouette;
             CharacterName rightCharacterName = m_conversationDatas.ConversationDatas[conversationNum].m_rightCharacterName;
-            m_rightCharacterNameText.text = rightCharacterName.ToString();
-            m_rightCharacterImage.sprite = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == rightCharacterName).First().m_image;
+            m_characterNameTexts[1].text = rightCharacterName.ToString();
+            m_characterImages[1].sprite = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == rightCharacterName).First().m_imageSilhouette;
         }
 
         /// <summary>
@@ -136,8 +144,40 @@ namespace SamuraiSoccer.StageContents.Conversation
         private void ActiveTextUI(bool setActive)
         {
             m_conversationText.gameObject.SetActive(setActive);
-            m_leftCharacterNameText.gameObject.SetActive(setActive);
-            m_rightCharacterNameText.gameObject.SetActive(setActive);
+            m_characterNameTexts[0].gameObject.SetActive(setActive);
+            m_characterNameTexts[1].gameObject.SetActive(setActive);
+        }
+
+        /// <summary>
+        /// 会話キャラクターの画像を適切な感情のものに設定する
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="name"></param>
+        /// <param name="emotionType"></param>
+        private void ChangeCharacterEmotion(Image image, CharacterName name ,EmotionType emotionType)
+        {
+            ConversationCharacter character = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == name).First();
+            switch (emotionType)
+            {
+                case EmotionType.Normal:
+                    image.sprite = character.m_imageNormal;
+                    break;
+                case EmotionType.Silhouette:
+                    image.sprite = character.m_imageSilhouette;
+                    break;
+                case EmotionType.Funny:
+                    image.sprite = character.m_imageFunny;
+                    break;
+                case EmotionType.Angry:
+                    image.sprite = character.m_imageAngry;
+                    break;
+                case EmotionType.Sad:
+                    image.sprite = character.m_imageSad;
+                    break;
+                default:
+                    image.sprite = character.m_imageNormal;
+                    break;
+            }
         }
     }
 }

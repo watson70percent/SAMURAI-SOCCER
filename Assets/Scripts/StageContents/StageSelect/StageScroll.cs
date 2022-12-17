@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SamuraiSoccer.Event;
 using UnityEngine.UI;
+using SamuraiSoccer.Event;
+using SamuraiSoccer.StageContents.Conversation;
 using SamuraiSoccer.UI;
 
 namespace SamuraiSoccer.StageContents.StageSelect
@@ -22,6 +23,8 @@ namespace SamuraiSoccer.StageContents.StageSelect
         private ScrollIcon m_scrollIcon;
         [SerializeField]
         private SelectedStagePublisher m_publisher;
+        [SerializeField]
+        private SelectedConversationPublisher m_conversationPublisher;
 
         public Stage Stage
         {
@@ -46,6 +49,10 @@ namespace SamuraiSoccer.StageContents.StageSelect
                 return;
             }
             m_publisher.OnClick();
+            if (m_conversationPublisher!=null)
+            {
+                m_conversationPublisher.Onclick();
+            }
         }
     }
 }
