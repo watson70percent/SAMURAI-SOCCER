@@ -32,6 +32,8 @@ namespace SamuraiSoccer.StageContents.StageSelect
         public async UniTask Move()
         {
             m_scrollObjects.SetActive(true);
+            m_scrollScript.Start();
+            m_scrollScript.ChangeMaterial(m_stage);
             await m_scrollScript.ScrollSlide(m_initPos.x, m_goalX, m_initPos.y, 1.0f);
             m_hidePanel.gameObject.SetActive(false);
         }
