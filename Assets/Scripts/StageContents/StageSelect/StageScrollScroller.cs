@@ -68,8 +68,19 @@ namespace SamuraiSoccer.StageContents.StageSelect
         private void setScrollPos()
         {
             //現在のクリア状況から中央に配置する巻物を判断
-            InFileTransmitClient<SaveData> stageNumberTransitionClient = new InFileTransmitClient<SaveData>();
-            int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
+            InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
+            int stageNumber;
+            if (fileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out var saveData))
+            {
+                stageNumber = saveData.m_stageData;
+            }
+            else
+            {
+                stageNumber = 0;
+                SaveData data = new SaveData();
+                data.m_stageData = stageNumber;
+                fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
+            }
 
             Stage stage = Stage.Japan;
 

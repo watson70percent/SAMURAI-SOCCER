@@ -21,7 +21,18 @@ namespace SamuraiSoccer.StageContents.Conversation
             if (!m_finishedConversation)
             {
                 InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
-                int clearNumber = fileTransitClient.Get(StorageKey.KEY_STAGENUMBER).m_stageData;
+                int clearNumber;
+                if (fileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out var saveData))
+                {
+                    clearNumber = saveData.m_stageData;
+                }
+                else
+                {
+                    clearNumber = 0;
+                    SaveData data = new SaveData();
+                    data.m_stageData = clearNumber;
+                    fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
+                }
                 // 該当会話番号 == クリア番号(初期は-1)を3で割った余り*4
                 if (m_conversationNum != (clearNumber / 3 + clearNumber % 3) * 4)
                 {
