@@ -13,25 +13,25 @@ namespace SamuraiSoccer.StageContents.Conversation
 {
     public class ConversationManager : MonoBehaviour
     {
-        [SerializeField, Tooltip("‰ï˜b•¶‚ğ•\¦‚·‚éƒRƒ“ƒeƒ“ƒc‘S‘Ì")]
+        [SerializeField, Tooltip("ä¼šè©±æ–‡ã‚’è¡¨ç¤ºã™ã‚‹ã‚³ãƒ³ãƒ†ãƒ³ãƒ„å…¨ä½“")]
         private GameObject m_conversationContents;
 
-        [SerializeField, Tooltip("‰ï˜bƒLƒƒƒ‰ƒNƒ^[‚Ì‰æ‘œ(¶:0, ‰E:1)")]
+        [SerializeField, Tooltip("ä¼šè©±ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®ç”»åƒ(å·¦:0, å³:1)")]
         private Image[] m_characterImages = new Image[2];
 
-        [SerializeField, Tooltip("‰ï˜bƒLƒƒƒ‰ƒNƒ^[‚Ì–¼‘O(¶:0, ‰E:1)")]
+        [SerializeField, Tooltip("ä¼šè©±ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®åå‰(å·¦:0, å³:1)")]
         private Text[] m_characterNameTexts = new Text[2];
 
         [SerializeField]
-        private Text m_conversationText; //‰ï˜bƒeƒLƒXƒg
+        private Text m_conversationText; //ä¼šè©±ãƒ†ã‚­ã‚¹ãƒˆ
 
         [SerializeField]
-        private GameObject m_brushPen; //‰ï˜b‘Ò‹@’†‚Ì•Mƒyƒ“
+        private GameObject m_brushPen; //ä¼šè©±å¾…æ©Ÿä¸­ã®ç­†ãƒšãƒ³
 
         [SerializeField]
-        private GameObject m_scrollObject; //‰ï˜b—pŠª•¨
+        private GameObject m_scrollObject; //ä¼šè©±ç”¨å·»ç‰©
 
-        private Vector3 m_initPos; //‰ï˜b—pŠª•¨‚Ì‰ŠúˆÊ’u
+        private Vector3 m_initPos; //ä¼šè©±ç”¨å·»ç‰©ã®åˆæœŸä½ç½®
 
         [SerializeField]
         private StageConversationDatas m_conversationDatas;
@@ -51,7 +51,7 @@ namespace SamuraiSoccer.StageContents.Conversation
         [SerializeField]
         private ScrollScript m_scrollScript;
 
-        private bool m_isTouched = false; //‰æ–Ê‚ÉG‚ê‚½‚©‚Ç‚¤‚©
+        private bool m_isTouched = false; //ç”»é¢ã«è§¦ã‚ŒãŸã‹ã©ã†ã‹
 
         // Start is called before the first frame update
         public void Start()
@@ -66,15 +66,15 @@ namespace SamuraiSoccer.StageContents.Conversation
         }
 
         /// <summary>
-        /// ‰ï˜bƒRƒ“ƒeƒ“ƒc‚Ì‹N“®
+        /// ä¼šè©±ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã®èµ·å‹•
         /// </summary>
-        /// <param name="conversationNum">‰ï˜b”Ô†</param>
+        /// <param name="conversationNum">ä¼šè©±ç•ªå·</param>
         /// <returns></returns>
         public async UniTask PlayConversation(int conversationNum)
         {
             if (conversationNum > m_conversationDatas.ConversationDatas.Count)
             {
-                Debug.LogError("‰ï˜b”Ô†‚ªŠÔˆá‚Á‚Ä‚¢‚é‚½‚ß‰ï˜b‚ªÄ¶‚Å‚«‚Ü‚¹‚ñ");
+                Debug.LogError("ä¼šè©±ç•ªå·ãŒé–“é•ã£ã¦ã„ã‚‹ãŸã‚ä¼šè©±ãŒå†ç”Ÿã§ãã¾ã›ã‚“");
                 return;
             }
             m_conversationContents.SetActive(true);
@@ -83,9 +83,9 @@ namespace SamuraiSoccer.StageContents.Conversation
         }
 
         /// <summary>
-        /// ‰ï˜b•ª‚Ì•\¦‚ÆÄ¶
+        /// ä¼šè©±åˆ†ã®è¡¨ç¤ºã¨å†ç”Ÿ
         /// </summary>
-        /// <param name="conversatioNum">Ä¶‚·‚é‰ï˜b”Ô†</param>
+        /// <param name="conversatioNum">å†ç”Ÿã™ã‚‹ä¼šè©±ç•ªå·</param>
         /// <returns></returns>
         private async UniTask ConversationProcess(int conversatioNum)
         {
@@ -95,11 +95,11 @@ namespace SamuraiSoccer.StageContents.Conversation
             await m_uiFade.FadeInUI();
             ActiveTextUI(true);
             StageConversationData stageConversationData = m_conversationDatas.ConversationDatas[conversatioNum];
-            // ‰ï˜b•¶‚ÌÄ¶
+            // ä¼šè©±æ–‡ã®å†ç”Ÿ
             for (int i = 0; i < stageConversationData.m_conversationTexts.Count; i++)
             {
                 int speakerNum = 0;
-                // ‰ï˜b‚µ‚Ä‚¢‚éƒLƒƒƒ‰ƒNƒ^[‚Ì•\î‚ğ•Ï‰»‚³‚¹‚é
+                // ä¼šè©±ã—ã¦ã„ã‚‹ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®è¡¨æƒ…ã‚’å¤‰åŒ–ã•ã›ã‚‹
                 if (stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_leftCharacterName)
                 {
                     speakerNum = 0;
@@ -112,7 +112,7 @@ namespace SamuraiSoccer.StageContents.Conversation
                 }
                 else
                 {
-                    Debug.LogError("‰ï˜b‚µ‚Ä‚¢‚éƒLƒƒƒ‰ƒNƒ^[ˆÈŠO‚ª‰ï˜b‚Ìå‚Æ‚µ‚Ä‘I‘ğ‚³‚ê‚Ä‚¢‚é‚æI");
+                    Debug.LogError("ä¼šè©±ã—ã¦ã„ã‚‹ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ä»¥å¤–ãŒä¼šè©±ã®ä¸»ã¨ã—ã¦é¸æŠã•ã‚Œã¦ã„ã‚‹ã‚ˆï¼");
                 }
                 Vector3 initPos = m_characterImages[speakerNum].transform.localPosition;
                 CancellationTokenSource cts = new CancellationTokenSource();
@@ -130,13 +130,13 @@ namespace SamuraiSoccer.StageContents.Conversation
             }
             ActiveTextUI(false);
             await m_uiFade.FadeOutUI();
-            // Šª•¨‚ÌˆÚ“®
+            // å·»ç‰©ã®ç§»å‹•
         }
 
         /// <summary>
-        /// ‰ï˜bƒLƒƒƒ‰ƒNƒ^[î•ñ‚Ì’Ç‰Á
+        /// ä¼šè©±ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼æƒ…å ±ã®è¿½åŠ 
         /// </summary>
-        /// <param name="conversationNum">‰ï˜b”Ô†</param>
+        /// <param name="conversationNum">ä¼šè©±ç•ªå·</param>
         private void SetCharacterInfo(int conversationNum)
         {
             CharacterName leftCharacterName = m_conversationDatas.ConversationDatas[conversationNum].m_leftCharacterName;
@@ -148,7 +148,7 @@ namespace SamuraiSoccer.StageContents.Conversation
         }
 
         /// <summary>
-        /// ‰ï˜bƒvƒŒƒnƒu‚ÌƒeƒLƒXƒg•”•ª‚ÌSetActive‚ğˆêŠ‡‚ÅÀ{‚·‚é
+        /// ä¼šè©±ãƒ—ãƒ¬ãƒãƒ–ã®ãƒ†ã‚­ã‚¹ãƒˆéƒ¨åˆ†ã®SetActiveã‚’ä¸€æ‹¬ã§å®Ÿæ–½ã™ã‚‹
         /// </summary>
         /// <param name="setActive"></param>
         private void ActiveTextUI(bool setActive)
@@ -159,7 +159,7 @@ namespace SamuraiSoccer.StageContents.Conversation
         }
 
         /// <summary>
-        /// ‰ï˜bƒLƒƒƒ‰ƒNƒ^[‚Ì‰æ‘œ‚ğ“KØ‚ÈŠ´î‚Ì‚à‚Ì‚Éİ’è‚·‚é
+        /// ä¼šè©±ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®ç”»åƒã‚’é©åˆ‡ãªæ„Ÿæƒ…ã®ã‚‚ã®ã«è¨­å®šã™ã‚‹
         /// </summary>
         /// <param name="image"></param>
         /// <param name="name"></param>
