@@ -11,10 +11,10 @@ namespace SamuraiSoccer.UK
 {
     public class PanjanRoll : MonoBehaviour
     {
- 
+
         [SerializeField] float moveSpeed;
         [SerializeField] float rotSpeed;
-        bool exploded, playing=true;
+        bool exploded, playing = true;
         [SerializeField] GameObject rot;
         [SerializeField] int partMax;
         [SerializeField] Rigidbody rb;
@@ -29,9 +29,9 @@ namespace SamuraiSoccer.UK
 
         private void Start()
         {
-            InGameEvent.Pause.Subscribe(_ =>
+            InGameEvent.Pause.Subscribe(x =>
             {
-                playing = false;
+                playing = !x;
             }).AddTo(this);
             InGameEvent.Play.Subscribe(_ =>
             {
@@ -44,7 +44,8 @@ namespace SamuraiSoccer.UK
             this.OnTriggerEnterAsObservable()
             .Select(hit => hit.gameObject.tag)
             .Where(tag => tag == "Player" || tag == "Slash")
-            .Subscribe(_ => {
+            .Subscribe(_ =>
+            {
                 Explode();
                 exploded = true;
             }).AddTo(this);
@@ -56,10 +57,10 @@ namespace SamuraiSoccer.UK
             if (!playing) return;
             if (!exploded)
             {
-                // §ŒÀ‚È‚µ‚Ì‰ñ“]‚ğ‹‚ß...
+                // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Ì‰ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
                 var rotation = Quaternion.LookRotation(player.transform.position + Vector3.up * 2 - transform.position);
 
-                // ‚»‚Ì‰ñ“]Šp‚ğ_maxAngle‚Ü‚Å‚É§ŒÀ‚µ‚½‰ñ“]‚ğì‚èA‚»‚ê‚ğrotation‚ÉƒZƒbƒg‚·‚é
+                // ï¿½ï¿½ï¿½Ì‰ï¿½]ï¿½pï¿½ï¿½_maxAngleï¿½Ü‚Å‚Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½rotationï¿½ÉƒZï¿½bï¿½gï¿½ï¿½ï¿½ï¿½
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotSpeed * Time.deltaTime);
 
                 rot.transform.Rotate(moveSpeed, 0, 0);
@@ -104,7 +105,8 @@ namespace SamuraiSoccer.UK
             Destroy(gameObject, 4.0f);
         }
 
-        public void SetObjects(GameObject fire,Transform player){
+        public void SetObjects(GameObject fire, Transform player)
+        {
             this.fire = fire;
             this.player = player;
         }
