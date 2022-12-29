@@ -33,9 +33,9 @@ namespace SamuraiSoccer.UI
                 int displayTime = (int)(m_limitTimeSec - m_elapsedTime);
                 m_timeText.text = ((int)(displayTime / 60)).ToString("0") + ":" + Mathf.CeilToInt(displayTime % 60).ToString("00");
             }).AddTo(this);
-            InGameEvent.Pause.Subscribe(_ =>
+            InGameEvent.Pause.Subscribe(x =>
             {
-                m_isPlaying = false;
+                m_isPlaying = !x;
             }).AddTo(this);
             InGameEvent.Play.Subscribe(_ =>
             {
