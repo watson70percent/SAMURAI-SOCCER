@@ -47,6 +47,8 @@ namespace SamuraiSoccer.StageContents.Result
                 // お話の番号=クリアしたステージ番号を3で割った商×4+ステージ番号を3で割った余り+1
                 await m_conversationManager.PlayConversation((clearNumber / 3) * 4 + clearNumber % 3 + 1);
             }
+            // 再戦用に再びKEY_STAGENUMBERをセットする
+            stageNumberTransitionClient.Set(StorageKey.KEY_STAGENUMBER, clearNumber);
         }
     }
 }

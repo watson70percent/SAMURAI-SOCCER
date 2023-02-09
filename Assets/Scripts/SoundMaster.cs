@@ -63,7 +63,7 @@ namespace SamuraiSoccer
             seAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume * seBolume;
             var targetClip = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound;
             seAudioSource.PlayOneShot(targetClip);
-            await UniTask.Delay((int)(targetClip.length*1000)); //msなので1000をかけて単位変換
+            await UniTask.Delay((int)(targetClip.length*1000),true); //msなので1000をかけて単位変換
         }
 
         /// <summary>
