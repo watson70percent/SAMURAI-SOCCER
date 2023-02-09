@@ -308,7 +308,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         private async UniTask WinEffect()
         {
             Time.timeScale = 0.3f;
-            await UniTask.Delay(1000);
+            await SoundMaster.Instance.PlaySE(11);
             Time.timeScale = 1;
             SceneManager.LoadScene("Result");
         }
