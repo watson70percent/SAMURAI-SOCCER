@@ -19,6 +19,8 @@ namespace SamuraiSoccer.UK
         [SerializeField]
         private string m_resultSceneName = "Result";
 
+        private int m_calledNum = 0; // ŒÄ‚Ño‚³‚ê‚½‰ñ”‚ğ‹L‰¯
+
         // Start is called before the first frame update
         void Start()
         {
@@ -31,6 +33,8 @@ namespace SamuraiSoccer.UK
             .Where(tag => tag == "Player")
             .Subscribe(async _ => {
                 if(isBurn){
+                    // •¡”‰ñŒÄ‚Ño‚³‚ê‚é–â‘è‚ğ‰ğŒˆ
+                    if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
                     InMemoryDataTransitClient<GameResult> gameresultDataTransitClient = new InMemoryDataTransitClient<GameResult>();
                     gameresultDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                     fire.SetActive(true);
