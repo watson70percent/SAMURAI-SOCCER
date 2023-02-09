@@ -37,7 +37,7 @@ namespace SamuraiSoccer.StageContents.Result
                 data.m_stageData = clearNumber;
                 fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
             }
-            if (result == GameResult.Win && clearNumber > savedNumber)
+            if (result == GameResult.Win && clearNumber >= savedNumber)
             {
                 // ステージ情報を保存
                 SaveData saveData = new SaveData();
