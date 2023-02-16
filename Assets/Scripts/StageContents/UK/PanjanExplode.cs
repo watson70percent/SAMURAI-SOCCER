@@ -31,8 +31,10 @@ namespace SamuraiSoccer.UK
             this.OnCollisionEnterAsObservable()
             .Select(hit => hit.gameObject.tag)
             .Where(tag => tag == "Player")
-            .Subscribe(async _ => {
-                if(isBurn){
+            .Subscribe(async _ =>
+            {
+                if (isBurn)
+                {
                     // •¡”‰ñŒÄ‚Ño‚³‚ê‚é–â‘è‚ğ‰ğŒˆ
                     if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
                     InMemoryDataTransitClient<GameResult> gameresultDataTransitClient = new InMemoryDataTransitClient<GameResult>();
@@ -47,8 +49,10 @@ namespace SamuraiSoccer.UK
             }).AddTo(this);
         }
 
-        public void SetFireObject(GameObject fire){
+        public void SetFireObject(GameObject fire)
+        {
             this.fire = fire;
+            this.fire.SetActive(true);
         }
     }
 }

@@ -57,10 +57,10 @@ namespace SamuraiSoccer.UK
             if (!playing) return;
             if (!exploded)
             {
-                // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Ì‰ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
+                // §ŒÀ‚È‚µ‚Ì‰ñ“]‚ğ‹‚ß...
                 var rotation = Quaternion.LookRotation(player.transform.position + Vector3.up * 2 - transform.position);
 
-                // ï¿½ï¿½ï¿½Ì‰ï¿½]ï¿½pï¿½ï¿½_maxAngleï¿½Ü‚Å‚Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½rotationï¿½ÉƒZï¿½bï¿½gï¿½ï¿½ï¿½ï¿½
+                // ‚»‚Ì‰ñ“]Šp‚ğ_maxAngle‚Ü‚Å‚É§ŒÀ‚µ‚½‰ñ“]‚ğì‚èA‚»‚ê‚ğrotation‚ÉƒZƒbƒg‚·‚é
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotSpeed * Time.deltaTime);
 
                 rot.transform.Rotate(moveSpeed, 0, 0);
@@ -79,10 +79,9 @@ namespace SamuraiSoccer.UK
             {
                 if (index < 15)
                 {
-                    Instantiate(fire, part.position, Quaternion.identity, part);
                     panjanExplode = part.gameObject.GetComponent<PanjanExplode>();
                     panjanExplode.gameObject.SetActive(true);
-                    panjanExplode.SetFireObject(fire);
+                    panjanExplode.SetFireObject(Instantiate(fire, part.position, Quaternion.identity, part));
                 }
                 Rigidbody rbPart = part.gameObject.GetComponent<Rigidbody>();
                 rbPart.isKinematic = false;
