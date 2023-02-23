@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
+using System.Threading;
 
 namespace SamuraiSoccer.UI
 {
@@ -26,20 +27,24 @@ namespace SamuraiSoccer.UI
             initRot = ScrollObject.transform.eulerAngles;
             ScrollMaterial = ScrollObject.GetComponent<MeshRenderer>();
         }
+
         /// <summary>
-        /// 
+        /// 巻物の回転処理を行う
         /// </summary>
         /// <param name="startX">巻物の初期位置のX座標</param>
         /// <param name="goalX">巻物の最終位置のX座標</param>
         /// <param name="Y">巻物のY座標</param>
         /// <param name="rollTime">移動、回転にかける時間</param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async UniTask ScrollSlide(float startX, float goalX, float Y, float rollTime)
+        public async UniTask ScrollSlide(float startX, float goalX, float Y, float rollTime, CancellationToken cancellationToken = default)
         {
             float elapsedTime = 0;
             rectra.localPosition = new Vector3(startX, Y, rectra.localPosition.z);
             while (elapsedTime < rollTime)
             {
+                // キャンセルされていたらOperationCanceledExceptionをスロー
+                cancellationToken.ThrowIfCancellationRequested();
                 elapsedTime += Time.deltaTime;
                 float x = easeOutCubic(elapsedTime, goalX, startX, rollTime);
                 rectra.anchoredPosition = new Vector2(x, Y);
