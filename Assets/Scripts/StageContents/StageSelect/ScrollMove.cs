@@ -2,6 +2,7 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.UI;
+using System.Threading;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
@@ -22,11 +23,14 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         private Vector3 m_initPos;
 
+        private CancellationTokenSource m_cts;
+
         public Stage Stage { get { return m_stage; } }
 
         private void Start()
         {
             m_initPos = m_scrollObject.transform.localPosition;
+            m_cts = new CancellationTokenSource();
         }
 
         public async UniTask Move()
@@ -34,16 +38,18 @@ namespace SamuraiSoccer.StageContents.StageSelect
             m_scrollObjects.SetActive(true);
             m_scrollScript.Start();
             m_scrollScript.ChangeMaterial(m_stage);
-            await m_scrollScript.ScrollSlide(m_initPos.x, m_goalX, m_initPos.y, 1.0f);
+            await m_scrollScript.ScrollSlide(m_initPos.x, m_goalX, m_initPos.y, 1.0f, m_cts.Token);
             m_hidePanel.gameObject.SetActive(false);
         }
 
         public void ResetMove()
         {
+            m_cts.Cancel();
             m_scrollScript.ResetObject(m_initPos.x);
             m_hidePanel.Update();
             m_hidePanel.gameObject.SetActive(true);
             m_scrollObjects.SetActive(false);
+            m_cts = new CancellationTokenSource();
         }
     }
 }
