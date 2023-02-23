@@ -54,7 +54,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
-            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1)).Subscribe(Command);
+            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1), Scheduler.MainThreadFixedUpdate).Subscribe(Command);
         }
 
         private void Update()
