@@ -56,7 +56,6 @@ namespace SamuraiSoccer.StageContents.Conversation
         // Start is called before the first frame update
         public void Start()
         {
-            m_conversationContents.SetActive(false);
             m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(_ =>
             {
                 m_isTouched = true;
