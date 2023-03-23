@@ -21,22 +21,22 @@ namespace SamuraiSoccer.StageContents.Conversation
     [System.Serializable]
     public class ConversationText 
     {
-        [Tooltip("˜b‚·l‚Ì–¼‘O")]
+        [Tooltip("è©±ã™äººã®åå‰")]
         public CharacterName m_characterName;
-        [Tooltip("˜b‚µŽè‚ÌŠ´î")]
+        [Tooltip("è©±ã—æ‰‹ã®æ„Ÿæƒ…")]
         public EmotionType m_motionType;
-        [Tooltip("˜b‚·“à—e"), TextArea(1,5)]
+        [Tooltip("è©±ã™å†…å®¹"), TextArea(1,5)]
         public string m_text;
     }
 
     [System.Serializable]
     public enum CharacterName
     {
-        ƒVƒ‡[ƒOƒ“,
-        ƒRƒNƒI[,
-        ƒ\[ƒVƒ‡ƒL,
-        ƒ_ƒCƒg[ƒŠƒ‡[,
-        ƒVƒh[ƒVƒƒ,
+        ã‚·ãƒ§ãƒ¼ã‚°ãƒ³,
+        ã‚³ã‚¯ã‚ªãƒ¼,
+        ã‚½ãƒ¼ã‚·ãƒ§ã‚­,
+        ãƒ€ã‚¤ãƒˆãƒ¼ãƒªãƒ§ãƒ¼,
+        ã‚·ãƒ‰ãƒ¼ã‚·ãƒ£,
     }
 
     [System.Serializable]

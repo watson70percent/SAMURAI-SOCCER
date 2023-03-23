@@ -29,6 +29,8 @@ namespace SamuraiSoccer.UI
 
             m_scale = transform.localScale.x;
             m_radius = 50 * m_scale;
+
+              Cursor.lockState = CursorLockMode.Confined;
         }
 
         // Update is called once per frame
@@ -41,6 +43,9 @@ namespace SamuraiSoccer.UI
         {
             if (m_isDragged == true)
             {
+
+
+
                 if (Input.touchCount > 0)
                 {
                     Touch touch = FindFinger();
@@ -54,6 +59,17 @@ namespace SamuraiSoccer.UI
             {
                 Controller(Vector2.zero);
             }
+
+                Vector2 moveVecApril = Vector2.zero;
+                moveVecApril.y = Input.GetAxis("Vertical");  // 前後（カメラ基準）
+                moveVecApril.x = Input.GetAxis("Horizontal"); // 左右（カメラ基準）
+        
+                Controller(5 * moveVecApril);
+
+                if(Input.GetMouseButtonDown(0)){
+                PlayerEvent.AttackOnNext();
+            }
+
         }
 
         /// <summary>

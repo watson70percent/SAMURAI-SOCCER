@@ -26,7 +26,7 @@ namespace SamuraiSoccer.Player
         public Transform flagsParent;
         [SerializeField]
         private float speed=1.0f;
-
+        private float sensitiveRotate = 3.0f;
 
         // Start is called before the first frame update
         void Start()
@@ -65,12 +65,16 @@ namespace SamuraiSoccer.Player
         {
             CalcRealVec(stickDir.x, stickDir.z);
             stickDir = (stickDir != Vector3.zero) ? stickDir : transform.forward;
-            transform.rotation = Quaternion.LookRotation(stickDir);
+            //transform.rotation = Quaternion.LookRotation(stickDir);
+            float rotateX = Input.GetAxis("Mouse X") * sensitiveRotate;
+	        //float rotateY = Input.GetAxis("Mouse Y") * sensitiveRotate;
+	        transform.Rotate(0.0f, rotateX, 0.0f);
 
             CheckBoundy(transform.position, ref velocity);//範囲外に出てかつ外に行こうとしているときは動かさない
             if (velocity.sqrMagnitude > 0.001)
             {
-                transform.Translate(velocity.x * Time.deltaTime*speed, 0, velocity.y * Time.deltaTime * speed, Space.World);
+                transform.Translate(transform.forward * velocity.x * Time.deltaTime*speed - transform.right * velocity.y * Time.deltaTime * speed, Space.World);
+                //transform.Translate(velocity.x * Time.deltaTime*speed, 0, velocity.y * Time.deltaTime * speed, Space.World);
             }
         }
 
