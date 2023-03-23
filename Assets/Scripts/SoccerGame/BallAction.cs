@@ -264,7 +264,7 @@ namespace SamuraiSoccer.SoccerGame
 
                 }
 
-                rb.AddForce(command.m_status.power * dest, ForceMode.Impulse);
+                rb.AddForce(Mathf.Min(10.0f, command.m_status.power) * dest, ForceMode.Impulse);
             }
         }
 
