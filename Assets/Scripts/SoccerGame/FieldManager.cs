@@ -55,6 +55,9 @@ namespace SamuraiSoccer.SoccerGame
         {
             var file_path1 = Path.Combine(Application.streamingAssetsPath, "Field_" + groundNumber + ".json");
             string json = "";
+#if UNITY_WEBGL
+            file_path1 = Path.Combine("https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/master/Assets/StreamingAssets", "Field_" + groundNumber + ".json");
+#endif
             Debug.Log("filepath is " + file_path1);
             if (file_path1.Contains("://"))
             {
