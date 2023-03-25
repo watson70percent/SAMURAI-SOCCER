@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -19,11 +19,11 @@ public class StandardFade : MonoBehaviour
     /// <param name="intervalMilliSec">
     /// フェード全体の秒数
     /// </param>
-    public static async Task FadeIn(TextMeshProUGUI text,int FadeLength)
+    public static async UniTask FadeIn(TextMeshProUGUI text,int FadeLength)
     {
         while (text.color.a<1)
         {
-            await Task.Delay(1000/60);
+            await UniTask.Delay(1000/60);
             var alpha = text.color.a + Mathf.Sin(Mathf.PI/180)/FadeLength ;
             SetColor(text, alpha);
         }
@@ -39,11 +39,11 @@ public class StandardFade : MonoBehaviour
     /// フェード全体の秒数
     /// </param>
     /// <returns></returns>
-    public static async Task FadeOut(TextMeshProUGUI text, int FadeLength)
+    public static async UniTask FadeOut(TextMeshProUGUI text, int FadeLength)
     {
         while (text.color.a > 0)
         {
-            await Task.Delay(1000/60);
+            await UniTask.Delay(1000/60);
             var alpha = text.color.a - Mathf.Sin(Mathf.PI / 180)/FadeLength;
             SetColor(text, alpha);
         }

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
-using System.Threading;
 using SamuraiSoccer.Event;
 using UniRx;
 
@@ -17,9 +16,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
         int m_slideCount = 0; //どれだけスクロールしたかを表す数値
 
         bool m_isDrugging = false;
-
-        //スライダー調整をキャンセルするトークン
-        CancellationTokenSource m_cancellationTokenSource = new CancellationTokenSource();
 
 
         private static ReactiveProperty<Stage> m_selectingStageReactiveProperty = new ReactiveProperty<Stage>(Stage.Japan);
@@ -112,8 +108,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             base.OnBeginDrag(data);
             m_isDrugging = true;
-            //スライダー調整中ならキャンセル
-            if (m_cancellationTokenSource.Token.CanBeCanceled) m_cancellationTokenSource.Cancel();
 
         }
 
@@ -146,7 +140,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         }
 
 
-        async UniTask SliderAdjust( CancellationToken cancellationToken)
+        async UniTask SliderAdjust()
         {
             //スライダーから手を離したら一定時間かけてキリのいい位置へ移動する
             //移動途中にもう一度スライダーに触ったら中断
@@ -155,7 +149,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             //一番近いページを取得
             float targetPos = (Mathf.Round(horizontalNormalizedPosition * (m_pageNumber - 1))) / (m_pageNumber - 1);
 
-            while (!cancellationToken.IsCancellationRequested)
+            while (true)
             {
                 float nowPos = horizontalNormalizedPosition;
                 float max_step = 0.01f;
@@ -179,12 +173,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
             base.OnEndDrag(data);
             m_isDrugging = false;
             m_slideCount = 0;
-
-            
-
-
-            m_cancellationTokenSource = new CancellationTokenSource();
-            SliderAdjust( m_cancellationTokenSource.Token);
 
         }
     }

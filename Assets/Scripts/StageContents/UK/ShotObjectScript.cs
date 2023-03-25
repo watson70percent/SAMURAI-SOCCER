@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UniRx;
@@ -48,7 +46,7 @@ namespace SamuraiSoccer.StageContents.UK
             }).AddTo(this);
             this.OnTriggerEnterAsObservable().Where(x => x.gameObject.tag == "Player")
             .Subscribe(async _ => {
-                if (isActive) await BlowAway(_.gameObject,this.GetCancellationTokenOnDestroy());
+                if (isActive) await BlowAway(_.gameObject);
                 }).AddTo(this);
         }
 
@@ -66,7 +64,7 @@ namespace SamuraiSoccer.StageContents.UK
         }
 
         //スロー演出からのシーン遷移
-        async UniTask BlowAway(GameObject player,CancellationToken cancellationToken = default)
+        async UniTask BlowAway(GameObject player)
         {
             isEnd=true;
             Time.timeScale = 0.2f;
@@ -84,7 +82,7 @@ namespace SamuraiSoccer.StageContents.UK
                 player.transform.position = pos;
                 player.transform.Rotate(rotateVec * velocity * velocity * Time.deltaTime);
                 elapsedTime+=Time.deltaTime;
-                await UniTask.Yield(PlayerLoopTiming.Update,cancellationToken);
+                await UniTask.Yield(PlayerLoopTiming.Update);
             }
             Time.timeScale = 1f;
             SceneManager.LoadScene("Result");

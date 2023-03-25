@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UniRx;
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
-using System.Threading;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -43,8 +42,7 @@ namespace SamuraiSoccer.SoccerGame
         {
 
             PlayerEvent.Attack.Subscribe(x=> {
-                var token = this.GetCancellationTokenOnDestroy();
-                FoulCheck(token).Forget();
+                FoulCheck().Forget();
             }).AddTo(this);
             
             m_meshFilter = GetComponent<MeshFilter>();
@@ -137,9 +135,8 @@ namespace SamuraiSoccer.SoccerGame
         }
 
 
-        async UniTask FoulCheck(CancellationToken cancellationToken = default)
+        async UniTask FoulCheck()
         {
-            cancellationToken.ThrowIfCancellationRequested();
             for(int i = 0; i < 4; i++) // たまにRaycastをすり抜けるので4回くらいチェックを行う
             {
                 bool result = Check();

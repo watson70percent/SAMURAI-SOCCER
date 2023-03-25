@@ -5,7 +5,6 @@ using SamuraiSoccer.Event;
 using UniRx;
 using System;
 using Cysharp.Threading.Tasks;
-using System.Threading;
 
 namespace SamuraiSoccer.StageContents.China
 {
@@ -28,24 +27,18 @@ namespace SamuraiSoccer.StageContents.China
         // Start is called before the first frame update
         void Start()
         {
-            
-            var token = this.GetCancellationTokenOnDestroy();
-            PandaSpawn(token).Forget();
+           
+            PandaSpawn().Forget();
 
         }
 
         //パンダ生成
-        async UniTask PandaSpawn(CancellationToken token)
+        async UniTask PandaSpawn()
         {
             while (true)
             {
                 await UniTask.Delay(TimeSpan.FromSeconds(1));
 
-
-                if (token.IsCancellationRequested)
-                {
-                    break;
-                }
 
                 if (m_isActive.Value)
                 {

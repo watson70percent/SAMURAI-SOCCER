@@ -276,8 +276,12 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
-                if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
-                InGameEvent.GoalOnNext();
+                lock (this)
+                {
+                    m_calledNum++;
+                    if (m_calledNum != 1) return;
+                    InGameEvent.GoalOnNext();
+                }
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
@@ -298,8 +302,12 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
-                if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
-                InGameEvent.GoalOnNext();
+                lock (this)
+                {
+                    m_calledNum++;
+                    if (m_calledNum != 1) return;
+                    InGameEvent.GoalOnNext();
+                }
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {

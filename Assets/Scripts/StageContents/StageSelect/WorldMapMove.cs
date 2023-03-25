@@ -5,7 +5,6 @@ using System.Collections.ObjectModel;
 using UnityEngine;
 
 using Cysharp.Threading.Tasks;
-using System.Threading;
 using System.Linq;
 
 namespace SamuraiSoccer.StageContents.StageSelect
@@ -81,7 +80,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
         /// フローティング状態にする．
         /// </summary>
         /// <param name="token">キャンセル用トークン．</param>
-        public async UniTask ToFloating(CancellationToken token = default)
+        public async UniTask ToFloating()
         {
             m_isFloatingStop = false;
             for (var i = 0; i < 30; i++)
@@ -89,7 +88,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
                 var nextScale = m_worldSize[m_selectState] * (1.0f + i * 0.5f / 30.0f);
                 SetPosition(m_worldPoint[m_selectState], nextScale);
                 await UniTask.Yield(PlayerLoopTiming.FixedUpdate);
-                if (m_isFloatingStop || token.IsCancellationRequested)
+                if (m_isFloatingStop)
                 {
                     return;
                 }
@@ -105,7 +104,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
                 SetPosition(nextPoint, m_worldSize[m_selectState] * 1.5f);
                 await UniTask.Yield();
                 time += Time.deltaTime;
-                if (m_isFloatingStop || token.IsCancellationRequested)
+                if (m_isFloatingStop)
                 {
                     return;
                 }

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UniRx;
 using Cysharp.Threading.Tasks;
-using System.Threading;
 
 namespace SamuraiSoccer.StageContents.Result
 {
@@ -21,45 +20,34 @@ namespace SamuraiSoccer.StageContents.Result
         [SerializeField]
         private int m_loseBGMNum; //敗北時BGM番号
 
-        private CancellationTokenSource m_cancellationTokenSource = new CancellationTokenSource();
-
         // Start is called before the first frame update
         async void Start()
         {
             SceneManager.sceneLoaded += SceneLoaded;
             if (m_rm.ResultState == GameResult.Win)
             {
-                await PlayWinBGM(m_cancellationTokenSource.Token);
+                await PlayWinBGM();
             }
             else
             {
-                await PlayLoseBGM(m_cancellationTokenSource.Token);
+                await PlayLoseBGM();
             }
         }
 
-        private async UniTask PlayWinBGM(CancellationToken cancellationToken)
+        private async UniTask PlayWinBGM()
         {
             await SoundMaster.Instance.PlaySE(m_winSENum);
-            if (cancellationToken.IsCancellationRequested)
-            {
-                return;
-            }
             SoundMaster.Instance.PlayBGM(m_winBGMNum);
         }
 
-        private async UniTask PlayLoseBGM(CancellationToken cancellationToken)
+        private async UniTask PlayLoseBGM()
         {
             await SoundMaster.Instance.PlaySE(m_loseSENum);
-            if (cancellationToken.IsCancellationRequested)
-            {
-                return;
-            }
             SoundMaster.Instance.PlayBGM(m_loseBGMNum);
         }
 
         void SceneLoaded(Scene nextScene, LoadSceneMode mode)
         {
-            m_cancellationTokenSource.Cancel();
             SceneManager.sceneLoaded -= SceneLoaded;
         }
     }

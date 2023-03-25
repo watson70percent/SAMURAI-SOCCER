@@ -36,7 +36,11 @@ namespace SamuraiSoccer.UK
                 if (isBurn)
                 {
                     // •¡”‰ñŒÄ‚Ño‚³‚ê‚é–â‘è‚ğ‰ğŒˆ
-                    if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
+                    lock(this)
+                    {
+                        m_calledNum++;
+                        if (m_calledNum != 1) return;
+                    }
                     InMemoryDataTransitClient<GameResult> gameresultDataTransitClient = new InMemoryDataTransitClient<GameResult>();
                     gameresultDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
                     fire.SetActive(true);

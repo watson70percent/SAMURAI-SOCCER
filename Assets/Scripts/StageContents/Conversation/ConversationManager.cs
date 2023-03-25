@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.UI;
 using System.Linq;
-using System.Threading;
 
 namespace SamuraiSoccer.StageContents.Conversation
 {
@@ -114,8 +112,7 @@ namespace SamuraiSoccer.StageContents.Conversation
                     Debug.LogError("会話しているキャラクター以外が会話の主として選択されているよ！");
                 }
                 Vector3 initPos = m_characterImages[speakerNum].transform.localPosition;
-                CancellationTokenSource cts = new CancellationTokenSource();
-                _ = HopImage(m_characterImages[speakerNum], initPos, cts.Token);
+                _ = HopImage(m_characterImages[speakerNum], initPos);
                 await m_textScroller.ShowText(stageConversationData.m_conversationTexts[i].m_text);
                 m_brushPen.SetActive(true);
                 m_isTouched = false;
@@ -124,7 +121,6 @@ namespace SamuraiSoccer.StageContents.Conversation
                     await UniTask.Yield();
                     m_isTouched = Input.GetMouseButtonDown(0);
                 }
-                cts.Cancel();
                 m_characterImages[speakerNum].transform.localPosition = initPos;
                 m_brushPen.SetActive(false);
             }
@@ -190,15 +186,11 @@ namespace SamuraiSoccer.StageContents.Conversation
             }
         }
 
-        private async UniTask HopImage(Image image, Vector3 initPos, CancellationToken cancellationToken = default)
+        private async UniTask HopImage(Image image, Vector3 initPos)
         {
             float elapsedtime = 0;
             while (true)
             {
-                if (cancellationToken.IsCancellationRequested)
-                {
-                    break;
-                }
                 elapsedtime += Time.deltaTime;
                 image.transform.localPosition = new Vector3(initPos.x, initPos.y + 5 * (1 + Mathf.Sin(3 * Mathf.PI * elapsedtime)), initPos.z);
                 await UniTask.Yield();

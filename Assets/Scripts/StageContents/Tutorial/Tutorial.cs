@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
-using System.Threading;
 using SamuraiSoccer.Event;
 
 namespace Tutorial
@@ -31,10 +30,10 @@ namespace Tutorial
             timerText.fontSize = 45;
             // StartCoroutine(Runner());
             var token = this.GetCancellationTokenOnDestroy();
-            Runner(token).Forget();
+            Runner().Forget();
         }
 
-        async UniTask Runner(CancellationToken cancellation_token = default)
+        async UniTask Runner()
         {
             //テキスト表示1
             await UniTask.Delay(5000);
@@ -67,7 +66,7 @@ namespace Tutorial
             //敵に一定距離近づくまで待機
             while ((samurai.transform.position - destination).sqrMagnitude > 100)
             {
-                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
+                await UniTask.Yield(PlayerLoopTiming.Update);
             }
             InGameEvent.PauseOnNext(true);
             //テキスト表示2
@@ -84,7 +83,7 @@ namespace Tutorial
             //敵を切り倒して行って距離移動するまで待機
             while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
             {
-                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
+                await UniTask.Yield(PlayerLoopTiming.Update);
             }
             InGameEvent.PauseOnNext(true);
             enemyNumber.text = 1.ToString();
@@ -120,7 +119,7 @@ namespace Tutorial
             //イエローカードが出るまで待機
             while (!firstYellowCard.activeSelf)
             {
-                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
+                await UniTask.Yield(PlayerLoopTiming.Update);
             }
             InGameEvent.PauseOnNext(true);
             //テキスト表示3

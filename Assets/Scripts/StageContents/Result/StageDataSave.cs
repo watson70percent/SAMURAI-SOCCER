@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Cysharp.Threading.Tasks;
-using System.Threading;
 using SamuraiSoccer.StageContents.Conversation;
 
 namespace SamuraiSoccer.StageContents.Result
@@ -12,15 +11,15 @@ namespace SamuraiSoccer.StageContents.Result
 
         private void Start()
         {
-            Save(this.GetCancellationTokenOnDestroy()).Forget();
+            Save().Forget();
         }
 
-        async UniTask Save(CancellationToken cancellation_token)
+        async UniTask Save()
         {
             GameResult result;
             while ((result = GetComponent<ResultManager>().ResultState) == GameResult.Undefined)
             {
-                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
+                await UniTask.Yield(PlayerLoopTiming.Update);
             }
             InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
             int clearNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
