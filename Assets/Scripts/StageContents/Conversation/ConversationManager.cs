@@ -6,6 +6,7 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.UI;
 using System.Linq;
+using System;
 
 namespace SamuraiSoccer.StageContents.Conversation
 {
@@ -51,6 +52,9 @@ namespace SamuraiSoccer.StageContents.Conversation
 
         private bool m_isTouched = false; //画面に触れたかどうか
 
+        [NonSerialized]
+        public bool stopReq = false;
+
         // Start is called before the first frame update
         public void Start()
         {
@@ -75,7 +79,27 @@ namespace SamuraiSoccer.StageContents.Conversation
                 return;
             }
             m_conversationContents.SetActive(true);
+            var country = 0;
+            switch (conversationNum) {
+                case 0: case 1: case 2: case 3:
+                    country = 0; break;
+                case 4: case 5: case 6: case 7:
+                    country = 1; break;
+                case 8: case 9: case 10: case 11:
+                    country = 2; break;
+                case 12: case 13: case 14: case 15:
+                    country = 3; break;
+            }
+            var beforeBgm = SoundMaster.Instance.BgmIndex;
+            SoundMaster.Instance.PlayBGM(14 + country);
+            stopReq = true;
             await ConversationProcess(conversationNum);
+            SoundMaster.Instance.StopBGM();
+            stopReq = false;
+            if (beforeBgm >= 0)
+            {
+                SoundMaster.Instance.PlayBGM(beforeBgm);
+            }
             m_conversationContents.SetActive(false);
         }
 

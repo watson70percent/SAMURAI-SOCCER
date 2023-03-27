@@ -54,6 +54,8 @@ namespace SamuraiSoccer
             }
         }
 
+        public int BgmIndex { get => bgmSelectedIndex; }
+
         /// <summary>
         /// SEを流す
         /// </summary>
@@ -76,6 +78,12 @@ namespace SamuraiSoccer
             bgmAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume;
             bgmAudioSource.clip = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound;
             bgmAudioSource.Play();
+        }
+
+        public void StopBGM()
+        {
+            bgmSelectedIndex = -1;
+            bgmAudioSource.Stop();
         }
 
         private void OnDestroy()

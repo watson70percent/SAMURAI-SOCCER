@@ -26,7 +26,7 @@ namespace SamuraiSoccer.Player
         public Transform flagsParent;
         [SerializeField]
         private float speed=1.0f;
-        private float sensitiveRotate = 3.0f;
+        private float sensitiveRotate = 2.0f;
 
         // Start is called before the first frame update
         void Start()
@@ -70,7 +70,7 @@ namespace SamuraiSoccer.Player
 	        //float rotateY = Input.GetAxis("Mouse Y") * sensitiveRotate;
 	        transform.Rotate(0.0f, rotateX, 0.0f);
 
-            CheckBoundy(transform.position, ref velocity);//”ÍˆÍŠO‚Éo‚Ä‚©‚ÂŠO‚És‚±‚¤‚Æ‚µ‚Ä‚¢‚é‚Æ‚«‚Í“®‚©‚³‚È‚¢
+            CheckBoundy(transform.position, ref velocity);//ï¿½ÍˆÍŠOï¿½Éoï¿½Ä‚ï¿½ï¿½ÂŠOï¿½Ésï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Í“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½
             if (velocity.sqrMagnitude > 0.001)
             {
                 transform.Translate(transform.forward * velocity.x * Time.deltaTime*speed - transform.right * velocity.y * Time.deltaTime * speed, Space.World);
@@ -95,12 +95,12 @@ namespace SamuraiSoccer.Player
             }
             else
             {
-                coeff = 1;//‚æ‚­‚í‚©‚ç‚ñ‚¯‚Çnull—p‚É‚­‚Á‚Â‚¯‚½
+                coeff = 1;//ï¿½æ‚­ï¿½í‚©ï¿½ï¿½ñ‚¯‚ï¿½nullï¿½pï¿½É‚ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½
             }
 
             if (velocity.sqrMagnitude > 1 && diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 50)
             {
-                Debug.LogWarning("ŠŠ‚Á‚Ä‚é : " + (diff.x * diff.x / 4 + diff.y * diff.y) + ", " + coeff * coeff * 50 + "," + (x * x * 0.1f + y * y * 0.4f + 3));
+                Debug.LogWarning("ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ : " + (diff.x * diff.x / 4 + diff.y * diff.y) + ", " + coeff * coeff * 50 + "," + (x * x * 0.1f + y * y * 0.4f + 3));
                 diff = coeff / (x * x * 0.1f + y * y * 0.4f + 3) * diff.normalized;
             }
             velocity += diff;
@@ -108,7 +108,7 @@ namespace SamuraiSoccer.Player
 
 
         /// <summary>
-        /// ƒR[ƒi[ƒtƒ‰ƒbƒO‚ÌˆÊ’u‚ğ‹«ŠE‚Éİ’è
+        /// ï¿½Rï¿½[ï¿½iï¿½[ï¿½tï¿½ï¿½ï¿½bï¿½Oï¿½ÌˆÊ’uï¿½ï¿½ï¿½ï¿½ï¿½Eï¿½Éİ’ï¿½
         /// </summary>
         void SetBoundy()
         {

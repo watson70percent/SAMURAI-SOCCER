@@ -24,11 +24,63 @@ namespace SamuraiSoccer.StageContents.StageSelect
         private AudioSource us;
         [SerializeField]
         private AudioSource ru;
+        [SerializeField]
+        private Conversation.ConversationManager cvm;
 
         private Stage current = Stage.World;
         private bool isNotCleared = true;
 
+        private bool isPlaying = false;
+
         void Start()
+        {
+            StartBGM();
+            isPlaying = true;
+        }
+
+        private void Update()
+        {
+            if (cvm.stopReq == isPlaying)
+            {
+                if (isPlaying)
+                {
+                    StopBGM();
+                    isPlaying = false;
+                }
+                else
+                {
+                    StartBGM();
+                    isPlaying = true;
+                }
+            }
+        }
+
+        public void ChangeBGM(Stage next, float delayTime)
+        {
+            if (isNotCleared)
+            {
+                return;
+            }
+
+            switch (current)
+            {
+                case Stage.UK: _ = FadeOut(gb, delayTime); break;
+                case Stage.China: _ = FadeOut(cn, delayTime); break;
+                case Stage.USA: _ = FadeOut(us, delayTime); break;
+                case Stage.Russian: _ = FadeOut(ru, delayTime); break;
+            }
+
+            switch (next)
+            {
+                case Stage.UK: _ = FadeIn(gb, delayTime); break;
+                case Stage.China: _ = FadeIn(cn, delayTime); break;
+                case Stage.USA: _ = FadeIn(us, delayTime); break;
+                case Stage.Russian: _ = FadeIn(ru, delayTime); break;
+            }
+            current = next;
+        }
+
+        public void StartBGM()
         {
             InFileTransmitClient<SaveData> clearedStageNumFileTransitClient = new InFileTransmitClient<SaveData>();
             SaveData data;
@@ -59,33 +111,25 @@ namespace SamuraiSoccer.StageContents.StageSelect
                 cn.Play();
                 us.Play();
                 ru.Play();
+                switch(current)
+                {
+                    case Stage.UK: gb.volume = 1; break;
+                    case Stage.China: cn.volume = 1; break;
+                    case Stage.USA: us.volume = 1; break;
+                    case Stage.Russian: ru.volume = 1; break;
+                }
                 isNotCleared = false;
             }
         }
 
-        public void ChangeBGM(Stage next, float delayTime)
+        public void StopBGM()
         {
-            if (isNotCleared)
-            {
-                return;
-            }
-
-            switch (current)
-            {
-                case Stage.UK: _ = FadeOut(gb, delayTime); break;
-                case Stage.China: _ = FadeOut(cn, delayTime); break;
-                case Stage.USA: _ = FadeOut(us, delayTime); break;
-                case Stage.Russian: _ = FadeOut(ru, delayTime); break;
-            }
-
-            switch (next)
-            {
-                case Stage.UK: _ = FadeIn(gb, delayTime); break;
-                case Stage.China: _ = FadeIn(cn, delayTime); break;
-                case Stage.USA: _ = FadeIn(us, delayTime); break;
-                case Stage.Russian: _ = FadeIn(ru, delayTime); break;
-            }
-            current = next;
+            start.Stop();
+            jp.Stop();
+            gb.Stop();
+            cn.Stop();
+            us.Stop();
+            ru.Stop();
         }
 
         private async UniTask FadeOut(AudioSource source, float delayTime)
