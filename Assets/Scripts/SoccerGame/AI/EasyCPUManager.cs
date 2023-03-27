@@ -72,6 +72,10 @@ namespace SamuraiSoccer.SoccerGame.AI
         {
             get
             {
+                if (opp_stock == null)
+                {
+                    return 0;
+                }
                 return opp.Count + opp_stock.member.Count;
             }
         }
@@ -235,7 +239,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             var file_path1 = Path.Combine(Application.streamingAssetsPath, "our.json");
             string json = "";
 #if UNITY_WEBGL
-            file_path1 = Path.Combine("https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/master/Assets/StreamingAssets", "our.json");
+            file_path1 = Path.Combine("https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/april/Assets/StreamingAssets", "our.json");
 #endif
             Debug.Log("filepath is " + file_path1);
             if (file_path1.Contains("://"))
@@ -252,7 +256,7 @@ namespace SamuraiSoccer.SoccerGame.AI
 
             var file_path2 = Path.Combine(Application.streamingAssetsPath, oppName + ".json");
 #if UNITY_WEBGL
-            file_path2 = Path.Combine("https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/master/Assets/StreamingAssets", oppName + ".json");
+            file_path2 = Path.Combine("https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/april/Assets/StreamingAssets", oppName + ".json");
 #endif
             print(Application.streamingAssetsPath);
             if (file_path2.Contains("://"))

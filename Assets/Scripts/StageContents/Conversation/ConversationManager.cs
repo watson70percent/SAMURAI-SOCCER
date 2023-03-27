@@ -192,6 +192,10 @@ namespace SamuraiSoccer.StageContents.Conversation
             while (true)
             {
                 elapsedtime += Time.deltaTime;
+                if (image.IsDestroyed())
+                {
+                    break;
+                }
                 image.transform.localPosition = new Vector3(initPos.x, initPos.y + 5 * (1 + Mathf.Sin(3 * Mathf.PI * elapsedtime)), initPos.z);
                 await UniTask.Yield();
             }
