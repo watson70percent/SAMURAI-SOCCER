@@ -27,6 +27,8 @@ namespace SamuraiSoccer.StageContents.Russian
         private Vector3 beforePoint = Vector3.zero;
         private float time = 3;
         private bool isPlaying = false;
+        [SerializeField]
+        private Player.PlayerMove pm;
 
         // Start is called before the first frame update
         void Start()
@@ -38,10 +40,11 @@ namespace SamuraiSoccer.StageContents.Russian
             InGameEvent.Play.Subscribe(OnPlaySnow).AddTo(this);
             InGameEvent.Pause.Subscribe(OnPauseSnow).AddTo(this);
             InGameEvent.Reset.Subscribe(OnReset).AddTo(this);
+            PlayerEvent.Attack.Subscribe(TimerReset).AddTo(this);
             InGameEvent.UpdateDuringPlay.Subscribe(OnUpdateDuringPlay).AddTo(this);
         }
 
-        public void TimerReset()
+        public void TimerReset(Unit _)
         {
             time = 3;
         }
@@ -112,7 +115,7 @@ namespace SamuraiSoccer.StageContents.Russian
             var emission = particle.emission;
             emission.rateOverTimeMultiplier = 800 / 3.0f * Mathf.Exp(damage);
             // TODO: 遅くなるスピード反映．
-            //pad.speed = 10 - (damage < 1.6 ? 0 : (damage - 1.6f) * 2);
+            pm.speed = (10 - (damage < 1.6 ? 0 : (damage - 1.6f) * 2)) / 10.0f;
             var volume = damage / 4.8f;
             audioSource.volume = (volume < 0.2) ? 0 : volume;
             SoundMaster.Instance.BGMBolume = (volume < 0.05) ? 1 : 1 - volume;
@@ -122,7 +125,7 @@ namespace SamuraiSoccer.StageContents.Russian
         void Update()
         {
             var pos = snow.position;
-            pos.z = mainCamera.position.z;
+            pos.z = samurai.position.z;
             snow.position = pos;
         }
 

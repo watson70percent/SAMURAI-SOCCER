@@ -25,7 +25,7 @@ namespace SamuraiSoccer.Player
         private Boundy boundy;
         public Transform flagsParent;
         [SerializeField]
-        private float speed=1.0f;
+        public float speed=1.0f;
         private float sensitiveRotate = 2.0f;
 
         // Start is called before the first frame update
@@ -63,7 +63,9 @@ namespace SamuraiSoccer.Player
 
         private void Move(Vector3 stickDir)
         {
-            CalcRealVec(stickDir.x, stickDir.z);
+            var stkx = (stickDir.x > 0 ? stickDir.x : stickDir.x / 2) * transform.forward;
+            var stkz = -stickDir.z * transform.right;
+            CalcRealVec(stkx.x + stkz.x, stkx.z + stkz.z);
             stickDir = (stickDir != Vector3.zero) ? stickDir : transform.forward;
             //transform.rotation = Quaternion.LookRotation(stickDir);
             float rotateX = Input.GetAxis("Mouse X") * sensitiveRotate;
@@ -73,7 +75,7 @@ namespace SamuraiSoccer.Player
             CheckBoundy(transform.position, ref velocity);//�͈͊O�ɏo�Ă��O�ɍs�����Ƃ��Ă���Ƃ��͓������Ȃ�
             if (velocity.sqrMagnitude > 0.001)
             {
-                transform.Translate(transform.forward * velocity.x * Time.deltaTime*speed - transform.right * velocity.y * Time.deltaTime * speed, Space.World);
+                transform.Translate(new Vector3(velocity.x * Time.deltaTime * speed, 0, velocity.y * Time.deltaTime * speed), Space.World);
                 //transform.Translate(velocity.x * Time.deltaTime*speed, 0, velocity.y * Time.deltaTime * speed, Space.World);
             }
         }
@@ -89,7 +91,7 @@ namespace SamuraiSoccer.Player
             }
 
             float coeff = 0;
-            if (field != null)
+            if (field != null && field.info != null)
             {
                 coeff = (1 + c) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - c) / 2 * field.info.GetAccDownCoeff(transform.position);
             }

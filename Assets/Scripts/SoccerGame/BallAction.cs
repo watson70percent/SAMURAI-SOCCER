@@ -54,11 +54,15 @@ namespace SamuraiSoccer.SoccerGame
         {
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
-            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1), Scheduler.MainThreadFixedUpdate).Subscribe(Command);
+            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1), Scheduler.MainThreadFixedUpdate).Subscribe(Command).AddTo(this);
         }
 
         private void Update()
         {
+            if (rb == null || info == null || info.info == null) 
+            {
+                return;
+            }
             rb.angularDrag = info.info.Getdrag(gameObject.transform.position);
             var vel = rb.velocity;
             if (vel.sqrMagnitude < 1)

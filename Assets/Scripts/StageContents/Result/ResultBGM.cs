@@ -20,6 +20,9 @@ namespace SamuraiSoccer.StageContents.Result
         [SerializeField]
         private int m_loseBGMNum; //敗北時BGM番号
 
+        [SerializeField]
+        private Conversation.ConversationManager cvm;
+
         // Start is called before the first frame update
         async void Start()
         {
@@ -37,12 +40,20 @@ namespace SamuraiSoccer.StageContents.Result
         private async UniTask PlayWinBGM()
         {
             await SoundMaster.Instance.PlaySE(m_winSENum);
+            while (cvm.stopReq)
+            {
+                await UniTask.Yield();
+            }
             SoundMaster.Instance.PlayBGM(m_winBGMNum);
         }
 
         private async UniTask PlayLoseBGM()
         {
             await SoundMaster.Instance.PlaySE(m_loseSENum);
+            while (cvm.stopReq)
+            {
+                await UniTask.Yield();
+            }
             SoundMaster.Instance.PlayBGM(m_loseBGMNum);
         }
 

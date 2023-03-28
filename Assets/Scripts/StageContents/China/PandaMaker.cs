@@ -38,7 +38,10 @@ namespace SamuraiSoccer.StageContents.China
             while (true)
             {
                 await UniTask.Delay(TimeSpan.FromSeconds(1));
-
+                if (this == null)
+                {
+                    break;
+                }
 
                 if (m_isActive.Value)
                 {

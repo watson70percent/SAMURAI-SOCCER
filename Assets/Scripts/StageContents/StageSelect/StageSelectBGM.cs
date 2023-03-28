@@ -137,6 +137,10 @@ namespace SamuraiSoccer.StageContents.StageSelect
             var totalTime = 0.0f;
             while (totalTime < delayTime)
             {
+                if (source == null)
+                {
+                    return;
+                }
                 source.volume = (delayTime - totalTime) / delayTime;
                 totalTime += Time.deltaTime;
                 await UniTask.Yield();
@@ -149,6 +153,10 @@ namespace SamuraiSoccer.StageContents.StageSelect
             var totalTime = 0.0f;
             while (totalTime < delayTime)
             {
+                if (source == null)
+                {
+                    return;
+                }
                 source.volume = totalTime / delayTime;
                 totalTime += Time.deltaTime;
                 await UniTask.Yield();
