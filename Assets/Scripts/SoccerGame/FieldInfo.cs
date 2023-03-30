@@ -20,6 +20,14 @@ namespace SamuraiSoccer.SoccerGame
         {
             try
             {
+                if (position.x < 0 || position.x > 59)
+                {
+                    return 1;
+                }
+                if (position.z < 0 || position.z > 99)
+                {
+                    return 1;
+                }
                 return acc_up_coeff[Mathf.FloorToInt(position.x)][Mathf.FloorToInt(position.z)];
             }
             catch (Exception)
@@ -32,6 +40,14 @@ namespace SamuraiSoccer.SoccerGame
         {
             try
             {
+                if (position.x < 0 || position.x > 59)
+                {
+                    return 1;
+                }
+                if (position.z < 0 || position.z > 99)
+                {
+                    return 1;
+                }
                 return acc_down_coeff[Mathf.FloorToInt(position.x)][Mathf.FloorToInt(position.z)];
             }
             catch (Exception)
@@ -44,6 +60,14 @@ namespace SamuraiSoccer.SoccerGame
         {
             try
             {
+                if (position.x < 0 || position.x > 59)
+                {
+                    return 1;
+                }
+                if (position.z < 0 || position.z > 99)
+                {
+                    return 1;
+                }
                 return drag[Mathf.FloorToInt(position.x)][Mathf.FloorToInt(position.z)];
             }
             catch (Exception)
