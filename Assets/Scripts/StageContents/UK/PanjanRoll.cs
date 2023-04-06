@@ -11,10 +11,10 @@ namespace SamuraiSoccer.UK
 {
     public class PanjanRoll : MonoBehaviour
     {
- 
+
         [SerializeField] float moveSpeed;
         [SerializeField] float rotSpeed;
-        bool exploded, playing=true;
+        bool exploded, playing = true;
         [SerializeField] GameObject rot;
         [SerializeField] int partMax;
         [SerializeField] Rigidbody rb;
@@ -29,9 +29,9 @@ namespace SamuraiSoccer.UK
 
         private void Start()
         {
-            InGameEvent.Pause.Subscribe(_ =>
+            InGameEvent.Pause.Subscribe(x =>
             {
-                playing = false;
+                playing = !x;
             }).AddTo(this);
             InGameEvent.Play.Subscribe(_ =>
             {
@@ -44,7 +44,8 @@ namespace SamuraiSoccer.UK
             this.OnTriggerEnterAsObservable()
             .Select(hit => hit.gameObject.tag)
             .Where(tag => tag == "Player" || tag == "Slash")
-            .Subscribe(_ => {
+            .Subscribe(_ =>
+            {
                 Explode();
                 exploded = true;
             }).AddTo(this);
@@ -78,10 +79,9 @@ namespace SamuraiSoccer.UK
             {
                 if (index < 15)
                 {
-                    Instantiate(fire, part.position, Quaternion.identity, part);
                     panjanExplode = part.gameObject.GetComponent<PanjanExplode>();
                     panjanExplode.gameObject.SetActive(true);
-                    panjanExplode.SetFireObject(fire);
+                    panjanExplode.SetFireObject(Instantiate(fire, part.position, Quaternion.identity, part));
                 }
                 Rigidbody rbPart = part.gameObject.GetComponent<Rigidbody>();
                 rbPart.isKinematic = false;
@@ -104,7 +104,8 @@ namespace SamuraiSoccer.UK
             Destroy(gameObject, 4.0f);
         }
 
-        public void SetObjects(GameObject fire,Transform player){
+        public void SetObjects(GameObject fire, Transform player)
+        {
             this.fire = fire;
             this.player = player;
         }

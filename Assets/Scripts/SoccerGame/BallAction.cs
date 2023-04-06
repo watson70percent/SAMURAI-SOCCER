@@ -27,6 +27,8 @@ namespace SamuraiSoccer.SoccerGame
         private Vector3 velocity;
         private Vector3 angularVelocity;
 
+        private int m_calledNum = 0; // ゴールイベントが複数呼び出されたか監視する番号
+
         private static Subject<BallActionCommand> commandStream = new();
 
         [NonSerialized]
@@ -52,7 +54,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
-            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1)).Subscribe(Command);
+            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1), Scheduler.MainThreadFixedUpdate).Subscribe(Command).AddTo(this);
         }
 
         private void Update()
@@ -100,6 +102,8 @@ namespace SamuraiSoccer.SoccerGame
         {
             rb.velocity = velocity;
             rb.angularVelocity = angularVelocity;
+            // ゴールイベントが呼び出された数を初期化
+            m_calledNum = 0;
         }
 
         /// <summary>
@@ -260,7 +264,7 @@ namespace SamuraiSoccer.SoccerGame
 
                 }
 
-                rb.AddForce(command.m_status.power * dest, ForceMode.Impulse);
+                rb.AddForce(Mathf.Min(10.0f, command.m_status.power) * dest, ForceMode.Impulse);
             }
         }
 
@@ -272,6 +276,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
+                if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
                 InGameEvent.GoalOnNext();
             }
             else if (other.gameObject.CompareTag("OutBall"))
@@ -293,6 +298,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
+                if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
                 InGameEvent.GoalOnNext();
             }
             else if (other.gameObject.CompareTag("OutBall"))
