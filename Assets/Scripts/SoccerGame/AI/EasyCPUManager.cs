@@ -268,8 +268,10 @@ namespace SamuraiSoccer.SoccerGame.AI
         /// 選手を殺す。一応瞬時復活もさせる。
         /// </summary>
         /// <param name="dead">死ぬ対象の選手</param>
-        public void Kill(GameObject dead)
+        public async UniTask Kill(GameObject dead)
         {
+            await UniTask.Delay(1000);
+
             bool ally = dead.GetComponent<EasyCPU>().status.ally;
             opp.Remove(dead);
             team.Remove(dead);
@@ -341,6 +343,9 @@ namespace SamuraiSoccer.SoccerGame.AI
             setting.SetMass();
 
             rbs.Add(temp, setting.rb);
+
+            var enemySlashed = temp.GetComponent<EnemySlashed>();
+            enemySlashed.EasyCPUManager = this;
 
             if (status.ally)
             {
