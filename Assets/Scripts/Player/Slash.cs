@@ -4,6 +4,7 @@ using UnityEngine;
 using SamuraiSoccer.SoccerGame.AI;
 using UniRx.Triggers;
 using UniRx;
+using SamuraiSoccer.SoccerGame;
 
 namespace SamuraiSoccer.Player
 {
@@ -45,17 +46,21 @@ namespace SamuraiSoccer.Player
 
         private void OnHit(GameObject obj)
         {
+            //var dir = (obj.transform.position - transform.position).normalized;
+            //obj.GetComponent<ISlashed>().Slashed(dir);
             if (obj.GetComponent<EasyCPU>()?.status.ally == false) //敵にあたったとき
             {
-                var dir = obj.transform.position - transform.position;
-                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                var dir = (obj.transform.position - transform.position).normalized;
+                obj.GetComponent<ISlashed>().Slashed(dir);
+                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000 / 60, ForceMode.Impulse);
                 GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
-                obj.GetComponent<EasyCPU>().Attacked();
+                var easyCPU =  obj.GetComponent<EasyCPU>();
+                easyCPU.Attacked();
             }
             else if (obj.gameObject.tag == "TutorialEnemy") // チュートリアル用
             {
                 var dir = obj.transform.position - transform.position;
-                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
+                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000 / 60, ForceMode.Impulse);
                 GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
             }
             else if(obj.gameObject.tag == "Ball" && m_isAttackBall) // ボールに当たったとき
@@ -63,12 +68,9 @@ namespace SamuraiSoccer.Player
                 var dir = obj.transform.position - transform.position;
                 dir = dir.normalized;
                 dir = new Vector3(dir.x,0.3f,dir.z);
-                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-                m_isAttackBall = false;
-
-                
+                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000 / 60, ForceMode.Impulse);
+                m_isAttackBall = false;            
             }
         }
     }
-
 }
