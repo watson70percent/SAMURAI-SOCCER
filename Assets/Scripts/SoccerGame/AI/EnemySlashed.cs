@@ -6,21 +6,20 @@ namespace SamuraiSoccer.SoccerGame.AI
 {
     public class EnemySlashed : MonoBehaviour, ISlashed
     {
-        [SerializeField]
-        private EasyCPU m_easyCPU;
+        public EasyCPU m_easyCPU;
 
-        [SerializeField]
-        private Rigidbody m_rigidbody;
+        public Rigidbody m_rigidbody;
 
         public EasyCPUManager EasyCPUManager { get; set; }
 
-        private bool m_isKilled = false;
+        [HideInInspector]
+        public bool m_isKilled = false;
 
         /// <summary>
         /// a‚ç‚ê‚½‚Æ‚«‚Ìˆ—
         /// </summary>
         /// <param name="dir">”ò‚ñ‚Å‚¢‚­•ûŒü</param>
-        public void Slashed(Vector3 dir)
+        public virtual void Slashed(Vector3 dir)
         {
             m_rigidbody.AddForce(dir * 1000, ForceMode.Impulse);
             m_easyCPU.Attacked();

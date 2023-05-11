@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1770116004288236278}
   - component: {fileID: 1770116004288236265}
   - component: {fileID: 1892309049530929932}
+  - component: {fileID: -6338713226089352320}
   m_Layer: 0
   m_Name: opponent_Tutorial
   m_TagString: TutorialEnemy
@@ -30,6 +31,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 30, y: 0, z: 49}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6611704640616481911}
   m_Father: {fileID: 0}
@@ -54,10 +56,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,6 +86,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &1770116004288236265
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -112,6 +117,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-6338713226089352320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770116004288236264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145dfd991db8f44aaea8bda01b501db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rigidbody: {fileID: 1892309049530929932}
 --- !u!1001 &2214586402914889581
 PrefabInstance:
   m_ObjectHideFlags: 0
