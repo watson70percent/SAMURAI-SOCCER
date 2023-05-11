@@ -54,6 +54,17 @@ namespace SamuraiSoccer.Event
             m_stickInputSubject.OnNext(dir);
         }
 
-
+        private static ReactiveProperty<bool> m_isInChargeAttack = new ReactiveProperty<bool>(false);
+        /// <summary>
+        /// ÇΩÇﬂçUåÇíÜÇ©Ç«Ç§Ç©
+        /// </summary>
+        public static IReadOnlyReactiveProperty<bool> IsInChargeAttack
+        {
+            get { return m_isInChargeAttack; }
+        }
+        public static void SetIsInChargeAtack(bool flag)
+        {
+            m_isInChargeAttack.Value = flag;
+        }
     }
 }

@@ -5,6 +5,7 @@ using UniRx;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.UI;
 using SamuraiSoccer.SoccerGame;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.Player
 {
@@ -15,6 +16,7 @@ namespace SamuraiSoccer.Player
         {
             StandBy,
             Playing,
+            ChargeAttack,
             Idle
         }
         State m_state = State.Idle;
@@ -26,6 +28,8 @@ namespace SamuraiSoccer.Player
         public Transform flagsParent;
         [SerializeField]
         private float speed=1.0f;
+        [SerializeField]
+        GameObject slashTrail;
 
 
         // Start is called before the first frame update
@@ -44,7 +48,13 @@ namespace SamuraiSoccer.Player
             PlayerEvent.StickInput.Subscribe(
                     stickDir => { ReceiveStick(stickDir); }
                 ).AddTo(this);
+            PlayerEvent.IsInChargeAttack.Subscribe(
+                    x => { if (x) { ChargeAttack(); } }
+                ).AddTo(this);
         }
+
+
+        
 
 
         void ReceiveStick(Vector3 stickDir)
@@ -72,6 +82,7 @@ namespace SamuraiSoccer.Player
             {
                 transform.Translate(velocity.x * Time.deltaTime*speed, 0, velocity.y * Time.deltaTime * speed, Space.World);
             }
+            velocity *= 0.99f;
         }
 
         private void CalcRealVec(float x, float y)
@@ -162,6 +173,20 @@ namespace SamuraiSoccer.Player
             }
         }
 
-
+        /// <summary>
+        /// ÇΩÇﬂçUåÇ
+        /// </summary>
+        async UniTask ChargeAttack()
+        {
+            slashTrail.SetActive(true);
+            Vector3 VEC = new Vector3(0, 0, 1f);
+            for(int i = 0; i < 10; i++)
+            {
+                transform.position = transform.position + VEC;
+                await UniTask.Yield();
+            }
+            PlayerEvent.SetIsInChargeAtack(false);
+            slashTrail.SetActive(false);
+        }
     }
 }
