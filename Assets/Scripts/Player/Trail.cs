@@ -4,6 +4,7 @@ using UnityEngine;
 using SamuraiSoccer.SoccerGame.AI;
 using UniRx.Triggers;
 using UniRx;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.Player
 {
@@ -15,6 +16,7 @@ namespace SamuraiSoccer.Player
         void Start()
         {
             this.OnTriggerEnterAsObservable().Subscribe(hit => OnHit(hit.gameObject));
+            Vanish();
         }
 
         // Update is called once per frame
@@ -25,6 +27,8 @@ namespace SamuraiSoccer.Player
 
         private void OnHit(GameObject obj)
         {
+
+            
             if (obj.GetComponent<EasyCPU>()?.status.ally == false) //“G‚É‚ ‚½‚Á‚½‚Æ‚«
             {
                 var dir = obj.transform.position - transform.position;
@@ -47,6 +51,12 @@ namespace SamuraiSoccer.Player
 
 
             }
+        }
+
+        async UniTask Vanish()
+        {
+            await UniTask.Delay(1000);
+            Destroy(gameObject);
         }
     }
 }

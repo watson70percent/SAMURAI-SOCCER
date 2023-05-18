@@ -11,6 +11,13 @@ namespace SamuraiSoccer.Event
     /// </summary>
     public static class PlayerEvent
     {
+
+        private static ReactiveProperty<Vector3> m_stickDir = new ReactiveProperty<Vector3>(Vector3.zero);
+        public static IReadOnlyReactiveProperty<Vector3> StickDir
+        {
+            get { return m_stickDir; }
+        }
+
         private static Subject<Unit> m_attackSubject = new Subject<Unit>();
         private static IObservable<Unit> m_attackShareObservable = m_attackSubject.Share();
 
@@ -51,6 +58,7 @@ namespace SamuraiSoccer.Event
 
         public static void StickControllerOnNext(Vector3 dir)
         {
+            m_stickDir.Value = dir;
             m_stickInputSubject.OnNext(dir);
         }
 

@@ -30,11 +30,15 @@ namespace SamuraiSoccer.Player
         private float speed=1.0f;
         [SerializeField]
         GameObject slashTrail;
+        Rigidbody rigidbody;
+        [SerializeField]
+        GameObject slashCollider;
 
 
         // Start is called before the first frame update
         void Start()
         {
+            rigidbody=GetComponent<Rigidbody>();
             SetBoundy();
             velocity = Vector3.zero;
 
@@ -179,10 +183,16 @@ namespace SamuraiSoccer.Player
         async UniTask ChargeAttack()
         {
             slashTrail.SetActive(true);
-            Vector3 VEC = new Vector3(0, 0, 1f);
+            Vector3 VEC = PlayerEvent.StickDir.Value.normalized;
+            float magnitude = PlayerEvent.StickDir.Value.magnitude;
             for(int i = 0; i < 10; i++)
             {
-                transform.position = transform.position + VEC;
+                for(int j = 0; j < magnitude; j++)
+                {
+                    transform.position = transform.position + VEC;
+                    Instantiate(slashCollider, transform.position, transform.rotation);
+                }
+
                 await UniTask.Yield();
             }
             PlayerEvent.SetIsInChargeAtack(false);
