@@ -183,14 +183,27 @@ namespace SamuraiSoccer.Player
         async UniTask ChargeAttack()
         {
             slashTrail.SetActive(true);
-            Vector3 VEC = PlayerEvent.StickDir.Value.normalized;
+            Vector3 vec = PlayerEvent.StickDir.Value.normalized;
             float magnitude = PlayerEvent.StickDir.Value.magnitude;
             for(int i = 0; i < 10; i++)
             {
-                for(int j = 0; j < magnitude; j++)
+                for (int j = 0; j < magnitude; j++)
                 {
-                    transform.position = transform.position + VEC;
-                    Instantiate(slashCollider, transform.position, transform.rotation);
+                    Vector3 tempNewPos = transform.position + vec;
+                    bool isSlash = false;
+                    if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax) {
+                        isSlash = true;
+                        transform.position = new Vector3(transform.position.x + vec.x, transform.position.y, transform.position.z);
+                    }
+                    if(tempNewPos.z > FieldBoundary.ZMin && tempNewPos.z < FieldBoundary.ZMax)
+                    {
+                        isSlash = true;
+                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + vec.z);
+                    }
+                    if (isSlash)
+                    {
+                        Instantiate(slashCollider, transform.position, transform.rotation);
+                    }
                 }
 
                 await UniTask.Yield();
