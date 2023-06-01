@@ -17,7 +17,6 @@ namespace Tutorial
         public GameObject enemy; //召喚する敵
         public Text tutorialText; //チュートリアルで流れるテキスト
         public Text enemyNumber; //残り敵数(手動で変更)
-        public Text timerText; //残り時間表示テキスト
         public Animator textAnimator; //テキストを動かして画面外までスライドするアニメーター
         public Animator arrowAnimator; //チュートリアル中に表示される矢印用のアニメーター
         public CinemachineVirtualCamera spotCamera; //何か焦点を当てるためのカメラ
@@ -27,9 +26,6 @@ namespace Tutorial
         // Start is called before the first frame update
         void Start()
         {
-            timerText.text = "∞";
-            timerText.fontSize = 45;
-            // StartCoroutine(Runner());
             var token = this.GetCancellationTokenOnDestroy();
             Runner(token).Forget();
         }
@@ -58,12 +54,11 @@ namespace Tutorial
             //カメラをもとに戻す
             spotCamera.Priority = 9;
             samuraiCamera.Priority = 11;
-            await UniTask.Delay(3000);
+            InGameEvent.PlayOnNext();
             textAnimator.SetTrigger("SlideText");
             await UniTask.Delay(2000);
             //テキストを非表示に
             tutorialText.text = "";
-            InGameEvent.PlayOnNext();
             //敵に一定距離近づくまで待機
             while ((samurai.transform.position - destination).sqrMagnitude > 100)
             {
@@ -76,11 +71,11 @@ namespace Tutorial
             await UniTask.Delay(3000);
             tutorialText.text = "試しに目の前の人をひとおもいに斬れ";
             await UniTask.Delay(3000);
+            InGameEvent.PauseOnNext(false);
             textAnimator.SetTrigger("SlideText");
             await UniTask.Delay(2000);
             //テキストを非表示に
             tutorialText.text = "";
-            InGameEvent.PlayOnNext();
             //敵を切り倒して行って距離移動するまで待機
             while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
             {
@@ -98,25 +93,25 @@ namespace Tutorial
             enemyPrefab = Instantiate(enemy, destination, Quaternion.identity);
             exclamationMark.transform.position = destination + new Vector3(0f, 3f, 0f);
             exclamationMark.SetActive(true);
-            await UniTask.Delay(1000);
             //カメラを生成された選手に向ける
             spotCamera.Follow = enemyPrefab.transform;
             spotCamera.LookAt = enemyPrefab.transform;
+            await UniTask.Delay(1000);
             spotCamera.Priority = 11;
-            samuraiCamera.Priority = 9;
+            samuraiCamera.Priority = 9;          
             await UniTask.Delay(3000);
             tutorialText.text = "次はあっちのやつを斬れ";
             await UniTask.Delay(3000);
             exclamationMark.SetActive(false);
             //カメラをもとに戻す
-            spotCamera.Priority = 9;
             samuraiCamera.Priority = 11;
+            spotCamera.Priority = 9;
             await UniTask.Delay(3000);
+            InGameEvent.PauseOnNext(false);
             textAnimator.SetTrigger("SlideText");
-            await UniTask.Delay(2000);
             //テキストを非表示に
+            await UniTask.Delay(2000);
             tutorialText.text = "";
-            InGameEvent.PlayOnNext();
             //イエローカードが出るまで待機
             while (!firstYellowCard.activeSelf)
             {
