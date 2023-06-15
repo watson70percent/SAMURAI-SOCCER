@@ -20,6 +20,7 @@ namespace SamuraiSoccer.Player
         void Attack()
         {
             Instantiate(slash, transform.position, transform.rotation);
+            PlayerEvent.FaulCheckOnNext();//審判によるファールチェック
         }
     }
 }

@@ -36,6 +36,8 @@ namespace SamuraiSoccer.Event
                 InGameEvent.Finish.Select(_ => false)
             ).ToReactiveProperty<bool>(false);
 
+
+
         /// <summary>
         /// Attackのイベントを発行
         /// </summary>
@@ -43,6 +45,20 @@ namespace SamuraiSoccer.Event
         {
             if(m_isEnableAttack.Value) m_attackSubject.OnNext(Unit.Default);
         }
+
+        //審判がファールチェックするトリガー
+        private static Subject<Unit> m_faulCheckSubject = new Subject<Unit>();
+        private static IObservable<Unit> m_faulCheckShareObservable = m_faulCheckSubject.Share();
+
+        public static IObservable<Unit> FaulCheck
+        {
+            get { return m_faulCheckShareObservable; }
+        }
+        public static void FaulCheckOnNext()
+        {
+            m_faulCheckSubject.OnNext(Unit.Default);
+        }
+
 
 
         private static Subject<Vector3> m_stickInputSubject = new Subject<Vector3>();
@@ -73,6 +89,22 @@ namespace SamuraiSoccer.Event
         public static void SetIsInChargeAtack(bool flag)
         {
             m_isInChargeAttack.Value = flag;
+        }
+
+
+
+
+        private static ReactiveProperty<bool> m_isEnableChargeAttack = new ReactiveProperty<bool>(false);
+        /// <summary>
+        /// ため攻撃が可能かどうか
+        /// </summary>
+        public static IReadOnlyReactiveProperty<bool> IsEnableChargeAttack
+        {
+            get { return m_isEnableChargeAttack; }
+        }
+        public static void SetIsEnableChargeAtack(bool flag)
+        {
+            m_isEnableChargeAttack.Value = flag;
         }
     }
 }

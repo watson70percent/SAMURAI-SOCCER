@@ -182,32 +182,35 @@ namespace SamuraiSoccer.Player
         /// </summary>
         async UniTask ChargeAttack()
         {
+            SoundMaster.Instance.PlaySE(13);
             slashTrail.SetActive(true);
-            Vector3 vec = PlayerEvent.StickDir.Value.normalized;
-            float magnitude = PlayerEvent.StickDir.Value.magnitude;
-            for(int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < magnitude; j++)
-                {
-                    Vector3 tempNewPos = transform.position + vec;
-                    bool isSlash = false;
-                    if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax) {
-                        isSlash = true;
-                        transform.position = new Vector3(transform.position.x + vec.x, transform.position.y, transform.position.z);
-                    }
-                    if(tempNewPos.z > FieldBoundary.ZMin && tempNewPos.z < FieldBoundary.ZMax)
-                    {
-                        isSlash = true;
-                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + vec.z);
-                    }
-                    if (isSlash)
-                    {
-                        Instantiate(slashCollider, transform.position, transform.rotation);
-                    }
-                }
+            Vector3 step = PlayerEvent.StickDir.Value.normalized;
+            Vector3 vec = PlayerEvent.StickDir.Value.normalized*6;
+            Vector3 destination = transform.position + vec;
 
+            for(int i=0;i< Mathf.Floor(vec.magnitude / step.magnitude); i++)
+            {
+
+                Vector3 tempNewPos = transform.position + vec;
+                bool isSlash = false;
+                if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax)
+                {
+                    isSlash = true;
+                    transform.position = new Vector3(transform.position.x + vec.x, transform.position.y, transform.position.z);
+                }
+                if (tempNewPos.z > FieldBoundary.ZMin && tempNewPos.z < FieldBoundary.ZMax)
+                {
+                    isSlash = true;
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + vec.z);
+                }
+                if (isSlash)
+                {
+                    Instantiate(slashCollider, transform.position, transform.rotation);
+                }
                 await UniTask.Yield();
             }
+            
+            PlayerEvent.FaulCheckOnNext(); //斬撃の最後に審判のファールチェック
             PlayerEvent.SetIsInChargeAtack(false);
             slashTrail.SetActive(false);
         }

@@ -42,7 +42,7 @@ namespace SamuraiSoccer.SoccerGame
         void Start()
         {
 
-            PlayerEvent.Attack.Subscribe(x=> {
+            PlayerEvent.FaulCheck.Subscribe(x=> {
                 var token = this.GetCancellationTokenOnDestroy();
                 FoulCheck(token).Forget();
             }).AddTo(this);
