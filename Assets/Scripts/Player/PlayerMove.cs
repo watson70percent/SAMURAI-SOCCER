@@ -183,17 +183,17 @@ namespace SamuraiSoccer.Player
         async UniTask ChargeAttack()
         {
             SoundMaster.Instance.PlaySE(13);
-            slashTrail.SetActive(true);
+            slashTrail.SetActive(true); //ŽaŒ‚‚ÌŽc‘œ‚ð•\Ž¦
             Vector3 step = PlayerEvent.StickDir.Value.normalized;
             Vector3 vec = PlayerEvent.StickDir.Value.normalized*6;
             Vector3 destination = transform.position + vec;
 
-            for(int i=0;i< Mathf.Floor(vec.magnitude / step.magnitude); i++)
+            for(int i=0;i< Mathf.Floor(vec.magnitude / step.magnitude); i++) //×‚©‚­i‚ñ‚ÅslashCollider‚ðŽT‚¢‚Ä‚¢‚­
             {
 
                 Vector3 tempNewPos = transform.position + vec;
                 bool isSlash = false;
-                if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax)
+                if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax)//•Ç‚É‚Ô‚Â‚©‚ç‚È‚¯‚ê‚ÎˆÚ“®‚·‚é
                 {
                     isSlash = true;
                     transform.position = new Vector3(transform.position.x + vec.x, transform.position.y, transform.position.z);
