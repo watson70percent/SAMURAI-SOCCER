@@ -5,6 +5,7 @@ using UniRx;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.UI;
 using SamuraiSoccer.SoccerGame;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.Player
 {
@@ -15,6 +16,7 @@ namespace SamuraiSoccer.Player
         {
             StandBy,
             Playing,
+            ChargeAttack,
             Idle
         }
         State m_state = State.Idle;
@@ -26,11 +28,17 @@ namespace SamuraiSoccer.Player
         public Transform flagsParent;
         [SerializeField]
         private float speed=1.0f;
+        [SerializeField]
+        GameObject slashTrail;
+        Rigidbody rigidbody;
+        [SerializeField]
+        GameObject slashCollider;
 
 
         // Start is called before the first frame update
         void Start()
         {
+            rigidbody=GetComponent<Rigidbody>();
             SetBoundy();
             velocity = Vector3.zero;
 
@@ -44,7 +52,13 @@ namespace SamuraiSoccer.Player
             PlayerEvent.StickInput.Subscribe(
                     stickDir => { ReceiveStick(stickDir); }
                 ).AddTo(this);
+            PlayerEvent.IsInChargeAttack.Subscribe(
+                    x => { if (x) { ChargeAttack(); } }
+                ).AddTo(this);
         }
+
+
+        
 
 
         void ReceiveStick(Vector3 stickDir)
@@ -72,6 +86,7 @@ namespace SamuraiSoccer.Player
             {
                 transform.Translate(velocity.x * Time.deltaTime*speed, 0, velocity.y * Time.deltaTime * speed, Space.World);
             }
+            velocity *= 0.99f;
         }
 
         private void CalcRealVec(float x, float y)
@@ -162,6 +177,42 @@ namespace SamuraiSoccer.Player
             }
         }
 
+        /// <summary>
+        /// ため攻撃
+        /// </summary>
+        async UniTask ChargeAttack()
+        {
+            SoundMaster.Instance.PlaySE(13);
+            slashTrail.SetActive(true); //斬撃の残像を表示
+            Vector3 step = PlayerEvent.StickDir.Value.normalized;
+            Vector3 vec = PlayerEvent.StickDir.Value.normalized*6;
+            Vector3 destination = transform.position + vec;
 
+            for(int i=0;i< Mathf.Floor(vec.magnitude / step.magnitude); i++) //細かく進んでslashColliderを撒いていく
+            {
+
+                Vector3 tempNewPos = transform.position + vec;
+                bool isSlash = false;
+                if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax)//壁にぶつからなければ移動する
+                {
+                    isSlash = true;
+                    transform.position = new Vector3(transform.position.x + vec.x, transform.position.y, transform.position.z);
+                }
+                if (tempNewPos.z > FieldBoundary.ZMin && tempNewPos.z < FieldBoundary.ZMax)
+                {
+                    isSlash = true;
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + vec.z);
+                }
+                if (isSlash)
+                {
+                    Instantiate(slashCollider, transform.position, transform.rotation);
+                }
+                await UniTask.Yield();
+            }
+            
+            PlayerEvent.FaulCheckOnNext(); //斬撃の最後に審判のファールチェック
+            PlayerEvent.SetIsInChargeAtack(false);
+            slashTrail.SetActive(false);
+        }
     }
 }
