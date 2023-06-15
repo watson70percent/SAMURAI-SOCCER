@@ -11,7 +11,7 @@ namespace SamuraiSoccer.Player
     {
         [SerializeField]
         GameObject aura;
-        // Start is called before the first frame update
+        // ‚½‚ßUŒ‚‚ª‚Å‚«‚é‚Æ‚«‚É‚ÍƒI[ƒ‰‚ð”­‚·‚é‚æ‚¤‚É
         void Start()
         {
             PlayerEvent.IsEnableChargeAttack.Subscribe(isEnableAttack => { aura.SetActive(isEnableAttack); });

@@ -18,7 +18,7 @@ namespace SamuraiSoccer.UI
                 m_pushTime += Time.deltaTime;
                 if (m_pushTime > CHARGETIME)
                 {
-                    PlayerEvent.SetIsEnableChargeAtack(true);
+                    PlayerEvent.SetIsEnableChargeAtack(true); //—­‚ßŽa‚è‰Â”\ReactiveProperty
                 }
             }
         }
