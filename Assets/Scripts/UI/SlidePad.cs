@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,8 +29,7 @@ namespace SamuraiSoccer.UI
 
             m_scale = transform.localScale.x;
             m_radius = 50 * m_scale;
-
-              Cursor.lockState = CursorLockMode.Confined;
+            // Cursor.lockState = CursorLockMode.Confined;
         }
 
         // Update is called once per frame
@@ -41,6 +40,7 @@ namespace SamuraiSoccer.UI
 
         void PlayingState()
         {
+            /*
             if (m_isDragged == true)
             {
 
@@ -51,36 +51,37 @@ namespace SamuraiSoccer.UI
                     Touch touch = FindFinger();
                     Vector2 dir = touch.position - m_slideStartPosition;
                     if (dir.magnitude > m_radius) { dir = dir.normalized * m_radius; }
-                    Controller(5 / m_radius * dir); //移動イベント発行
-                    m_joyrect.localPosition = m_joyStartPosition + dir / m_scale; //コントローラのスティックを移動
+                    Controller(5 / m_radius * dir); //????C?x???g???s
+                    m_joyrect.localPosition = m_joyStartPosition + dir / m_scale; //?R???g???[????X?e?B?b?N?????
                 }
             }
             else
             {
                 Controller(Vector2.zero);
-            }
+            }*/
 
-                Vector2 moveVecApril = Vector2.zero;
-                moveVecApril.y = Input.GetAxis("Vertical");  // 前後（カメラ基準）
-                moveVecApril.x = Input.GetAxis("Horizontal"); // 左右（カメラ基準）
-        
-                Controller(5 * moveVecApril);
+            Vector2 moveVecApril = Vector2.zero;
+            moveVecApril.y = Input.GetAxis("Vertical");  // ?O??i?J???????j
+            moveVecApril.x = Input.GetAxis("Horizontal"); // ???E?i?J???????j
 
-                if(Input.GetMouseButtonDown(0)){
+            Controller(5 * moveVecApril);
+
+            if (Input.GetMouseButtonDown(0))
+            {
                 PlayerEvent.AttackOnNext();
             }
 
         }
 
         /// <summary>
-        /// おそらくEventTriggerで呼びだす
-        /// 最初のタッチの検出
+        /// ?????�YEventTrigger???��???
+        /// ?????^?b?`????o
         /// </summary>
         /// <param name="baseEventData"></param>
         public void DragStart(BaseEventData baseEventData)
         {
-            PointerEventData pointerEventData = baseEventData as PointerEventData; //多分タッチ情報
-            m_fingerID = pointerEventData.pointerId; //次フレーム以降でのタッチ識別に用いる
+            PointerEventData pointerEventData = baseEventData as PointerEventData; //?????^?b?`???
+            m_fingerID = pointerEventData.pointerId; //???t???[????~???^?b?`?????p????
             m_isDragged = true;
             try
             {
@@ -89,13 +90,13 @@ namespace SamuraiSoccer.UI
             }
             catch
             {
-                m_isDragged = false; //問題が生じたらタッチ無効
+                m_isDragged = false; //??�b????????^?b?`????
             }
         }
 
         /// <summary>
-        /// おそらくEventTriggerで呼びだす
-        /// タッチ終了検出
+        /// ?????�YEventTrigger???��???
+        /// ?^?b?`?I?????o
         /// </summary>
         public void DragEnd()
         {
@@ -110,15 +111,15 @@ namespace SamuraiSoccer.UI
         }
 
         /// <summary>
-        /// タッチ情報から前フレームと同じタッチがあればそれを返す
-        /// 初回タッチは別のところで登録するのでreturn new Touch();は呼ばれない
+        /// ?^?b?`????O?t???[????????^?b?`?????????????
+        /// ????^?b?`?????????o?^??????return new Touch();???????
         /// </summary>
         /// <returns></returns>
         Touch FindFinger()
         {
             foreach (Touch t in Input.touches)
             {
-                if (t.fingerId == m_fingerID) { return t; } 
+                if (t.fingerId == m_fingerID) { return t; }
             }
             return new Touch();
         }
