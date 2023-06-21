@@ -7,6 +7,7 @@ using SamuraiSoccer.Event;
 using SamuraiSoccer.UI;
 using SamuraiSoccer.SoccerGame;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.Player
 {
@@ -17,6 +18,7 @@ namespace SamuraiSoccer.Player
         {
             StandBy,
             Playing,
+            ChargeAttack,
             Idle
         }
         State m_state = State.Idle;
@@ -28,6 +30,11 @@ namespace SamuraiSoccer.Player
         public Transform flagsParent;
         [SerializeField]
         private float speed=1.0f;
+        [SerializeField]
+        GameObject slashTrail;
+        Rigidbody rigidbody;
+        [SerializeField]
+        GameObject slashCollider;
         [SerializeField]
         private float speedUpCoeff = 1.5f;
         [SerializeField]
@@ -43,6 +50,8 @@ namespace SamuraiSoccer.Player
         void Start()
         {
             boundy = SetBoundy();
+            rigidbody=GetComponent<Rigidbody>();
+            SetBoundy();
             velocity = Vector3.zero;
 
             InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
@@ -54,6 +63,9 @@ namespace SamuraiSoccer.Player
 
             PlayerEvent.StickInput.Subscribe(
                     stickDir => { ReceiveStick(stickDir); }
+                ).AddTo(this);
+            PlayerEvent.IsInChargeAttack.Subscribe(
+                    x => { if (x) { ChargeAttack(); } }
                 ).AddTo(this);
         }
 
@@ -80,6 +92,7 @@ namespace SamuraiSoccer.Player
             {
                 transform.Translate(velocity.x * Time.deltaTime * currentSpeed, 0, velocity.y * Time.deltaTime * currentSpeed, Space.World);
             }
+            velocity *= 0.99f;
         }
 
         private Vector2 CalcRealVec(float x, float y, Vector2 currentVelocity)
@@ -155,6 +168,44 @@ namespace SamuraiSoccer.Player
         {
             var elapsed = DateTime.Now - lastSlash;
             currentSpeed = speed * 1 / (1 + Mathf.Exp((5 * wakeUpT - 10 * elapsed.Seconds) / wakeUpT));
+        }
+
+        /// <summary>
+        /// ÇΩÇﬂçUåÇ
+        /// </summary>
+        async UniTask ChargeAttack()
+        {
+            SoundMaster.Instance.PlaySE(13);
+            slashTrail.SetActive(true); //éaåÇÇÃécëúÇï\é¶
+            Vector3 step = PlayerEvent.StickDir.Value.normalized;
+            Vector3 vec = PlayerEvent.StickDir.Value.normalized*6;
+            Vector3 destination = transform.position + vec;
+
+            for(int i=0;i< Mathf.Floor(vec.magnitude / step.magnitude); i++) //ç◊Ç©Ç≠êiÇÒÇ≈slashColliderÇéTÇ¢ÇƒÇ¢Ç≠
+            {
+
+                Vector3 tempNewPos = transform.position + vec;
+                bool isSlash = false;
+                if (tempNewPos.x > FieldBoundary.XMin && tempNewPos.x < FieldBoundary.XMax)//ï«Ç…Ç‘Ç¬Ç©ÇÁÇ»ÇØÇÍÇŒà⁄ìÆÇ∑ÇÈ
+                {
+                    isSlash = true;
+                    transform.position = new Vector3(transform.position.x + vec.x, transform.position.y, transform.position.z);
+                }
+                if (tempNewPos.z > FieldBoundary.ZMin && tempNewPos.z < FieldBoundary.ZMax)
+                {
+                    isSlash = true;
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + vec.z);
+                }
+                if (isSlash)
+                {
+                    Instantiate(slashCollider, transform.position, transform.rotation);
+                }
+                await UniTask.Yield();
+            }
+            
+            PlayerEvent.FaulCheckOnNext(); //éaåÇÇÃç≈å„Ç…êRîªÇÃÉtÉ@Å[ÉãÉ`ÉFÉbÉN
+            PlayerEvent.SetIsInChargeAtack(false);
+            slashTrail.SetActive(false);
         }
     }
 }

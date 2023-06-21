@@ -345,8 +345,11 @@ namespace SamuraiSoccer.SoccerGame.AI
             rbs.Add(temp, setting.rb);
 
             var enemySlashed = temp.GetComponent<EnemySlashed>();
-            enemySlashed.EasyCPUManager = this;
-
+            if (enemySlashed != null)
+            {
+                enemySlashed.EasyCPUManager = this;
+            }
+            
             if (status.ally)
             {
                 team.Add(temp);
