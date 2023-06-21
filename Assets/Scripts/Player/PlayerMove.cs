@@ -29,7 +29,7 @@ namespace SamuraiSoccer.Player
         private Rect boundy;
         public Transform flagsParent;
         [SerializeField]
-        private float speed=1.0f;
+        private float speed = 1.0f;
         [SerializeField]
         GameObject slashTrail;
         Rigidbody rigidbody;
@@ -38,9 +38,9 @@ namespace SamuraiSoccer.Player
         [SerializeField]
         private float speedUpCoeff = 1.5f;
         [SerializeField]
-        private float wakeUpT = 1.0f;
+        private float wakeUpT = 1.6f;
         [SerializeField]
-        private float alpha = 1.0f;
+        private float alpha = 7.0f;
 
         private float currentSpeed = 1.0f;
         private DateTime lastSlash;
@@ -50,14 +50,14 @@ namespace SamuraiSoccer.Player
         void Start()
         {
             boundy = SetBoundy();
-            rigidbody=GetComponent<Rigidbody>();
+            rigidbody = GetComponent<Rigidbody>();
             SetBoundy();
             velocity = Vector3.zero;
 
             InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
             InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; }).AddTo(this);
-            InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; }).AddTo(this);
-            InGameEvent.Play.Subscribe(x => { m_state = State.Playing; lastSlash = DateTime.Now; }).AddTo(this);
+            InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; if (!isPause) { UpdateSlashTime(); } }).AddTo(this);
+            InGameEvent.Play.Subscribe(x => { m_state = State.Playing; UpdateSlashTime(); }).AddTo(this);
             InGameEvent.Finish.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
 
 
@@ -67,6 +67,7 @@ namespace SamuraiSoccer.Player
             PlayerEvent.IsInChargeAttack.Subscribe(
                     x => { if (x) { ChargeAttack(); } }
                 ).AddTo(this);
+            PlayerEvent.Attack.Subscribe(_ => UpdateSlashTime());
         }
 
         void ReceiveStick(Vector3 stickDir)
@@ -154,8 +155,8 @@ namespace SamuraiSoccer.Player
                 dir.x = 0;
             }
             if (pos.z < boundy.yMin && pos.z + dir.y < pos.z)
-            { 
-                dir.y = 0; 
+            {
+                dir.y = 0;
             }
             if (pos.z > boundy.yMax && pos.z + dir.y > pos.z)
             {
@@ -167,7 +168,13 @@ namespace SamuraiSoccer.Player
         private void UpdateCurrentSpeed()
         {
             var elapsed = DateTime.Now - lastSlash;
-            currentSpeed = speed * 1 / (1 + Mathf.Exp((5 * wakeUpT - 10 * elapsed.Seconds) / wakeUpT));
+            currentSpeed = speed * (1 + (speedUpCoeff - 1) / (1 + Mathf.Exp(alpha * (float)((wakeUpT - 2 * elapsed.TotalSeconds) / wakeUpT))));
+            if (m_state != State.Playing) currentSpeed = speed;
+        }
+
+        private void UpdateSlashTime()
+        {
+            lastSlash = DateTime.Now;
         }
 
         /// <summary>
@@ -178,10 +185,10 @@ namespace SamuraiSoccer.Player
             SoundMaster.Instance.PlaySE(13);
             slashTrail.SetActive(true); //斬撃の残像を表示
             Vector3 step = PlayerEvent.StickDir.Value.normalized;
-            Vector3 vec = PlayerEvent.StickDir.Value.normalized*6;
+            Vector3 vec = PlayerEvent.StickDir.Value.normalized * 6;
             Vector3 destination = transform.position + vec;
 
-            for(int i=0;i< Mathf.Floor(vec.magnitude / step.magnitude); i++) //細かく進んでslashColliderを撒いていく
+            for (int i = 0; i < Mathf.Floor(vec.magnitude / step.magnitude); i++) //細かく進んでslashColliderを撒いていく
             {
 
                 Vector3 tempNewPos = transform.position + vec;
@@ -202,10 +209,11 @@ namespace SamuraiSoccer.Player
                 }
                 await UniTask.Yield();
             }
-            
+
             PlayerEvent.FaulCheckOnNext(); //斬撃の最後に審判のファールチェック
             PlayerEvent.SetIsInChargeAtack(false);
             slashTrail.SetActive(false);
+            UpdateSlashTime();
         }
     }
 }
