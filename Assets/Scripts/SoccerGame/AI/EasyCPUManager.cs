@@ -26,11 +26,10 @@ namespace SamuraiSoccer.SoccerGame.AI
         public GameObject samurai;
         public GameObject referee;
 
-        public List<GameObject> team;
-        public Team team_stock;
-        public List<GameObject> opp;
-
-        public Team opp_stock;
+        public List<GameObject> team = new List<GameObject>();
+        public Team team_stock = new Team();
+        public List<GameObject> opp = new List<GameObject>();
+        public Team opp_stock = new Team();
 
         public Transform team_p;
         public Transform opp_p;
@@ -135,20 +134,17 @@ namespace SamuraiSoccer.SoccerGame.AI
             var oppType = client.Get(StorageKey.KEY_OPPONENT_TYPE);
             teammate = Resources.Load<GameObject>("Teammate");
             teammateName = "our";
-            if (oppType == "opponent_Tutorial")
-            {
-                teammateName += "tutorial";
-            }
+            if (oppType == "opponent_Tutorial") teammateName = "ourtutorial";
             opponent = Resources.Load<GameObject>(oppType);
             oppName = oppType;
             client.Set(StorageKey.KEY_OPPONENT_TYPE, oppType);
 
             field = GetComponent<FieldManager>();
-            _ = LoadMember();
         }
 
         private void Start()
         {
+            InGameEvent.Reset.Subscribe(async u => await LoadMember()).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Goal.Subscribe(async u => await GoalAction(u)).AddTo(this);
