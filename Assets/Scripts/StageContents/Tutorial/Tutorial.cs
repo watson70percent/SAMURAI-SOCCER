@@ -5,7 +5,10 @@ using UnityEngine.UI;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
 using System.Threading;
+using SamuraiSoccer;
 using SamuraiSoccer.Event;
+using SamuraiSoccer.SoccerGame;
+using SamuraiSoccer.SoccerGame.AI;
 
 namespace Tutorial
 {
@@ -23,6 +26,13 @@ namespace Tutorial
         public CinemachineVirtualCamera samuraiCamera; //侍を追尾するためのカメラ
         public GameObject exclamationMark; //敵の位置を指示してくれる！マーク
 
+        private void Awake()
+        {
+            // TODO : チュートリアル用の敵選手を呼び出すテストコード
+            var cliant = new InMemoryDataTransitClient<string>();
+            cliant.Set(StorageKey.KEY_OPPONENT_TYPE, "opponent_Tutorial");
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -32,6 +42,8 @@ namespace Tutorial
 
         async UniTask Runner(CancellationToken cancellation_token = default)
         {
+            // 勝手に動くボールを一時停止
+            ball.SetActive(false);
             //テキスト表示1
             await UniTask.Delay(5000);
             tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
@@ -41,6 +53,7 @@ namespace Tutorial
             await UniTask.Delay(3000);
             Vector3 destination = new Vector3(10f, 3f, 30f);
             var enemyPrefab = Instantiate(enemy, destination, Quaternion.identity);
+            enemyPrefab.GetComponent<EasyCPU>().enabled = false; // この選手は動かない(EasyCPUが必要ない)
             exclamationMark.transform.position = destination + new Vector3(0f, 3f, 0f);
             exclamationMark.SetActive(true);
             //カメラを生成された選手に向ける
@@ -87,25 +100,13 @@ namespace Tutorial
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "よし、それでいい";
             await UniTask.Delay(3000);
-            //ボールの位置を移動する
-            destination = new Vector3(50f, 3f, 60f);
-            ball.transform.position = destination;
-            enemyPrefab = Instantiate(enemy, destination, Quaternion.identity);
-            exclamationMark.transform.position = destination + new Vector3(0f, 3f, 0f);
-            exclamationMark.SetActive(true);
-            //カメラを生成された選手に向ける
-            spotCamera.Follow = enemyPrefab.transform;
-            spotCamera.LookAt = enemyPrefab.transform;
-            await UniTask.Delay(1000);
-            spotCamera.Priority = 11;
-            samuraiCamera.Priority = 9;          
+            ball.SetActive(true);
+            InGameEvent.ResetOnNext();
+            tutorialText.text = "今度は実戦形式だ";
             await UniTask.Delay(3000);
-            tutorialText.text = "次はあっちのやつを斬れ";
+            tutorialText.text = "3対3をしている敵選手を斬れ";
             await UniTask.Delay(3000);
-            exclamationMark.SetActive(false);
-            //カメラをもとに戻す
-            samuraiCamera.Priority = 11;
-            spotCamera.Priority = 9;
+            tutorialText.text = "ただし、れふぇりーには気をつけろ";
             await UniTask.Delay(3000);
             InGameEvent.PauseOnNext(false);
             textAnimator.SetTrigger("SlideText");

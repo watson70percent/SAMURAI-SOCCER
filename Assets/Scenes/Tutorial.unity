@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &26383165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2433001005295417409, guid: 3481aaf22b85c304f8086076a27c93b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4248596136358121844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &28090307 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8304545770963488453, guid: 804ba53f1a183214abd0908ae2152096,
@@ -147,6 +159,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1743267401}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &242957832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2677264473837524580, guid: 3ca338ef76139aa45912d913e2037fb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1743267401}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242957824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a69d6601c1f42746b508cb5a41cf08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &304706423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5789988263697437563, guid: 1e64183c9ab276d478846abdab9dfe8e,
@@ -253,37 +277,6 @@ Transform:
   - {fileID: 669833481}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &575490549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575490550}
-  m_Layer: 0
-  m_Name: Ball
-  m_TagString: Ball
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &575490550
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575490549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75, y: 0, z: 125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2898767166451795307}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669833480
 GameObject:
@@ -596,18 +589,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4681467211701104845, guid: 3ca338ef76139aa45912d913e2037fb6,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681467211701104845, guid: 3ca338ef76139aa45912d913e2037fb6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681467211701104845, guid: 3ca338ef76139aa45912d913e2037fb6,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4681467211701104845, guid: 3ca338ef76139aa45912d913e2037fb6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4681467211701104845, guid: 3ca338ef76139aa45912d913e2037fb6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 99.4
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4681467211701104845, guid: 3ca338ef76139aa45912d913e2037fb6,
         type: 3}
@@ -816,8 +819,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1902545102}
   - component: {fileID: 1902545104}
-  - component: {fileID: 1902545105}
+  - component: {fileID: 1902545107}
   - component: {fileID: 1902545106}
+  - component: {fileID: 1902545105}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -838,7 +842,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2898767166451795307}
-  m_RootOrder: 18
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902545104
 MonoBehaviour:
@@ -888,8 +892,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 1960695500698323951}
-  ball: {fileID: 575490549}
+  ball: {fileID: 242957824}
   rotation: {fileID: 0}
+--- !u!114 &1902545107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902545101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8dc2e9080befe44a47dbbba8e1f76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  samurai: {fileID: 1261824133}
+  referee: {fileID: 304706423}
+  team: []
+  opp: []
+  team_p: {fileID: 1960695498857675388}
+  opp_p: {fileID: 1960695498952311203}
+  ball: {fileID: 242957832}
+  audioSource: {fileID: 4472716483648297464}
+  goalSound: {fileID: 8300000, guid: 3fdbf0aefa5190242904f2ccc688f7d8, type: 3}
+  startSound: {fileID: 8300000, guid: af0d39a7d4c92de478a0630662715e0a, type: 3}
+  goalImage: {fileID: 26383165}
 --- !u!224 &1947074218 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2433001006624056901, guid: 3481aaf22b85c304f8086076a27c93b2,
@@ -7394,6 +7421,11 @@ MonoBehaviour:
   field: {fileID: 1902545106}
   flagsParent: {fileID: 621702419893205889}
   speed: 1
+  slashTrail: {fileID: 0}
+  slashCollider: {fileID: 0}
+  speedUpCoeff: 1.5
+  wakeUpT: 1.6
+  alpha: 7
 --- !u!114 &1960695499783160881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12908,7 +12940,7 @@ Transform:
   m_Children:
   - {fileID: 1960695499278422522}
   - {fileID: 1960695500313126917}
-  - {fileID: 575490550}
+  - {fileID: 1902545102}
   - {fileID: 242957831}
   - {fileID: 1762543312}
   - {fileID: 1233471740}
@@ -12924,7 +12956,6 @@ Transform:
   - {fileID: 621702419893205889}
   - {fileID: 1294495131}
   - {fileID: 1947074218}
-  - {fileID: 1902545102}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13921,7 +13952,7 @@ MonoBehaviour:
   groundRenderer: {fileID: 1960695500698323937}
   groundMaterial: {fileID: 2100000, guid: 876ff6fd5c512db4589dfbef6ade755c, type: 2}
   refereeArea: {fileID: 335649476}
-  refereeMaxAng: 180
+  refereeMaxAng: 30
   refereeAreaSize: 20
   useObstacles: 0
   refereeMove: {fileID: 304706424}

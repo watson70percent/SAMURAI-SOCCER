@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
 using UniRx;
-
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1770116004288236265}
   - component: {fileID: 1892309049530929932}
   - component: {fileID: -6338713226089352320}
+  - component: {fileID: 1291716436438561708}
   m_Layer: 0
   m_Name: opponent_Tutorial
   m_TagString: TutorialEnemy
@@ -130,6 +131,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rigidbody: {fileID: 1892309049530929932}
+--- !u!114 &1291716436438561708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770116004288236264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da57cc6a55c474a48a3d35a6c9cbcbaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+  manager: {fileID: 0}
+  status:
+    MAX_HP: 0
+    hp: 0
+    power: 0
+    ally: 0
+    seelen: 0
+    fast: 0
+  field: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1001 &2214586402914889581
 PrefabInstance:
   m_ObjectHideFlags: 0
