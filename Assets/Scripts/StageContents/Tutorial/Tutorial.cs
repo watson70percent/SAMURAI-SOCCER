@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Cinemachine;
@@ -7,18 +6,20 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using SamuraiSoccer;
+using SamuraiSoccer.StageContents;
 using SamuraiSoccer.Event;
-using SamuraiSoccer.SoccerGame;
 using SamuraiSoccer.SoccerGame.AI;
 
 namespace Tutorial
 {
     public class Tutorial : MonoBehaviour
     {
+        public EasyCPUManager easyCPUManager;
         public GameObject samurai;
         public GameObject ball;
-        public GameObject firstYellowCard;
         public GameObject enemy; //召喚する敵
+        public GameObject teamGroup; //味方チームがまとまって入っているオブジェクト
+        public GameObject enemyGroup; //敵チームがまとまって入っているオブジェクト
         public Text tutorialText; //チュートリアルで流れるテキスト
         public Text enemyNumber; //残り敵数(動かない敵は手動で変更)
         public Animator textAnimator; //テキストを動かして画面外までスライドするアニメーター
@@ -30,7 +31,7 @@ namespace Tutorial
         [Tooltip("ホイッスル開始音")]
         public int whistleSENumber;
 
-        private bool isMinigameFinished; // 3対3のミニゲームが終了したかどうか
+        private bool isThreeOnThreeFinished; // 3対3のミニゲームが終了したかどうか
 
         private void Awake()
         {
@@ -40,19 +41,38 @@ namespace Tutorial
         }
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             // 3対3のミニゲーム終了時にフラグをtrueにする
-            InGameEvent.Finish.Subscribe(_ =>{ isMinigameFinished = true; });
+            InGameEvent.Finish.Subscribe(_ =>{ isThreeOnThreeFinished = true; });
             var token = this.GetCancellationTokenOnDestroy();
+            //勝手に動くボールを一時停止
+            ball.SetActive(false);
             Runner(token).Forget();
         }
 
-        async UniTask Runner(CancellationToken cancellation_token = default)
+        private async UniTask Runner(CancellationToken cancellation_token = default)
         {
-            // 勝手に動くボールを一時停止
-            ball.SetActive(false);
-            //テキスト表示1
+            //オープニングの会話
+            await Opening(cancellation_token);
+
+            //3対3
+            await ThreeOnThree(cancellation_token);
+            while (!CheckThreeOnThreeCleared())
+            {
+                await RetryThreeOnThree(cancellation_token);
+            }
+
+            //UIの説明
+            await UIDescription(cancellation_token);
+
+            PlayerPrefs.SetInt("DoneTutorial", 1);
+            await UniTask.Delay(5000);
+            SceneManager.LoadScene("StageSelect");
+        }
+
+        private async UniTask Opening(CancellationToken cancellation_token = default)
+        {
             await UniTask.Delay(5000);
             tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
             tutorialText.text = "ここではこの世界で戦うちゅーとりあるを行う";
@@ -75,7 +95,7 @@ namespace Tutorial
             exclamationMark.SetActive(false);
             //カメラをもとに戻す
             spotCamera.Priority = 9;
-            samuraiCamera.Priority = 11;           
+            samuraiCamera.Priority = 11;
             InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             textAnimator.SetTrigger("SlideText");
@@ -88,7 +108,8 @@ namespace Tutorial
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
             InGameEvent.PauseOnNext(true);
-            //テキスト表示2
+
+            //ファースト斬る
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "サムライが行うのはただ斬ることのみ";
             await UniTask.Delay(3000);
@@ -107,11 +128,13 @@ namespace Tutorial
             }
             enemyNumber.text = "0";
             InGameEvent.PauseOnNext(true);
-            enemyNumber.text = 1.ToString();
-            //テキスト表示2
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "よし、それでいい";
             await UniTask.Delay(3000);
+        }
+
+        private async UniTask ThreeOnThree(CancellationToken cancellation_token = default)
+        {
             ball.SetActive(true);
             InGameEvent.ResetOnNext();
             //カメラを全景にする
@@ -123,7 +146,7 @@ namespace Tutorial
             await UniTask.Delay(3000);
             tutorialText.text = "ただし、れふぇりーには気をつけよ";
             await UniTask.Delay(3000);
-            tutorialText.text = "視界内で斬ると反則だ";
+            tutorialText.text = "視界内で刀を見せると反則だ";
             await UniTask.Delay(3000);
             tutorialText.text = "2回反則で退場になる";
             await UniTask.Delay(3000);
@@ -132,19 +155,63 @@ namespace Tutorial
             //カメラをもとに戻す
             wholeviewCamera.Priority = 9;
             samuraiCamera.Priority = 11;
-            InGameEvent.PauseOnNext(false);
+            InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             textAnimator.SetTrigger("SlideText");
             //テキストを非表示に
             await UniTask.Delay(2000);
             tutorialText.text = "";
-            //イエローカードが出るまで待機
-            while (!isMinigameFinished)
+            //試合が終わるまで待機
+            while (!isThreeOnThreeFinished)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
+        }
+
+        private bool CheckThreeOnThreeCleared()
+        {
+            InMemoryDataTransitClient<GameResult> resultTransitCliant = new InMemoryDataTransitClient<GameResult>();
+            GameResult result;
+            if(resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
+            if(result == GameResult.Win) return true;
+            else return false;
+        }
+
+        private async UniTask RetryThreeOnThree(CancellationToken cancellation_token = default)
+        {
             InGameEvent.PauseOnNext(true);
-            //テキスト表示3
+            textAnimator.SetTrigger("ReturnText");
+            tutorialText.text = "しまった、れふぇりーに見つかってしまった";
+            await UniTask.Delay(3000);
+            tutorialText.text = "もう一度だ";
+            await UniTask.Delay(3000);
+            // 敵と見方のオブジェクトを空にする
+            // TODO : なぜか味方が1人増えるのを修正する
+            foreach (Transform child in teamGroup.transform) await easyCPUManager.Kill(child.gameObject);
+            foreach (Transform child in enemyGroup.transform) await easyCPUManager.Kill(child.gameObject);
+            await UniTask.Delay(3000);
+            // 再度生成を行う
+            InGameEvent.ResetOnNext();
+            tutorialText.text = "次こそ成功させよ";
+            await UniTask.Delay(3000);
+            _ = SoundMaster.Instance.PlaySE(whistleSENumber);
+            InGameEvent.PlayOnNext();
+            textAnimator.SetTrigger("SlideText");
+            //テキストを非表示に
+            await UniTask.Delay(2000);
+            tutorialText.text = "";
+            isThreeOnThreeFinished = false;
+            //試合が終わるまで待機
+            while (!isThreeOnThreeFinished)
+            {
+                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
+            }
+        }
+
+        private async UniTask UIDescription(CancellationToken cancellation_token = default)
+        {
+            InGameEvent.PauseOnNext(true);
+            //試合情報の見方説明
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "流石我らが希望、手際が良い";
             await UniTask.Delay(3000);
@@ -165,10 +232,6 @@ namespace Tutorial
             await UniTask.Delay(3000);
             arrowAnimator.gameObject.SetActive(false);
             tutorialText.text = "必ず日本に勝利を持ち帰れ";
-            PlayerPrefs.SetInt("DoneTutorial", 1);
-            await UniTask.Delay(5000);
-            SceneManager.LoadScene("StageSelect");
-        }
+        }  
     }
-
 }

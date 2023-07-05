@@ -620,7 +620,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612862407}
-  m_LocalRotation: {x: 0.08639663, y: 0.70180887, z: -0.08639663, w: 0.70180887}
+  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.0863966, w: 0.7018089}
   m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -725,18 +725,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ca338ef76139aa45912d913e2037fb6, type: 3}
---- !u!114 &1745877672 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4973113784900863983}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a57a6f224d372640a50f756b885a6af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1745877673 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6787424404838169156, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
@@ -996,8 +984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   samurai: {fileID: 1261824133}
   ball: {fileID: 242957824}
-  firstYellowCard: {fileID: 802938860}
   enemy: {fileID: 1770116004288236264, guid: 1943f95b857c84d4bb7ae03d26bbab2a, type: 3}
+  teamGroup: {fileID: 1960695498857675389}
+  enemyGroup: {fileID: 1960695498952311200}
   tutorialText: {fileID: 904164071}
   enemyNumber: {fileID: 1960695499848345717}
   textAnimator: {fileID: 2076745885}
@@ -9527,7 +9516,7 @@ PrefabInstance:
         type: 3}
       propertyPath: penaltyManager
       value: 
-      objectReference: {fileID: 1745877672}
+      objectReference: {fileID: 0}
     - target: {fileID: 686055778079660932, guid: 1e64183c9ab276d478846abdab9dfe8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14111,8 +14100,8 @@ MonoBehaviour:
   refereeAreaSize: 20
   useObstacles: 0
   refereeMove: {fileID: 304706424}
-  lookAtSpeed: 5
-  runningSpeed: 18
+  lookAtSpeed: 4
+  runningSpeed: 10
 --- !u!224 &4958173044312997334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14300,8 +14289,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowCard
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 40f9cb3a22e7a454199ecebe51daf7c1, type: 3}
+--- !u!1 &4973113784900863984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6787424404838169159, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4973113784900863983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4973113784900863985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4973113784900863984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7758799621e624eb5f9510d01492e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_yellowCard:
+  - {fileID: 802938860}
+  - {fileID: 1221141784}
 --- !u!114 &4989085521932916113
 MonoBehaviour:
   m_ObjectHideFlags: 0
