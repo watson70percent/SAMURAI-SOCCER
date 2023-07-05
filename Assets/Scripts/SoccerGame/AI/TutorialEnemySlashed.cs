@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SamuraiSoccer.SoccerGame
+namespace SamuraiSoccer.SoccerGame.AI
 {
     public class TutorialEnemySlashed : MonoBehaviour, ISlashed
     {

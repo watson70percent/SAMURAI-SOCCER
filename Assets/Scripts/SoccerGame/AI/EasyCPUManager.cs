@@ -26,16 +26,16 @@ namespace SamuraiSoccer.SoccerGame.AI
         public GameObject samurai;
         public GameObject referee;
 
-        public List<GameObject> team;
-        public Team team_stock;
-        public List<GameObject> opp;
-
-        public Team opp_stock;
+        public List<GameObject> team = new List<GameObject>();
+        public Team team_stock = new Team();
+        public List<GameObject> opp = new List<GameObject>();
+        public Team opp_stock = new Team();
 
         public Transform team_p;
         public Transform opp_p;
         public BallAction ball;
         private GameObject teammate;
+        private string teammateName;
         private GameObject opponent;
         private string oppName;
         [NonSerialized]
@@ -133,16 +133,18 @@ namespace SamuraiSoccer.SoccerGame.AI
             var client = new InMemoryDataTransitClient<string>();
             var oppType = client.Get(StorageKey.KEY_OPPONENT_TYPE);
             teammate = Resources.Load<GameObject>("Teammate");
+            teammateName = "our";
+            if (oppType == "opponent_Tutorial") teammateName = "ourtutorial";
             opponent = Resources.Load<GameObject>(oppType);
             oppName = oppType;
             client.Set(StorageKey.KEY_OPPONENT_TYPE, oppType);
 
             field = GetComponent<FieldManager>();
-            _ = LoadMember();
         }
 
         private void Start()
         {
+            InGameEvent.Reset.Subscribe(async u => await LoadMember()).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Goal.Subscribe(async u => await GoalAction(u)).AddTo(this);
@@ -232,7 +234,7 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         private async UniTask LoadMember()
         {
-            var file_path1 = Path.Combine(Application.streamingAssetsPath, "our.json");
+            var file_path1 = Path.Combine(Application.streamingAssetsPath, teammateName + ".json");
             string json = "";
             Debug.Log("filepath is " + file_path1);
             if (file_path1.Contains("://"))
@@ -299,20 +301,8 @@ namespace SamuraiSoccer.SoccerGame.AI
                     var client = new InMemoryDataTransitClient<GameResult>();
                     client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
                     InGameEvent.FinishOnNext();
-                    _ = WinEffect();
                 }
             }
-        }
-
-        /// <summary>
-        /// 勝ったときのエフェクト。
-        /// </summary>
-        private async UniTask WinEffect()
-        {
-            Time.timeScale = 0.3f;
-            await SoundMaster.Instance.PlaySE(11);
-            Time.timeScale = 1;
-            SceneManager.LoadScene("Result");
         }
 
         /// <summary>
