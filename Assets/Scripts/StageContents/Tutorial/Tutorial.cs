@@ -9,6 +9,7 @@ using SamuraiSoccer;
 using SamuraiSoccer.StageContents;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.SoccerGame.AI;
+using System.Collections.Generic;
 
 namespace Tutorial
 {
@@ -172,7 +173,7 @@ namespace Tutorial
         {
             InMemoryDataTransitClient<GameResult> resultTransitCliant = new InMemoryDataTransitClient<GameResult>();
             GameResult result;
-            if(resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
+            if(!resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
             if(result == GameResult.Win) return true;
             else return false;
         }
@@ -186,9 +187,10 @@ namespace Tutorial
             tutorialText.text = "もう一度だ";
             await UniTask.Delay(3000);
             // 敵と見方のオブジェクトを空にする
-            // TODO : なぜか味方が1人増えるのを修正する
-            foreach (Transform child in teamGroup.transform) await easyCPUManager.Kill(child.gameObject);
-            foreach (Transform child in enemyGroup.transform) await easyCPUManager.Kill(child.gameObject);
+            easyCPUManager.team = new List<GameObject>();
+            easyCPUManager.opp = new List<GameObject>();
+            foreach (Transform child in teamGroup.transform) Destroy(child.gameObject);
+            foreach (Transform child in enemyGroup.transform) Destroy(child.gameObject);
             await UniTask.Delay(3000);
             // 再度生成を行う
             InGameEvent.ResetOnNext();

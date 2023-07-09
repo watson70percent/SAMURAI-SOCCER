@@ -41,6 +41,7 @@ namespace SamuraiSoccer.SoccerGame
         // Start is called before the first frame update
         void Start()
         {
+            InGameEvent.Reset.Subscribe(_ => m_penaltyCount = 0).AddTo(this);
 
             PlayerEvent.FaulCheck.Subscribe(x=> {
                 var token = this.GetCancellationTokenOnDestroy();
