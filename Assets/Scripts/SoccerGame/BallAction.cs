@@ -86,6 +86,7 @@ namespace SamuraiSoccer.SoccerGame
                 rb.velocity = Vector3.zero;
                 angularVelocity = rb.angularVelocity;
                 rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
             }
             else
             {
@@ -95,6 +96,7 @@ namespace SamuraiSoccer.SoccerGame
 
         private void Play(Unit _)
         {
+            rb.isKinematic = false;
             rb.velocity = velocity;
             rb.angularVelocity = angularVelocity;
             // ゴールイベントが呼び出された数を初期化
