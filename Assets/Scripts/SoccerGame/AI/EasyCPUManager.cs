@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 using System.IO;
-using Unity.Collections;
 using System;
-using UnityEngine.UI;
 using UniRx;
 using Cysharp.Threading.Tasks;
 
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
-using UnityEngine.SceneManagement;
 
 namespace SamuraiSoccer.SoccerGame.AI
 {
@@ -50,7 +46,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         public AudioSource audioSource;
         public AudioClip goalSound;
         public AudioClip startSound;
-        public Image goalImage;
+        public BlackoutPanel blackoutPanel;
 
         private bool m_isPause = true;
 
@@ -210,7 +206,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         private async UniTask GoalAction(Unit _)
         {
             audioSource.PlayOneShot(goalSound);
-            var __ = GoalBlack();
+            blackoutPanel.Blackout(5f);
             await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext();
             Init(ball.transform.position.z < (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2);
@@ -218,19 +214,6 @@ namespace SamuraiSoccer.SoccerGame.AI
             audioSource.PlayOneShot(startSound);
             InGameEvent.PlayOnNext();
         }
-
-        private async UniTask GoalBlack()
-        {
-            float time = 0;
-            while (time < 5)
-            {
-                var c = new Color(0, 0, 0, 1 - Mathf.Abs(4 - time));
-                goalImage.color = c;
-                await UniTask.Yield();
-                time += Time.deltaTime;
-            }
-        }
-
 
         private async UniTask LoadMember()
         {
