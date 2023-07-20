@@ -1,13 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 using Cysharp.Threading.Tasks;
+using SamuraiSoccer.Event;
 
-namespace SamuraiSoccer.SoccerGame
+namespace SamuraiSoccer.UI
 {
     public class BlackoutPanel : MonoBehaviour
     {
         [SerializeField]
         private Image m_panelImage;
+
+        private void Start()
+        {
+            UIEffectEvent.BlackOut.Subscribe(async totalsec =>
+            {
+                await Blackout(totalsec);
+            }).AddTo(this);
+        }
 
         /// <summary>
         /// ‡‰æ–Ê‚ÌˆÃ“]‚ğs‚¤

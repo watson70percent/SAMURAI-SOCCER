@@ -28,12 +28,12 @@ namespace SamuraiSoccer.SoccerGame
             InGameEvent.Reset.Subscribe(async _ =>
             {
                 await ResetContents();
-            });
+            }).AddTo(this);
 
             InGameEvent.Standby.First().Subscribe(async _ =>
             {
                 await FirstStandbyContents();
-            });
+            }).AddTo(this);
         }
 
         private void Update()

@@ -46,7 +46,6 @@ namespace SamuraiSoccer.SoccerGame.AI
         public AudioSource audioSource;
         public AudioClip goalSound;
         public AudioClip startSound;
-        public BlackoutPanel blackoutPanel;
 
         private bool m_isPause = true;
 
@@ -206,7 +205,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         private async UniTask GoalAction(Unit _)
         {
             audioSource.PlayOneShot(goalSound);
-            blackoutPanel.Blackout(5f);
+            UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext();
             Init(ball.transform.position.z < (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2);

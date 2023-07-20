@@ -17,7 +17,6 @@ namespace Tutorial
     public class Tutorial : MonoBehaviour
     {
         public EasyCPUManager easyCPUManager;
-        public BlackoutPanel blackoutPanel;
         public GameObject samurai;
         public GameObject ball;
         public GameObject enemy; //召喚する敵
@@ -188,7 +187,7 @@ namespace Tutorial
             await UniTask.Delay(3000);
             tutorialText.text = "もう一度だ";
             await UniTask.Delay(1000);
-            blackoutPanel.Blackout(5f);
+            UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
             // 敵と見方のオブジェクトを空にする
             easyCPUManager.team = new List<GameObject>();
