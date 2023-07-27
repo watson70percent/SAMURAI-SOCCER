@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4220772580559016461}
   - component: {fileID: 6587844239011527973}
   - component: {fileID: 6002362736004586768}
-  - component: {fileID: 8904132906417208390}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -59,7 +58,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   goalSound: {fileID: 8300000, guid: 3fdbf0aefa5190242904f2ccc688f7d8, type: 3}
   startSound: {fileID: 8300000, guid: af0d39a7d4c92de478a0630662715e0a, type: 3}
-  goalImage: {fileID: 0}
+  resultScene: {fileID: 102900000, guid: d0be5105f530c9e4193544792d669744, type: 3}
 --- !u!114 &4220772580559016563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,16 +117,3 @@ MonoBehaviour:
   m_trumpetShellSENumber: 2
   m_whistleSENumber: 10
   m_gameBGM: 1
---- !u!114 &8904132906417208390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220772580559016566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c301201ba1503f4a902778d386f1232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_resultScene: {fileID: 102900000, guid: d0be5105f530c9e4193544792d669744, type: 3}

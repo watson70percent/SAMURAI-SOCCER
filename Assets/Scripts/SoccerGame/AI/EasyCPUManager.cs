@@ -9,6 +9,8 @@ using Cysharp.Threading.Tasks;
 
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
 namespace SamuraiSoccer.SoccerGame.AI
 {
@@ -46,6 +48,8 @@ namespace SamuraiSoccer.SoccerGame.AI
         public AudioSource audioSource;
         public AudioClip goalSound;
         public AudioClip startSound;
+
+        public SceneAsset resultScene;
 
         private bool m_isPause = true;
 
@@ -255,6 +259,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         public async UniTask Kill(GameObject dead)
         {
             await UniTask.Delay(1000);
+            if (dead == null) return;
 
             bool ally = dead.GetComponent<EasyCPU>().status.ally;
             opp.Remove(dead);
@@ -283,8 +288,22 @@ namespace SamuraiSoccer.SoccerGame.AI
                     var client = new InMemoryDataTransitClient<GameResult>();
                     client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
                     InGameEvent.FinishOnNext();
+                    _ = SlowToWin();
                 }
             }
+        }
+
+        /// <summary>
+        /// 勝った時にシーン遷移までゆっくりにして遷移させる
+        /// </summary>
+        /// <returns></returns>
+        private async UniTask SlowToWin()
+        {
+            if (oppName == "opponent_Tutorial") return;
+            Time.timeScale = 0.3f;
+            await SoundMaster.Instance.PlaySE(11);
+            Time.timeScale = 1;
+            SceneManager.LoadScene(resultScene.name);
         }
 
         /// <summary>
