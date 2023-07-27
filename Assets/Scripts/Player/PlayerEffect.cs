@@ -14,7 +14,7 @@ namespace SamuraiSoccer.Player
         // ‚½‚ßUŒ‚‚ª‚Å‚«‚é‚Æ‚«‚É‚ÍƒI[ƒ‰‚ð”­‚·‚é‚æ‚¤‚É
         void Start()
         {
-            PlayerEvent.IsEnableChargeAttack.Subscribe(isEnableAttack => { aura.SetActive(isEnableAttack); });
+            PlayerEvent.IsEnableChargeAttack.Subscribe(isEnableAttack => { aura.SetActive(isEnableAttack); }).AddTo(this);
 
         }
 

@@ -209,7 +209,7 @@ namespace SamuraiSoccer.Player
                 }
                 if (isSlash)
                 {
-                    Instantiate(slashCollider, transform.position, transform.rotation);
+                    Instantiate(slashCollider, transform.position+Vector3.up, transform.rotation);
                 }
                 await UniTask.Yield();
             }
