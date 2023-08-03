@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using SamuraiSoccer.Event;
-using SamuraiSoccer.UI;
 using SamuraiSoccer.SoccerGame;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -185,8 +182,11 @@ namespace SamuraiSoccer.Player
             SoundMaster.Instance.PlaySE(13);
             slashTrail.SetActive(true); //ŽaŒ‚‚ÌŽc‘œ‚ð•\Ž¦
             Vector3 step = PlayerEvent.StickDir.Value.normalized;
-            Vector3 vec = PlayerEvent.StickDir.Value.normalized * 6;
-            Vector3 destination = transform.position + vec;
+            if (step == Vector3.zero)
+            {
+                step = transform.forward;
+            }
+            Vector3 vec = step * 6;
 
             for (int i = 0; i < Mathf.Floor(vec.magnitude / step.magnitude); i++) //×‚©‚­i‚ñ‚ÅslashCollider‚ðŽT‚¢‚Ä‚¢‚­
             {
@@ -205,7 +205,7 @@ namespace SamuraiSoccer.Player
                 }
                 if (isSlash)
                 {
-                    Instantiate(slashCollider, transform.position, transform.rotation);
+                    Instantiate(slashCollider, transform.position+Vector3.up, transform.rotation);
                 }
                 await UniTask.Yield();
             }

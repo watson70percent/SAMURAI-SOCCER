@@ -6,9 +6,11 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using SamuraiSoccer;
+using SamuraiSoccer.SoccerGame;
 using SamuraiSoccer.StageContents;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.SoccerGame.AI;
+using System.Collections.Generic;
 
 namespace Tutorial
 {
@@ -142,7 +144,7 @@ namespace Tutorial
             wholeviewCamera.Priority = 11;
             tutorialText.text = "今度は実戦形式だ";
             await UniTask.Delay(3000);
-            tutorialText.text = "3対3をしている敵選手を斬れ";
+            tutorialText.text = "敵を全て斬りたおせ";
             await UniTask.Delay(3000);
             tutorialText.text = "ただし、れふぇりーには気をつけよ";
             await UniTask.Delay(3000);
@@ -150,7 +152,7 @@ namespace Tutorial
             await UniTask.Delay(3000);
             tutorialText.text = "2回反則で退場になる";
             await UniTask.Delay(3000);
-            tutorialText.text = "そうならないように気をつけよ";
+            tutorialText.text = "それでは試合開始だ";
             await UniTask.Delay(3000);
             //カメラをもとに戻す
             wholeviewCamera.Priority = 9;
@@ -172,7 +174,7 @@ namespace Tutorial
         {
             InMemoryDataTransitClient<GameResult> resultTransitCliant = new InMemoryDataTransitClient<GameResult>();
             GameResult result;
-            if(resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
+            if(!resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
             if(result == GameResult.Win) return true;
             else return false;
         }
@@ -184,14 +186,17 @@ namespace Tutorial
             tutorialText.text = "しまった、れふぇりーに見つかってしまった";
             await UniTask.Delay(3000);
             tutorialText.text = "もう一度だ";
-            await UniTask.Delay(3000);
+            await UniTask.Delay(1000);
+            UIEffectEvent.BlackOutOnNext(5f);
+            await UniTask.Delay(4000);
             // 敵と見方のオブジェクトを空にする
-            // TODO : なぜか味方が1人増えるのを修正する
-            foreach (Transform child in teamGroup.transform) await easyCPUManager.Kill(child.gameObject);
-            foreach (Transform child in enemyGroup.transform) await easyCPUManager.Kill(child.gameObject);
-            await UniTask.Delay(3000);
+            easyCPUManager.team = new List<GameObject>();
+            easyCPUManager.opp = new List<GameObject>();
+            foreach (Transform child in teamGroup.transform) Destroy(child.gameObject);
+            foreach (Transform child in enemyGroup.transform) Destroy(child.gameObject);
             // 再度生成を行う
             InGameEvent.ResetOnNext();
+            await UniTask.Delay(1000);
             tutorialText.text = "次こそ成功させよ";
             await UniTask.Delay(3000);
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
@@ -211,6 +216,7 @@ namespace Tutorial
         private async UniTask UIDescription(CancellationToken cancellation_token = default)
         {
             InGameEvent.PauseOnNext(true);
+            _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             //試合情報の見方説明
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "流石我らが希望、手際が良い";

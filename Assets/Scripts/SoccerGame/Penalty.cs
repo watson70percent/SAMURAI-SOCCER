@@ -23,6 +23,10 @@ namespace SamuraiSoccer.SoccerGame
         
         private int m_redcardSENumber =12;
 
+        [SerializeField]
+        private SceneAsset m_resultScene;
+
+
         void Start()
         {
             InGameEvent.Reset.Subscribe(OnReset).AddTo(this);
@@ -47,6 +51,7 @@ namespace SamuraiSoccer.SoccerGame
                 message.Set(StorageKey.KEY_RESULTMESSAGE, "反則負け！");
                 InGameEvent.FinishOnNext();
                 Instantiate(m_gameOverPanel);
+                SceneManager.LoadScene(m_resultScene.name);
             }
             else
             {

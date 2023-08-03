@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 using System.IO;
-using Unity.Collections;
 using System;
-using UnityEngine.UI;
 using UniRx;
 using Cysharp.Threading.Tasks;
 
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 namespace SamuraiSoccer.SoccerGame.AI
 {
@@ -50,7 +48,8 @@ namespace SamuraiSoccer.SoccerGame.AI
         public AudioSource audioSource;
         public AudioClip goalSound;
         public AudioClip startSound;
-        public Image goalImage;
+
+        public SceneAsset resultScene;
 
         private bool m_isPause = true;
 
@@ -210,7 +209,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         private async UniTask GoalAction(Unit _)
         {
             audioSource.PlayOneShot(goalSound);
-            var __ = GoalBlack();
+            UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext();
             Init(ball.transform.position.z < (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2);
@@ -218,19 +217,6 @@ namespace SamuraiSoccer.SoccerGame.AI
             audioSource.PlayOneShot(startSound);
             InGameEvent.PlayOnNext();
         }
-
-        private async UniTask GoalBlack()
-        {
-            float time = 0;
-            while (time < 5)
-            {
-                var c = new Color(0, 0, 0, 1 - Mathf.Abs(4 - time));
-                goalImage.color = c;
-                await UniTask.Yield();
-                time += Time.deltaTime;
-            }
-        }
-
 
         private async UniTask LoadMember()
         {
@@ -273,6 +259,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         public async UniTask Kill(GameObject dead)
         {
             await UniTask.Delay(1000);
+            if (dead == null) return;
 
             bool ally = dead.GetComponent<EasyCPU>().status.ally;
             opp.Remove(dead);
@@ -301,8 +288,22 @@ namespace SamuraiSoccer.SoccerGame.AI
                     var client = new InMemoryDataTransitClient<GameResult>();
                     client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
                     InGameEvent.FinishOnNext();
+                    _ = SlowToWin();
                 }
             }
+        }
+
+        /// <summary>
+        /// 勝った時にシーン遷移までゆっくりにして遷移させる
+        /// </summary>
+        /// <returns></returns>
+        private async UniTask SlowToWin()
+        {
+            if (oppName == "opponent_Tutorial") return;
+            Time.timeScale = 0.3f;
+            await SoundMaster.Instance.PlaySE(11);
+            Time.timeScale = 1;
+            SceneManager.LoadScene(resultScene.name);
         }
 
         /// <summary>

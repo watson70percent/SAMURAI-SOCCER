@@ -20,30 +20,23 @@ namespace SamuraiSoccer.SoccerGame
         [Tooltip("ƒQ[ƒ€‚ÌBGM")]
         private int m_gameBGM;
 
-        private bool m_isFirstReset;
-
-        // Start is called before the first frame update
-        private void Start()
+        private void Awake()
         {
             InGameEvent.Reset.Subscribe(async _ =>
             {
                 await ResetContents();
-            });
+            }).AddTo(this);
+        }
 
+        // Start is called before the first frame update
+        private void Start()
+        {
             InGameEvent.Standby.First().Subscribe(async _ =>
             {
                 await FirstStandbyContents();
-            });
-        }
+            }).AddTo(this);
 
-        private void Update()
-        {
-            // ˆê“x‚¾‚¯ResetOnNext‚ğŒÄ‚Ño‚·
-            if (!m_isFirstReset)
-            {
-                InGameEvent.ResetOnNext();
-                m_isFirstReset = true;
-            }
+            InGameEvent.ResetOnNext();
         }
 
         private async UniTask ResetContents()

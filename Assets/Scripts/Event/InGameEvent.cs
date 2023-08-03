@@ -13,15 +13,14 @@ namespace SamuraiSoccer.Event
     {
         private static bool m_isPlaying = false; //Playó‘Ô‚©‚Ç‚¤‚© 
 
-        private static Subject<Unit> m_resetSubject = new Subject<Unit>();
-        private static IObservable<Unit> m_resetShareObservable = m_resetSubject.Share();
+        private static ReplaySubject<Unit> m_resetSubject = new ReplaySubject<Unit>(1);
 
         /// <summary>
         /// ResetƒCƒxƒ“ƒg‚ÌSubscribeæ
         /// </summary>
         public static IObservable<Unit> Reset
         {
-            get { return m_resetShareObservable; }
+            get { return m_resetSubject; }
         }
 
         /// <summary>

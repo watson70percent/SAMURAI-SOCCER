@@ -17,7 +17,7 @@ namespace SamuraiSoccer.Player
         // Start is called before the first frame update
         void Start()
         {
-            this.OnTriggerEnterAsObservable().Subscribe(hit => OnHit(hit.gameObject));
+            this.OnTriggerEnterAsObservable().Subscribe(hit => OnHit(hit.gameObject)).AddTo(this);
             Vanish();
         }
 

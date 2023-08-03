@@ -5,6 +5,7 @@ using UniRx;
 using SamuraiSoccer.StageContents.Result;
 using SamuraiSoccer.StageContents;
 using SamuraiSoccer;
+using UnityEditor;
 
 namespace SamuraiSoccer.StageContents.China
 {
@@ -22,6 +23,9 @@ namespace SamuraiSoccer.StageContents.China
         [SerializeField]
         private GameObject m_blood;
         private GameObject m_player;
+
+        [SerializeField]
+        private SceneAsset m_resultScene;
 
         enum State
         {
@@ -92,7 +96,6 @@ namespace SamuraiSoccer.StageContents.China
 
         public void GameOver()
         {
-            SceneManager.sceneLoaded += GameSceneLoaded;
             InGameEvent.FinishOnNext();
             SoundBoxUtil.SetSoundBox(transform.position, m_hitSound);
 
@@ -100,14 +103,9 @@ namespace SamuraiSoccer.StageContents.China
             inMemoryDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
             Instantiate(m_blood, m_player.transform.position + Vector3.up * 0.1f, Quaternion.identity);
             Instantiate(m_gameOverPanel);
-
+            SceneManager.LoadScene(m_resultScene.name);
         }
 
-        void GameSceneLoaded(Scene next, LoadSceneMode mode)
-        {
-
-            SceneManager.sceneLoaded -= GameSceneLoaded;
-        }
 
     }
 }
