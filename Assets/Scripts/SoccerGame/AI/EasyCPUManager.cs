@@ -49,7 +49,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         public AudioClip goalSound;
         public AudioClip startSound;
 
-        public SceneAsset resultScene;
+        public string resultSceneName = "Result";
 
         private bool m_isPause = true;
 
@@ -303,7 +303,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             Time.timeScale = 0.3f;
             await SoundMaster.Instance.PlaySE(11);
             Time.timeScale = 1;
-            SceneManager.LoadScene(resultScene.name);
+            SceneManager.LoadScene(resultSceneName);
         }
 
         /// <summary>
