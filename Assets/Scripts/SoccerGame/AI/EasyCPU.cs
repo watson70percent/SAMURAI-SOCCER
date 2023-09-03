@@ -71,7 +71,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             m_isPause = false;
         }
 
-        private void Standby(Unit _)
+        private void Standby(bool _)
         {
             m_isPause = true;
         }

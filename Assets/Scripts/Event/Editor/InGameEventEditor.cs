@@ -31,9 +31,21 @@ namespace SamuraiSoccer.Event.EditorExtension
             {
                 InGameEvent.PlayOnNext();
             }
-            if (GUILayout.Button("Goal"))
+            if (GUILayout.Button("Goal: NormalTeammateGoal"))
             {
-                InGameEvent.GoalOnNext();
+                InGameEvent.GoalOnNext(GoalEventType.NormalTeammateGoal);
+            }
+            if (GUILayout.Button("Goal: NormalOpponentGoal"))
+            {
+                InGameEvent.GoalOnNext(GoalEventType.NormalOpponentGoal);
+            }
+            if (GUILayout.Button("Goal: CutSceneTeammateGoal"))
+            {
+                InGameEvent.GoalOnNext(GoalEventType.CutSceneTeammateGoal);
+            }
+            if (GUILayout.Button("Goal: CutSceneOpponentGoal"))
+            {
+                InGameEvent.GoalOnNext(GoalEventType.CutSceneOpponentGoal);
             }
             m_hasYellowCard = EditorGUILayout.Toggle("HasYellowCard", m_hasYellowCard);
             if (GUILayout.Button("Penalty"))

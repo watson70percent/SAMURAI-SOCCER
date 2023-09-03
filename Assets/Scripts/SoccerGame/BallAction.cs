@@ -15,6 +15,7 @@ namespace SamuraiSoccer.SoccerGame
         [NonSerialized]
         public Rigidbody rb;
         public FieldManager info;
+        public ScoreManager scoreManager;
         private static readonly float sqrt3 = Mathf.Sqrt(3);
         private static readonly float sqrt2 = Mathf.Sqrt(2);
         private static readonly float gravity = 9.8f;
@@ -252,13 +253,11 @@ namespace SamuraiSoccer.SoccerGame
                 Vector3 dest;
                 if (command.m_status.ally)
                 {
-
                     dest = (info.AdaptPosition(Constants.OppornentGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - command.m_sender.position).normalized;
                 }
                 else
                 {
                     dest = (info.AdaptPosition(Constants.OurGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - command.m_sender.position).normalized;
-
                 }
 
                 rb.AddForce(Mathf.Min(10.0f, command.m_status.power) * dest, ForceMode.Impulse);
@@ -274,7 +273,8 @@ namespace SamuraiSoccer.SoccerGame
             if (other.gameObject.CompareTag("Goal"))
             {
                 if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
-                InGameEvent.GoalOnNext();
+                var isTeammateGoal = transform.position.z > (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2;
+                scoreManager.Goal(isTeammateGoal);
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
@@ -296,7 +296,8 @@ namespace SamuraiSoccer.SoccerGame
             if (other.gameObject.CompareTag("Goal"))
             {
                 if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
-                InGameEvent.GoalOnNext();
+                var isTeammateGoal = transform.position.z > (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2;
+                scoreManager.Goal(isTeammateGoal);
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
