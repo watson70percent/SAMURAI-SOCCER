@@ -146,14 +146,14 @@ namespace SamuraiSoccer.SoccerGame.AI
             InGameEvent.Reset.Subscribe(async u => await LoadMember()).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
             InGameEvent.Play.Subscribe(Play).AddTo(this);
-            InGameEvent.Goal.Subscribe(async u => await GoalAction(u)).AddTo(this);
+            InGameEvent.Goal.Where(t => t == GoalEventType.NormalTeammateGoal || t == GoalEventType.NormalOpponentGoal).Subscribe(async t => await GoalAction(t)).AddTo(this);
             InGameEvent.Standby.Subscribe(Standby).AddTo(this);
         }
 
         private void Update()
         {
             (GameObject, float) team_tmp = (default, float.MaxValue);
-            foreach(var t in team)
+            foreach (var t in team)
             {
                 var d = (t.transform.position - ball.transform.position).sqrMagnitude;
                 if (team_tmp.Item2 > d)
@@ -171,7 +171,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                     opp_tmp = (o, d);
                 }
             }
-            near_team = team_tmp.Item1; 
+            near_team = team_tmp.Item1;
             near_opp = opp_tmp.Item1;
         }
 
@@ -187,10 +187,11 @@ namespace SamuraiSoccer.SoccerGame.AI
             SetAnimatorSpeed(1);
         }
 
-        private void Standby(Unit _)
+        private void Standby(bool isTeammateBall)
         {
             m_isPause = true;
             SetAnimatorSpeed(0);
+            Init(isTeammateBall);
         }
 
         private void SetAnimatorSpeed(float speed)
@@ -206,13 +207,12 @@ namespace SamuraiSoccer.SoccerGame.AI
             }
         }
 
-        private async UniTask GoalAction(Unit _)
+        private async UniTask GoalAction(GoalEventType t)
         {
             audioSource.PlayOneShot(goalSound);
             UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
-            InGameEvent.StandbyOnNext();
-            Init(ball.transform.position.z < (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2);
+            InGameEvent.StandbyOnNext(t == GoalEventType.NormalOpponentGoal);
             await UniTask.Delay(3000);
             audioSource.PlayOneShot(startSound);
             InGameEvent.PlayOnNext();
@@ -283,7 +283,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                     Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OppornentSpornPoint));
                     opp_stock.member.RemoveAt(0);
                 }
-                else if(!opp.Any())
+                else if (!opp.Any())
                 {
                     var client = new InMemoryDataTransitClient<GameResult>();
                     client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
@@ -340,7 +340,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             {
                 enemySlashed.EasyCPUManager = this;
             }
-            
+
             if (status.ally)
             {
                 team.Add(temp);
@@ -356,7 +356,7 @@ namespace SamuraiSoccer.SoccerGame.AI
         /// <summary>
         /// 初期化。選手の生成をしてる。
         /// </summary>
-        public void Init(bool centerIsOppornent = true)
+        public void Init(bool centerIsTeammate = false)
         {
             foreach (var t in team)
             {
@@ -381,21 +381,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             int teamCount = team_stock.member.Count > 11 ? 11 : team_stock.member.Count;
             int oppCount = opp_stock.member.Count > 11 ? 11 : opp_stock.member.Count;
 
-            if (centerIsOppornent)
-            {
-                for (int i = 0; i < teamCount; i++)
-                {
-                    Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateInitialSpornPointCenterOppornent[i]));
-                    team_stock.member.RemoveAt(0);
-                }
-
-                for (int i = 0; i < oppCount; i++)
-                {
-                    Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OpprnentInitialSpornPointCenterOppornent[i]));
-                    opp_stock.member.RemoveAt(0);
-                }
-            }
-            else
+            if (centerIsTeammate)
             {
                 for (int i = 0; i < teamCount; i++)
                 {
@@ -409,7 +395,20 @@ namespace SamuraiSoccer.SoccerGame.AI
                     opp_stock.member.RemoveAt(0);
                 }
             }
+            else
+            {
+                for (int i = 0; i < teamCount; i++)
+                {
+                    Sporn(team_stock.member[0], field.AdaptPosition(Constants.TeammateInitialSpornPointCenterOppornent[i]));
+                    team_stock.member.RemoveAt(0);
+                }
 
+                for (int i = 0; i < oppCount; i++)
+                {
+                    Sporn(opp_stock.member[0], field.AdaptPosition(Constants.OpprnentInitialSpornPointCenterOppornent[i]));
+                    opp_stock.member.RemoveAt(0);
+                }
+            }
 
             ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0, 0.5f, 0);
             ball.rb.velocity = Vector3.zero;

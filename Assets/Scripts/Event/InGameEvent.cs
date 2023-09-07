@@ -32,13 +32,13 @@ namespace SamuraiSoccer.Event
             m_resetSubject.OnNext(Unit.Default);
         }
 
-        private static Subject<Unit> m_standbySubject = new Subject<Unit>();
-        private static IObservable<Unit> m_standbyShareObservable = m_standbySubject.Share();
+        private static Subject<bool> m_standbySubject = new Subject<bool>();
+        private static IObservable<bool> m_standbyShareObservable = m_standbySubject.Share();
 
         /// <summary>
         /// StandbyイベントのSubscribe先
         /// </summary>
-        public static IObservable<Unit> Standby
+        public static IObservable<bool> Standby
         {
             get { return m_standbyShareObservable; }
         }
@@ -46,10 +46,13 @@ namespace SamuraiSoccer.Event
         /// <summary>
         /// Standbyイベントを発行
         /// </summary>
-        public static void StandbyOnNext()
+        /// <param name="isTeammateBall">
+        /// 自チームボールか。
+        /// </param>
+        public static void StandbyOnNext(bool isTeammateBall = false)
         {
             m_isPlaying = false;
-            m_standbySubject.OnNext(Unit.Default);
+            m_standbySubject.OnNext(isTeammateBall);
         }
 
         private static Subject<Unit> m_playSubject = new Subject<Unit>();
@@ -81,13 +84,13 @@ namespace SamuraiSoccer.Event
             get { return m_updateDuringPlayObservable; }
         }
 
-        private static Subject<Unit> m_goalSubject = new Subject<Unit>();
-        private static IObservable<Unit> m_goalShareObservable = m_goalSubject.Share();
+        private static Subject<GoalEventType> m_goalSubject = new Subject<GoalEventType>();
+        private static IObservable<GoalEventType> m_goalShareObservable = m_goalSubject.Share();
 
         /// <summary>
         /// GoalイベントのSubscribe先
         /// </summary>
-        public static IObservable<Unit> Goal
+        public static IObservable<GoalEventType> Goal
         {
             get { return m_goalShareObservable; }
         }
@@ -95,10 +98,10 @@ namespace SamuraiSoccer.Event
         /// <summary>
         /// Goalイベントの発行
         /// </summary>
-        public static void GoalOnNext()
+        public static void GoalOnNext(GoalEventType type)
         {
             m_isPlaying = false;
-            m_goalSubject.OnNext(Unit.Default);
+            m_goalSubject.OnNext(type);
         }
 
         private static Subject<int> m_penaltySubject = new Subject<int>();
@@ -167,6 +170,44 @@ namespace SamuraiSoccer.Event
         {
             m_isPlaying = false;
             m_finishSubject.OnNext(Unit.Default);
+        }
+
+        private static ReactiveProperty<int> m_teammateScoreSubject = new ReactiveProperty<int>(0);
+
+        /// <summary>
+        /// TeammateScoreイベントのSubscribe先
+        /// </summary>
+        public static IObservable<int> TeammateScore
+        {
+            get { return m_teammateScoreSubject; }
+        }
+
+        /// <summary>
+        /// TeammateScoreイベントの発行
+        /// </summary>
+        public static void TeammateScoreOnNext(int score)
+        {
+            m_teammateScoreSubject.Value = score;
+            Debug.Log("Game score: " + m_teammateScoreSubject.Value + " : " + m_opponentScoreSubject.Value);
+        }
+
+        private static ReactiveProperty<int> m_opponentScoreSubject = new ReactiveProperty<int>(0);
+
+        /// <summary>
+        /// OpponentScoreイベントのSubscribe先
+        /// </summary>
+        public static IObservable<int> OpponentScore
+        {
+            get { return m_opponentScoreSubject; }
+        }
+
+        /// <summary>
+        /// OpponentScoreイベントの発行
+        /// </summary>
+        public static void OpponentScoreOnNext(int score)
+        {
+            m_opponentScoreSubject.Value = score;
+            Debug.Log("Game score: " + m_teammateScoreSubject.Value + " : " + m_opponentScoreSubject.Value);
         }
     }
 }
