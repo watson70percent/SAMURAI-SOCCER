@@ -7,6 +7,7 @@ using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
 
 
+
 namespace SamuraiSoccer.SoccerGame
 {
     public class Penalty : MonoBehaviour
