@@ -19,14 +19,15 @@ namespace SamuraiSoccer.StageContents.Conversation
     }
 
     [System.Serializable]
-    public class ConversationText 
+    public class ConversationText
     {
         [Tooltip("話す人の名前")]
         public CharacterName m_characterName;
         [Tooltip("話し手の感情")]
         public EmotionType m_motionType;
-        [Tooltip("話す内容"), TextArea(1,5)]
+        [Tooltip("話す内容"), TextArea(1, 5)]
         public string m_text;
+        public bool is_option;
     }
 
     [System.Serializable]
