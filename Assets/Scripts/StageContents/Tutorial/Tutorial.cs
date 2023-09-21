@@ -32,8 +32,13 @@ namespace Tutorial
         public GameObject exclamationMark; //敵の位置を指示してくれる！マーク
         [Tooltip("ホイッスル開始音")]
         public int whistleSENumber;
+        public int remainChargeAttackNum; //残りの敵数
+        public Text taskText; // 課題名が表示されたテキスト
+        public Text remainNumeberText; // 残り敵数の表示
 
         private bool isThreeOnThreeFinished; // 3対3のミニゲームが終了したかどうか
+
+        private Vector3 initBallPos;
 
         private void Awake()
         {
@@ -50,6 +55,7 @@ namespace Tutorial
             var token = this.GetCancellationTokenOnDestroy();
             //勝手に動くボールを一時停止
             ball.SetActive(false);
+            initBallPos = ball.transform.position;
             Runner(token).Forget();
         }
 
@@ -63,6 +69,13 @@ namespace Tutorial
             while (!CheckThreeOnThreeCleared())
             {
                 await RetryThreeOnThree(cancellation_token);
+            }
+
+            //ため斬り
+            await ChargeAttack(cancellation_token);
+            while (remainChargeAttackNum > 0)
+            {
+                await UniTask.Yield();
             }
 
             //UIの説明
@@ -211,6 +224,43 @@ namespace Tutorial
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
+        }
+
+        private async UniTask ChargeAttack(CancellationToken cancellation_token = default)
+        {
+            InGameEvent.PauseOnNext(true);
+            _ = SoundMaster.Instance.PlaySE(whistleSENumber);
+            // 敵と見方のオブジェクトを空にする
+            easyCPUManager.team = new List<GameObject>();
+            foreach (Transform child in teamGroup.transform) Destroy(child.gameObject);
+            ball.SetActive(false);
+            ball.transform.position = initBallPos;
+            textAnimator.SetTrigger("ReturnText");
+            tutorialText.text = "流石我らが希望、手際が良い";
+            await UniTask.Delay(3000);
+            tutorialText.text = "次はため斬りの練習だ";
+            await UniTask.Delay(3000);
+            tutorialText.text = "斬る力をためることで前方に移動しながら斬れるぞ";
+            await UniTask.Delay(3000);
+            tutorialText.text = "試しに3回ため斬りしよう";
+            taskText.text = "残り回数";
+            
+            PlayerEvent.IsInChargeAttack.Subscribe(
+                x => { if (x) { MinusChargeAttackNum(); } }
+            ).AddTo(this);
+            await UniTask.Delay(3000);
+            InGameEvent.PlayOnNext();
+            _ = SoundMaster.Instance.PlaySE(whistleSENumber);
+            textAnimator.SetTrigger("SlideText");
+            //テキストを非表示に
+            await UniTask.Delay(2000);
+            tutorialText.text = "";
+        }
+
+        public void MinusChargeAttackNum()
+        {
+            remainChargeAttackNum--;
+            remainNumeberText.text = remainChargeAttackNum.ToString();
         }
 
         private async UniTask UIDescription(CancellationToken cancellation_token = default)
