@@ -62,7 +62,10 @@ namespace SamuraiSoccer.Player
                     stickDir => { ReceiveStick(stickDir); }
                 ).AddTo(this);
             PlayerEvent.IsInChargeAttack.Subscribe(
-                    x => { if (x) { ChargeAttack(); } }
+                    x => { 
+                        if (x && m_state == State.Playing) { ChargeAttack(); }
+                        else { PlayerEvent.SetIsInChargeAtack(false); }                
+                    }
                 ).AddTo(this);
             PlayerEvent.Attack.Subscribe(_ => UpdateSlashTime());
         }
