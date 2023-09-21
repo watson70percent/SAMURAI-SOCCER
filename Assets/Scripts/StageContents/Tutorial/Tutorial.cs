@@ -130,7 +130,7 @@ namespace Tutorial
             await UniTask.Delay(3000);
             tutorialText.text = "試しに目の前の人をひとおもいに斬れ";
             await UniTask.Delay(3000);
-            InGameEvent.PauseOnNext(false);
+            InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             textAnimator.SetTrigger("SlideText");
             //テキストを非表示に
