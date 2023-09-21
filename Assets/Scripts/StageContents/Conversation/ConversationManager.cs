@@ -27,6 +27,8 @@ namespace SamuraiSoccer.StageContents.Conversation
 
         [SerializeField]
         private GameObject m_brushPen; //会話待機中の筆ペン
+        [SerializeField]
+        private Button m_optionYes; //はいの選択肢
 
         [SerializeField]
         private GameObject m_scrollObject; //会話用巻物
@@ -117,11 +119,21 @@ namespace SamuraiSoccer.StageContents.Conversation
                 CancellationTokenSource cts = new CancellationTokenSource();
                 _ = HopImage(m_characterImages[speakerNum], initPos, cts.Token);
                 await m_textScroller.ShowText(stageConversationData.m_conversationTexts[i].m_text);
-                m_brushPen.SetActive(true);
-                m_isTouched = false;
-                while (!m_isTouched)
+                //選択肢の有無による分岐
+                if (stageConversationData.m_conversationTexts[i].is_option)
                 {
-                    await UniTask.Yield();
+                    m_optionYes.gameObject.SetActive(true);
+                    await m_optionYes.OnClickAsObservable().ToUniTask(useFirstValue:true);
+                    m_optionYes.gameObject.SetActive(false);
+                }
+                else
+                {
+                    m_brushPen.SetActive(true);
+                    m_isTouched = false;
+                    while (!m_isTouched)
+                    {
+                        await UniTask.Yield();
+                    }
                 }
                 cts.Cancel();
                 m_characterImages[speakerNum].transform.localPosition = initPos;
