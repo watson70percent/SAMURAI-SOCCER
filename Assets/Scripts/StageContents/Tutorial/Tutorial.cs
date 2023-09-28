@@ -269,7 +269,9 @@ namespace Tutorial
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             //試合情報の見方説明
             textAnimator.SetTrigger("ReturnText");
-            tutorialText.text = "流石我らが希望、手際が良い";
+            tutorialText.text = "よくぞ使いこなして見せた";
+            await UniTask.Delay(3000);
+            tutorialText.text = "本番でも使いこなすのだ";
             await UniTask.Delay(3000);
             tutorialText.text = "最後に試合で必要な情報を確認する";
             await UniTask.Delay(3000);
