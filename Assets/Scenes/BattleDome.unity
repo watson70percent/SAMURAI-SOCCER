@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300452, g: 0.4921977, b: 0.5719268, a: 1}
+  m_IndirectSpecularColor: {r: 0.44050378, g: 0.48899752, b: 0.56938195, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -414,6 +414,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &485703816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2677264473109749921, guid: f0c17f2fc41c12044b2143319858dbd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 758305870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &485703818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485703816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618061ecc50008e4b990c6e83a72b635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &758305870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -486,10 +504,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultStage
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2677264473109749924, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_limitTimeSec
       value: 999999
+=======
+    - target: {fileID: 2677264473109749920, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: team.Array.size
+      value: 1
+>>>>>>> e016c33 (一定点数でクリアするスクリプトのプロトタイプ作成)
       objectReference: {fileID: 0}
     - target: {fileID: 2677264473472736776, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
