@@ -6,7 +6,6 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using SamuraiSoccer;
-using SamuraiSoccer.SoccerGame;
 using SamuraiSoccer.StageContents;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.SoccerGame.AI;
@@ -32,11 +31,16 @@ namespace Tutorial
         public GameObject exclamationMark; //敵の位置を指示してくれる！マーク
         [Tooltip("ホイッスル開始音")]
         public int whistleSENumber;
-        public int remainChargeAttackNum; //残りの敵数
-        public Text taskText; // 課題名が表示されたテキスト
-        public Text remainNumeberText; // 残り敵数の表示
+        public int remainChargeAttackNum; //残りのため斬り回数
+        public GameObject chargeAttackText; // ため斬りの回数表示テキスト
+        public Text remainChargeAttackText; // 残り敵数の表示
+        public GameObject uiMask;
+        public Animator leftControllerFocusAnimator;
+        public Animator rightControllerFocusAnimator;
 
         private bool isThreeOnThreeFinished; // 3対3のミニゲームが終了したかどうか
+
+        private bool chargeAttackTutorialFinished; // ため斬りのチュートリアルが終了したかどうか
 
         private Vector3 initBallPos;
 
@@ -51,11 +55,16 @@ namespace Tutorial
         private void Start()
         {
             // 3対3のミニゲーム終了時にフラグをtrueにする
-            InGameEvent.Finish.Subscribe(_ =>{ isThreeOnThreeFinished = true; });
+            InGameEvent.Finish.Subscribe(_ => { isThreeOnThreeFinished = true; });
             var token = this.GetCancellationTokenOnDestroy();
             //勝手に動くボールを一時停止
             ball.SetActive(false);
             initBallPos = ball.transform.position;
+            // ため斬りを使用不可にする
+            PlayerEvent.SetLockChargeAttack(true);
+            // フォーカス演出を非表示(最初から非表示にすると画面サイズに合わせたUIの縮小が機能しない)
+            leftControllerFocusAnimator.SetTrigger("None");
+            rightControllerFocusAnimator.SetTrigger("None");
             Runner(token).Forget();
         }
 
@@ -108,6 +117,7 @@ namespace Tutorial
             tutorialText.text = "まずはここまで行こう";
             await UniTask.Delay(3000);
             exclamationMark.SetActive(false);
+            leftControllerFocusAnimator.SetTrigger("Focus");
             //カメラをもとに戻す
             spotCamera.Priority = 9;
             samuraiCamera.Priority = 11;
@@ -125,22 +135,25 @@ namespace Tutorial
             InGameEvent.PauseOnNext(true);
 
             //ファースト斬る
+            leftControllerFocusAnimator.SetTrigger("None");
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "サムライが行うのはただ斬ることのみ";
             await UniTask.Delay(3000);
             tutorialText.text = "試しに目の前の人をひとおもいに斬れ";
             await UniTask.Delay(3000);
+            rightControllerFocusAnimator.SetTrigger("Focus");
             InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             textAnimator.SetTrigger("SlideText");
             //テキストを非表示に
             await UniTask.Delay(2000);
             tutorialText.text = "";
-            //敵を切り倒して行って距離移動するまで待機
+            //敵が一定距離吹っ飛ぶまで待機
             while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
+            rightControllerFocusAnimator.SetTrigger("None");
             enemyNumber.text = "0";
             InGameEvent.PauseOnNext(true);
             textAnimator.SetTrigger("ReturnText");
@@ -187,8 +200,8 @@ namespace Tutorial
         {
             InMemoryDataTransitClient<GameResult> resultTransitCliant = new InMemoryDataTransitClient<GameResult>();
             GameResult result;
-            if(!resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
-            if(result == GameResult.Win) return true;
+            if (!resultTransitCliant.TryGet(StorageKey.KEY_WINORLOSE, out result)) return false;
+            if (result == GameResult.Win) return true;
             else return false;
         }
 
@@ -240,13 +253,26 @@ namespace Tutorial
             await UniTask.Delay(3000);
             tutorialText.text = "次はため斬りの練習だ";
             await UniTask.Delay(3000);
+            uiMask.SetActive(true);
             tutorialText.text = "斬る力をためることで前方に移動しながら斬れるぞ";
             await UniTask.Delay(3000);
             tutorialText.text = "試しに3回ため斬りしよう";
-            taskText.text = "残り回数";
-            
+            rightControllerFocusAnimator.SetTrigger("Focus");
+            chargeAttackText.SetActive(true);
+            remainChargeAttackText.text = remainChargeAttackNum.ToString();
+            // ため斬りを使用可能にする
+            PlayerEvent.SetLockChargeAttack(false);
+            // チャージアタック時の処理を登録
             PlayerEvent.IsInChargeAttack.Subscribe(
-                x => { if (x) { MinusChargeAttackNum(); } }
+                x =>
+                {
+                    if (x)
+                    {
+                        MinusChargeAttackNum();
+                        CheckChargeAttackTutorialFinished();
+                        rightControllerFocusAnimator.SetTrigger("None");
+                    }
+                }
             ).AddTo(this);
             await UniTask.Delay(3000);
             InGameEvent.PlayOnNext();
@@ -260,12 +286,21 @@ namespace Tutorial
         public void MinusChargeAttackNum()
         {
             remainChargeAttackNum--;
-            remainNumeberText.text = remainChargeAttackNum.ToString();
+            remainChargeAttackText.text = remainChargeAttackNum.ToString();
+        }
+
+        public void CheckChargeAttackTutorialFinished()
+        {
+            if (!chargeAttackTutorialFinished)
+            {
+                chargeAttackTutorialFinished = true;
+                uiMask.SetActive(false);
+            }
         }
 
         private async UniTask UIDescription(CancellationToken cancellation_token = default)
         {
-            InGameEvent.PauseOnNext(true);
+            chargeAttackText.SetActive(false);
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             //試合情報の見方説明
             textAnimator.SetTrigger("ReturnText");
@@ -290,6 +325,6 @@ namespace Tutorial
             await UniTask.Delay(3000);
             arrowAnimator.gameObject.SetActive(false);
             tutorialText.text = "必ず日本に勝利を持ち帰れ";
-        }  
+        }
     }
 }
