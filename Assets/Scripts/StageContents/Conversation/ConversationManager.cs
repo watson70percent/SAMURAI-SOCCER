@@ -122,9 +122,9 @@ namespace SamuraiSoccer.StageContents.Conversation
                 //‘I‘ðŽˆ‚Ì—L–³‚É‚æ‚é•ªŠò
                 if (stageConversationData.m_conversationTexts[i].is_option)
                 {
-                    m_optionYes.gameObject.SetActive(true);
+                    m_optionYes.transform.parent.gameObject.SetActive(true);
                     await m_optionYes.OnClickAsObservable().ToUniTask(useFirstValue:true);
-                    m_optionYes.gameObject.SetActive(false);
+                    m_optionYes.transform.parent.gameObject.SetActive(false);
                 }
                 else
                 {
