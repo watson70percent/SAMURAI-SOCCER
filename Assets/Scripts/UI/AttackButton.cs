@@ -34,7 +34,8 @@ namespace SamuraiSoccer.UI
 
         public void OnLeaveAttackButton()
         {
-            if (m_pushTime > CHARGETIME)
+            // §ŒÀ‚ª‚©‚©‚Á‚Ä‚¢‚È‚¢‚©‚Âƒ`ƒƒ[ƒW‚µ‚«‚Á‚½Žž‚É‚½‚ßŽa‚è‚É‚È‚é
+            if (m_pushTime > CHARGETIME && !PlayerEvent.IsLockChargeAttack.Value)
             {
                 PlayerEvent.SetIsInChargeAtack(true);
             }

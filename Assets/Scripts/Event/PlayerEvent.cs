@@ -88,11 +88,9 @@ namespace SamuraiSoccer.Event
         }
         public static void SetIsInChargeAtack(bool flag)
         {
+            if (m_lockChargeAttack.Value) return; // ため斬りを使えなくしているときは値を変えない
             m_isInChargeAttack.Value = flag;
         }
-
-
-
 
         private static ReactiveProperty<bool> m_isEnableChargeAttack = new ReactiveProperty<bool>(false);
         /// <summary>
@@ -104,7 +102,26 @@ namespace SamuraiSoccer.Event
         }
         public static void SetIsEnableChargeAtack(bool flag)
         {
+            if (m_lockChargeAttack.Value) return; // ため斬りを使えなくしているときは値を変えない
             m_isEnableChargeAttack.Value = flag;
+        }
+
+        private static ReactiveProperty<bool> m_lockChargeAttack = new ReactiveProperty<bool>(false);
+        /// <summary>
+        /// ため攻撃を使えなくするかどうか
+        /// </summary>
+        public static IReadOnlyReactiveProperty <bool> IsLockChargeAttack
+        {
+            get { return m_lockChargeAttack; }
+        }
+
+        /// <summary>
+        /// ため攻撃の使用可能状態を設定する
+        /// </summary>
+        /// <param name="value">true：ため攻撃できない</param>
+        public static void SetLockChargeAttack(bool value)
+        {
+            m_lockChargeAttack.Value = value;
         }
     }
 }

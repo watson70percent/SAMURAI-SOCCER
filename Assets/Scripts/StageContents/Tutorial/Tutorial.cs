@@ -60,6 +60,8 @@ namespace Tutorial
             //勝手に動くボールを一時停止
             ball.SetActive(false);
             initBallPos = ball.transform.position;
+            // ため斬りを使用不可にする
+            PlayerEvent.SetLockChargeAttack(true);
             // フォーカス演出を非表示(最初から非表示にすると画面サイズに合わせたUIの縮小が機能しない)
             leftControllerFocusAnimator.SetTrigger("None");
             rightControllerFocusAnimator.SetTrigger("None");
@@ -258,6 +260,8 @@ namespace Tutorial
             rightControllerFocusAnimator.SetTrigger("Focus");
             chargeAttackText.SetActive(true);
             remainChargeAttackText.text = remainChargeAttackNum.ToString();
+            // ため斬りを使用可能にする
+            PlayerEvent.SetLockChargeAttack(false);
             // チャージアタック時の処理を登録
             PlayerEvent.IsInChargeAttack.Subscribe(
                 x =>
