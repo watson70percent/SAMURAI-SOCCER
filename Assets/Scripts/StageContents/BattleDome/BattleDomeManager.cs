@@ -60,7 +60,7 @@ namespace SamuraiSoccer.StageContents.BattlerDome
             
             await Conversation(score);
             
-            await UniTask.Delay(4000);
+
             UIEffectEvent.BlackOutOnNext(5f);
             InGameEvent.StandbyOnNext(t == GoalEventType.NormalOpponentGoal);
             await UniTask.Delay(3000);
