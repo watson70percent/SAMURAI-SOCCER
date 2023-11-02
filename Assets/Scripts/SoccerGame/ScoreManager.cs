@@ -20,7 +20,7 @@ namespace SamuraiSoccer.SoccerGame
             var client = new InMemoryDataTransitClient<int>();
             var stageNumber = client.Get(StorageKey.KEY_STAGENUMBER);
             client.Set(StorageKey.KEY_STAGENUMBER, stageNumber);
-            isLastStage = stageNumber == 12;
+            isLastStage = stageNumber == 13;
         }
 
         /// <summary>
