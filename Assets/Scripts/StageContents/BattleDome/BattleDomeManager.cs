@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using SamuraiSoccer.Event;
-using System;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine.SceneManagement;
-using SamuraiSoccer;
-using UnityEngine;
 using SamuraiSoccer.StageContents.Conversation;
 
 namespace SamuraiSoccer.StageContents.BattlerDome
@@ -25,21 +20,13 @@ namespace SamuraiSoccer.StageContents.BattlerDome
         
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             InGameEvent.TeammateScore.Subscribe(score => this.score = score).AddTo(this);
-            InGameEvent.Goal.Where(t => t == GoalEventType.CutSceneOpponentGoal || t == GoalEventType.CutSceneTeammateGoal).Subscribe(async t => await GoalAction(t)).AddTo(this);
+            InGameEvent.Goal.Where(t =>t== GoalEventType.CutSceneOpponentGoal || t == GoalEventType.CutSceneTeammateGoal).Subscribe(async t => await GoalAction(t)).AddTo(this);
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-
-
-
-        void Clear()
+        private void Clear()
         {
             InGameEvent.FinishOnNext();
             var win = new InMemoryDataTransitClient<GameResult>();
@@ -49,19 +36,20 @@ namespace SamuraiSoccer.StageContents.BattlerDome
 
         private async UniTask GoalAction(GoalEventType t)
         {
-            if (score >= clearPoint)
+            if (t == GoalEventType.CutSceneTeammateGoal)
             {
-                Clear();
-                return;
+                score++;
+                if (score >= clearPoint)
+                {
+                    Clear();
+                    return;
+                }
+                audioSource.PlayOneShot(goalSound);
+                await Conversation(score);
             }
-
             audioSource.PlayOneShot(goalSound);
-            
-            
-            await Conversation(score);
-            
-
             UIEffectEvent.BlackOutOnNext(5f);
+            await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext(t == GoalEventType.NormalOpponentGoal);
             await UniTask.Delay(3000);
             audioSource.PlayOneShot(startSound);
