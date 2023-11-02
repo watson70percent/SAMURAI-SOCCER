@@ -23,7 +23,7 @@ namespace SamuraiSoccer.SoccerGame
         private Vector3 velocity;
         private Vector3 angularVelocity;
 
-        private int m_calledNum = 0; // ゴールイベントが複数呼び出されたか監視する番号
+        private int calledNum = 0; // ゴールイベントが複数呼び出されたか監視する番号
 
         private static Subject<BallActionCommand> commandStream = new();
 
@@ -31,6 +31,8 @@ namespace SamuraiSoccer.SoccerGame
         public bool last_touch;
         [NonSerialized]
         public GameObject owner;
+
+        private bool isPause; // ポーズ中かどうか
 
         /// <summary>
         /// ボールに対するアクションを行う．
@@ -93,6 +95,7 @@ namespace SamuraiSoccer.SoccerGame
             {
                 Play(new Unit());
             }
+            this.isPause = isPause;
         }
 
         private void Play(Unit _)
@@ -101,7 +104,8 @@ namespace SamuraiSoccer.SoccerGame
             rb.velocity = velocity;
             rb.angularVelocity = angularVelocity;
             // ゴールイベントが呼び出された数を初期化
-            m_calledNum = 0;
+            calledNum = 0;
+            isPause = false;
         }
 
         /// <summary>
@@ -272,7 +276,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
-                if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
+                if (System.Threading.Interlocked.Increment(ref calledNum) != 1) return;
                 var isTeammateGoal = transform.position.z > (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2;
                 scoreManager.Goal(isTeammateGoal);
             }
@@ -295,7 +299,8 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
-                if (System.Threading.Interlocked.Increment(ref m_calledNum) != 1) return;
+                if (System.Threading.Interlocked.Increment(ref calledNum) != 1) return;
+                if (isPause) return;
                 var isTeammateGoal = transform.position.z > (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2;
                 scoreManager.Goal(isTeammateGoal);
             }
