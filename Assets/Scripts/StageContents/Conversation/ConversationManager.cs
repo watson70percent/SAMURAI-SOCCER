@@ -28,7 +28,9 @@ namespace SamuraiSoccer.StageContents.Conversation
         [SerializeField]
         private GameObject m_brushPen; //会話待機中の筆ペン
         [SerializeField]
-        private Button m_optionYes; //はいの選択肢
+        private Button m_optionGyoi; //御意の選択肢
+        [SerializeField]
+        private List<Button> m_optionYesButtons; //はいの選択肢
 
         [SerializeField]
         private GameObject m_scrollObject; //会話用巻物
@@ -122,9 +124,12 @@ namespace SamuraiSoccer.StageContents.Conversation
                 //選択肢の有無による分岐
                 if (stageConversationData.m_conversationTexts[i].is_option)
                 {
-                    m_optionYes.transform.parent.gameObject.SetActive(true);
-                    await m_optionYes.OnClickAsObservable().ToUniTask(useFirstValue:true);
-                    m_optionYes.transform.parent.gameObject.SetActive(false);
+                    m_optionYesButtons.ForEach(button => button.transform.parent.gameObject.SetActive(true));
+                    var result = await Observable.Merge(
+                        m_optionYesButtons.Select(button => button.OnClickAsObservable().Select(_ => button.name))
+                    )
+                    .ToUniTask(useFirstValue: true);
+                    m_optionYesButtons.ForEach(button => button.transform.parent.gameObject.SetActive(false));
                 }
                 else
                 {
