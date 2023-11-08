@@ -5,6 +5,8 @@ Shader"Custom/Indicator_plate"
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Texture", 2D) = "white" {}
         _Level ("Level", Range(0,1)) = 0.0
+        _Metallic ("Metallic", Range(0, 1)) = 0.0
+        _Smoothness ("Smoothness", Range(0, 1)) = 1.0
 
         [HDR]
         _EmissionColor("Emission", color) = (0, 0, 0, 0)
@@ -28,6 +30,8 @@ Shader"Custom/Indicator_plate"
         fixed4 _Color;
         fixed4 _EmissionColor;
         float _Level;
+        fixed _Metallic;
+        fixed _Smoothness;
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
@@ -38,8 +42,8 @@ Shader"Custom/Indicator_plate"
             visible = min(visible, col.a);
             o.Albedo = col.rgb;
             o.Emission = _EmissionColor.rgb * visible;
-            o.Metallic = 0.0;
-            o.Smoothness = 1.0;
+            o.Metallic = _Metallic;
+            o.Smoothness = _Smoothness;
             o.Alpha = visible;
         }
 
