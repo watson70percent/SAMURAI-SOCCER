@@ -134,6 +134,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             teammate = Resources.Load<GameObject>("Teammate");
             teammateName = "our";
             if (oppType == "opponent_Tutorial") teammateName = "ourtutorial";
+            if (oppType == "opponent_teammate") teammateName = "ourzero";
             opponent = Resources.Load<GameObject>(oppType);
             oppName = oppType;
             client.Set(StorageKey.KEY_OPPONENT_TYPE, oppType);
