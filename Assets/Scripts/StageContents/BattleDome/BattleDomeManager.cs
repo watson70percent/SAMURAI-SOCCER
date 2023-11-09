@@ -3,6 +3,7 @@ using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine.SceneManagement;
+using SamuraiSoccer;
 using SamuraiSoccer.StageContents.Conversation;
 
 namespace SamuraiSoccer.StageContents.BattlerDome
@@ -15,14 +16,15 @@ namespace SamuraiSoccer.StageContents.BattlerDome
         public AudioClip goalSound;
         public AudioClip startSound;
         public ConversationManager conversationManager;
-        int clearPoint = 3;
-        int score = 0;
+        public string resultSceneName;
+        int clearNum = 5;
+        int scenarioNum = 0;
         
 
         // Start is called before the first frame update
         private void Start()
         {
-            InGameEvent.TeammateScore.Subscribe(score => this.score = score).AddTo(this);
+            InGameEvent.TeammateScore.Subscribe(score => this.scenarioNum = score).AddTo(this);
             InGameEvent.Goal.Where(t =>t== GoalEventType.CutSceneOpponentGoal || t == GoalEventType.CutSceneTeammateGoal).Subscribe(async t => await GoalAction(t)).AddTo(this);
         }
 
@@ -31,19 +33,30 @@ namespace SamuraiSoccer.StageContents.BattlerDome
             InGameEvent.FinishOnNext();
             var win = new InMemoryDataTransitClient<GameResult>();
             win.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
-            SceneManager.LoadScene("Result");
+            _ = SlowToWin();
+        }
+
+        /// <summary>
+        /// èüÇ¡ÇΩéûÇ…ÉVÅ[ÉìëJà⁄Ç‹Ç≈Ç‰Ç¡Ç≠ÇËÇ…ÇµÇƒëJà⁄Ç≥ÇπÇÈ
+        /// </summary>
+        /// <returns></returns>
+        private async UniTask SlowToWin()
+        {
+            Time.timeScale = 0.3f;
+            await SoundMaster.Instance.PlaySE(11);
+            Time.timeScale = 1;
+            SceneManager.LoadScene(resultSceneName);
         }
 
         private async UniTask GoalAction(GoalEventType t)
         {
-            score++;
-            if (score >= clearPoint)
+            if (scenarioNum >= clearNum)
             {
                 Clear();
                 return;
             }
             audioSource.PlayOneShot(goalSound);
-            await Conversation(score);
+            await Conversation(scenarioNum);
             audioSource.PlayOneShot(goalSound);
             UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
@@ -53,13 +66,13 @@ namespace SamuraiSoccer.StageContents.BattlerDome
             InGameEvent.PlayOnNext();            
         }
 
-        private async UniTask Conversation(int score)
+        private async UniTask Conversation(int num)
         {
             int convNum = -1;
-            switch (score)
+            switch (num)
             {
                 case 1: convNum = 30; break;
-                case 2: convNum = 31;break;
+                case 4: convNum = 31; break;
                 default: break;
             }
             
