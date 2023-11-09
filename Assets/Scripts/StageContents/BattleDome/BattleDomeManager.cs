@@ -36,25 +36,21 @@ namespace SamuraiSoccer.StageContents.BattlerDome
 
         private async UniTask GoalAction(GoalEventType t)
         {
-            if (t == GoalEventType.CutSceneTeammateGoal)
+            score++;
+            if (score >= clearPoint)
             {
-                score++;
-                if (score >= clearPoint)
-                {
-                    Clear();
-                    return;
-                }
-                audioSource.PlayOneShot(goalSound);
-                await Conversation(score);
+                Clear();
+                return;
             }
+            audioSource.PlayOneShot(goalSound);
+            await Conversation(score);
             audioSource.PlayOneShot(goalSound);
             UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext(t == GoalEventType.NormalOpponentGoal);
             await UniTask.Delay(3000);
             audioSource.PlayOneShot(startSound);
-            InGameEvent.PlayOnNext();
-            
+            InGameEvent.PlayOnNext();            
         }
 
         private async UniTask Conversation(int score)
