@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SamuraiSoccer.StageContents.StageSelect;
+using System.Linq;
 
 namespace SamuraiSoccer.StageContents.Result
 {
@@ -19,7 +20,7 @@ namespace SamuraiSoccer.StageContents.Result
             SoundMaster.Instance.PlaySE(0);
             InMemoryDataTransitClient<int> stageNumDataTransitClient = new InMemoryDataTransitClient<int>();
             int stageNum = stageNumDataTransitClient.Get(StorageKey.KEY_STAGENUMBER);
-            string retrySceneName = m_stagePreviewDatas.stageSelectList[stageNum].gameScene;
+            string retrySceneName = m_stagePreviewDatas.stageSelectList.Where(stagedata => stagedata.stageNumber == stageNum).First().gameScene;
             stageNumDataTransitClient.Set(StorageKey.KEY_STAGENUMBER, stageNum);
             SceneManager.LoadScene(retrySceneName);
         }
