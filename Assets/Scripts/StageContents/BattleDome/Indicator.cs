@@ -39,7 +39,7 @@ namespace SamuraiSoccer.StageContents.BattleDome
 
             m_objs = grid.Select(g =>
             {
-                var o = Instantiate<GameObject>(m_indicatorPlane, g, Quaternion.identity);
+                var o = Instantiate(m_indicatorPlane, g, Quaternion.identity);
                 var m = o.GetComponentInChildren<Renderer>().material;
                 m.SetFloat("_Level", 0.0f);
                 return m;
