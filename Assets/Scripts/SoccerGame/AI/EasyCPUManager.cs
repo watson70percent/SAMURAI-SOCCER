@@ -134,6 +134,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             teammate = Resources.Load<GameObject>("Teammate");
             teammateName = "our";
             if (oppType == "opponent_Tutorial") teammateName = "ourtutorial";
+            if (oppType == "opponent_teammate") teammateName = "ourzero";
             opponent = Resources.Load<GameObject>(oppType);
             oppName = oppType;
             client.Set(StorageKey.KEY_OPPONENT_TYPE, oppType);
@@ -412,7 +413,7 @@ namespace SamuraiSoccer.SoccerGame.AI
 
             ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0, 0.5f, 0);
             ball.rb.velocity = Vector3.zero;
-            samurai.transform.position = new Vector3(35.7f, 0, 59.6f);
+            samurai.transform.position = new Vector3(35.7f, 0, 39.6f);
             referee.transform.position = new Vector3(38, 0, 69);
 
             SetAnimatorSpeed(0);

@@ -130,7 +130,7 @@ namespace SamuraiSoccer.Player
         /// </summary>
         private Rect SetBoundy()
         {
-            var flagPositions = flagsParent.GetComponentsInChildren<Transform>().Select(t => t.position).ToArray();
+            var flagPositions = flagsParent.GetComponentsInChildren<Transform>().Where(obj => obj.tag == "Flag").Select(t => t.position).ToArray();
             var xPoints = flagPositions.Select(p => p.x).ToArray();
             var zPoints = flagPositions.Select(p => p.z).ToArray();
             var r = new Rect
