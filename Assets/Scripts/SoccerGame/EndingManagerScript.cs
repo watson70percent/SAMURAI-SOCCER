@@ -14,6 +14,8 @@ namespace SamuraiSoccer.SoccerGame
         float Interval;
         [SerializeField]
         float velocity;
+        [SerializeField]
+        GameObject sponeSpot;
 
         GameObject staff;
         Rigidbody rb;
@@ -34,7 +36,7 @@ namespace SamuraiSoccer.SoccerGame
             if (elapsedTime > Interval && !is_staffEnd)
             {
                 elapsedTime = 0;
-                staff = Instantiate(test);
+                staff = Instantiate(test,sponeSpot.transform.position,sponeSpot.transform.rotation);
                 staff.GetComponent<Rigidbody>().velocity = Vector3.down * velocity;
                 staff.GetComponent<MeshRenderer>().material = StaffList[staffIndex];
                 staffIndex++;
