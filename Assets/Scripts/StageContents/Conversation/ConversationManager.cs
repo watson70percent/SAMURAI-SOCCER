@@ -28,8 +28,6 @@ namespace SamuraiSoccer.StageContents.Conversation
         [SerializeField]
         private GameObject m_brushPen; //会話待機中の筆ペン
         [SerializeField]
-        private Button m_optionGyoi; //御意の選択肢
-        [SerializeField]
         private List<Button> m_optionYesButtons; //はいの選択肢
 
         [SerializeField]
