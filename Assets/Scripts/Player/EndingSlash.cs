@@ -49,7 +49,7 @@ namespace SamuraiSoccer.Player
         {
             
             var slashnormal = -transform.forward; //スラッシュの法線
-            print(collision.contacts[1].point);
+            print(collision.contacts[0].point);
             print(slashnormal);
 
             Mesh[] meshes;
