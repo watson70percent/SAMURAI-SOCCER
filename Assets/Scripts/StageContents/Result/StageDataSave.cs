@@ -7,23 +7,13 @@ namespace SamuraiSoccer.StageContents.Result
 {
     public class StageDataSave : MonoBehaviour
     {
-        [SerializeField]
-        private ConversationManager m_conversationManager;
-
-        private void Start()
+        /// <summary>
+        /// クリア番号が過去のセーブデータ以上だったらセーブデータを更新する
+        /// </summary>
+        /// <param name="clearNumber">クリア番号</param>
+        /// <returns>セーブしたかどうか</returns>
+        public bool Save(int clearNumber)
         {
-            Save(this.GetCancellationTokenOnDestroy()).Forget();
-        }
-
-        async UniTask Save(CancellationToken cancellation_token)
-        {
-            GameResult result;
-            while ((result = GetComponent<ResultManager>().ResultState) == GameResult.Undefined)
-            {
-                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
-            }
-            InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
-            int clearNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
             InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
             int savedNumber;
             if (fileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out var save))
@@ -37,18 +27,15 @@ namespace SamuraiSoccer.StageContents.Result
                 data.m_stageData = clearNumber;
                 fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
             }
-            if (result == GameResult.Win && clearNumber >= savedNumber)
+            if (clearNumber >= savedNumber)
             {
                 // ステージ情報を保存
                 SaveData saveData = new SaveData();
-                saveData.m_stageData = clearNumber+1;
+                saveData.m_stageData = clearNumber + 1;
                 new InFileTransmitClient<SaveData>().Set(StorageKey.KEY_STAGENUMBER, saveData);
-                // ステージ番号に対応したお話を開始
-                // お話の番号=クリアしたステージ番号を3で割った商×4+ステージ番号を3で割った余り+1
-                await m_conversationManager.PlayConversation((clearNumber / 3) * 4 + clearNumber % 3 + 1);
+                return true;
             }
-            // 再戦用に再びKEY_STAGENUMBERをセットする
-            stageNumberTransitionClient.Set(StorageKey.KEY_STAGENUMBER, clearNumber);
+            return false;
         }
     }
 }
