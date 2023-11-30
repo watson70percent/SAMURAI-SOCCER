@@ -1153,7 +1153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612862407}
-  m_LocalRotation: {x: 0.08639662, y: 0.70180887, z: -0.08639662, w: 0.70180887}
+  m_LocalRotation: {x: 0.08639663, y: 0.70180887, z: -0.08639663, w: 0.70180887}
   m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1737,6 +1737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372f07ba75817ba4f92a2db318c48692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CutSceneScoreTeammate: 
+  m_CutSceneScoreOpponent: 
 --- !u!224 &1947074218 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2433001006624056901, guid: 3481aaf22b85c304f8086076a27c93b2,
@@ -2413,7 +2415,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5728114704678306450}
-  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.086396605, w: 0.7018089}
+  m_LocalRotation: {x: 0.08639662, y: 0.70180887, z: -0.08639662, w: 0.70180887}
   m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13801,6 +13803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: flag
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 804ba53f1a183214abd0908ae2152096,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flag
+      objectReference: {fileID: 0}
     - target: {fileID: 4063835366044962077, guid: 804ba53f1a183214abd0908ae2152096,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15855,6 +15862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: flag (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 804ba53f1a183214abd0908ae2152096,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flag
+      objectReference: {fileID: 0}
     - target: {fileID: 4063835366044962077, guid: 804ba53f1a183214abd0908ae2152096,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15933,6 +15945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: flag (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 804ba53f1a183214abd0908ae2152096,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flag
       objectReference: {fileID: 0}
     - target: {fileID: 4063835366044962077, guid: 804ba53f1a183214abd0908ae2152096,
         type: 3}
@@ -16043,6 +16060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: flag (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 804ba53f1a183214abd0908ae2152096,
+        type: 3}
+      propertyPath: m_TagString
+      value: Flag
       objectReference: {fileID: 0}
     - target: {fileID: 4063835366044962077, guid: 804ba53f1a183214abd0908ae2152096,
         type: 3}
