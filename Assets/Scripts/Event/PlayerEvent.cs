@@ -36,14 +36,17 @@ namespace SamuraiSoccer.Event
                 InGameEvent.Finish.Select(_ => false)
             ).ToReactiveProperty<bool>(false);
 
-
+        private static IReadOnlyReactiveProperty<bool> m_getPenalty = Observable.Merge(
+                InGameEvent.Penalty.Select(_ => false),
+                InGameEvent.Penalty.Delay(TimeSpan.FromSeconds(1.0)).Select(_ => true) // 1秒経ったらペナルティで斬れなくする処理を解除
+            ).ToReactiveProperty<bool>(true);
 
         /// <summary>
         /// Attackのイベントを発行
         /// </summary>
         public static void AttackOnNext()
         {
-            if(m_isEnableAttack.Value) m_attackSubject.OnNext(Unit.Default);
+            if(m_isEnableAttack.Value && m_getPenalty.Value) m_attackSubject.OnNext(Unit.Default);
         }
 
         //審判がファールチェックするトリガー
@@ -88,8 +91,7 @@ namespace SamuraiSoccer.Event
         }
         public static void SetIsInChargeAtack(bool flag)
         {
-            if (!m_isEnableAttack.Value) return; // 攻撃できないときは値を変えない
-            m_isInChargeAttack.Value = flag;
+            if (m_isEnableAttack.Value && m_getPenalty.Value) m_isInChargeAttack.Value = flag;
         }
 
         private static ReactiveProperty<bool> m_isEnableChargeAttack = new ReactiveProperty<bool>(false);
