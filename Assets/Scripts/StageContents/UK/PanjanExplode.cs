@@ -52,7 +52,6 @@ namespace SamuraiSoccer.UK
         public void SetFireObject(GameObject fire)
         {
             this.fire = fire;
-            this.fire.SetActive(true);
         }
     }
 }

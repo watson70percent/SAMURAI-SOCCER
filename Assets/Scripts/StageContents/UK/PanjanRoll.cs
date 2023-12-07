@@ -80,8 +80,8 @@ namespace SamuraiSoccer.UK
                 if (index < 15)
                 {
                     panjanExplode = part.gameObject.GetComponent<PanjanExplode>();
-                    panjanExplode.gameObject.SetActive(true);
-                    panjanExplode.SetFireObject(Instantiate(fire, part.position, Quaternion.identity, part));
+                    Instantiate(fire, part.position, Quaternion.identity, part).SetActive(true);
+                    panjanExplode.SetFireObject(fire);
                 }
                 Rigidbody rbPart = part.gameObject.GetComponent<Rigidbody>();
                 rbPart.isKinematic = false;
