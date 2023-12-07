@@ -55,6 +55,7 @@ namespace SamuraiSoccer.Player
             InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; }).AddTo(this);
             InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; if (!isPause) { UpdateSlashTime(); } }).AddTo(this);
             InGameEvent.Play.Subscribe(x => { m_state = State.Playing; UpdateSlashTime(); }).AddTo(this);
+            InGameEvent.Goal.Subscribe(x => { PlayerEvent.SetIsEnableChargeAtack(false); }).AddTo(this);
             InGameEvent.Finish.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
 
 

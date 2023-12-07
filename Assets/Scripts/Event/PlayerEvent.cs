@@ -88,7 +88,7 @@ namespace SamuraiSoccer.Event
         }
         public static void SetIsInChargeAtack(bool flag)
         {
-            if (m_lockChargeAttack.Value) return; // ‚½‚ßa‚è‚ğg‚¦‚È‚­‚µ‚Ä‚¢‚é‚Æ‚«‚Í’l‚ğ•Ï‚¦‚È‚¢
+            if (!m_isEnableAttack.Value) return; // UŒ‚‚Å‚«‚È‚¢‚Æ‚«‚Í’l‚ğ•Ï‚¦‚È‚¢
             m_isInChargeAttack.Value = flag;
         }
 
