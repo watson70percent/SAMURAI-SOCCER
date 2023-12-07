@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
@@ -144,6 +142,8 @@ namespace SamuraiSoccer.StageContents.Conversation
             }
             ActiveTextUI(false);
             await m_uiFade.FadeOutUI();
+            await m_scrollScript.ScrollSlide(-m_initPos.x, m_initPos.x, m_initPos.y, 1.0f);
+            await UniTask.Delay(500);
             // Šª•¨‚ÌˆÚ“®
         }
 

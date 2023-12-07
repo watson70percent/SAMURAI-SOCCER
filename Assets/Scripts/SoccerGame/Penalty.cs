@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UniRx;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
-
-
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -45,19 +42,27 @@ namespace SamuraiSoccer.SoccerGame
             m_yellowCard[penaltynumber].SetActive(true);
             if (penaltynumber == 1)
             {
-                SoundMaster.Instance.PlaySE(m_redcardSENumber);
-                InMemoryDataTransitClient<GameResult> lose = new InMemoryDataTransitClient<GameResult>();
-                lose.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
-                InMemoryDataTransitClient<string> message = new InMemoryDataTransitClient<string>();
-                message.Set(StorageKey.KEY_RESULTMESSAGE, "反則負け！");
-                InGameEvent.FinishOnNext();
-                Instantiate(m_gameOverPanel);
-                SceneManager.LoadScene(m_resultSceneName);
+                LoseEffect().Forget();
             }
             else
             {
-                SoundMaster.Instance.PlaySE(m_yellowcardSENumber);
+                SoundMaster.Instance.PlaySE(m_yellowcardSENumber).Forget();
             }
+        }
+
+        private async UniTask LoseEffect()
+        {
+            SoundMaster.Instance.PlaySE(m_redcardSENumber).Forget();
+            Time.timeScale = 0.3f;
+            InMemoryDataTransitClient<GameResult> lose = new InMemoryDataTransitClient<GameResult>();
+            lose.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
+            InMemoryDataTransitClient<string> message = new InMemoryDataTransitClient<string>();
+            message.Set(StorageKey.KEY_RESULTMESSAGE, "反則負け！");
+            InGameEvent.FinishOnNext();
+            Instantiate(m_gameOverPanel);
+            await UniTask.Delay(1000);
+            Time.timeScale = 1.0f;
+            SceneManager.LoadScene(m_resultSceneName);
         }
     }
 }
