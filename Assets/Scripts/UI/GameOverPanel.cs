@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameOverPanel : MonoBehaviour
 {
@@ -25,9 +22,5 @@ public class GameOverPanel : MonoBehaviour
         time += Time.deltaTime;
         col.a = time;
         image.color = col;
-        if (time > 1)
-        {
-            SceneManager.LoadScene("Result");
-        }
     }
 }
