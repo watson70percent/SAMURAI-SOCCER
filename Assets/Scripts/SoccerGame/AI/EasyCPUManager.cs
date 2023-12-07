@@ -188,11 +188,10 @@ namespace SamuraiSoccer.SoccerGame.AI
             SetAnimatorSpeed(1);
         }
 
-        private void Standby(bool isTeammateBall)
+        private void Standby(bool _)
         {
             m_isPause = true;
             SetAnimatorSpeed(0);
-            Init(isTeammateBall);
         }
 
         private void SetAnimatorSpeed(float speed)
@@ -214,6 +213,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             UIEffectEvent.BlackOutOnNext(5f);
             await UniTask.Delay(4000);
             InGameEvent.StandbyOnNext(t == GoalEventType.NormalOpponentGoal);
+            Init(t == GoalEventType.NormalOpponentGoal);
             await UniTask.Delay(3000);
             audioSource.PlayOneShot(startSound);
             InGameEvent.PlayOnNext();
