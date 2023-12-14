@@ -10,7 +10,6 @@ using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
 namespace SamuraiSoccer.SoccerGame.AI
 {
