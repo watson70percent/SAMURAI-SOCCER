@@ -17,6 +17,7 @@ namespace Tutorial
     {
         public EasyCPUManager easyCPUManager;
         public GameObject samurai;
+        public GameObject referee;
         public GameObject ball;
         public GameObject enemy; //召喚する敵
         public GameObject teamGroup; //味方チームがまとまって入っているオブジェクト
@@ -246,6 +247,7 @@ namespace Tutorial
             // 敵と見方のオブジェクトを空にする
             easyCPUManager.team = new List<GameObject>();
             foreach (Transform child in teamGroup.transform) Destroy(child.gameObject);
+            Destroy(referee);
             ball.SetActive(false);
             ball.transform.position = initBallPos;
             textAnimator.SetTrigger("ReturnText");
