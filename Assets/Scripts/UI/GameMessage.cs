@@ -14,7 +14,7 @@ public class GameMessage : MonoBehaviour
 
     private void Start()
     {
-        InGameEvent.Goal.Subscribe(_ => TextContent = "Goal!").AddTo(this);
+        InGameEvent.Goal.Where(t => t == GoalEventType.NormalTeammateGoal || t == GoalEventType.NormalOpponentGoal).Subscribe(_ => TextContent = "Goal!").AddTo(this);
         InGameEvent.Penalty.Subscribe(_ => TextContent = "反則!").AddTo(this);
     }
     public string TextContent 

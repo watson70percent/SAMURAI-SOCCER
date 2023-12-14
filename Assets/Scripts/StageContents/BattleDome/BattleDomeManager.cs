@@ -3,7 +3,6 @@ using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine.SceneManagement;
-using SamuraiSoccer;
 using SamuraiSoccer.StageContents.Conversation;
 
 namespace SamuraiSoccer.StageContents.BattlerDome
@@ -57,13 +56,7 @@ namespace SamuraiSoccer.StageContents.BattlerDome
             }
             audioSource.PlayOneShot(goalSound);
             await Conversation(scenarioNum);
-            audioSource.PlayOneShot(goalSound);
-            UIEffectEvent.BlackOutOnNext(5f);
-            await UniTask.Delay(4000);
-            InGameEvent.StandbyOnNext(t == GoalEventType.NormalOpponentGoal);
-            await UniTask.Delay(3000);
-            audioSource.PlayOneShot(startSound);
-            InGameEvent.PlayOnNext();            
+            InGameEvent.GoalOnNext(GoalEventType.NormalTeammateGoal);        
         }
 
         private async UniTask Conversation(int num)
