@@ -4,7 +4,6 @@ using UniRx;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
 using Cysharp.Threading.Tasks;
-using UnityEditor.PackageManager;
 
 namespace SamuraiSoccer.SoccerGame
 {
