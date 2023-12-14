@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using Cysharp.Threading.Tasks;
+using System.Threading;
+using System;
+using UnityEngine.SceneManagement;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -41,10 +46,17 @@ namespace SamuraiSoccer.SoccerGame
                 staff.GetComponent<MeshRenderer>().material = StaffList[staffIndex];
                 staffIndex++;
             }
-            if(staffIndex >= StaffList.Length)
+            if(staffIndex >= StaffList.Length && !is_staffEnd)
             {
                 is_staffEnd = true;
+                ReturnTitle();
             }
+        }
+        
+        async UniTask ReturnTitle()
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(10)); //最後のパネルを流してから5秒後にシーン遷移
+            SceneManager.LoadScene("Start");
         }
     }
 }
