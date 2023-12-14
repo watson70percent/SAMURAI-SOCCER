@@ -99,6 +99,11 @@ namespace SamuraiSoccer.SoccerGame.AI
                 return;
             }
 
+            if (transform.position.y < -5f)
+            {
+                _ = manager.Kill(gameObject);
+            }
+
             if ((ball.position - transform.position).sqrMagnitude < 4)
             {
                 try
