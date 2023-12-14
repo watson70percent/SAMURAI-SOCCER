@@ -1,16 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Burst;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
+using System.Runtime.InteropServices;
+using Unity.Burst.CompilerServices;
 
 namespace SamuraiSoccer
 {
     [BurstCompile]
-    public struct VertexSideJudgeJob : IJobParallelFor
+    public struct VertexSideJudgeJob : IJobParallelFor, IDisposable
     {
         [ReadOnly]
         public NativeArray<Vector3> vertex;
@@ -19,7 +19,7 @@ namespace SamuraiSoccer
         public float3 dir;
 
         [ReadOnly]
-        public float3 pos;
+        public float offset;
 
         [WriteOnly]
         public NativeArray<byte> side;
@@ -27,77 +27,90 @@ namespace SamuraiSoccer
         [WriteOnly]
         public NativeArray<float> normal;
 
+        public void Dispose()
+        {
+            side.Dispose();
+            normal.Dispose();
+        }
+
         public void Execute(int index)
         {
             float3 vp = vertex[index];
-            float n = math.dot(dir, vp - pos);
+            float n = math.dot(dir, vp) + offset;
             normal[index] = n;
             side[index] = (byte)math.step(0.0f, n);
         }
     }
 
     [BurstCompile]
-    public struct MeshSideJudgeJob : IJob
+    public struct MeshSideJudgeJob : IJob, IDisposable
     {
         [ReadOnly]
         public NativeArray<byte> side;
 
-        [WriteOnly]
-        public NativeArray<ushort> forward;
+        [ReadOnly]
+        public NativeArray<int> indexes;
 
         [WriteOnly]
-        public NativeArray<ushort> backward;
+        public NativeList<int> forward;
 
         [WriteOnly]
-        public NativeArray<ushort> center;
+        public NativeList<int> backward;
 
+        [WriteOnly]
+        public NativeList<int> center;
+
+        public void Dispose()
+        {
+            forward.Dispose();
+            backward.Dispose();
+            center.Dispose();
+        }
 
         public void Execute()
         {
-            var triCount = side.Length / 3;
-            using var _forward = new NativeList<ushort>(triCount * 2, Allocator.Temp);
-            using var _backward = new NativeList<ushort>(triCount * 2, Allocator.Temp);
-            using var _center = new NativeList<ushort>(triCount, Allocator.Temp);
-            for (ushort i = 0; i < triCount; i++)
+            var triCount = indexes.Length / 3;
+            for (var i = 0; i < triCount; i++)
             {
-                var i0 = 3 * i;
-                var i1 = 3 * i + 1;
-                var i2 = 3 * i + 2;
+                var i0 = indexes[3 * i];
+                var i1 = indexes[3 * i + 1];
+                var i2 = indexes[3 * i + 2];
                 var sideScore = side[i0] + side[i1] + side[i2];
                 switch (sideScore)
                 {
                     case 0:
-                        _backward.Add((ushort)i0);
-                        _backward.Add((ushort)i1);
-                        _backward.Add((ushort)i2); break;
+                        backward.Add(i0);
+                        backward.Add(i1);
+                        backward.Add(i2); break;
                     case 3:
-                        _forward.Add((ushort)i0);
-                        _forward.Add((ushort)i1);
-                        _forward.Add((ushort)i2); break;
+                        forward.Add(i0);
+                        forward.Add(i1);
+                        forward.Add(i2); break;
                     default:
-                        _center.Add((ushort)i0);
-                        _center.Add((ushort)i1);
-                        _center.Add((ushort)i2); break;
+                        center.Add(i0);
+                        center.Add(i1);
+                        center.Add(i2); break;
                 }
             }
-            forward = _forward.ToArray(Allocator.TempJob);
-            backward = _backward.ToArray(Allocator.TempJob);
-            center = _center.ToArray(Allocator.TempJob);
         }
     }
 
     [BurstCompile]
-    public struct IndexJob : IJob
+    public struct IndexJob : IJob, IDisposable
     {
         [ReadOnly]
-        public NativeArray<ushort> center;
+        public NativeList<int> center;
 
         [WriteOnly]
-        public NativeParallelMultiHashMap<ushort, int> vertexIndex;
+        public NativeParallelMultiHashMap<int, int> vertexIndex;
+
+        public void Dispose()
+        {
+            vertexIndex.Dispose();
+        }
 
         public void Execute()
         {
-            vertexIndex = new NativeParallelMultiHashMap<ushort, int>(center.Length, Allocator.TempJob);
             var triCount = center.Length / 3;
             for (int i = 0; i < triCount; i++)
             {
@@ -109,7 +122,7 @@ namespace SamuraiSoccer
     }
 
     [BurstCompile]
-    public struct DivideJob : IJob
+    public struct DivideJob : IJob, IDisposable
     {
         [ReadOnly]
         public NativeArray<float> normal;
@@ -121,20 +134,23 @@ namespace SamuraiSoccer
         public NativeArray<Vector3> vertexPos;
 
         [ReadOnly]
-        public NativeArray<ushort> center;
+        public NativeList<int> center;
 
         [ReadOnly]
-        public NativeParallelMultiHashMap<ushort, int> vertexIndex;
+        public NativeParallelMultiHashMap<int, int> vertexIndex;
 
-        [WriteOnly]
-        public NativeArray<DividePoint> divideP;
+        public NativeList<DividePoint> divideP;
 
-        public NativeArray<DivideInfo> divideInfo;
+        public NativeList<DivideInfo> divideInfo;
+
+        public void Dispose()
+        {
+            divideP.Dispose();
+            divideInfo.Dispose();
+        }
 
         public void Execute()
         {
-            var _divideP = new NativeList<DividePoint>(center.Length / 2, Allocator.Temp);
-
             var triCount = center.Length / 3;
             for (int i = 0; i < triCount; i++)
             {
@@ -144,9 +160,10 @@ namespace SamuraiSoccer
                 var s1 = side[center[i1]];
                 var s2 = side[center[i2]];
                 var s3 = side[center[i3]];
-                var singleIndex = (ushort)(3.0f - math.ceil(math.abs(s1 + s2 * 2 + s3 * 4 - 3.5f)));
-                var singleSide = side[center[i1 + singleIndex]] == 0;
-                ushort firstIdx, secondIdx;
+                var singleIndex = (int)(3.0f - math.ceil(math.abs(s1 + s2 * 2 + s3 * 4 - 3.5f)));
+                var singleIdx = center[i1 + singleIndex];
+                var singleSide = side[singleIdx] == 0;
+                int firstIdx, secondIdx;
                 firstIdx = secondIdx = 0;
                 switch (singleIndex)
                 {
@@ -154,9 +171,10 @@ namespace SamuraiSoccer
                     case 1: firstIdx = center[i1]; secondIdx = center[i3]; break;
                     case 2: firstIdx = center[i1]; secondIdx = center[i2]; break;
                 }
-                var singleCount = vertexIndex.CountValuesForKey(singleIndex) - 1;
+                var singleCount = vertexIndex.CountValuesForKey(singleIdx) - 1;
                 Span<int> singleArray = stackalloc int[singleCount];
-                var singlev = vertexIndex.GetValuesForKey(singleIndex);
+                var singlev = vertexIndex.GetValuesForKey(singleIdx);
+                singlev.MoveNext();
                 for (int j = 0; j < singleCount; j++)
                 {
                     if (singlev.Current == i)
@@ -175,7 +193,7 @@ namespace SamuraiSoccer
 
                 int divideIndex0, divideIndex1;
 
-                if (sideMeshIndex0 < i)
+                if (Hint.Unlikely(sideMeshIndex0 < i))
                 {
                     var sideInfo = divideInfo[sideMeshIndex0];
                     divideIndex0 = sideInfo.sideMeshIndex0 == i ? sideInfo.divideIndex0 : sideInfo.divideIndex1;
@@ -183,15 +201,15 @@ namespace SamuraiSoccer
                 else
                 {
                     var p2abs = math.abs(normal[firstIdx]);
-                    var p1abs = math.abs(normal[singleIndex]);
+                    var p1abs = math.abs(normal[singleIdx]);
                     var t = p2abs / (p1abs + p2abs); // 0:close to firstIdx, 1:close to singleIndex
-                    var _pos = math.lerp(vertexPos[firstIdx], vertexPos[singleIndex], t);
-                    var p = new DividePoint(firstIdx, singleIndex, t, _pos);
-                    divideIndex0 = _divideP.Length;
-                    _divideP.Add(p);
+                    var _pos = math.lerp(vertexPos[firstIdx], vertexPos[singleIdx], t);
+                    var p = new DividePoint(firstIdx, singleIdx, t, _pos);
+                    divideIndex0 = divideP.Length;
+                    divideP.Add(p);
                 }
 
-                if (sideMeshIndex1 < i)
+                if (Hint.Unlikely(sideMeshIndex1 < i))
                 {
                     var sideInfo = divideInfo[sideMeshIndex1];
                     divideIndex1 = sideInfo.sideMeshIndex0 == i ? sideInfo.divideIndex0 : sideInfo.divideIndex1;
@@ -199,22 +217,20 @@ namespace SamuraiSoccer
                 else
                 {
                     var p2abs = math.abs(normal[secondIdx]);
-                    var p1abs = math.abs(normal[singleIndex]);
+                    var p1abs = math.abs(normal[singleIdx]);
                     var t = p2abs / (p1abs + p2abs); // 0:close to secondIdx, 1:close to singleIndex
-                    var _pos = math.lerp(vertexPos[secondIdx], vertexPos[singleIndex], t);
-                    var p = new DividePoint(secondIdx, singleIndex, t, _pos);
-                    divideIndex1 = _divideP.Length;
-                    _divideP.Add(p);
+                    var _pos = math.lerp(vertexPos[secondIdx], vertexPos[singleIdx], t);
+                    var p = new DividePoint(secondIdx, singleIdx, t, _pos);
+                    divideIndex1 = divideP.Length;
+                    divideP.Add(p);
                 }
 
-                var dir = (float3)_divideP[divideIndex1].pos - (float3)_divideP[divideIndex0].pos;
+                var dir = (float3)divideP[divideIndex1].pos - (float3)divideP[divideIndex0].pos;
                 dir = math.normalize(dir);
 
                 var info = new DivideInfo(singleIndex, singleSide, sideMeshIndex0, sideMeshIndex1, divideIndex0, divideIndex1, dir);
-                divideInfo[i] = info;
+                divideInfo.Add(info);
             }
-
-            divideP = _divideP.ToArray(Allocator.TempJob);
 
             for (int i = 1; i < triCount; i++)
             {
@@ -223,41 +239,41 @@ namespace SamuraiSoccer
                 var sideIndex0 = selfInfo.sideMeshIndex0;
                 var sideIndex1 = selfInfo.sideMeshIndex1;
 
-                if (sideIndex0 < i)
+                if (Hint.Unlikely(sideIndex0 < i))
                 {
                     var sideDir = divideInfo[sideIndex0].dir;
                     var isStraight = 0.99999 < math.abs(math.dot(sideDir, selfDir));
-                    divideInfo[i].SetStraight0(isStraight);
+                    divideInfo[i] = divideInfo[i].SetStraight0(isStraight);
                     var isSide0 = divideInfo[sideIndex0].sideMeshIndex0 == i;
                     if (isSide0)
                     {
-                        divideInfo[sideIndex0].SetStraight0(isStraight);
+                        divideInfo[sideIndex0] = divideInfo[sideIndex0].SetStraight0(isStraight);
                     }
                     else
                     {
-                        divideInfo[sideIndex0].SetStraight1(isStraight);
+                        divideInfo[sideIndex0] = divideInfo[sideIndex0].SetStraight1(isStraight);
                     }
                 }
 
-                if (sideIndex1 < i)
+                if (Hint.Unlikely(sideIndex1 < i))
                 {
                     var sideDir = divideInfo[sideIndex1].dir;
                     var isStraight = 0.99999 < math.abs(math.dot(sideDir, selfDir));
-                    divideInfo[i].SetStraight1(isStraight);
+                    divideInfo[i] = divideInfo[i].SetStraight1(isStraight);
                     var isSide0 = divideInfo[sideIndex1].sideMeshIndex0 == i;
                     if (isSide0)
                     {
-                        divideInfo[sideIndex1].SetStraight0(isStraight);
+                        divideInfo[sideIndex1] = divideInfo[sideIndex1].SetStraight0(isStraight);
                     }
                     else
                     {
-                        divideInfo[sideIndex1].SetStraight1(isStraight);
+                        divideInfo[sideIndex1] = divideInfo[sideIndex1].SetStraight1(isStraight);
                     }
                 }
             }
         }
 
-        private int FindMatchData(in Span<int> src, in NativeParallelMultiHashMap<ushort, int>.Enumerator dst)
+        private int FindMatchData(in Span<int> src, in NativeParallelMultiHashMap<int, int>.Enumerator dst)
         {
             foreach (var s in src)
             {
@@ -275,12 +291,12 @@ namespace SamuraiSoccer
 
     public struct DividePoint : IEquatable<DividePoint>
     {
-        public readonly ushort idx0;
-        public readonly ushort idx1;
+        public readonly int idx0;
+        public readonly int idx1;
         public float t;
         public Vector3 pos;
 
-        public DividePoint(ushort idx0, ushort idx1, float t, float3 pos)
+        public DividePoint(int idx0, int idx1, float t, float3 pos)
         {
             this.idx0 = idx0;
             this.idx1 = idx1;
@@ -337,42 +353,59 @@ namespace SamuraiSoccer
             this.isStraight1 = false;
         }
 
-        public void SetStraight0(bool isStraight0)
+        public DivideInfo SetStraight0(bool isStraight0)
         {
             this.isStraight0 = isStraight0;
+            return this;
         }
 
-        public void SetStraight1(bool isStraight1)
+        public DivideInfo SetStraight1(bool isStraight1)
         {
             this.isStraight1 = isStraight1;
+            return this;
         }
     }
 
     [BurstCompile]
-    public struct MakeTriangleJob : IJob
+    public struct MakeTriangleJob : IJob, IDisposable
     {
         [ReadOnly]
-        public NativeArray<ushort> center;
+        public NativeList<int> center;
 
         [ReadOnly]
-        public NativeArray<DivideInfo> divideInfos;
+        public NativeList<DivideInfo> divideInfos;
 
         [WriteOnly]
-        public NativeArray<int> forward;
+        public NativeList<int> forward;
 
         [WriteOnly]
-        public NativeArray<int> backward;
+        public NativeList<int> existForward;
+
+        [WriteOnly]
+        public NativeList<int> backward;
+
+        [WriteOnly]
+        public NativeList<int> existBackward;
 
         public NativeParallelHashSet<int> forwardDivideIndex;
 
         public NativeParallelHashSet<int> backwardDivideIndex;
 
+
+        public void Dispose()
+        {
+            forward.Dispose();
+            existForward.Dispose();
+            backward.Dispose();
+            existBackward.Dispose();
+            forwardDivideIndex.Dispose();
+            backwardDivideIndex.Dispose();
+        }
+
         public void Execute()
         {
-            var _forward = new NativeList<int>();
-            var _backward = new NativeList<int>();
-            var forwardAdded = new NativeParallelHashSet<int>();
-            var backwardAdded = new NativeParallelHashSet<int>();
+            var forwardAdded = new NativeParallelHashSet<int>(divideInfos.Length, Allocator.Temp);
+            var backwardAdded = new NativeParallelHashSet<int>(divideInfos.Length, Allocator.Temp);
 
             for (var i = 0; i < divideInfos.Length; i++)
             {
@@ -380,44 +413,51 @@ namespace SamuraiSoccer
                 var idx1 = i * 3 + 1;
                 var idx2 = i * 3 + 2;
                 var info = divideInfos[i];
+
                 if (info.singleSide)
                 {
                     // two point is forward
+                    if (!forwardAdded.Contains(i))
                     {
                         // forward
                         var divideIndex0 = info.divideIndex0;
                         var divideIndex1 = info.divideIndex1;
-
-                        if (info.isStraight0 && !forwardAdded.Contains(info.sideMeshIndex0))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight0) && Hint.Likely(!forwardAdded.Contains(info.sideMeshIndex0))))
                         {
                             RectExtendForward(ref divideIndex0, ref forwardAdded, i, info.sideMeshIndex0);
                         }
 
-                        if (info.isStraight1 && !forwardAdded.Contains(info.sideMeshIndex1))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight1) && Hint.Likely(!forwardAdded.Contains(info.sideMeshIndex1))))
                         {
                             RectExtendForward(ref divideIndex1, ref forwardAdded, i, info.sideMeshIndex1);
                         }
 
+                        var divideIndexM0 = -divideIndex0 - 1;
+                        var divideIndexM1 = -divideIndex1 - 1;
 
                         switch (info.singleIndex)
                         {
                             case 0:
-                                _forward.Add(-divideIndex0 - 1); _forward.Add(center[idx1]); _forward.Add(-divideIndex1 - 1);
-                                _forward.Add(center[idx1]); _forward.Add(center[idx2]); _forward.Add(-divideIndex1 - 1); break;
+                                existForward.Add(center[idx1]); existForward.Add(center[idx2]);
+                                forward.Add(divideIndexM0); forward.Add(center[idx1]); forward.Add(divideIndexM1);
+                                forward.Add(center[idx1]); forward.Add(center[idx2]); forward.Add(divideIndexM1); break;
                             case 1:
-                                _forward.Add(center[idx0]); _forward.Add(-divideIndex0 - 1); _forward.Add(-divideIndex1 - 1);
-                                _forward.Add(-divideIndex1 - 1); _forward.Add(center[idx2]); _forward.Add(center[idx0]); break;
+                                existForward.Add(center[idx0]); existForward.Add(center[idx2]);
+                                forward.Add(center[idx0]); forward.Add(divideIndexM0); forward.Add(divideIndexM1);
+                                forward.Add(divideIndexM1); forward.Add(center[idx2]); forward.Add(center[idx0]); break;
                             case 2:
-                                _forward.Add(center[idx0]); _forward.Add(center[idx1]); _forward.Add(-divideIndex0 - 1);
-                                _forward.Add(-divideIndex0 - 1); _forward.Add(center[idx1]); _forward.Add(-divideIndex1 - 1); break;
+                                existForward.Add(center[idx0]); existForward.Add(center[idx1]);
+                                forward.Add(center[idx0]); forward.Add(center[idx1]); forward.Add(divideIndexM0);
+                                forward.Add(divideIndexM0); forward.Add(center[idx1]); forward.Add(divideIndexM1); break;
                         }
 
-                        forwardDivideIndex.Add(divideIndex0 - 1);
-                        forwardDivideIndex.Add(divideIndex1 - 1);
-
+                        forwardDivideIndex.Add(divideIndexM0);
+                        forwardDivideIndex.Add(divideIndexM1);
+                        forwardAdded.Add(i);
                     }
 
                     #region backward one
+                    if (!backwardAdded.Contains(i))
                     {
                         // backward
                         var divideIndex0 = info.divideIndex0;
@@ -425,7 +465,7 @@ namespace SamuraiSoccer
                         var vindex = -1;
                         var is0Side = false;
 
-                        if (info.isStraight0 && !backwardAdded.Contains(info.sideMeshIndex0))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight0) && Hint.Likely(!backwardAdded.Contains(info.sideMeshIndex0))))
                         {
                             TriangleExtendBackward(ref divideIndex0, ref vindex, ref backwardAdded, i, info.sideMeshIndex0, center[idx0 + info.singleIndex]);
                             if (vindex >= 0)
@@ -434,26 +474,32 @@ namespace SamuraiSoccer
                             }
                         }
 
-                        if (info.isStraight1 && !backwardAdded.Contains(info.sideMeshIndex1))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight1) && Hint.Likely(!backwardAdded.Contains(info.sideMeshIndex1))))
                         {
                             TriangleExtendBackward(ref divideIndex1, ref vindex, ref backwardAdded, i, info.sideMeshIndex1, center[idx0 + info.singleIndex]);
                         }
 
-                        if (vindex >= 0)
+                        var divideIndexM0 = -divideIndex0 - 1;
+                        var divideIndexM1 = -divideIndex1 - 1;
+
+                        if (Hint.Unlikely(vindex >= 0))
                         {
                             if (is0Side)
                             {
                                 switch (info.singleIndex)
                                 {
                                     case 0:
-                                        _backward.Add(center[idx0]); _backward.Add(center[vindex]); _backward.Add(-info.divideIndex0 - 1);
-                                        _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1); _backward.Add(center[idx0]); break;
+                                        existBackward.Add(center[idx0]); existBackward.Add(center[vindex]);
+                                        backward.Add(center[idx0]); backward.Add(center[vindex]); backward.Add(divideIndexM0);
+                                        backward.Add(divideIndexM0); backward.Add(divideIndexM1); backward.Add(center[idx0]); break;
                                     case 1:
-                                        _backward.Add(-info.divideIndex0 - 1); _backward.Add(center[vindex]); _backward.Add(center[idx1]);
-                                        _backward.Add(center[idx1]); _backward.Add(-info.divideIndex1 - 1); _backward.Add(-info.divideIndex0 - 1); break;
+                                        existBackward.Add(center[idx1]); existBackward.Add(center[vindex]);
+                                        backward.Add(divideIndexM1); backward.Add(center[vindex]); backward.Add(center[idx1]);
+                                        backward.Add(center[idx1]); backward.Add(divideIndexM1); backward.Add(divideIndexM0); break;
                                     case 2:
-                                        _backward.Add(center[idx2]); _backward.Add(center[vindex]); _backward.Add(-info.divideIndex0 - 1);
-                                        _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1); _backward.Add(center[idx2]); break;
+                                        existBackward.Add(center[idx2]); existBackward.Add(center[vindex]);
+                                        backward.Add(center[idx2]); backward.Add(center[vindex]); backward.Add(divideIndexM0);
+                                        backward.Add(divideIndexM0); backward.Add(divideIndexM1); backward.Add(center[idx2]); break;
                                 }
                             }
                             else
@@ -461,14 +507,17 @@ namespace SamuraiSoccer
                                 switch (info.singleIndex)
                                 {
                                     case 0:
-                                        _backward.Add(center[idx0]); _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1);
-                                        _backward.Add(-info.divideIndex1 - 1); _backward.Add(center[vindex]); _backward.Add(center[idx0]); break;
+                                        existBackward.Add(center[idx0]); existBackward.Add(center[vindex]);
+                                        backward.Add(center[idx0]); backward.Add(divideIndexM0); backward.Add(divideIndexM1);
+                                        backward.Add(divideIndexM1); backward.Add(center[vindex]); backward.Add(center[idx0]); break;
                                     case 1:
-                                        _backward.Add(center[idx0]); _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1);
-                                        _backward.Add(-info.divideIndex1 - 1); _backward.Add(center[idx2]); _backward.Add(center[idx0]); break;
+                                        existBackward.Add(center[idx1]); existBackward.Add(center[vindex]);
+                                        backward.Add(center[idx1]); backward.Add(center[vindex]); backward.Add(divideIndexM1);
+                                        backward.Add(divideIndexM1); backward.Add(divideIndexM0); backward.Add(center[idx1]); break;
                                     case 2:
-                                        _backward.Add(center[idx2]); _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1);
-                                        _backward.Add(-info.divideIndex1 - 1); _backward.Add(center[vindex]); _backward.Add(center[idx2]); break;
+                                        existBackward.Add(center[idx2]); existBackward.Add(center[vindex]);
+                                        backward.Add(center[idx2]); backward.Add(divideIndexM0); backward.Add(divideIndexM1);
+                                        backward.Add(divideIndexM1); backward.Add(center[vindex]); backward.Add(center[idx2]); break;
                                 }
                             }
 
@@ -478,64 +527,74 @@ namespace SamuraiSoccer
                             switch (info.singleIndex)
                             {
                                 case 0:
-                                    _backward.Add(center[idx0]); _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1); break;
+                                    existBackward.Add(center[idx0]);
+                                    backward.Add(center[idx0]); backward.Add(divideIndexM0); backward.Add(divideIndexM1); break;
                                 case 1:
-                                    _backward.Add(center[idx1]); _backward.Add(-info.divideIndex1 - 1); _backward.Add(-info.divideIndex0 - 1); break;
+                                    existBackward.Add(center[idx1]);
+                                    backward.Add(center[idx1]); backward.Add(divideIndexM1); backward.Add(divideIndexM0); break;
                                 case 2:
-                                    _backward.Add(-info.divideIndex0 - 1); _backward.Add(-info.divideIndex1 - 1); _backward.Add(center[idx2]); break;
+                                    existBackward.Add(center[idx2]);
+                                    backward.Add(divideIndexM0); backward.Add(divideIndexM1); backward.Add(center[idx2]); break;
                             }
                         }
 
-                        backwardDivideIndex.Add(divideIndex0 - 1);
-                        backwardDivideIndex.Add(divideIndex1 - 1);
+                        backwardDivideIndex.Add(divideIndexM0);
+                        backwardDivideIndex.Add(divideIndexM1);
+                        backwardAdded.Add(i);
                     }
                     #endregion backward one
                 }
                 else
                 {
                     // two point is backward
+                    if (!backwardAdded.Contains(i))
                     {
                         // backward
                         var divideIndex0 = info.divideIndex0;
                         var divideIndex1 = info.divideIndex1;
-
-                        if (info.isStraight0 && !backwardAdded.Contains(info.sideMeshIndex0))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight0) && Hint.Likely(!backwardAdded.Contains(info.sideMeshIndex0))))
                         {
                             RectExtendBackward(ref divideIndex0, ref backwardAdded, i, info.sideMeshIndex0);
                         }
 
-                        if (info.isStraight1 && !backwardAdded.Contains(info.sideMeshIndex1))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight1) && Hint.Likely(!backwardAdded.Contains(info.sideMeshIndex1))))
                         {
                             RectExtendBackward(ref divideIndex1, ref backwardAdded, i, info.sideMeshIndex1);
                         }
 
+                        var divideIndexM0 = -divideIndex0 - 1;
+                        var divideIndexM1 = -divideIndex1 - 1;
+
                         switch (info.singleIndex)
                         {
                             case 0:
-                                _backward.Add(-divideIndex0 - 1); _backward.Add(center[idx1]); _backward.Add(-divideIndex1 - 1);
-                                _backward.Add(center[idx1]); _backward.Add(center[idx2]); _backward.Add(-divideIndex1 - 1); break;
+                                existBackward.Add(center[idx1]); existBackward.Add(center[idx2]);
+                                backward.Add(divideIndexM0); backward.Add(center[idx1]); backward.Add(divideIndexM1);
+                                backward.Add(center[idx1]); backward.Add(center[idx2]); backward.Add(divideIndexM1); break;
                             case 1:
-                                _backward.Add(center[idx0]); _backward.Add(-divideIndex0 - 1); _backward.Add(-divideIndex1 - 1);
-                                _backward.Add(-divideIndex1 - 1); _backward.Add(center[idx2]); _backward.Add(center[idx0]); break;
+                                existBackward.Add(center[idx0]); existBackward.Add(center[idx2]);
+                                backward.Add(center[idx0]); backward.Add(divideIndexM0); backward.Add(divideIndexM1);
+                                backward.Add(divideIndexM1); backward.Add(center[idx2]); backward.Add(center[idx0]); break;
                             case 2:
-                                _backward.Add(center[idx0]); _backward.Add(center[idx1]); _backward.Add(-divideIndex0 - 1);
-                                _backward.Add(-divideIndex0 - 1); _backward.Add(center[idx1]); _backward.Add(-divideIndex1 - 1); break;
+                                existBackward.Add(center[idx0]); existBackward.Add(center[idx1]);
+                                backward.Add(center[idx0]); backward.Add(center[idx1]); backward.Add(divideIndexM0);
+                                backward.Add(divideIndexM0); backward.Add(center[idx1]); backward.Add(divideIndexM1); break;
                         }
 
-                        backwardDivideIndex.Add(divideIndex0 - 1);
-                        backwardDivideIndex.Add(divideIndex1 - 1);
-
+                        backwardDivideIndex.Add(divideIndexM0);
+                        backwardDivideIndex.Add(divideIndexM1);
+                        backwardAdded.Add(i);
                     }
                     #region forward one
+                    if (!forwardAdded.Contains(i))
                     {
                         // forward
-                        // backward
                         var divideIndex0 = info.divideIndex0;
                         var divideIndex1 = info.divideIndex1;
                         var vindex = -1;
                         var is0Side = false;
 
-                        if (info.isStraight0 && !forwardAdded.Contains(info.sideMeshIndex0))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight0) && Hint.Likely(!forwardAdded.Contains(info.sideMeshIndex0))))
                         {
                             TriangleExtendForward(ref divideIndex0, ref vindex, ref forwardAdded, i, info.sideMeshIndex0, center[idx0 + info.singleIndex]);
                             if (vindex >= 0)
@@ -544,26 +603,32 @@ namespace SamuraiSoccer
                             }
                         }
 
-                        if (info.isStraight1 && !forwardAdded.Contains(info.sideMeshIndex1))
+                        if (Hint.Unlikely(Hint.Unlikely(info.isStraight1) && Hint.Likely(!forwardAdded.Contains(info.sideMeshIndex1))))
                         {
                             TriangleExtendForward(ref divideIndex1, ref vindex, ref forwardAdded, i, info.sideMeshIndex1, center[idx0 + info.singleIndex]);
                         }
 
-                        if (vindex >= 0)
+                        var divideIndexM0 = -divideIndex0 - 1;
+                        var divideIndexM1 = -divideIndex1 - 1;
+
+                        if (Hint.Unlikely(vindex >= 0))
                         {
                             if (is0Side)
                             {
                                 switch (info.singleIndex)
                                 {
                                     case 0:
-                                        _forward.Add(center[idx0]); _forward.Add(center[vindex]); _forward.Add(-info.divideIndex0 - 1);
-                                        _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1); _forward.Add(center[idx0]); break;
+                                        existForward.Add(center[idx0]); existForward.Add(center[vindex]);
+                                        forward.Add(center[idx0]); forward.Add(center[vindex]); forward.Add(divideIndexM0);
+                                        forward.Add(divideIndexM0); forward.Add(divideIndexM1); forward.Add(center[idx0]); break;
                                     case 1:
-                                        _forward.Add(-info.divideIndex0 - 1); _forward.Add(center[vindex]); _forward.Add(center[idx1]);
-                                        _forward.Add(center[idx1]); _forward.Add(-info.divideIndex1 - 1); _forward.Add(-info.divideIndex0 - 1); break;
+                                        existForward.Add(center[idx1]); existForward.Add(center[vindex]);
+                                        forward.Add(divideIndexM1); forward.Add(center[vindex]); forward.Add(center[idx1]);
+                                        forward.Add(center[idx1]); forward.Add(divideIndexM1); forward.Add(divideIndexM0); break;
                                     case 2:
-                                        _forward.Add(center[idx2]); _forward.Add(center[vindex]); _forward.Add(-info.divideIndex0 - 1);
-                                        _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1); _forward.Add(center[idx2]); break;
+                                        existForward.Add(center[idx2]); existForward.Add(center[vindex]);
+                                        forward.Add(center[idx2]); forward.Add(center[vindex]); forward.Add(divideIndexM0);
+                                        forward.Add(divideIndexM0); forward.Add(divideIndexM1); forward.Add(center[idx2]); break;
                                 }
                             }
                             else
@@ -571,14 +636,17 @@ namespace SamuraiSoccer
                                 switch (info.singleIndex)
                                 {
                                     case 0:
-                                        _forward.Add(center[idx0]); _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1);
-                                        _forward.Add(-info.divideIndex1 - 1); _forward.Add(center[vindex]); _forward.Add(center[idx0]); break;
+                                        existForward.Add(center[idx0]); existForward.Add(center[vindex]);
+                                        forward.Add(center[idx0]); forward.Add(divideIndexM0); forward.Add(divideIndexM1);
+                                        forward.Add(divideIndexM1); forward.Add(center[vindex]); forward.Add(center[idx0]); break;
                                     case 1:
-                                        _forward.Add(center[idx0]); _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1);
-                                        _forward.Add(-info.divideIndex1 - 1); _forward.Add(center[idx2]); _forward.Add(center[idx0]); break;
+                                        existForward.Add(center[idx1]); existForward.Add(center[vindex]);
+                                        forward.Add(center[idx1]); forward.Add(center[vindex]); forward.Add(divideIndexM1);
+                                        forward.Add(divideIndexM1); forward.Add(divideIndexM0); forward.Add(center[idx1]); break;
                                     case 2:
-                                        _forward.Add(center[idx2]); _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1);
-                                        _forward.Add(-info.divideIndex1 - 1); _forward.Add(center[vindex]); _forward.Add(center[idx2]); break;
+                                        existForward.Add(center[idx2]); existForward.Add(center[vindex]);
+                                        forward.Add(center[idx2]); forward.Add(divideIndexM0); forward.Add(divideIndexM1);
+                                        forward.Add(divideIndexM1); forward.Add(center[vindex]); forward.Add(center[idx2]); break;
                                 }
                             }
 
@@ -588,24 +656,27 @@ namespace SamuraiSoccer
                             switch (info.singleIndex)
                             {
                                 case 0:
-                                    _forward.Add(center[idx0]); _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1); break;
+                                    existForward.Add(center[idx0]);
+                                    forward.Add(center[idx0]); forward.Add(divideIndexM0); forward.Add(divideIndexM1); break;
                                 case 1:
-                                    _forward.Add(center[idx1]); _forward.Add(-info.divideIndex1 - 1); _forward.Add(-info.divideIndex0 - 1); break;
+                                    existForward.Add(center[idx1]);
+                                    forward.Add(center[idx1]); forward.Add(divideIndexM1); forward.Add(divideIndexM0); break;
                                 case 2:
-                                    _forward.Add(-info.divideIndex0 - 1); _forward.Add(-info.divideIndex1 - 1); _forward.Add(center[idx2]); break;
+                                    existForward.Add(center[idx2]);
+                                    forward.Add(divideIndexM0); forward.Add(divideIndexM1); forward.Add(center[idx2]); break;
                             }
                         }
 
-                        forwardDivideIndex.Add(divideIndex0 - 1);
-                        forwardDivideIndex.Add(divideIndex1 - 1);
-
+                        forwardDivideIndex.Add(divideIndexM0);
+                        forwardDivideIndex.Add(divideIndexM1);
+                        forwardAdded.Add(i);
                     }
                     #endregion forward one
                 }
             }
 
-            forward = _forward.ToArray(Allocator.TempJob);
-            backward = _backward.ToArray(Allocator.TempJob);
+            forwardAdded.Dispose();
+            backwardAdded.Dispose();
         }
 
         private void RectExtendForward(ref int divideIndex, ref NativeParallelHashSet<int> forwardAdded, int before, int next)
@@ -624,7 +695,7 @@ namespace SamuraiSoccer
                     divideIndex = nextInfo.divideIndex1;
                     before = next;
                     next = nextInfo.sideMeshIndex1;
-                    if (!nextInfo.isStraight1 || forwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight1) || Hint.Unlikely(forwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -634,7 +705,7 @@ namespace SamuraiSoccer
                     divideIndex = nextInfo.divideIndex0;
                     before = next;
                     next = nextInfo.sideMeshIndex0;
-                    if (!nextInfo.isStraight0 || forwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight0) || Hint.Unlikely(forwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -658,7 +729,7 @@ namespace SamuraiSoccer
                     divideIndex = nextInfo.divideIndex1;
                     before = next;
                     next = nextInfo.sideMeshIndex1;
-                    if (!nextInfo.isStraight1 || backwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight1) || Hint.Unlikely(backwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -668,7 +739,7 @@ namespace SamuraiSoccer
                     divideIndex = nextInfo.divideIndex0;
                     before = next;
                     next = nextInfo.sideMeshIndex0;
-                    if (!nextInfo.isStraight0 || backwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight0) || Hint.Unlikely(backwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -691,21 +762,21 @@ namespace SamuraiSoccer
                 if (nextInfo.sideMeshIndex0 == before)
                 {
                     divideIndex = nextInfo.divideIndex1;
-                    if (!isRect)
+                    if (!isRect && nextInfo.singleSide)
                     {
                         var n0 = next * 3;
                         var n1 = next * 3 + 1;
                         var n2 = next * 3 + 2;
                         switch (nextInfo.singleIndex)
                         {
-                            case 0: vindex = center[n1] == triangelIndex ? center[n2] : center[n1]; break;
-                            case 1: vindex = center[n0] == triangelIndex ? center[n2] : center[n0]; break;
-                            case 2: vindex = center[n0] == triangelIndex ? center[n1] : center[n0]; break;
+                            case 0: vindex = center[n1] == triangelIndex ? n2 : n1; break;
+                            case 1: vindex = center[n0] == triangelIndex ? n2 : n0; break;
+                            case 2: vindex = center[n0] == triangelIndex ? n1 : n0; break;
                         }
                     }
                     before = next;
                     next = nextInfo.sideMeshIndex1;
-                    if (!nextInfo.isStraight1 || forwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight1) || Hint.Unlikely(forwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -713,21 +784,21 @@ namespace SamuraiSoccer
                 else
                 {
                     divideIndex = nextInfo.divideIndex0;
-                    if (!isRect)
+                    if (!isRect && nextInfo.singleSide)
                     {
                         var n0 = next * 3;
                         var n1 = next * 3 + 1;
                         var n2 = next * 3 + 2;
                         switch (nextInfo.singleIndex)
                         {
-                            case 0: vindex = center[n1] == triangelIndex ? center[n2] : center[n1]; break;
-                            case 1: vindex = center[n0] == triangelIndex ? center[n2] : center[n0]; break;
-                            case 2: vindex = center[n0] == triangelIndex ? center[n1] : center[n0]; break;
+                            case 0: vindex = center[n1] == triangelIndex ? n2 : n1; break;
+                            case 1: vindex = center[n0] == triangelIndex ? n2 : n0; break;
+                            case 2: vindex = center[n0] == triangelIndex ? n1 : n0; break;
                         }
                     }
                     before = next;
                     next = nextInfo.sideMeshIndex0;
-                    if (!nextInfo.isStraight0 || forwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight0) || Hint.Unlikely(forwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -750,21 +821,21 @@ namespace SamuraiSoccer
                 if (nextInfo.sideMeshIndex0 == before)
                 {
                     divideIndex = nextInfo.divideIndex1;
-                    if (!isRect)
+                    if (!isRect && !nextInfo.singleSide)
                     {
                         var n0 = next * 3;
                         var n1 = next * 3 + 1;
                         var n2 = next * 3 + 2;
                         switch (nextInfo.singleIndex)
                         {
-                            case 0: vindex = center[n1] == triangelIndex ? center[n2] : center[n1]; break;
-                            case 1: vindex = center[n0] == triangelIndex ? center[n2] : center[n0]; break;
-                            case 2: vindex = center[n0] == triangelIndex ? center[n1] : center[n0]; break;
+                            case 0: vindex = center[n1] == triangelIndex ? n2 : n1; break;
+                            case 1: vindex = center[n0] == triangelIndex ? n2 : n0; break;
+                            case 2: vindex = center[n0] == triangelIndex ? n1 : n0; break;
                         }
                     }
                     before = next;
                     next = nextInfo.sideMeshIndex1;
-                    if (!nextInfo.isStraight1 || backwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight1) || Hint.Unlikely(backwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -772,21 +843,21 @@ namespace SamuraiSoccer
                 else
                 {
                     divideIndex = nextInfo.divideIndex0;
-                    if (!isRect)
+                    if (!isRect && !nextInfo.singleSide)
                     {
                         var n0 = next * 3;
                         var n1 = next * 3 + 1;
                         var n2 = next * 3 + 2;
                         switch (nextInfo.singleIndex)
                         {
-                            case 0: vindex = center[n1] == triangelIndex ? center[n2] : center[n1]; break;
-                            case 1: vindex = center[n0] == triangelIndex ? center[n2] : center[n0]; break;
-                            case 2: vindex = center[n0] == triangelIndex ? center[n1] : center[n0]; break;
+                            case 0: vindex = center[n1] == triangelIndex ? n2 : n1; break;
+                            case 1: vindex = center[n0] == triangelIndex ? n2 : n0; break;
+                            case 2: vindex = center[n0] == triangelIndex ? n1 : n0; break;
                         }
                     }
                     before = next;
                     next = nextInfo.sideMeshIndex0;
-                    if (!nextInfo.isStraight0 || backwardAdded.Contains(next))
+                    if (Hint.Likely(Hint.Likely(!nextInfo.isStraight0) || Hint.Unlikely(backwardAdded.Contains(next))))
                     {
                         return;
                     }
@@ -796,46 +867,84 @@ namespace SamuraiSoccer
     }
 
     [BurstCompile]
-    public struct OrderingJob : IJob
+    public struct OrderingJob : IJob, IDisposable
     {
         [ReadOnly]
-        public NativeArray<ushort> indexes;
+        public NativeArray<int> indexes;
 
         [WriteOnly]
-        public NativeArray<int> indexCount;
+        public NativeList<int> useIndexes;
 
-        public NativeParallelHashMap<ushort, ushort> mapping;
+        public NativeParallelHashMap<int, int> mapping;
+
+        public void Dispose()
+        {
+            useIndexes.Dispose();
+            mapping.Dispose();
+        }
 
         public void Execute()
         {
-            ushort i = 0;
-            foreach (var index in indexes)
+            int i = 0;
+            for (var j = 0; j < indexes.Length; j++)
             {
-                if (mapping.TryAdd(index, i))
+                var index = indexes[j];
+                if (Hint.Likely(mapping.TryAdd(index, i)))
                 {
+                    useIndexes.Add(index);
                     i++;
                 }
             }
-            indexCount[0] = i;
         }
     }
 
     [BurstCompile]
-    public struct IdentifyIndexJob : IJobParallelFor
+    public struct IdentifyDIndexJob : IJobParallelFor, IDisposable
     {
         public NativeArray<int> indexes;
 
         public int aggDCount;
 
+        public void Dispose()
+        {
+            indexes.Dispose();
+        }
+
         public void Execute(int index)
         {
             var i = indexes[index];
-            indexes[index] = i < 0 ? i - aggDCount : i;
+            indexes[index] = i - aggDCount;
         }
     }
 
     [BurstCompile]
-    public struct UniqueOrderingJob : IJob
+    public struct IdentifyIndexJob : IJob, IDisposable
+    {
+        [ReadOnly]
+        public NativeList<int> indexes;
+
+        [WriteOnly]
+        public NativeList<int> outIndexes;
+
+        public int aggDCount;
+
+        public void Dispose()
+        {
+            outIndexes.Dispose();
+        }
+
+        public void Execute()
+        {
+            for (var idx = 0; idx < indexes.Length; idx++)
+            {
+                var i = indexes[idx];
+                outIndexes.Add(i < 0 ? i - aggDCount : i);
+            }
+        }
+    }
+
+    [BurstCompile]
+    public struct UniqueOrderingJob : IJob, IDisposable
     {
         [ReadOnly]
         public NativeArray<int> indexes;
@@ -848,51 +957,135 @@ namespace SamuraiSoccer
 
         public NativeParallelHashMap<int, int> mapping;
 
-        [WriteOnly]
-        public NativeArray<DividePoint> uniqueDivideP;
+        public NativeList<DividePoint> uniqueDivideP;
+
+        public void Dispose()
+        {
+            mapping.Dispose();
+            uniqueDivideP.Dispose();
+        }
 
         public void Execute()
         {
             var i = 0;
-            var j = -1;
+            ushort j = 0;
             var unique = new NativeParallelHashMap<DividePoint, int>(indexes.Length, Allocator.Temp);
-            foreach(var ac in aggICounts)
+            for (var k = 0; k < aggICounts.Length; k++)
             {
-                while (ac < i)
+                var ac = aggICounts[k];
+                while (i < ac)
                 {
-                    var idx = -indexes[i] + 1; // index = dindex - dc
-                    if (unique.TryAdd(divideP[idx], j))
+                    var idx = -indexes[i] - 1;
+                    if (Hint.Likely(unique.TryAdd(divideP[idx], j)))
                     {
-                        j--;
+                        j++;
                     }
-                    mapping.Add(indexes[i], j);
+                    mapping.Add(indexes[i], unique[divideP[idx]]);
                     i++;
                 }
             }
 
-            var count = unique.Count();
-            uniqueDivideP = new NativeArray<DividePoint>(count, Allocator.TempJob);
+            uniqueDivideP.ResizeUninitialized(unique.Count());
+
             foreach (var kv in unique)
             {
                 var value = kv.Value;
-                uniqueDivideP[-value - 1] = kv.Key;
+                uniqueDivideP[value] = kv.Key;
             }
         }
     }
 
     [BurstCompile]
-    public struct FinalIndexing : IJob
+    public struct FinalIndexing : IJobParallelFor, IDisposable
     {
         [ReadOnly]
-        public NativeArray<int> index;
+        public NativeArray<int> indexes;
+
+        [ReadOnly]
+        public NativeParallelHashMap<int, int> existMapping;
+
+        [ReadOnly]
+        public NativeList<int> useIndexes;
+
+        [ReadOnly]
+        public NativeParallelHashMap<int, int> newMapping;
 
         [WriteOnly]
-        public NativeArray<ushort> indicates;
+        public NativeArray<int> indicates;
 
-        public void Execute()
+        public void Dispose()
         {
-            throw new NotImplementedException();
+            indicates.Dispose();
+        }
+
+        public void Execute(int index)
+        {
+            var value = indexes[index];
+            var convert = value < 0 ? newMapping[value] + useIndexes.Length : existMapping[value];
+            indicates[index] = convert;
         }
     }
 
+    [BurstCompile]
+    public struct FinalVertexJob : IJob, IDisposable
+    {
+        [ReadOnly]
+        public NativeArray<Vector3> vertexs;
+
+        [ReadOnly]
+        public NativeArray<Vector3> normals;
+
+        [ReadOnly]
+        public NativeArray<Vector2> uvs;
+
+        [ReadOnly]
+        public NativeArray<int> useIndexes;
+
+        [ReadOnly]
+        public NativeList<DividePoint> useDivideP;
+
+        [WriteOnly]
+        public NativeArray<VertexData> vertexData;
+
+        public void Dispose()
+        {
+            vertexData.Dispose();
+        }
+
+        public void Execute()
+        {
+            var i = 0;
+            for (var j = 0; j < useIndexes.Length; j++)
+            {
+                var idx = useIndexes[j];
+                vertexData[i] = new VertexData(vertexs[idx], normals[idx], uvs[idx]);
+                i++;
+            }
+
+            for (var j = 0; j < useDivideP.Length; j++)
+            {
+                var divideP = useDivideP[j];
+                var pos = divideP.pos;
+                var normal = math.lerp(normals[divideP.idx0], normals[divideP.idx1], divideP.t);
+                var uv = math.lerp(uvs[divideP.idx0], uvs[divideP.idx1], divideP.t);
+                vertexData[i] = new VertexData(pos, normal, uv);
+                i++;
+            }
+        }
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct VertexData
+    {
+        public Vector3 position;
+        public Vector3 normal;
+        public Vector2 uv;
+
+        public VertexData(Vector3 position, Vector3 normal, Vector2 uv)
+        {
+            this.position = position;
+            this.normal = normal;
+            this.uv = uv;
+        }
+    }
 }
