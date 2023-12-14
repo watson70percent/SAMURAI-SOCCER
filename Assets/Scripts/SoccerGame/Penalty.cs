@@ -4,6 +4,7 @@ using UniRx;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.StageContents;
 using Cysharp.Threading.Tasks;
+using UnityEditor.PackageManager;
 
 namespace SamuraiSoccer.SoccerGame
 {
@@ -37,11 +38,17 @@ namespace SamuraiSoccer.SoccerGame
             m_yellowCard[1].SetActive(false);
         }
 
-        public void YellowCard(int penaltynumber)
+        private void YellowCard(int penaltynumber)
         {
             m_yellowCard[penaltynumber].SetActive(true);
             if (penaltynumber == 1)
             {
+                var client = new InMemoryDataTransitClient<GameResult>();
+                if (client.TryGet(StorageKey.KEY_WINORLOSE, out var outvalue))
+                {
+                    client.Set(StorageKey.KEY_WINORLOSE, outvalue);
+                    return;
+                }
                 LoseEffect().Forget();
             }
             else

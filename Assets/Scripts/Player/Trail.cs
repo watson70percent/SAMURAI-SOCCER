@@ -12,19 +12,11 @@ namespace SamuraiSoccer.Player
 {
     public class Trail : MonoBehaviour
     {
-
-        public AudioClip slash;
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             this.OnTriggerEnterAsObservable().Subscribe(hit => OnHit(hit.gameObject)).AddTo(this);
-            Vanish();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            Vanish().Forget();
         }
 
         private void OnHit(GameObject obj)
@@ -37,7 +29,11 @@ namespace SamuraiSoccer.Player
         async UniTask Vanish()
         {
             await UniTask.Delay(1000);
-            Destroy(gameObject);
+            // シーンをまたぐときにTrailが出っ放しだとエラーになる
+            if(gameObject != null)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

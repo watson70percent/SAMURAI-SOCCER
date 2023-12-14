@@ -287,6 +287,13 @@ namespace SamuraiSoccer.SoccerGame.AI
                 else if (!opp.Any())
                 {
                     var client = new InMemoryDataTransitClient<GameResult>();
+                    // 既に勝敗が決まっていた場合は何もしない
+                    if (client.TryGet(StorageKey.KEY_WINORLOSE, out var outvalue))
+                    {
+                        client.Set(StorageKey.KEY_WINORLOSE, outvalue);
+                        return;
+                    }
+                    // 勝敗を設定して演出
                     client.Set(StorageKey.KEY_WINORLOSE, GameResult.Win);
                     InGameEvent.FinishOnNext();
                     _ = SlowToWin();
