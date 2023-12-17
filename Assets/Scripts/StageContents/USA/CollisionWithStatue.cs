@@ -71,7 +71,7 @@ namespace SamuraiSoccer.StageContents.USA
             await UniTask.Delay(1000);
             if (Ball.transform.position.y < 0)
             {
-                Ball.transform.position = new Vector3(Ball.transform.position.x, 5f, Ball.transform.position.z);
+                Ball.transform.position = new Vector3(Ball.transform.position.x, 10f, Ball.transform.position.z);
             }
         }
     }
