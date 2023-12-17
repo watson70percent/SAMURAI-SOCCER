@@ -7,6 +7,7 @@ using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.SoccerGame;
 using System.Linq;
+using System.Threading;
 
 namespace SamuraiSoccer.Player
 {
@@ -16,7 +17,7 @@ namespace SamuraiSoccer.Player
         private void Start()
         {
             this.OnTriggerEnterAsObservable().Subscribe(hit => OnHit(hit.gameObject)).AddTo(this);
-            Vanish().Forget();
+            Vanish(this.GetCancellationTokenOnDestroy()).Forget();
         }
 
         private void OnHit(GameObject obj)
@@ -26,11 +27,12 @@ namespace SamuraiSoccer.Player
             obj.GetComponents<ISlashed>().ToList().ForEach(x => x.Slashed(dir));
         }
 
-        async UniTask Vanish()
+        async UniTask Vanish(CancellationToken token)
         {
             await UniTask.Delay(1000);
             // シーンをまたぐときにTrailが出っ放しだとエラーになる
-            if(gameObject != null)
+            token.ThrowIfCancellationRequested();
+            if (gameObject != null)
             {
                 Destroy(gameObject);
             }
