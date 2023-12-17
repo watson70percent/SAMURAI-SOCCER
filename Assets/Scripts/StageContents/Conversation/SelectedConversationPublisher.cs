@@ -33,13 +33,12 @@ namespace SamuraiSoccer.StageContents.Conversation
                     data.m_stageData = clearNumber;
                     fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
                 }
-                // 該当会話番号 == クリア番号(初期は-1)を3で割った余り*4
-                if (m_conversationNum != (clearNumber / 3 + clearNumber % 3) * 4)
+                // 該当会話番号 == クリア番号(初期は-1)を3で割った商*4かつ3で割った余りが0とき
+                if (m_conversationNum == clearNumber / 3 * 4 && clearNumber % 3 == 0)
                 {
-                    return;
+                    _ = m_conversationManager.PlayConversation(m_conversationNum);
+                    m_finishedConversation = true;
                 }
-                _ = m_conversationManager.PlayConversation(m_conversationNum);
-                m_finishedConversation = true;
             }
         }
     }
