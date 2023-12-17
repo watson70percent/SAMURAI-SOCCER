@@ -32,6 +32,12 @@ namespace SamuraiSoccer.Event
             m_resetSubject.OnNext(Unit.Default);
         }
 
+        public static void ResetResetSubject()
+        {
+            m_resetSubject.Dispose();
+            m_resetSubject = new ReplaySubject<Unit>(1);
+        }
+
         private static Subject<bool> m_standbySubject = new Subject<bool>();
         private static IObservable<bool> m_standbyShareObservable = m_standbySubject.Share();
 

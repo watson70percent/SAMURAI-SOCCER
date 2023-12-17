@@ -22,15 +22,16 @@ namespace SamuraiSoccer.SoccerGame
 
         private void Awake()
         {
-            InGameEvent.Reset.Subscribe(async _ =>
-            {
-                await ResetContents();
-            }).AddTo(this);
+            InGameEvent.ResetResetSubject();
         }
 
         // Start is called before the first frame update
         private void Start()
         {
+            InGameEvent.Reset.Subscribe(async _ =>
+            {
+                await ResetContents();
+            }).AddTo(this);
             InGameEvent.Standby.First().Subscribe(async _ =>
             {
                 await FirstStandbyContents();
