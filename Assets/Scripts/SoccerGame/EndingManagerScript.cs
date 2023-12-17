@@ -21,6 +21,8 @@ namespace SamuraiSoccer.SoccerGame
         float velocity;
         [SerializeField]
         GameObject sponeSpot;
+        [SerializeField]
+        AudioSource audioSource;
 
         GameObject staff;
         Rigidbody rb;
@@ -55,7 +57,11 @@ namespace SamuraiSoccer.SoccerGame
         
         async UniTask ReturnTitle()
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(10)); //最後のパネルを流してから5秒後にシーン遷移
+            for(int i=0; i < 20; i++)
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(1)); //最後のパネルを流してから5秒後にシーン遷移
+                audioSource.volume = Math.Max(1 - (float)i / 20,0);
+            }
             SceneManager.LoadScene("Start");
         }
     }
