@@ -37,6 +37,19 @@ namespace SamuraiSoccer.StageContents.Result
             }
             return false;
         }
+
+        /// <summary>
+        /// セーブデータを初期化する(ResetだとMonoBehaviourと名前が被るから命名変更)
+        /// </summary>
+        /// <returns></returns>
+        public void ResetData()
+        {
+            InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
+            SaveData data = new SaveData();
+            data.m_stageData = 0;
+            fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
+            PlayerPrefs.SetInt("DoneTutorial", 0);
+        }
     }
 }
 

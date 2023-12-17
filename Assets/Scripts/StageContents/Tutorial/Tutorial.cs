@@ -47,6 +47,7 @@ namespace Tutorial
 
         private void Awake()
         {
+            InGameEvent.ResetResetSubject();
             // TODO : 後で消す(チュートリアル用の敵選手を呼び出すテストコード)
             var cliant = new InMemoryDataTransitClient<string>();
             cliant.Set(StorageKey.KEY_OPPONENT_TYPE, "opponent_Tutorial");
