@@ -12,7 +12,7 @@ namespace SamuraiSoccer.SoccerGame
 
         public void Slashed(Vector3 dir)
         {
-            dir = dir.normalized;
+            dir = new Vector3(dir.x, 0.0f, dir.z).normalized;
             dir = new Vector3(dir.x, 0.3f , dir.z);
             _ = SoundMaster.Instance.PlaySE(3); // Ža‚ç‚ê‚½SE
             m_rigidbody.AddForce(dir * m_power * 1000 / 60 , ForceMode.Impulse);
