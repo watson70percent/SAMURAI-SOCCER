@@ -43,14 +43,20 @@ namespace SamuraiSoccer.SoccerGame
         private async UniTask ResetContents()
         {
             await UniTask.Delay(1000);
-            SoundMaster.Instance.PlaySE(m_trumpetShellSENumber); //ほら貝のSEを流す
+            if (m_trumpetShellSENumber != -1)
+            {
+                SoundMaster.Instance.PlaySE(m_trumpetShellSENumber); //ほら貝のSEを流す
+            }
             InGameEvent.StandbyOnNext();
         }
 
         private async UniTask FirstStandbyContents()
         {
-            await UniTask.Delay(6000); 
-            SoundMaster.Instance.PlaySE(m_whistleSENumber); //ホイッスルのSEを流す
+            await UniTask.Delay(6000);
+            if (m_whistleSENumber != -1)
+            {
+                SoundMaster.Instance.PlaySE(m_whistleSENumber); //ホイッスルのSEを流す
+            }
             await UniTask.Delay(500);
             if (m_gameBGM != -1)
             {
