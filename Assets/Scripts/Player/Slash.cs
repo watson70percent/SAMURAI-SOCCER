@@ -48,7 +48,7 @@ namespace SamuraiSoccer.Player
         private void OnHit(GameObject obj)
         {
             // 当たった対象のinterfaceごとに処理が切り替わる。
-            var dir = (obj.transform.position - transform.position).normalized;
+            var dir = ((obj.transform.position - transform.position).normalized+3f*transform.forward).normalized;
             obj.GetComponents<ISlashed>().ToList().ForEach(x => x.Slashed(dir));
         }
     }
