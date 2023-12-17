@@ -38,7 +38,8 @@ namespace SamuraiSoccer.StageContents.Conversation
         ソーショキ,
         ダイトーリョー,
         シドーシャ,
-        AI
+        AI,
+        xxx,
     }
 
     [System.Serializable]
