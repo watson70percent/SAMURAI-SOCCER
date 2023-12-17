@@ -41,6 +41,10 @@ namespace SamuraiSoccer.UI
             {
                 m_isPlaying = true;
             }).AddTo(this);
+            InGameEvent.Goal.Subscribe(_ =>
+            {
+                m_isPlaying = false;
+            }).AddTo(this);
             InGameEvent.Finish.Subscribe(_ =>
             {
                 m_isPlaying = false;
