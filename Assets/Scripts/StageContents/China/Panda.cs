@@ -83,6 +83,13 @@ namespace SamuraiSoccer.StageContents.China
 
         private void OnTriggerEnter(Collider other)
         {
+            //すでにゲームが終了しているときは何もせずにreturn
+            var client = new InMemoryDataTransitClient<GameResult>();
+            if (client.TryGet(StorageKey.KEY_WINORLOSE, out var outvalue))
+            {
+                client.Set(StorageKey.KEY_WINORLOSE, outvalue);
+                return;
+            }
             //プレイヤーとぶつかったらゲームオーバー
             if (other.tag == "Player" && !m_hit && m_state.Value == State.Active)
             {
