@@ -229,6 +229,9 @@ namespace Tutorial
             await UniTask.Delay(3000);
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             InGameEvent.PlayOnNext();
+            // キーがセットされていたら全て倒し終わった時にバグるので吐き出させておく
+            var client = new InMemoryDataTransitClient<GameResult>();
+            client.TryGet(StorageKey.KEY_WINORLOSE, out var outvalue);
             textAnimator.SetTrigger("SlideText");
             //テキストを非表示に
             await UniTask.Delay(2000);
