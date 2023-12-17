@@ -7,8 +7,6 @@ using SamuraiSoccer.StageContents.Conversation;
 
 namespace SamuraiSoccer.StageContents.BattlerDome
 {
-
-
     public class BattleDomeManager : MonoBehaviour
     {
         public AudioSource audioSource;
@@ -64,8 +62,12 @@ namespace SamuraiSoccer.StageContents.BattlerDome
             int convNum = -1;
             switch (num)
             {
-                case 1: convNum = 30; break;
-                case 4: convNum = 31; break;
+                case 1: 
+                    convNum = 30; 
+                    break;
+                case 4: 
+                    convNum = 31; 
+                    break;
                 default: break;
             }
             
