@@ -4,7 +4,7 @@ _layout: landing
 
 # 侍蹴珠 ~samurai soccer~
 
-<img width="250" src="https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/docFX/images/Title.png" alt="タイトル画面">
+<img width="500" src="https://raw.githubusercontent.com/watson70percent/SAMURAI-SOCCER/docFX/docFX/images/Title.png" alt="タイトル画面">
 
 ## あらすじ
 
