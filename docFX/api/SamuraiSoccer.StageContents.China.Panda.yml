@@ -1,0 +1,752 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.Panda
+  commentId: T:SamuraiSoccer.StageContents.China.Panda
+  id: Panda
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.Panda.GameOver
+  - SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter(UnityEngine.Collider)
+  - SamuraiSoccer.StageContents.China.Panda.Start
+  - SamuraiSoccer.StageContents.China.Panda.Update
+  - SamuraiSoccer.StageContents.China.Panda.m_anim
+  - SamuraiSoccer.StageContents.China.Panda.m_blood
+  - SamuraiSoccer.StageContents.China.Panda.m_expandAmount
+  - SamuraiSoccer.StageContents.China.Panda.m_gameOverPanel
+  - SamuraiSoccer.StageContents.China.Panda.m_hit
+  - SamuraiSoccer.StageContents.China.Panda.m_hitSound
+  - SamuraiSoccer.StageContents.China.Panda.m_player
+  - SamuraiSoccer.StageContents.China.Panda.m_resultSceneName
+  - SamuraiSoccer.StageContents.China.Panda.m_speed
+  - SamuraiSoccer.StageContents.China.Panda.m_state
+  langs:
+  - csharp
+  - vb
+  name: Panda
+  nameWithType: Panda
+  fullName: SamuraiSoccer.StageContents.China.Panda
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Panda
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: 'public class Panda : MonoBehaviour'
+    content.vb: Public Class Panda Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.Panda.m_expandAmount
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_expandAmount
+  id: m_expandAmount
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_expandAmount
+  nameWithType: Panda.m_expandAmount
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_expandAmount
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_expandAmount
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private float m_expandAmount
+    return:
+      type: System.Single
+    content.vb: Private m_expandAmount As Single
+- uid: SamuraiSoccer.StageContents.China.Panda.m_speed
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_speed
+  id: m_speed
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_speed
+  nameWithType: Panda.m_speed
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_speed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_speed
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_speed
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_speed As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.Panda.m_hit
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_hit
+  id: m_hit
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_hit
+  nameWithType: Panda.m_hit
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_hit
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_hit
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private bool m_hit
+    return:
+      type: System.Boolean
+    content.vb: Private m_hit As Boolean
+- uid: SamuraiSoccer.StageContents.China.Panda.m_anim
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_anim
+  id: m_anim
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_anim
+  nameWithType: Panda.m_anim
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_anim
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_anim
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private Animator m_anim
+    return:
+      type: UnityEngine.Animator
+    content.vb: Private m_anim As Animator
+- uid: SamuraiSoccer.StageContents.China.Panda.m_gameOverPanel
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_gameOverPanel
+  id: m_gameOverPanel
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_gameOverPanel
+  nameWithType: Panda.m_gameOverPanel
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_gameOverPanel
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_gameOverPanel
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_gameOverPanel
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_gameOverPanel As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.Panda.m_hitSound
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_hitSound
+  id: m_hitSound
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_hitSound
+  nameWithType: Panda.m_hitSound
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_hitSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_hitSound
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioClip m_hitSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: >-
+      <SerializeField>
+
+      Private m_hitSound As AudioClip
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.Panda.m_blood
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_blood
+  id: m_blood
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_blood
+  nameWithType: Panda.m_blood
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_blood
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_blood
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_blood
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_blood As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.Panda.m_player
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_player
+  id: m_player
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_player
+  nameWithType: Panda.m_player
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_player
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_player
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private GameObject m_player
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Private m_player As GameObject
+- uid: SamuraiSoccer.StageContents.China.Panda.m_resultSceneName
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_resultSceneName
+  id: m_resultSceneName
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_resultSceneName
+  nameWithType: Panda.m_resultSceneName
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_resultSceneName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_resultSceneName
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private string m_resultSceneName
+    return:
+      type: System.String
+    content.vb: >-
+      <SerializeField>
+
+      Private m_resultSceneName As String
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.Panda.m_state
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.m_state
+  id: m_state
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: m_state
+  nameWithType: Panda.m_state
+  fullName: SamuraiSoccer.StageContents.China.Panda.m_state
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_state
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 37
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private IReadOnlyReactiveProperty<Panda.State> m_state
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{SamuraiSoccer.StageContents.China.Panda.State}
+    content.vb: Private m_state As IReadOnlyReactiveProperty(Of Panda.State)
+- uid: SamuraiSoccer.StageContents.China.Panda.Start
+  commentId: M:SamuraiSoccer.StageContents.China.Panda.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Panda.Start()
+  fullName: SamuraiSoccer.StageContents.China.Panda.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.China.Panda.Start*
+- uid: SamuraiSoccer.StageContents.China.Panda.Update
+  commentId: M:SamuraiSoccer.StageContents.China.Panda.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Panda.Update()
+  fullName: SamuraiSoccer.StageContents.China.Panda.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 58
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.China.Panda.Update*
+- uid: SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter(UnityEngine.Collider)
+  commentId: M:SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter(UnityEngine.Collider)
+  id: OnTriggerEnter(UnityEngine.Collider)
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: Panda.OnTriggerEnter(Collider)
+  fullName: SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter(UnityEngine.Collider)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnTriggerEnter
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 83
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: UnityEngine.Collider
+    content.vb: Private Sub OnTriggerEnter(other As Collider)
+  overload: SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter*
+- uid: SamuraiSoccer.StageContents.China.Panda.GameOver
+  commentId: M:SamuraiSoccer.StageContents.China.Panda.GameOver
+  id: GameOver
+  parent: SamuraiSoccer.StageContents.China.Panda
+  langs:
+  - csharp
+  - vb
+  name: GameOver()
+  nameWithType: Panda.GameOver()
+  fullName: SamuraiSoccer.StageContents.China.Panda.GameOver()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GameOver
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 101
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private UniTask GameOver()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function GameOver() As UniTask
+  overload: SamuraiSoccer.StageContents.China.Panda.GameOver*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UniRx.IReadOnlyReactiveProperty{SamuraiSoccer.StageContents.China.Panda.State}
+  commentId: T:UniRx.IReadOnlyReactiveProperty{SamuraiSoccer.StageContents.China.Panda.State}
+  parent: UniRx
+  definition: UniRx.IReadOnlyReactiveProperty`1
+  href: SamuraiSoccer.StageContents.China.Panda.html
+  name: IReadOnlyReactiveProperty<Panda.State>
+  nameWithType: IReadOnlyReactiveProperty<Panda.State>
+  fullName: UniRx.IReadOnlyReactiveProperty<SamuraiSoccer.StageContents.China.Panda.State>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Panda.State)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of SamuraiSoccer.StageContents.China.Panda.State)
+  name.vb: IReadOnlyReactiveProperty(Of Panda.State)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: SamuraiSoccer.StageContents.China.Panda
+    name: Panda
+    href: SamuraiSoccer.StageContents.China.Panda.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China.Panda.State
+    name: State
+    href: SamuraiSoccer.StageContents.China.Panda.State.html
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.StageContents.China.Panda
+    name: Panda
+    href: SamuraiSoccer.StageContents.China.Panda.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China.Panda.State
+    name: State
+    href: SamuraiSoccer.StageContents.China.Panda.State.html
+  - name: )
+- uid: UniRx.IReadOnlyReactiveProperty`1
+  commentId: T:UniRx.IReadOnlyReactiveProperty`1
+  isExternal: true
+  name: IReadOnlyReactiveProperty<T>
+  nameWithType: IReadOnlyReactiveProperty<T>
+  fullName: UniRx.IReadOnlyReactiveProperty<T>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of T)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of T)
+  name.vb: IReadOnlyReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.StageContents.China.Panda.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.China.Panda.Start
+  href: SamuraiSoccer.StageContents.China.Panda.html#SamuraiSoccer_StageContents_China_Panda_Start
+  name: Start
+  nameWithType: Panda.Start
+  fullName: SamuraiSoccer.StageContents.China.Panda.Start
+- uid: SamuraiSoccer.StageContents.China.Panda.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.China.Panda.Update
+  href: SamuraiSoccer.StageContents.China.Panda.html#SamuraiSoccer_StageContents_China_Panda_Update
+  name: Update
+  nameWithType: Panda.Update
+  fullName: SamuraiSoccer.StageContents.China.Panda.Update
+- uid: SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter*
+  commentId: Overload:SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter
+  href: SamuraiSoccer.StageContents.China.Panda.html#SamuraiSoccer_StageContents_China_Panda_OnTriggerEnter_UnityEngine_Collider_
+  name: OnTriggerEnter
+  nameWithType: Panda.OnTriggerEnter
+  fullName: SamuraiSoccer.StageContents.China.Panda.OnTriggerEnter
+- uid: UnityEngine.Collider
+  commentId: T:UnityEngine.Collider
+  parent: UnityEngine
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: UnityEngine.Collider
+- uid: SamuraiSoccer.StageContents.China.Panda.GameOver*
+  commentId: Overload:SamuraiSoccer.StageContents.China.Panda.GameOver
+  href: SamuraiSoccer.StageContents.China.Panda.html#SamuraiSoccer_StageContents_China_Panda_GameOver
+  name: GameOver
+  nameWithType: Panda.GameOver
+  fullName: SamuraiSoccer.StageContents.China.Panda.GameOver
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

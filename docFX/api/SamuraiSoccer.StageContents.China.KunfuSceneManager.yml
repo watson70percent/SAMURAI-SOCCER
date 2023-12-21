@@ -1,0 +1,296 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  commentId: T:SamuraiSoccer.StageContents.China.KunfuSceneManager
+  id: KunfuSceneManager
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.KunfuSceneManager.Start
+  - SamuraiSoccer.StageContents.China.KunfuSceneManager.Update
+  - SamuraiSoccer.StageContents.China.KunfuSceneManager.m_kunfu
+  - SamuraiSoccer.StageContents.China.KunfuSceneManager.m_prefab
+  - SamuraiSoccer.StageContents.China.KunfuSceneManager.m_referee
+  langs:
+  - csharp
+  - vb
+  name: KunfuSceneManager
+  nameWithType: KunfuSceneManager
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: KunfuSceneManager
+    path: ../Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  summary: 審判をカンフーに置き換える
+  example: []
+  syntax:
+    content: 'public class KunfuSceneManager : MonoBehaviour'
+    content.vb: Public Class KunfuSceneManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.m_referee
+  commentId: F:SamuraiSoccer.StageContents.China.KunfuSceneManager.m_referee
+  id: m_referee
+  parent: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_referee
+  nameWithType: KunfuSceneManager.m_referee
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.m_referee
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_referee
+    path: ../Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_referee
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_referee As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.m_prefab
+  commentId: F:SamuraiSoccer.StageContents.China.KunfuSceneManager.m_prefab
+  id: m_prefab
+  parent: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_prefab
+  nameWithType: KunfuSceneManager.m_prefab
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.m_prefab
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_prefab
+    path: ../Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_prefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_prefab As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.m_kunfu
+  commentId: F:SamuraiSoccer.StageContents.China.KunfuSceneManager.m_kunfu
+  id: m_kunfu
+  parent: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_kunfu
+  nameWithType: KunfuSceneManager.m_kunfu
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.m_kunfu
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_kunfu
+    path: ../Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private GameObject m_kunfu
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Private m_kunfu As GameObject
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.Start
+  commentId: M:SamuraiSoccer.StageContents.China.KunfuSceneManager.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: KunfuSceneManager.Start()
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.China.KunfuSceneManager.Start*
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.Update
+  commentId: M:SamuraiSoccer.StageContents.China.KunfuSceneManager.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.China.KunfuSceneManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: KunfuSceneManager.Update()
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/China/KunfuSceneManager.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.China.KunfuSceneManager.Update*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.China.KunfuSceneManager.Start
+  href: SamuraiSoccer.StageContents.China.KunfuSceneManager.html#SamuraiSoccer_StageContents_China_KunfuSceneManager_Start
+  name: Start
+  nameWithType: KunfuSceneManager.Start
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.Start
+- uid: SamuraiSoccer.StageContents.China.KunfuSceneManager.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.China.KunfuSceneManager.Update
+  href: SamuraiSoccer.StageContents.China.KunfuSceneManager.html#SamuraiSoccer_StageContents_China_KunfuSceneManager_Update
+  name: Update
+  nameWithType: KunfuSceneManager.Update
+  fullName: SamuraiSoccer.StageContents.China.KunfuSceneManager.Update

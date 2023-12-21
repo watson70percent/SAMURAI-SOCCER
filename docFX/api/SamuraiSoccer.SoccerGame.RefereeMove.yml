@@ -1,0 +1,529 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.RefereeMove
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeMove
+  id: RefereeMove
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall
+  - SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall
+  - SamuraiSoccer.SoccerGame.RefereeMove.Start
+  - SamuraiSoccer.SoccerGame.RefereeMove.Update
+  - SamuraiSoccer.SoccerGame.RefereeMove.anicon
+  - SamuraiSoccer.SoccerGame.RefereeMove.ball
+  - SamuraiSoccer.SoccerGame.RefereeMove.lookatspeed
+  - SamuraiSoccer.SoccerGame.RefereeMove.radius
+  - SamuraiSoccer.SoccerGame.RefereeMove.refereeArea
+  - SamuraiSoccer.SoccerGame.RefereeMove.rig
+  - SamuraiSoccer.SoccerGame.RefereeMove.runningspeed
+  - SamuraiSoccer.SoccerGame.RefereeMove.state
+  langs:
+  - csharp
+  - vb
+  name: RefereeMove
+  nameWithType: RefereeMove
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: RefereeMove
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: 'public class RefereeMove : MonoBehaviour'
+    content.vb: Public Class RefereeMove Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - SamuraiSoccer.StageContents.China.KunfuReferee
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.ball
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.ball
+  id: ball
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: RefereeMove.ball
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.ball
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ball
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public GameObject ball
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ball As GameObject
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.lookatspeed
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.lookatspeed
+  id: lookatspeed
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: lookatspeed
+  nameWithType: RefereeMove.lookatspeed
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.lookatspeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: lookatspeed
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float lookatspeed
+    return:
+      type: System.Single
+    content.vb: Public lookatspeed As Single
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.runningspeed
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.runningspeed
+  id: runningspeed
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: runningspeed
+  nameWithType: RefereeMove.runningspeed
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.runningspeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: runningspeed
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float runningspeed
+    return:
+      type: System.Single
+    content.vb: Public runningspeed As Single
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.radius
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.radius
+  id: radius
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: radius
+  nameWithType: RefereeMove.radius
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.radius
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: radius
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float radius
+    return:
+      type: System.Single
+    content.vb: Public radius As Single
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.rig
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.rig
+  id: rig
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: rig
+  nameWithType: RefereeMove.rig
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.rig
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rig
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private Rigidbody rig
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: Private rig As Rigidbody
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.refereeArea
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.refereeArea
+  id: refereeArea
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: refereeArea
+  nameWithType: RefereeMove.refereeArea
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.refereeArea
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: refereeArea
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public RefereeArea refereeArea
+    return:
+      type: SamuraiSoccer.SoccerGame.RefereeArea
+    content.vb: Public refereeArea As RefereeArea
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.state
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.state
+  id: state
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: RefereeMove.state
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.state
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: state
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private RefereeMove.State state
+    return:
+      type: SamuraiSoccer.SoccerGame.RefereeMove.State
+    content.vb: Private state As RefereeMove.State
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.anicon
+  commentId: F:SamuraiSoccer.SoccerGame.RefereeMove.anicon
+  id: anicon
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: anicon
+  nameWithType: RefereeMove.anicon
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.anicon
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: anicon
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Animator anicon
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public anicon As Animator
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.Start
+  commentId: M:SamuraiSoccer.SoccerGame.RefereeMove.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: RefereeMove.Start()
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 33
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: SamuraiSoccer.SoccerGame.RefereeMove.Start*
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.Update
+  commentId: M:SamuraiSoccer.SoccerGame.RefereeMove.Update
+  id: Update
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: RefereeMove.Update()
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 46
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: protected virtual void Update()
+    content.vb: Protected Overridable Sub Update()
+  overload: SamuraiSoccer.SoccerGame.RefereeMove.Update*
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall
+  commentId: M:SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall
+  id: MoveAroundBall
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: MoveAroundBall()
+  nameWithType: RefereeMove.MoveAroundBall()
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: MoveAroundBall
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 67
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void MoveAroundBall()
+    content.vb: Private Sub MoveAroundBall()
+  overload: SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall*
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall
+  commentId: M:SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall
+  id: LookAtBall
+  parent: SamuraiSoccer.SoccerGame.RefereeMove
+  langs:
+  - csharp
+  - vb
+  name: LookAtBall()
+  nameWithType: RefereeMove.LookAtBall()
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/RefereeMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LookAtBall
+    path: ../Assets/Scripts/SoccerGame/RefereeMove.cs
+    startLine: 95
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: protected virtual void LookAtBall()
+    content.vb: Protected Overridable Sub LookAtBall()
+  overload: SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: SamuraiSoccer.SoccerGame.RefereeArea
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeArea
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.RefereeArea.html
+  name: RefereeArea
+  nameWithType: RefereeArea
+  fullName: SamuraiSoccer.SoccerGame.RefereeArea
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.State
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeMove.State
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html
+  name: RefereeMove.State
+  nameWithType: RefereeMove.State
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.State
+  spec.csharp:
+  - uid: SamuraiSoccer.SoccerGame.RefereeMove
+    name: RefereeMove
+    href: SamuraiSoccer.SoccerGame.RefereeMove.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.RefereeMove.State
+    name: State
+    href: SamuraiSoccer.SoccerGame.RefereeMove.State.html
+  spec.vb:
+  - uid: SamuraiSoccer.SoccerGame.RefereeMove
+    name: RefereeMove
+    href: SamuraiSoccer.SoccerGame.RefereeMove.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.RefereeMove.State
+    name: State
+    href: SamuraiSoccer.SoccerGame.RefereeMove.State.html
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.RefereeMove.Start
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html#SamuraiSoccer_SoccerGame_RefereeMove_Start
+  name: Start
+  nameWithType: RefereeMove.Start
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.Start
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.Update*
+  commentId: Overload:SamuraiSoccer.SoccerGame.RefereeMove.Update
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html#SamuraiSoccer_SoccerGame_RefereeMove_Update
+  name: Update
+  nameWithType: RefereeMove.Update
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.Update
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall*
+  commentId: Overload:SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html#SamuraiSoccer_SoccerGame_RefereeMove_MoveAroundBall
+  name: MoveAroundBall
+  nameWithType: RefereeMove.MoveAroundBall
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.MoveAroundBall
+- uid: SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall*
+  commentId: Overload:SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html#SamuraiSoccer_SoccerGame_RefereeMove_LookAtBall
+  name: LookAtBall
+  nameWithType: RefereeMove.LookAtBall
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove.LookAtBall

@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.GroundTexture
+  commentId: T:SamuraiSoccer.StageContents.GroundTexture
+  id: GroundTexture
+  parent: SamuraiSoccer.StageContents
+  children:
+  - SamuraiSoccer.StageContents.GroundTexture.Start
+  - SamuraiSoccer.StageContents.GroundTexture.m_groundNormalMap
+  - SamuraiSoccer.StageContents.GroundTexture.m_groundTexture
+  langs:
+  - csharp
+  - vb
+  name: GroundTexture
+  nameWithType: GroundTexture
+  fullName: SamuraiSoccer.StageContents.GroundTexture
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GroundTexture.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GroundTexture
+    path: ../Assets/Scripts/StageContents/GroundTexture.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: 'public class GroundTexture : MonoBehaviour'
+    content.vb: Public Class GroundTexture Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.GroundTexture.m_groundTexture
+  commentId: F:SamuraiSoccer.StageContents.GroundTexture.m_groundTexture
+  id: m_groundTexture
+  parent: SamuraiSoccer.StageContents.GroundTexture
+  langs:
+  - csharp
+  - vb
+  name: m_groundTexture
+  nameWithType: GroundTexture.m_groundTexture
+  fullName: SamuraiSoccer.StageContents.GroundTexture.m_groundTexture
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GroundTexture.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_groundTexture
+    path: ../Assets/Scripts/StageContents/GroundTexture.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Texture m_groundTexture
+    return:
+      type: UnityEngine.Texture
+    content.vb: >-
+      <SerializeField>
+
+      Private m_groundTexture As Texture
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.GroundTexture.m_groundNormalMap
+  commentId: F:SamuraiSoccer.StageContents.GroundTexture.m_groundNormalMap
+  id: m_groundNormalMap
+  parent: SamuraiSoccer.StageContents.GroundTexture
+  langs:
+  - csharp
+  - vb
+  name: m_groundNormalMap
+  nameWithType: GroundTexture.m_groundNormalMap
+  fullName: SamuraiSoccer.StageContents.GroundTexture.m_groundNormalMap
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GroundTexture.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_groundNormalMap
+    path: ../Assets/Scripts/StageContents/GroundTexture.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Texture m_groundNormalMap
+    return:
+      type: UnityEngine.Texture
+    content.vb: >-
+      <SerializeField>
+
+      Private m_groundNormalMap As Texture
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.GroundTexture.Start
+  commentId: M:SamuraiSoccer.StageContents.GroundTexture.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.GroundTexture
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GroundTexture.Start()
+  fullName: SamuraiSoccer.StageContents.GroundTexture.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GroundTexture.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/GroundTexture.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.GroundTexture.Start*
+references:
+- uid: SamuraiSoccer.StageContents
+  commentId: N:SamuraiSoccer.StageContents
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents
+  nameWithType: SamuraiSoccer.StageContents
+  fullName: SamuraiSoccer.StageContents
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Texture
+  commentId: T:UnityEngine.Texture
+  parent: UnityEngine
+  isExternal: true
+  name: Texture
+  nameWithType: Texture
+  fullName: UnityEngine.Texture
+- uid: SamuraiSoccer.StageContents.GroundTexture.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.GroundTexture.Start
+  href: SamuraiSoccer.StageContents.GroundTexture.html#SamuraiSoccer_StageContents_GroundTexture_Start
+  name: Start
+  nameWithType: GroundTexture.Start
+  fullName: SamuraiSoccer.StageContents.GroundTexture.Start

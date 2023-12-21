@@ -1,0 +1,398 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.USA.StatueMove
+  commentId: T:SamuraiSoccer.StageContents.USA.StatueMove
+  id: StatueMove
+  parent: SamuraiSoccer.StageContents.USA
+  children:
+  - SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode
+  - SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue
+  - SamuraiSoccer.StageContents.USA.StatueMove.Start
+  - SamuraiSoccer.StageContents.USA.StatueMove.m_bodyObj
+  - SamuraiSoccer.StageContents.USA.StatueMove.m_shadeObj
+  - SamuraiSoccer.StageContents.USA.StatueMove.m_spriteRenderer
+  - SamuraiSoccer.StageContents.USA.StatueMove.m_time
+  langs:
+  - csharp
+  - vb
+  name: StatueMove
+  nameWithType: StatueMove
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StatueMove
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  summary: 自由の女神が上がってきて倒れる動きの監視+実効
+  example: []
+  syntax:
+    content: 'public class StatueMove : MonoBehaviour'
+    content.vb: Public Class StatueMove Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.m_bodyObj
+  commentId: F:SamuraiSoccer.StageContents.USA.StatueMove.m_bodyObj
+  id: m_bodyObj
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: m_bodyObj
+  nameWithType: StatueMove.m_bodyObj
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.m_bodyObj
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_bodyObj
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_bodyObj
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_bodyObj As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.m_shadeObj
+  commentId: F:SamuraiSoccer.StageContents.USA.StatueMove.m_shadeObj
+  id: m_shadeObj
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: m_shadeObj
+  nameWithType: StatueMove.m_shadeObj
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.m_shadeObj
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_shadeObj
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_shadeObj
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_shadeObj As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.m_spriteRenderer
+  commentId: F:SamuraiSoccer.StageContents.USA.StatueMove.m_spriteRenderer
+  id: m_spriteRenderer
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: m_spriteRenderer
+  nameWithType: StatueMove.m_spriteRenderer
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.m_spriteRenderer
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_spriteRenderer
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private SpriteRenderer m_spriteRenderer
+    return:
+      type: UnityEngine.SpriteRenderer
+    content.vb: >-
+      <SerializeField>
+
+      Private m_spriteRenderer As SpriteRenderer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode
+  commentId: P:SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode
+  id: CurrentStatueMode
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: CurrentStatueMode
+  nameWithType: StatueMove.CurrentStatueMode
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CurrentStatueMode
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  summary: 自由の女神の状態を管理する内部変数
+  example: []
+  syntax:
+    content: public StatueMode CurrentStatueMode { get; private set; }
+    parameters: []
+    return:
+      type: StatueMode
+    content.vb: Public Property CurrentStatueMode As StatueMode
+  overload: SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode*
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.m_time
+  commentId: F:SamuraiSoccer.StageContents.USA.StatueMove.m_time
+  id: m_time
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: m_time
+  nameWithType: StatueMove.m_time
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.m_time
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_time
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: private float m_time
+    return:
+      type: System.Single
+    content.vb: Private m_time As Single
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.Start
+  commentId: M:SamuraiSoccer.StageContents.USA.StatueMove.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StatueMove.Start()
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.USA.StatueMove.Start*
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue
+  commentId: M:SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue
+  id: MoveStatue
+  parent: SamuraiSoccer.StageContents.USA.StatueMove
+  langs:
+  - csharp
+  - vb
+  name: MoveStatue()
+  nameWithType: StatueMove.MoveStatue()
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/StatueMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: MoveStatue
+    path: ../Assets/Scripts/StageContents/USA/StatueMove.cs
+    startLine: 52
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  summary: 自由の女神が移動して倒れ、その場で制止する。併せて影が点滅する。終了後削除される。
+  example: []
+  syntax:
+    content: private void MoveStatue()
+    content.vb: Private Sub MoveStatue()
+  overload: SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue*
+references:
+- uid: SamuraiSoccer.StageContents.USA
+  commentId: N:SamuraiSoccer.StageContents.USA
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.USA
+  nameWithType: SamuraiSoccer.StageContents.USA
+  fullName: SamuraiSoccer.StageContents.USA
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.USA
+    name: USA
+    href: SamuraiSoccer.StageContents.USA.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.USA
+    name: USA
+    href: SamuraiSoccer.StageContents.USA.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.SpriteRenderer
+  commentId: T:UnityEngine.SpriteRenderer
+  parent: UnityEngine
+  isExternal: true
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: UnityEngine.SpriteRenderer
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode*
+  commentId: Overload:SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode
+  href: SamuraiSoccer.StageContents.USA.StatueMove.html#SamuraiSoccer_StageContents_USA_StatueMove_CurrentStatueMode
+  name: CurrentStatueMode
+  nameWithType: StatueMove.CurrentStatueMode
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.CurrentStatueMode
+- uid: StatueMode
+  commentId: T:StatueMode
+  href: StatueMode.html
+  name: StatueMode
+  nameWithType: StatueMode
+  fullName: StatueMode
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.USA.StatueMove.Start
+  href: SamuraiSoccer.StageContents.USA.StatueMove.html#SamuraiSoccer_StageContents_USA_StatueMove_Start
+  name: Start
+  nameWithType: StatueMove.Start
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.Start
+- uid: SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue*
+  commentId: Overload:SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue
+  href: SamuraiSoccer.StageContents.USA.StatueMove.html#SamuraiSoccer_StageContents_USA_StatueMove_MoveStatue
+  name: MoveStatue
+  nameWithType: StatueMove.MoveStatue
+  fullName: SamuraiSoccer.StageContents.USA.StatueMove.MoveStatue

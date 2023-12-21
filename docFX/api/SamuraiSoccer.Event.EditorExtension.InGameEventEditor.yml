@@ -1,0 +1,260 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  commentId: T:SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  id: InGameEventEditor
+  parent: SamuraiSoccer.Event.EditorExtension
+  children:
+  - SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI
+  - SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow
+  - SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_hasYellowCard
+  - SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_isPaused
+  langs:
+  - csharp
+  - vb
+  name: InGameEventEditor
+  nameWithType: InGameEventEditor
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Event/Editor/InGameEventEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: InGameEventEditor
+    path: ../Assets/Scripts/Event/Editor/InGameEventEditor.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.Event.EditorExtension
+  namespace: SamuraiSoccer.Event.EditorExtension
+  syntax:
+    content: 'public class InGameEventEditor : EditorWindow'
+    content.vb: Public Class InGameEventEditor Inherits EditorWindow
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.EditorWindow
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_hasYellowCard
+  commentId: F:SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_hasYellowCard
+  id: m_hasYellowCard
+  parent: SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  langs:
+  - csharp
+  - vb
+  name: m_hasYellowCard
+  nameWithType: InGameEventEditor.m_hasYellowCard
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_hasYellowCard
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/Editor/InGameEventEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_hasYellowCard
+    path: ../Assets/Scripts/Event/Editor/InGameEventEditor.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.Event.EditorExtension
+  namespace: SamuraiSoccer.Event.EditorExtension
+  syntax:
+    content: private bool m_hasYellowCard
+    return:
+      type: System.Boolean
+    content.vb: Private m_hasYellowCard As Boolean
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_isPaused
+  commentId: F:SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_isPaused
+  id: m_isPaused
+  parent: SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  langs:
+  - csharp
+  - vb
+  name: m_isPaused
+  nameWithType: InGameEventEditor.m_isPaused
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.m_isPaused
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/Editor/InGameEventEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isPaused
+    path: ../Assets/Scripts/Event/Editor/InGameEventEditor.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.Event.EditorExtension
+  namespace: SamuraiSoccer.Event.EditorExtension
+  syntax:
+    content: private bool m_isPaused
+    return:
+      type: System.Boolean
+    content.vb: Private m_isPaused As Boolean
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow
+  commentId: M:SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow
+  id: ShowWindow
+  parent: SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: InGameEventEditor.ShowWindow()
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/Editor/InGameEventEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ShowWindow
+    path: ../Assets/Scripts/Event/Editor/InGameEventEditor.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.Event.EditorExtension
+  namespace: SamuraiSoccer.Event.EditorExtension
+  syntax:
+    content: >-
+      [MenuItem("Custom/InGameEventDebugger")]
+
+      private static void ShowWindow()
+    content.vb: >-
+      <MenuItem("Custom/InGameEventDebugger")>
+
+      Private Shared Sub ShowWindow()
+  overload: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Custom/InGameEventDebugger
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI
+  commentId: M:SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI
+  id: OnGUI
+  parent: SamuraiSoccer.Event.EditorExtension.InGameEventEditor
+  langs:
+  - csharp
+  - vb
+  name: OnGUI()
+  nameWithType: InGameEventEditor.OnGUI()
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/Editor/InGameEventEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnGUI
+    path: ../Assets/Scripts/Event/Editor/InGameEventEditor.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.Event.EditorExtension
+  namespace: SamuraiSoccer.Event.EditorExtension
+  syntax:
+    content: private void OnGUI()
+    content.vb: Private Sub OnGUI()
+  overload: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI*
+references:
+- uid: SamuraiSoccer.Event.EditorExtension
+  commentId: N:SamuraiSoccer.Event.EditorExtension
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event.EditorExtension
+  nameWithType: SamuraiSoccer.Event.EditorExtension
+  fullName: SamuraiSoccer.Event.EditorExtension
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  - name: .
+  - uid: SamuraiSoccer.Event.EditorExtension
+    name: EditorExtension
+    href: SamuraiSoccer.Event.EditorExtension.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  - name: .
+  - uid: SamuraiSoccer.Event.EditorExtension
+    name: EditorExtension
+    href: SamuraiSoccer.Event.EditorExtension.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.EditorWindow
+  commentId: T:UnityEditor.EditorWindow
+  parent: UnityEditor
+  isExternal: true
+  name: EditorWindow
+  nameWithType: EditorWindow
+  fullName: UnityEditor.EditorWindow
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow*
+  commentId: Overload:SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow
+  href: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.html#SamuraiSoccer_Event_EditorExtension_InGameEventEditor_ShowWindow
+  name: ShowWindow
+  nameWithType: InGameEventEditor.ShowWindow
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.ShowWindow
+- uid: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI*
+  commentId: Overload:SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI
+  href: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.html#SamuraiSoccer_Event_EditorExtension_InGameEventEditor_OnGUI
+  name: OnGUI
+  nameWithType: InGameEventEditor.OnGUI
+  fullName: SamuraiSoccer.Event.EditorExtension.InGameEventEditor.OnGUI

@@ -1,0 +1,1348 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationManager
+  id: ConversationManager
+  parent: SamuraiSoccer.StageContents.Conversation
+  children:
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI(System.Boolean)
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion(UnityEngine.UI.Image,SamuraiSoccer.StageContents.Conversation.CharacterName,SamuraiSoccer.StageContents.Conversation.EmotionType)
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess(System.Int32)
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage(UnityEngine.UI.Image,UnityEngine.Vector3,System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation(System.Int32)
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo(System.Int32)
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.Start
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_brushPen
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterImages
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterNameTexts
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationCharacters
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationContents
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationDatas
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationText
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_initPos
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_isTouched
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_optionYesButtons
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_provider
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollObject
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollScript
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_textScroller
+  - SamuraiSoccer.StageContents.Conversation.ConversationManager.m_uiFade
+  langs:
+  - csharp
+  - vb
+  name: ConversationManager
+  nameWithType: ConversationManager
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ConversationManager
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 11
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: 'public class ConversationManager : MonoBehaviour'
+    content.vb: Public Class ConversationManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationContents
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationContents
+  id: m_conversationContents
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_conversationContents
+  nameWithType: ConversationManager.m_conversationContents
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationContents
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationContents
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 14
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [Tooltip("会話文を表示するコンテンツ全体")]
+
+      private GameObject m_conversationContents
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      <Tooltip("会話文を表示するコンテンツ全体")>
+
+      Private m_conversationContents As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 会話文を表示するコンテンツ全体
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterImages
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterImages
+  id: m_characterImages
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_characterImages
+  nameWithType: ConversationManager.m_characterImages
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterImages
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_characterImages
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 17
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [Tooltip("会話キャラクターの画像(左:0, 右:1)")]
+
+      private Image[] m_characterImages
+    return:
+      type: UnityEngine.UI.Image[]
+    content.vb: >-
+      <SerializeField>
+
+      <Tooltip("会話キャラクターの画像(左:0, 右:1)")>
+
+      Private m_characterImages As Image()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 会話キャラクターの画像(左:0, 右:1)
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterNameTexts
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterNameTexts
+  id: m_characterNameTexts
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_characterNameTexts
+  nameWithType: ConversationManager.m_characterNameTexts
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterNameTexts
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_characterNameTexts
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 20
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [Tooltip("会話キャラクターの名前(左:0, 右:1)")]
+
+      private Text[] m_characterNameTexts
+    return:
+      type: UnityEngine.UI.Text[]
+    content.vb: >-
+      <SerializeField>
+
+      <Tooltip("会話キャラクターの名前(左:0, 右:1)")>
+
+      Private m_characterNameTexts As Text()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 会話キャラクターの名前(左:0, 右:1)
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationText
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationText
+  id: m_conversationText
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_conversationText
+  nameWithType: ConversationManager.m_conversationText
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationText
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 23
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_conversationText
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_conversationText As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_brushPen
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_brushPen
+  id: m_brushPen
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_brushPen
+  nameWithType: ConversationManager.m_brushPen
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_brushPen
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_brushPen
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 26
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_brushPen
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_brushPen As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_optionYesButtons
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_optionYesButtons
+  id: m_optionYesButtons
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_optionYesButtons
+  nameWithType: ConversationManager.m_optionYesButtons
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_optionYesButtons
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_optionYesButtons
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 28
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private List<Button> m_optionYesButtons
+    return:
+      type: System.Collections.Generic.List{UnityEngine.UI.Button}
+    content.vb: >-
+      <SerializeField>
+
+      Private m_optionYesButtons As List(Of Button)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollObject
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollObject
+  id: m_scrollObject
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_scrollObject
+  nameWithType: ConversationManager.m_scrollObject
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollObject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_scrollObject
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 31
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_scrollObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_scrollObject As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_initPos
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_initPos
+  id: m_initPos
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_initPos
+  nameWithType: ConversationManager.m_initPos
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_initPos
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_initPos
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 33
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: private Vector3 m_initPos
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private m_initPos As Vector3
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationDatas
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationDatas
+  id: m_conversationDatas
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_conversationDatas
+  nameWithType: ConversationManager.m_conversationDatas
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationDatas
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationDatas
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 36
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private StageConversationDatas m_conversationDatas
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.StageConversationDatas
+    content.vb: >-
+      <SerializeField>
+
+      Private m_conversationDatas As StageConversationDatas
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationCharacters
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationCharacters
+  id: m_conversationCharacters
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_conversationCharacters
+  nameWithType: ConversationManager.m_conversationCharacters
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationCharacters
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationCharacters
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 39
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private ConversationCharacters m_conversationCharacters
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.ConversationCharacters
+    content.vb: >-
+      <SerializeField>
+
+      Private m_conversationCharacters As ConversationCharacters
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_uiFade
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_uiFade
+  id: m_uiFade
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_uiFade
+  nameWithType: ConversationManager.m_uiFade
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_uiFade
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_uiFade
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 42
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private UIFade m_uiFade
+    return:
+      type: SamuraiSoccer.UI.UIFade
+    content.vb: >-
+      <SerializeField>
+
+      Private m_uiFade As UIFade
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_provider
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_provider
+  id: m_provider
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_provider
+  nameWithType: ConversationManager.m_provider
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_provider
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_provider
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 45
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private TouchProvider m_provider
+    return:
+      type: SamuraiSoccer.UI.TouchProvider
+    content.vb: >-
+      <SerializeField>
+
+      Private m_provider As TouchProvider
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_textScroller
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_textScroller
+  id: m_textScroller
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_textScroller
+  nameWithType: ConversationManager.m_textScroller
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_textScroller
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_textScroller
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 48
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private TextScroller m_textScroller
+    return:
+      type: SamuraiSoccer.UI.TextScroller
+    content.vb: >-
+      <SerializeField>
+
+      Private m_textScroller As TextScroller
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollScript
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollScript
+  id: m_scrollScript
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_scrollScript
+  nameWithType: ConversationManager.m_scrollScript
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollScript
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_scrollScript
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 51
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private ScrollScript m_scrollScript
+    return:
+      type: SamuraiSoccer.UI.ScrollScript
+    content.vb: >-
+      <SerializeField>
+
+      Private m_scrollScript As ScrollScript
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_isTouched
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationManager.m_isTouched
+  id: m_isTouched
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: m_isTouched
+  nameWithType: ConversationManager.m_isTouched
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.m_isTouched
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isTouched
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 53
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: private bool m_isTouched
+    return:
+      type: System.Boolean
+    content.vb: Private m_isTouched As Boolean
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.Start
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ConversationManager.Start()
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 56
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.Start*
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation(System.Int32)
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation(System.Int32)
+  id: PlayConversation(System.Int32)
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: PlayConversation(int)
+  nameWithType: ConversationManager.PlayConversation(int)
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayConversation
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 71
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  summary: 会話コンテンツの起動
+  example: []
+  syntax:
+    content: public UniTask PlayConversation(int conversationNum)
+    parameters:
+    - id: conversationNum
+      type: System.Int32
+      description: 会話番号
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Public Function PlayConversation(conversationNum As Integer) As UniTask
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation*
+  nameWithType.vb: ConversationManager.PlayConversation(Integer)
+  fullName.vb: SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation(Integer)
+  name.vb: PlayConversation(Integer)
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess(System.Int32)
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess(System.Int32)
+  id: ConversationProcess(System.Int32)
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: ConversationProcess(int)
+  nameWithType: ConversationManager.ConversationProcess(int)
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ConversationProcess
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 88
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  summary: 会話分の表示と再生
+  example: []
+  syntax:
+    content: private UniTask ConversationProcess(int conversatioNum)
+    parameters:
+    - id: conversatioNum
+      type: System.Int32
+      description: 再生する会話番号
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Private Function ConversationProcess(conversatioNum As Integer) As UniTask
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess*
+  nameWithType.vb: ConversationManager.ConversationProcess(Integer)
+  fullName.vb: SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess(Integer)
+  name.vb: ConversationProcess(Integer)
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo(System.Int32)
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo(System.Int32)
+  id: SetCharacterInfo(System.Int32)
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: SetCharacterInfo(int)
+  nameWithType: ConversationManager.SetCharacterInfo(int)
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetCharacterInfo
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 153
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  summary: 会話キャラクター情報の追加
+  example: []
+  syntax:
+    content: private void SetCharacterInfo(int conversationNum)
+    parameters:
+    - id: conversationNum
+      type: System.Int32
+      description: 会話番号
+    content.vb: Private Sub SetCharacterInfo(conversationNum As Integer)
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo*
+  nameWithType.vb: ConversationManager.SetCharacterInfo(Integer)
+  fullName.vb: SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo(Integer)
+  name.vb: SetCharacterInfo(Integer)
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI(System.Boolean)
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI(System.Boolean)
+  id: ActiveTextUI(System.Boolean)
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: ActiveTextUI(bool)
+  nameWithType: ConversationManager.ActiveTextUI(bool)
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ActiveTextUI
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 167
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  summary: 会話プレハブのテキスト部分のSetActiveを一括で実施する
+  example: []
+  syntax:
+    content: private void ActiveTextUI(bool setActive)
+    parameters:
+    - id: setActive
+      type: System.Boolean
+      description: ''
+    content.vb: Private Sub ActiveTextUI(setActive As Boolean)
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI*
+  nameWithType.vb: ConversationManager.ActiveTextUI(Boolean)
+  fullName.vb: SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI(Boolean)
+  name.vb: ActiveTextUI(Boolean)
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion(UnityEngine.UI.Image,SamuraiSoccer.StageContents.Conversation.CharacterName,SamuraiSoccer.StageContents.Conversation.EmotionType)
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion(UnityEngine.UI.Image,SamuraiSoccer.StageContents.Conversation.CharacterName,SamuraiSoccer.StageContents.Conversation.EmotionType)
+  id: ChangeCharacterEmotion(UnityEngine.UI.Image,SamuraiSoccer.StageContents.Conversation.CharacterName,SamuraiSoccer.StageContents.Conversation.EmotionType)
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: ChangeCharacterEmotion(Image, CharacterName, EmotionType)
+  nameWithType: ConversationManager.ChangeCharacterEmotion(Image, CharacterName, EmotionType)
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion(UnityEngine.UI.Image, SamuraiSoccer.StageContents.Conversation.CharacterName, SamuraiSoccer.StageContents.Conversation.EmotionType)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ChangeCharacterEmotion
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 180
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  summary: 会話キャラクターの画像を適切な感情のものに設定する
+  example: []
+  syntax:
+    content: private void ChangeCharacterEmotion(Image image, CharacterName name, EmotionType emotionType)
+    parameters:
+    - id: image
+      type: UnityEngine.UI.Image
+      description: ''
+    - id: name
+      type: SamuraiSoccer.StageContents.Conversation.CharacterName
+      description: ''
+    - id: emotionType
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+      description: ''
+    content.vb: Private Sub ChangeCharacterEmotion(image As Image, name As CharacterName, emotionType As EmotionType)
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion*
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage(UnityEngine.UI.Image,UnityEngine.Vector3,System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage(UnityEngine.UI.Image,UnityEngine.Vector3,System.Threading.CancellationToken)
+  id: HopImage(UnityEngine.UI.Image,UnityEngine.Vector3,System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  langs:
+  - csharp
+  - vb
+  name: HopImage(Image, Vector3, CancellationToken)
+  nameWithType: ConversationManager.HopImage(Image, Vector3, CancellationToken)
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage(UnityEngine.UI.Image, UnityEngine.Vector3, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: HopImage
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationManager.cs
+    startLine: 206
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: private UniTask HopImage(Image image, Vector3 initPos, CancellationToken cancellationToken = default)
+    parameters:
+    - id: image
+      type: UnityEngine.UI.Image
+    - id: initPos
+      type: UnityEngine.Vector3
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function HopImage(image As Image, initPos As Vector3, cancellationToken As CancellationToken = Nothing) As UniTask
+  overload: SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage*
+references:
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.UI.Image[]
+  isExternal: true
+  name: Image[]
+  nameWithType: Image[]
+  fullName: UnityEngine.UI.Image[]
+  nameWithType.vb: Image()
+  fullName.vb: UnityEngine.UI.Image()
+  name.vb: Image()
+  spec.csharp:
+  - uid: UnityEngine.UI.Image
+    name: Image
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.UI.Image
+    name: Image
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.Text[]
+  isExternal: true
+  name: Text[]
+  nameWithType: Text[]
+  fullName: UnityEngine.UI.Text[]
+  nameWithType.vb: Text()
+  fullName.vb: UnityEngine.UI.Text()
+  name.vb: Text()
+  spec.csharp:
+  - uid: UnityEngine.UI.Text
+    name: Text
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.UI.Text
+    name: Text
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: System.Collections.Generic.List{UnityEngine.UI.Button}
+  commentId: T:System.Collections.Generic.List{UnityEngine.UI.Button}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Button>
+  nameWithType: List<Button>
+  fullName: System.Collections.Generic.List<UnityEngine.UI.Button>
+  nameWithType.vb: List(Of Button)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.UI.Button)
+  name.vb: List(Of Button)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.UI.Button
+    name: Button
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.UI.Button
+    name: Button
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.StageContents.Conversation.StageConversationDatas
+  commentId: T:SamuraiSoccer.StageContents.Conversation.StageConversationDatas
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.StageConversationDatas.html
+  name: StageConversationDatas
+  nameWithType: StageConversationDatas
+  fullName: SamuraiSoccer.StageContents.Conversation.StageConversationDatas
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacters
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationCharacters
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.ConversationCharacters.html
+  name: ConversationCharacters
+  nameWithType: ConversationCharacters
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacters
+- uid: SamuraiSoccer.UI.UIFade
+  commentId: T:SamuraiSoccer.UI.UIFade
+  parent: SamuraiSoccer.UI
+  href: SamuraiSoccer.UI.UIFade.html
+  name: UIFade
+  nameWithType: UIFade
+  fullName: SamuraiSoccer.UI.UIFade
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: SamuraiSoccer.UI.TouchProvider
+  commentId: T:SamuraiSoccer.UI.TouchProvider
+  parent: SamuraiSoccer.UI
+  href: SamuraiSoccer.UI.TouchProvider.html
+  name: TouchProvider
+  nameWithType: TouchProvider
+  fullName: SamuraiSoccer.UI.TouchProvider
+- uid: SamuraiSoccer.UI.TextScroller
+  commentId: T:SamuraiSoccer.UI.TextScroller
+  parent: SamuraiSoccer.UI
+  href: SamuraiSoccer.UI.TextScroller.html
+  name: TextScroller
+  nameWithType: TextScroller
+  fullName: SamuraiSoccer.UI.TextScroller
+- uid: SamuraiSoccer.UI.ScrollScript
+  commentId: T:SamuraiSoccer.UI.ScrollScript
+  parent: SamuraiSoccer.UI
+  href: SamuraiSoccer.UI.ScrollScript.html
+  name: ScrollScript
+  nameWithType: ScrollScript
+  fullName: SamuraiSoccer.UI.ScrollScript
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.Start
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_Start
+  name: Start
+  nameWithType: ConversationManager.Start
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.Start
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_PlayConversation_System_Int32_
+  name: PlayConversation
+  nameWithType: ConversationManager.PlayConversation
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_ConversationProcess_System_Int32_
+  name: ConversationProcess
+  nameWithType: ConversationManager.ConversationProcess
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_SetCharacterInfo_System_Int32_
+  name: SetCharacterInfo
+  nameWithType: ConversationManager.SetCharacterInfo
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_ActiveTextUI_System_Boolean_
+  name: ActiveTextUI
+  nameWithType: ConversationManager.ActiveTextUI
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_ChangeCharacterEmotion_UnityEngine_UI_Image_SamuraiSoccer_StageContents_Conversation_CharacterName_SamuraiSoccer_StageContents_Conversation_EmotionType_
+  name: ChangeCharacterEmotion
+  nameWithType: ConversationManager.ChangeCharacterEmotion
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: SamuraiSoccer.StageContents.Conversation.CharacterName
+  commentId: T:SamuraiSoccer.StageContents.Conversation.CharacterName
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.CharacterName.html
+  name: CharacterName
+  nameWithType: CharacterName
+  fullName: SamuraiSoccer.StageContents.Conversation.CharacterName
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType
+  commentId: T:SamuraiSoccer.StageContents.Conversation.EmotionType
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.EmotionType.html
+  name: EmotionType
+  nameWithType: EmotionType
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html#SamuraiSoccer_StageContents_Conversation_ConversationManager_HopImage_UnityEngine_UI_Image_UnityEngine_Vector3_System_Threading_CancellationToken_
+  name: HopImage
+  nameWithType: ConversationManager.HopImage
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading

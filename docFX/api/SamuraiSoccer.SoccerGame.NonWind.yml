@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.NonWind
+  commentId: T:SamuraiSoccer.SoccerGame.NonWind
+  id: NonWind
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.NonWind.Start
+  langs:
+  - csharp
+  - vb
+  name: NonWind
+  nameWithType: NonWind
+  fullName: SamuraiSoccer.SoccerGame.NonWind
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/NonWind.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: NonWind
+    path: ../Assets/Scripts/SoccerGame/NonWind.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: 'public class NonWind : WindInfoBase'
+    content.vb: Public Class NonWind Inherits WindInfoBase
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - SamuraiSoccer.SoccerGame.WindInfoBase
+  inheritedMembers:
+  - SamuraiSoccer.SoccerGame.WindInfoBase.wind
+  - SamuraiSoccer.SoccerGame.WindInfoBase.WindEffect(UnityEngine.Vector3)
+- uid: SamuraiSoccer.SoccerGame.NonWind.Start
+  commentId: M:SamuraiSoccer.SoccerGame.NonWind.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.NonWind
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: NonWind.Start()
+  fullName: SamuraiSoccer.SoccerGame.NonWind.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/NonWind.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/NonWind.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 初期化。派生クラスでは自由に
+  example: []
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start()
+  overridden: SamuraiSoccer.SoccerGame.WindInfoBase.Start
+  overload: SamuraiSoccer.SoccerGame.NonWind.Start*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.WindInfoBase
+  commentId: T:SamuraiSoccer.SoccerGame.WindInfoBase
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.WindInfoBase.html
+  name: WindInfoBase
+  nameWithType: WindInfoBase
+  fullName: SamuraiSoccer.SoccerGame.WindInfoBase
+- uid: SamuraiSoccer.SoccerGame.WindInfoBase.wind
+  commentId: F:SamuraiSoccer.SoccerGame.WindInfoBase.wind
+  parent: SamuraiSoccer.SoccerGame.WindInfoBase
+  href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_wind
+  name: wind
+  nameWithType: WindInfoBase.wind
+  fullName: SamuraiSoccer.SoccerGame.WindInfoBase.wind
+- uid: SamuraiSoccer.SoccerGame.WindInfoBase.WindEffect(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.WindInfoBase.WindEffect(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.WindInfoBase
+  isExternal: true
+  href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_WindEffect_UnityEngine_Vector3_
+  name: WindEffect(Vector3)
+  nameWithType: WindInfoBase.WindEffect(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.WindInfoBase.WindEffect(UnityEngine.Vector3)
+  spec.csharp:
+  - uid: SamuraiSoccer.SoccerGame.WindInfoBase.WindEffect(UnityEngine.Vector3)
+    name: WindEffect
+    href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_WindEffect_UnityEngine_Vector3_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.SoccerGame.WindInfoBase.WindEffect(UnityEngine.Vector3)
+    name: WindEffect
+    href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_WindEffect_UnityEngine_Vector3_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.WindInfoBase.Start
+  commentId: M:SamuraiSoccer.SoccerGame.WindInfoBase.Start
+  parent: SamuraiSoccer.SoccerGame.WindInfoBase
+  href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_Start
+  name: Start()
+  nameWithType: WindInfoBase.Start()
+  fullName: SamuraiSoccer.SoccerGame.WindInfoBase.Start()
+  spec.csharp:
+  - uid: SamuraiSoccer.SoccerGame.WindInfoBase.Start
+    name: Start
+    href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.SoccerGame.WindInfoBase.Start
+    name: Start
+    href: SamuraiSoccer.SoccerGame.WindInfoBase.html#SamuraiSoccer_SoccerGame_WindInfoBase_Start
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.NonWind.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.NonWind.Start
+  href: SamuraiSoccer.SoccerGame.NonWind.html#SamuraiSoccer_SoccerGame_NonWind_Start
+  name: Start
+  nameWithType: NonWind.Start
+  fullName: SamuraiSoccer.SoccerGame.NonWind.Start

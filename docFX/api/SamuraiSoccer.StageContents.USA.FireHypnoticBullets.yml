@@ -1,0 +1,319 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  commentId: T:SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  id: FireHypnoticBullets
+  parent: SamuraiSoccer.StageContents.USA
+  children:
+  - SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet
+  - SamuraiSoccer.StageContents.USA.FireHypnoticBullets.HypnoticBullets
+  - SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start
+  - SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_fireDuration
+  - SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_samurai
+  langs:
+  - csharp
+  - vb
+  name: FireHypnoticBullets
+  nameWithType: FireHypnoticBullets
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FireHypnoticBullets
+    path: ../Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  summary: 敵選手に付けて弾を撃たせる
+  example: []
+  syntax:
+    content: 'public class FireHypnoticBullets : MonoBehaviour'
+    content.vb: Public Class FireHypnoticBullets Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.HypnoticBullets
+  commentId: F:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.HypnoticBullets
+  id: HypnoticBullets
+  parent: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  langs:
+  - csharp
+  - vb
+  name: HypnoticBullets
+  nameWithType: FireHypnoticBullets.HypnoticBullets
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.HypnoticBullets
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: HypnoticBullets
+    path: ../Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject HypnoticBullets
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private HypnoticBullets As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_fireDuration
+  commentId: F:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_fireDuration
+  id: m_fireDuration
+  parent: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  langs:
+  - csharp
+  - vb
+  name: m_fireDuration
+  nameWithType: FireHypnoticBullets.m_fireDuration
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_fireDuration
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_fireDuration
+    path: ../Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_fireDuration
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_fireDuration As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_samurai
+  commentId: F:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_samurai
+  id: m_samurai
+  parent: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  langs:
+  - csharp
+  - vb
+  name: m_samurai
+  nameWithType: FireHypnoticBullets.m_samurai
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.m_samurai
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_samurai
+    path: ../Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_samurai
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_samurai As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start
+  commentId: M:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: FireHypnoticBullets.Start()
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start*
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet
+  commentId: M:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet
+  id: FireBullet
+  parent: SamuraiSoccer.StageContents.USA.FireHypnoticBullets
+  langs:
+  - csharp
+  - vb
+  name: FireBullet()
+  nameWithType: FireHypnoticBullets.FireBullet()
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FireBullet
+    path: ../Assets/Scripts/StageContents/USA/FireHypnoticBullets.cs
+    startLine: 38
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  summary: 弾を撃つ、次の発射間隔をランダム指定
+  example: []
+  syntax:
+    content: private void FireBullet()
+    content.vb: Private Sub FireBullet()
+  overload: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet*
+references:
+- uid: SamuraiSoccer.StageContents.USA
+  commentId: N:SamuraiSoccer.StageContents.USA
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.USA
+  nameWithType: SamuraiSoccer.StageContents.USA
+  fullName: SamuraiSoccer.StageContents.USA
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.USA
+    name: USA
+    href: SamuraiSoccer.StageContents.USA.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.USA
+    name: USA
+    href: SamuraiSoccer.StageContents.USA.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start
+  href: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.html#SamuraiSoccer_StageContents_USA_FireHypnoticBullets_Start
+  name: Start
+  nameWithType: FireHypnoticBullets.Start
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.Start
+- uid: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet*
+  commentId: Overload:SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet
+  href: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.html#SamuraiSoccer_StageContents_USA_FireHypnoticBullets_FireBullet
+  name: FireBullet
+  nameWithType: FireHypnoticBullets.FireBullet
+  fullName: SamuraiSoccer.StageContents.USA.FireHypnoticBullets.FireBullet

@@ -1,0 +1,332 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.FieldInfo
+  commentId: T:SamuraiSoccer.SoccerGame.FieldInfo
+  id: FieldInfo
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldInfo.Getdrag(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldInfo.acc_down_coeff
+  - SamuraiSoccer.SoccerGame.FieldInfo.acc_up_coeff
+  - SamuraiSoccer.SoccerGame.FieldInfo.drag
+  langs:
+  - csharp
+  - vb
+  name: FieldInfo
+  nameWithType: FieldInfo
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FieldInfo
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: フィールド
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class FieldInfo
+    content.vb: >-
+      <Serializable>
+
+      Public Class FieldInfo
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.acc_up_coeff
+  commentId: F:SamuraiSoccer.SoccerGame.FieldInfo.acc_up_coeff
+  id: acc_up_coeff
+  parent: SamuraiSoccer.SoccerGame.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: acc_up_coeff
+  nameWithType: FieldInfo.acc_up_coeff
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.acc_up_coeff
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: acc_up_coeff
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float[][] acc_up_coeff
+    return:
+      type: System.Single[][]
+    content.vb: Public acc_up_coeff As Single()()
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.acc_down_coeff
+  commentId: F:SamuraiSoccer.SoccerGame.FieldInfo.acc_down_coeff
+  id: acc_down_coeff
+  parent: SamuraiSoccer.SoccerGame.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: acc_down_coeff
+  nameWithType: FieldInfo.acc_down_coeff
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.acc_down_coeff
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: acc_down_coeff
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float[][] acc_down_coeff
+    return:
+      type: System.Single[][]
+    content.vb: Public acc_down_coeff As Single()()
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.drag
+  commentId: F:SamuraiSoccer.SoccerGame.FieldInfo.drag
+  id: drag
+  parent: SamuraiSoccer.SoccerGame.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: drag
+  nameWithType: FieldInfo.drag
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.drag
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: drag
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float[][] drag
+    return:
+      type: System.Single[][]
+    content.vb: Public drag As Single()()
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff(UnityEngine.Vector3)
+  id: GetAccUpCoeff(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: GetAccUpCoeff(Vector3)
+  nameWithType: FieldInfo.GetAccUpCoeff(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GetAccUpCoeff
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float GetAccUpCoeff(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function GetAccUpCoeff(position As Vector3) As Single
+  overload: SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff*
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff(UnityEngine.Vector3)
+  id: GetAccDownCoeff(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: GetAccDownCoeff(Vector3)
+  nameWithType: FieldInfo.GetAccDownCoeff(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GetAccDownCoeff
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float GetAccDownCoeff(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function GetAccDownCoeff(position As Vector3) As Single
+  overload: SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff*
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.Getdrag(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldInfo.Getdrag(UnityEngine.Vector3)
+  id: Getdrag(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldInfo
+  langs:
+  - csharp
+  - vb
+  name: Getdrag(Vector3)
+  nameWithType: FieldInfo.Getdrag(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.Getdrag(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldInfo.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Getdrag
+    path: ../Assets/Scripts/SoccerGame/FieldInfo.cs
+    startLine: 42
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float Getdrag(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function Getdrag(position As Vector3) As Single
+  overload: SamuraiSoccer.SoccerGame.FieldInfo.Getdrag*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single[][]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float[][]
+  nameWithType: float[][]
+  fullName: float[][]
+  nameWithType.vb: Single()()
+  fullName.vb: Single()()
+  name.vb: Single()()
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff
+  href: SamuraiSoccer.SoccerGame.FieldInfo.html#SamuraiSoccer_SoccerGame_FieldInfo_GetAccUpCoeff_UnityEngine_Vector3_
+  name: GetAccUpCoeff
+  nameWithType: FieldInfo.GetAccUpCoeff
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.GetAccUpCoeff
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff
+  href: SamuraiSoccer.SoccerGame.FieldInfo.html#SamuraiSoccer_SoccerGame_FieldInfo_GetAccDownCoeff_UnityEngine_Vector3_
+  name: GetAccDownCoeff
+  nameWithType: FieldInfo.GetAccDownCoeff
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.GetAccDownCoeff
+- uid: SamuraiSoccer.SoccerGame.FieldInfo.Getdrag*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldInfo.Getdrag
+  href: SamuraiSoccer.SoccerGame.FieldInfo.html#SamuraiSoccer_SoccerGame_FieldInfo_Getdrag_UnityEngine_Vector3_
+  name: Getdrag
+  nameWithType: FieldInfo.Getdrag
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo.Getdrag

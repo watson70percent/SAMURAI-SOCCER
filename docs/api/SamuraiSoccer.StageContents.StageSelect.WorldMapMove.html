@@ -1,664 +1,792 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class WorldMapMove
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class WorldMapMove
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      <title>Class WorldMapMove
+ | doc </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WorldMapMove
+ | doc ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/watson70percent/SAMURAI-SOCCER/new/docFX/apiSpec/new?filename=SamuraiSoccer_StageContents_StageSelect_WorldMapMove.md&amp;value=---%0Auid%3A%20SamuraiSoccer.StageContents.StageSelect.WorldMapMove%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="doc">
+            doc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove">
-  
-  
-  <h1 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove" class="text-break">Class WorldMapMove
+
+        <article data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove">
+
+
+
+  <h1 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove" class="text-break">
+    Class WorldMapMove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>ワールドマップを移動するクラス．関数を呼んで移動させる．</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
-    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
-    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">WorldMapMove</span></div>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SamuraiSoccer.html">SamuraiSoccer</a>.<a class="xref" href="SamuraiSoccer.StageContents.html">StageContents</a>.<a class="xref" href="SamuraiSoccer.StageContents.StageSelect.html">StageSelect</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SamuraiSoccer.StageContents.StageSelect.dll</dd></dl>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.StageContents.StageSelect.html">SamuraiSoccer.StageContents.StageSelect</a></h6>
-  <h6><strong>Assembly</strong>: SamuraiSoccer.StageContents.StageSelect.dll</h6>
-  <h5 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_syntax">Syntax</h5>
+
+  <div class="markdown summary"><p>ワールドマップを移動するクラス．関数を呼んで移動させる．</p>
+</div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class WorldMapMove : MonoBehaviour</code></pre>
   </div>
-  <h3 id="fields">Fields
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">WorldMapMove</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_accMax" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.accMax">
+  accMax
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_accMax" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.accMax">accMax</h4>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SerializeField]
-float accMax</code></pre>
+private float accMax</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_displaySize" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.displaySize">displaySize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-float displaySize</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_currentPoint" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_currentPoint">m_currentPoint</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector2 m_currentPoint</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_currentSize" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_currentSize">m_currentSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float m_currentSize</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_isFloatingStop" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_isFloatingStop">m_isFloatingStop</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool m_isFloatingStop</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_moving" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_moving">m_moving</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Stack&lt;Stage&gt; m_moving</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.Stack</span>&lt;<a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_pointHistory" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_pointHistory">m_pointHistory</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Queue&lt;Vector2&gt; m_pointHistory</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.Queue</span>&lt;<span class="xref">UnityEngine.Vector2</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_selectState" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_selectState">m_selectState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Stage m_selectState</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_velocity" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_velocity">m_velocity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector2 m_velocity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_worldPoint" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_worldPoint">m_worldPoint</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static readonly IReadOnlyDictionary&lt;Stage, Vector2&gt; m_worldPoint</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a>, <span class="xref">UnityEngine.Vector2</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_worldSize" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_worldSize">m_worldSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static readonly IReadOnlyDictionary&lt;Stage, float&gt; m_worldSize</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a>, <span class="xref">System.Single</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_moveTime" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.moveTime">moveTime</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-float moveTime</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_worldMap" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.worldMap">worldMap</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-RectTransform worldMap</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.RectTransform</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_displaySize" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.displaySize">
+  displaySize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private float displaySize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_currentPoint" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_currentPoint">
+  m_currentPoint
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector2 m_currentPoint</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_currentSize" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_currentSize">
+  m_currentSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private float m_currentSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_isFloatingStop" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_isFloatingStop">
+  m_isFloatingStop
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool m_isFloatingStop</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_moving" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_moving">
+  m_moving
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Stack&lt;Stage&gt; m_moving</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1">Stack</a>&lt;<a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_pointHistory" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_pointHistory">
+  m_pointHistory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Queue&lt;Vector2&gt; m_pointHistory</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1">Queue</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_selectState" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_selectState">
+  m_selectState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Stage m_selectState</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_velocity" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_velocity">
+  m_velocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector2 m_velocity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_worldPoint" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_worldPoint">
+  m_worldPoint
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly IReadOnlyDictionary&lt;Stage, Vector2&gt; m_worldPoint</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a>, <span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_m_worldSize" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.m_worldSize">
+  m_worldSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly IReadOnlyDictionary&lt;Stage, float&gt; m_worldSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_moveTime" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.moveTime">
+  moveTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private float moveTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_worldMap" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.worldMap">
+  worldMap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private RectTransform worldMap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RectTransform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_Awake_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.Awake*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_Awake" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.Awake">Awake()</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_Awake" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Awake()</code></pre>
+    <pre><code class="lang-csharp hljs">private void Awake()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_FixedUpdate_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.FixedUpdate*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_FixedUpdate" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.FixedUpdate">FixedUpdate()</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_FixedUpdate" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.FixedUpdate">
+  FixedUpdate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void FixedUpdate()</code></pre>
+    <pre><code class="lang-csharp hljs">private void FixedUpdate()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_GetObjectPoint_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.GetObjectPoint*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_GetObjectPoint_UnityEngine_Vector2_UnityEngine_Vector2_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.GetObjectPoint(UnityEngine.Vector2,UnityEngine.Vector2)">GetObjectPoint(Vector2, Vector2)</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_GetObjectPoint_UnityEngine_Vector2_UnityEngine_Vector2_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.GetObjectPoint(UnityEngine.Vector2,UnityEngine.Vector2)">
+  GetObjectPoint(Vector2, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>目的地を取得．</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector2 GetObjectPoint(Vector2 src, Vector2 dst)</code></pre>
+    <pre><code class="lang-csharp hljs">private Vector2 GetObjectPoint(Vector2 src, Vector2 dst)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">src</span></td>
-        <td><p>出発点．</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">dst</span></td>
-        <td><p>目的地．</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><p>目的地．</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <span class="xref">Vector2</span></dt>
+    <dd><p>出発点．</p>
+</dd>
+    <dt><code>dst</code> <span class="xref">Vector2</span></dt>
+    <dd><p>目的地．</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd><p>目的地．</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_GoTo_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.GoTo*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_GoTo_SamuraiSoccer_Event_Stage_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.GoTo(SamuraiSoccer.Event.Stage)">GoTo(Stage)</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_GoTo_SamuraiSoccer_Event_Stage_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.GoTo(SamuraiSoccer.Event.Stage)">
+  GoTo(Stage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>指定した国へ移動．</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask GoTo(Stage country)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask GoTo(Stage country)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a></td>
-        <td><span class="parametername">country</span></td>
-        <td><p>指定した国</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>country</code> <a class="xref" href="SamuraiSoccer.Event.Stage.html">Stage</a></dt>
+    <dd><p>指定した国</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_SetPosition_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.SetPosition*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_SetPosition_UnityEngine_Vector2_System_Single_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.SetPosition(UnityEngine.Vector2,System.Single)">SetPosition(Vector2, Single)</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_SetPosition_UnityEngine_Vector2_System_Single_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.SetPosition(UnityEngine.Vector2,System.Single)">
+  SetPosition(Vector2, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>マップを移動．</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SetPosition(Vector2 localPos, float localSize)</code></pre>
+    <pre><code class="lang-csharp hljs">private void SetPosition(Vector2 localPos, float localSize)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">localPos</span></td>
-        <td><p>マップ上のピクセル位置．</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">localSize</span></td>
-        <td><p>表示マップの1辺のピクセル．</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>localPos</code> <span class="xref">Vector2</span></dt>
+    <dd><p>マップ上のピクセル位置．</p>
+</dd>
+    <dt><code>localSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>表示マップの1辺のピクセル．</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_Start_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.Start*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_Start" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.Start">Start()</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_Start" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">async void Start()</code></pre>
+    <pre><code class="lang-csharp hljs">private void Start()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_ToFloating_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.ToFloating*"></a>
-  <h4 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_ToFloating_System_Threading_CancellationToken_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.ToFloating(System.Threading.CancellationToken)">ToFloating(CancellationToken)</h4>
+
+  <h3 id="SamuraiSoccer_StageContents_StageSelect_WorldMapMove_ToFloating_System_Threading_CancellationToken_" data-uid="SamuraiSoccer.StageContents.StageSelect.WorldMapMove.ToFloating(System.Threading.CancellationToken)">
+  ToFloating(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>フローティング状態にする．</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask ToFloating(CancellationToken token = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask ToFloating(CancellationToken token = default)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">token</span></td>
-        <td><p>キャンセル用トークン．</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>キャンセル用トークン．</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/StageSelect/WorldMapMove.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

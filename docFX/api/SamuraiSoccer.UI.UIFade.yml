@@ -1,0 +1,498 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.UIFade
+  commentId: T:SamuraiSoccer.UI.UIFade
+  id: UIFade
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.UIFade.FadeInUI
+  - SamuraiSoccer.UI.UIFade.FadeOutUI
+  - SamuraiSoccer.UI.UIFade.Start
+  - SamuraiSoccer.UI.UIFade.m_fadeSpeed
+  - SamuraiSoccer.UI.UIFade.m_images
+  - SamuraiSoccer.UI.UIFade.m_isStartEnabled
+  langs:
+  - csharp
+  - vb
+  name: UIFade
+  nameWithType: UIFade
+  fullName: SamuraiSoccer.UI.UIFade
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: UIFade
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class UIFade : MonoBehaviour'
+    content.vb: Public Class UIFade Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.UIFade.m_images
+  commentId: F:SamuraiSoccer.UI.UIFade.m_images
+  id: m_images
+  parent: SamuraiSoccer.UI.UIFade
+  langs:
+  - csharp
+  - vb
+  name: m_images
+  nameWithType: UIFade.m_images
+  fullName: SamuraiSoccer.UI.UIFade.m_images
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_images
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [Tooltip("フェードしたいUI")]
+
+      private List<Image> m_images
+    return:
+      type: System.Collections.Generic.List{UnityEngine.UI.Image}
+    content.vb: >-
+      <SerializeField>
+
+      <Tooltip("フェードしたいUI")>
+
+      Private m_images As List(Of Image)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: フェードしたいUI
+- uid: SamuraiSoccer.UI.UIFade.m_fadeSpeed
+  commentId: F:SamuraiSoccer.UI.UIFade.m_fadeSpeed
+  id: m_fadeSpeed
+  parent: SamuraiSoccer.UI.UIFade
+  langs:
+  - csharp
+  - vb
+  name: m_fadeSpeed
+  nameWithType: UIFade.m_fadeSpeed
+  fullName: SamuraiSoccer.UI.UIFade.m_fadeSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_fadeSpeed
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_fadeSpeed
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_fadeSpeed As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.UIFade.m_isStartEnabled
+  commentId: F:SamuraiSoccer.UI.UIFade.m_isStartEnabled
+  id: m_isStartEnabled
+  parent: SamuraiSoccer.UI.UIFade
+  langs:
+  - csharp
+  - vb
+  name: m_isStartEnabled
+  nameWithType: UIFade.m_isStartEnabled
+  fullName: SamuraiSoccer.UI.UIFade.m_isStartEnabled
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isStartEnabled
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private bool m_isStartEnabled
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <SerializeField>
+
+      Private m_isStartEnabled As Boolean
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.UIFade.Start
+  commentId: M:SamuraiSoccer.UI.UIFade.Start
+  id: Start
+  parent: SamuraiSoccer.UI.UIFade
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: UIFade.Start()
+  fullName: SamuraiSoccer.UI.UIFade.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.UIFade.Start*
+- uid: SamuraiSoccer.UI.UIFade.FadeInUI
+  commentId: M:SamuraiSoccer.UI.UIFade.FadeInUI
+  id: FadeInUI
+  parent: SamuraiSoccer.UI.UIFade
+  langs:
+  - csharp
+  - vb
+  name: FadeInUI()
+  nameWithType: UIFade.FadeInUI()
+  fullName: SamuraiSoccer.UI.UIFade.FadeInUI()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FadeInUI
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 36
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 画像のα値を増やすことで画像を出現させる
+  example: []
+  syntax:
+    content: public UniTask FadeInUI()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Public Function FadeInUI() As UniTask
+  overload: SamuraiSoccer.UI.UIFade.FadeInUI*
+- uid: SamuraiSoccer.UI.UIFade.FadeOutUI
+  commentId: M:SamuraiSoccer.UI.UIFade.FadeOutUI
+  id: FadeOutUI
+  parent: SamuraiSoccer.UI.UIFade
+  langs:
+  - csharp
+  - vb
+  name: FadeOutUI()
+  nameWithType: UIFade.FadeOutUI()
+  fullName: SamuraiSoccer.UI.UIFade.FadeOutUI()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/UIFade.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FadeOutUI
+    path: ../Assets/Scripts/UI/UIFade.cs
+    startLine: 61
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 画像のα値を減らすことで画像を見えないようにする
+  example: []
+  syntax:
+    content: public UniTask FadeOutUI()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Public Function FadeOutUI() As UniTask
+  overload: SamuraiSoccer.UI.UIFade.FadeOutUI*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.List{UnityEngine.UI.Image}
+  commentId: T:System.Collections.Generic.List{UnityEngine.UI.Image}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Image>
+  nameWithType: List<Image>
+  fullName: System.Collections.Generic.List<UnityEngine.UI.Image>
+  nameWithType.vb: List(Of Image)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.UI.Image)
+  name.vb: List(Of Image)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.UI.Image
+    name: Image
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.UI.Image
+    name: Image
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.UI.UIFade.Start*
+  commentId: Overload:SamuraiSoccer.UI.UIFade.Start
+  href: SamuraiSoccer.UI.UIFade.html#SamuraiSoccer_UI_UIFade_Start
+  name: Start
+  nameWithType: UIFade.Start
+  fullName: SamuraiSoccer.UI.UIFade.Start
+- uid: SamuraiSoccer.UI.UIFade.FadeInUI*
+  commentId: Overload:SamuraiSoccer.UI.UIFade.FadeInUI
+  href: SamuraiSoccer.UI.UIFade.html#SamuraiSoccer_UI_UIFade_FadeInUI
+  name: FadeInUI
+  nameWithType: UIFade.FadeInUI
+  fullName: SamuraiSoccer.UI.UIFade.FadeInUI
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.UI.UIFade.FadeOutUI*
+  commentId: Overload:SamuraiSoccer.UI.UIFade.FadeOutUI
+  href: SamuraiSoccer.UI.UIFade.html#SamuraiSoccer_UI_UIFade_FadeOutUI
+  name: FadeOutUI
+  nameWithType: UIFade.FadeOutUI
+  fullName: SamuraiSoccer.UI.UIFade.FadeOutUI

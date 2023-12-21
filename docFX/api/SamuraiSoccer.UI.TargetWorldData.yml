@@ -1,0 +1,312 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.TargetWorldData
+  commentId: T:SamuraiSoccer.UI.TargetWorldData
+  id: TargetWorldData
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.TargetWorldData.CameraDistance
+  - SamuraiSoccer.UI.TargetWorldData.StageNumber
+  - SamuraiSoccer.UI.TargetWorldData.Start
+  - SamuraiSoccer.UI.TargetWorldData.m_cameraDistance
+  - SamuraiSoccer.UI.TargetWorldData.m_stageNumber
+  langs:
+  - csharp
+  - vb
+  name: TargetWorldData
+  nameWithType: TargetWorldData
+  fullName: SamuraiSoccer.UI.TargetWorldData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TargetWorldData
+    path: ../Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class TargetWorldData : MonoBehaviour'
+    content.vb: Public Class TargetWorldData Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.TargetWorldData.m_cameraDistance
+  commentId: F:SamuraiSoccer.UI.TargetWorldData.m_cameraDistance
+  id: m_cameraDistance
+  parent: SamuraiSoccer.UI.TargetWorldData
+  langs:
+  - csharp
+  - vb
+  name: m_cameraDistance
+  nameWithType: TargetWorldData.m_cameraDistance
+  fullName: SamuraiSoccer.UI.TargetWorldData.m_cameraDistance
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_cameraDistance
+    path: ../Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_cameraDistance
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_cameraDistance As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TargetWorldData.CameraDistance
+  commentId: P:SamuraiSoccer.UI.TargetWorldData.CameraDistance
+  id: CameraDistance
+  parent: SamuraiSoccer.UI.TargetWorldData
+  langs:
+  - csharp
+  - vb
+  name: CameraDistance
+  nameWithType: TargetWorldData.CameraDistance
+  fullName: SamuraiSoccer.UI.TargetWorldData.CameraDistance
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CameraDistance
+    path: ../Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: public float CameraDistance { get; private set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property CameraDistance As Single
+  overload: SamuraiSoccer.UI.TargetWorldData.CameraDistance*
+- uid: SamuraiSoccer.UI.TargetWorldData.m_stageNumber
+  commentId: F:SamuraiSoccer.UI.TargetWorldData.m_stageNumber
+  id: m_stageNumber
+  parent: SamuraiSoccer.UI.TargetWorldData
+  langs:
+  - csharp
+  - vb
+  name: m_stageNumber
+  nameWithType: TargetWorldData.m_stageNumber
+  fullName: SamuraiSoccer.UI.TargetWorldData.m_stageNumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageNumber
+    path: ../Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_stageNumber
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stageNumber As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TargetWorldData.StageNumber
+  commentId: P:SamuraiSoccer.UI.TargetWorldData.StageNumber
+  id: StageNumber
+  parent: SamuraiSoccer.UI.TargetWorldData
+  langs:
+  - csharp
+  - vb
+  name: StageNumber
+  nameWithType: TargetWorldData.StageNumber
+  fullName: SamuraiSoccer.UI.TargetWorldData.StageNumber
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageNumber
+    path: ../Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: public int StageNumber { get; private set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property StageNumber As Integer
+  overload: SamuraiSoccer.UI.TargetWorldData.StageNumber*
+- uid: SamuraiSoccer.UI.TargetWorldData.Start
+  commentId: M:SamuraiSoccer.UI.TargetWorldData.Start
+  id: Start
+  parent: SamuraiSoccer.UI.TargetWorldData
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TargetWorldData.Start()
+  fullName: SamuraiSoccer.UI.TargetWorldData.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/StageSelect/TargetWorldData.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.TargetWorldData.Start*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.UI.TargetWorldData.CameraDistance*
+  commentId: Overload:SamuraiSoccer.UI.TargetWorldData.CameraDistance
+  href: SamuraiSoccer.UI.TargetWorldData.html#SamuraiSoccer_UI_TargetWorldData_CameraDistance
+  name: CameraDistance
+  nameWithType: TargetWorldData.CameraDistance
+  fullName: SamuraiSoccer.UI.TargetWorldData.CameraDistance
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.UI.TargetWorldData.StageNumber*
+  commentId: Overload:SamuraiSoccer.UI.TargetWorldData.StageNumber
+  href: SamuraiSoccer.UI.TargetWorldData.html#SamuraiSoccer_UI_TargetWorldData_StageNumber
+  name: StageNumber
+  nameWithType: TargetWorldData.StageNumber
+  fullName: SamuraiSoccer.UI.TargetWorldData.StageNumber
+- uid: SamuraiSoccer.UI.TargetWorldData.Start*
+  commentId: Overload:SamuraiSoccer.UI.TargetWorldData.Start
+  href: SamuraiSoccer.UI.TargetWorldData.html#SamuraiSoccer_UI_TargetWorldData_Start
+  name: Start
+  nameWithType: TargetWorldData.Start
+  fullName: SamuraiSoccer.UI.TargetWorldData.Start

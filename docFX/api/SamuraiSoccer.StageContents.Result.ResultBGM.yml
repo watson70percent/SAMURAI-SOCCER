@@ -1,0 +1,616 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM
+  commentId: T:SamuraiSoccer.StageContents.Result.ResultBGM
+  id: ResultBGM
+  parent: SamuraiSoccer.StageContents.Result
+  children:
+  - SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM(System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM(System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+  - SamuraiSoccer.StageContents.Result.ResultBGM.Start
+  - SamuraiSoccer.StageContents.Result.ResultBGM.m_cancellationTokenSource
+  - SamuraiSoccer.StageContents.Result.ResultBGM.m_loseBGMNum
+  - SamuraiSoccer.StageContents.Result.ResultBGM.m_loseSENum
+  - SamuraiSoccer.StageContents.Result.ResultBGM.m_rm
+  - SamuraiSoccer.StageContents.Result.ResultBGM.m_winBGMNum
+  - SamuraiSoccer.StageContents.Result.ResultBGM.m_winSENum
+  langs:
+  - csharp
+  - vb
+  name: ResultBGM
+  nameWithType: ResultBGM
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResultBGM
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: 'public class ResultBGM : MonoBehaviour'
+    content.vb: Public Class ResultBGM Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.m_rm
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultBGM.m_rm
+  id: m_rm
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: m_rm
+  nameWithType: ResultBGM.m_rm
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.m_rm
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_rm
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private ResultManager m_rm
+    return:
+      type: SamuraiSoccer.StageContents.Result.ResultManager
+    content.vb: >-
+      <SerializeField>
+
+      Private m_rm As ResultManager
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.m_winSENum
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultBGM.m_winSENum
+  id: m_winSENum
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: m_winSENum
+  nameWithType: ResultBGM.m_winSENum
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.m_winSENum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_winSENum
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_winSENum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_winSENum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.m_winBGMNum
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultBGM.m_winBGMNum
+  id: m_winBGMNum
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: m_winBGMNum
+  nameWithType: ResultBGM.m_winBGMNum
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.m_winBGMNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_winBGMNum
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_winBGMNum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_winBGMNum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.m_loseSENum
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultBGM.m_loseSENum
+  id: m_loseSENum
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: m_loseSENum
+  nameWithType: ResultBGM.m_loseSENum
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.m_loseSENum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_loseSENum
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_loseSENum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_loseSENum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.m_loseBGMNum
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultBGM.m_loseBGMNum
+  id: m_loseBGMNum
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: m_loseBGMNum
+  nameWithType: ResultBGM.m_loseBGMNum
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.m_loseBGMNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_loseBGMNum
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_loseBGMNum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_loseBGMNum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.m_cancellationTokenSource
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultBGM.m_cancellationTokenSource
+  id: m_cancellationTokenSource
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: m_cancellationTokenSource
+  nameWithType: ResultBGM.m_cancellationTokenSource
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.m_cancellationTokenSource
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_cancellationTokenSource
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: private CancellationTokenSource m_cancellationTokenSource
+    return:
+      type: System.Threading.CancellationTokenSource
+    content.vb: Private m_cancellationTokenSource As CancellationTokenSource
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.Start
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultBGM.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ResultBGM.Start()
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.Result.ResultBGM.Start*
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM(System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM(System.Threading.CancellationToken)
+  id: PlayWinBGM(System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: PlayWinBGM(CancellationToken)
+  nameWithType: ResultBGM.PlayWinBGM(CancellationToken)
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayWinBGM
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: private UniTask PlayWinBGM(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function PlayWinBGM(cancellationToken As CancellationToken) As UniTask
+  overload: SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM*
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM(System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM(System.Threading.CancellationToken)
+  id: PlayLoseBGM(System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: PlayLoseBGM(CancellationToken)
+  nameWithType: ResultBGM.PlayLoseBGM(CancellationToken)
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayLoseBGM
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 49
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: private UniTask PlayLoseBGM(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function PlayLoseBGM(cancellationToken As CancellationToken) As UniTask
+  overload: SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM*
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+  id: SceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+  parent: SamuraiSoccer.StageContents.Result.ResultBGM
+  langs:
+  - csharp
+  - vb
+  name: SceneLoaded(Scene, LoadSceneMode)
+  nameWithType: ResultBGM.SceneLoaded(Scene, LoadSceneMode)
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded(UnityEngine.SceneManagement.Scene, UnityEngine.SceneManagement.LoadSceneMode)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SceneLoaded
+    path: ../Assets/Scripts/StageContents/Result/ResultBGM.cs
+    startLine: 59
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: private void SceneLoaded(Scene nextScene, LoadSceneMode mode)
+    parameters:
+    - id: nextScene
+      type: UnityEngine.SceneManagement.Scene
+    - id: mode
+      type: UnityEngine.SceneManagement.LoadSceneMode
+    content.vb: Private Sub SceneLoaded(nextScene As Scene, mode As LoadSceneMode)
+  overload: SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded*
+references:
+- uid: SamuraiSoccer.StageContents.Result
+  commentId: N:SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Result
+  nameWithType: SamuraiSoccer.StageContents.Result
+  fullName: SamuraiSoccer.StageContents.Result
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.Result.ResultManager
+  commentId: T:SamuraiSoccer.StageContents.Result.ResultManager
+  parent: SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.StageContents.Result.ResultManager.html
+  name: ResultManager
+  nameWithType: ResultManager
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.CancellationTokenSource
+  commentId: T:System.Threading.CancellationTokenSource
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource
+  name: CancellationTokenSource
+  nameWithType: CancellationTokenSource
+  fullName: System.Threading.CancellationTokenSource
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultBGM.Start
+  href: SamuraiSoccer.StageContents.Result.ResultBGM.html#SamuraiSoccer_StageContents_Result_ResultBGM_Start
+  name: Start
+  nameWithType: ResultBGM.Start
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.Start
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM
+  href: SamuraiSoccer.StageContents.Result.ResultBGM.html#SamuraiSoccer_StageContents_Result_ResultBGM_PlayWinBGM_System_Threading_CancellationToken_
+  name: PlayWinBGM
+  nameWithType: ResultBGM.PlayWinBGM
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.PlayWinBGM
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM
+  href: SamuraiSoccer.StageContents.Result.ResultBGM.html#SamuraiSoccer_StageContents_Result_ResultBGM_PlayLoseBGM_System_Threading_CancellationToken_
+  name: PlayLoseBGM
+  nameWithType: ResultBGM.PlayLoseBGM
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.PlayLoseBGM
+- uid: SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded
+  href: SamuraiSoccer.StageContents.Result.ResultBGM.html#SamuraiSoccer_StageContents_Result_ResultBGM_SceneLoaded_UnityEngine_SceneManagement_Scene_UnityEngine_SceneManagement_LoadSceneMode_
+  name: SceneLoaded
+  nameWithType: ResultBGM.SceneLoaded
+  fullName: SamuraiSoccer.StageContents.Result.ResultBGM.SceneLoaded
+- uid: UnityEngine.SceneManagement.Scene
+  commentId: T:UnityEngine.SceneManagement.Scene
+  parent: UnityEngine.SceneManagement
+  isExternal: true
+  name: Scene
+  nameWithType: Scene
+  fullName: UnityEngine.SceneManagement.Scene
+- uid: UnityEngine.SceneManagement.LoadSceneMode
+  commentId: T:UnityEngine.SceneManagement.LoadSceneMode
+  parent: UnityEngine.SceneManagement
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: UnityEngine.SceneManagement.LoadSceneMode
+- uid: UnityEngine.SceneManagement
+  commentId: N:UnityEngine.SceneManagement
+  isExternal: true
+  name: UnityEngine.SceneManagement
+  nameWithType: UnityEngine.SceneManagement
+  fullName: UnityEngine.SceneManagement
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.SceneManagement
+    name: SceneManagement
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.SceneManagement
+    name: SceneManagement
+    isExternal: true

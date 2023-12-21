@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.JiangshiPostProcessing
+  commentId: T:SamuraiSoccer.StageContents.China.JiangshiPostProcessing
+  id: JiangshiPostProcessing
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  - SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start
+  - SamuraiSoccer.StageContents.China.JiangshiPostProcessing.m_material
+  langs:
+  - csharp
+  - vb
+  name: JiangshiPostProcessing
+  nameWithType: JiangshiPostProcessing
+  fullName: SamuraiSoccer.StageContents.China.JiangshiPostProcessing
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: JiangshiPostProcessing
+    path: ../Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  summary: キョンシーシーンにおいてカメラにポストエフェクトをかける
+  example: []
+  syntax:
+    content: 'public class JiangshiPostProcessing : MonoBehaviour'
+    content.vb: Public Class JiangshiPostProcessing Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.m_material
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiPostProcessing.m_material
+  id: m_material
+  parent: SamuraiSoccer.StageContents.China.JiangshiPostProcessing
+  langs:
+  - csharp
+  - vb
+  name: m_material
+  nameWithType: JiangshiPostProcessing.m_material
+  fullName: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.m_material
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_material
+    path: ../Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Material m_material
+    return:
+      type: UnityEngine.Material
+    content.vb: >-
+      <SerializeField>
+
+      Private m_material As Material
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  commentId: M:SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  id: OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  parent: SamuraiSoccer.StageContents.China.JiangshiPostProcessing
+  langs:
+  - csharp
+  - vb
+  name: OnRenderImage(RenderTexture, RenderTexture)
+  nameWithType: JiangshiPostProcessing.OnRenderImage(RenderTexture, RenderTexture)
+  fullName: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage(UnityEngine.RenderTexture, UnityEngine.RenderTexture)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnRenderImage
+    path: ../Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void OnRenderImage(RenderTexture src, RenderTexture dest)
+    parameters:
+    - id: src
+      type: UnityEngine.RenderTexture
+    - id: dest
+      type: UnityEngine.RenderTexture
+    content.vb: Private Sub OnRenderImage(src As RenderTexture, dest As RenderTexture)
+  overload: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage*
+- uid: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start
+  commentId: M:SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.China.JiangshiPostProcessing
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: JiangshiPostProcessing.Start()
+  fullName: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/China/JiangshiPostProcessing.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Material
+  commentId: T:UnityEngine.Material
+  parent: UnityEngine
+  isExternal: true
+  name: Material
+  nameWithType: Material
+  fullName: UnityEngine.Material
+- uid: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage*
+  commentId: Overload:SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage
+  href: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.html#SamuraiSoccer_StageContents_China_JiangshiPostProcessing_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_
+  name: OnRenderImage
+  nameWithType: JiangshiPostProcessing.OnRenderImage
+  fullName: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.OnRenderImage
+- uid: UnityEngine.RenderTexture
+  commentId: T:UnityEngine.RenderTexture
+  parent: UnityEngine
+  isExternal: true
+  name: RenderTexture
+  nameWithType: RenderTexture
+  fullName: UnityEngine.RenderTexture
+- uid: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start
+  href: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.html#SamuraiSoccer_StageContents_China_JiangshiPostProcessing_Start
+  name: Start
+  nameWithType: JiangshiPostProcessing.Start
+  fullName: SamuraiSoccer.StageContents.China.JiangshiPostProcessing.Start

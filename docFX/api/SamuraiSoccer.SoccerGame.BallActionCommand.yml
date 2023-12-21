@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.BallActionCommand
+  commentId: T:SamuraiSoccer.SoccerGame.BallActionCommand
+  id: BallActionCommand
+  parent: SamuraiSoccer.SoccerGame
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: BallActionCommand
+  nameWithType: BallActionCommand
+  fullName: SamuraiSoccer.SoccerGame.BallActionCommand
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BallActionCommand
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ボールを操作するコマンドの元．
+  example: []
+  syntax:
+    content: public abstract class BallActionCommand
+    content.vb: Public MustInherit Class BallActionCommand
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - SamuraiSoccer.SoccerGame.DribbleCommand
+  - SamuraiSoccer.SoccerGame.PassCommand
+  - SamuraiSoccer.SoccerGame.ShootCommand
+  - SamuraiSoccer.SoccerGame.TrapCommand
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

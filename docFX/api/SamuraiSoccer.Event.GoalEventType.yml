@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.GoalEventType
+  commentId: T:SamuraiSoccer.Event.GoalEventType
+  id: GoalEventType
+  parent: SamuraiSoccer.Event
+  children:
+  - SamuraiSoccer.Event.GoalEventType.CutSceneOpponentGoal
+  - SamuraiSoccer.Event.GoalEventType.CutSceneTeammateGoal
+  - SamuraiSoccer.Event.GoalEventType.NormalOpponentGoal
+  - SamuraiSoccer.Event.GoalEventType.NormalTeammateGoal
+  langs:
+  - csharp
+  - vb
+  name: GoalEventType
+  nameWithType: GoalEventType
+  fullName: SamuraiSoccer.Event.GoalEventType
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Event/GoalEventType.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GoalEventType
+    path: ../Assets/Scripts/Event/GoalEventType.cs
+    startLine: 5
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ゴールイベントの種類。
+  example: []
+  syntax:
+    content: public enum GoalEventType
+    content.vb: Public Enum GoalEventType
+- uid: SamuraiSoccer.Event.GoalEventType.NormalTeammateGoal
+  commentId: F:SamuraiSoccer.Event.GoalEventType.NormalTeammateGoal
+  id: NormalTeammateGoal
+  parent: SamuraiSoccer.Event.GoalEventType
+  langs:
+  - csharp
+  - vb
+  name: NormalTeammateGoal
+  nameWithType: GoalEventType.NormalTeammateGoal
+  fullName: SamuraiSoccer.Event.GoalEventType.NormalTeammateGoal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/GoalEventType.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: NormalTeammateGoal
+    path: ../Assets/Scripts/Event/GoalEventType.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: NormalTeammateGoal = 0
+    return:
+      type: SamuraiSoccer.Event.GoalEventType
+- uid: SamuraiSoccer.Event.GoalEventType.NormalOpponentGoal
+  commentId: F:SamuraiSoccer.Event.GoalEventType.NormalOpponentGoal
+  id: NormalOpponentGoal
+  parent: SamuraiSoccer.Event.GoalEventType
+  langs:
+  - csharp
+  - vb
+  name: NormalOpponentGoal
+  nameWithType: GoalEventType.NormalOpponentGoal
+  fullName: SamuraiSoccer.Event.GoalEventType.NormalOpponentGoal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/GoalEventType.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: NormalOpponentGoal
+    path: ../Assets/Scripts/Event/GoalEventType.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: NormalOpponentGoal = 1
+    return:
+      type: SamuraiSoccer.Event.GoalEventType
+- uid: SamuraiSoccer.Event.GoalEventType.CutSceneTeammateGoal
+  commentId: F:SamuraiSoccer.Event.GoalEventType.CutSceneTeammateGoal
+  id: CutSceneTeammateGoal
+  parent: SamuraiSoccer.Event.GoalEventType
+  langs:
+  - csharp
+  - vb
+  name: CutSceneTeammateGoal
+  nameWithType: GoalEventType.CutSceneTeammateGoal
+  fullName: SamuraiSoccer.Event.GoalEventType.CutSceneTeammateGoal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/GoalEventType.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CutSceneTeammateGoal
+    path: ../Assets/Scripts/Event/GoalEventType.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: CutSceneTeammateGoal = 2
+    return:
+      type: SamuraiSoccer.Event.GoalEventType
+- uid: SamuraiSoccer.Event.GoalEventType.CutSceneOpponentGoal
+  commentId: F:SamuraiSoccer.Event.GoalEventType.CutSceneOpponentGoal
+  id: CutSceneOpponentGoal
+  parent: SamuraiSoccer.Event.GoalEventType
+  langs:
+  - csharp
+  - vb
+  name: CutSceneOpponentGoal
+  nameWithType: GoalEventType.CutSceneOpponentGoal
+  fullName: SamuraiSoccer.Event.GoalEventType.CutSceneOpponentGoal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/GoalEventType.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CutSceneOpponentGoal
+    path: ../Assets/Scripts/Event/GoalEventType.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: CutSceneOpponentGoal = 3
+    return:
+      type: SamuraiSoccer.Event.GoalEventType
+references:
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.Event.GoalEventType
+  commentId: T:SamuraiSoccer.Event.GoalEventType
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.GoalEventType.html
+  name: GoalEventType
+  nameWithType: GoalEventType
+  fullName: SamuraiSoccer.Event.GoalEventType

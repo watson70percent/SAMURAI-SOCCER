@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary
+  commentId: T:SamuraiSoccer.SoccerGame.FieldBoundary
+  id: FieldBoundary
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.FieldBoundary.Start
+  - SamuraiSoccer.SoccerGame.FieldBoundary.XMax
+  - SamuraiSoccer.SoccerGame.FieldBoundary.XMin
+  - SamuraiSoccer.SoccerGame.FieldBoundary.ZMax
+  - SamuraiSoccer.SoccerGame.FieldBoundary.ZMin
+  - SamuraiSoccer.SoccerGame.FieldBoundary.m_maxFlag
+  - SamuraiSoccer.SoccerGame.FieldBoundary.m_minFlag
+  - SamuraiSoccer.SoccerGame.FieldBoundary.m_xMax
+  - SamuraiSoccer.SoccerGame.FieldBoundary.m_xMin
+  - SamuraiSoccer.SoccerGame.FieldBoundary.m_zMax
+  - SamuraiSoccer.SoccerGame.FieldBoundary.m_zMin
+  langs:
+  - csharp
+  - vb
+  name: FieldBoundary
+  nameWithType: FieldBoundary
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FieldBoundary
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: 'public class FieldBoundary : MonoBehaviour'
+    content.vb: Public Class FieldBoundary Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.m_xMin
+  commentId: F:SamuraiSoccer.SoccerGame.FieldBoundary.m_xMin
+  id: m_xMin
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: m_xMin
+  nameWithType: FieldBoundary.m_xMin
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.m_xMin
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_xMin
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static float m_xMin
+    return:
+      type: System.Single
+    content.vb: Private Shared m_xMin As Single
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.m_xMax
+  commentId: F:SamuraiSoccer.SoccerGame.FieldBoundary.m_xMax
+  id: m_xMax
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: m_xMax
+  nameWithType: FieldBoundary.m_xMax
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.m_xMax
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_xMax
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static float m_xMax
+    return:
+      type: System.Single
+    content.vb: Private Shared m_xMax As Single
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.m_zMin
+  commentId: F:SamuraiSoccer.SoccerGame.FieldBoundary.m_zMin
+  id: m_zMin
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: m_zMin
+  nameWithType: FieldBoundary.m_zMin
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.m_zMin
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_zMin
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static float m_zMin
+    return:
+      type: System.Single
+    content.vb: Private Shared m_zMin As Single
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.m_zMax
+  commentId: F:SamuraiSoccer.SoccerGame.FieldBoundary.m_zMax
+  id: m_zMax
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: m_zMax
+  nameWithType: FieldBoundary.m_zMax
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.m_zMax
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_zMax
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static float m_zMax
+    return:
+      type: System.Single
+    content.vb: Private Shared m_zMax As Single
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.XMin
+  commentId: P:SamuraiSoccer.SoccerGame.FieldBoundary.XMin
+  id: XMin
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: XMin
+  nameWithType: FieldBoundary.XMin
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.XMin
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: XMin
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static float XMin { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property XMin As Single
+  overload: SamuraiSoccer.SoccerGame.FieldBoundary.XMin*
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.XMax
+  commentId: P:SamuraiSoccer.SoccerGame.FieldBoundary.XMax
+  id: XMax
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: XMax
+  nameWithType: FieldBoundary.XMax
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.XMax
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: XMax
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static float XMax { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property XMax As Single
+  overload: SamuraiSoccer.SoccerGame.FieldBoundary.XMax*
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.ZMin
+  commentId: P:SamuraiSoccer.SoccerGame.FieldBoundary.ZMin
+  id: ZMin
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: ZMin
+  nameWithType: FieldBoundary.ZMin
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.ZMin
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ZMin
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static float ZMin { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property ZMin As Single
+  overload: SamuraiSoccer.SoccerGame.FieldBoundary.ZMin*
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.ZMax
+  commentId: P:SamuraiSoccer.SoccerGame.FieldBoundary.ZMax
+  id: ZMax
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: ZMax
+  nameWithType: FieldBoundary.ZMax
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.ZMax
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ZMax
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static float ZMax { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property ZMax As Single
+  overload: SamuraiSoccer.SoccerGame.FieldBoundary.ZMax*
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.m_minFlag
+  commentId: F:SamuraiSoccer.SoccerGame.FieldBoundary.m_minFlag
+  id: m_minFlag
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: m_minFlag
+  nameWithType: FieldBoundary.m_minFlag
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.m_minFlag
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_minFlag
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_minFlag
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_minFlag As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.m_maxFlag
+  commentId: F:SamuraiSoccer.SoccerGame.FieldBoundary.m_maxFlag
+  id: m_maxFlag
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: m_maxFlag
+  nameWithType: FieldBoundary.m_maxFlag
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.m_maxFlag
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_maxFlag
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_maxFlag
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_maxFlag As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.Start
+  commentId: M:SamuraiSoccer.SoccerGame.FieldBoundary.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.FieldBoundary
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: FieldBoundary.Start()
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldBoundary.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/FieldBoundary.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.SoccerGame.FieldBoundary.Start*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.XMin*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldBoundary.XMin
+  href: SamuraiSoccer.SoccerGame.FieldBoundary.html#SamuraiSoccer_SoccerGame_FieldBoundary_XMin
+  name: XMin
+  nameWithType: FieldBoundary.XMin
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.XMin
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.XMax*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldBoundary.XMax
+  href: SamuraiSoccer.SoccerGame.FieldBoundary.html#SamuraiSoccer_SoccerGame_FieldBoundary_XMax
+  name: XMax
+  nameWithType: FieldBoundary.XMax
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.XMax
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.ZMin*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldBoundary.ZMin
+  href: SamuraiSoccer.SoccerGame.FieldBoundary.html#SamuraiSoccer_SoccerGame_FieldBoundary_ZMin
+  name: ZMin
+  nameWithType: FieldBoundary.ZMin
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.ZMin
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.ZMax*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldBoundary.ZMax
+  href: SamuraiSoccer.SoccerGame.FieldBoundary.html#SamuraiSoccer_SoccerGame_FieldBoundary_ZMax
+  name: ZMax
+  nameWithType: FieldBoundary.ZMax
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.ZMax
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.SoccerGame.FieldBoundary.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldBoundary.Start
+  href: SamuraiSoccer.SoccerGame.FieldBoundary.html#SamuraiSoccer_SoccerGame_FieldBoundary_Start
+  name: Start
+  nameWithType: FieldBoundary.Start
+  fullName: SamuraiSoccer.SoccerGame.FieldBoundary.Start

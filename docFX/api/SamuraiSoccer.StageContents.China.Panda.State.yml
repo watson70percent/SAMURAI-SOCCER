@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.Panda.State
+  commentId: T:SamuraiSoccer.StageContents.China.Panda.State
+  id: Panda.State
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.Panda.State.Active
+  - SamuraiSoccer.StageContents.China.Panda.State.Non_Interference
+  - SamuraiSoccer.StageContents.China.Panda.State.Stop
+  - SamuraiSoccer.StageContents.China.Panda.State.Vanish
+  langs:
+  - csharp
+  - vb
+  name: Panda.State
+  nameWithType: Panda.State
+  fullName: SamuraiSoccer.StageContents.China.Panda.State
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: State
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private enum Panda.State
+    content.vb: Private Enum Panda.State
+- uid: SamuraiSoccer.StageContents.China.Panda.State.Active
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.State.Active
+  id: Active
+  parent: SamuraiSoccer.StageContents.China.Panda.State
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: Panda.State.Active
+  fullName: SamuraiSoccer.StageContents.China.Panda.State.Active
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Active
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: Active = 0
+    return:
+      type: SamuraiSoccer.StageContents.China.Panda.State
+- uid: SamuraiSoccer.StageContents.China.Panda.State.Non_Interference
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.State.Non_Interference
+  id: Non_Interference
+  parent: SamuraiSoccer.StageContents.China.Panda.State
+  langs:
+  - csharp
+  - vb
+  name: Non_Interference
+  nameWithType: Panda.State.Non_Interference
+  fullName: SamuraiSoccer.StageContents.China.Panda.State.Non_Interference
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Non_Interference
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: Non_Interference = 1
+    return:
+      type: SamuraiSoccer.StageContents.China.Panda.State
+- uid: SamuraiSoccer.StageContents.China.Panda.State.Stop
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.State.Stop
+  id: Stop
+  parent: SamuraiSoccer.StageContents.China.Panda.State
+  langs:
+  - csharp
+  - vb
+  name: Stop
+  nameWithType: Panda.State.Stop
+  fullName: SamuraiSoccer.StageContents.China.Panda.State.Stop
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Stop
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 31
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: Stop = 2
+    return:
+      type: SamuraiSoccer.StageContents.China.Panda.State
+- uid: SamuraiSoccer.StageContents.China.Panda.State.Vanish
+  commentId: F:SamuraiSoccer.StageContents.China.Panda.State.Vanish
+  id: Vanish
+  parent: SamuraiSoccer.StageContents.China.Panda.State
+  langs:
+  - csharp
+  - vb
+  name: Vanish
+  nameWithType: Panda.State.Vanish
+  fullName: SamuraiSoccer.StageContents.China.Panda.State.Vanish
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/Panda.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Vanish
+    path: ../Assets/Scripts/StageContents/China/Panda.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: Vanish = 3
+    return:
+      type: SamuraiSoccer.StageContents.China.Panda.State
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: SamuraiSoccer.StageContents.China.Panda.State
+  commentId: T:SamuraiSoccer.StageContents.China.Panda.State
+  parent: SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.StageContents.China.Panda.html
+  name: Panda.State
+  nameWithType: Panda.State
+  fullName: SamuraiSoccer.StageContents.China.Panda.State
+  spec.csharp:
+  - uid: SamuraiSoccer.StageContents.China.Panda
+    name: Panda
+    href: SamuraiSoccer.StageContents.China.Panda.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China.Panda.State
+    name: State
+    href: SamuraiSoccer.StageContents.China.Panda.State.html
+  spec.vb:
+  - uid: SamuraiSoccer.StageContents.China.Panda
+    name: Panda
+    href: SamuraiSoccer.StageContents.China.Panda.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China.Panda.State
+    name: State
+    href: SamuraiSoccer.StageContents.China.Panda.State.html

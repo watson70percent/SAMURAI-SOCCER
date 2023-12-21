@@ -1,0 +1,284 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.OpponentNumber
+  commentId: T:SamuraiSoccer.UI.OpponentNumber
+  id: OpponentNumber
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.OpponentNumber.Start
+  - SamuraiSoccer.UI.OpponentNumber.m_easyCPUManager
+  - SamuraiSoccer.UI.OpponentNumber.m_remainNumberText
+  langs:
+  - csharp
+  - vb
+  name: OpponentNumber
+  nameWithType: OpponentNumber
+  fullName: SamuraiSoccer.UI.OpponentNumber
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/OpponentNumber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OpponentNumber
+    path: ../Assets/Scripts/UI/OpponentNumber.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class OpponentNumber : MonoBehaviour'
+    content.vb: Public Class OpponentNumber Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.OpponentNumber.m_remainNumberText
+  commentId: F:SamuraiSoccer.UI.OpponentNumber.m_remainNumberText
+  id: m_remainNumberText
+  parent: SamuraiSoccer.UI.OpponentNumber
+  langs:
+  - csharp
+  - vb
+  name: m_remainNumberText
+  nameWithType: OpponentNumber.m_remainNumberText
+  fullName: SamuraiSoccer.UI.OpponentNumber.m_remainNumberText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/OpponentNumber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_remainNumberText
+    path: ../Assets/Scripts/UI/OpponentNumber.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_remainNumberText
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_remainNumberText As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.OpponentNumber.m_easyCPUManager
+  commentId: F:SamuraiSoccer.UI.OpponentNumber.m_easyCPUManager
+  id: m_easyCPUManager
+  parent: SamuraiSoccer.UI.OpponentNumber
+  langs:
+  - csharp
+  - vb
+  name: m_easyCPUManager
+  nameWithType: OpponentNumber.m_easyCPUManager
+  fullName: SamuraiSoccer.UI.OpponentNumber.m_easyCPUManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/OpponentNumber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_easyCPUManager
+    path: ../Assets/Scripts/UI/OpponentNumber.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private EasyCPUManager m_easyCPUManager
+    return:
+      type: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+    content.vb: >-
+      <SerializeField>
+
+      Private m_easyCPUManager As EasyCPUManager
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.OpponentNumber.Start
+  commentId: M:SamuraiSoccer.UI.OpponentNumber.Start
+  id: Start
+  parent: SamuraiSoccer.UI.OpponentNumber
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: OpponentNumber.Start()
+  fullName: SamuraiSoccer.UI.OpponentNumber.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/OpponentNumber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/OpponentNumber.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.OpponentNumber.Start*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  commentId: T:SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  parent: SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html
+  name: EasyCPUManager
+  nameWithType: EasyCPUManager
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+- uid: SamuraiSoccer.SoccerGame.AI
+  commentId: N:SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame.AI
+  nameWithType: SamuraiSoccer.SoccerGame.AI
+  fullName: SamuraiSoccer.SoccerGame.AI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+- uid: SamuraiSoccer.UI.OpponentNumber.Start*
+  commentId: Overload:SamuraiSoccer.UI.OpponentNumber.Start
+  href: SamuraiSoccer.UI.OpponentNumber.html#SamuraiSoccer_UI_OpponentNumber_Start
+  name: Start
+  nameWithType: OpponentNumber.Start
+  fullName: SamuraiSoccer.UI.OpponentNumber.Start

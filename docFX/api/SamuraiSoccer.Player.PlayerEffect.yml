@@ -1,0 +1,226 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Player.PlayerEffect
+  commentId: T:SamuraiSoccer.Player.PlayerEffect
+  id: PlayerEffect
+  parent: SamuraiSoccer.Player
+  children:
+  - SamuraiSoccer.Player.PlayerEffect.Start
+  - SamuraiSoccer.Player.PlayerEffect.aura
+  - SamuraiSoccer.Player.PlayerEffect.m_isPlaying
+  langs:
+  - csharp
+  - vb
+  name: PlayerEffect
+  nameWithType: PlayerEffect
+  fullName: SamuraiSoccer.Player.PlayerEffect
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerEffect.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayerEffect
+    path: ../Assets/Scripts/Player/PlayerEffect.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: 'public class PlayerEffect : MonoBehaviour'
+    content.vb: Public Class PlayerEffect Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.Player.PlayerEffect.aura
+  commentId: F:SamuraiSoccer.Player.PlayerEffect.aura
+  id: aura
+  parent: SamuraiSoccer.Player.PlayerEffect
+  langs:
+  - csharp
+  - vb
+  name: aura
+  nameWithType: PlayerEffect.aura
+  fullName: SamuraiSoccer.Player.PlayerEffect.aura
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerEffect.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: aura
+    path: ../Assets/Scripts/Player/PlayerEffect.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject aura
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private aura As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.Player.PlayerEffect.m_isPlaying
+  commentId: F:SamuraiSoccer.Player.PlayerEffect.m_isPlaying
+  id: m_isPlaying
+  parent: SamuraiSoccer.Player.PlayerEffect
+  langs:
+  - csharp
+  - vb
+  name: m_isPlaying
+  nameWithType: PlayerEffect.m_isPlaying
+  fullName: SamuraiSoccer.Player.PlayerEffect.m_isPlaying
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerEffect.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isPlaying
+    path: ../Assets/Scripts/Player/PlayerEffect.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private bool m_isPlaying
+    return:
+      type: System.Boolean
+    content.vb: Private m_isPlaying As Boolean
+- uid: SamuraiSoccer.Player.PlayerEffect.Start
+  commentId: M:SamuraiSoccer.Player.PlayerEffect.Start
+  id: Start
+  parent: SamuraiSoccer.Player.PlayerEffect
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PlayerEffect.Start()
+  fullName: SamuraiSoccer.Player.PlayerEffect.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerEffect.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/Player/PlayerEffect.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.Player.PlayerEffect.Start*
+references:
+- uid: SamuraiSoccer.Player
+  commentId: N:SamuraiSoccer.Player
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Player
+  nameWithType: SamuraiSoccer.Player
+  fullName: SamuraiSoccer.Player
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.Player.PlayerEffect.Start*
+  commentId: Overload:SamuraiSoccer.Player.PlayerEffect.Start
+  href: SamuraiSoccer.Player.PlayerEffect.html#SamuraiSoccer_Player_PlayerEffect_Start
+  name: Start
+  nameWithType: PlayerEffect.Start
+  fullName: SamuraiSoccer.Player.PlayerEffect.Start

@@ -1,0 +1,284 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationText
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationText
+  id: ConversationText
+  parent: SamuraiSoccer.StageContents.Conversation
+  children:
+  - SamuraiSoccer.StageContents.Conversation.ConversationText.is_option
+  - SamuraiSoccer.StageContents.Conversation.ConversationText.m_characterName
+  - SamuraiSoccer.StageContents.Conversation.ConversationText.m_motionType
+  - SamuraiSoccer.StageContents.Conversation.ConversationText.m_text
+  langs:
+  - csharp
+  - vb
+  name: ConversationText
+  nameWithType: ConversationText
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationText
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ConversationText
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 20
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class ConversationText
+    content.vb: >-
+      <Serializable>
+
+      Public Class ConversationText
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationText.m_characterName
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationText.m_characterName
+  id: m_characterName
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationText
+  langs:
+  - csharp
+  - vb
+  name: m_characterName
+  nameWithType: ConversationText.m_characterName
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationText.m_characterName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_characterName
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 24
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Tooltip("話す人の名前")]
+
+      public CharacterName m_characterName
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.CharacterName
+    content.vb: >-
+      <Tooltip("話す人の名前")>
+
+      Public m_characterName As CharacterName
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 話す人の名前
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationText.m_motionType
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationText.m_motionType
+  id: m_motionType
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationText
+  langs:
+  - csharp
+  - vb
+  name: m_motionType
+  nameWithType: ConversationText.m_motionType
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationText.m_motionType
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_motionType
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 26
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Tooltip("話し手の感情")]
+
+      public EmotionType m_motionType
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+    content.vb: >-
+      <Tooltip("話し手の感情")>
+
+      Public m_motionType As EmotionType
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 話し手の感情
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationText.m_text
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationText.m_text
+  id: m_text
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationText
+  langs:
+  - csharp
+  - vb
+  name: m_text
+  nameWithType: ConversationText.m_text
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationText.m_text
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_text
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 28
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Tooltip("話す内容")]
+
+      [TextArea(1, 5)]
+
+      public string m_text
+    return:
+      type: System.String
+    content.vb: >-
+      <Tooltip("話す内容")>
+
+      <TextArea(1, 5)>
+
+      Public m_text As String
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 話す内容
+  - type: UnityEngine.TextAreaAttribute
+    ctor: UnityEngine.TextAreaAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1
+    - type: System.Int32
+      value: 5
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationText.is_option
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationText.is_option
+  id: is_option
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationText
+  langs:
+  - csharp
+  - vb
+  name: is_option
+  nameWithType: ConversationText.is_option
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationText.is_option
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: is_option
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 29
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public bool is_option
+    return:
+      type: System.Boolean
+    content.vb: Public is_option As Boolean
+references:
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SamuraiSoccer.StageContents.Conversation.CharacterName
+  commentId: T:SamuraiSoccer.StageContents.Conversation.CharacterName
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.CharacterName.html
+  name: CharacterName
+  nameWithType: CharacterName
+  fullName: SamuraiSoccer.StageContents.Conversation.CharacterName
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType
+  commentId: T:SamuraiSoccer.StageContents.Conversation.EmotionType
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.EmotionType.html
+  name: EmotionType
+  nameWithType: EmotionType
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

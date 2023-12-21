@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.SoundBox
+  commentId: T:SamuraiSoccer.StageContents.China.SoundBox
+  id: SoundBox
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox(UnityEngine.AudioClip)
+  - SamuraiSoccer.StageContents.China.SoundBox.Vanish
+  langs:
+  - csharp
+  - vb
+  name: SoundBox
+  nameWithType: SoundBox
+  fullName: SamuraiSoccer.StageContents.China.SoundBox
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/SoundBox.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SoundBox
+    path: ../Assets/Scripts/StageContents/China/SoundBox.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  summary: 音を鳴らして消えるオブジェクト
+  example: []
+  syntax:
+    content: 'public class SoundBox : MonoBehaviour'
+    content.vb: Public Class SoundBox Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox(UnityEngine.AudioClip)
+  commentId: M:SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox(UnityEngine.AudioClip)
+  id: StartSoundBox(UnityEngine.AudioClip)
+  parent: SamuraiSoccer.StageContents.China.SoundBox
+  langs:
+  - csharp
+  - vb
+  name: StartSoundBox(AudioClip)
+  nameWithType: SoundBox.StartSoundBox(AudioClip)
+  fullName: SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox(UnityEngine.AudioClip)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/SoundBox.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StartSoundBox
+    path: ../Assets/Scripts/StageContents/China/SoundBox.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: public void StartSoundBox(AudioClip clip)
+    parameters:
+    - id: clip
+      type: UnityEngine.AudioClip
+    content.vb: Public Sub StartSoundBox(clip As AudioClip)
+  overload: SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox*
+- uid: SamuraiSoccer.StageContents.China.SoundBox.Vanish
+  commentId: M:SamuraiSoccer.StageContents.China.SoundBox.Vanish
+  id: Vanish
+  parent: SamuraiSoccer.StageContents.China.SoundBox
+  langs:
+  - csharp
+  - vb
+  name: Vanish()
+  nameWithType: SoundBox.Vanish()
+  fullName: SamuraiSoccer.StageContents.China.SoundBox.Vanish()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/SoundBox.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Vanish
+    path: ../Assets/Scripts/StageContents/China/SoundBox.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Vanish()
+    content.vb: Private Sub Vanish()
+  overload: SamuraiSoccer.StageContents.China.SoundBox.Vanish*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox*
+  commentId: Overload:SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox
+  href: SamuraiSoccer.StageContents.China.SoundBox.html#SamuraiSoccer_StageContents_China_SoundBox_StartSoundBox_UnityEngine_AudioClip_
+  name: StartSoundBox
+  nameWithType: SoundBox.StartSoundBox
+  fullName: SamuraiSoccer.StageContents.China.SoundBox.StartSoundBox
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: SamuraiSoccer.StageContents.China.SoundBox.Vanish*
+  commentId: Overload:SamuraiSoccer.StageContents.China.SoundBox.Vanish
+  href: SamuraiSoccer.StageContents.China.SoundBox.html#SamuraiSoccer_StageContents_China_SoundBox_Vanish
+  name: Vanish
+  nameWithType: SoundBox.Vanish
+  fullName: SamuraiSoccer.StageContents.China.SoundBox.Vanish

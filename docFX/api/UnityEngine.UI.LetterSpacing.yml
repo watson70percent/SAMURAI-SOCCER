@@ -1,0 +1,1013 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnityEngine.UI.LetterSpacing
+  commentId: T:UnityEngine.UI.LetterSpacing
+  id: LetterSpacing
+  parent: UnityEngine.UI
+  children:
+  - UnityEngine.UI.LetterSpacing.#ctor
+  - UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)
+  - UnityEngine.UI.LetterSpacing.ModifyMesh(UnityEngine.UI.VertexHelper)
+  - UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UnityEngine.UIVertex})
+  - UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  - UnityEngine.UI.LetterSpacing.m_spacing
+  - UnityEngine.UI.LetterSpacing.spacing
+  - UnityEngine.UI.LetterSpacing.useRichText
+  langs:
+  - csharp
+  - vb
+  name: LetterSpacing
+  nameWithType: LetterSpacing
+  fullName: UnityEngine.UI.LetterSpacing
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LetterSpacing
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: >-
+      [AddComponentMenu("UI/Effects/Letter Spacing", 15)]
+
+      public class LetterSpacing : BaseMeshEffect, IMeshModifier
+    content.vb: >-
+      <AddComponentMenu("UI/Effects/Letter Spacing", 15)>
+
+      Public Class LetterSpacing Inherits BaseMeshEffect Implements IMeshModifier
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - UnityEngine.EventSystems.UIBehaviour
+  - UnityEngine.UI.BaseMeshEffect
+  implements:
+  - UnityEngine.UI.IMeshModifier
+  inheritedMembers:
+  - UnityEngine.UI.BaseMeshEffect.OnEnable
+  - UnityEngine.UI.BaseMeshEffect.OnDisable
+  - UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties
+  - UnityEngine.UI.BaseMeshEffect.OnValidate
+  - UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)
+  - UnityEngine.UI.BaseMeshEffect.graphic
+  - UnityEngine.EventSystems.UIBehaviour.Awake
+  - UnityEngine.EventSystems.UIBehaviour.Start
+  - UnityEngine.EventSystems.UIBehaviour.OnDestroy
+  - UnityEngine.EventSystems.UIBehaviour.IsActive
+  - UnityEngine.EventSystems.UIBehaviour.Reset
+  - UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange
+  - UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+  - UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+  - UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+  - UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+  - UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Effects/Letter Spacing
+    - type: System.Int32
+      value: 15
+- uid: UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  commentId: F:UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  id: SupportedTagRegexPattersn
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: SupportedTagRegexPattersn
+  nameWithType: LetterSpacing.SupportedTagRegexPattersn
+  fullName: UnityEngine.UI.LetterSpacing.SupportedTagRegexPattersn
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SupportedTagRegexPattersn
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 43
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: private const string SupportedTagRegexPattersn = "<b>|</b>|<i>|</i>|<size=.*?>|</size>|<color=.*?>|</color>|<material=.*?>|</material>"
+    return:
+      type: System.String
+    content.vb: Private Const SupportedTagRegexPattersn As String = "<b>|</b>|<i>|</i>|<size=.*?>|</size>|<color=.*?>|</color>|<material=.*?>|</material>"
+- uid: UnityEngine.UI.LetterSpacing.useRichText
+  commentId: F:UnityEngine.UI.LetterSpacing.useRichText
+  id: useRichText
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: useRichText
+  nameWithType: LetterSpacing.useRichText
+  fullName: UnityEngine.UI.LetterSpacing.useRichText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: useRichText
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 45
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private bool useRichText
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <SerializeField>
+
+      Private useRichText As Boolean
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: UnityEngine.UI.LetterSpacing.m_spacing
+  commentId: F:UnityEngine.UI.LetterSpacing.m_spacing
+  id: m_spacing
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: m_spacing
+  nameWithType: LetterSpacing.m_spacing
+  fullName: UnityEngine.UI.LetterSpacing.m_spacing
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_spacing
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_spacing
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_spacing As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: UnityEngine.UI.LetterSpacing.#ctor
+  commentId: M:UnityEngine.UI.LetterSpacing.#ctor
+  id: '#ctor'
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: LetterSpacing()
+  nameWithType: LetterSpacing.LetterSpacing()
+  fullName: UnityEngine.UI.LetterSpacing.LetterSpacing()
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 50
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: protected LetterSpacing()
+    content.vb: Protected Sub New()
+  overload: UnityEngine.UI.LetterSpacing.#ctor*
+  nameWithType.vb: LetterSpacing.New()
+  fullName.vb: UnityEngine.UI.LetterSpacing.New()
+  name.vb: New()
+- uid: UnityEngine.UI.LetterSpacing.spacing
+  commentId: P:UnityEngine.UI.LetterSpacing.spacing
+  id: spacing
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: spacing
+  nameWithType: LetterSpacing.spacing
+  fullName: UnityEngine.UI.LetterSpacing.spacing
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: spacing
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 60
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: public float spacing { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property spacing As Single
+  overload: UnityEngine.UI.LetterSpacing.spacing*
+- uid: UnityEngine.UI.LetterSpacing.ModifyMesh(UnityEngine.UI.VertexHelper)
+  commentId: M:UnityEngine.UI.LetterSpacing.ModifyMesh(UnityEngine.UI.VertexHelper)
+  id: ModifyMesh(UnityEngine.UI.VertexHelper)
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: ModifyMesh(VertexHelper)
+  nameWithType: LetterSpacing.ModifyMesh(VertexHelper)
+  fullName: UnityEngine.UI.LetterSpacing.ModifyMesh(UnityEngine.UI.VertexHelper)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ModifyMesh
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 76
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  example: []
+  syntax:
+    content: public override void ModifyMesh(VertexHelper vh)
+    parameters:
+    - id: vh
+      type: UnityEngine.UI.VertexHelper
+    content.vb: Public Overrides Sub ModifyMesh(vh As VertexHelper)
+  overridden: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)
+  overload: UnityEngine.UI.LetterSpacing.ModifyMesh*
+- uid: UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UnityEngine.UIVertex})
+  commentId: M:UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List{UnityEngine.UIVertex})
+  id: ModifyVertices(System.Collections.Generic.List{UnityEngine.UIVertex})
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: ModifyVertices(List<UIVertex>)
+  nameWithType: LetterSpacing.ModifyVertices(List<UIVertex>)
+  fullName: UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List<UnityEngine.UIVertex>)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ModifyVertices
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 90
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: public void ModifyVertices(List<UIVertex> verts)
+    parameters:
+    - id: verts
+      type: System.Collections.Generic.List{UnityEngine.UIVertex}
+    content.vb: Public Sub ModifyVertices(verts As List(Of UIVertex))
+  overload: UnityEngine.UI.LetterSpacing.ModifyVertices*
+  nameWithType.vb: LetterSpacing.ModifyVertices(List(Of UIVertex))
+  fullName.vb: UnityEngine.UI.LetterSpacing.ModifyVertices(System.Collections.Generic.List(Of UnityEngine.UIVertex))
+  name.vb: ModifyVertices(List(Of UIVertex))
+- uid: UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)
+  commentId: M:UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(System.String,System.Int32@)
+  id: GetRegexMatchedTagCollection(System.String,System.Int32@)
+  parent: UnityEngine.UI.LetterSpacing
+  langs:
+  - csharp
+  - vb
+  name: GetRegexMatchedTagCollection(string, out int)
+  nameWithType: LetterSpacing.GetRegexMatchedTagCollection(string, out int)
+  fullName: UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(string, out int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/LetterSpacing.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GetRegexMatchedTagCollection
+    path: ../Assets/Scripts/UI/LetterSpacing.cs
+    startLine: 228
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: UnityEngine.UI
+  syntax:
+    content: private IEnumerator GetRegexMatchedTagCollection(string line, out int lineLengthWithoutTags)
+    parameters:
+    - id: line
+      type: System.String
+    - id: lineLengthWithoutTags
+      type: System.Int32
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Private Function GetRegexMatchedTagCollection(line As String, lineLengthWithoutTags As Integer) As IEnumerator
+  overload: UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection*
+  nameWithType.vb: LetterSpacing.GetRegexMatchedTagCollection(String, Integer)
+  fullName.vb: UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection(String, Integer)
+  name.vb: GetRegexMatchedTagCollection(String, Integer)
+references:
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: UnityEngine.EventSystems.UIBehaviour
+  commentId: T:UnityEngine.EventSystems.UIBehaviour
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: UIBehaviour
+  nameWithType: UIBehaviour
+  fullName: UnityEngine.EventSystems.UIBehaviour
+- uid: UnityEngine.UI.BaseMeshEffect
+  commentId: T:UnityEngine.UI.BaseMeshEffect
+  parent: UnityEngine.UI
+  isExternal: true
+  name: BaseMeshEffect
+  nameWithType: BaseMeshEffect
+  fullName: UnityEngine.UI.BaseMeshEffect
+- uid: UnityEngine.UI.IMeshModifier
+  commentId: T:UnityEngine.UI.IMeshModifier
+  parent: UnityEngine.UI
+  isExternal: true
+  name: IMeshModifier
+  nameWithType: IMeshModifier
+  fullName: UnityEngine.UI.IMeshModifier
+- uid: UnityEngine.UI.BaseMeshEffect.OnEnable
+  commentId: M:UnityEngine.UI.BaseMeshEffect.OnEnable
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: OnEnable()
+  nameWithType: BaseMeshEffect.OnEnable()
+  fullName: UnityEngine.UI.BaseMeshEffect.OnEnable()
+  spec.csharp:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnEnable
+    name: OnEnable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnEnable
+    name: OnEnable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.BaseMeshEffect.OnDisable
+  commentId: M:UnityEngine.UI.BaseMeshEffect.OnDisable
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: OnDisable()
+  nameWithType: BaseMeshEffect.OnDisable()
+  fullName: UnityEngine.UI.BaseMeshEffect.OnDisable()
+  spec.csharp:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnDisable
+    name: OnDisable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnDisable
+    name: OnDisable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties
+  commentId: M:UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: OnDidApplyAnimationProperties()
+  nameWithType: BaseMeshEffect.OnDidApplyAnimationProperties()
+  fullName: UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties()
+  spec.csharp:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties
+    name: OnDidApplyAnimationProperties
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnDidApplyAnimationProperties
+    name: OnDidApplyAnimationProperties
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.BaseMeshEffect.OnValidate
+  commentId: M:UnityEngine.UI.BaseMeshEffect.OnValidate
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: OnValidate()
+  nameWithType: BaseMeshEffect.OnValidate()
+  fullName: UnityEngine.UI.BaseMeshEffect.OnValidate()
+  spec.csharp:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnValidate
+    name: OnValidate
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.BaseMeshEffect.OnValidate
+    name: OnValidate
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)
+  commentId: M:UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: ModifyMesh(Mesh)
+  nameWithType: BaseMeshEffect.ModifyMesh(Mesh)
+  fullName: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)
+  spec.csharp:
+  - uid: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)
+    name: ModifyMesh
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.Mesh)
+    name: ModifyMesh
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UI.BaseMeshEffect.graphic
+  commentId: P:UnityEngine.UI.BaseMeshEffect.graphic
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: graphic
+  nameWithType: BaseMeshEffect.graphic
+  fullName: UnityEngine.UI.BaseMeshEffect.graphic
+- uid: UnityEngine.EventSystems.UIBehaviour.Awake
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.Awake
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: Awake()
+  nameWithType: UIBehaviour.Awake()
+  fullName: UnityEngine.EventSystems.UIBehaviour.Awake()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Awake
+    name: Awake
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Awake
+    name: Awake
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.Start
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.Start
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: Start()
+  nameWithType: UIBehaviour.Start()
+  fullName: UnityEngine.EventSystems.UIBehaviour.Start()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Start
+    name: Start
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Start
+    name: Start
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnDestroy
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnDestroy
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnDestroy()
+  nameWithType: UIBehaviour.OnDestroy()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnDestroy()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnDestroy
+    name: OnDestroy
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnDestroy
+    name: OnDestroy
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.IsActive
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.IsActive
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: IsActive()
+  nameWithType: UIBehaviour.IsActive()
+  fullName: UnityEngine.EventSystems.UIBehaviour.IsActive()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.IsActive
+    name: IsActive
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.IsActive
+    name: IsActive
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.Reset
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.Reset
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: Reset()
+  nameWithType: UIBehaviour.Reset()
+  fullName: UnityEngine.EventSystems.UIBehaviour.Reset()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnRectTransformDimensionsChange()
+  nameWithType: UIBehaviour.OnRectTransformDimensionsChange()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange
+    name: OnRectTransformDimensionsChange
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange
+    name: OnRectTransformDimensionsChange
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnBeforeTransformParentChanged()
+  nameWithType: UIBehaviour.OnBeforeTransformParentChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+    name: OnBeforeTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+    name: OnBeforeTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnTransformParentChanged()
+  nameWithType: UIBehaviour.OnTransformParentChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+    name: OnTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+    name: OnTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnCanvasGroupChanged()
+  nameWithType: UIBehaviour.OnCanvasGroupChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+    name: OnCanvasGroupChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+    name: OnCanvasGroupChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnCanvasHierarchyChanged()
+  nameWithType: UIBehaviour.OnCanvasHierarchyChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+    name: OnCanvasHierarchyChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+    name: OnCanvasHierarchyChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: IsDestroyed()
+  nameWithType: UIBehaviour.IsDestroyed()
+  fullName: UnityEngine.EventSystems.UIBehaviour.IsDestroyed()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+    name: IsDestroyed
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+    name: IsDestroyed
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.EventSystems
+  commentId: N:UnityEngine.EventSystems
+  isExternal: true
+  name: UnityEngine.EventSystems
+  nameWithType: UnityEngine.EventSystems
+  fullName: UnityEngine.EventSystems
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.UI.LetterSpacing.#ctor*
+  commentId: Overload:UnityEngine.UI.LetterSpacing.#ctor
+  href: UnityEngine.UI.LetterSpacing.html#UnityEngine_UI_LetterSpacing__ctor
+  name: LetterSpacing
+  nameWithType: LetterSpacing.LetterSpacing
+  fullName: UnityEngine.UI.LetterSpacing.LetterSpacing
+  nameWithType.vb: LetterSpacing.New
+  fullName.vb: UnityEngine.UI.LetterSpacing.New
+  name.vb: New
+- uid: UnityEngine.UI.LetterSpacing.spacing*
+  commentId: Overload:UnityEngine.UI.LetterSpacing.spacing
+  href: UnityEngine.UI.LetterSpacing.html#UnityEngine_UI_LetterSpacing_spacing
+  name: spacing
+  nameWithType: LetterSpacing.spacing
+  fullName: UnityEngine.UI.LetterSpacing.spacing
+- uid: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)
+  commentId: M:UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)
+  parent: UnityEngine.UI.BaseMeshEffect
+  isExternal: true
+  name: ModifyMesh(VertexHelper)
+  nameWithType: BaseMeshEffect.ModifyMesh(VertexHelper)
+  fullName: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)
+  spec.csharp:
+  - uid: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)
+    name: ModifyMesh
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UI.VertexHelper
+    name: VertexHelper
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.BaseMeshEffect.ModifyMesh(UnityEngine.UI.VertexHelper)
+    name: ModifyMesh
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UI.VertexHelper
+    name: VertexHelper
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UI.LetterSpacing.ModifyMesh*
+  commentId: Overload:UnityEngine.UI.LetterSpacing.ModifyMesh
+  href: UnityEngine.UI.LetterSpacing.html#UnityEngine_UI_LetterSpacing_ModifyMesh_UnityEngine_UI_VertexHelper_
+  name: ModifyMesh
+  nameWithType: LetterSpacing.ModifyMesh
+  fullName: UnityEngine.UI.LetterSpacing.ModifyMesh
+- uid: UnityEngine.UI.VertexHelper
+  commentId: T:UnityEngine.UI.VertexHelper
+  parent: UnityEngine.UI
+  isExternal: true
+  name: VertexHelper
+  nameWithType: VertexHelper
+  fullName: UnityEngine.UI.VertexHelper
+- uid: UnityEngine.UI.LetterSpacing.ModifyVertices*
+  commentId: Overload:UnityEngine.UI.LetterSpacing.ModifyVertices
+  href: UnityEngine.UI.LetterSpacing.html#UnityEngine_UI_LetterSpacing_ModifyVertices_System_Collections_Generic_List_UnityEngine_UIVertex__
+  name: ModifyVertices
+  nameWithType: LetterSpacing.ModifyVertices
+  fullName: UnityEngine.UI.LetterSpacing.ModifyVertices
+- uid: System.Collections.Generic.List{UnityEngine.UIVertex}
+  commentId: T:System.Collections.Generic.List{UnityEngine.UIVertex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UIVertex>
+  nameWithType: List<UIVertex>
+  fullName: System.Collections.Generic.List<UnityEngine.UIVertex>
+  nameWithType.vb: List(Of UIVertex)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.UIVertex)
+  name.vb: List(Of UIVertex)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.UIVertex
+    name: UIVertex
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.UIVertex
+    name: UIVertex
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection*
+  commentId: Overload:UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection
+  href: UnityEngine.UI.LetterSpacing.html#UnityEngine_UI_LetterSpacing_GetRegexMatchedTagCollection_System_String_System_Int32__
+  name: GetRegexMatchedTagCollection
+  nameWithType: LetterSpacing.GetRegexMatchedTagCollection
+  fullName: UnityEngine.UI.LetterSpacing.GetRegexMatchedTagCollection
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections

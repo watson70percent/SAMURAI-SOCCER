@@ -1,0 +1,141 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.PassHeight
+  commentId: T:SamuraiSoccer.SoccerGame.PassHeight
+  id: PassHeight
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.PassHeight.High
+  - SamuraiSoccer.SoccerGame.PassHeight.Low
+  - SamuraiSoccer.SoccerGame.PassHeight.Middle
+  langs:
+  - csharp
+  - vb
+  name: PassHeight
+  nameWithType: PassHeight
+  fullName: SamuraiSoccer.SoccerGame.PassHeight
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PassHeight
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 57
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: パスの高さ．
+  example: []
+  syntax:
+    content: public enum PassHeight
+    content.vb: Public Enum PassHeight
+- uid: SamuraiSoccer.SoccerGame.PassHeight.Low
+  commentId: F:SamuraiSoccer.SoccerGame.PassHeight.Low
+  id: Low
+  parent: SamuraiSoccer.SoccerGame.PassHeight
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: PassHeight.Low
+  fullName: SamuraiSoccer.SoccerGame.PassHeight.Low
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Low
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 59
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: Low = 0
+    return:
+      type: SamuraiSoccer.SoccerGame.PassHeight
+- uid: SamuraiSoccer.SoccerGame.PassHeight.Middle
+  commentId: F:SamuraiSoccer.SoccerGame.PassHeight.Middle
+  id: Middle
+  parent: SamuraiSoccer.SoccerGame.PassHeight
+  langs:
+  - csharp
+  - vb
+  name: Middle
+  nameWithType: PassHeight.Middle
+  fullName: SamuraiSoccer.SoccerGame.PassHeight.Middle
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Middle
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 60
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: Middle = 1
+    return:
+      type: SamuraiSoccer.SoccerGame.PassHeight
+- uid: SamuraiSoccer.SoccerGame.PassHeight.High
+  commentId: F:SamuraiSoccer.SoccerGame.PassHeight.High
+  id: High
+  parent: SamuraiSoccer.SoccerGame.PassHeight
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: PassHeight.High
+  fullName: SamuraiSoccer.SoccerGame.PassHeight.High
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: High
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 61
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: High = 2
+    return:
+      type: SamuraiSoccer.SoccerGame.PassHeight
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: SamuraiSoccer.SoccerGame.PassHeight
+  commentId: T:SamuraiSoccer.SoccerGame.PassHeight
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PassHeight.html
+  name: PassHeight
+  nameWithType: PassHeight
+  fullName: SamuraiSoccer.SoccerGame.PassHeight

@@ -1,0 +1,445 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Player.Slash
+  commentId: T:SamuraiSoccer.Player.Slash
+  id: Slash
+  parent: SamuraiSoccer.Player
+  children:
+  - SamuraiSoccer.Player.Slash.OnHit(UnityEngine.GameObject)
+  - SamuraiSoccer.Player.Slash.Start
+  - SamuraiSoccer.Player.Slash.Update
+  - SamuraiSoccer.Player.Slash.alpha
+  - SamuraiSoccer.Player.Slash.animator
+  - SamuraiSoccer.Player.Slash.m_isAttackBall
+  - SamuraiSoccer.Player.Slash.particle
+  - SamuraiSoccer.Player.Slash.slash
+  - SamuraiSoccer.Player.Slash.time
+  langs:
+  - csharp
+  - vb
+  name: Slash
+  nameWithType: Slash
+  fullName: SamuraiSoccer.Player.Slash
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Slash
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: 'public class Slash : MonoBehaviour'
+    content.vb: Public Class Slash Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.Player.Slash.animator
+  commentId: F:SamuraiSoccer.Player.Slash.animator
+  id: animator
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: animator
+  nameWithType: Slash.animator
+  fullName: SamuraiSoccer.Player.Slash.animator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: animator
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: public Animator animator
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public animator As Animator
+- uid: SamuraiSoccer.Player.Slash.particle
+  commentId: F:SamuraiSoccer.Player.Slash.particle
+  id: particle
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: particle
+  nameWithType: Slash.particle
+  fullName: SamuraiSoccer.Player.Slash.particle
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: particle
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private ParticleSystem.MainModule particle
+    return:
+      type: UnityEngine.ParticleSystem.MainModule
+    content.vb: Private particle As ParticleSystem.MainModule
+- uid: SamuraiSoccer.Player.Slash.time
+  commentId: F:SamuraiSoccer.Player.Slash.time
+  id: time
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: time
+  nameWithType: Slash.time
+  fullName: SamuraiSoccer.Player.Slash.time
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: time
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private float time
+    return:
+      type: System.Single
+    content.vb: Private time As Single
+- uid: SamuraiSoccer.Player.Slash.alpha
+  commentId: F:SamuraiSoccer.Player.Slash.alpha
+  id: alpha
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: alpha
+  nameWithType: Slash.alpha
+  fullName: SamuraiSoccer.Player.Slash.alpha
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: alpha
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private float alpha
+    return:
+      type: System.Single
+    content.vb: Private alpha As Single
+- uid: SamuraiSoccer.Player.Slash.slash
+  commentId: F:SamuraiSoccer.Player.Slash.slash
+  id: slash
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: slash
+  nameWithType: Slash.slash
+  fullName: SamuraiSoccer.Player.Slash.slash
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: slash
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: public AudioClip slash
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public slash As AudioClip
+- uid: SamuraiSoccer.Player.Slash.m_isAttackBall
+  commentId: F:SamuraiSoccer.Player.Slash.m_isAttackBall
+  id: m_isAttackBall
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: m_isAttackBall
+  nameWithType: Slash.m_isAttackBall
+  fullName: SamuraiSoccer.Player.Slash.m_isAttackBall
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isAttackBall
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private bool m_isAttackBall
+    return:
+      type: System.Boolean
+    content.vb: Private m_isAttackBall As Boolean
+- uid: SamuraiSoccer.Player.Slash.Start
+  commentId: M:SamuraiSoccer.Player.Slash.Start
+  id: Start
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Slash.Start()
+  fullName: SamuraiSoccer.Player.Slash.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.Player.Slash.Start*
+- uid: SamuraiSoccer.Player.Slash.Update
+  commentId: M:SamuraiSoccer.Player.Slash.Update
+  id: Update
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Slash.Update()
+  fullName: SamuraiSoccer.Player.Slash.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.Player.Slash.Update*
+- uid: SamuraiSoccer.Player.Slash.OnHit(UnityEngine.GameObject)
+  commentId: M:SamuraiSoccer.Player.Slash.OnHit(UnityEngine.GameObject)
+  id: OnHit(UnityEngine.GameObject)
+  parent: SamuraiSoccer.Player.Slash
+  langs:
+  - csharp
+  - vb
+  name: OnHit(GameObject)
+  nameWithType: Slash.OnHit(GameObject)
+  fullName: SamuraiSoccer.Player.Slash.OnHit(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/Slash.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnHit
+    path: ../Assets/Scripts/Player/Slash.cs
+    startLine: 47
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void OnHit(GameObject obj)
+    parameters:
+    - id: obj
+      type: UnityEngine.GameObject
+    content.vb: Private Sub OnHit(obj As GameObject)
+  overload: SamuraiSoccer.Player.Slash.OnHit*
+references:
+- uid: SamuraiSoccer.Player
+  commentId: N:SamuraiSoccer.Player
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Player
+  nameWithType: SamuraiSoccer.Player
+  fullName: SamuraiSoccer.Player
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: UnityEngine.ParticleSystem.MainModule
+  commentId: T:UnityEngine.ParticleSystem.MainModule
+  parent: UnityEngine
+  isExternal: true
+  name: ParticleSystem.MainModule
+  nameWithType: ParticleSystem.MainModule
+  fullName: UnityEngine.ParticleSystem.MainModule
+  spec.csharp:
+  - uid: UnityEngine.ParticleSystem
+    name: ParticleSystem
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.ParticleSystem.MainModule
+    name: MainModule
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine.ParticleSystem
+    name: ParticleSystem
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.ParticleSystem.MainModule
+    name: MainModule
+    isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.Player.Slash.Start*
+  commentId: Overload:SamuraiSoccer.Player.Slash.Start
+  href: SamuraiSoccer.Player.Slash.html#SamuraiSoccer_Player_Slash_Start
+  name: Start
+  nameWithType: Slash.Start
+  fullName: SamuraiSoccer.Player.Slash.Start
+- uid: SamuraiSoccer.Player.Slash.Update*
+  commentId: Overload:SamuraiSoccer.Player.Slash.Update
+  href: SamuraiSoccer.Player.Slash.html#SamuraiSoccer_Player_Slash_Update
+  name: Update
+  nameWithType: Slash.Update
+  fullName: SamuraiSoccer.Player.Slash.Update
+- uid: SamuraiSoccer.Player.Slash.OnHit*
+  commentId: Overload:SamuraiSoccer.Player.Slash.OnHit
+  href: SamuraiSoccer.Player.Slash.html#SamuraiSoccer_Player_Slash_OnHit_UnityEngine_GameObject_
+  name: OnHit
+  nameWithType: Slash.OnHit
+  fullName: SamuraiSoccer.Player.Slash.OnHit
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject

@@ -1,0 +1,484 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.PandaMaker
+  commentId: T:SamuraiSoccer.StageContents.China.PandaMaker
+  id: PandaMaker
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn(System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.China.PandaMaker.Start
+  - SamuraiSoccer.StageContents.China.PandaMaker.m_isActive
+  - SamuraiSoccer.StageContents.China.PandaMaker.m_maxSize
+  - SamuraiSoccer.StageContents.China.PandaMaker.m_minSize
+  - SamuraiSoccer.StageContents.China.PandaMaker.m_panda
+  langs:
+  - csharp
+  - vb
+  name: PandaMaker
+  nameWithType: PandaMaker
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PandaMaker
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: 'public class PandaMaker : MonoBehaviour'
+    content.vb: Public Class PandaMaker Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.m_panda
+  commentId: F:SamuraiSoccer.StageContents.China.PandaMaker.m_panda
+  id: m_panda
+  parent: SamuraiSoccer.StageContents.China.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: m_panda
+  nameWithType: PandaMaker.m_panda
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.m_panda
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_panda
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_panda
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_panda As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.m_minSize
+  commentId: F:SamuraiSoccer.StageContents.China.PandaMaker.m_minSize
+  id: m_minSize
+  parent: SamuraiSoccer.StageContents.China.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: m_minSize
+  nameWithType: PandaMaker.m_minSize
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.m_minSize
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_minSize
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_minSize
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_minSize As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.m_maxSize
+  commentId: F:SamuraiSoccer.StageContents.China.PandaMaker.m_maxSize
+  id: m_maxSize
+  parent: SamuraiSoccer.StageContents.China.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: m_maxSize
+  nameWithType: PandaMaker.m_maxSize
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.m_maxSize
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_maxSize
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_maxSize
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_maxSize As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.m_isActive
+  commentId: F:SamuraiSoccer.StageContents.China.PandaMaker.m_isActive
+  id: m_isActive
+  parent: SamuraiSoccer.StageContents.China.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: m_isActive
+  nameWithType: PandaMaker.m_isActive
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.m_isActive
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isActive
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private IReadOnlyReactiveProperty<bool> m_isActive
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Private m_isActive As IReadOnlyReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.Start
+  commentId: M:SamuraiSoccer.StageContents.China.PandaMaker.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.China.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PandaMaker.Start()
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.China.PandaMaker.Start*
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn(System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn(System.Threading.CancellationToken)
+  id: PandaSpawn(System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.China.PandaMaker
+  langs:
+  - csharp
+  - vb
+  name: PandaSpawn(CancellationToken)
+  nameWithType: PandaMaker.PandaSpawn(CancellationToken)
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/PandaMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PandaSpawn
+    path: ../Assets/Scripts/StageContents/China/PandaMaker.cs
+    startLine: 37
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private UniTask PandaSpawn(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function PandaSpawn(token As CancellationToken) As UniTask
+  overload: SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+  commentId: T:UniRx.IReadOnlyReactiveProperty{System.Boolean}
+  parent: UniRx
+  definition: UniRx.IReadOnlyReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: IReadOnlyReactiveProperty<bool>
+  nameWithType: IReadOnlyReactiveProperty<bool>
+  fullName: UniRx.IReadOnlyReactiveProperty<bool>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Boolean)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of Boolean)
+  name.vb: IReadOnlyReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UniRx.IReadOnlyReactiveProperty`1
+  commentId: T:UniRx.IReadOnlyReactiveProperty`1
+  isExternal: true
+  name: IReadOnlyReactiveProperty<T>
+  nameWithType: IReadOnlyReactiveProperty<T>
+  fullName: UniRx.IReadOnlyReactiveProperty<T>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of T)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of T)
+  name.vb: IReadOnlyReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.China.PandaMaker.Start
+  href: SamuraiSoccer.StageContents.China.PandaMaker.html#SamuraiSoccer_StageContents_China_PandaMaker_Start
+  name: Start
+  nameWithType: PandaMaker.Start
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.Start
+- uid: SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn*
+  commentId: Overload:SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn
+  href: SamuraiSoccer.StageContents.China.PandaMaker.html#SamuraiSoccer_StageContents_China_PandaMaker_PandaSpawn_System_Threading_CancellationToken_
+  name: PandaSpawn
+  nameWithType: PandaMaker.PandaSpawn
+  fullName: SamuraiSoccer.StageContents.China.PandaMaker.PandaSpawn
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

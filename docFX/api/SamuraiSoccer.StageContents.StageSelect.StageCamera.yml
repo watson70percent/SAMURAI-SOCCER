@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StageCamera
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageCamera
+  id: StageCamera
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StageCamera.camera
+  - SamuraiSoccer.StageContents.StageSelect.StageCamera.stage
+  langs:
+  - csharp
+  - vb
+  name: StageCamera
+  nameWithType: StageCamera
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageCamera
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectCameraMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageCamera
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectCameraMove.cs
+    startLine: 59
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: 各ステージをフォーカスするカメラ
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class StageCamera
+    content.vb: >-
+      <Serializable>
+
+      Public Class StageCamera
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageCamera.stage
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageCamera.stage
+  id: stage
+  parent: SamuraiSoccer.StageContents.StageSelect.StageCamera
+  langs:
+  - csharp
+  - vb
+  name: stage
+  nameWithType: StageCamera.stage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageCamera.stage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectCameraMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: stage
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectCameraMove.cs
+    startLine: 62
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public Stage stage
+    return:
+      type: SamuraiSoccer.Event.Stage
+    content.vb: Public stage As Stage
+- uid: SamuraiSoccer.StageContents.StageSelect.StageCamera.camera
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageCamera.camera
+  id: camera
+  parent: SamuraiSoccer.StageContents.StageSelect.StageCamera
+  langs:
+  - csharp
+  - vb
+  name: camera
+  nameWithType: StageCamera.camera
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageCamera.camera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectCameraMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: camera
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectCameraMove.cs
+    startLine: 63
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public CinemachineVirtualCamera camera
+    return:
+      type: Cinemachine.CinemachineVirtualCamera
+    content.vb: Public camera As CinemachineVirtualCamera
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: Cinemachine.CinemachineVirtualCamera
+  commentId: T:Cinemachine.CinemachineVirtualCamera
+  parent: Cinemachine
+  isExternal: true
+  name: CinemachineVirtualCamera
+  nameWithType: CinemachineVirtualCamera
+  fullName: Cinemachine.CinemachineVirtualCamera
+- uid: Cinemachine
+  commentId: N:Cinemachine
+  isExternal: true
+  name: Cinemachine
+  nameWithType: Cinemachine
+  fullName: Cinemachine

@@ -1,0 +1,559 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoundMaster
+  commentId: T:SamuraiSoccer.SoundMaster
+  id: SoundMaster
+  parent: SamuraiSoccer
+  children:
+  - SamuraiSoccer.SoundMaster.BGMBolume
+  - SamuraiSoccer.SoundMaster.Instance
+  - SamuraiSoccer.SoundMaster.OnDestroy
+  - SamuraiSoccer.SoundMaster.PlayBGM(System.Int32)
+  - SamuraiSoccer.SoundMaster.PlaySE(System.Int32)
+  - SamuraiSoccer.SoundMaster.bgmAudioSource
+  - SamuraiSoccer.SoundMaster.bgmBolume
+  - SamuraiSoccer.SoundMaster.bgmSelectedIndex
+  - SamuraiSoccer.SoundMaster.instance
+  - SamuraiSoccer.SoundMaster.seAudioSource
+  - SamuraiSoccer.SoundMaster.seBolume
+  - SamuraiSoccer.SoundMaster.soundDatabase
+  langs:
+  - csharp
+  - vb
+  name: SoundMaster
+  nameWithType: SoundMaster
+  fullName: SamuraiSoccer.SoundMaster
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SoundMaster
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: 'public class SoundMaster : MonoBehaviour'
+    content.vb: Public Class SoundMaster Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoundMaster.soundDatabase
+  commentId: F:SamuraiSoccer.SoundMaster.soundDatabase
+  id: soundDatabase
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: soundDatabase
+  nameWithType: SoundMaster.soundDatabase
+  fullName: SamuraiSoccer.SoundMaster.soundDatabase
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: soundDatabase
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static SoundDatabase soundDatabase
+    return:
+      type: SoundDatabase
+    content.vb: Private Shared soundDatabase As SoundDatabase
+- uid: SamuraiSoccer.SoundMaster.bgmAudioSource
+  commentId: F:SamuraiSoccer.SoundMaster.bgmAudioSource
+  id: bgmAudioSource
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: bgmAudioSource
+  nameWithType: SoundMaster.bgmAudioSource
+  fullName: SamuraiSoccer.SoundMaster.bgmAudioSource
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: bgmAudioSource
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static AudioSource bgmAudioSource
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Private Shared bgmAudioSource As AudioSource
+- uid: SamuraiSoccer.SoundMaster.seAudioSource
+  commentId: F:SamuraiSoccer.SoundMaster.seAudioSource
+  id: seAudioSource
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: seAudioSource
+  nameWithType: SoundMaster.seAudioSource
+  fullName: SamuraiSoccer.SoundMaster.seAudioSource
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: seAudioSource
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static AudioSource seAudioSource
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Private Shared seAudioSource As AudioSource
+- uid: SamuraiSoccer.SoundMaster.instance
+  commentId: F:SamuraiSoccer.SoundMaster.instance
+  id: instance
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: instance
+  nameWithType: SoundMaster.instance
+  fullName: SamuraiSoccer.SoundMaster.instance
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: instance
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static SoundMaster instance
+    return:
+      type: SamuraiSoccer.SoundMaster
+    content.vb: Private Shared instance As SoundMaster
+- uid: SamuraiSoccer.SoundMaster.Instance
+  commentId: P:SamuraiSoccer.SoundMaster.Instance
+  id: Instance
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SoundMaster.Instance
+  fullName: SamuraiSoccer.SoundMaster.Instance
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Instance
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: public static SoundMaster Instance { get; }
+    parameters: []
+    return:
+      type: SamuraiSoccer.SoundMaster
+    content.vb: Public Shared ReadOnly Property Instance As SoundMaster
+  overload: SamuraiSoccer.SoundMaster.Instance*
+- uid: SamuraiSoccer.SoundMaster.seBolume
+  commentId: F:SamuraiSoccer.SoundMaster.seBolume
+  id: seBolume
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: seBolume
+  nameWithType: SoundMaster.seBolume
+  fullName: SamuraiSoccer.SoundMaster.seBolume
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: seBolume
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: public float seBolume
+    return:
+      type: System.Single
+    content.vb: Public seBolume As Single
+- uid: SamuraiSoccer.SoundMaster.bgmSelectedIndex
+  commentId: F:SamuraiSoccer.SoundMaster.bgmSelectedIndex
+  id: bgmSelectedIndex
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: bgmSelectedIndex
+  nameWithType: SoundMaster.bgmSelectedIndex
+  fullName: SamuraiSoccer.SoundMaster.bgmSelectedIndex
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: bgmSelectedIndex
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 36
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private int bgmSelectedIndex
+    return:
+      type: System.Int32
+    content.vb: Private bgmSelectedIndex As Integer
+- uid: SamuraiSoccer.SoundMaster.bgmBolume
+  commentId: F:SamuraiSoccer.SoundMaster.bgmBolume
+  id: bgmBolume
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: bgmBolume
+  nameWithType: SoundMaster.bgmBolume
+  fullName: SamuraiSoccer.SoundMaster.bgmBolume
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: bgmBolume
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 37
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private float bgmBolume
+    return:
+      type: System.Single
+    content.vb: Private bgmBolume As Single
+- uid: SamuraiSoccer.SoundMaster.BGMBolume
+  commentId: P:SamuraiSoccer.SoundMaster.BGMBolume
+  id: BGMBolume
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: BGMBolume
+  nameWithType: SoundMaster.BGMBolume
+  fullName: SamuraiSoccer.SoundMaster.BGMBolume
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BGMBolume
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: public float BGMBolume { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property BGMBolume As Single
+  overload: SamuraiSoccer.SoundMaster.BGMBolume*
+- uid: SamuraiSoccer.SoundMaster.PlaySE(System.Int32)
+  commentId: M:SamuraiSoccer.SoundMaster.PlaySE(System.Int32)
+  id: PlaySE(System.Int32)
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: PlaySE(int)
+  nameWithType: SoundMaster.PlaySE(int)
+  fullName: SamuraiSoccer.SoundMaster.PlaySE(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlaySE
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 60
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: SEを流す
+  example: []
+  syntax:
+    content: public UniTask PlaySE(int soundIndex)
+    parameters:
+    - id: soundIndex
+      type: System.Int32
+      description: 音源番号
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function PlaySE(soundIndex As Integer) As UniTask
+  overload: SamuraiSoccer.SoundMaster.PlaySE*
+  nameWithType.vb: SoundMaster.PlaySE(Integer)
+  fullName.vb: SamuraiSoccer.SoundMaster.PlaySE(Integer)
+  name.vb: PlaySE(Integer)
+- uid: SamuraiSoccer.SoundMaster.PlayBGM(System.Int32)
+  commentId: M:SamuraiSoccer.SoundMaster.PlayBGM(System.Int32)
+  id: PlayBGM(System.Int32)
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: PlayBGM(int)
+  nameWithType: SoundMaster.PlayBGM(int)
+  fullName: SamuraiSoccer.SoundMaster.PlayBGM(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayBGM
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 72
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: BGMを流す
+  example: []
+  syntax:
+    content: public void PlayBGM(int soundIndex)
+    parameters:
+    - id: soundIndex
+      type: System.Int32
+      description: 音源番号
+    content.vb: Public Sub PlayBGM(soundIndex As Integer)
+  overload: SamuraiSoccer.SoundMaster.PlayBGM*
+  nameWithType.vb: SoundMaster.PlayBGM(Integer)
+  fullName.vb: SamuraiSoccer.SoundMaster.PlayBGM(Integer)
+  name.vb: PlayBGM(Integer)
+- uid: SamuraiSoccer.SoundMaster.OnDestroy
+  commentId: M:SamuraiSoccer.SoundMaster.OnDestroy
+  id: OnDestroy
+  parent: SamuraiSoccer.SoundMaster
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: SoundMaster.OnDestroy()
+  fullName: SamuraiSoccer.SoundMaster.OnDestroy()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoundMaster.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnDestroy
+    path: ../Assets/Scripts/SoundMaster.cs
+    startLine: 80
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private void OnDestroy()
+    content.vb: Private Sub OnDestroy()
+  overload: SamuraiSoccer.SoundMaster.OnDestroy*
+references:
+- uid: SamuraiSoccer
+  commentId: N:SamuraiSoccer
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer
+  nameWithType: SamuraiSoccer
+  fullName: SamuraiSoccer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoundDatabase
+  commentId: T:SoundDatabase
+  href: SoundDatabase.html
+  name: SoundDatabase
+  nameWithType: SoundDatabase
+  fullName: SoundDatabase
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: SamuraiSoccer.SoundMaster
+  commentId: T:SamuraiSoccer.SoundMaster
+  parent: SamuraiSoccer
+  href: SamuraiSoccer.SoundMaster.html
+  name: SoundMaster
+  nameWithType: SoundMaster
+  fullName: SamuraiSoccer.SoundMaster
+- uid: SamuraiSoccer.SoundMaster.Instance*
+  commentId: Overload:SamuraiSoccer.SoundMaster.Instance
+  href: SamuraiSoccer.SoundMaster.html#SamuraiSoccer_SoundMaster_Instance
+  name: Instance
+  nameWithType: SoundMaster.Instance
+  fullName: SamuraiSoccer.SoundMaster.Instance
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.SoundMaster.BGMBolume*
+  commentId: Overload:SamuraiSoccer.SoundMaster.BGMBolume
+  href: SamuraiSoccer.SoundMaster.html#SamuraiSoccer_SoundMaster_BGMBolume
+  name: BGMBolume
+  nameWithType: SoundMaster.BGMBolume
+  fullName: SamuraiSoccer.SoundMaster.BGMBolume
+- uid: SamuraiSoccer.SoundMaster.PlaySE*
+  commentId: Overload:SamuraiSoccer.SoundMaster.PlaySE
+  href: SamuraiSoccer.SoundMaster.html#SamuraiSoccer_SoundMaster_PlaySE_System_Int32_
+  name: PlaySE
+  nameWithType: SoundMaster.PlaySE
+  fullName: SamuraiSoccer.SoundMaster.PlaySE
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.SoundMaster.PlayBGM*
+  commentId: Overload:SamuraiSoccer.SoundMaster.PlayBGM
+  href: SamuraiSoccer.SoundMaster.html#SamuraiSoccer_SoundMaster_PlayBGM_System_Int32_
+  name: PlayBGM
+  nameWithType: SoundMaster.PlayBGM
+  fullName: SamuraiSoccer.SoundMaster.PlayBGM
+- uid: SamuraiSoccer.SoundMaster.OnDestroy*
+  commentId: Overload:SamuraiSoccer.SoundMaster.OnDestroy
+  href: SamuraiSoccer.SoundMaster.html#SamuraiSoccer_SoundMaster_OnDestroy
+  name: OnDestroy
+  nameWithType: SoundMaster.OnDestroy
+  fullName: SamuraiSoccer.SoundMaster.OnDestroy

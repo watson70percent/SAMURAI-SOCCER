@@ -1,0 +1,345 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.UIEffectEvent
+  commentId: T:SamuraiSoccer.Event.UIEffectEvent
+  id: UIEffectEvent
+  parent: SamuraiSoccer.Event
+  children:
+  - SamuraiSoccer.Event.UIEffectEvent.BlackOut
+  - SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext(System.Single)
+  - SamuraiSoccer.Event.UIEffectEvent.m_blackOutShareObservable
+  - SamuraiSoccer.Event.UIEffectEvent.m_blackOutSubject
+  langs:
+  - csharp
+  - vb
+  name: UIEffectEvent
+  nameWithType: UIEffectEvent
+  fullName: SamuraiSoccer.Event.UIEffectEvent
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Event/UIEffectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: UIEffectEvent
+    path: ../Assets/Scripts/Event/UIEffectEvent.cs
+    startLine: 5
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static class UIEffectEvent
+    content.vb: Public Module UIEffectEvent
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.Event.UIEffectEvent.m_blackOutSubject
+  commentId: F:SamuraiSoccer.Event.UIEffectEvent.m_blackOutSubject
+  id: m_blackOutSubject
+  parent: SamuraiSoccer.Event.UIEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: m_blackOutSubject
+  nameWithType: UIEffectEvent.m_blackOutSubject
+  fullName: SamuraiSoccer.Event.UIEffectEvent.m_blackOutSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/UIEffectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_blackOutSubject
+    path: ../Assets/Scripts/Event/UIEffectEvent.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<float> m_blackOutSubject
+    return:
+      type: UniRx.Subject{System.Single}
+    content.vb: Private Shared m_blackOutSubject As Subject(Of Single)
+- uid: SamuraiSoccer.Event.UIEffectEvent.m_blackOutShareObservable
+  commentId: F:SamuraiSoccer.Event.UIEffectEvent.m_blackOutShareObservable
+  id: m_blackOutShareObservable
+  parent: SamuraiSoccer.Event.UIEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: m_blackOutShareObservable
+  nameWithType: UIEffectEvent.m_blackOutShareObservable
+  fullName: SamuraiSoccer.Event.UIEffectEvent.m_blackOutShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/UIEffectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_blackOutShareObservable
+    path: ../Assets/Scripts/Event/UIEffectEvent.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<float> m_blackOutShareObservable
+    return:
+      type: System.IObservable{System.Single}
+    content.vb: Private Shared m_blackOutShareObservable As IObservable(Of Single)
+- uid: SamuraiSoccer.Event.UIEffectEvent.BlackOut
+  commentId: P:SamuraiSoccer.Event.UIEffectEvent.BlackOut
+  id: BlackOut
+  parent: SamuraiSoccer.Event.UIEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: BlackOut
+  nameWithType: UIEffectEvent.BlackOut
+  fullName: SamuraiSoccer.Event.UIEffectEvent.BlackOut
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/UIEffectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BlackOut
+    path: ../Assets/Scripts/Event/UIEffectEvent.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: UI暗転イベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<float> BlackOut { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Single}
+    content.vb: Public Shared ReadOnly Property BlackOut As IObservable(Of Single)
+  overload: SamuraiSoccer.Event.UIEffectEvent.BlackOut*
+- uid: SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext(System.Single)
+  commentId: M:SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext(System.Single)
+  id: BlackOutOnNext(System.Single)
+  parent: SamuraiSoccer.Event.UIEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: BlackOutOnNext(float)
+  nameWithType: UIEffectEvent.BlackOutOnNext(float)
+  fullName: SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext(float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/UIEffectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BlackOutOnNext
+    path: ../Assets/Scripts/Event/UIEffectEvent.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: UI暗転イベントを発行
+  example: []
+  syntax:
+    content: public static void BlackOutOnNext(float totalsec)
+    parameters:
+    - id: totalsec
+      type: System.Single
+      description: 暗転の全体時間
+    content.vb: Public Shared Sub BlackOutOnNext(totalsec As Single)
+  overload: SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext*
+  nameWithType.vb: UIEffectEvent.BlackOutOnNext(Single)
+  fullName.vb: SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext(Single)
+  name.vb: BlackOutOnNext(Single)
+references:
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UniRx.Subject{System.Single}
+  commentId: T:UniRx.Subject{System.Single}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: Subject<float>
+  nameWithType: Subject<float>
+  fullName: UniRx.Subject<float>
+  nameWithType.vb: Subject(Of Single)
+  fullName.vb: UniRx.Subject(Of Single)
+  name.vb: Subject(Of Single)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: UniRx.Subject`1
+  commentId: T:UniRx.Subject`1
+  isExternal: true
+  name: Subject<T>
+  nameWithType: Subject<T>
+  fullName: UniRx.Subject<T>
+  nameWithType.vb: Subject(Of T)
+  fullName.vb: UniRx.Subject(Of T)
+  name.vb: Subject(Of T)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: System.IObservable{System.Single}
+  commentId: T:System.IObservable{System.Single}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<float>
+  nameWithType: IObservable<float>
+  fullName: System.IObservable<float>
+  nameWithType.vb: IObservable(Of Single)
+  fullName.vb: System.IObservable(Of Single)
+  name.vb: IObservable(Of Single)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.Event.UIEffectEvent.BlackOut*
+  commentId: Overload:SamuraiSoccer.Event.UIEffectEvent.BlackOut
+  href: SamuraiSoccer.Event.UIEffectEvent.html#SamuraiSoccer_Event_UIEffectEvent_BlackOut
+  name: BlackOut
+  nameWithType: UIEffectEvent.BlackOut
+  fullName: SamuraiSoccer.Event.UIEffectEvent.BlackOut
+- uid: SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext*
+  commentId: Overload:SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext
+  href: SamuraiSoccer.Event.UIEffectEvent.html#SamuraiSoccer_Event_UIEffectEvent_BlackOutOnNext_System_Single_
+  name: BlackOutOnNext
+  nameWithType: UIEffectEvent.BlackOutOnNext
+  fullName: SamuraiSoccer.Event.UIEffectEvent.BlackOutOnNext
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

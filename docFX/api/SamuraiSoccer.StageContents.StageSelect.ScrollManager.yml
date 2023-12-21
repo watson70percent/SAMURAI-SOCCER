@@ -1,0 +1,423 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  id: ScrollManager
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start
+  - SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_currentStage
+  - SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_scrollMoves
+  - SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_stageSelectBGM
+  - SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_worldMapMove
+  langs:
+  - csharp
+  - vb
+  name: ScrollManager
+  nameWithType: ScrollManager
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ScrollManager
+    path: ../Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: 'public class ScrollManager : MonoBehaviour'
+    content.vb: Public Class ScrollManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_scrollMoves
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_scrollMoves
+  id: m_scrollMoves
+  parent: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  langs:
+  - csharp
+  - vb
+  name: m_scrollMoves
+  nameWithType: ScrollManager.m_scrollMoves
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_scrollMoves
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_scrollMoves
+    path: ../Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public List<ScrollMove> m_scrollMoves
+    return:
+      type: System.Collections.Generic.List{SamuraiSoccer.StageContents.StageSelect.ScrollMove}
+    content.vb: Public m_scrollMoves As List(Of ScrollMove)
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_worldMapMove
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_worldMapMove
+  id: m_worldMapMove
+  parent: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  langs:
+  - csharp
+  - vb
+  name: m_worldMapMove
+  nameWithType: ScrollManager.m_worldMapMove
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_worldMapMove
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_worldMapMove
+    path: ../Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private WorldMapMove m_worldMapMove
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.WorldMapMove
+    content.vb: >-
+      <SerializeField>
+
+      Private m_worldMapMove As WorldMapMove
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_stageSelectBGM
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_stageSelectBGM
+  id: m_stageSelectBGM
+  parent: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  langs:
+  - csharp
+  - vb
+  name: m_stageSelectBGM
+  nameWithType: ScrollManager.m_stageSelectBGM
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_stageSelectBGM
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageSelectBGM
+    path: ../Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private StageSelectBGM m_stageSelectBGM
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stageSelectBGM As StageSelectBGM
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_currentStage
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_currentStage
+  id: m_currentStage
+  parent: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  langs:
+  - csharp
+  - vb
+  name: m_currentStage
+  nameWithType: ScrollManager.m_currentStage
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager.m_currentStage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_currentStage
+    path: ../Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private Stage m_currentStage
+    return:
+      type: SamuraiSoccer.Event.Stage
+    content.vb: Private m_currentStage As Stage
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ScrollManager.Start()
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/StageSelect/ScrollManager.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start*
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.List{SamuraiSoccer.StageContents.StageSelect.ScrollMove}
+  commentId: T:System.Collections.Generic.List{SamuraiSoccer.StageContents.StageSelect.ScrollMove}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ScrollMove>
+  nameWithType: List<ScrollMove>
+  fullName: System.Collections.Generic.List<SamuraiSoccer.StageContents.StageSelect.ScrollMove>
+  nameWithType.vb: List(Of ScrollMove)
+  fullName.vb: System.Collections.Generic.List(Of SamuraiSoccer.StageContents.StageSelect.ScrollMove)
+  name.vb: List(Of ScrollMove)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: SamuraiSoccer.StageContents.StageSelect.ScrollMove
+    name: ScrollMove
+    href: SamuraiSoccer.StageContents.StageSelect.ScrollMove.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.StageContents.StageSelect.ScrollMove
+    name: ScrollMove
+    href: SamuraiSoccer.StageContents.StageSelect.ScrollMove.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SamuraiSoccer.StageContents.StageSelect.WorldMapMove
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.WorldMapMove
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.WorldMapMove.html
+  name: WorldMapMove
+  nameWithType: WorldMapMove
+  fullName: SamuraiSoccer.StageContents.StageSelect.WorldMapMove
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.html
+  name: StageSelectBGM
+  nameWithType: StageSelectBGM
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start
+  href: SamuraiSoccer.StageContents.StageSelect.ScrollManager.html#SamuraiSoccer_StageContents_StageSelect_ScrollManager_Start
+  name: Start
+  nameWithType: ScrollManager.Start
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollManager.Start

@@ -1,0 +1,908 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Result.ResultManager
+  commentId: T:SamuraiSoccer.StageContents.Result.ResultManager
+  id: ResultManager
+  parent: SamuraiSoccer.StageContents.Result
+  children:
+  - SamuraiSoccer.StageContents.Result.ResultManager.Lose
+  - SamuraiSoccer.StageContents.Result.ResultManager.ResultState
+  - SamuraiSoccer.StageContents.Result.ResultManager.Start
+  - SamuraiSoccer.StageContents.Result.ResultManager.Win
+  - SamuraiSoccer.StageContents.Result.ResultManager.conversationManager
+  - SamuraiSoccer.StageContents.Result.ResultManager.lastButtonTransform
+  - SamuraiSoccer.StageContents.Result.ResultManager.lastStageNum
+  - SamuraiSoccer.StageContents.Result.ResultManager.mainCamera
+  - SamuraiSoccer.StageContents.Result.ResultManager.nextButtonTransform
+  - SamuraiSoccer.StageContents.Result.ResultManager.result
+  - SamuraiSoccer.StageContents.Result.ResultManager.retryButtonTransform
+  - SamuraiSoccer.StageContents.Result.ResultManager.samuraiPhrase
+  - SamuraiSoccer.StageContents.Result.ResultManager.samuraiWordBase
+  - SamuraiSoccer.StageContents.Result.ResultManager.stageDataSave
+  - SamuraiSoccer.StageContents.Result.ResultManager.texts
+  langs:
+  - csharp
+  - vb
+  name: ResultManager
+  nameWithType: ResultManager
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResultManager
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  summary: ゲームの結果を取得・表示
+  example: []
+  syntax:
+    content: 'public class ResultManager : MonoBehaviour'
+    content.vb: Public Class ResultManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.ResultState
+  commentId: P:SamuraiSoccer.StageContents.Result.ResultManager.ResultState
+  id: ResultState
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: ResultState
+  nameWithType: ResultManager.ResultState
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.ResultState
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResultState
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: public GameResult ResultState { get; private set; }
+    parameters: []
+    return:
+      type: SamuraiSoccer.StageContents.GameResult
+    content.vb: Public Property ResultState As GameResult
+  overload: SamuraiSoccer.StageContents.Result.ResultManager.ResultState*
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.result
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.result
+  id: result
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: result
+  nameWithType: ResultManager.result
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.result
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: result
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text result
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private result As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.samuraiPhrase
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.samuraiPhrase
+  id: samuraiPhrase
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: samuraiPhrase
+  nameWithType: ResultManager.samuraiPhrase
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.samuraiPhrase
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: samuraiPhrase
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text samuraiPhrase
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private samuraiPhrase As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.samuraiWordBase
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.samuraiWordBase
+  id: samuraiWordBase
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: samuraiWordBase
+  nameWithType: ResultManager.samuraiWordBase
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.samuraiWordBase
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: samuraiWordBase
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private SamuraiWordBase samuraiWordBase
+    return:
+      type: SamuraiSoccer.StageContents.Result.SamuraiWordBase
+    content.vb: >-
+      <SerializeField>
+
+      Private samuraiWordBase As SamuraiWordBase
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.stageDataSave
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.stageDataSave
+  id: stageDataSave
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: stageDataSave
+  nameWithType: ResultManager.stageDataSave
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.stageDataSave
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: stageDataSave
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private StageDataSave stageDataSave
+    return:
+      type: SamuraiSoccer.StageContents.Result.StageDataSave
+    content.vb: >-
+      <SerializeField>
+
+      Private stageDataSave As StageDataSave
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.conversationManager
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.conversationManager
+  id: conversationManager
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: conversationManager
+  nameWithType: ResultManager.conversationManager
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.conversationManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: conversationManager
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private ConversationManager conversationManager
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.ConversationManager
+    content.vb: >-
+      <SerializeField>
+
+      Private conversationManager As ConversationManager
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.texts
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.texts
+  id: texts
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: texts
+  nameWithType: ResultManager.texts
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.texts
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: texts
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private List<Text> texts
+    return:
+      type: System.Collections.Generic.List{UnityEngine.UI.Text}
+    content.vb: >-
+      <SerializeField>
+
+      Private texts As List(Of Text)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.mainCamera
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.mainCamera
+  id: mainCamera
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: mainCamera
+  nameWithType: ResultManager.mainCamera
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.mainCamera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: mainCamera
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Camera mainCamera
+    return:
+      type: UnityEngine.Camera
+    content.vb: >-
+      <SerializeField>
+
+      Private mainCamera As Camera
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.lastStageNum
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.lastStageNum
+  id: lastStageNum
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: lastStageNum
+  nameWithType: ResultManager.lastStageNum
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.lastStageNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: lastStageNum
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int lastStageNum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private lastStageNum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.retryButtonTransform
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.retryButtonTransform
+  id: retryButtonTransform
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: retryButtonTransform
+  nameWithType: ResultManager.retryButtonTransform
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.retryButtonTransform
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: retryButtonTransform
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform retryButtonTransform
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private retryButtonTransform As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.nextButtonTransform
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.nextButtonTransform
+  id: nextButtonTransform
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: nextButtonTransform
+  nameWithType: ResultManager.nextButtonTransform
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.nextButtonTransform
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: nextButtonTransform
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 36
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform nextButtonTransform
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private nextButtonTransform As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.lastButtonTransform
+  commentId: F:SamuraiSoccer.StageContents.Result.ResultManager.lastButtonTransform
+  id: lastButtonTransform
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: lastButtonTransform
+  nameWithType: ResultManager.lastButtonTransform
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.lastButtonTransform
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: lastButtonTransform
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 38
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform lastButtonTransform
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private lastButtonTransform As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.Start
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultManager.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ResultManager.Start()
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 41
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.Result.ResultManager.Start*
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.Win
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultManager.Win
+  id: Win
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: Win()
+  nameWithType: ResultManager.Win()
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.Win()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Win
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 65
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  summary: 勝った時は白地に黒文字になってセーブ処理が発生する
+  example: []
+  syntax:
+    content: private void Win()
+    content.vb: Private Sub Win()
+  overload: SamuraiSoccer.StageContents.Result.ResultManager.Win*
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.Lose
+  commentId: M:SamuraiSoccer.StageContents.Result.ResultManager.Lose
+  id: Lose
+  parent: SamuraiSoccer.StageContents.Result.ResultManager
+  langs:
+  - csharp
+  - vb
+  name: Lose()
+  nameWithType: ResultManager.Lose()
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.Lose()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/ResultManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Lose
+    path: ../Assets/Scripts/StageContents/Result/ResultManager.cs
+    startLine: 94
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  summary: 負けた時は黒地に白文字になる
+  example: []
+  syntax:
+    content: private void Lose()
+    content.vb: Private Sub Lose()
+  overload: SamuraiSoccer.StageContents.Result.ResultManager.Lose*
+references:
+- uid: SamuraiSoccer.StageContents.Result
+  commentId: N:SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Result
+  nameWithType: SamuraiSoccer.StageContents.Result
+  fullName: SamuraiSoccer.StageContents.Result
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.ResultState*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultManager.ResultState
+  href: SamuraiSoccer.StageContents.Result.ResultManager.html#SamuraiSoccer_StageContents_Result_ResultManager_ResultState
+  name: ResultState
+  nameWithType: ResultManager.ResultState
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.ResultState
+- uid: SamuraiSoccer.StageContents.GameResult
+  commentId: T:SamuraiSoccer.StageContents.GameResult
+  parent: SamuraiSoccer.StageContents
+  href: SamuraiSoccer.StageContents.GameResult.html
+  name: GameResult
+  nameWithType: GameResult
+  fullName: SamuraiSoccer.StageContents.GameResult
+- uid: SamuraiSoccer.StageContents
+  commentId: N:SamuraiSoccer.StageContents
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents
+  nameWithType: SamuraiSoccer.StageContents
+  fullName: SamuraiSoccer.StageContents
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: SamuraiSoccer.StageContents.Result.SamuraiWordBase
+  commentId: T:SamuraiSoccer.StageContents.Result.SamuraiWordBase
+  parent: SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.StageContents.Result.SamuraiWordBase.html
+  name: SamuraiWordBase
+  nameWithType: SamuraiWordBase
+  fullName: SamuraiSoccer.StageContents.Result.SamuraiWordBase
+- uid: SamuraiSoccer.StageContents.Result.StageDataSave
+  commentId: T:SamuraiSoccer.StageContents.Result.StageDataSave
+  parent: SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.StageContents.Result.StageDataSave.html
+  name: StageDataSave
+  nameWithType: StageDataSave
+  fullName: SamuraiSoccer.StageContents.Result.StageDataSave
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationManager
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html
+  name: ConversationManager
+  nameWithType: ConversationManager
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.Collections.Generic.List{UnityEngine.UI.Text}
+  commentId: T:System.Collections.Generic.List{UnityEngine.UI.Text}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Text>
+  nameWithType: List<Text>
+  fullName: System.Collections.Generic.List<UnityEngine.UI.Text>
+  nameWithType.vb: List(Of Text)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.UI.Text)
+  name.vb: List(Of Text)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.UI.Text
+    name: Text
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.UI.Text
+    name: Text
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultManager.Start
+  href: SamuraiSoccer.StageContents.Result.ResultManager.html#SamuraiSoccer_StageContents_Result_ResultManager_Start
+  name: Start
+  nameWithType: ResultManager.Start
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.Start
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.Win*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultManager.Win
+  href: SamuraiSoccer.StageContents.Result.ResultManager.html#SamuraiSoccer_StageContents_Result_ResultManager_Win
+  name: Win
+  nameWithType: ResultManager.Win
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.Win
+- uid: SamuraiSoccer.StageContents.Result.ResultManager.Lose*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.ResultManager.Lose
+  href: SamuraiSoccer.StageContents.Result.ResultManager.html#SamuraiSoccer_StageContents_Result_ResultManager_Lose
+  name: Lose
+  nameWithType: ResultManager.Lose
+  fullName: SamuraiSoccer.StageContents.Result.ResultManager.Lose

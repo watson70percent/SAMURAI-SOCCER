@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.DribbleCommand
+  commentId: T:SamuraiSoccer.SoccerGame.DribbleCommand
+  id: DribbleCommand
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.DribbleCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.DribbleCommand.m_owner
+  - SamuraiSoccer.SoccerGame.DribbleCommand.m_status
+  langs:
+  - csharp
+  - vb
+  name: DribbleCommand
+  nameWithType: DribbleCommand
+  fullName: SamuraiSoccer.SoccerGame.DribbleCommand
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: DribbleCommand
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ドリブルをする時のコマンド．
+  example: []
+  syntax:
+    content: 'public class DribbleCommand : BallActionCommand'
+    content.vb: Public Class DribbleCommand Inherits BallActionCommand
+  inheritance:
+  - System.Object
+  - SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: SamuraiSoccer.SoccerGame.DribbleCommand.m_owner
+  commentId: F:SamuraiSoccer.SoccerGame.DribbleCommand.m_owner
+  id: m_owner
+  parent: SamuraiSoccer.SoccerGame.DribbleCommand
+  langs:
+  - csharp
+  - vb
+  name: m_owner
+  nameWithType: DribbleCommand.m_owner
+  fullName: SamuraiSoccer.SoccerGame.DribbleCommand.m_owner
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_owner
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Transform m_owner
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public m_owner As Transform
+- uid: SamuraiSoccer.SoccerGame.DribbleCommand.m_status
+  commentId: F:SamuraiSoccer.SoccerGame.DribbleCommand.m_status
+  id: m_status
+  parent: SamuraiSoccer.SoccerGame.DribbleCommand
+  langs:
+  - csharp
+  - vb
+  name: m_status
+  nameWithType: DribbleCommand.m_status
+  fullName: SamuraiSoccer.SoccerGame.DribbleCommand.m_status
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_status
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public PersonalStatus m_status
+    return:
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Public m_status As PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.DribbleCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.DribbleCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: '#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)'
+  parent: SamuraiSoccer.SoccerGame.DribbleCommand
+  langs:
+  - csharp
+  - vb
+  name: DribbleCommand(Transform, PersonalStatus)
+  nameWithType: DribbleCommand.DribbleCommand(Transform, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.DribbleCommand.DribbleCommand(UnityEngine.Transform, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ドリブルをする時のコマンド．
+  example: []
+  syntax:
+    content: public DribbleCommand(Transform owner, PersonalStatus status)
+    parameters:
+    - id: owner
+      type: UnityEngine.Transform
+      description: ドリブル主．
+    - id: status
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: ドリブル主のステータス．
+    content.vb: Public Sub New(owner As Transform, status As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.DribbleCommand.#ctor*
+  nameWithType.vb: DribbleCommand.New(Transform, PersonalStatus)
+  fullName.vb: SamuraiSoccer.SoccerGame.DribbleCommand.New(UnityEngine.Transform, SamuraiSoccer.SoccerGame.PersonalStatus)
+  name.vb: New(Transform, PersonalStatus)
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SamuraiSoccer.SoccerGame.BallActionCommand
+  commentId: T:SamuraiSoccer.SoccerGame.BallActionCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  name: BallActionCommand
+  nameWithType: BallActionCommand
+  fullName: SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.PersonalStatus
+  commentId: T:SamuraiSoccer.SoccerGame.PersonalStatus
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PersonalStatus.html
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: SamuraiSoccer.SoccerGame.PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.DribbleCommand.#ctor*
+  commentId: Overload:SamuraiSoccer.SoccerGame.DribbleCommand.#ctor
+  href: SamuraiSoccer.SoccerGame.DribbleCommand.html#SamuraiSoccer_SoccerGame_DribbleCommand__ctor_UnityEngine_Transform_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: DribbleCommand
+  nameWithType: DribbleCommand.DribbleCommand
+  fullName: SamuraiSoccer.SoccerGame.DribbleCommand.DribbleCommand
+  nameWithType.vb: DribbleCommand.New
+  fullName.vb: SamuraiSoccer.SoccerGame.DribbleCommand.New
+  name.vb: New

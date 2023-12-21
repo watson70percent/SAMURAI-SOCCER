@@ -1,0 +1,401 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  id: Bezier2Order3Points
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  - SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint(System.Single)
+  - SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_lnCombi
+  - SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_points
+  langs:
+  - csharp
+  - vb
+  name: Bezier2Order3Points
+  nameWithType: Bezier2Order3Points
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Bezier2Order3Points
+    path: ../Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: 制御点三点の二次ベジェ曲線作製クラス．
+  example: []
+  syntax:
+    content: public sealed class Bezier2Order3Points
+    content.vb: Public NotInheritable Class Bezier2Order3Points
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_points
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_points
+  id: m_points
+  parent: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  langs:
+  - csharp
+  - vb
+  name: m_points
+  nameWithType: Bezier2Order3Points.m_points
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_points
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_points
+    path: ../Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private List<Vector2> m_points
+    return:
+      type: System.Collections.Generic.List{UnityEngine.Vector2}
+    content.vb: Private m_points As List(Of Vector2)
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_lnCombi
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_lnCombi
+  id: m_lnCombi
+  parent: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  langs:
+  - csharp
+  - vb
+  name: m_lnCombi
+  nameWithType: Bezier2Order3Points.m_lnCombi
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.m_lnCombi
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_lnCombi
+    path: ../Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private List<float> m_lnCombi
+    return:
+      type: System.Collections.Generic.List{System.Single}
+    content.vb: Private m_lnCombi As List(Of Single)
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+  id: '#ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)'
+  parent: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  langs:
+  - csharp
+  - vb
+  name: Bezier2Order3Points(Vector2, Vector2, Vector2)
+  nameWithType: Bezier2Order3Points.Bezier2Order3Points(Vector2, Vector2, Vector2)
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.Bezier2Order3Points(UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: ベジェ曲線の作製．
+  example: []
+  syntax:
+    content: public Bezier2Order3Points(Vector2 start, Vector2 medium, Vector2 end)
+    parameters:
+    - id: start
+      type: UnityEngine.Vector2
+      description: 始点
+    - id: medium
+      type: UnityEngine.Vector2
+      description: 制御点
+    - id: end
+      type: UnityEngine.Vector2
+      description: 終点
+    content.vb: Public Sub New(start As Vector2, medium As Vector2, [end] As Vector2)
+  overload: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor*
+  nameWithType.vb: Bezier2Order3Points.New(Vector2, Vector2, Vector2)
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.New(UnityEngine.Vector2, UnityEngine.Vector2, UnityEngine.Vector2)
+  name.vb: New(Vector2, Vector2, Vector2)
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint(System.Single)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint(System.Single)
+  id: GetPoint(System.Single)
+  parent: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
+  langs:
+  - csharp
+  - vb
+  name: GetPoint(float)
+  nameWithType: Bezier2Order3Points.GetPoint(float)
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint(float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GetPoint
+    path: ../Assets/Scripts/StageContents/StageSelect/Bezier2Order3Points.cs
+    startLine: 35
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: ベジェ曲線の点を取得．
+  example: []
+  syntax:
+    content: public Vector2 GetPoint(float t)
+    parameters:
+    - id: t
+      type: System.Single
+      description: 地点
+    return:
+      type: UnityEngine.Vector2
+      description: 点
+    content.vb: Public Function GetPoint(t As Single) As Vector2
+  overload: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: 範囲外のtを入れたとき投げられる．
+  nameWithType.vb: Bezier2Order3Points.GetPoint(Single)
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint(Single)
+  name.vb: GetPoint(Single)
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{UnityEngine.Vector2}
+  commentId: T:System.Collections.Generic.List{UnityEngine.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<UnityEngine.Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<float>
+  nameWithType: List<float>
+  fullName: System.Collections.Generic.List<float>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.#ctor
+  href: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.html#SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points__ctor_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_
+  name: Bezier2Order3Points
+  nameWithType: Bezier2Order3Points.Bezier2Order3Points
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.Bezier2Order3Points
+  nameWithType.vb: Bezier2Order3Points.New
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.New
+  name.vb: New
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint
+  href: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.html#SamuraiSoccer_StageContents_StageSelect_Bezier2Order3Points_GetPoint_System_Single_
+  name: GetPoint
+  nameWithType: Bezier2Order3Points.GetPoint
+  fullName: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points.GetPoint
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

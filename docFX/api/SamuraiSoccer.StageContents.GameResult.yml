@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.GameResult
+  commentId: T:SamuraiSoccer.StageContents.GameResult
+  id: GameResult
+  parent: SamuraiSoccer.StageContents
+  children:
+  - SamuraiSoccer.StageContents.GameResult.Draw
+  - SamuraiSoccer.StageContents.GameResult.Lose
+  - SamuraiSoccer.StageContents.GameResult.Undefined
+  - SamuraiSoccer.StageContents.GameResult.Win
+  langs:
+  - csharp
+  - vb
+  name: GameResult
+  nameWithType: GameResult
+  fullName: SamuraiSoccer.StageContents.GameResult
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GameResult.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GameResult
+    path: ../Assets/Scripts/StageContents/GameResult.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: public enum GameResult
+    content.vb: Public Enum GameResult
+- uid: SamuraiSoccer.StageContents.GameResult.Win
+  commentId: F:SamuraiSoccer.StageContents.GameResult.Win
+  id: Win
+  parent: SamuraiSoccer.StageContents.GameResult
+  langs:
+  - csharp
+  - vb
+  name: Win
+  nameWithType: GameResult.Win
+  fullName: SamuraiSoccer.StageContents.GameResult.Win
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GameResult.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Win
+    path: ../Assets/Scripts/StageContents/GameResult.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: Win = 0
+    return:
+      type: SamuraiSoccer.StageContents.GameResult
+- uid: SamuraiSoccer.StageContents.GameResult.Lose
+  commentId: F:SamuraiSoccer.StageContents.GameResult.Lose
+  id: Lose
+  parent: SamuraiSoccer.StageContents.GameResult
+  langs:
+  - csharp
+  - vb
+  name: Lose
+  nameWithType: GameResult.Lose
+  fullName: SamuraiSoccer.StageContents.GameResult.Lose
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GameResult.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Lose
+    path: ../Assets/Scripts/StageContents/GameResult.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: Lose = 1
+    return:
+      type: SamuraiSoccer.StageContents.GameResult
+- uid: SamuraiSoccer.StageContents.GameResult.Draw
+  commentId: F:SamuraiSoccer.StageContents.GameResult.Draw
+  id: Draw
+  parent: SamuraiSoccer.StageContents.GameResult
+  langs:
+  - csharp
+  - vb
+  name: Draw
+  nameWithType: GameResult.Draw
+  fullName: SamuraiSoccer.StageContents.GameResult.Draw
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GameResult.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Draw
+    path: ../Assets/Scripts/StageContents/GameResult.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: Draw = 2
+    return:
+      type: SamuraiSoccer.StageContents.GameResult
+- uid: SamuraiSoccer.StageContents.GameResult.Undefined
+  commentId: F:SamuraiSoccer.StageContents.GameResult.Undefined
+  id: Undefined
+  parent: SamuraiSoccer.StageContents.GameResult
+  langs:
+  - csharp
+  - vb
+  name: Undefined
+  nameWithType: GameResult.Undefined
+  fullName: SamuraiSoccer.StageContents.GameResult.Undefined
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/GameResult.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Undefined
+    path: ../Assets/Scripts/StageContents/GameResult.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: Undefined = 3
+    return:
+      type: SamuraiSoccer.StageContents.GameResult
+references:
+- uid: SamuraiSoccer.StageContents
+  commentId: N:SamuraiSoccer.StageContents
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents
+  nameWithType: SamuraiSoccer.StageContents
+  fullName: SamuraiSoccer.StageContents
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+- uid: SamuraiSoccer.StageContents.GameResult
+  commentId: T:SamuraiSoccer.StageContents.GameResult
+  parent: SamuraiSoccer.StageContents
+  href: SamuraiSoccer.StageContents.GameResult.html
+  name: GameResult
+  nameWithType: GameResult
+  fullName: SamuraiSoccer.StageContents.GameResult

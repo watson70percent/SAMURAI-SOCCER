@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.ISlashed
+  commentId: T:SamuraiSoccer.SoccerGame.ISlashed
+  id: ISlashed
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  langs:
+  - csharp
+  - vb
+  name: ISlashed
+  nameWithType: ISlashed
+  fullName: SamuraiSoccer.SoccerGame.ISlashed
+  type: Interface
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/ISlashed.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ISlashed
+    path: ../Assets/Scripts/SoccerGame/ISlashed.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public interface ISlashed
+    content.vb: Public Interface ISlashed
+- uid: SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  id: Slashed(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.ISlashed
+  langs:
+  - csharp
+  - vb
+  name: Slashed(Vector3)
+  nameWithType: ISlashed.Slashed(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/ISlashed.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Slashed
+    path: ../Assets/Scripts/SoccerGame/ISlashed.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 衝撃波に斬られる時に呼ばれる
+  example: []
+  syntax:
+    content: void Slashed(Vector3 dir)
+    parameters:
+    - id: dir
+      type: UnityEngine.Vector3
+      description: 吹っ飛ぶ方向
+    content.vb: Sub Slashed(dir As Vector3)
+  overload: SamuraiSoccer.SoccerGame.ISlashed.Slashed*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: SamuraiSoccer.SoccerGame.ISlashed.Slashed*
+  commentId: Overload:SamuraiSoccer.SoccerGame.ISlashed.Slashed
+  href: SamuraiSoccer.SoccerGame.ISlashed.html#SamuraiSoccer_SoccerGame_ISlashed_Slashed_UnityEngine_Vector3_
+  name: Slashed
+  nameWithType: ISlashed.Slashed
+  fullName: SamuraiSoccer.SoccerGame.ISlashed.Slashed
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

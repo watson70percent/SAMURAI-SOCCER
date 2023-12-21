@@ -1,0 +1,2037 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  id: StageScrollScroller
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust(System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_cancellationTokenSource
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_isDrugging
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_pageNumber
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_selectingStageReactiveProperty
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_slideCount
+  - SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos
+  langs:
+  - csharp
+  - vb
+  name: StageScrollScroller
+  nameWithType: StageScrollScroller
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageScrollScroller
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: 'public class StageScrollScroller : ScrollRect, IInitializePotentialDragHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IScrollHandler, IEventSystemHandler, ICanvasElement, ILayoutElement, ILayoutGroup, ILayoutController'
+    content.vb: Public Class StageScrollScroller Inherits ScrollRect Implements IInitializePotentialDragHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IScrollHandler, IEventSystemHandler, ICanvasElement, ILayoutElement, ILayoutGroup, ILayoutController
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - UnityEngine.EventSystems.UIBehaviour
+  - UnityEngine.UI.ScrollRect
+  implements:
+  - UnityEngine.EventSystems.IInitializePotentialDragHandler
+  - UnityEngine.EventSystems.IBeginDragHandler
+  - UnityEngine.EventSystems.IEndDragHandler
+  - UnityEngine.EventSystems.IDragHandler
+  - UnityEngine.EventSystems.IScrollHandler
+  - UnityEngine.EventSystems.IEventSystemHandler
+  - UnityEngine.UI.ICanvasElement
+  - UnityEngine.UI.ILayoutElement
+  - UnityEngine.UI.ILayoutGroup
+  - UnityEngine.UI.ILayoutController
+  inheritedMembers:
+  - UnityEngine.UI.ScrollRect.m_ContentStartPosition
+  - UnityEngine.UI.ScrollRect.m_ContentBounds
+  - UnityEngine.UI.ScrollRect.Rebuild(UnityEngine.UI.CanvasUpdate)
+  - UnityEngine.UI.ScrollRect.LayoutComplete
+  - UnityEngine.UI.ScrollRect.GraphicUpdateComplete
+  - UnityEngine.UI.ScrollRect.OnEnable
+  - UnityEngine.UI.ScrollRect.OnDisable
+  - UnityEngine.UI.ScrollRect.IsActive
+  - UnityEngine.UI.ScrollRect.StopMovement
+  - UnityEngine.UI.ScrollRect.OnScroll(UnityEngine.EventSystems.PointerEventData)
+  - UnityEngine.UI.ScrollRect.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+  - UnityEngine.UI.ScrollRect.SetContentAnchoredPosition(UnityEngine.Vector2)
+  - UnityEngine.UI.ScrollRect.LateUpdate
+  - UnityEngine.UI.ScrollRect.UpdatePrevData
+  - UnityEngine.UI.ScrollRect.SetNormalizedPosition(System.Single,System.Int32)
+  - UnityEngine.UI.ScrollRect.OnRectTransformDimensionsChange
+  - UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal
+  - UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical
+  - UnityEngine.UI.ScrollRect.SetLayoutHorizontal
+  - UnityEngine.UI.ScrollRect.SetLayoutVertical
+  - UnityEngine.UI.ScrollRect.UpdateBounds
+  - UnityEngine.UI.ScrollRect.SetDirty
+  - UnityEngine.UI.ScrollRect.SetDirtyCaching
+  - UnityEngine.UI.ScrollRect.OnValidate
+  - UnityEngine.UI.ScrollRect.UnityEngine#UI#ICanvasElement#get_transform
+  - UnityEngine.UI.ScrollRect.content
+  - UnityEngine.UI.ScrollRect.horizontal
+  - UnityEngine.UI.ScrollRect.vertical
+  - UnityEngine.UI.ScrollRect.movementType
+  - UnityEngine.UI.ScrollRect.elasticity
+  - UnityEngine.UI.ScrollRect.inertia
+  - UnityEngine.UI.ScrollRect.decelerationRate
+  - UnityEngine.UI.ScrollRect.scrollSensitivity
+  - UnityEngine.UI.ScrollRect.viewport
+  - UnityEngine.UI.ScrollRect.horizontalScrollbar
+  - UnityEngine.UI.ScrollRect.verticalScrollbar
+  - UnityEngine.UI.ScrollRect.horizontalScrollbarVisibility
+  - UnityEngine.UI.ScrollRect.verticalScrollbarVisibility
+  - UnityEngine.UI.ScrollRect.horizontalScrollbarSpacing
+  - UnityEngine.UI.ScrollRect.verticalScrollbarSpacing
+  - UnityEngine.UI.ScrollRect.onValueChanged
+  - UnityEngine.UI.ScrollRect.viewRect
+  - UnityEngine.UI.ScrollRect.velocity
+  - UnityEngine.UI.ScrollRect.normalizedPosition
+  - UnityEngine.UI.ScrollRect.horizontalNormalizedPosition
+  - UnityEngine.UI.ScrollRect.verticalNormalizedPosition
+  - UnityEngine.UI.ScrollRect.minWidth
+  - UnityEngine.UI.ScrollRect.preferredWidth
+  - UnityEngine.UI.ScrollRect.flexibleWidth
+  - UnityEngine.UI.ScrollRect.minHeight
+  - UnityEngine.UI.ScrollRect.preferredHeight
+  - UnityEngine.UI.ScrollRect.flexibleHeight
+  - UnityEngine.UI.ScrollRect.layoutPriority
+  - UnityEngine.EventSystems.UIBehaviour.Awake
+  - UnityEngine.EventSystems.UIBehaviour.OnDestroy
+  - UnityEngine.EventSystems.UIBehaviour.Reset
+  - UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+  - UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+  - UnityEngine.EventSystems.UIBehaviour.OnDidApplyAnimationProperties
+  - UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+  - UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+  - UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_pageNumber
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_pageNumber
+  id: m_pageNumber
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: m_pageNumber
+  nameWithType: StageScrollScroller.m_pageNumber
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_pageNumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_pageNumber
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private int m_pageNumber
+    return:
+      type: System.Int32
+    content.vb: Private m_pageNumber As Integer
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_slideCount
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_slideCount
+  id: m_slideCount
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: m_slideCount
+  nameWithType: StageScrollScroller.m_slideCount
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_slideCount
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_slideCount
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private int m_slideCount
+    return:
+      type: System.Int32
+    content.vb: Private m_slideCount As Integer
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_isDrugging
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_isDrugging
+  id: m_isDrugging
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: m_isDrugging
+  nameWithType: StageScrollScroller.m_isDrugging
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_isDrugging
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isDrugging
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private bool m_isDrugging
+    return:
+      type: System.Boolean
+    content.vb: Private m_isDrugging As Boolean
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_cancellationTokenSource
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_cancellationTokenSource
+  id: m_cancellationTokenSource
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: m_cancellationTokenSource
+  nameWithType: StageScrollScroller.m_cancellationTokenSource
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_cancellationTokenSource
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_cancellationTokenSource
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private CancellationTokenSource m_cancellationTokenSource
+    return:
+      type: System.Threading.CancellationTokenSource
+    content.vb: Private m_cancellationTokenSource As CancellationTokenSource
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_selectingStageReactiveProperty
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_selectingStageReactiveProperty
+  id: m_selectingStageReactiveProperty
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: m_selectingStageReactiveProperty
+  nameWithType: StageScrollScroller.m_selectingStageReactiveProperty
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.m_selectingStageReactiveProperty
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_selectingStageReactiveProperty
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private static ReactiveProperty<Stage> m_selectingStageReactiveProperty
+    return:
+      type: UniRx.ReactiveProperty{SamuraiSoccer.Event.Stage}
+    content.vb: Private Shared m_selectingStageReactiveProperty As ReactiveProperty(Of Stage)
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage
+  commentId: P:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage
+  id: SelectedStage
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: SelectedStage
+  nameWithType: StageScrollScroller.SelectedStage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SelectedStage
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: 選択中のStageが変更されたときに発行するReactiveProperty
+  example: []
+  syntax:
+    content: public static IReadOnlyReactiveProperty<Stage> SelectedStage { get; }
+    parameters: []
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{SamuraiSoccer.Event.Stage}
+    content.vb: Public Shared ReadOnly Property SelectedStage As IReadOnlyReactiveProperty(Of Stage)
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage
+  id: GetSelectingStage
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: GetSelectingStage()
+  nameWithType: StageScrollScroller.GetSelectingStage()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GetSelectingStage
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: スライダーの中心にある国を取得
+  example: []
+  syntax:
+    content: private Stage GetSelectingStage()
+    return:
+      type: SamuraiSoccer.Event.Stage
+      description: ''
+    content.vb: Private Function GetSelectingStage() As Stage
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StageScrollScroller.Update()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StageScrollScroller.Start()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 56
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  example: []
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start()
+  overridden: UnityEngine.EventSystems.UIBehaviour.Start
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos
+  id: setScrollPos
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: setScrollPos()
+  nameWithType: StageScrollScroller.setScrollPos()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: setScrollPos
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 67
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void setScrollPos()
+    content.vb: Private Sub setScrollPos()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  id: OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: OnBeginDrag(PointerEventData)
+  nameWithType: StageScrollScroller.OnBeginDrag(PointerEventData)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnBeginDrag
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 110
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  example: []
+  syntax:
+    content: public override void OnBeginDrag(PointerEventData data)
+    parameters:
+    - id: data
+      type: UnityEngine.EventSystems.PointerEventData
+    content.vb: Public Overrides Sub OnBeginDrag(data As PointerEventData)
+  overridden: UnityEngine.UI.ScrollRect.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  id: OnDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: OnDrag(PointerEventData)
+  nameWithType: StageScrollScroller.OnDrag(PointerEventData)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnDrag
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 121
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  example: []
+  syntax:
+    content: public override void OnDrag(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: UnityEngine.EventSystems.PointerEventData
+    content.vb: Public Overrides Sub OnDrag(eventData As PointerEventData)
+  overridden: UnityEngine.UI.ScrollRect.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop
+  id: ScrollRoop
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: ScrollRoop()
+  nameWithType: StageScrollScroller.ScrollRoop()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ScrollRoop
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 128
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void ScrollRoop()
+    content.vb: Private Sub ScrollRoop()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust(System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust(System.Threading.CancellationToken)
+  id: SliderAdjust(System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: SliderAdjust(CancellationToken)
+  nameWithType: StageScrollScroller.SliderAdjust(CancellationToken)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SliderAdjust
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 148
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private UniTask SliderAdjust(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function SliderAdjust(cancellationToken As CancellationToken) As UniTask
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  id: OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+  langs:
+  - csharp
+  - vb
+  name: OnEndDrag(PointerEventData)
+  nameWithType: StageScrollScroller.OnEndDrag(PointerEventData)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnEndDrag
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScrollScroller.cs
+    startLine: 176
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  example: []
+  syntax:
+    content: public override void OnEndDrag(PointerEventData data)
+    parameters:
+    - id: data
+      type: UnityEngine.EventSystems.PointerEventData
+    content.vb: Public Overrides Sub OnEndDrag(data As PointerEventData)
+  overridden: UnityEngine.UI.ScrollRect.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag*
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: UnityEngine.EventSystems.UIBehaviour
+  commentId: T:UnityEngine.EventSystems.UIBehaviour
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: UIBehaviour
+  nameWithType: UIBehaviour
+  fullName: UnityEngine.EventSystems.UIBehaviour
+- uid: UnityEngine.UI.ScrollRect
+  commentId: T:UnityEngine.UI.ScrollRect
+  parent: UnityEngine.UI
+  isExternal: true
+  name: ScrollRect
+  nameWithType: ScrollRect
+  fullName: UnityEngine.UI.ScrollRect
+- uid: UnityEngine.EventSystems.IInitializePotentialDragHandler
+  commentId: T:UnityEngine.EventSystems.IInitializePotentialDragHandler
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: IInitializePotentialDragHandler
+  nameWithType: IInitializePotentialDragHandler
+  fullName: UnityEngine.EventSystems.IInitializePotentialDragHandler
+- uid: UnityEngine.EventSystems.IBeginDragHandler
+  commentId: T:UnityEngine.EventSystems.IBeginDragHandler
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: IBeginDragHandler
+  nameWithType: IBeginDragHandler
+  fullName: UnityEngine.EventSystems.IBeginDragHandler
+- uid: UnityEngine.EventSystems.IEndDragHandler
+  commentId: T:UnityEngine.EventSystems.IEndDragHandler
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: IEndDragHandler
+  nameWithType: IEndDragHandler
+  fullName: UnityEngine.EventSystems.IEndDragHandler
+- uid: UnityEngine.EventSystems.IDragHandler
+  commentId: T:UnityEngine.EventSystems.IDragHandler
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: IDragHandler
+  nameWithType: IDragHandler
+  fullName: UnityEngine.EventSystems.IDragHandler
+- uid: UnityEngine.EventSystems.IScrollHandler
+  commentId: T:UnityEngine.EventSystems.IScrollHandler
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: IScrollHandler
+  nameWithType: IScrollHandler
+  fullName: UnityEngine.EventSystems.IScrollHandler
+- uid: UnityEngine.EventSystems.IEventSystemHandler
+  commentId: T:UnityEngine.EventSystems.IEventSystemHandler
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: IEventSystemHandler
+  nameWithType: IEventSystemHandler
+  fullName: UnityEngine.EventSystems.IEventSystemHandler
+- uid: UnityEngine.UI.ICanvasElement
+  commentId: T:UnityEngine.UI.ICanvasElement
+  parent: UnityEngine.UI
+  isExternal: true
+  name: ICanvasElement
+  nameWithType: ICanvasElement
+  fullName: UnityEngine.UI.ICanvasElement
+- uid: UnityEngine.UI.ILayoutElement
+  commentId: T:UnityEngine.UI.ILayoutElement
+  parent: UnityEngine.UI
+  isExternal: true
+  name: ILayoutElement
+  nameWithType: ILayoutElement
+  fullName: UnityEngine.UI.ILayoutElement
+- uid: UnityEngine.UI.ILayoutGroup
+  commentId: T:UnityEngine.UI.ILayoutGroup
+  parent: UnityEngine.UI
+  isExternal: true
+  name: ILayoutGroup
+  nameWithType: ILayoutGroup
+  fullName: UnityEngine.UI.ILayoutGroup
+- uid: UnityEngine.UI.ILayoutController
+  commentId: T:UnityEngine.UI.ILayoutController
+  parent: UnityEngine.UI
+  isExternal: true
+  name: ILayoutController
+  nameWithType: ILayoutController
+  fullName: UnityEngine.UI.ILayoutController
+- uid: UnityEngine.UI.ScrollRect.m_ContentStartPosition
+  commentId: F:UnityEngine.UI.ScrollRect.m_ContentStartPosition
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: m_ContentStartPosition
+  nameWithType: ScrollRect.m_ContentStartPosition
+  fullName: UnityEngine.UI.ScrollRect.m_ContentStartPosition
+- uid: UnityEngine.UI.ScrollRect.m_ContentBounds
+  commentId: F:UnityEngine.UI.ScrollRect.m_ContentBounds
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: m_ContentBounds
+  nameWithType: ScrollRect.m_ContentBounds
+  fullName: UnityEngine.UI.ScrollRect.m_ContentBounds
+- uid: UnityEngine.UI.ScrollRect.Rebuild(UnityEngine.UI.CanvasUpdate)
+  commentId: M:UnityEngine.UI.ScrollRect.Rebuild(UnityEngine.UI.CanvasUpdate)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: Rebuild(CanvasUpdate)
+  nameWithType: ScrollRect.Rebuild(CanvasUpdate)
+  fullName: UnityEngine.UI.ScrollRect.Rebuild(UnityEngine.UI.CanvasUpdate)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.Rebuild(UnityEngine.UI.CanvasUpdate)
+    name: Rebuild
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UI.CanvasUpdate
+    name: CanvasUpdate
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.Rebuild(UnityEngine.UI.CanvasUpdate)
+    name: Rebuild
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UI.CanvasUpdate
+    name: CanvasUpdate
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.LayoutComplete
+  commentId: M:UnityEngine.UI.ScrollRect.LayoutComplete
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: LayoutComplete()
+  nameWithType: ScrollRect.LayoutComplete()
+  fullName: UnityEngine.UI.ScrollRect.LayoutComplete()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.LayoutComplete
+    name: LayoutComplete
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.LayoutComplete
+    name: LayoutComplete
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.GraphicUpdateComplete
+  commentId: M:UnityEngine.UI.ScrollRect.GraphicUpdateComplete
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: GraphicUpdateComplete()
+  nameWithType: ScrollRect.GraphicUpdateComplete()
+  fullName: UnityEngine.UI.ScrollRect.GraphicUpdateComplete()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.GraphicUpdateComplete
+    name: GraphicUpdateComplete
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.GraphicUpdateComplete
+    name: GraphicUpdateComplete
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.OnEnable
+  commentId: M:UnityEngine.UI.ScrollRect.OnEnable
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnEnable()
+  nameWithType: ScrollRect.OnEnable()
+  fullName: UnityEngine.UI.ScrollRect.OnEnable()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnEnable
+    name: OnEnable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnEnable
+    name: OnEnable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.OnDisable
+  commentId: M:UnityEngine.UI.ScrollRect.OnDisable
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnDisable()
+  nameWithType: ScrollRect.OnDisable()
+  fullName: UnityEngine.UI.ScrollRect.OnDisable()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnDisable
+    name: OnDisable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnDisable
+    name: OnDisable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.IsActive
+  commentId: M:UnityEngine.UI.ScrollRect.IsActive
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: IsActive()
+  nameWithType: ScrollRect.IsActive()
+  fullName: UnityEngine.UI.ScrollRect.IsActive()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.IsActive
+    name: IsActive
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.IsActive
+    name: IsActive
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.StopMovement
+  commentId: M:UnityEngine.UI.ScrollRect.StopMovement
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: StopMovement()
+  nameWithType: ScrollRect.StopMovement()
+  fullName: UnityEngine.UI.ScrollRect.StopMovement()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.StopMovement
+    name: StopMovement
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.StopMovement
+    name: StopMovement
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.OnScroll(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.ScrollRect.OnScroll(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnScroll(PointerEventData)
+  nameWithType: ScrollRect.OnScroll(PointerEventData)
+  fullName: UnityEngine.UI.ScrollRect.OnScroll(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnScroll(UnityEngine.EventSystems.PointerEventData)
+    name: OnScroll
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnScroll(UnityEngine.EventSystems.PointerEventData)
+    name: OnScroll
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.ScrollRect.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnInitializePotentialDrag(PointerEventData)
+  nameWithType: ScrollRect.OnInitializePotentialDrag(PointerEventData)
+  fullName: UnityEngine.UI.ScrollRect.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnInitializePotentialDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnInitializePotentialDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.SetContentAnchoredPosition(UnityEngine.Vector2)
+  commentId: M:UnityEngine.UI.ScrollRect.SetContentAnchoredPosition(UnityEngine.Vector2)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: SetContentAnchoredPosition(Vector2)
+  nameWithType: ScrollRect.SetContentAnchoredPosition(Vector2)
+  fullName: UnityEngine.UI.ScrollRect.SetContentAnchoredPosition(UnityEngine.Vector2)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.SetContentAnchoredPosition(UnityEngine.Vector2)
+    name: SetContentAnchoredPosition
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.SetContentAnchoredPosition(UnityEngine.Vector2)
+    name: SetContentAnchoredPosition
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.LateUpdate
+  commentId: M:UnityEngine.UI.ScrollRect.LateUpdate
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: LateUpdate()
+  nameWithType: ScrollRect.LateUpdate()
+  fullName: UnityEngine.UI.ScrollRect.LateUpdate()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.LateUpdate
+    name: LateUpdate
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.LateUpdate
+    name: LateUpdate
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.UpdatePrevData
+  commentId: M:UnityEngine.UI.ScrollRect.UpdatePrevData
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: UpdatePrevData()
+  nameWithType: ScrollRect.UpdatePrevData()
+  fullName: UnityEngine.UI.ScrollRect.UpdatePrevData()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.UpdatePrevData
+    name: UpdatePrevData
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.UpdatePrevData
+    name: UpdatePrevData
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.SetNormalizedPosition(System.Single,System.Int32)
+  commentId: M:UnityEngine.UI.ScrollRect.SetNormalizedPosition(System.Single,System.Int32)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: SetNormalizedPosition(float, int)
+  nameWithType: ScrollRect.SetNormalizedPosition(float, int)
+  fullName: UnityEngine.UI.ScrollRect.SetNormalizedPosition(float, int)
+  nameWithType.vb: ScrollRect.SetNormalizedPosition(Single, Integer)
+  fullName.vb: UnityEngine.UI.ScrollRect.SetNormalizedPosition(Single, Integer)
+  name.vb: SetNormalizedPosition(Single, Integer)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.SetNormalizedPosition(System.Single,System.Int32)
+    name: SetNormalizedPosition
+    isExternal: true
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.SetNormalizedPosition(System.Single,System.Int32)
+    name: SetNormalizedPosition
+    isExternal: true
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.OnRectTransformDimensionsChange
+  commentId: M:UnityEngine.UI.ScrollRect.OnRectTransformDimensionsChange
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnRectTransformDimensionsChange()
+  nameWithType: ScrollRect.OnRectTransformDimensionsChange()
+  fullName: UnityEngine.UI.ScrollRect.OnRectTransformDimensionsChange()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnRectTransformDimensionsChange
+    name: OnRectTransformDimensionsChange
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnRectTransformDimensionsChange
+    name: OnRectTransformDimensionsChange
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal
+  commentId: M:UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: CalculateLayoutInputHorizontal()
+  nameWithType: ScrollRect.CalculateLayoutInputHorizontal()
+  fullName: UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal
+    name: CalculateLayoutInputHorizontal
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal
+    name: CalculateLayoutInputHorizontal
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical
+  commentId: M:UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: CalculateLayoutInputVertical()
+  nameWithType: ScrollRect.CalculateLayoutInputVertical()
+  fullName: UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical
+    name: CalculateLayoutInputVertical
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical
+    name: CalculateLayoutInputVertical
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.SetLayoutHorizontal
+  commentId: M:UnityEngine.UI.ScrollRect.SetLayoutHorizontal
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: SetLayoutHorizontal()
+  nameWithType: ScrollRect.SetLayoutHorizontal()
+  fullName: UnityEngine.UI.ScrollRect.SetLayoutHorizontal()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.SetLayoutHorizontal
+    name: SetLayoutHorizontal
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.SetLayoutHorizontal
+    name: SetLayoutHorizontal
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.SetLayoutVertical
+  commentId: M:UnityEngine.UI.ScrollRect.SetLayoutVertical
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: SetLayoutVertical()
+  nameWithType: ScrollRect.SetLayoutVertical()
+  fullName: UnityEngine.UI.ScrollRect.SetLayoutVertical()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.SetLayoutVertical
+    name: SetLayoutVertical
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.SetLayoutVertical
+    name: SetLayoutVertical
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.UpdateBounds
+  commentId: M:UnityEngine.UI.ScrollRect.UpdateBounds
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: UpdateBounds()
+  nameWithType: ScrollRect.UpdateBounds()
+  fullName: UnityEngine.UI.ScrollRect.UpdateBounds()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.UpdateBounds
+    name: UpdateBounds
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.UpdateBounds
+    name: UpdateBounds
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.SetDirty
+  commentId: M:UnityEngine.UI.ScrollRect.SetDirty
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: SetDirty()
+  nameWithType: ScrollRect.SetDirty()
+  fullName: UnityEngine.UI.ScrollRect.SetDirty()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.SetDirty
+    name: SetDirty
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.SetDirty
+    name: SetDirty
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.SetDirtyCaching
+  commentId: M:UnityEngine.UI.ScrollRect.SetDirtyCaching
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: SetDirtyCaching()
+  nameWithType: ScrollRect.SetDirtyCaching()
+  fullName: UnityEngine.UI.ScrollRect.SetDirtyCaching()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.SetDirtyCaching
+    name: SetDirtyCaching
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.SetDirtyCaching
+    name: SetDirtyCaching
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.OnValidate
+  commentId: M:UnityEngine.UI.ScrollRect.OnValidate
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnValidate()
+  nameWithType: ScrollRect.OnValidate()
+  fullName: UnityEngine.UI.ScrollRect.OnValidate()
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnValidate
+    name: OnValidate
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnValidate
+    name: OnValidate
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.UnityEngine#UI#ICanvasElement#get_transform
+  commentId: M:UnityEngine.UI.ScrollRect.UnityEngine#UI#ICanvasElement#get_transform
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: ICanvasElement.get_transform()
+  nameWithType: ScrollRect.ICanvasElement.get_transform()
+  fullName: UnityEngine.UI.ScrollRect.UnityEngine.UI.ICanvasElement.get_transform()
+  spec.csharp:
+  - uid: UnityEngine.UI.ICanvasElement
+    name: ICanvasElement
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI.ScrollRect.UnityEngine#UI#ICanvasElement#get_transform
+    name: get_transform
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UI.ScrollRect.content
+  commentId: P:UnityEngine.UI.ScrollRect.content
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: content
+  nameWithType: ScrollRect.content
+  fullName: UnityEngine.UI.ScrollRect.content
+- uid: UnityEngine.UI.ScrollRect.horizontal
+  commentId: P:UnityEngine.UI.ScrollRect.horizontal
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: horizontal
+  nameWithType: ScrollRect.horizontal
+  fullName: UnityEngine.UI.ScrollRect.horizontal
+- uid: UnityEngine.UI.ScrollRect.vertical
+  commentId: P:UnityEngine.UI.ScrollRect.vertical
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: vertical
+  nameWithType: ScrollRect.vertical
+  fullName: UnityEngine.UI.ScrollRect.vertical
+- uid: UnityEngine.UI.ScrollRect.movementType
+  commentId: P:UnityEngine.UI.ScrollRect.movementType
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: movementType
+  nameWithType: ScrollRect.movementType
+  fullName: UnityEngine.UI.ScrollRect.movementType
+- uid: UnityEngine.UI.ScrollRect.elasticity
+  commentId: P:UnityEngine.UI.ScrollRect.elasticity
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: elasticity
+  nameWithType: ScrollRect.elasticity
+  fullName: UnityEngine.UI.ScrollRect.elasticity
+- uid: UnityEngine.UI.ScrollRect.inertia
+  commentId: P:UnityEngine.UI.ScrollRect.inertia
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: inertia
+  nameWithType: ScrollRect.inertia
+  fullName: UnityEngine.UI.ScrollRect.inertia
+- uid: UnityEngine.UI.ScrollRect.decelerationRate
+  commentId: P:UnityEngine.UI.ScrollRect.decelerationRate
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: decelerationRate
+  nameWithType: ScrollRect.decelerationRate
+  fullName: UnityEngine.UI.ScrollRect.decelerationRate
+- uid: UnityEngine.UI.ScrollRect.scrollSensitivity
+  commentId: P:UnityEngine.UI.ScrollRect.scrollSensitivity
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: scrollSensitivity
+  nameWithType: ScrollRect.scrollSensitivity
+  fullName: UnityEngine.UI.ScrollRect.scrollSensitivity
+- uid: UnityEngine.UI.ScrollRect.viewport
+  commentId: P:UnityEngine.UI.ScrollRect.viewport
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: viewport
+  nameWithType: ScrollRect.viewport
+  fullName: UnityEngine.UI.ScrollRect.viewport
+- uid: UnityEngine.UI.ScrollRect.horizontalScrollbar
+  commentId: P:UnityEngine.UI.ScrollRect.horizontalScrollbar
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: horizontalScrollbar
+  nameWithType: ScrollRect.horizontalScrollbar
+  fullName: UnityEngine.UI.ScrollRect.horizontalScrollbar
+- uid: UnityEngine.UI.ScrollRect.verticalScrollbar
+  commentId: P:UnityEngine.UI.ScrollRect.verticalScrollbar
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: verticalScrollbar
+  nameWithType: ScrollRect.verticalScrollbar
+  fullName: UnityEngine.UI.ScrollRect.verticalScrollbar
+- uid: UnityEngine.UI.ScrollRect.horizontalScrollbarVisibility
+  commentId: P:UnityEngine.UI.ScrollRect.horizontalScrollbarVisibility
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: horizontalScrollbarVisibility
+  nameWithType: ScrollRect.horizontalScrollbarVisibility
+  fullName: UnityEngine.UI.ScrollRect.horizontalScrollbarVisibility
+- uid: UnityEngine.UI.ScrollRect.verticalScrollbarVisibility
+  commentId: P:UnityEngine.UI.ScrollRect.verticalScrollbarVisibility
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: verticalScrollbarVisibility
+  nameWithType: ScrollRect.verticalScrollbarVisibility
+  fullName: UnityEngine.UI.ScrollRect.verticalScrollbarVisibility
+- uid: UnityEngine.UI.ScrollRect.horizontalScrollbarSpacing
+  commentId: P:UnityEngine.UI.ScrollRect.horizontalScrollbarSpacing
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: horizontalScrollbarSpacing
+  nameWithType: ScrollRect.horizontalScrollbarSpacing
+  fullName: UnityEngine.UI.ScrollRect.horizontalScrollbarSpacing
+- uid: UnityEngine.UI.ScrollRect.verticalScrollbarSpacing
+  commentId: P:UnityEngine.UI.ScrollRect.verticalScrollbarSpacing
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: verticalScrollbarSpacing
+  nameWithType: ScrollRect.verticalScrollbarSpacing
+  fullName: UnityEngine.UI.ScrollRect.verticalScrollbarSpacing
+- uid: UnityEngine.UI.ScrollRect.onValueChanged
+  commentId: P:UnityEngine.UI.ScrollRect.onValueChanged
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: onValueChanged
+  nameWithType: ScrollRect.onValueChanged
+  fullName: UnityEngine.UI.ScrollRect.onValueChanged
+- uid: UnityEngine.UI.ScrollRect.viewRect
+  commentId: P:UnityEngine.UI.ScrollRect.viewRect
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: viewRect
+  nameWithType: ScrollRect.viewRect
+  fullName: UnityEngine.UI.ScrollRect.viewRect
+- uid: UnityEngine.UI.ScrollRect.velocity
+  commentId: P:UnityEngine.UI.ScrollRect.velocity
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: velocity
+  nameWithType: ScrollRect.velocity
+  fullName: UnityEngine.UI.ScrollRect.velocity
+- uid: UnityEngine.UI.ScrollRect.normalizedPosition
+  commentId: P:UnityEngine.UI.ScrollRect.normalizedPosition
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: normalizedPosition
+  nameWithType: ScrollRect.normalizedPosition
+  fullName: UnityEngine.UI.ScrollRect.normalizedPosition
+- uid: UnityEngine.UI.ScrollRect.horizontalNormalizedPosition
+  commentId: P:UnityEngine.UI.ScrollRect.horizontalNormalizedPosition
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: horizontalNormalizedPosition
+  nameWithType: ScrollRect.horizontalNormalizedPosition
+  fullName: UnityEngine.UI.ScrollRect.horizontalNormalizedPosition
+- uid: UnityEngine.UI.ScrollRect.verticalNormalizedPosition
+  commentId: P:UnityEngine.UI.ScrollRect.verticalNormalizedPosition
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: verticalNormalizedPosition
+  nameWithType: ScrollRect.verticalNormalizedPosition
+  fullName: UnityEngine.UI.ScrollRect.verticalNormalizedPosition
+- uid: UnityEngine.UI.ScrollRect.minWidth
+  commentId: P:UnityEngine.UI.ScrollRect.minWidth
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: minWidth
+  nameWithType: ScrollRect.minWidth
+  fullName: UnityEngine.UI.ScrollRect.minWidth
+- uid: UnityEngine.UI.ScrollRect.preferredWidth
+  commentId: P:UnityEngine.UI.ScrollRect.preferredWidth
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: preferredWidth
+  nameWithType: ScrollRect.preferredWidth
+  fullName: UnityEngine.UI.ScrollRect.preferredWidth
+- uid: UnityEngine.UI.ScrollRect.flexibleWidth
+  commentId: P:UnityEngine.UI.ScrollRect.flexibleWidth
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: flexibleWidth
+  nameWithType: ScrollRect.flexibleWidth
+  fullName: UnityEngine.UI.ScrollRect.flexibleWidth
+- uid: UnityEngine.UI.ScrollRect.minHeight
+  commentId: P:UnityEngine.UI.ScrollRect.minHeight
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: minHeight
+  nameWithType: ScrollRect.minHeight
+  fullName: UnityEngine.UI.ScrollRect.minHeight
+- uid: UnityEngine.UI.ScrollRect.preferredHeight
+  commentId: P:UnityEngine.UI.ScrollRect.preferredHeight
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: preferredHeight
+  nameWithType: ScrollRect.preferredHeight
+  fullName: UnityEngine.UI.ScrollRect.preferredHeight
+- uid: UnityEngine.UI.ScrollRect.flexibleHeight
+  commentId: P:UnityEngine.UI.ScrollRect.flexibleHeight
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: flexibleHeight
+  nameWithType: ScrollRect.flexibleHeight
+  fullName: UnityEngine.UI.ScrollRect.flexibleHeight
+- uid: UnityEngine.UI.ScrollRect.layoutPriority
+  commentId: P:UnityEngine.UI.ScrollRect.layoutPriority
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: layoutPriority
+  nameWithType: ScrollRect.layoutPriority
+  fullName: UnityEngine.UI.ScrollRect.layoutPriority
+- uid: UnityEngine.EventSystems.UIBehaviour.Awake
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.Awake
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: Awake()
+  nameWithType: UIBehaviour.Awake()
+  fullName: UnityEngine.EventSystems.UIBehaviour.Awake()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Awake
+    name: Awake
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Awake
+    name: Awake
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnDestroy
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnDestroy
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnDestroy()
+  nameWithType: UIBehaviour.OnDestroy()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnDestroy()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnDestroy
+    name: OnDestroy
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnDestroy
+    name: OnDestroy
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.Reset
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.Reset
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: Reset()
+  nameWithType: UIBehaviour.Reset()
+  fullName: UnityEngine.EventSystems.UIBehaviour.Reset()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnBeforeTransformParentChanged()
+  nameWithType: UIBehaviour.OnBeforeTransformParentChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+    name: OnBeforeTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnBeforeTransformParentChanged
+    name: OnBeforeTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnTransformParentChanged()
+  nameWithType: UIBehaviour.OnTransformParentChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+    name: OnTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged
+    name: OnTransformParentChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnDidApplyAnimationProperties
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnDidApplyAnimationProperties
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnDidApplyAnimationProperties()
+  nameWithType: UIBehaviour.OnDidApplyAnimationProperties()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnDidApplyAnimationProperties()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnDidApplyAnimationProperties
+    name: OnDidApplyAnimationProperties
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnDidApplyAnimationProperties
+    name: OnDidApplyAnimationProperties
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnCanvasGroupChanged()
+  nameWithType: UIBehaviour.OnCanvasGroupChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+    name: OnCanvasGroupChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasGroupChanged
+    name: OnCanvasGroupChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: OnCanvasHierarchyChanged()
+  nameWithType: UIBehaviour.OnCanvasHierarchyChanged()
+  fullName: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+    name: OnCanvasHierarchyChanged
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.OnCanvasHierarchyChanged
+    name: OnCanvasHierarchyChanged
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: IsDestroyed()
+  nameWithType: UIBehaviour.IsDestroyed()
+  fullName: UnityEngine.EventSystems.UIBehaviour.IsDestroyed()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+    name: IsDestroyed
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.IsDestroyed
+    name: IsDestroyed
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.EventSystems
+  commentId: N:UnityEngine.EventSystems
+  isExternal: true
+  name: UnityEngine.EventSystems
+  nameWithType: UnityEngine.EventSystems
+  fullName: UnityEngine.EventSystems
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.CancellationTokenSource
+  commentId: T:System.Threading.CancellationTokenSource
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource
+  name: CancellationTokenSource
+  nameWithType: CancellationTokenSource
+  fullName: System.Threading.CancellationTokenSource
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: UniRx.ReactiveProperty{SamuraiSoccer.Event.Stage}
+  commentId: T:UniRx.ReactiveProperty{SamuraiSoccer.Event.Stage}
+  parent: UniRx
+  definition: UniRx.ReactiveProperty`1
+  href: SamuraiSoccer.Event.Stage.html
+  name: ReactiveProperty<Stage>
+  nameWithType: ReactiveProperty<Stage>
+  fullName: UniRx.ReactiveProperty<SamuraiSoccer.Event.Stage>
+  nameWithType.vb: ReactiveProperty(Of Stage)
+  fullName.vb: UniRx.ReactiveProperty(Of SamuraiSoccer.Event.Stage)
+  name.vb: ReactiveProperty(Of Stage)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: )
+- uid: UniRx.ReactiveProperty`1
+  commentId: T:UniRx.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: UniRx.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: UniRx.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_SelectedStage
+  name: SelectedStage
+  nameWithType: StageScrollScroller.SelectedStage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SelectedStage
+- uid: UniRx.IReadOnlyReactiveProperty{SamuraiSoccer.Event.Stage}
+  commentId: T:UniRx.IReadOnlyReactiveProperty{SamuraiSoccer.Event.Stage}
+  parent: UniRx
+  definition: UniRx.IReadOnlyReactiveProperty`1
+  href: SamuraiSoccer.Event.Stage.html
+  name: IReadOnlyReactiveProperty<Stage>
+  nameWithType: IReadOnlyReactiveProperty<Stage>
+  fullName: UniRx.IReadOnlyReactiveProperty<SamuraiSoccer.Event.Stage>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Stage)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of SamuraiSoccer.Event.Stage)
+  name.vb: IReadOnlyReactiveProperty(Of Stage)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: )
+- uid: UniRx.IReadOnlyReactiveProperty`1
+  commentId: T:UniRx.IReadOnlyReactiveProperty`1
+  isExternal: true
+  name: IReadOnlyReactiveProperty<T>
+  nameWithType: IReadOnlyReactiveProperty<T>
+  fullName: UniRx.IReadOnlyReactiveProperty<T>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of T)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of T)
+  name.vb: IReadOnlyReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_GetSelectingStage
+  name: GetSelectingStage
+  nameWithType: StageScrollScroller.GetSelectingStage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.GetSelectingStage
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_Update
+  name: Update
+  nameWithType: StageScrollScroller.Update
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Update
+- uid: UnityEngine.EventSystems.UIBehaviour.Start
+  commentId: M:UnityEngine.EventSystems.UIBehaviour.Start
+  parent: UnityEngine.EventSystems.UIBehaviour
+  isExternal: true
+  name: Start()
+  nameWithType: UIBehaviour.Start()
+  fullName: UnityEngine.EventSystems.UIBehaviour.Start()
+  spec.csharp:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Start
+    name: Start
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.EventSystems.UIBehaviour.Start
+    name: Start
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_Start
+  name: Start
+  nameWithType: StageScrollScroller.Start
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.Start
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_setScrollPos
+  name: setScrollPos
+  nameWithType: StageScrollScroller.setScrollPos
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.setScrollPos
+- uid: UnityEngine.UI.ScrollRect.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.ScrollRect.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnBeginDrag(PointerEventData)
+  nameWithType: ScrollRect.OnBeginDrag(PointerEventData)
+  fullName: UnityEngine.UI.ScrollRect.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnBeginDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnBeginDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_OnBeginDrag_UnityEngine_EventSystems_PointerEventData_
+  name: OnBeginDrag
+  nameWithType: StageScrollScroller.OnBeginDrag
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnBeginDrag
+- uid: UnityEngine.EventSystems.PointerEventData
+  commentId: T:UnityEngine.EventSystems.PointerEventData
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: UnityEngine.EventSystems.PointerEventData
+- uid: UnityEngine.UI.ScrollRect.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.ScrollRect.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnDrag(PointerEventData)
+  nameWithType: ScrollRect.OnDrag(PointerEventData)
+  fullName: UnityEngine.UI.ScrollRect.OnDrag(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_OnDrag_UnityEngine_EventSystems_PointerEventData_
+  name: OnDrag
+  nameWithType: StageScrollScroller.OnDrag
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnDrag
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_ScrollRoop
+  name: ScrollRoop
+  nameWithType: StageScrollScroller.ScrollRoop
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.ScrollRoop
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_SliderAdjust_System_Threading_CancellationToken_
+  name: SliderAdjust
+  nameWithType: StageScrollScroller.SliderAdjust
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.SliderAdjust
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: UnityEngine.UI.ScrollRect.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.ScrollRect.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.ScrollRect
+  isExternal: true
+  name: OnEndDrag(PointerEventData)
+  nameWithType: ScrollRect.OnEndDrag(PointerEventData)
+  fullName: UnityEngine.UI.ScrollRect.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.ScrollRect.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnEndDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.ScrollRect.OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+    name: OnEndDrag
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag
+  href: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.html#SamuraiSoccer_StageContents_StageSelect_StageScrollScroller_OnEndDrag_UnityEngine_EventSystems_PointerEventData_
+  name: OnEndDrag
+  nameWithType: StageScrollScroller.OnEndDrag
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller.OnEndDrag

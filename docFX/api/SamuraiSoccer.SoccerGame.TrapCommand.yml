@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.TrapCommand
+  commentId: T:SamuraiSoccer.SoccerGame.TrapCommand
+  id: TrapCommand
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.TrapCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.TrapCommand.m_recever
+  - SamuraiSoccer.SoccerGame.TrapCommand.m_status
+  langs:
+  - csharp
+  - vb
+  name: TrapCommand
+  nameWithType: TrapCommand
+  fullName: SamuraiSoccer.SoccerGame.TrapCommand
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TrapCommand
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 37
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: トラップする時のコマンド．
+  example: []
+  syntax:
+    content: 'public class TrapCommand : BallActionCommand'
+    content.vb: Public Class TrapCommand Inherits BallActionCommand
+  inheritance:
+  - System.Object
+  - SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: SamuraiSoccer.SoccerGame.TrapCommand.m_recever
+  commentId: F:SamuraiSoccer.SoccerGame.TrapCommand.m_recever
+  id: m_recever
+  parent: SamuraiSoccer.SoccerGame.TrapCommand
+  langs:
+  - csharp
+  - vb
+  name: m_recever
+  nameWithType: TrapCommand.m_recever
+  fullName: SamuraiSoccer.SoccerGame.TrapCommand.m_recever
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_recever
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Transform m_recever
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public m_recever As Transform
+- uid: SamuraiSoccer.SoccerGame.TrapCommand.m_status
+  commentId: F:SamuraiSoccer.SoccerGame.TrapCommand.m_status
+  id: m_status
+  parent: SamuraiSoccer.SoccerGame.TrapCommand
+  langs:
+  - csharp
+  - vb
+  name: m_status
+  nameWithType: TrapCommand.m_status
+  fullName: SamuraiSoccer.SoccerGame.TrapCommand.m_status
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_status
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 40
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public PersonalStatus m_status
+    return:
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Public m_status As PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.TrapCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.TrapCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: '#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)'
+  parent: SamuraiSoccer.SoccerGame.TrapCommand
+  langs:
+  - csharp
+  - vb
+  name: TrapCommand(Transform, PersonalStatus)
+  nameWithType: TrapCommand.TrapCommand(Transform, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.TrapCommand.TrapCommand(UnityEngine.Transform, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 47
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: トラップする時のコマンド．
+  example: []
+  syntax:
+    content: public TrapCommand(Transform recever, PersonalStatus status)
+    parameters:
+    - id: recever
+      type: UnityEngine.Transform
+      description: トラップ主．
+    - id: status
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: トラップ主のステータス．
+    content.vb: Public Sub New(recever As Transform, status As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.TrapCommand.#ctor*
+  nameWithType.vb: TrapCommand.New(Transform, PersonalStatus)
+  fullName.vb: SamuraiSoccer.SoccerGame.TrapCommand.New(UnityEngine.Transform, SamuraiSoccer.SoccerGame.PersonalStatus)
+  name.vb: New(Transform, PersonalStatus)
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SamuraiSoccer.SoccerGame.BallActionCommand
+  commentId: T:SamuraiSoccer.SoccerGame.BallActionCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  name: BallActionCommand
+  nameWithType: BallActionCommand
+  fullName: SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.PersonalStatus
+  commentId: T:SamuraiSoccer.SoccerGame.PersonalStatus
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PersonalStatus.html
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: SamuraiSoccer.SoccerGame.PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.TrapCommand.#ctor*
+  commentId: Overload:SamuraiSoccer.SoccerGame.TrapCommand.#ctor
+  href: SamuraiSoccer.SoccerGame.TrapCommand.html#SamuraiSoccer_SoccerGame_TrapCommand__ctor_UnityEngine_Transform_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: TrapCommand
+  nameWithType: TrapCommand.TrapCommand
+  fullName: SamuraiSoccer.SoccerGame.TrapCommand.TrapCommand
+  nameWithType.vb: TrapCommand.New
+  fullName.vb: SamuraiSoccer.SoccerGame.TrapCommand.New
+  name.vb: New

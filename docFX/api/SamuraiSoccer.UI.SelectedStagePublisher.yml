@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.SelectedStagePublisher
+  commentId: T:SamuraiSoccer.UI.SelectedStagePublisher
+  id: SelectedStagePublisher
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.SelectedStagePublisher.OnClick
+  - SamuraiSoccer.UI.SelectedStagePublisher.m_stage
+  langs:
+  - csharp
+  - vb
+  name: SelectedStagePublisher
+  nameWithType: SelectedStagePublisher
+  fullName: SamuraiSoccer.UI.SelectedStagePublisher
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/SelectedStagePublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SelectedStagePublisher
+    path: ../Assets/Scripts/UI/SelectedStagePublisher.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class SelectedStagePublisher : MonoBehaviour'
+    content.vb: Public Class SelectedStagePublisher Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.SelectedStagePublisher.m_stage
+  commentId: F:SamuraiSoccer.UI.SelectedStagePublisher.m_stage
+  id: m_stage
+  parent: SamuraiSoccer.UI.SelectedStagePublisher
+  langs:
+  - csharp
+  - vb
+  name: m_stage
+  nameWithType: SelectedStagePublisher.m_stage
+  fullName: SamuraiSoccer.UI.SelectedStagePublisher.m_stage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SelectedStagePublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stage
+    path: ../Assets/Scripts/UI/SelectedStagePublisher.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [Tooltip("選択したステージの国がどこかを設定")]
+
+      private Stage m_stage
+    return:
+      type: SamuraiSoccer.Event.Stage
+    content.vb: >-
+      <SerializeField>
+
+      <Tooltip("選択したステージの国がどこかを設定")>
+
+      Private m_stage As Stage
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 選択したステージの国がどこかを設定
+- uid: SamuraiSoccer.UI.SelectedStagePublisher.OnClick
+  commentId: M:SamuraiSoccer.UI.SelectedStagePublisher.OnClick
+  id: OnClick
+  parent: SamuraiSoccer.UI.SelectedStagePublisher
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: SelectedStagePublisher.OnClick()
+  fullName: SamuraiSoccer.UI.SelectedStagePublisher.OnClick()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SelectedStagePublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnClick
+    path: ../Assets/Scripts/UI/SelectedStagePublisher.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 選択したステージをもとに状態遷移を発行
+  example: []
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick()
+  overload: SamuraiSoccer.UI.SelectedStagePublisher.OnClick*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.UI.SelectedStagePublisher.OnClick*
+  commentId: Overload:SamuraiSoccer.UI.SelectedStagePublisher.OnClick
+  href: SamuraiSoccer.UI.SelectedStagePublisher.html#SamuraiSoccer_UI_SelectedStagePublisher_OnClick
+  name: OnClick
+  nameWithType: SelectedStagePublisher.OnClick
+  fullName: SamuraiSoccer.UI.SelectedStagePublisher.OnClick

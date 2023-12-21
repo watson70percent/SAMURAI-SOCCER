@@ -1,0 +1,274 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.PassCommand
+  commentId: T:SamuraiSoccer.SoccerGame.PassCommand
+  id: PassCommand
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.PassCommand.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PassHeight,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.PassCommand.m_passHeight
+  - SamuraiSoccer.SoccerGame.PassCommand.m_recever
+  - SamuraiSoccer.SoccerGame.PassCommand.m_sender
+  - SamuraiSoccer.SoccerGame.PassCommand.m_status
+  langs:
+  - csharp
+  - vb
+  name: PassCommand
+  nameWithType: PassCommand
+  fullName: SamuraiSoccer.SoccerGame.PassCommand
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PassCommand
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 67
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: パスをする時のコマンド．
+  example: []
+  syntax:
+    content: 'public class PassCommand : BallActionCommand'
+    content.vb: Public Class PassCommand Inherits BallActionCommand
+  inheritance:
+  - System.Object
+  - SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: SamuraiSoccer.SoccerGame.PassCommand.m_sender
+  commentId: F:SamuraiSoccer.SoccerGame.PassCommand.m_sender
+  id: m_sender
+  parent: SamuraiSoccer.SoccerGame.PassCommand
+  langs:
+  - csharp
+  - vb
+  name: m_sender
+  nameWithType: PassCommand.m_sender
+  fullName: SamuraiSoccer.SoccerGame.PassCommand.m_sender
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_sender
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 69
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Vector2 m_sender
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public m_sender As Vector2
+- uid: SamuraiSoccer.SoccerGame.PassCommand.m_recever
+  commentId: F:SamuraiSoccer.SoccerGame.PassCommand.m_recever
+  id: m_recever
+  parent: SamuraiSoccer.SoccerGame.PassCommand
+  langs:
+  - csharp
+  - vb
+  name: m_recever
+  nameWithType: PassCommand.m_recever
+  fullName: SamuraiSoccer.SoccerGame.PassCommand.m_recever
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_recever
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 70
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Vector2 m_recever
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public m_recever As Vector2
+- uid: SamuraiSoccer.SoccerGame.PassCommand.m_passHeight
+  commentId: F:SamuraiSoccer.SoccerGame.PassCommand.m_passHeight
+  id: m_passHeight
+  parent: SamuraiSoccer.SoccerGame.PassCommand
+  langs:
+  - csharp
+  - vb
+  name: m_passHeight
+  nameWithType: PassCommand.m_passHeight
+  fullName: SamuraiSoccer.SoccerGame.PassCommand.m_passHeight
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_passHeight
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 71
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public PassHeight m_passHeight
+    return:
+      type: SamuraiSoccer.SoccerGame.PassHeight
+    content.vb: Public m_passHeight As PassHeight
+- uid: SamuraiSoccer.SoccerGame.PassCommand.m_status
+  commentId: F:SamuraiSoccer.SoccerGame.PassCommand.m_status
+  id: m_status
+  parent: SamuraiSoccer.SoccerGame.PassCommand
+  langs:
+  - csharp
+  - vb
+  name: m_status
+  nameWithType: PassCommand.m_status
+  fullName: SamuraiSoccer.SoccerGame.PassCommand.m_status
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_status
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 72
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public PersonalStatus m_status
+    return:
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Public m_status As PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.PassCommand.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PassHeight,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.PassCommand.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PassHeight,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: '#ctor(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PassHeight,SamuraiSoccer.SoccerGame.PersonalStatus)'
+  parent: SamuraiSoccer.SoccerGame.PassCommand
+  langs:
+  - csharp
+  - vb
+  name: PassCommand(Vector2, Vector2, PassHeight, PersonalStatus)
+  nameWithType: PassCommand.PassCommand(Vector2, Vector2, PassHeight, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.PassCommand.PassCommand(UnityEngine.Vector2, UnityEngine.Vector2, SamuraiSoccer.SoccerGame.PassHeight, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 81
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: パスをする時のコマンド．
+  example: []
+  syntax:
+    content: public PassCommand(Vector2 sender, Vector2 recever, PassHeight passHeight, PersonalStatus status)
+    parameters:
+    - id: sender
+      type: UnityEngine.Vector2
+      description: パス主．
+    - id: recever
+      type: UnityEngine.Vector2
+      description: 受け取り主．
+    - id: passHeight
+      type: SamuraiSoccer.SoccerGame.PassHeight
+      description: パスの高さ．
+    - id: status
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: パス主のステータス．
+    content.vb: Public Sub New(sender As Vector2, recever As Vector2, passHeight As PassHeight, status As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.PassCommand.#ctor*
+  nameWithType.vb: PassCommand.New(Vector2, Vector2, PassHeight, PersonalStatus)
+  fullName.vb: SamuraiSoccer.SoccerGame.PassCommand.New(UnityEngine.Vector2, UnityEngine.Vector2, SamuraiSoccer.SoccerGame.PassHeight, SamuraiSoccer.SoccerGame.PersonalStatus)
+  name.vb: New(Vector2, Vector2, PassHeight, PersonalStatus)
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SamuraiSoccer.SoccerGame.BallActionCommand
+  commentId: T:SamuraiSoccer.SoccerGame.BallActionCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  name: BallActionCommand
+  nameWithType: BallActionCommand
+  fullName: SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.PassHeight
+  commentId: T:SamuraiSoccer.SoccerGame.PassHeight
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PassHeight.html
+  name: PassHeight
+  nameWithType: PassHeight
+  fullName: SamuraiSoccer.SoccerGame.PassHeight
+- uid: SamuraiSoccer.SoccerGame.PersonalStatus
+  commentId: T:SamuraiSoccer.SoccerGame.PersonalStatus
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PersonalStatus.html
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: SamuraiSoccer.SoccerGame.PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.PassCommand.#ctor*
+  commentId: Overload:SamuraiSoccer.SoccerGame.PassCommand.#ctor
+  href: SamuraiSoccer.SoccerGame.PassCommand.html#SamuraiSoccer_SoccerGame_PassCommand__ctor_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PassHeight_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: PassCommand
+  nameWithType: PassCommand.PassCommand
+  fullName: SamuraiSoccer.SoccerGame.PassCommand.PassCommand
+  nameWithType.vb: PassCommand.New
+  fullName.vb: SamuraiSoccer.SoccerGame.PassCommand.New
+  name.vb: New

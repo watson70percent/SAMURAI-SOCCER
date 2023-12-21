@@ -1,0 +1,371 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Player.AnimationController
+  commentId: T:SamuraiSoccer.Player.AnimationController
+  id: AnimationController
+  parent: SamuraiSoccer.Player
+  children:
+  - SamuraiSoccer.Player.AnimationController.Attack
+  - SamuraiSoccer.Player.AnimationController.Run
+  - SamuraiSoccer.Player.AnimationController.Start
+  - SamuraiSoccer.Player.AnimationController.Stay
+  - SamuraiSoccer.Player.AnimationController.animator
+  - SamuraiSoccer.Player.AnimationController.m_isEnableAttack
+  - SamuraiSoccer.Player.AnimationController.m_isIdle
+  - SamuraiSoccer.Player.AnimationController.m_isRunning
+  langs:
+  - csharp
+  - vb
+  name: AnimationController
+  nameWithType: AnimationController
+  fullName: SamuraiSoccer.Player.AnimationController
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AnimationController
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: 'public class AnimationController : MonoBehaviour'
+    content.vb: Public Class AnimationController Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.Player.AnimationController.animator
+  commentId: F:SamuraiSoccer.Player.AnimationController.animator
+  id: animator
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: animator
+  nameWithType: AnimationController.animator
+  fullName: SamuraiSoccer.Player.AnimationController.animator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: animator
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private Animator animator
+    return:
+      type: UnityEngine.Animator
+    content.vb: Private animator As Animator
+- uid: SamuraiSoccer.Player.AnimationController.m_isEnableAttack
+  commentId: F:SamuraiSoccer.Player.AnimationController.m_isEnableAttack
+  id: m_isEnableAttack
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: m_isEnableAttack
+  nameWithType: AnimationController.m_isEnableAttack
+  fullName: SamuraiSoccer.Player.AnimationController.m_isEnableAttack
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isEnableAttack
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private bool m_isEnableAttack
+    return:
+      type: System.Boolean
+    content.vb: Private m_isEnableAttack As Boolean
+- uid: SamuraiSoccer.Player.AnimationController.m_isRunning
+  commentId: F:SamuraiSoccer.Player.AnimationController.m_isRunning
+  id: m_isRunning
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: m_isRunning
+  nameWithType: AnimationController.m_isRunning
+  fullName: SamuraiSoccer.Player.AnimationController.m_isRunning
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isRunning
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private bool m_isRunning
+    return:
+      type: System.Boolean
+    content.vb: Private m_isRunning As Boolean
+- uid: SamuraiSoccer.Player.AnimationController.m_isIdle
+  commentId: F:SamuraiSoccer.Player.AnimationController.m_isIdle
+  id: m_isIdle
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: m_isIdle
+  nameWithType: AnimationController.m_isIdle
+  fullName: SamuraiSoccer.Player.AnimationController.m_isIdle
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isIdle
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private bool m_isIdle
+    return:
+      type: System.Boolean
+    content.vb: Private m_isIdle As Boolean
+- uid: SamuraiSoccer.Player.AnimationController.Start
+  commentId: M:SamuraiSoccer.Player.AnimationController.Start
+  id: Start
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: AnimationController.Start()
+  fullName: SamuraiSoccer.Player.AnimationController.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.Player.AnimationController.Start*
+- uid: SamuraiSoccer.Player.AnimationController.Attack
+  commentId: M:SamuraiSoccer.Player.AnimationController.Attack
+  id: Attack
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Attack()
+  nameWithType: AnimationController.Attack()
+  fullName: SamuraiSoccer.Player.AnimationController.Attack()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Attack
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: public void Attack()
+    content.vb: Public Sub Attack()
+  overload: SamuraiSoccer.Player.AnimationController.Attack*
+- uid: SamuraiSoccer.Player.AnimationController.Run
+  commentId: M:SamuraiSoccer.Player.AnimationController.Run
+  id: Run
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: AnimationController.Run()
+  fullName: SamuraiSoccer.Player.AnimationController.Run()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Run
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 53
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run()
+  overload: SamuraiSoccer.Player.AnimationController.Run*
+- uid: SamuraiSoccer.Player.AnimationController.Stay
+  commentId: M:SamuraiSoccer.Player.AnimationController.Stay
+  id: Stay
+  parent: SamuraiSoccer.Player.AnimationController
+  langs:
+  - csharp
+  - vb
+  name: Stay()
+  nameWithType: AnimationController.Stay()
+  fullName: SamuraiSoccer.Player.AnimationController.Stay()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/AnimationController.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Stay
+    path: ../Assets/Scripts/Player/AnimationController.cs
+    startLine: 60
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: public void Stay()
+    content.vb: Public Sub Stay()
+  overload: SamuraiSoccer.Player.AnimationController.Stay*
+references:
+- uid: SamuraiSoccer.Player
+  commentId: N:SamuraiSoccer.Player
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Player
+  nameWithType: SamuraiSoccer.Player
+  fullName: SamuraiSoccer.Player
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.Player.AnimationController.Start*
+  commentId: Overload:SamuraiSoccer.Player.AnimationController.Start
+  href: SamuraiSoccer.Player.AnimationController.html#SamuraiSoccer_Player_AnimationController_Start
+  name: Start
+  nameWithType: AnimationController.Start
+  fullName: SamuraiSoccer.Player.AnimationController.Start
+- uid: SamuraiSoccer.Player.AnimationController.Attack*
+  commentId: Overload:SamuraiSoccer.Player.AnimationController.Attack
+  href: SamuraiSoccer.Player.AnimationController.html#SamuraiSoccer_Player_AnimationController_Attack
+  name: Attack
+  nameWithType: AnimationController.Attack
+  fullName: SamuraiSoccer.Player.AnimationController.Attack
+- uid: SamuraiSoccer.Player.AnimationController.Run*
+  commentId: Overload:SamuraiSoccer.Player.AnimationController.Run
+  href: SamuraiSoccer.Player.AnimationController.html#SamuraiSoccer_Player_AnimationController_Run
+  name: Run
+  nameWithType: AnimationController.Run
+  fullName: SamuraiSoccer.Player.AnimationController.Run
+- uid: SamuraiSoccer.Player.AnimationController.Stay*
+  commentId: Overload:SamuraiSoccer.Player.AnimationController.Stay
+  href: SamuraiSoccer.Player.AnimationController.html#SamuraiSoccer_Player_AnimationController_Stay
+  name: Stay
+  nameWithType: AnimationController.Stay
+  fullName: SamuraiSoccer.Player.AnimationController.Stay

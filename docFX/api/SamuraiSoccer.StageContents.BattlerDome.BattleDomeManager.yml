@@ -1,0 +1,635 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  commentId: T:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  id: BattleDomeManager
+  parent: SamuraiSoccer.StageContents.BattlerDome
+  children:
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation(System.Int32)
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.audioSource
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.clearNum
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.conversationManager
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.goalSound
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.resultSceneName
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.scenarioNum
+  - SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.startSound
+  langs:
+  - csharp
+  - vb
+  name: BattleDomeManager
+  nameWithType: BattleDomeManager
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BattleDomeManager
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 9
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: 'public class BattleDomeManager : MonoBehaviour'
+    content.vb: Public Class BattleDomeManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.audioSource
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.audioSource
+  id: audioSource
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: BattleDomeManager.audioSource
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.audioSource
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: audioSource
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 11
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: public AudioSource audioSource
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public audioSource As AudioSource
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.goalSound
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.goalSound
+  id: goalSound
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: goalSound
+  nameWithType: BattleDomeManager.goalSound
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.goalSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: goalSound
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 12
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: public AudioClip goalSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public goalSound As AudioClip
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.startSound
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.startSound
+  id: startSound
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: startSound
+  nameWithType: BattleDomeManager.startSound
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.startSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: startSound
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 13
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: public AudioClip startSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public startSound As AudioClip
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.conversationManager
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.conversationManager
+  id: conversationManager
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: conversationManager
+  nameWithType: BattleDomeManager.conversationManager
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.conversationManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: conversationManager
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 14
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: public ConversationManager conversationManager
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.ConversationManager
+    content.vb: Public conversationManager As ConversationManager
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.resultSceneName
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.resultSceneName
+  id: resultSceneName
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: resultSceneName
+  nameWithType: BattleDomeManager.resultSceneName
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.resultSceneName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: resultSceneName
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 15
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: public string resultSceneName
+    return:
+      type: System.String
+    content.vb: Public resultSceneName As String
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.clearNum
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.clearNum
+  id: clearNum
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: clearNum
+  nameWithType: BattleDomeManager.clearNum
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.clearNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: clearNum
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 16
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: private int clearNum
+    return:
+      type: System.Int32
+    content.vb: Private clearNum As Integer
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.scenarioNum
+  commentId: F:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.scenarioNum
+  id: scenarioNum
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: scenarioNum
+  nameWithType: BattleDomeManager.scenarioNum
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.scenarioNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: scenarioNum
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 17
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: private int scenarioNum
+    return:
+      type: System.Int32
+    content.vb: Private scenarioNum As Integer
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start
+  commentId: M:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: BattleDomeManager.Start()
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 21
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start*
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear
+  commentId: M:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear
+  id: Clear
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: BattleDomeManager.Clear()
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Clear
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 27
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: private void Clear()
+    content.vb: Private Sub Clear()
+  overload: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear*
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin
+  commentId: M:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin
+  id: SlowToWin
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: SlowToWin()
+  nameWithType: BattleDomeManager.SlowToWin()
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SlowToWin
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 39
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  summary: 勝った時にシーン遷移までゆっくりにして遷移させる
+  example: []
+  syntax:
+    content: private UniTask SlowToWin()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Private Function SlowToWin() As UniTask
+  overload: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin*
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  commentId: M:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  id: GoalAction(SamuraiSoccer.Event.GoalEventType)
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: GoalAction(GoalEventType)
+  nameWithType: BattleDomeManager.GoalAction(GoalEventType)
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GoalAction
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 47
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: private UniTask GoalAction(GoalEventType t)
+    parameters:
+    - id: t
+      type: SamuraiSoccer.Event.GoalEventType
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function GoalAction(t As GoalEventType) As UniTask
+  overload: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction*
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation(System.Int32)
+  commentId: M:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation(System.Int32)
+  id: Conversation(System.Int32)
+  parent: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+  langs:
+  - csharp
+  - vb
+  name: Conversation(int)
+  nameWithType: BattleDomeManager.Conversation(int)
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Conversation
+    path: ../Assets/Scripts/StageContents/BattleDome/BattleDomeManager.cs
+    startLine: 59
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattlerDome
+  syntax:
+    content: private UniTask Conversation(int num)
+    parameters:
+    - id: num
+      type: System.Int32
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function Conversation(num As Integer) As UniTask
+  overload: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation*
+  nameWithType.vb: BattleDomeManager.Conversation(Integer)
+  fullName.vb: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation(Integer)
+  name.vb: Conversation(Integer)
+references:
+- uid: SamuraiSoccer.StageContents.BattlerDome
+  commentId: N:SamuraiSoccer.StageContents.BattlerDome
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.BattlerDome
+  nameWithType: SamuraiSoccer.StageContents.BattlerDome
+  fullName: SamuraiSoccer.StageContents.BattlerDome
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattlerDome
+    name: BattlerDome
+    href: SamuraiSoccer.StageContents.BattlerDome.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattlerDome
+    name: BattlerDome
+    href: SamuraiSoccer.StageContents.BattlerDome.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationManager
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html
+  name: ConversationManager
+  nameWithType: ConversationManager
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start
+  href: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.html#SamuraiSoccer_StageContents_BattlerDome_BattleDomeManager_Start
+  name: Start
+  nameWithType: BattleDomeManager.Start
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Start
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear*
+  commentId: Overload:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear
+  href: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.html#SamuraiSoccer_StageContents_BattlerDome_BattleDomeManager_Clear
+  name: Clear
+  nameWithType: BattleDomeManager.Clear
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Clear
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin*
+  commentId: Overload:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin
+  href: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.html#SamuraiSoccer_StageContents_BattlerDome_BattleDomeManager_SlowToWin
+  name: SlowToWin
+  nameWithType: BattleDomeManager.SlowToWin
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.SlowToWin
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction*
+  commentId: Overload:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction
+  href: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.html#SamuraiSoccer_StageContents_BattlerDome_BattleDomeManager_GoalAction_SamuraiSoccer_Event_GoalEventType_
+  name: GoalAction
+  nameWithType: BattleDomeManager.GoalAction
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.GoalAction
+- uid: SamuraiSoccer.Event.GoalEventType
+  commentId: T:SamuraiSoccer.Event.GoalEventType
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.GoalEventType.html
+  name: GoalEventType
+  nameWithType: GoalEventType
+  fullName: SamuraiSoccer.Event.GoalEventType
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation*
+  commentId: Overload:SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation
+  href: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.html#SamuraiSoccer_StageContents_BattlerDome_BattleDomeManager_Conversation_System_Int32_
+  name: Conversation
+  nameWithType: BattleDomeManager.Conversation
+  fullName: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager.Conversation

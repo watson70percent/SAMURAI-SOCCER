@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Result.LoadAnyScene
+  commentId: T:SamuraiSoccer.StageContents.Result.LoadAnyScene
+  id: LoadAnyScene
+  parent: SamuraiSoccer.StageContents.Result
+  children:
+  - SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene(System.String)
+  - SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene(System.String)
+  langs:
+  - csharp
+  - vb
+  name: LoadAnyScene
+  nameWithType: LoadAnyScene
+  fullName: SamuraiSoccer.StageContents.Result.LoadAnyScene
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/LoadAnyScene.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LoadAnyScene
+    path: ../Assets/Scripts/StageContents/Result/LoadAnyScene.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: 'public class LoadAnyScene : MonoBehaviour'
+    content.vb: Public Class LoadAnyScene Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene(System.String)
+  commentId: M:SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene(System.String)
+  id: LoadScene(System.String)
+  parent: SamuraiSoccer.StageContents.Result.LoadAnyScene
+  langs:
+  - csharp
+  - vb
+  name: LoadScene(string)
+  nameWithType: LoadAnyScene.LoadScene(string)
+  fullName: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/LoadAnyScene.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LoadScene
+    path: ../Assets/Scripts/StageContents/Result/LoadAnyScene.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  summary: Scene遷移
+  example: []
+  syntax:
+    content: public void LoadScene(string targetSceneName)
+    parameters:
+    - id: targetSceneName
+      type: System.String
+      description: ロード先のScene
+    content.vb: Public Sub LoadScene(targetSceneName As String)
+  overload: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene*
+  nameWithType.vb: LoadAnyScene.LoadScene(String)
+  fullName.vb: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene(String)
+  name.vb: LoadScene(String)
+- uid: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene(System.String)
+  commentId: M:SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene(System.String)
+  id: LoadStartScene(System.String)
+  parent: SamuraiSoccer.StageContents.Result.LoadAnyScene
+  langs:
+  - csharp
+  - vb
+  name: LoadStartScene(string)
+  nameWithType: LoadAnyScene.LoadStartScene(string)
+  fullName: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/LoadAnyScene.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LoadStartScene
+    path: ../Assets/Scripts/StageContents/Result/LoadAnyScene.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: public void LoadStartScene(string targetSceneName)
+    parameters:
+    - id: targetSceneName
+      type: System.String
+    content.vb: Public Sub LoadStartScene(targetSceneName As String)
+  overload: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene*
+  nameWithType.vb: LoadAnyScene.LoadStartScene(String)
+  fullName.vb: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene(String)
+  name.vb: LoadStartScene(String)
+references:
+- uid: SamuraiSoccer.StageContents.Result
+  commentId: N:SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Result
+  nameWithType: SamuraiSoccer.StageContents.Result
+  fullName: SamuraiSoccer.StageContents.Result
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene
+  href: SamuraiSoccer.StageContents.Result.LoadAnyScene.html#SamuraiSoccer_StageContents_Result_LoadAnyScene_LoadScene_System_String_
+  name: LoadScene
+  nameWithType: LoadAnyScene.LoadScene
+  fullName: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadScene
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene
+  href: SamuraiSoccer.StageContents.Result.LoadAnyScene.html#SamuraiSoccer_StageContents_Result_LoadAnyScene_LoadStartScene_System_String_
+  name: LoadStartScene
+  nameWithType: LoadAnyScene.LoadStartScene
+  fullName: SamuraiSoccer.StageContents.Result.LoadAnyScene.LoadStartScene

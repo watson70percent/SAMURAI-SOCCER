@@ -1,0 +1,286 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.BallSlashed
+  commentId: T:SamuraiSoccer.SoccerGame.BallSlashed
+  id: BallSlashed
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.BallSlashed.Slashed(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.BallSlashed.m_power
+  - SamuraiSoccer.SoccerGame.BallSlashed.m_rigidbody
+  langs:
+  - csharp
+  - vb
+  name: BallSlashed
+  nameWithType: BallSlashed
+  fullName: SamuraiSoccer.SoccerGame.BallSlashed
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallSlashed.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BallSlashed
+    path: ../Assets/Scripts/SoccerGame/BallSlashed.cs
+    startLine: 4
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: 'public class BallSlashed : MonoBehaviour, ISlashed'
+    content.vb: Public Class BallSlashed Inherits MonoBehaviour Implements ISlashed
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - SamuraiSoccer.SoccerGame.ISlashed
+- uid: SamuraiSoccer.SoccerGame.BallSlashed.m_rigidbody
+  commentId: F:SamuraiSoccer.SoccerGame.BallSlashed.m_rigidbody
+  id: m_rigidbody
+  parent: SamuraiSoccer.SoccerGame.BallSlashed
+  langs:
+  - csharp
+  - vb
+  name: m_rigidbody
+  nameWithType: BallSlashed.m_rigidbody
+  fullName: SamuraiSoccer.SoccerGame.BallSlashed.m_rigidbody
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallSlashed.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_rigidbody
+    path: ../Assets/Scripts/SoccerGame/BallSlashed.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Rigidbody m_rigidbody
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: >-
+      <SerializeField>
+
+      Private m_rigidbody As Rigidbody
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.BallSlashed.m_power
+  commentId: F:SamuraiSoccer.SoccerGame.BallSlashed.m_power
+  id: m_power
+  parent: SamuraiSoccer.SoccerGame.BallSlashed
+  langs:
+  - csharp
+  - vb
+  name: m_power
+  nameWithType: BallSlashed.m_power
+  fullName: SamuraiSoccer.SoccerGame.BallSlashed.m_power
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallSlashed.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_power
+    path: ../Assets/Scripts/SoccerGame/BallSlashed.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_power
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_power As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.BallSlashed.Slashed(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.BallSlashed.Slashed(UnityEngine.Vector3)
+  id: Slashed(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.BallSlashed
+  langs:
+  - csharp
+  - vb
+  name: Slashed(Vector3)
+  nameWithType: BallSlashed.Slashed(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.BallSlashed.Slashed(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallSlashed.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Slashed
+    path: ../Assets/Scripts/SoccerGame/BallSlashed.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 衝撃波に斬られる時に呼ばれる
+  example: []
+  syntax:
+    content: public void Slashed(Vector3 dir)
+    parameters:
+    - id: dir
+      type: UnityEngine.Vector3
+      description: 吹っ飛ぶ方向
+    content.vb: Public Sub Slashed(dir As Vector3)
+  overload: SamuraiSoccer.SoccerGame.BallSlashed.Slashed*
+  implements:
+  - SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.ISlashed
+  commentId: T:SamuraiSoccer.SoccerGame.ISlashed
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.ISlashed.html
+  name: ISlashed
+  nameWithType: ISlashed
+  fullName: SamuraiSoccer.SoccerGame.ISlashed
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.SoccerGame.BallSlashed.Slashed*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallSlashed.Slashed
+  href: SamuraiSoccer.SoccerGame.BallSlashed.html#SamuraiSoccer_SoccerGame_BallSlashed_Slashed_UnityEngine_Vector3_
+  name: Slashed
+  nameWithType: BallSlashed.Slashed
+  fullName: SamuraiSoccer.SoccerGame.BallSlashed.Slashed
+- uid: SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.ISlashed
+  isExternal: true
+  href: SamuraiSoccer.SoccerGame.ISlashed.html#SamuraiSoccer_SoccerGame_ISlashed_Slashed_UnityEngine_Vector3_
+  name: Slashed(Vector3)
+  nameWithType: ISlashed.Slashed(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+  spec.csharp:
+  - uid: SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+    name: Slashed
+    href: SamuraiSoccer.SoccerGame.ISlashed.html#SamuraiSoccer_SoccerGame_ISlashed_Slashed_UnityEngine_Vector3_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.SoccerGame.ISlashed.Slashed(UnityEngine.Vector3)
+    name: Slashed
+    href: SamuraiSoccer.SoccerGame.ISlashed.html#SamuraiSoccer_SoccerGame_ISlashed_Slashed_UnityEngine_Vector3_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3

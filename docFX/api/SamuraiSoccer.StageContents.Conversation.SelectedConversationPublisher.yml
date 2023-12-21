@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  commentId: T:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  id: SelectedConversationPublisher
+  parent: SamuraiSoccer.StageContents.Conversation
+  children:
+  - SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick
+  - SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationManager
+  - SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationNum
+  - SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_finishedConversation
+  langs:
+  - csharp
+  - vb
+  name: SelectedConversationPublisher
+  nameWithType: SelectedConversationPublisher
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SelectedConversationPublisher
+    path: ../Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.StageContents.Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: 'public class SelectedConversationPublisher : MonoBehaviour'
+    content.vb: Public Class SelectedConversationPublisher Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationNum
+  commentId: F:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationNum
+  id: m_conversationNum
+  parent: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  langs:
+  - csharp
+  - vb
+  name: m_conversationNum
+  nameWithType: SelectedConversationPublisher.m_conversationNum
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationNum
+    path: ../Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_conversationNum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_conversationNum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationManager
+  commentId: F:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationManager
+  id: m_conversationManager
+  parent: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  langs:
+  - csharp
+  - vb
+  name: m_conversationManager
+  nameWithType: SelectedConversationPublisher.m_conversationManager
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_conversationManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationManager
+    path: ../Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private ConversationManager m_conversationManager
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.ConversationManager
+    content.vb: >-
+      <SerializeField>
+
+      Private m_conversationManager As ConversationManager
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_finishedConversation
+  commentId: F:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_finishedConversation
+  id: m_finishedConversation
+  parent: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  langs:
+  - csharp
+  - vb
+  name: m_finishedConversation
+  nameWithType: SelectedConversationPublisher.m_finishedConversation
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.m_finishedConversation
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_finishedConversation
+    path: ../Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: private bool m_finishedConversation
+    return:
+      type: System.Boolean
+    content.vb: Private m_finishedConversation As Boolean
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick
+  commentId: M:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick
+  id: Onclick
+  parent: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  langs:
+  - csharp
+  - vb
+  name: Onclick()
+  nameWithType: SelectedConversationPublisher.Onclick()
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Onclick
+    path: ../Assets/Scripts/StageContents/Conversation/SelectedConversationPublisher.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public void Onclick()
+    content.vb: Public Sub Onclick()
+  overload: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick*
+references:
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationManager
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationManager
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.ConversationManager.html
+  name: ConversationManager
+  nameWithType: ConversationManager
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationManager
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick*
+  commentId: Overload:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick
+  href: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.html#SamuraiSoccer_StageContents_Conversation_SelectedConversationPublisher_Onclick
+  name: Onclick
+  nameWithType: SelectedConversationPublisher.Onclick
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.Onclick

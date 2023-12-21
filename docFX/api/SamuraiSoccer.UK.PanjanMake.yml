@@ -1,0 +1,407 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UK.PanjanMake
+  commentId: T:SamuraiSoccer.UK.PanjanMake
+  id: PanjanMake
+  parent: SamuraiSoccer.UK
+  children:
+  - SamuraiSoccer.UK.PanjanMake.Start
+  - SamuraiSoccer.UK.PanjanMake.fire
+  - SamuraiSoccer.UK.PanjanMake.isEnd
+  - SamuraiSoccer.UK.PanjanMake.panjan
+  - SamuraiSoccer.UK.PanjanMake.panjanExist
+  - SamuraiSoccer.UK.PanjanMake.player
+  - SamuraiSoccer.UK.PanjanMake.quaternion
+  - SamuraiSoccer.UK.PanjanMake.respone
+  langs:
+  - csharp
+  - vb
+  name: PanjanMake
+  nameWithType: PanjanMake
+  fullName: SamuraiSoccer.UK.PanjanMake
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PanjanMake
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: 'public class PanjanMake : MonoBehaviour'
+    content.vb: Public Class PanjanMake Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UK.PanjanMake.panjan
+  commentId: F:SamuraiSoccer.UK.PanjanMake.panjan
+  id: panjan
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: panjan
+  nameWithType: PanjanMake.panjan
+  fullName: SamuraiSoccer.UK.PanjanMake.panjan
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: panjan
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject panjan
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private panjan As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanMake.player
+  commentId: F:SamuraiSoccer.UK.PanjanMake.player
+  id: player
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: player
+  nameWithType: PanjanMake.player
+  fullName: SamuraiSoccer.UK.PanjanMake.player
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: player
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Transform player
+    return:
+      type: UnityEngine.Transform
+    content.vb: >-
+      <SerializeField>
+
+      Private player As Transform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanMake.fire
+  commentId: F:SamuraiSoccer.UK.PanjanMake.fire
+  id: fire
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: fire
+  nameWithType: PanjanMake.fire
+  fullName: SamuraiSoccer.UK.PanjanMake.fire
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: fire
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject fire
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private fire As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanMake.panjanExist
+  commentId: F:SamuraiSoccer.UK.PanjanMake.panjanExist
+  id: panjanExist
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: panjanExist
+  nameWithType: PanjanMake.panjanExist
+  fullName: SamuraiSoccer.UK.PanjanMake.panjanExist
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: panjanExist
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private bool panjanExist
+    return:
+      type: System.Boolean
+    content.vb: Private panjanExist As Boolean
+- uid: SamuraiSoccer.UK.PanjanMake.isEnd
+  commentId: F:SamuraiSoccer.UK.PanjanMake.isEnd
+  id: isEnd
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: isEnd
+  nameWithType: PanjanMake.isEnd
+  fullName: SamuraiSoccer.UK.PanjanMake.isEnd
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: isEnd
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private bool isEnd
+    return:
+      type: System.Boolean
+    content.vb: Private isEnd As Boolean
+- uid: SamuraiSoccer.UK.PanjanMake.respone
+  commentId: F:SamuraiSoccer.UK.PanjanMake.respone
+  id: respone
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: respone
+  nameWithType: PanjanMake.respone
+  fullName: SamuraiSoccer.UK.PanjanMake.respone
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: respone
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private Vector3 respone
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private respone As Vector3
+- uid: SamuraiSoccer.UK.PanjanMake.quaternion
+  commentId: F:SamuraiSoccer.UK.PanjanMake.quaternion
+  id: quaternion
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: quaternion
+  nameWithType: PanjanMake.quaternion
+  fullName: SamuraiSoccer.UK.PanjanMake.quaternion
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: quaternion
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private Quaternion quaternion
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Private quaternion As Quaternion
+- uid: SamuraiSoccer.UK.PanjanMake.Start
+  commentId: M:SamuraiSoccer.UK.PanjanMake.Start
+  id: Start
+  parent: SamuraiSoccer.UK.PanjanMake
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PanjanMake.Start()
+  fullName: SamuraiSoccer.UK.PanjanMake.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanMake.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/UK/PanjanMake.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UK.PanjanMake.Start*
+references:
+- uid: SamuraiSoccer.UK
+  commentId: N:SamuraiSoccer.UK
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UK
+  nameWithType: SamuraiSoccer.UK
+  fullName: SamuraiSoccer.UK
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UK
+    name: UK
+    href: SamuraiSoccer.UK.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UK
+    name: UK
+    href: SamuraiSoccer.UK.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: SamuraiSoccer.UK.PanjanMake.Start*
+  commentId: Overload:SamuraiSoccer.UK.PanjanMake.Start
+  href: SamuraiSoccer.UK.PanjanMake.html#SamuraiSoccer_UK_PanjanMake_Start
+  name: Start
+  nameWithType: PanjanMake.Start
+  fullName: SamuraiSoccer.UK.PanjanMake.Start

@@ -1,0 +1,760 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UK.PanjanRoll
+  commentId: T:SamuraiSoccer.UK.PanjanRoll
+  id: PanjanRoll
+  parent: SamuraiSoccer.UK
+  children:
+  - SamuraiSoccer.UK.PanjanRoll.Explode
+  - SamuraiSoccer.UK.PanjanRoll.SetObjects(UnityEngine.GameObject,UnityEngine.Transform)
+  - SamuraiSoccer.UK.PanjanRoll.Start
+  - SamuraiSoccer.UK.PanjanRoll.Update
+  - SamuraiSoccer.UK.PanjanRoll.capsuleCollider
+  - SamuraiSoccer.UK.PanjanRoll.exploded
+  - SamuraiSoccer.UK.PanjanRoll.fire
+  - SamuraiSoccer.UK.PanjanRoll.moveSpeed
+  - SamuraiSoccer.UK.PanjanRoll.panjanExplode
+  - SamuraiSoccer.UK.PanjanRoll.partMax
+  - SamuraiSoccer.UK.PanjanRoll.player
+  - SamuraiSoccer.UK.PanjanRoll.playing
+  - SamuraiSoccer.UK.PanjanRoll.rb
+  - SamuraiSoccer.UK.PanjanRoll.rot
+  - SamuraiSoccer.UK.PanjanRoll.rotSpeed
+  - SamuraiSoccer.UK.PanjanRoll.selfExplode
+  - SamuraiSoccer.UK.PanjanRoll.soundEffect
+  langs:
+  - csharp
+  - vb
+  name: PanjanRoll
+  nameWithType: PanjanRoll
+  fullName: SamuraiSoccer.UK.PanjanRoll
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PanjanRoll
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: 'public class PanjanRoll : MonoBehaviour'
+    content.vb: Public Class PanjanRoll Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UK.PanjanRoll.moveSpeed
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.moveSpeed
+  id: moveSpeed
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: moveSpeed
+  nameWithType: PanjanRoll.moveSpeed
+  fullName: SamuraiSoccer.UK.PanjanRoll.moveSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: moveSpeed
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float moveSpeed
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private moveSpeed As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.rotSpeed
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.rotSpeed
+  id: rotSpeed
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: rotSpeed
+  nameWithType: PanjanRoll.rotSpeed
+  fullName: SamuraiSoccer.UK.PanjanRoll.rotSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rotSpeed
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float rotSpeed
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private rotSpeed As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.exploded
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.exploded
+  id: exploded
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: exploded
+  nameWithType: PanjanRoll.exploded
+  fullName: SamuraiSoccer.UK.PanjanRoll.exploded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: exploded
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private bool exploded
+    return:
+      type: System.Boolean
+    content.vb: Private exploded As Boolean
+- uid: SamuraiSoccer.UK.PanjanRoll.playing
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.playing
+  id: playing
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: playing
+  nameWithType: PanjanRoll.playing
+  fullName: SamuraiSoccer.UK.PanjanRoll.playing
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: playing
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private bool playing
+    return:
+      type: System.Boolean
+    content.vb: Private playing As Boolean
+- uid: SamuraiSoccer.UK.PanjanRoll.rot
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.rot
+  id: rot
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: rot
+  nameWithType: PanjanRoll.rot
+  fullName: SamuraiSoccer.UK.PanjanRoll.rot
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rot
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject rot
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private rot As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.partMax
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.partMax
+  id: partMax
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: partMax
+  nameWithType: PanjanRoll.partMax
+  fullName: SamuraiSoccer.UK.PanjanRoll.partMax
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: partMax
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int partMax
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private partMax As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.rb
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.rb
+  id: rb
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: rb
+  nameWithType: PanjanRoll.rb
+  fullName: SamuraiSoccer.UK.PanjanRoll.rb
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rb
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Rigidbody rb
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: >-
+      <SerializeField>
+
+      Private rb As Rigidbody
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.soundEffect
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.soundEffect
+  id: soundEffect
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: soundEffect
+  nameWithType: PanjanRoll.soundEffect
+  fullName: SamuraiSoccer.UK.PanjanRoll.soundEffect
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: soundEffect
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource soundEffect
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private soundEffect As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.capsuleCollider
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.capsuleCollider
+  id: capsuleCollider
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: capsuleCollider
+  nameWithType: PanjanRoll.capsuleCollider
+  fullName: SamuraiSoccer.UK.PanjanRoll.capsuleCollider
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: capsuleCollider
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private CapsuleCollider capsuleCollider
+    return:
+      type: UnityEngine.CapsuleCollider
+    content.vb: >-
+      <SerializeField>
+
+      Private capsuleCollider As CapsuleCollider
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UK.PanjanRoll.panjanExplode
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.panjanExplode
+  id: panjanExplode
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: panjanExplode
+  nameWithType: PanjanRoll.panjanExplode
+  fullName: SamuraiSoccer.UK.PanjanRoll.panjanExplode
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: panjanExplode
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private PanjanExplode panjanExplode
+    return:
+      type: SamuraiSoccer.UK.PanjanExplode
+    content.vb: Private panjanExplode As PanjanExplode
+- uid: SamuraiSoccer.UK.PanjanRoll.fire
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.fire
+  id: fire
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: fire
+  nameWithType: PanjanRoll.fire
+  fullName: SamuraiSoccer.UK.PanjanRoll.fire
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: fire
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private GameObject fire
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Private fire As GameObject
+- uid: SamuraiSoccer.UK.PanjanRoll.player
+  commentId: F:SamuraiSoccer.UK.PanjanRoll.player
+  id: player
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: player
+  nameWithType: PanjanRoll.player
+  fullName: SamuraiSoccer.UK.PanjanRoll.player
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: player
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private Transform player
+    return:
+      type: UnityEngine.Transform
+    content.vb: Private player As Transform
+- uid: SamuraiSoccer.UK.PanjanRoll.Start
+  commentId: M:SamuraiSoccer.UK.PanjanRoll.Start
+  id: Start
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PanjanRoll.Start()
+  fullName: SamuraiSoccer.UK.PanjanRoll.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UK.PanjanRoll.Start*
+- uid: SamuraiSoccer.UK.PanjanRoll.Update
+  commentId: M:SamuraiSoccer.UK.PanjanRoll.Update
+  id: Update
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: PanjanRoll.Update()
+  fullName: SamuraiSoccer.UK.PanjanRoll.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 54
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.UK.PanjanRoll.Update*
+- uid: SamuraiSoccer.UK.PanjanRoll.Explode
+  commentId: M:SamuraiSoccer.UK.PanjanRoll.Explode
+  id: Explode
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: Explode()
+  nameWithType: PanjanRoll.Explode()
+  fullName: SamuraiSoccer.UK.PanjanRoll.Explode()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Explode
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 70
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private void Explode()
+    content.vb: Private Sub Explode()
+  overload: SamuraiSoccer.UK.PanjanRoll.Explode*
+- uid: SamuraiSoccer.UK.PanjanRoll.selfExplode
+  commentId: M:SamuraiSoccer.UK.PanjanRoll.selfExplode
+  id: selfExplode
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: selfExplode()
+  nameWithType: PanjanRoll.selfExplode()
+  fullName: SamuraiSoccer.UK.PanjanRoll.selfExplode()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: selfExplode
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 93
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: private void selfExplode()
+    content.vb: Private Sub selfExplode()
+  overload: SamuraiSoccer.UK.PanjanRoll.selfExplode*
+- uid: SamuraiSoccer.UK.PanjanRoll.SetObjects(UnityEngine.GameObject,UnityEngine.Transform)
+  commentId: M:SamuraiSoccer.UK.PanjanRoll.SetObjects(UnityEngine.GameObject,UnityEngine.Transform)
+  id: SetObjects(UnityEngine.GameObject,UnityEngine.Transform)
+  parent: SamuraiSoccer.UK.PanjanRoll
+  langs:
+  - csharp
+  - vb
+  name: SetObjects(GameObject, Transform)
+  nameWithType: PanjanRoll.SetObjects(GameObject, Transform)
+  fullName: SamuraiSoccer.UK.PanjanRoll.SetObjects(UnityEngine.GameObject, UnityEngine.Transform)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/PanjanRoll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetObjects
+    path: ../Assets/Scripts/StageContents/UK/PanjanRoll.cs
+    startLine: 106
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.UK
+  syntax:
+    content: public void SetObjects(GameObject fire, Transform player)
+    parameters:
+    - id: fire
+      type: UnityEngine.GameObject
+    - id: player
+      type: UnityEngine.Transform
+    content.vb: Public Sub SetObjects(fire As GameObject, player As Transform)
+  overload: SamuraiSoccer.UK.PanjanRoll.SetObjects*
+references:
+- uid: SamuraiSoccer.UK
+  commentId: N:SamuraiSoccer.UK
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UK
+  nameWithType: SamuraiSoccer.UK
+  fullName: SamuraiSoccer.UK
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UK
+    name: UK
+    href: SamuraiSoccer.UK.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UK
+    name: UK
+    href: SamuraiSoccer.UK.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: UnityEngine.CapsuleCollider
+  commentId: T:UnityEngine.CapsuleCollider
+  parent: UnityEngine
+  isExternal: true
+  name: CapsuleCollider
+  nameWithType: CapsuleCollider
+  fullName: UnityEngine.CapsuleCollider
+- uid: SamuraiSoccer.UK.PanjanExplode
+  commentId: T:SamuraiSoccer.UK.PanjanExplode
+  parent: SamuraiSoccer.UK
+  href: SamuraiSoccer.UK.PanjanExplode.html
+  name: PanjanExplode
+  nameWithType: PanjanExplode
+  fullName: SamuraiSoccer.UK.PanjanExplode
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: SamuraiSoccer.UK.PanjanRoll.Start*
+  commentId: Overload:SamuraiSoccer.UK.PanjanRoll.Start
+  href: SamuraiSoccer.UK.PanjanRoll.html#SamuraiSoccer_UK_PanjanRoll_Start
+  name: Start
+  nameWithType: PanjanRoll.Start
+  fullName: SamuraiSoccer.UK.PanjanRoll.Start
+- uid: SamuraiSoccer.UK.PanjanRoll.Update*
+  commentId: Overload:SamuraiSoccer.UK.PanjanRoll.Update
+  href: SamuraiSoccer.UK.PanjanRoll.html#SamuraiSoccer_UK_PanjanRoll_Update
+  name: Update
+  nameWithType: PanjanRoll.Update
+  fullName: SamuraiSoccer.UK.PanjanRoll.Update
+- uid: SamuraiSoccer.UK.PanjanRoll.Explode*
+  commentId: Overload:SamuraiSoccer.UK.PanjanRoll.Explode
+  href: SamuraiSoccer.UK.PanjanRoll.html#SamuraiSoccer_UK_PanjanRoll_Explode
+  name: Explode
+  nameWithType: PanjanRoll.Explode
+  fullName: SamuraiSoccer.UK.PanjanRoll.Explode
+- uid: SamuraiSoccer.UK.PanjanRoll.selfExplode*
+  commentId: Overload:SamuraiSoccer.UK.PanjanRoll.selfExplode
+  href: SamuraiSoccer.UK.PanjanRoll.html#SamuraiSoccer_UK_PanjanRoll_selfExplode
+  name: selfExplode
+  nameWithType: PanjanRoll.selfExplode
+  fullName: SamuraiSoccer.UK.PanjanRoll.selfExplode
+- uid: SamuraiSoccer.UK.PanjanRoll.SetObjects*
+  commentId: Overload:SamuraiSoccer.UK.PanjanRoll.SetObjects
+  href: SamuraiSoccer.UK.PanjanRoll.html#SamuraiSoccer_UK_PanjanRoll_SetObjects_UnityEngine_GameObject_UnityEngine_Transform_
+  name: SetObjects
+  nameWithType: PanjanRoll.SetObjects
+  fullName: SamuraiSoccer.UK.PanjanRoll.SetObjects

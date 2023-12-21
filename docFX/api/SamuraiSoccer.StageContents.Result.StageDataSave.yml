@@ -1,0 +1,219 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Result.StageDataSave
+  commentId: T:SamuraiSoccer.StageContents.Result.StageDataSave
+  id: StageDataSave
+  parent: SamuraiSoccer.StageContents.Result
+  children:
+  - SamuraiSoccer.StageContents.Result.StageDataSave.ResetData
+  - SamuraiSoccer.StageContents.Result.StageDataSave.Save(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: StageDataSave
+  nameWithType: StageDataSave
+  fullName: SamuraiSoccer.StageContents.Result.StageDataSave
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/StageDataSave.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageDataSave
+    path: ../Assets/Scripts/StageContents/Result/StageDataSave.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  syntax:
+    content: 'public class StageDataSave : MonoBehaviour'
+    content.vb: Public Class StageDataSave Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Result.StageDataSave.Save(System.Int32)
+  commentId: M:SamuraiSoccer.StageContents.Result.StageDataSave.Save(System.Int32)
+  id: Save(System.Int32)
+  parent: SamuraiSoccer.StageContents.Result.StageDataSave
+  langs:
+  - csharp
+  - vb
+  name: Save(int)
+  nameWithType: StageDataSave.Save(int)
+  fullName: SamuraiSoccer.StageContents.Result.StageDataSave.Save(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/StageDataSave.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Save
+    path: ../Assets/Scripts/StageContents/Result/StageDataSave.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  summary: クリア番号が過去のセーブデータ以上だったらセーブデータを更新する
+  example: []
+  syntax:
+    content: public bool Save(int clearNumber)
+    parameters:
+    - id: clearNumber
+      type: System.Int32
+      description: クリア番号
+    return:
+      type: System.Boolean
+      description: セーブしたかどうか
+    content.vb: Public Function Save(clearNumber As Integer) As Boolean
+  overload: SamuraiSoccer.StageContents.Result.StageDataSave.Save*
+  nameWithType.vb: StageDataSave.Save(Integer)
+  fullName.vb: SamuraiSoccer.StageContents.Result.StageDataSave.Save(Integer)
+  name.vb: Save(Integer)
+- uid: SamuraiSoccer.StageContents.Result.StageDataSave.ResetData
+  commentId: M:SamuraiSoccer.StageContents.Result.StageDataSave.ResetData
+  id: ResetData
+  parent: SamuraiSoccer.StageContents.Result.StageDataSave
+  langs:
+  - csharp
+  - vb
+  name: ResetData()
+  nameWithType: StageDataSave.ResetData()
+  fullName: SamuraiSoccer.StageContents.Result.StageDataSave.ResetData()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Result/StageDataSave.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResetData
+    path: ../Assets/Scripts/StageContents/Result/StageDataSave.cs
+    startLine: 44
+  assemblies:
+  - SamuraiSoccer.StageContents.Result
+  namespace: SamuraiSoccer.StageContents.Result
+  summary: セーブデータを初期化する(ResetだとMonoBehaviourと名前が被るから命名変更)
+  example: []
+  syntax:
+    content: public void ResetData()
+    content.vb: Public Sub ResetData()
+  overload: SamuraiSoccer.StageContents.Result.StageDataSave.ResetData*
+references:
+- uid: SamuraiSoccer.StageContents.Result
+  commentId: N:SamuraiSoccer.StageContents.Result
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Result
+  nameWithType: SamuraiSoccer.StageContents.Result
+  fullName: SamuraiSoccer.StageContents.Result
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Result
+    name: Result
+    href: SamuraiSoccer.StageContents.Result.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.Result.StageDataSave.Save*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.StageDataSave.Save
+  href: SamuraiSoccer.StageContents.Result.StageDataSave.html#SamuraiSoccer_StageContents_Result_StageDataSave_Save_System_Int32_
+  name: Save
+  nameWithType: StageDataSave.Save
+  fullName: SamuraiSoccer.StageContents.Result.StageDataSave.Save
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.StageContents.Result.StageDataSave.ResetData*
+  commentId: Overload:SamuraiSoccer.StageContents.Result.StageDataSave.ResetData
+  href: SamuraiSoccer.StageContents.Result.StageDataSave.html#SamuraiSoccer_StageContents_Result_StageDataSave_ResetData
+  name: ResetData
+  nameWithType: StageDataSave.ResetData
+  fullName: SamuraiSoccer.StageContents.Result.StageDataSave.ResetData

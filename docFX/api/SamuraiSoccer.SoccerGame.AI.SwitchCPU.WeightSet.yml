@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+  commentId: T:SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+  id: SwitchCPU.WeightSet
+  parent: SamuraiSoccer.SoccerGame.AI
+  children:
+  - SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.gameObject
+  - SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.weight
+  langs:
+  - csharp
+  - vb
+  name: SwitchCPU.WeightSet
+  nameWithType: SwitchCPU.WeightSet
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+  type: Struct
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: WeightSet
+    path: ../Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+    startLine: 55
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct SwitchCPU.WeightSet
+    content.vb: >-
+      <Serializable>
+
+      Public Structure SwitchCPU.WeightSet
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.gameObject
+  commentId: F:SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.gameObject
+  id: gameObject
+  parent: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+  langs:
+  - csharp
+  - vb
+  name: gameObject
+  nameWithType: SwitchCPU.WeightSet.gameObject
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.gameObject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: gameObject
+    path: ../Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+    startLine: 58
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public GameObject gameObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public gameObject As GameObject
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.weight
+  commentId: F:SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.weight
+  id: weight
+  parent: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+  langs:
+  - csharp
+  - vb
+  name: weight
+  nameWithType: SwitchCPU.WeightSet.weight
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.weight
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: weight
+    path: ../Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+    startLine: 59
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public float weight
+    return:
+      type: System.Single
+    content.vb: Public weight As Single
+references:
+- uid: SamuraiSoccer.SoccerGame.AI
+  commentId: N:SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame.AI
+  nameWithType: SamuraiSoccer.SoccerGame.AI
+  fullName: SamuraiSoccer.SoccerGame.AI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

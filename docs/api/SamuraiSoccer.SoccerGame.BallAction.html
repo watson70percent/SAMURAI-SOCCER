@@ -1,955 +1,1182 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BallAction
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BallAction
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      <title>Class BallAction
+ | doc </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BallAction
+ | doc ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/watson70percent/SAMURAI-SOCCER/new/docFX/apiSpec/new?filename=SamuraiSoccer_SoccerGame_BallAction.md&amp;value=---%0Auid%3A%20SamuraiSoccer.SoccerGame.BallAction%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="doc">
+            doc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.SoccerGame.BallAction">
-  
-  
-  <h1 id="SamuraiSoccer_SoccerGame_BallAction" data-uid="SamuraiSoccer.SoccerGame.BallAction" class="text-break">Class BallAction
+
+        <article data-uid="SamuraiSoccer.SoccerGame.BallAction">
+
+
+
+  <h1 id="SamuraiSoccer_SoccerGame_BallAction" data-uid="SamuraiSoccer.SoccerGame.BallAction" class="text-break">
+    Class BallAction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>ボールに対するアクションをするクラス．（ボールにくっつける．）</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
-    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
-    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">BallAction</span></div>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SamuraiSoccer.html">SamuraiSoccer</a>.<a class="xref" href="SamuraiSoccer.SoccerGame.html">SoccerGame</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SamuraiSoccer.SoccerGame.dll</dd></dl>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.SoccerGame.html">SamuraiSoccer.SoccerGame</a></h6>
-  <h6><strong>Assembly</strong>: SamuraiSoccer.SoccerGame.dll</h6>
-  <h5 id="SamuraiSoccer_SoccerGame_BallAction_syntax">Syntax</h5>
+
+  <div class="markdown summary"><p>ボールに対するアクションをするクラス．（ボールにくっつける．）</p>
+</div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class BallAction : MonoBehaviour</code></pre>
   </div>
-  <h3 id="fields">Fields
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">BallAction</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_angularVelocity" data-uid="SamuraiSoccer.SoccerGame.BallAction.angularVelocity">
+  angularVelocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_angularVelocity" data-uid="SamuraiSoccer.SoccerGame.BallAction.angularVelocity">angularVelocity</h4>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector3 angularVelocity</code></pre>
+    <pre><code class="lang-csharp hljs">private Vector3 angularVelocity</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_commandStream" data-uid="SamuraiSoccer.SoccerGame.BallAction.commandStream">commandStream</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_calledNum" data-uid="SamuraiSoccer.SoccerGame.BallAction.calledNum">
+  calledNum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;BallActionCommand&gt; commandStream</code></pre>
+    <pre><code class="lang-csharp hljs">private int calledNum</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_gravity" data-uid="SamuraiSoccer.SoccerGame.BallAction.gravity">gravity</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_commandStream" data-uid="SamuraiSoccer.SoccerGame.BallAction.commandStream">
+  commandStream
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static readonly float gravity</code></pre>
+    <pre><code class="lang-csharp hljs">private static Subject&lt;BallActionCommand&gt; commandStream</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_info" data-uid="SamuraiSoccer.SoccerGame.BallAction.info">info</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_gravity" data-uid="SamuraiSoccer.SoccerGame.BallAction.gravity">
+  gravity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly float gravity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_info" data-uid="SamuraiSoccer.SoccerGame.BallAction.info">
+  info
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public FieldManager info</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.FieldManager.html">FieldManager</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_last_touch" data-uid="SamuraiSoccer.SoccerGame.BallAction.last_touch">last_touch</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.SoccerGame.FieldManager.html">FieldManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_isPause" data-uid="SamuraiSoccer.SoccerGame.BallAction.isPause">
+  isPause
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool isPause</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_last_touch" data-uid="SamuraiSoccer.SoccerGame.BallAction.last_touch">
+  last_touch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
 public bool last_touch</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_owner" data-uid="SamuraiSoccer.SoccerGame.BallAction.owner">owner</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_owner" data-uid="SamuraiSoccer.SoccerGame.BallAction.owner">
+  owner
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
 public GameObject owner</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_rb" data-uid="SamuraiSoccer.SoccerGame.BallAction.rb">rb</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_rb" data-uid="SamuraiSoccer.SoccerGame.BallAction.rb">
+  rb
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
 public Rigidbody rb</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Rigidbody</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_sqrt2" data-uid="SamuraiSoccer.SoccerGame.BallAction.sqrt2">sqrt2</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static readonly float sqrt2</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_sqrt3" data-uid="SamuraiSoccer.SoccerGame.BallAction.sqrt3">sqrt3</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static readonly float sqrt3</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_velocity" data-uid="SamuraiSoccer.SoccerGame.BallAction.velocity">velocity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector3 velocity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Rigidbody</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_scoreManager" data-uid="SamuraiSoccer.SoccerGame.BallAction.scoreManager">
+  scoreManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScoreManager scoreManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.SoccerGame.ScoreManager.html">ScoreManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_sqrt2" data-uid="SamuraiSoccer.SoccerGame.BallAction.sqrt2">
+  sqrt2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly float sqrt2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_sqrt3" data-uid="SamuraiSoccer.SoccerGame.BallAction.sqrt3">
+  sqrt3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly float sqrt3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_velocity" data-uid="SamuraiSoccer.SoccerGame.BallAction.velocity">
+  velocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector3 velocity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Awake_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Awake*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Awake" data-uid="SamuraiSoccer.SoccerGame.BallAction.Awake">Awake()</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Awake" data-uid="SamuraiSoccer.SoccerGame.BallAction.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Awake()</code></pre>
+    <pre><code class="lang-csharp hljs">private void Awake()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_CalcHighPass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcHighPass*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CalcHighPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">CalcHighPass(Vector2, Vector2, PersonalStatus)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_CalcHighPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">
+  CalcHighPass(Vector2, Vector2, PersonalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
+    <pre><code class="lang-csharp hljs">private void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">recever</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">self</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>recever</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>self</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_CalcLowPass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcLowPass*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CalcLowPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">CalcLowPass(Vector2, Vector2, PersonalStatus)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_CalcLowPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">
+  CalcLowPass(Vector2, Vector2, PersonalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
+    <pre><code class="lang-csharp hljs">private void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">recever</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">self</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>recever</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>self</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_CalcMiddlePass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CalcMiddlePass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">CalcMiddlePass(Vector2, Vector2, PersonalStatus)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_CalcMiddlePass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)">
+  CalcMiddlePass(Vector2, Vector2, PersonalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
+    <pre><code class="lang-csharp hljs">private void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Vector2</span></td>
-        <td><span class="parametername">recever</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">self</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>recever</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>self</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Command_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Command*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Command_SamuraiSoccer_SoccerGame_BallActionCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)">Command(BallActionCommand)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Command_SamuraiSoccer_SoccerGame_BallActionCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)">
+  Command(BallActionCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>コマンドの処理を振り分け．</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Command(BallActionCommand command)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Command(BallActionCommand command)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td><p>コマンド．</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a></dt>
+    <dd><p>コマンド．</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_CommandStreamOnNext_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_CommandStreamOnNext_SamuraiSoccer_SoccerGame_BallActionCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)">CommandStreamOnNext(BallActionCommand)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_CommandStreamOnNext_SamuraiSoccer_SoccerGame_BallActionCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)">
+  CommandStreamOnNext(BallActionCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>ボールに対するアクションを行う．</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void CommandStreamOnNext(BallActionCommand command)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td><p>コマンド．</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="SamuraiSoccer.SoccerGame.BallActionCommand.html">BallActionCommand</a></dt>
+    <dd><p>コマンド．</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Dribble_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Dribble*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Dribble_SamuraiSoccer_SoccerGame_DribbleCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)">Dribble(DribbleCommand)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Dribble_SamuraiSoccer_SoccerGame_DribbleCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)">
+  Dribble(DribbleCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>ドリブルっぽいもの。StartCorutineじゃなくてイテレーターで操作してほしい。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask Dribble(DribbleCommand c)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask Dribble(DribbleCommand c)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.DribbleCommand.html">DribbleCommand</a></td>
-        <td><span class="parametername">c</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>c</code> <a class="xref" href="SamuraiSoccer.SoccerGame.DribbleCommand.html">DribbleCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_OnCollisionEnter_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_OnCollisionEnter_UnityEngine_Collision_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)">OnCollisionEnter(Collision)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_OnCollisionEnter_UnityEngine_Collision_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)">
+  OnCollisionEnter(Collision)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>特殊なイベント発生</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnCollisionEnter(Collision other)</code></pre>
+    <pre><code class="lang-csharp hljs">private void OnCollisionEnter(Collision other)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Collision</span></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <span class="xref">Collision</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_OnTriggerEnter_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_OnTriggerEnter_UnityEngine_Collider_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)">OnTriggerEnter(Collider)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_OnTriggerEnter_UnityEngine_Collider_" data-uid="SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)">
+  OnTriggerEnter(Collider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnTriggerEnter(Collider other)</code></pre>
+    <pre><code class="lang-csharp hljs">private void OnTriggerEnter(Collider other)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Collider</span></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <span class="xref">Collider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Pass_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pass*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Pass_SamuraiSoccer_SoccerGame_PassCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)">Pass(PassCommand)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Pass_SamuraiSoccer_SoccerGame_PassCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)">
+  Pass(PassCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>パスをするとき呼ぶ関数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Pass(PassCommand command)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Pass(PassCommand command)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PassCommand.html">PassCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PassCommand.html">PassCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Pause_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pause*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Pause_System_Boolean_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pause(System.Boolean)">Pause(Boolean)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Pause_System_Boolean_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Pause(System.Boolean)">
+  Pause(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Pause(bool isPause)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Pause(bool isPause)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isPause</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isPause</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Play_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Play*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Play_UniRx_Unit_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)">Play(Unit)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Play_UniRx_Unit_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)">
+  Play(Unit)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Play(Unit _)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Play(Unit _)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Unit</span></td>
-        <td><span class="parametername">_</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_</code> <span class="xref">Unit</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Shoot_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Shoot*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Shoot_SamuraiSoccer_SoccerGame_ShootCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)">Shoot(ShootCommand)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Shoot_SamuraiSoccer_SoccerGame_ShootCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)">
+  Shoot(ShootCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>シュートを撃つ関数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Shoot(ShootCommand command)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Shoot(ShootCommand command)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.ShootCommand.html">ShootCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="SamuraiSoccer.SoccerGame.ShootCommand.html">ShootCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Start_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Start*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Start" data-uid="SamuraiSoccer.SoccerGame.BallAction.Start">Start()</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Start" data-uid="SamuraiSoccer.SoccerGame.BallAction.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Start()</code></pre>
+    <pre><code class="lang-csharp hljs">private void Start()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Steal_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Steal*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Steal_UnityEngine_GameObject_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)">Steal(GameObject, PersonalStatus, PersonalStatus)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Steal_UnityEngine_GameObject_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)">
+  Steal(GameObject, PersonalStatus, PersonalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>ボールを盗むときの関数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Steal(GameObject self, PersonalStatus holder = null, PersonalStatus tryer = null)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Steal(GameObject self, PersonalStatus holder = null, PersonalStatus tryer = null)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td><span class="parametername">self</span></td>
-        <td><p>ボール奪う人</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">holder</span></td>
-        <td><p>ボールを持っている人の能力値</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">tryer</span></td>
-        <td><p>ボールを奪う人の能力値</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>self</code> <span class="xref">GameObject</span></dt>
+    <dd><p>ボール奪う人</p>
+</dd>
+    <dt><code>holder</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd><p>ボールを持っている人の能力値</p>
+</dd>
+    <dt><code>tryer</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd><p>ボールを奪う人の能力値</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_SuccessSteal_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessSteal*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_SuccessSteal_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)">SuccessSteal(PersonalStatus, PersonalStatus)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_SuccessSteal_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)">
+  SuccessSteal(PersonalStatus, PersonalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool SuccessSteal(PersonalStatus holder, PersonalStatus tryer)</code></pre>
+    <pre><code class="lang-csharp hljs">private bool SuccessSteal(PersonalStatus holder, PersonalStatus tryer)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">holder</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">tryer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>holder</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd></dd>
+    <dt><code>tryer</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_SuccessTrap_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessTrap*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_SuccessTrap_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)">SuccessTrap(PersonalStatus)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_SuccessTrap_SamuraiSoccer_SoccerGame_PersonalStatus_" data-uid="SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)">
+  SuccessTrap(PersonalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>トラップが成功するかの判定</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool SuccessTrap(PersonalStatus self)</code></pre>
+    <pre><code class="lang-csharp hljs">private bool SuccessTrap(PersonalStatus self)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></td>
-        <td><span class="parametername">self</span></td>
-        <td><p>能力値</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>成功のときtrue</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>self</code> <a class="xref" href="SamuraiSoccer.SoccerGame.PersonalStatus.html">PersonalStatus</a></dt>
+    <dd><p>能力値</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>成功のときtrue</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Trap_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Trap*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Trap_SamuraiSoccer_SoccerGame_TrapCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)">Trap(TrapCommand)</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Trap_SamuraiSoccer_SoccerGame_TrapCommand_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)">
+  Trap(TrapCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>トラップするとき呼ぶ関数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Trap(TrapCommand command)</code></pre>
+    <pre><code class="lang-csharp hljs">private void Trap(TrapCommand command)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SamuraiSoccer.SoccerGame.TrapCommand.html">TrapCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="SamuraiSoccer.SoccerGame.TrapCommand.html">TrapCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_SoccerGame_BallAction_Update_" data-uid="SamuraiSoccer.SoccerGame.BallAction.Update*"></a>
-  <h4 id="SamuraiSoccer_SoccerGame_BallAction_Update" data-uid="SamuraiSoccer.SoccerGame.BallAction.Update">Update()</h4>
+
+  <h3 id="SamuraiSoccer_SoccerGame_BallAction_Update" data-uid="SamuraiSoccer.SoccerGame.BallAction.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Update()</code></pre>
+    <pre><code class="lang-csharp hljs">private void Update()</code></pre>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/SoccerGame/BallAction.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.TimerScript
+  commentId: T:SamuraiSoccer.UI.TimerScript
+  id: TimerScript
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.TimerScript.FinishProcess
+  - SamuraiSoccer.UI.TimerScript.Start
+  - SamuraiSoccer.UI.TimerScript.Update
+  - SamuraiSoccer.UI.TimerScript.m_elapsedTime
+  - SamuraiSoccer.UI.TimerScript.m_end
+  - SamuraiSoccer.UI.TimerScript.m_isPlaying
+  - SamuraiSoccer.UI.TimerScript.m_limitTimeSec
+  - SamuraiSoccer.UI.TimerScript.m_longWhistleNum
+  - SamuraiSoccer.UI.TimerScript.m_resultSceneName
+  - SamuraiSoccer.UI.TimerScript.m_timeText
+  langs:
+  - csharp
+  - vb
+  name: TimerScript
+  nameWithType: TimerScript
+  fullName: SamuraiSoccer.UI.TimerScript
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TimerScript
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class TimerScript : MonoBehaviour'
+    content.vb: Public Class TimerScript Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.TimerScript.m_resultSceneName
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_resultSceneName
+  id: m_resultSceneName
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_resultSceneName
+  nameWithType: TimerScript.m_resultSceneName
+  fullName: SamuraiSoccer.UI.TimerScript.m_resultSceneName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_resultSceneName
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private string m_resultSceneName
+    return:
+      type: System.String
+    content.vb: >-
+      <SerializeField>
+
+      Private m_resultSceneName As String
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TimerScript.m_longWhistleNum
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_longWhistleNum
+  id: m_longWhistleNum
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_longWhistleNum
+  nameWithType: TimerScript.m_longWhistleNum
+  fullName: SamuraiSoccer.UI.TimerScript.m_longWhistleNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_longWhistleNum
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_longWhistleNum
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_longWhistleNum As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TimerScript.m_limitTimeSec
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_limitTimeSec
+  id: m_limitTimeSec
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_limitTimeSec
+  nameWithType: TimerScript.m_limitTimeSec
+  fullName: SamuraiSoccer.UI.TimerScript.m_limitTimeSec
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_limitTimeSec
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float m_limitTimeSec
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private m_limitTimeSec As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TimerScript.m_timeText
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_timeText
+  id: m_timeText
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_timeText
+  nameWithType: TimerScript.m_timeText
+  fullName: SamuraiSoccer.UI.TimerScript.m_timeText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_timeText
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_timeText
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_timeText As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TimerScript.m_isPlaying
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_isPlaying
+  id: m_isPlaying
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_isPlaying
+  nameWithType: TimerScript.m_isPlaying
+  fullName: SamuraiSoccer.UI.TimerScript.m_isPlaying
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isPlaying
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private bool m_isPlaying
+    return:
+      type: System.Boolean
+    content.vb: Private m_isPlaying As Boolean
+- uid: SamuraiSoccer.UI.TimerScript.m_end
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_end
+  id: m_end
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_end
+  nameWithType: TimerScript.m_end
+  fullName: SamuraiSoccer.UI.TimerScript.m_end
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_end
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private bool m_end
+    return:
+      type: System.Boolean
+    content.vb: Private m_end As Boolean
+- uid: SamuraiSoccer.UI.TimerScript.m_elapsedTime
+  commentId: F:SamuraiSoccer.UI.TimerScript.m_elapsedTime
+  id: m_elapsedTime
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: m_elapsedTime
+  nameWithType: TimerScript.m_elapsedTime
+  fullName: SamuraiSoccer.UI.TimerScript.m_elapsedTime
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_elapsedTime
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private float m_elapsedTime
+    return:
+      type: System.Single
+    content.vb: Private m_elapsedTime As Single
+- uid: SamuraiSoccer.UI.TimerScript.Start
+  commentId: M:SamuraiSoccer.UI.TimerScript.Start
+  id: Start
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TimerScript.Start()
+  fullName: SamuraiSoccer.UI.TimerScript.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.TimerScript.Start*
+- uid: SamuraiSoccer.UI.TimerScript.Update
+  commentId: M:SamuraiSoccer.UI.TimerScript.Update
+  id: Update
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: TimerScript.Update()
+  fullName: SamuraiSoccer.UI.TimerScript.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 55
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.UI.TimerScript.Update*
+- uid: SamuraiSoccer.UI.TimerScript.FinishProcess
+  commentId: M:SamuraiSoccer.UI.TimerScript.FinishProcess
+  id: FinishProcess
+  parent: SamuraiSoccer.UI.TimerScript
+  langs:
+  - csharp
+  - vb
+  name: FinishProcess()
+  nameWithType: TimerScript.FinishProcess()
+  fullName: SamuraiSoccer.UI.TimerScript.FinishProcess()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/TimerScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FinishProcess
+    path: ../Assets/Scripts/SoccerGame/TimerScript.cs
+    startLine: 74
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private UniTask FinishProcess()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function FinishProcess() As UniTask
+  overload: SamuraiSoccer.UI.TimerScript.FinishProcess*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.UI.TimerScript.Start*
+  commentId: Overload:SamuraiSoccer.UI.TimerScript.Start
+  href: SamuraiSoccer.UI.TimerScript.html#SamuraiSoccer_UI_TimerScript_Start
+  name: Start
+  nameWithType: TimerScript.Start
+  fullName: SamuraiSoccer.UI.TimerScript.Start
+- uid: SamuraiSoccer.UI.TimerScript.Update*
+  commentId: Overload:SamuraiSoccer.UI.TimerScript.Update
+  href: SamuraiSoccer.UI.TimerScript.html#SamuraiSoccer_UI_TimerScript_Update
+  name: Update
+  nameWithType: TimerScript.Update
+  fullName: SamuraiSoccer.UI.TimerScript.Update
+- uid: SamuraiSoccer.UI.TimerScript.FinishProcess*
+  commentId: Overload:SamuraiSoccer.UI.TimerScript.FinishProcess
+  href: SamuraiSoccer.UI.TimerScript.html#SamuraiSoccer_UI_TimerScript_FinishProcess
+  name: FinishProcess
+  nameWithType: TimerScript.FinishProcess
+  fullName: SamuraiSoccer.UI.TimerScript.FinishProcess
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

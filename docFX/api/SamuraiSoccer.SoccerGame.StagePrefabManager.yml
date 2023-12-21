@@ -1,0 +1,753 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager
+  commentId: T:SamuraiSoccer.SoccerGame.StagePrefabManager
+  id: StagePrefabManager
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.Start
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.crowdMaterial
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.crowdRenderers
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.crowdTextures
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.flagRenderers
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.flagShader
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.flagTexture
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.groundMaterial
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.groundNormalMap
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.groundRenderer
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.groundTexture
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.lookAtSpeed
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.refereeArea
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.refereeAreaSize
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMaxAng
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMove
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.runningSpeed
+  - SamuraiSoccer.SoccerGame.StagePrefabManager.useObstacles
+  langs:
+  - csharp
+  - vb
+  name: StagePrefabManager
+  nameWithType: StagePrefabManager
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StagePrefabManager
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: 'public class StagePrefabManager : MonoBehaviour'
+    content.vb: Public Class StagePrefabManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.flagTexture
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.flagTexture
+  id: flagTexture
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: flagTexture
+  nameWithType: StagePrefabManager.flagTexture
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.flagTexture
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: flagTexture
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Texture flagTexture
+    return:
+      type: UnityEngine.Texture
+    content.vb: Public flagTexture As Texture
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.flagShader
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.flagShader
+  id: flagShader
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: flagShader
+  nameWithType: StagePrefabManager.flagShader
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.flagShader
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: flagShader
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Shader flagShader
+    return:
+      type: UnityEngine.Shader
+    content.vb: Public flagShader As Shader
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.flagRenderers
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.flagRenderers
+  id: flagRenderers
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: flagRenderers
+  nameWithType: StagePrefabManager.flagRenderers
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.flagRenderers
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: flagRenderers
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public MeshRenderer[] flagRenderers
+    return:
+      type: UnityEngine.MeshRenderer[]
+    content.vb: Public flagRenderers As MeshRenderer()
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.crowdTextures
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.crowdTextures
+  id: crowdTextures
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: crowdTextures
+  nameWithType: StagePrefabManager.crowdTextures
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.crowdTextures
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: crowdTextures
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Texture[] crowdTextures
+    return:
+      type: UnityEngine.Texture[]
+    content.vb: Public crowdTextures As Texture()
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.crowdRenderers
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.crowdRenderers
+  id: crowdRenderers
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: crowdRenderers
+  nameWithType: StagePrefabManager.crowdRenderers
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.crowdRenderers
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: crowdRenderers
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Renderer[] crowdRenderers
+    return:
+      type: UnityEngine.Renderer[]
+    content.vb: Public crowdRenderers As Renderer()
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.crowdMaterial
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.crowdMaterial
+  id: crowdMaterial
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: crowdMaterial
+  nameWithType: StagePrefabManager.crowdMaterial
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.crowdMaterial
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: crowdMaterial
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Material crowdMaterial
+    return:
+      type: UnityEngine.Material
+    content.vb: Public crowdMaterial As Material
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.groundTexture
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.groundTexture
+  id: groundTexture
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: groundTexture
+  nameWithType: StagePrefabManager.groundTexture
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.groundTexture
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: groundTexture
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Texture groundTexture
+    return:
+      type: UnityEngine.Texture
+    content.vb: Public groundTexture As Texture
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.groundNormalMap
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.groundNormalMap
+  id: groundNormalMap
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: groundNormalMap
+  nameWithType: StagePrefabManager.groundNormalMap
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.groundNormalMap
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: groundNormalMap
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Texture groundNormalMap
+    return:
+      type: UnityEngine.Texture
+    content.vb: Public groundNormalMap As Texture
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.groundRenderer
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.groundRenderer
+  id: groundRenderer
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: groundRenderer
+  nameWithType: StagePrefabManager.groundRenderer
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.groundRenderer
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: groundRenderer
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Renderer groundRenderer
+    return:
+      type: UnityEngine.Renderer
+    content.vb: Public groundRenderer As Renderer
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.groundMaterial
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.groundMaterial
+  id: groundMaterial
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: groundMaterial
+  nameWithType: StagePrefabManager.groundMaterial
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.groundMaterial
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: groundMaterial
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Material groundMaterial
+    return:
+      type: UnityEngine.Material
+    content.vb: Public groundMaterial As Material
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeArea
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.refereeArea
+  id: refereeArea
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: refereeArea
+  nameWithType: StagePrefabManager.refereeArea
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeArea
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: refereeArea
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public RefereeArea refereeArea
+    return:
+      type: SamuraiSoccer.SoccerGame.RefereeArea
+    content.vb: Public refereeArea As RefereeArea
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMaxAng
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMaxAng
+  id: refereeMaxAng
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: refereeMaxAng
+  nameWithType: StagePrefabManager.refereeMaxAng
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMaxAng
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: refereeMaxAng
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public int refereeMaxAng
+    return:
+      type: System.Int32
+    content.vb: Public refereeMaxAng As Integer
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeAreaSize
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.refereeAreaSize
+  id: refereeAreaSize
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: refereeAreaSize
+  nameWithType: StagePrefabManager.refereeAreaSize
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeAreaSize
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: refereeAreaSize
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public int refereeAreaSize
+    return:
+      type: System.Int32
+    content.vb: Public refereeAreaSize As Integer
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.useObstacles
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.useObstacles
+  id: useObstacles
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: useObstacles
+  nameWithType: StagePrefabManager.useObstacles
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.useObstacles
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: useObstacles
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public bool useObstacles
+    return:
+      type: System.Boolean
+    content.vb: Public useObstacles As Boolean
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMove
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMove
+  id: refereeMove
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: refereeMove
+  nameWithType: StagePrefabManager.refereeMove
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.refereeMove
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: refereeMove
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public RefereeMove refereeMove
+    return:
+      type: SamuraiSoccer.SoccerGame.RefereeMove
+    content.vb: Public refereeMove As RefereeMove
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.lookAtSpeed
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.lookAtSpeed
+  id: lookAtSpeed
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: lookAtSpeed
+  nameWithType: StagePrefabManager.lookAtSpeed
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.lookAtSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: lookAtSpeed
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float lookAtSpeed
+    return:
+      type: System.Single
+    content.vb: Public lookAtSpeed As Single
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.runningSpeed
+  commentId: F:SamuraiSoccer.SoccerGame.StagePrefabManager.runningSpeed
+  id: runningSpeed
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: runningSpeed
+  nameWithType: StagePrefabManager.runningSpeed
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.runningSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: runningSpeed
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public float runningSpeed
+    return:
+      type: System.Single
+    content.vb: Public runningSpeed As Single
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.Start
+  commentId: M:SamuraiSoccer.SoccerGame.StagePrefabManager.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.StagePrefabManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StagePrefabManager.Start()
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/StagePrefabManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/StagePrefabManager.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.SoccerGame.StagePrefabManager.Start*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Texture
+  commentId: T:UnityEngine.Texture
+  parent: UnityEngine
+  isExternal: true
+  name: Texture
+  nameWithType: Texture
+  fullName: UnityEngine.Texture
+- uid: UnityEngine.Shader
+  commentId: T:UnityEngine.Shader
+  parent: UnityEngine
+  isExternal: true
+  name: Shader
+  nameWithType: Shader
+  fullName: UnityEngine.Shader
+- uid: UnityEngine.MeshRenderer[]
+  isExternal: true
+  name: MeshRenderer[]
+  nameWithType: MeshRenderer[]
+  fullName: UnityEngine.MeshRenderer[]
+  nameWithType.vb: MeshRenderer()
+  fullName.vb: UnityEngine.MeshRenderer()
+  name.vb: MeshRenderer()
+  spec.csharp:
+  - uid: UnityEngine.MeshRenderer
+    name: MeshRenderer
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.MeshRenderer
+    name: MeshRenderer
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Texture[]
+  isExternal: true
+  name: Texture[]
+  nameWithType: Texture[]
+  fullName: UnityEngine.Texture[]
+  nameWithType.vb: Texture()
+  fullName.vb: UnityEngine.Texture()
+  name.vb: Texture()
+  spec.csharp:
+  - uid: UnityEngine.Texture
+    name: Texture
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Texture
+    name: Texture
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Renderer[]
+  isExternal: true
+  name: Renderer[]
+  nameWithType: Renderer[]
+  fullName: UnityEngine.Renderer[]
+  nameWithType.vb: Renderer()
+  fullName.vb: UnityEngine.Renderer()
+  name.vb: Renderer()
+  spec.csharp:
+  - uid: UnityEngine.Renderer
+    name: Renderer
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Renderer
+    name: Renderer
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Material
+  commentId: T:UnityEngine.Material
+  parent: UnityEngine
+  isExternal: true
+  name: Material
+  nameWithType: Material
+  fullName: UnityEngine.Material
+- uid: UnityEngine.Renderer
+  commentId: T:UnityEngine.Renderer
+  parent: UnityEngine
+  isExternal: true
+  name: Renderer
+  nameWithType: Renderer
+  fullName: UnityEngine.Renderer
+- uid: SamuraiSoccer.SoccerGame.RefereeArea
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeArea
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.RefereeArea.html
+  name: RefereeArea
+  nameWithType: RefereeArea
+  fullName: SamuraiSoccer.SoccerGame.RefereeArea
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.SoccerGame.RefereeMove
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeMove
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html
+  name: RefereeMove
+  nameWithType: RefereeMove
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.StagePrefabManager.Start
+  href: SamuraiSoccer.SoccerGame.StagePrefabManager.html#SamuraiSoccer_SoccerGame_StagePrefabManager_Start
+  name: Start
+  nameWithType: StagePrefabManager.Start
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager.Start

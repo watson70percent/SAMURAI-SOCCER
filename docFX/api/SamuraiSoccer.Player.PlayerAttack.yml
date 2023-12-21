@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Player.PlayerAttack
+  commentId: T:SamuraiSoccer.Player.PlayerAttack
+  id: PlayerAttack
+  parent: SamuraiSoccer.Player
+  children:
+  - SamuraiSoccer.Player.PlayerAttack.Attack
+  - SamuraiSoccer.Player.PlayerAttack.Start
+  - SamuraiSoccer.Player.PlayerAttack.slash
+  langs:
+  - csharp
+  - vb
+  name: PlayerAttack
+  nameWithType: PlayerAttack
+  fullName: SamuraiSoccer.Player.PlayerAttack
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerAttack.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayerAttack
+    path: ../Assets/Scripts/Player/PlayerAttack.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: 'public class PlayerAttack : MonoBehaviour'
+    content.vb: Public Class PlayerAttack Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.Player.PlayerAttack.slash
+  commentId: F:SamuraiSoccer.Player.PlayerAttack.slash
+  id: slash
+  parent: SamuraiSoccer.Player.PlayerAttack
+  langs:
+  - csharp
+  - vb
+  name: slash
+  nameWithType: PlayerAttack.slash
+  fullName: SamuraiSoccer.Player.PlayerAttack.slash
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerAttack.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: slash
+    path: ../Assets/Scripts/Player/PlayerAttack.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: public GameObject slash
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public slash As GameObject
+- uid: SamuraiSoccer.Player.PlayerAttack.Start
+  commentId: M:SamuraiSoccer.Player.PlayerAttack.Start
+  id: Start
+  parent: SamuraiSoccer.Player.PlayerAttack
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: PlayerAttack.Start()
+  fullName: SamuraiSoccer.Player.PlayerAttack.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerAttack.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/Player/PlayerAttack.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.Player.PlayerAttack.Start*
+- uid: SamuraiSoccer.Player.PlayerAttack.Attack
+  commentId: M:SamuraiSoccer.Player.PlayerAttack.Attack
+  id: Attack
+  parent: SamuraiSoccer.Player.PlayerAttack
+  langs:
+  - csharp
+  - vb
+  name: Attack()
+  nameWithType: PlayerAttack.Attack()
+  fullName: SamuraiSoccer.Player.PlayerAttack.Attack()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerAttack.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Attack
+    path: ../Assets/Scripts/Player/PlayerAttack.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Attack()
+    content.vb: Private Sub Attack()
+  overload: SamuraiSoccer.Player.PlayerAttack.Attack*
+references:
+- uid: SamuraiSoccer.Player
+  commentId: N:SamuraiSoccer.Player
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Player
+  nameWithType: SamuraiSoccer.Player
+  fullName: SamuraiSoccer.Player
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.Player.PlayerAttack.Start*
+  commentId: Overload:SamuraiSoccer.Player.PlayerAttack.Start
+  href: SamuraiSoccer.Player.PlayerAttack.html#SamuraiSoccer_Player_PlayerAttack_Start
+  name: Start
+  nameWithType: PlayerAttack.Start
+  fullName: SamuraiSoccer.Player.PlayerAttack.Start
+- uid: SamuraiSoccer.Player.PlayerAttack.Attack*
+  commentId: Overload:SamuraiSoccer.Player.PlayerAttack.Attack
+  href: SamuraiSoccer.Player.PlayerAttack.html#SamuraiSoccer_Player_PlayerAttack_Attack
+  name: Attack
+  nameWithType: PlayerAttack.Attack
+  fullName: SamuraiSoccer.Player.PlayerAttack.Attack

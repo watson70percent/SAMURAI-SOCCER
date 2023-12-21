@@ -1,0 +1,676 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.TextScroller
+  commentId: T:SamuraiSoccer.UI.TextScroller
+  id: TextScroller
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.TextScroller.GuardTimer
+  - SamuraiSoccer.UI.TextScroller.InitializeState(System.String)
+  - SamuraiSoccer.UI.TextScroller.OnTouched(System.Boolean)
+  - SamuraiSoccer.UI.TextScroller.ShowText(System.String)
+  - SamuraiSoccer.UI.TextScroller.Start
+  - SamuraiSoccer.UI.TextScroller.Update
+  - SamuraiSoccer.UI.TextScroller.m_fullText
+  - SamuraiSoccer.UI.TextScroller.m_guardTime
+  - SamuraiSoccer.UI.TextScroller.m_isTouched
+  - SamuraiSoccer.UI.TextScroller.m_provider
+  - SamuraiSoccer.UI.TextScroller.m_text
+  - SamuraiSoccer.UI.TextScroller.m_touchGuard
+  - SamuraiSoccer.UI.TextScroller.m_waitms4char
+  langs:
+  - csharp
+  - vb
+  name: TextScroller
+  nameWithType: TextScroller
+  fullName: SamuraiSoccer.UI.TextScroller
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TextScroller
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: UIテキストの一文字ずつ送る動作を行う．
+  example: []
+  syntax:
+    content: 'public class TextScroller : MonoBehaviour'
+    content.vb: Public Class TextScroller Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.TextScroller.m_provider
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_provider
+  id: m_provider
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_provider
+  nameWithType: TextScroller.m_provider
+  fullName: SamuraiSoccer.UI.TextScroller.m_provider
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_provider
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private TouchProvider m_provider
+    return:
+      type: SamuraiSoccer.UI.TouchProvider
+    content.vb: >-
+      <SerializeField>
+
+      Private m_provider As TouchProvider
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TextScroller.m_text
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_text
+  id: m_text
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_text
+  nameWithType: TextScroller.m_text
+  fullName: SamuraiSoccer.UI.TextScroller.m_text
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_text
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_text
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_text As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TextScroller.m_waitms4char
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_waitms4char
+  id: m_waitms4char
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_waitms4char
+  nameWithType: TextScroller.m_waitms4char
+  fullName: SamuraiSoccer.UI.TextScroller.m_waitms4char
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_waitms4char
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_waitms4char
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_waitms4char As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TextScroller.m_guardTime
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_guardTime
+  id: m_guardTime
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_guardTime
+  nameWithType: TextScroller.m_guardTime
+  fullName: SamuraiSoccer.UI.TextScroller.m_guardTime
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_guardTime
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private int m_guardTime
+    return:
+      type: System.Int32
+    content.vb: >-
+      <SerializeField>
+
+      Private m_guardTime As Integer
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.TextScroller.m_fullText
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_fullText
+  id: m_fullText
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_fullText
+  nameWithType: TextScroller.m_fullText
+  fullName: SamuraiSoccer.UI.TextScroller.m_fullText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_fullText
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private string m_fullText
+    return:
+      type: System.String
+    content.vb: Private m_fullText As String
+- uid: SamuraiSoccer.UI.TextScroller.m_touchGuard
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_touchGuard
+  id: m_touchGuard
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_touchGuard
+  nameWithType: TextScroller.m_touchGuard
+  fullName: SamuraiSoccer.UI.TextScroller.m_touchGuard
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_touchGuard
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private bool m_touchGuard
+    return:
+      type: System.Boolean
+    content.vb: Private m_touchGuard As Boolean
+- uid: SamuraiSoccer.UI.TextScroller.m_isTouched
+  commentId: F:SamuraiSoccer.UI.TextScroller.m_isTouched
+  id: m_isTouched
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: m_isTouched
+  nameWithType: TextScroller.m_isTouched
+  fullName: SamuraiSoccer.UI.TextScroller.m_isTouched
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isTouched
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private bool m_isTouched
+    return:
+      type: System.Boolean
+    content.vb: Private m_isTouched As Boolean
+- uid: SamuraiSoccer.UI.TextScroller.Start
+  commentId: M:SamuraiSoccer.UI.TextScroller.Start
+  id: Start
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TextScroller.Start()
+  fullName: SamuraiSoccer.UI.TextScroller.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.TextScroller.Start*
+- uid: SamuraiSoccer.UI.TextScroller.Update
+  commentId: M:SamuraiSoccer.UI.TextScroller.Update
+  id: Update
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: TextScroller.Update()
+  fullName: SamuraiSoccer.UI.TextScroller.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 35
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.UI.TextScroller.Update*
+- uid: SamuraiSoccer.UI.TextScroller.ShowText(System.String)
+  commentId: M:SamuraiSoccer.UI.TextScroller.ShowText(System.String)
+  id: ShowText(System.String)
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: ShowText(string)
+  nameWithType: TextScroller.ShowText(string)
+  fullName: SamuraiSoccer.UI.TextScroller.ShowText(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ShowText
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 47
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 文字を一文字ずつ表示する．
+  example: []
+  syntax:
+    content: public UniTask ShowText(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: 表示する文字．
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function ShowText(text As String) As UniTask
+  overload: SamuraiSoccer.UI.TextScroller.ShowText*
+  nameWithType.vb: TextScroller.ShowText(String)
+  fullName.vb: SamuraiSoccer.UI.TextScroller.ShowText(String)
+  name.vb: ShowText(String)
+- uid: SamuraiSoccer.UI.TextScroller.OnTouched(System.Boolean)
+  commentId: M:SamuraiSoccer.UI.TextScroller.OnTouched(System.Boolean)
+  id: OnTouched(System.Boolean)
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: OnTouched(bool)
+  nameWithType: TextScroller.OnTouched(bool)
+  fullName: SamuraiSoccer.UI.TextScroller.OnTouched(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnTouched
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 62
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void OnTouched(bool isTouch)
+    parameters:
+    - id: isTouch
+      type: System.Boolean
+    content.vb: Private Sub OnTouched(isTouch As Boolean)
+  overload: SamuraiSoccer.UI.TextScroller.OnTouched*
+  nameWithType.vb: TextScroller.OnTouched(Boolean)
+  fullName.vb: SamuraiSoccer.UI.TextScroller.OnTouched(Boolean)
+  name.vb: OnTouched(Boolean)
+- uid: SamuraiSoccer.UI.TextScroller.InitializeState(System.String)
+  commentId: M:SamuraiSoccer.UI.TextScroller.InitializeState(System.String)
+  id: InitializeState(System.String)
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: InitializeState(string)
+  nameWithType: TextScroller.InitializeState(string)
+  fullName: SamuraiSoccer.UI.TextScroller.InitializeState(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: InitializeState
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 70
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void InitializeState(string text)
+    parameters:
+    - id: text
+      type: System.String
+    content.vb: Private Sub InitializeState(text As String)
+  overload: SamuraiSoccer.UI.TextScroller.InitializeState*
+  nameWithType.vb: TextScroller.InitializeState(String)
+  fullName.vb: SamuraiSoccer.UI.TextScroller.InitializeState(String)
+  name.vb: InitializeState(String)
+- uid: SamuraiSoccer.UI.TextScroller.GuardTimer
+  commentId: M:SamuraiSoccer.UI.TextScroller.GuardTimer
+  id: GuardTimer
+  parent: SamuraiSoccer.UI.TextScroller
+  langs:
+  - csharp
+  - vb
+  name: GuardTimer()
+  nameWithType: TextScroller.GuardTimer()
+  fullName: SamuraiSoccer.UI.TextScroller.GuardTimer()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TextScroller.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GuardTimer
+    path: ../Assets/Scripts/UI/TextScroller.cs
+    startLine: 79
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private UniTask GuardTimer()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function GuardTimer() As UniTask
+  overload: SamuraiSoccer.UI.TextScroller.GuardTimer*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.UI.TouchProvider
+  commentId: T:SamuraiSoccer.UI.TouchProvider
+  parent: SamuraiSoccer.UI
+  href: SamuraiSoccer.UI.TouchProvider.html
+  name: TouchProvider
+  nameWithType: TouchProvider
+  fullName: SamuraiSoccer.UI.TouchProvider
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.UI.TextScroller.Start*
+  commentId: Overload:SamuraiSoccer.UI.TextScroller.Start
+  href: SamuraiSoccer.UI.TextScroller.html#SamuraiSoccer_UI_TextScroller_Start
+  name: Start
+  nameWithType: TextScroller.Start
+  fullName: SamuraiSoccer.UI.TextScroller.Start
+- uid: SamuraiSoccer.UI.TextScroller.Update*
+  commentId: Overload:SamuraiSoccer.UI.TextScroller.Update
+  href: SamuraiSoccer.UI.TextScroller.html#SamuraiSoccer_UI_TextScroller_Update
+  name: Update
+  nameWithType: TextScroller.Update
+  fullName: SamuraiSoccer.UI.TextScroller.Update
+- uid: SamuraiSoccer.UI.TextScroller.ShowText*
+  commentId: Overload:SamuraiSoccer.UI.TextScroller.ShowText
+  href: SamuraiSoccer.UI.TextScroller.html#SamuraiSoccer_UI_TextScroller_ShowText_System_String_
+  name: ShowText
+  nameWithType: TextScroller.ShowText
+  fullName: SamuraiSoccer.UI.TextScroller.ShowText
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.UI.TextScroller.OnTouched*
+  commentId: Overload:SamuraiSoccer.UI.TextScroller.OnTouched
+  href: SamuraiSoccer.UI.TextScroller.html#SamuraiSoccer_UI_TextScroller_OnTouched_System_Boolean_
+  name: OnTouched
+  nameWithType: TextScroller.OnTouched
+  fullName: SamuraiSoccer.UI.TextScroller.OnTouched
+- uid: SamuraiSoccer.UI.TextScroller.InitializeState*
+  commentId: Overload:SamuraiSoccer.UI.TextScroller.InitializeState
+  href: SamuraiSoccer.UI.TextScroller.html#SamuraiSoccer_UI_TextScroller_InitializeState_System_String_
+  name: InitializeState
+  nameWithType: TextScroller.InitializeState
+  fullName: SamuraiSoccer.UI.TextScroller.InitializeState
+- uid: SamuraiSoccer.UI.TextScroller.GuardTimer*
+  commentId: Overload:SamuraiSoccer.UI.TextScroller.GuardTimer
+  href: SamuraiSoccer.UI.TextScroller.html#SamuraiSoccer_UI_TextScroller_GuardTimer
+  name: GuardTimer
+  nameWithType: TextScroller.GuardTimer
+  fullName: SamuraiSoccer.UI.TextScroller.GuardTimer

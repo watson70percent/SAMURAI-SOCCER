@@ -1,4 +1,5 @@
 ### YamlMime:TableOfContent
+items:
 - uid: Name
   name: Name
   items:
@@ -7,18 +8,16 @@
 - uid: SamuraiSoccer
   name: SamuraiSoccer
   items:
+  - uid: SamuraiSoccer.DetectExceptionLog
+    name: DetectExceptionLog
   - uid: SamuraiSoccer.IDataTransmitClient`1
     name: IDataTransmitClient<T>
-    name.vb: IDataTransmitClient(Of T)
   - uid: SamuraiSoccer.InFileTransmitClient`1
     name: InFileTransmitClient<T>
-    name.vb: InFileTransmitClient(Of T)
   - uid: SamuraiSoccer.InMemoryDataTransitClient`1
     name: InMemoryDataTransitClient<T>
-    name.vb: InMemoryDataTransitClient(Of T)
   - uid: SamuraiSoccer.InNetworkTransmitClient`1
     name: InNetworkTransmitClient<T>
-    name.vb: InNetworkTransmitClient(Of T)
   - uid: SamuraiSoccer.MeshCut
     name: MeshCut
   - uid: SamuraiSoccer.MeshCut.MeshData
@@ -43,6 +42,8 @@
 - uid: SamuraiSoccer.Event
   name: SamuraiSoccer.Event
   items:
+  - uid: SamuraiSoccer.Event.GoalEventType
+    name: GoalEventType
   - uid: SamuraiSoccer.Event.InGameEvent
     name: InGameEvent
   - uid: SamuraiSoccer.Event.PlayerEvent
@@ -51,6 +52,8 @@
     name: Stage
   - uid: SamuraiSoccer.Event.StageSelectEvent
     name: StageSelectEvent
+  - uid: SamuraiSoccer.Event.UIEffectEvent
+    name: UIEffectEvent
 - uid: SamuraiSoccer.Event.EditorExtension
   name: SamuraiSoccer.Event.EditorExtension
   items:
@@ -65,14 +68,18 @@
     name: GoalCut
   - uid: SamuraiSoccer.Player.PlayerAttack
     name: PlayerAttack
+  - uid: SamuraiSoccer.Player.PlayerEffect
+    name: PlayerEffect
   - uid: SamuraiSoccer.Player.PlayerMove
     name: PlayerMove
-  - uid: SamuraiSoccer.Player.PlayerMove.Boundy
-    name: PlayerMove.Boundy
   - uid: SamuraiSoccer.Player.PlayerMove.State
     name: PlayerMove.State
   - uid: SamuraiSoccer.Player.Slash
     name: Slash
+  - uid: SamuraiSoccer.Player.TESTCHARGEATTACK
+    name: TESTCHARGEATTACK
+  - uid: SamuraiSoccer.Player.Trail
+    name: Trail
 - uid: SamuraiSoccer.SoccerGame
   name: SamuraiSoccer.SoccerGame
   items:
@@ -80,12 +87,16 @@
     name: BallAction
   - uid: SamuraiSoccer.SoccerGame.BallActionCommand
     name: BallActionCommand
+  - uid: SamuraiSoccer.SoccerGame.BallSlashed
+    name: BallSlashed
   - uid: SamuraiSoccer.SoccerGame.Constants
     name: Constants
   - uid: SamuraiSoccer.SoccerGame.DribbleCommand
     name: DribbleCommand
   - uid: SamuraiSoccer.SoccerGame.Extentions
     name: Extentions
+  - uid: SamuraiSoccer.SoccerGame.FieldBoundary
+    name: FieldBoundary
   - uid: SamuraiSoccer.SoccerGame.FieldInfo
     name: FieldInfo
   - uid: SamuraiSoccer.SoccerGame.FieldManager
@@ -94,6 +105,8 @@
     name: FieldRotationBase
   - uid: SamuraiSoccer.SoccerGame.GameProcess
     name: GameProcess
+  - uid: SamuraiSoccer.SoccerGame.ISlashed
+    name: ISlashed
   - uid: SamuraiSoccer.SoccerGame.NonRotation
     name: NonRotation
   - uid: SamuraiSoccer.SoccerGame.NonWind
@@ -112,12 +125,16 @@
     name: RefereeMove
   - uid: SamuraiSoccer.SoccerGame.RefereeMove.State
     name: RefereeMove.State
+  - uid: SamuraiSoccer.SoccerGame.ScoreManager
+    name: ScoreManager
   - uid: SamuraiSoccer.SoccerGame.ShootCommand
     name: ShootCommand
   - uid: SamuraiSoccer.SoccerGame.StagePrefabManager
     name: StagePrefabManager
   - uid: SamuraiSoccer.SoccerGame.TrapCommand
     name: TrapCommand
+  - uid: SamuraiSoccer.SoccerGame.TutorialPenalty
+    name: TutorialPenalty
   - uid: SamuraiSoccer.SoccerGame.WindInfoBase
     name: WindInfoBase
 - uid: SamuraiSoccer.SoccerGame.AI
@@ -127,14 +144,23 @@
     name: EasyCPU
   - uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
     name: EasyCPUManager
+  - uid: SamuraiSoccer.SoccerGame.AI.EnemySlashed
+    name: EnemySlashed
+  - uid: SamuraiSoccer.SoccerGame.AI.FatEnemySlashed
+    name: FatEnemySlashed
   - uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU
     name: SwitchCPU
   - uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
     name: SwitchCPU.WeightSet
   - uid: SamuraiSoccer.SoccerGame.AI.Team
     name: Team
-  - uid: SamuraiSoccer.SoccerGame.AI.VanishAndBorn
-    name: VanishAndBorn
+  - uid: SamuraiSoccer.SoccerGame.AI.TutorialEnemySlashed
+    name: TutorialEnemySlashed
+- uid: SamuraiSoccer.SoccerGame.EditorExteision
+  name: SamuraiSoccer.SoccerGame.EditorExteision
+  items:
+  - uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+    name: StagePrefabManagerEditor
 - uid: SamuraiSoccer.StageContents
   name: SamuraiSoccer.StageContents
   items:
@@ -146,6 +172,20 @@
     name: GameResult
   - uid: SamuraiSoccer.StageContents.GroundTexture
     name: GroundTexture
+- uid: SamuraiSoccer.StageContents.BattleDome
+  name: SamuraiSoccer.StageContents.BattleDome
+  items:
+  - uid: SamuraiSoccer.StageContents.BattleDome.BGMData
+    name: BGMData
+  - uid: SamuraiSoccer.StageContents.BattleDome.BSA
+    name: BSA
+  - uid: SamuraiSoccer.StageContents.BattleDome.Indicator
+    name: Indicator
+- uid: SamuraiSoccer.StageContents.BattlerDome
+  name: SamuraiSoccer.StageContents.BattlerDome
+  items:
+  - uid: SamuraiSoccer.StageContents.BattlerDome.BattleDomeManager
+    name: BattleDomeManager
 - uid: SamuraiSoccer.StageContents.China
   name: SamuraiSoccer.StageContents.China
   items:
@@ -169,6 +209,27 @@
     name: SoundBox
   - uid: SamuraiSoccer.StageContents.China.SoundBoxUtil
     name: SoundBoxUtil
+- uid: SamuraiSoccer.StageContents.Conversation
+  name: SamuraiSoccer.StageContents.Conversation
+  items:
+  - uid: SamuraiSoccer.StageContents.Conversation.CharacterName
+    name: CharacterName
+  - uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+    name: ConversationCharacter
+  - uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacters
+    name: ConversationCharacters
+  - uid: SamuraiSoccer.StageContents.Conversation.ConversationManager
+    name: ConversationManager
+  - uid: SamuraiSoccer.StageContents.Conversation.ConversationText
+    name: ConversationText
+  - uid: SamuraiSoccer.StageContents.Conversation.EmotionType
+    name: EmotionType
+  - uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+    name: SelectedConversationPublisher
+  - uid: SamuraiSoccer.StageContents.Conversation.StageConversationData
+    name: StageConversationData
+  - uid: SamuraiSoccer.StageContents.Conversation.StageConversationDatas
+    name: StageConversationDatas
 - uid: SamuraiSoccer.StageContents.Result
   name: SamuraiSoccer.StageContents.Result
   items:
@@ -180,20 +241,30 @@
     name: ResultBGM
   - uid: SamuraiSoccer.StageContents.Result.ResultManager
     name: ResultManager
+  - uid: SamuraiSoccer.StageContents.Result.SamuraiWordBase
+    name: SamuraiWordBase
   - uid: SamuraiSoccer.StageContents.Result.StageDataSave
     name: StageDataSave
-- uid: SamuraiSoccer.StageContents.Rossia
-  name: SamuraiSoccer.StageContents.Rossia
+- uid: SamuraiSoccer.StageContents.Russian
+  name: SamuraiSoccer.StageContents.Russian
   items:
-  - uid: SamuraiSoccer.StageContents.Rossia.IceStageManager
+  - uid: SamuraiSoccer.StageContents.Russian.IceStageManager
     name: IceStageManager
-  - uid: SamuraiSoccer.StageContents.Rossia.Snow
+  - uid: SamuraiSoccer.StageContents.Russian.Snow
     name: Snow
 - uid: SamuraiSoccer.StageContents.StageSelect
   name: SamuraiSoccer.StageContents.StageSelect
   items:
   - uid: SamuraiSoccer.StageContents.StageSelect.Bezier2Order3Points
     name: Bezier2Order3Points
+  - uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+    name: LastBattleTest
+  - uid: SamuraiSoccer.StageContents.StageSelect.ScrollIcon
+    name: ScrollIcon
+  - uid: SamuraiSoccer.StageContents.StageSelect.ScrollManager
+    name: ScrollManager
+  - uid: SamuraiSoccer.StageContents.StageSelect.ScrollMove
+    name: ScrollMove
   - uid: SamuraiSoccer.StageContents.StageSelect.StageCamera
     name: StageCamera
   - uid: SamuraiSoccer.StageContents.StageSelect.StageIcon
@@ -204,14 +275,18 @@
     name: StagePreviewDatas
   - uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
     name: StagePreviewMove
+  - uid: SamuraiSoccer.StageContents.StageSelect.StageScroll
+    name: StageScroll
+  - uid: SamuraiSoccer.StageContents.StageSelect.StageScrollScroller
+    name: StageScrollScroller
   - uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
     name: StageSelectBGM
   - uid: SamuraiSoccer.StageContents.StageSelect.StageSelectCameraMove
     name: StageSelectCameraMove
-  - uid: SamuraiSoccer.StageContents.StageSelect.StageSelectInit
-    name: StageSelectInit
   - uid: SamuraiSoccer.StageContents.StageSelect.StageState
     name: StageState
+  - uid: SamuraiSoccer.StageContents.StageSelect.StageStateInit
+    name: StageStateInit
   - uid: SamuraiSoccer.StageContents.StageSelect.WorldMapMove
     name: WorldMapMove
 - uid: SamuraiSoccer.StageContents.UK
@@ -239,6 +314,10 @@
   items:
   - uid: SamuraiSoccer.UI.AttackButton
     name: AttackButton
+  - uid: SamuraiSoccer.UI.BlackoutPanel
+    name: BlackoutPanel
+  - uid: SamuraiSoccer.UI.ExeptionLogUI
+    name: ExeptionLogUI
   - uid: SamuraiSoccer.UI.HidePanel
     name: HidePanel
   - uid: SamuraiSoccer.UI.OpponentNumber
@@ -253,6 +332,8 @@
     name: SlidePad
   - uid: SamuraiSoccer.UI.TargetWorldData
     name: TargetWorldData
+  - uid: SamuraiSoccer.UI.Test_ChargeAttackButton
+    name: Test_ChargeAttackButton
   - uid: SamuraiSoccer.UI.TextScroller
     name: TextScroller
   - uid: SamuraiSoccer.UI.TimerScript
@@ -280,3 +361,4 @@
   items:
   - uid: UnityEngine.UI.LetterSpacing
     name: LetterSpacing
+memberLayout: SamePage

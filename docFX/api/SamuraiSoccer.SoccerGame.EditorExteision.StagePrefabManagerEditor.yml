@@ -1,0 +1,2048 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  commentId: T:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  id: StagePrefabManagerEditor
+  parent: SamuraiSoccer.SoccerGame.EditorExteision
+  children:
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._isOpen
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._num
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._target
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._textures
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.crowd
+  - SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.useNormalMap
+  langs:
+  - csharp
+  - vb
+  name: StagePrefabManagerEditor
+  nameWithType: StagePrefabManagerEditor
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StagePrefabManagerEditor
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: >-
+      [CustomEditor(typeof(StagePrefabManager))]
+
+      public class StagePrefabManagerEditor : Editor, IPreviewable, IToolModeOwner
+    content.vb: >-
+      <CustomEditor(GetType(StagePrefabManager))>
+
+      Public Class StagePrefabManagerEditor Inherits Editor Implements IPreviewable, IToolModeOwner
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.Editor
+  implements:
+  - UnityEditor.IPreviewable
+  - UnityEditor.IToolModeOwner
+  inheritedMembers:
+  - UnityEditor.Editor.HasLargeHeader
+  - UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type)
+  - UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object)
+  - UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object,UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  - UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  - UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  - UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[],System.Type,UnityEditor.Editor@)
+  - UnityEditor.Editor.CreateEditor(UnityEngine.Object)
+  - UnityEditor.Editor.CreateEditor(UnityEngine.Object,System.Type)
+  - UnityEditor.Editor.CreateEditor(UnityEngine.Object[])
+  - UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
+  - UnityEditor.Editor.GetSerializedObjectInternal
+  - UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])
+  - UnityEditor.Editor.UnityEditor#IToolModeOwner#GetWorldBoundsOfTargets
+  - UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)
+  - UnityEditor.Editor.UnityEditor#IToolModeOwner#ModeSurvivesSelectionChange(System.Int32)
+  - UnityEditor.Editor.OnForceReloadInspector
+  - UnityEditor.Editor.GetOptimizedGUIBlock(System.Boolean,System.Boolean,System.Single@)
+  - UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)
+  - UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject,System.String[])
+  - UnityEditor.Editor.DrawDefaultInspector
+  - UnityEditor.Editor.Repaint
+  - UnityEditor.Editor.CreateInspectorGUI
+  - UnityEditor.Editor.RequiresConstantRepaint
+  - UnityEditor.Editor.DrawHeader
+  - UnityEditor.Editor.OnHeaderGUI
+  - UnityEditor.Editor.OnHeaderControlsGUI
+  - UnityEditor.Editor.ShouldHideOpenButton
+  - UnityEditor.Editor.CanOpenMultipleObjects
+  - UnityEditor.Editor.ShouldTryToMakeEditableOnOpen
+  - UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)
+  - UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect,System.String)
+  - UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)
+  - UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
+  - UnityEditor.Editor.HasPreviewGUI
+  - UnityEditor.Editor.GetPreviewTitle
+  - UnityEditor.Editor.RenderStaticPreview(System.String,UnityEngine.Object[],System.Int32,System.Int32)
+  - UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+  - UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+  - UnityEditor.Editor.OnPreviewSettings
+  - UnityEditor.Editor.GetInfoString
+  - UnityEditor.Editor.DrawPreview(UnityEngine.Rect)
+  - UnityEditor.Editor.ReloadPreviewInstances
+  - UnityEditor.Editor.IsEnabled
+  - UnityEditor.Editor.UseDefaultMargins
+  - UnityEditor.Editor.MoveNextTarget
+  - UnityEditor.Editor.ResetTarget
+  - UnityEditor.Editor.OnAssetStoreInspectorGUI
+  - UnityEditor.Editor.UnityEditor#IToolModeOwner#GetInstanceID
+  - UnityEditor.Editor.preview
+  - UnityEditor.Editor.UnityEditor#IToolModeOwner#areToolModesAvailable
+  - UnityEditor.Editor.target
+  - UnityEditor.Editor.targets
+  - UnityEditor.Editor.referenceTargetIndex
+  - UnityEditor.Editor.targetTitle
+  - UnityEditor.Editor.serializedObject
+  - UnityEditor.Editor.finishedDefaultHeaderGUI
+  attributes:
+  - type: UnityEditor.CustomEditor
+    ctor: UnityEditor.CustomEditor.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: SamuraiSoccer.SoccerGame.StagePrefabManager
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._target
+  commentId: F:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._target
+  id: _target
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: _target
+  nameWithType: StagePrefabManagerEditor._target
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._target
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _target
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private StagePrefabManager _target
+    return:
+      type: SamuraiSoccer.SoccerGame.StagePrefabManager
+    content.vb: Private _target As StagePrefabManager
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._isOpen
+  commentId: F:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._isOpen
+  id: _isOpen
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: _isOpen
+  nameWithType: StagePrefabManagerEditor._isOpen
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._isOpen
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _isOpen
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private bool _isOpen
+    return:
+      type: System.Boolean
+    content.vb: Private _isOpen As Boolean
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._num
+  commentId: F:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._num
+  id: _num
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: _num
+  nameWithType: StagePrefabManagerEditor._num
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._num
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _num
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private int _num
+    return:
+      type: System.Int32
+    content.vb: Private _num As Integer
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._textures
+  commentId: F:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._textures
+  id: _textures
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: _textures
+  nameWithType: StagePrefabManagerEditor._textures
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor._textures
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _textures
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private Texture[] _textures
+    return:
+      type: UnityEngine.Texture[]
+    content.vb: Private _textures As Texture()
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.crowd
+  commentId: F:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.crowd
+  id: crowd
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: crowd
+  nameWithType: StagePrefabManagerEditor.crowd
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.crowd
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: crowd
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private bool crowd
+    return:
+      type: System.Boolean
+    content.vb: Private crowd As Boolean
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.useNormalMap
+  commentId: F:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.useNormalMap
+  id: useNormalMap
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: useNormalMap
+  nameWithType: StagePrefabManagerEditor.useNormalMap
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.useNormalMap
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: useNormalMap
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private bool useNormalMap
+    return:
+      type: System.Boolean
+    content.vb: Private useNormalMap As Boolean
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake
+  commentId: M:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake
+  id: Awake
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: StagePrefabManagerEditor.Awake()
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake*
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI
+  commentId: M:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: StagePrefabManagerEditor.OnInspectorGUI()
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnInspectorGUI
+    path: ../Assets/Scripts/SoccerGame/Editor/StagePrefabManagerEditor.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame.EditorExtension
+  namespace: SamuraiSoccer.SoccerGame.EditorExteision
+  summary: <p>Implement this function to make a custom inspector.</p>
+  example: []
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI()
+  overridden: UnityEditor.Editor.OnInspectorGUI
+  overload: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI*
+references:
+- uid: SamuraiSoccer.SoccerGame.EditorExteision
+  commentId: N:SamuraiSoccer.SoccerGame.EditorExteision
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame.EditorExteision
+  nameWithType: SamuraiSoccer.SoccerGame.EditorExteision
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.EditorExteision
+    name: EditorExteision
+    href: SamuraiSoccer.SoccerGame.EditorExteision.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.EditorExteision
+    name: EditorExteision
+    href: SamuraiSoccer.SoccerGame.EditorExteision.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.Editor
+  commentId: T:UnityEditor.Editor
+  parent: UnityEditor
+  isExternal: true
+  name: Editor
+  nameWithType: Editor
+  fullName: UnityEditor.Editor
+- uid: UnityEditor.IPreviewable
+  commentId: T:UnityEditor.IPreviewable
+  parent: UnityEditor
+  isExternal: true
+  name: IPreviewable
+  nameWithType: IPreviewable
+  fullName: UnityEditor.IPreviewable
+- uid: UnityEditor.IToolModeOwner
+  commentId: T:UnityEditor.IToolModeOwner
+  parent: UnityEditor
+  isExternal: true
+  name: IToolModeOwner
+  nameWithType: IToolModeOwner
+  fullName: UnityEditor.IToolModeOwner
+- uid: UnityEditor.Editor.HasLargeHeader
+  commentId: M:UnityEditor.Editor.HasLargeHeader
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: HasLargeHeader()
+  nameWithType: Editor.HasLargeHeader()
+  fullName: UnityEditor.Editor.HasLargeHeader()
+  spec.csharp:
+  - uid: UnityEditor.Editor.HasLargeHeader
+    name: HasLargeHeader
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.HasLargeHeader
+    name: HasLargeHeader
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type)
+  commentId: M:UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateEditorWithContext(Object[], Object, Type)
+  nameWithType: Editor.CreateEditorWithContext(Object[], Object, Type)
+  fullName: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[], UnityEngine.Object, System.Type)
+  nameWithType.vb: Editor.CreateEditorWithContext(Object(), Object, Type)
+  fullName.vb: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object(), UnityEngine.Object, System.Type)
+  name.vb: CreateEditorWithContext(Object(), Object, Type)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type)
+    name: CreateEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type)
+    name: CreateEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object)
+  commentId: M:UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CreateEditorWithContext(Object[], Object)
+  nameWithType: Editor.CreateEditorWithContext(Object[], Object)
+  fullName: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[], UnityEngine.Object)
+  nameWithType.vb: Editor.CreateEditorWithContext(Object(), Object)
+  fullName.vb: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object(), UnityEngine.Object)
+  name.vb: CreateEditorWithContext(Object(), Object)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object)
+    name: CreateEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateEditorWithContext(UnityEngine.Object[],UnityEngine.Object)
+    name: CreateEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object,UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  commentId: M:UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object,UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateCachedEditorWithContext(Object, Object, Type, ref Editor)
+  nameWithType: Editor.CreateCachedEditorWithContext(Object, Object, Type, ref Editor)
+  fullName: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object, UnityEngine.Object, System.Type, ref UnityEditor.Editor)
+  nameWithType.vb: Editor.CreateCachedEditorWithContext(Object, Object, Type, Editor)
+  fullName.vb: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object, UnityEngine.Object, System.Type, UnityEditor.Editor)
+  name.vb: CreateCachedEditorWithContext(Object, Object, Type, Editor)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object,UnityEngine.Object,System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object,UnityEngine.Object,System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  commentId: M:UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateCachedEditorWithContext(Object[], Object, Type, ref Editor)
+  nameWithType: Editor.CreateCachedEditorWithContext(Object[], Object, Type, ref Editor)
+  fullName: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[], UnityEngine.Object, System.Type, ref UnityEditor.Editor)
+  nameWithType.vb: Editor.CreateCachedEditorWithContext(Object(), Object, Type, Editor)
+  fullName.vb: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object(), UnityEngine.Object, System.Type, UnityEditor.Editor)
+  name.vb: CreateCachedEditorWithContext(Object(), Object, Type, Editor)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateCachedEditorWithContext(UnityEngine.Object[],UnityEngine.Object,System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditorWithContext
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  commentId: M:UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object,System.Type,UnityEditor.Editor@)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateCachedEditor(Object, Type, ref Editor)
+  nameWithType: Editor.CreateCachedEditor(Object, Type, ref Editor)
+  fullName: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object, System.Type, ref UnityEditor.Editor)
+  nameWithType.vb: Editor.CreateCachedEditor(Object, Type, Editor)
+  fullName.vb: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object, System.Type, UnityEditor.Editor)
+  name.vb: CreateCachedEditor(Object, Type, Editor)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object,System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object,System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[],System.Type,UnityEditor.Editor@)
+  commentId: M:UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[],System.Type,UnityEditor.Editor@)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateCachedEditor(Object[], Type, ref Editor)
+  nameWithType: Editor.CreateCachedEditor(Object[], Type, ref Editor)
+  fullName: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[], System.Type, ref UnityEditor.Editor)
+  nameWithType.vb: Editor.CreateCachedEditor(Object(), Type, Editor)
+  fullName.vb: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object(), System.Type, UnityEditor.Editor)
+  name.vb: CreateCachedEditor(Object(), Type, Editor)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[],System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateCachedEditor(UnityEngine.Object[],System.Type,UnityEditor.Editor@)
+    name: CreateCachedEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object)
+  commentId: M:UnityEditor.Editor.CreateEditor(UnityEngine.Object)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CreateEditor(Object)
+  nameWithType: Editor.CreateEditor(Object)
+  fullName: UnityEditor.Editor.CreateEditor(UnityEngine.Object)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object)
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object)
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object,System.Type)
+  commentId: M:UnityEditor.Editor.CreateEditor(UnityEngine.Object,System.Type)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateEditor(Object, Type)
+  nameWithType: Editor.CreateEditor(Object, Type)
+  fullName: UnityEditor.Editor.CreateEditor(UnityEngine.Object, System.Type)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object,System.Type)
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object,System.Type)
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object[])
+  commentId: M:UnityEditor.Editor.CreateEditor(UnityEngine.Object[])
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CreateEditor(Object[])
+  nameWithType: Editor.CreateEditor(Object[])
+  fullName: UnityEditor.Editor.CreateEditor(UnityEngine.Object[])
+  nameWithType.vb: Editor.CreateEditor(Object())
+  fullName.vb: UnityEditor.Editor.CreateEditor(UnityEngine.Object())
+  name.vb: CreateEditor(Object())
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object[])
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object[])
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: )
+- uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
+  commentId: M:UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateEditor(Object[], Type)
+  nameWithType: Editor.CreateEditor(Object[], Type)
+  fullName: UnityEditor.Editor.CreateEditor(UnityEngine.Object[], System.Type)
+  nameWithType.vb: Editor.CreateEditor(Object(), Type)
+  fullName.vb: UnityEditor.Editor.CreateEditor(UnityEngine.Object(), System.Type)
+  name.vb: CreateEditor(Object(), Type)
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateEditor(UnityEngine.Object[],System.Type)
+    name: CreateEditor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: UnityEditor.Editor.GetSerializedObjectInternal
+  commentId: M:UnityEditor.Editor.GetSerializedObjectInternal
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: GetSerializedObjectInternal()
+  nameWithType: Editor.GetSerializedObjectInternal()
+  fullName: UnityEditor.Editor.GetSerializedObjectInternal()
+  spec.csharp:
+  - uid: UnityEditor.Editor.GetSerializedObjectInternal
+    name: GetSerializedObjectInternal
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.GetSerializedObjectInternal
+    name: GetSerializedObjectInternal
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])
+  commentId: M:UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: InternalSetTargets(Object[])
+  nameWithType: Editor.InternalSetTargets(Object[])
+  fullName: UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])
+  nameWithType.vb: Editor.InternalSetTargets(Object())
+  fullName.vb: UnityEditor.Editor.InternalSetTargets(UnityEngine.Object())
+  name.vb: InternalSetTargets(Object())
+  spec.csharp:
+  - uid: UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])
+    name: InternalSetTargets
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.InternalSetTargets(UnityEngine.Object[])
+    name: InternalSetTargets
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: )
+- uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#GetWorldBoundsOfTargets
+  commentId: M:UnityEditor.Editor.UnityEditor#IToolModeOwner#GetWorldBoundsOfTargets
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: IToolModeOwner.GetWorldBoundsOfTargets()
+  nameWithType: Editor.IToolModeOwner.GetWorldBoundsOfTargets()
+  fullName: UnityEditor.Editor.UnityEditor.IToolModeOwner.GetWorldBoundsOfTargets()
+  spec.csharp:
+  - uid: UnityEditor.IToolModeOwner
+    name: IToolModeOwner
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#GetWorldBoundsOfTargets
+    name: GetWorldBoundsOfTargets
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)
+  commentId: M:UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: GetWorldBoundsOfTarget(Object)
+  nameWithType: Editor.GetWorldBoundsOfTarget(Object)
+  fullName: UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)
+  spec.csharp:
+  - uid: UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)
+    name: GetWorldBoundsOfTarget
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.GetWorldBoundsOfTarget(UnityEngine.Object)
+    name: GetWorldBoundsOfTarget
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#ModeSurvivesSelectionChange(System.Int32)
+  commentId: M:UnityEditor.Editor.UnityEditor#IToolModeOwner#ModeSurvivesSelectionChange(System.Int32)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: IToolModeOwner.ModeSurvivesSelectionChange(int)
+  nameWithType: Editor.IToolModeOwner.ModeSurvivesSelectionChange(int)
+  fullName: UnityEditor.Editor.UnityEditor.IToolModeOwner.ModeSurvivesSelectionChange(int)
+  spec.csharp:
+  - uid: UnityEditor.IToolModeOwner
+    name: IToolModeOwner
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#ModeSurvivesSelectionChange(System.Int32)
+    name: ModeSurvivesSelectionChange
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UnityEditor.Editor.OnForceReloadInspector
+  commentId: M:UnityEditor.Editor.OnForceReloadInspector
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnForceReloadInspector()
+  nameWithType: Editor.OnForceReloadInspector()
+  fullName: UnityEditor.Editor.OnForceReloadInspector()
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnForceReloadInspector
+    name: OnForceReloadInspector
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnForceReloadInspector
+    name: OnForceReloadInspector
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.GetOptimizedGUIBlock(System.Boolean,System.Boolean,System.Single@)
+  commentId: M:UnityEditor.Editor.GetOptimizedGUIBlock(System.Boolean,System.Boolean,System.Single@)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: GetOptimizedGUIBlock(bool, bool, out float)
+  nameWithType: Editor.GetOptimizedGUIBlock(bool, bool, out float)
+  fullName: UnityEditor.Editor.GetOptimizedGUIBlock(bool, bool, out float)
+  nameWithType.vb: Editor.GetOptimizedGUIBlock(Boolean, Boolean, Single)
+  fullName.vb: UnityEditor.Editor.GetOptimizedGUIBlock(Boolean, Boolean, Single)
+  name.vb: GetOptimizedGUIBlock(Boolean, Boolean, Single)
+  spec.csharp:
+  - uid: UnityEditor.Editor.GetOptimizedGUIBlock(System.Boolean,System.Boolean,System.Single@)
+    name: GetOptimizedGUIBlock
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.GetOptimizedGUIBlock(System.Boolean,System.Boolean,System.Single@)
+    name: GetOptimizedGUIBlock
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)
+  commentId: M:UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnOptimizedInspectorGUI(Rect)
+  nameWithType: Editor.OnOptimizedInspectorGUI(Rect)
+  fullName: UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)
+    name: OnOptimizedInspectorGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnOptimizedInspectorGUI(UnityEngine.Rect)
+    name: OnOptimizedInspectorGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject,System.String[])
+  commentId: M:UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject,System.String[])
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: DrawPropertiesExcluding(SerializedObject, params string[])
+  nameWithType: Editor.DrawPropertiesExcluding(SerializedObject, params string[])
+  fullName: UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject, params string[])
+  nameWithType.vb: Editor.DrawPropertiesExcluding(SerializedObject, ParamArray String())
+  fullName.vb: UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject, ParamArray String())
+  name.vb: DrawPropertiesExcluding(SerializedObject, ParamArray String())
+  spec.csharp:
+  - uid: UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject,System.String[])
+    name: DrawPropertiesExcluding
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.SerializedObject
+    name: SerializedObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.DrawPropertiesExcluding(UnityEditor.SerializedObject,System.String[])
+    name: DrawPropertiesExcluding
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.SerializedObject
+    name: SerializedObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: UnityEditor.Editor.DrawDefaultInspector
+  commentId: M:UnityEditor.Editor.DrawDefaultInspector
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: DrawDefaultInspector()
+  nameWithType: Editor.DrawDefaultInspector()
+  fullName: UnityEditor.Editor.DrawDefaultInspector()
+  spec.csharp:
+  - uid: UnityEditor.Editor.DrawDefaultInspector
+    name: DrawDefaultInspector
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.DrawDefaultInspector
+    name: DrawDefaultInspector
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.Repaint
+  commentId: M:UnityEditor.Editor.Repaint
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: Repaint()
+  nameWithType: Editor.Repaint()
+  fullName: UnityEditor.Editor.Repaint()
+  spec.csharp:
+  - uid: UnityEditor.Editor.Repaint
+    name: Repaint
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.Repaint
+    name: Repaint
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.CreateInspectorGUI
+  commentId: M:UnityEditor.Editor.CreateInspectorGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CreateInspectorGUI()
+  nameWithType: Editor.CreateInspectorGUI()
+  fullName: UnityEditor.Editor.CreateInspectorGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.RequiresConstantRepaint
+  commentId: M:UnityEditor.Editor.RequiresConstantRepaint
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: RequiresConstantRepaint()
+  nameWithType: Editor.RequiresConstantRepaint()
+  fullName: UnityEditor.Editor.RequiresConstantRepaint()
+  spec.csharp:
+  - uid: UnityEditor.Editor.RequiresConstantRepaint
+    name: RequiresConstantRepaint
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.RequiresConstantRepaint
+    name: RequiresConstantRepaint
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.DrawHeader
+  commentId: M:UnityEditor.Editor.DrawHeader
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: DrawHeader()
+  nameWithType: Editor.DrawHeader()
+  fullName: UnityEditor.Editor.DrawHeader()
+  spec.csharp:
+  - uid: UnityEditor.Editor.DrawHeader
+    name: DrawHeader
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.DrawHeader
+    name: DrawHeader
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.OnHeaderGUI
+  commentId: M:UnityEditor.Editor.OnHeaderGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnHeaderGUI()
+  nameWithType: Editor.OnHeaderGUI()
+  fullName: UnityEditor.Editor.OnHeaderGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnHeaderGUI
+    name: OnHeaderGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnHeaderGUI
+    name: OnHeaderGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.OnHeaderControlsGUI
+  commentId: M:UnityEditor.Editor.OnHeaderControlsGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnHeaderControlsGUI()
+  nameWithType: Editor.OnHeaderControlsGUI()
+  fullName: UnityEditor.Editor.OnHeaderControlsGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnHeaderControlsGUI
+    name: OnHeaderControlsGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnHeaderControlsGUI
+    name: OnHeaderControlsGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.ShouldHideOpenButton
+  commentId: M:UnityEditor.Editor.ShouldHideOpenButton
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: ShouldHideOpenButton()
+  nameWithType: Editor.ShouldHideOpenButton()
+  fullName: UnityEditor.Editor.ShouldHideOpenButton()
+  spec.csharp:
+  - uid: UnityEditor.Editor.ShouldHideOpenButton
+    name: ShouldHideOpenButton
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.ShouldHideOpenButton
+    name: ShouldHideOpenButton
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.CanOpenMultipleObjects
+  commentId: M:UnityEditor.Editor.CanOpenMultipleObjects
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CanOpenMultipleObjects()
+  nameWithType: Editor.CanOpenMultipleObjects()
+  fullName: UnityEditor.Editor.CanOpenMultipleObjects()
+  spec.csharp:
+  - uid: UnityEditor.Editor.CanOpenMultipleObjects
+    name: CanOpenMultipleObjects
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CanOpenMultipleObjects
+    name: CanOpenMultipleObjects
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.ShouldTryToMakeEditableOnOpen
+  commentId: M:UnityEditor.Editor.ShouldTryToMakeEditableOnOpen
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: ShouldTryToMakeEditableOnOpen()
+  nameWithType: Editor.ShouldTryToMakeEditableOnOpen()
+  fullName: UnityEditor.Editor.ShouldTryToMakeEditableOnOpen()
+  spec.csharp:
+  - uid: UnityEditor.Editor.ShouldTryToMakeEditableOnOpen
+    name: ShouldTryToMakeEditableOnOpen
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.ShouldTryToMakeEditableOnOpen
+    name: ShouldTryToMakeEditableOnOpen
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)
+  commentId: M:UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnHeaderIconGUI(Rect)
+  nameWithType: Editor.OnHeaderIconGUI(Rect)
+  fullName: UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)
+    name: OnHeaderIconGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnHeaderIconGUI(UnityEngine.Rect)
+    name: OnHeaderIconGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect,System.String)
+  commentId: M:UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect,System.String)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnHeaderTitleGUI(Rect, string)
+  nameWithType: Editor.OnHeaderTitleGUI(Rect, string)
+  fullName: UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect, string)
+  nameWithType.vb: Editor.OnHeaderTitleGUI(Rect, String)
+  fullName.vb: UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect, String)
+  name.vb: OnHeaderTitleGUI(Rect, String)
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect,System.String)
+    name: OnHeaderTitleGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnHeaderTitleGUI(UnityEngine.Rect,System.String)
+    name: OnHeaderTitleGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)
+  commentId: M:UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: DrawHeaderHelpAndSettingsGUI(Rect)
+  nameWithType: Editor.DrawHeaderHelpAndSettingsGUI(Rect)
+  fullName: UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)
+  spec.csharp:
+  - uid: UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)
+    name: DrawHeaderHelpAndSettingsGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.DrawHeaderHelpAndSettingsGUI(UnityEngine.Rect)
+    name: DrawHeaderHelpAndSettingsGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
+  commentId: M:UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: DrawFoldoutInspector(Object, ref Editor)
+  nameWithType: Editor.DrawFoldoutInspector(Object, ref Editor)
+  fullName: UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object, ref UnityEditor.Editor)
+  nameWithType.vb: Editor.DrawFoldoutInspector(Object, Editor)
+  fullName.vb: UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object, UnityEditor.Editor)
+  name.vb: DrawFoldoutInspector(Object, Editor)
+  spec.csharp:
+  - uid: UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
+    name: DrawFoldoutInspector
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.DrawFoldoutInspector(UnityEngine.Object,UnityEditor.Editor@)
+    name: DrawFoldoutInspector
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Editor
+    name: Editor
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.HasPreviewGUI
+  commentId: M:UnityEditor.Editor.HasPreviewGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: HasPreviewGUI()
+  nameWithType: Editor.HasPreviewGUI()
+  fullName: UnityEditor.Editor.HasPreviewGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.HasPreviewGUI
+    name: HasPreviewGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.HasPreviewGUI
+    name: HasPreviewGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.GetPreviewTitle
+  commentId: M:UnityEditor.Editor.GetPreviewTitle
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: GetPreviewTitle()
+  nameWithType: Editor.GetPreviewTitle()
+  fullName: UnityEditor.Editor.GetPreviewTitle()
+  spec.csharp:
+  - uid: UnityEditor.Editor.GetPreviewTitle
+    name: GetPreviewTitle
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.GetPreviewTitle
+    name: GetPreviewTitle
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.RenderStaticPreview(System.String,UnityEngine.Object[],System.Int32,System.Int32)
+  commentId: M:UnityEditor.Editor.RenderStaticPreview(System.String,UnityEngine.Object[],System.Int32,System.Int32)
+  parent: UnityEditor.Editor
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: RenderStaticPreview(string, Object[], int, int)
+  nameWithType: Editor.RenderStaticPreview(string, Object[], int, int)
+  fullName: UnityEditor.Editor.RenderStaticPreview(string, UnityEngine.Object[], int, int)
+  nameWithType.vb: Editor.RenderStaticPreview(String, Object(), Integer, Integer)
+  fullName.vb: UnityEditor.Editor.RenderStaticPreview(String, UnityEngine.Object(), Integer, Integer)
+  name.vb: RenderStaticPreview(String, Object(), Integer, Integer)
+  spec.csharp:
+  - uid: UnityEditor.Editor.RenderStaticPreview(System.String,UnityEngine.Object[],System.Int32,System.Int32)
+    name: RenderStaticPreview
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.RenderStaticPreview(System.String,UnityEngine.Object[],System.Int32,System.Int32)
+    name: RenderStaticPreview
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+  commentId: M:UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnPreviewGUI(Rect, GUIStyle)
+  nameWithType: Editor.OnPreviewGUI(Rect, GUIStyle)
+  fullName: UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect, UnityEngine.GUIStyle)
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+    name: OnPreviewGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GUIStyle
+    name: GUIStyle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnPreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+    name: OnPreviewGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GUIStyle
+    name: GUIStyle
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+  commentId: M:UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnInteractivePreviewGUI(Rect, GUIStyle)
+  nameWithType: Editor.OnInteractivePreviewGUI(Rect, GUIStyle)
+  fullName: UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect, UnityEngine.GUIStyle)
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+    name: OnInteractivePreviewGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GUIStyle
+    name: GUIStyle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnInteractivePreviewGUI(UnityEngine.Rect,UnityEngine.GUIStyle)
+    name: OnInteractivePreviewGUI
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GUIStyle
+    name: GUIStyle
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.OnPreviewSettings
+  commentId: M:UnityEditor.Editor.OnPreviewSettings
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnPreviewSettings()
+  nameWithType: Editor.OnPreviewSettings()
+  fullName: UnityEditor.Editor.OnPreviewSettings()
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnPreviewSettings
+    name: OnPreviewSettings
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnPreviewSettings
+    name: OnPreviewSettings
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.GetInfoString
+  commentId: M:UnityEditor.Editor.GetInfoString
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: GetInfoString()
+  nameWithType: Editor.GetInfoString()
+  fullName: UnityEditor.Editor.GetInfoString()
+  spec.csharp:
+  - uid: UnityEditor.Editor.GetInfoString
+    name: GetInfoString
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.GetInfoString
+    name: GetInfoString
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.DrawPreview(UnityEngine.Rect)
+  commentId: M:UnityEditor.Editor.DrawPreview(UnityEngine.Rect)
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: DrawPreview(Rect)
+  nameWithType: Editor.DrawPreview(Rect)
+  fullName: UnityEditor.Editor.DrawPreview(UnityEngine.Rect)
+  spec.csharp:
+  - uid: UnityEditor.Editor.DrawPreview(UnityEngine.Rect)
+    name: DrawPreview
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.DrawPreview(UnityEngine.Rect)
+    name: DrawPreview
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Editor.ReloadPreviewInstances
+  commentId: M:UnityEditor.Editor.ReloadPreviewInstances
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: ReloadPreviewInstances()
+  nameWithType: Editor.ReloadPreviewInstances()
+  fullName: UnityEditor.Editor.ReloadPreviewInstances()
+  spec.csharp:
+  - uid: UnityEditor.Editor.ReloadPreviewInstances
+    name: ReloadPreviewInstances
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.ReloadPreviewInstances
+    name: ReloadPreviewInstances
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.IsEnabled
+  commentId: M:UnityEditor.Editor.IsEnabled
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: IsEnabled()
+  nameWithType: Editor.IsEnabled()
+  fullName: UnityEditor.Editor.IsEnabled()
+  spec.csharp:
+  - uid: UnityEditor.Editor.IsEnabled
+    name: IsEnabled
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.IsEnabled
+    name: IsEnabled
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.UseDefaultMargins
+  commentId: M:UnityEditor.Editor.UseDefaultMargins
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: UseDefaultMargins()
+  nameWithType: Editor.UseDefaultMargins()
+  fullName: UnityEditor.Editor.UseDefaultMargins()
+  spec.csharp:
+  - uid: UnityEditor.Editor.UseDefaultMargins
+    name: UseDefaultMargins
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.UseDefaultMargins
+    name: UseDefaultMargins
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.MoveNextTarget
+  commentId: M:UnityEditor.Editor.MoveNextTarget
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: MoveNextTarget()
+  nameWithType: Editor.MoveNextTarget()
+  fullName: UnityEditor.Editor.MoveNextTarget()
+  spec.csharp:
+  - uid: UnityEditor.Editor.MoveNextTarget
+    name: MoveNextTarget
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.MoveNextTarget
+    name: MoveNextTarget
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.ResetTarget
+  commentId: M:UnityEditor.Editor.ResetTarget
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: ResetTarget()
+  nameWithType: Editor.ResetTarget()
+  fullName: UnityEditor.Editor.ResetTarget()
+  spec.csharp:
+  - uid: UnityEditor.Editor.ResetTarget
+    name: ResetTarget
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.ResetTarget
+    name: ResetTarget
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.OnAssetStoreInspectorGUI
+  commentId: M:UnityEditor.Editor.OnAssetStoreInspectorGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnAssetStoreInspectorGUI()
+  nameWithType: Editor.OnAssetStoreInspectorGUI()
+  fullName: UnityEditor.Editor.OnAssetStoreInspectorGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnAssetStoreInspectorGUI
+    name: OnAssetStoreInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnAssetStoreInspectorGUI
+    name: OnAssetStoreInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#GetInstanceID
+  commentId: M:UnityEditor.Editor.UnityEditor#IToolModeOwner#GetInstanceID
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: IToolModeOwner.GetInstanceID()
+  nameWithType: Editor.IToolModeOwner.GetInstanceID()
+  fullName: UnityEditor.Editor.UnityEditor.IToolModeOwner.GetInstanceID()
+  spec.csharp:
+  - uid: UnityEditor.IToolModeOwner
+    name: IToolModeOwner
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#GetInstanceID
+    name: GetInstanceID
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Editor.preview
+  commentId: P:UnityEditor.Editor.preview
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: preview
+  nameWithType: Editor.preview
+  fullName: UnityEditor.Editor.preview
+- uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#areToolModesAvailable
+  commentId: P:UnityEditor.Editor.UnityEditor#IToolModeOwner#areToolModesAvailable
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: IToolModeOwner.areToolModesAvailable
+  nameWithType: Editor.IToolModeOwner.areToolModesAvailable
+  fullName: UnityEditor.Editor.UnityEditor.IToolModeOwner.areToolModesAvailable
+  nameWithType.vb: Editor.UnityEditor.IToolModeOwner.areToolModesAvailable
+  name.vb: UnityEditor.IToolModeOwner.areToolModesAvailable
+  spec.csharp:
+  - uid: UnityEditor.IToolModeOwner
+    name: IToolModeOwner
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Editor.UnityEditor#IToolModeOwner#areToolModesAvailable
+    name: areToolModesAvailable
+    isExternal: true
+- uid: UnityEditor.Editor.target
+  commentId: P:UnityEditor.Editor.target
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: target
+  nameWithType: Editor.target
+  fullName: UnityEditor.Editor.target
+- uid: UnityEditor.Editor.targets
+  commentId: P:UnityEditor.Editor.targets
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: targets
+  nameWithType: Editor.targets
+  fullName: UnityEditor.Editor.targets
+- uid: UnityEditor.Editor.referenceTargetIndex
+  commentId: P:UnityEditor.Editor.referenceTargetIndex
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: referenceTargetIndex
+  nameWithType: Editor.referenceTargetIndex
+  fullName: UnityEditor.Editor.referenceTargetIndex
+- uid: UnityEditor.Editor.targetTitle
+  commentId: P:UnityEditor.Editor.targetTitle
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: targetTitle
+  nameWithType: Editor.targetTitle
+  fullName: UnityEditor.Editor.targetTitle
+- uid: UnityEditor.Editor.serializedObject
+  commentId: P:UnityEditor.Editor.serializedObject
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: serializedObject
+  nameWithType: Editor.serializedObject
+  fullName: UnityEditor.Editor.serializedObject
+- uid: UnityEditor.Editor.finishedDefaultHeaderGUI
+  commentId: E:UnityEditor.Editor.finishedDefaultHeaderGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: finishedDefaultHeaderGUI
+  nameWithType: Editor.finishedDefaultHeaderGUI
+  fullName: UnityEditor.Editor.finishedDefaultHeaderGUI
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: SamuraiSoccer.SoccerGame.StagePrefabManager
+  commentId: T:SamuraiSoccer.SoccerGame.StagePrefabManager
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.StagePrefabManager.html
+  name: StagePrefabManager
+  nameWithType: StagePrefabManager
+  fullName: SamuraiSoccer.SoccerGame.StagePrefabManager
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.Texture[]
+  isExternal: true
+  name: Texture[]
+  nameWithType: Texture[]
+  fullName: UnityEngine.Texture[]
+  nameWithType.vb: Texture()
+  fullName.vb: UnityEngine.Texture()
+  name.vb: Texture()
+  spec.csharp:
+  - uid: UnityEngine.Texture
+    name: Texture
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Texture
+    name: Texture
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake*
+  commentId: Overload:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake
+  href: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.html#SamuraiSoccer_SoccerGame_EditorExteision_StagePrefabManagerEditor_Awake
+  name: Awake
+  nameWithType: StagePrefabManagerEditor.Awake
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.Awake
+- uid: UnityEditor.Editor.OnInspectorGUI
+  commentId: M:UnityEditor.Editor.OnInspectorGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: OnInspectorGUI()
+  nameWithType: Editor.OnInspectorGUI()
+  fullName: UnityEditor.Editor.OnInspectorGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.OnInspectorGUI
+    name: OnInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.OnInspectorGUI
+    name: OnInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI*
+  commentId: Overload:SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI
+  href: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.html#SamuraiSoccer_SoccerGame_EditorExteision_StagePrefabManagerEditor_OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: StagePrefabManagerEditor.OnInspectorGUI
+  fullName: SamuraiSoccer.SoccerGame.EditorExteision.StagePrefabManagerEditor.OnInspectorGUI

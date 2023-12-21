@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  commentId: T:SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  id: JiangshiSceneManager
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaAngle
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaSize
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_jianshi
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_prefab
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_referee
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeArea
+  - SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeMove
+  langs:
+  - csharp
+  - vb
+  name: JiangshiSceneManager
+  nameWithType: JiangshiSceneManager
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: JiangshiSceneManager
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: 'public class JiangshiSceneManager : MonoBehaviour'
+    content.vb: Public Class JiangshiSceneManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_referee
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_referee
+  id: m_referee
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_referee
+  nameWithType: JiangshiSceneManager.m_referee
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_referee
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_referee
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_referee
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_referee As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_prefab
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_prefab
+  id: m_prefab
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_prefab
+  nameWithType: JiangshiSceneManager.m_prefab
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_prefab
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_prefab
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_prefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_prefab As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_jianshi
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_jianshi
+  id: m_jianshi
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_jianshi
+  nameWithType: JiangshiSceneManager.m_jianshi
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_jianshi
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_jianshi
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private GameObject m_jianshi
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Private m_jianshi As GameObject
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeMove
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeMove
+  id: m_refereeMove
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_refereeMove
+  nameWithType: JiangshiSceneManager.m_refereeMove
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeMove
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_refereeMove
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RefereeMove m_refereeMove
+    return:
+      type: SamuraiSoccer.SoccerGame.RefereeMove
+    content.vb: >-
+      <SerializeField>
+
+      Private m_refereeMove As RefereeMove
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeArea
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeArea
+  id: m_refereeArea
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_refereeArea
+  nameWithType: JiangshiSceneManager.m_refereeArea
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_refereeArea
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_refereeArea
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RefereeArea m_refereeArea
+    return:
+      type: SamuraiSoccer.SoccerGame.RefereeArea
+    content.vb: >-
+      <SerializeField>
+
+      Private m_refereeArea As RefereeArea
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaSize
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaSize
+  id: m_areaSize
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_areaSize
+  nameWithType: JiangshiSceneManager.m_areaSize
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaSize
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_areaSize
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private int m_areaSize
+    return:
+      type: System.Int32
+    content.vb: Private m_areaSize As Integer
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaAngle
+  commentId: F:SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaAngle
+  id: m_areaAngle
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: m_areaAngle
+  nameWithType: JiangshiSceneManager.m_areaAngle
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.m_areaAngle
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_areaAngle
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private int m_areaAngle
+    return:
+      type: System.Int32
+    content.vb: Private m_areaAngle As Integer
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake
+  commentId: M:SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake
+  id: Awake
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: JiangshiSceneManager.Awake()
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake*
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update
+  commentId: M:SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.China.JiangshiSceneManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: JiangshiSceneManager.Update()
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/China/JiangshiSceneManager.cs
+    startLine: 33
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.SoccerGame.RefereeMove
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeMove
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.RefereeMove.html
+  name: RefereeMove
+  nameWithType: RefereeMove
+  fullName: SamuraiSoccer.SoccerGame.RefereeMove
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: SamuraiSoccer.SoccerGame.RefereeArea
+  commentId: T:SamuraiSoccer.SoccerGame.RefereeArea
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.RefereeArea.html
+  name: RefereeArea
+  nameWithType: RefereeArea
+  fullName: SamuraiSoccer.SoccerGame.RefereeArea
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake*
+  commentId: Overload:SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake
+  href: SamuraiSoccer.StageContents.China.JiangshiSceneManager.html#SamuraiSoccer_StageContents_China_JiangshiSceneManager_Awake
+  name: Awake
+  nameWithType: JiangshiSceneManager.Awake
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Awake
+- uid: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update
+  href: SamuraiSoccer.StageContents.China.JiangshiSceneManager.html#SamuraiSoccer_StageContents_China_JiangshiSceneManager_Update
+  name: Update
+  nameWithType: JiangshiSceneManager.Update
+  fullName: SamuraiSoccer.StageContents.China.JiangshiSceneManager.Update

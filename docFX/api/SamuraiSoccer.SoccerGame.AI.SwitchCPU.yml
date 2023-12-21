@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU
+  commentId: T:SamuraiSoccer.SoccerGame.AI.SwitchCPU
+  id: SwitchCPU
+  parent: SamuraiSoccer.SoccerGame.AI
+  children:
+  - SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start
+  - SamuraiSoccer.SoccerGame.AI.SwitchCPU.gameObjectsAndWeight
+  langs:
+  - csharp
+  - vb
+  name: SwitchCPU
+  nameWithType: SwitchCPU
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SwitchCPU
+    path: ../Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: 'public class SwitchCPU : MonoBehaviour'
+    content.vb: Public Class SwitchCPU Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.gameObjectsAndWeight
+  commentId: F:SamuraiSoccer.SoccerGame.AI.SwitchCPU.gameObjectsAndWeight
+  id: gameObjectsAndWeight
+  parent: SamuraiSoccer.SoccerGame.AI.SwitchCPU
+  langs:
+  - csharp
+  - vb
+  name: gameObjectsAndWeight
+  nameWithType: SwitchCPU.gameObjectsAndWeight
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.gameObjectsAndWeight
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: gameObjectsAndWeight
+    path: ../Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public SwitchCPU.WeightSet[] gameObjectsAndWeight
+    return:
+      type: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet[]
+    content.vb: Public gameObjectsAndWeight As SwitchCPU.WeightSet()
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start
+  commentId: M:SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.AI.SwitchCPU
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: SwitchCPU.Start()
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/AI/SwitchCPU.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start*
+references:
+- uid: SamuraiSoccer.SoccerGame.AI
+  commentId: N:SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame.AI
+  nameWithType: SamuraiSoccer.SoccerGame.AI
+  fullName: SamuraiSoccer.SoccerGame.AI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet[]
+  isExternal: true
+  href: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.html
+  name: WeightSet[]
+  nameWithType: SwitchCPU.WeightSet[]
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet[]
+  nameWithType.vb: SwitchCPU.WeightSet()
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet()
+  name.vb: WeightSet()
+  spec.csharp:
+  - uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+    name: WeightSet
+    href: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet
+    name: WeightSet
+    href: SamuraiSoccer.SoccerGame.AI.SwitchCPU.WeightSet.html
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start
+  href: SamuraiSoccer.SoccerGame.AI.SwitchCPU.html#SamuraiSoccer_SoccerGame_AI_SwitchCPU_Start
+  name: Start
+  nameWithType: SwitchCPU.Start
+  fullName: SamuraiSoccer.SoccerGame.AI.SwitchCPU.Start

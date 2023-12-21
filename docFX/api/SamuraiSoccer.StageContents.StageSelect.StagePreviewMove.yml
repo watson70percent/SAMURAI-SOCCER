@@ -1,0 +1,534 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  id: StagePreviewMove
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_currentStagePreviewData
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_previewObject
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_slashSE
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageImage
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageName
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stagePreviewDatas
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageSummary
+  langs:
+  - csharp
+  - vb
+  name: StagePreviewMove
+  nameWithType: StagePreviewMove
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StagePreviewMove
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: 'public class StagePreviewMove : MonoBehaviour'
+    content.vb: Public Class StagePreviewMove Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stagePreviewDatas
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stagePreviewDatas
+  id: m_stagePreviewDatas
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_stagePreviewDatas
+  nameWithType: StagePreviewMove.m_stagePreviewDatas
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stagePreviewDatas
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stagePreviewDatas
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private StagePreviewDatas m_stagePreviewDatas
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stagePreviewDatas As StagePreviewDatas
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_previewObject
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_previewObject
+  id: m_previewObject
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_previewObject
+  nameWithType: StagePreviewMove.m_previewObject
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_previewObject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_previewObject
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_previewObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_previewObject As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageName
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageName
+  id: m_stageName
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_stageName
+  nameWithType: StagePreviewMove.m_stageName
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageName
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_stageName
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stageName As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageSummary
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageSummary
+  id: m_stageSummary
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_stageSummary
+  nameWithType: StagePreviewMove.m_stageSummary
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageSummary
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageSummary
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_stageSummary
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stageSummary As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageImage
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageImage
+  id: m_stageImage
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_stageImage
+  nameWithType: StagePreviewMove.m_stageImage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_stageImage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageImage
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Image m_stageImage
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stageImage As Image
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_currentStagePreviewData
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_currentStagePreviewData
+  id: m_currentStagePreviewData
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_currentStagePreviewData
+  nameWithType: StagePreviewMove.m_currentStagePreviewData
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_currentStagePreviewData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_currentStagePreviewData
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private StagePreviewData m_currentStagePreviewData
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StagePreviewData
+    content.vb: Private m_currentStagePreviewData As StagePreviewData
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_slashSE
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_slashSE
+  id: m_slashSE
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: m_slashSE
+  nameWithType: StagePreviewMove.m_slashSE
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.m_slashSE
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_slashSE
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private int m_slashSE
+    return:
+      type: System.Int32
+    content.vb: Private m_slashSE As Integer
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StagePreviewMove.Start()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start*
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close
+  id: Close
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: StagePreviewMove.Close()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Close
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 44
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: 戻るボタンでPreview表示を閉じる
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close()
+  overload: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close*
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame
+  id: StartGame
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove
+  langs:
+  - csharp
+  - vb
+  name: StartGame()
+  nameWithType: StagePreviewMove.StartGame()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StartGame
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewMove.cs
+    startLine: 53
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: 開戦ボタンで試合Sceneへ遷移
+  example: []
+  syntax:
+    content: public void StartGame()
+    content.vb: Public Sub StartGame()
+  overload: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame*
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas.html
+  name: StagePreviewDatas
+  nameWithType: StagePreviewDatas
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewData
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StagePreviewData
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.StagePreviewData.html
+  name: StagePreviewData
+  nameWithType: StagePreviewData
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start
+  href: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.html#SamuraiSoccer_StageContents_StageSelect_StagePreviewMove_Start
+  name: Start
+  nameWithType: StagePreviewMove.Start
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Start
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close
+  href: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.html#SamuraiSoccer_StageContents_StageSelect_StagePreviewMove_Close
+  name: Close
+  nameWithType: StagePreviewMove.Close
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.Close
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame
+  href: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.html#SamuraiSoccer_StageContents_StageSelect_StagePreviewMove_StartGame
+  name: StartGame
+  nameWithType: StagePreviewMove.StartGame
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewMove.StartGame

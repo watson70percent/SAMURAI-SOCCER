@@ -1,0 +1,1394 @@
+### YamlMime:ManagedReference
+items:
+- uid: Tutorial.Tutorial
+  commentId: T:Tutorial.Tutorial
+  id: Tutorial
+  parent: Tutorial
+  children:
+  - Tutorial.Tutorial.Awake
+  - Tutorial.Tutorial.ChargeAttack(System.Threading.CancellationToken)
+  - Tutorial.Tutorial.CheckChargeAttackTutorialFinished
+  - Tutorial.Tutorial.CheckThreeOnThreeCleared
+  - Tutorial.Tutorial.MinusChargeAttackNum
+  - Tutorial.Tutorial.Opening(System.Threading.CancellationToken)
+  - Tutorial.Tutorial.RetryThreeOnThree(System.Threading.CancellationToken)
+  - Tutorial.Tutorial.Runner(System.Threading.CancellationToken)
+  - Tutorial.Tutorial.Start
+  - Tutorial.Tutorial.ThreeOnThree(System.Threading.CancellationToken)
+  - Tutorial.Tutorial.UIDescription(System.Threading.CancellationToken)
+  - Tutorial.Tutorial.arrowAnimator
+  - Tutorial.Tutorial.ball
+  - Tutorial.Tutorial.chargeAttackText
+  - Tutorial.Tutorial.chargeAttackTutorialFinished
+  - Tutorial.Tutorial.easyCPUManager
+  - Tutorial.Tutorial.enemy
+  - Tutorial.Tutorial.enemyGroup
+  - Tutorial.Tutorial.enemyNumber
+  - Tutorial.Tutorial.exclamationMark
+  - Tutorial.Tutorial.initBallPos
+  - Tutorial.Tutorial.isThreeOnThreeFinished
+  - Tutorial.Tutorial.leftControllerFocusAnimator
+  - Tutorial.Tutorial.referee
+  - Tutorial.Tutorial.remainChargeAttackNum
+  - Tutorial.Tutorial.remainChargeAttackText
+  - Tutorial.Tutorial.rightControllerFocusAnimator
+  - Tutorial.Tutorial.samurai
+  - Tutorial.Tutorial.samuraiCamera
+  - Tutorial.Tutorial.spotCamera
+  - Tutorial.Tutorial.teamGroup
+  - Tutorial.Tutorial.textAnimator
+  - Tutorial.Tutorial.tutorialText
+  - Tutorial.Tutorial.uiMask
+  - Tutorial.Tutorial.whistleSENumber
+  - Tutorial.Tutorial.wholeviewCamera
+  langs:
+  - csharp
+  - vb
+  name: Tutorial
+  nameWithType: Tutorial
+  fullName: Tutorial.Tutorial
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Tutorial
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: 'public class Tutorial : MonoBehaviour'
+    content.vb: Public Class Tutorial Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Tutorial.Tutorial.easyCPUManager
+  commentId: F:Tutorial.Tutorial.easyCPUManager
+  id: easyCPUManager
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: easyCPUManager
+  nameWithType: Tutorial.easyCPUManager
+  fullName: Tutorial.Tutorial.easyCPUManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: easyCPUManager
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public EasyCPUManager easyCPUManager
+    return:
+      type: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+    content.vb: Public easyCPUManager As EasyCPUManager
+- uid: Tutorial.Tutorial.samurai
+  commentId: F:Tutorial.Tutorial.samurai
+  id: samurai
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: samurai
+  nameWithType: Tutorial.samurai
+  fullName: Tutorial.Tutorial.samurai
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: samurai
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject samurai
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public samurai As GameObject
+- uid: Tutorial.Tutorial.referee
+  commentId: F:Tutorial.Tutorial.referee
+  id: referee
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: referee
+  nameWithType: Tutorial.referee
+  fullName: Tutorial.Tutorial.referee
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: referee
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject referee
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public referee As GameObject
+- uid: Tutorial.Tutorial.ball
+  commentId: F:Tutorial.Tutorial.ball
+  id: ball
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: Tutorial.ball
+  fullName: Tutorial.Tutorial.ball
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ball
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject ball
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ball As GameObject
+- uid: Tutorial.Tutorial.enemy
+  commentId: F:Tutorial.Tutorial.enemy
+  id: enemy
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: enemy
+  nameWithType: Tutorial.enemy
+  fullName: Tutorial.Tutorial.enemy
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: enemy
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject enemy
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public enemy As GameObject
+- uid: Tutorial.Tutorial.teamGroup
+  commentId: F:Tutorial.Tutorial.teamGroup
+  id: teamGroup
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: teamGroup
+  nameWithType: Tutorial.teamGroup
+  fullName: Tutorial.Tutorial.teamGroup
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: teamGroup
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject teamGroup
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public teamGroup As GameObject
+- uid: Tutorial.Tutorial.enemyGroup
+  commentId: F:Tutorial.Tutorial.enemyGroup
+  id: enemyGroup
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: enemyGroup
+  nameWithType: Tutorial.enemyGroup
+  fullName: Tutorial.Tutorial.enemyGroup
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: enemyGroup
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject enemyGroup
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public enemyGroup As GameObject
+- uid: Tutorial.Tutorial.tutorialText
+  commentId: F:Tutorial.Tutorial.tutorialText
+  id: tutorialText
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: tutorialText
+  nameWithType: Tutorial.tutorialText
+  fullName: Tutorial.Tutorial.tutorialText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: tutorialText
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Text tutorialText
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: Public tutorialText As Text
+- uid: Tutorial.Tutorial.enemyNumber
+  commentId: F:Tutorial.Tutorial.enemyNumber
+  id: enemyNumber
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: enemyNumber
+  nameWithType: Tutorial.enemyNumber
+  fullName: Tutorial.Tutorial.enemyNumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: enemyNumber
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Text enemyNumber
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: Public enemyNumber As Text
+- uid: Tutorial.Tutorial.textAnimator
+  commentId: F:Tutorial.Tutorial.textAnimator
+  id: textAnimator
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: textAnimator
+  nameWithType: Tutorial.textAnimator
+  fullName: Tutorial.Tutorial.textAnimator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: textAnimator
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Animator textAnimator
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public textAnimator As Animator
+- uid: Tutorial.Tutorial.arrowAnimator
+  commentId: F:Tutorial.Tutorial.arrowAnimator
+  id: arrowAnimator
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: arrowAnimator
+  nameWithType: Tutorial.arrowAnimator
+  fullName: Tutorial.Tutorial.arrowAnimator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: arrowAnimator
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Animator arrowAnimator
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public arrowAnimator As Animator
+- uid: Tutorial.Tutorial.spotCamera
+  commentId: F:Tutorial.Tutorial.spotCamera
+  id: spotCamera
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: spotCamera
+  nameWithType: Tutorial.spotCamera
+  fullName: Tutorial.Tutorial.spotCamera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: spotCamera
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public CinemachineVirtualCamera spotCamera
+    return:
+      type: Cinemachine.CinemachineVirtualCamera
+    content.vb: Public spotCamera As CinemachineVirtualCamera
+- uid: Tutorial.Tutorial.samuraiCamera
+  commentId: F:Tutorial.Tutorial.samuraiCamera
+  id: samuraiCamera
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: samuraiCamera
+  nameWithType: Tutorial.samuraiCamera
+  fullName: Tutorial.Tutorial.samuraiCamera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: samuraiCamera
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public CinemachineVirtualCamera samuraiCamera
+    return:
+      type: Cinemachine.CinemachineVirtualCamera
+    content.vb: Public samuraiCamera As CinemachineVirtualCamera
+- uid: Tutorial.Tutorial.wholeviewCamera
+  commentId: F:Tutorial.Tutorial.wholeviewCamera
+  id: wholeviewCamera
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: wholeviewCamera
+  nameWithType: Tutorial.wholeviewCamera
+  fullName: Tutorial.Tutorial.wholeviewCamera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: wholeviewCamera
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public CinemachineVirtualCamera wholeviewCamera
+    return:
+      type: Cinemachine.CinemachineVirtualCamera
+    content.vb: Public wholeviewCamera As CinemachineVirtualCamera
+- uid: Tutorial.Tutorial.exclamationMark
+  commentId: F:Tutorial.Tutorial.exclamationMark
+  id: exclamationMark
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: exclamationMark
+  nameWithType: Tutorial.exclamationMark
+  fullName: Tutorial.Tutorial.exclamationMark
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: exclamationMark
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 31
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject exclamationMark
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public exclamationMark As GameObject
+- uid: Tutorial.Tutorial.whistleSENumber
+  commentId: F:Tutorial.Tutorial.whistleSENumber
+  id: whistleSENumber
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: whistleSENumber
+  nameWithType: Tutorial.whistleSENumber
+  fullName: Tutorial.Tutorial.whistleSENumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: whistleSENumber
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 33
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: >-
+      [Tooltip("ホイッスル開始音")]
+
+      public int whistleSENumber
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Tooltip("ホイッスル開始音")>
+
+      Public whistleSENumber As Integer
+  attributes:
+  - type: UnityEngine.TooltipAttribute
+    ctor: UnityEngine.TooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ホイッスル開始音
+- uid: Tutorial.Tutorial.remainChargeAttackNum
+  commentId: F:Tutorial.Tutorial.remainChargeAttackNum
+  id: remainChargeAttackNum
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: remainChargeAttackNum
+  nameWithType: Tutorial.remainChargeAttackNum
+  fullName: Tutorial.Tutorial.remainChargeAttackNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: remainChargeAttackNum
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public int remainChargeAttackNum
+    return:
+      type: System.Int32
+    content.vb: Public remainChargeAttackNum As Integer
+- uid: Tutorial.Tutorial.chargeAttackText
+  commentId: F:Tutorial.Tutorial.chargeAttackText
+  id: chargeAttackText
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: chargeAttackText
+  nameWithType: Tutorial.chargeAttackText
+  fullName: Tutorial.Tutorial.chargeAttackText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: chargeAttackText
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 35
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject chargeAttackText
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public chargeAttackText As GameObject
+- uid: Tutorial.Tutorial.remainChargeAttackText
+  commentId: F:Tutorial.Tutorial.remainChargeAttackText
+  id: remainChargeAttackText
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: remainChargeAttackText
+  nameWithType: Tutorial.remainChargeAttackText
+  fullName: Tutorial.Tutorial.remainChargeAttackText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: remainChargeAttackText
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 36
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Text remainChargeAttackText
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: Public remainChargeAttackText As Text
+- uid: Tutorial.Tutorial.uiMask
+  commentId: F:Tutorial.Tutorial.uiMask
+  id: uiMask
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: uiMask
+  nameWithType: Tutorial.uiMask
+  fullName: Tutorial.Tutorial.uiMask
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: uiMask
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 37
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public GameObject uiMask
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public uiMask As GameObject
+- uid: Tutorial.Tutorial.leftControllerFocusAnimator
+  commentId: F:Tutorial.Tutorial.leftControllerFocusAnimator
+  id: leftControllerFocusAnimator
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: leftControllerFocusAnimator
+  nameWithType: Tutorial.leftControllerFocusAnimator
+  fullName: Tutorial.Tutorial.leftControllerFocusAnimator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: leftControllerFocusAnimator
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 38
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Animator leftControllerFocusAnimator
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public leftControllerFocusAnimator As Animator
+- uid: Tutorial.Tutorial.rightControllerFocusAnimator
+  commentId: F:Tutorial.Tutorial.rightControllerFocusAnimator
+  id: rightControllerFocusAnimator
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: rightControllerFocusAnimator
+  nameWithType: Tutorial.rightControllerFocusAnimator
+  fullName: Tutorial.Tutorial.rightControllerFocusAnimator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rightControllerFocusAnimator
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public Animator rightControllerFocusAnimator
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public rightControllerFocusAnimator As Animator
+- uid: Tutorial.Tutorial.isThreeOnThreeFinished
+  commentId: F:Tutorial.Tutorial.isThreeOnThreeFinished
+  id: isThreeOnThreeFinished
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: isThreeOnThreeFinished
+  nameWithType: Tutorial.isThreeOnThreeFinished
+  fullName: Tutorial.Tutorial.isThreeOnThreeFinished
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: isThreeOnThreeFinished
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 41
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private bool isThreeOnThreeFinished
+    return:
+      type: System.Boolean
+    content.vb: Private isThreeOnThreeFinished As Boolean
+- uid: Tutorial.Tutorial.chargeAttackTutorialFinished
+  commentId: F:Tutorial.Tutorial.chargeAttackTutorialFinished
+  id: chargeAttackTutorialFinished
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: chargeAttackTutorialFinished
+  nameWithType: Tutorial.chargeAttackTutorialFinished
+  fullName: Tutorial.Tutorial.chargeAttackTutorialFinished
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: chargeAttackTutorialFinished
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 43
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private bool chargeAttackTutorialFinished
+    return:
+      type: System.Boolean
+    content.vb: Private chargeAttackTutorialFinished As Boolean
+- uid: Tutorial.Tutorial.initBallPos
+  commentId: F:Tutorial.Tutorial.initBallPos
+  id: initBallPos
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: initBallPos
+  nameWithType: Tutorial.initBallPos
+  fullName: Tutorial.Tutorial.initBallPos
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: initBallPos
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 45
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private Vector3 initBallPos
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private initBallPos As Vector3
+- uid: Tutorial.Tutorial.Awake
+  commentId: M:Tutorial.Tutorial.Awake
+  id: Awake
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: Tutorial.Awake()
+  fullName: Tutorial.Tutorial.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 47
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: Tutorial.Tutorial.Awake*
+- uid: Tutorial.Tutorial.Start
+  commentId: M:Tutorial.Tutorial.Start
+  id: Start
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Tutorial.Start()
+  fullName: Tutorial.Tutorial.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 56
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: Tutorial.Tutorial.Start*
+- uid: Tutorial.Tutorial.Runner(System.Threading.CancellationToken)
+  commentId: M:Tutorial.Tutorial.Runner(System.Threading.CancellationToken)
+  id: Runner(System.Threading.CancellationToken)
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: Runner(CancellationToken)
+  nameWithType: Tutorial.Runner(CancellationToken)
+  fullName: Tutorial.Tutorial.Runner(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Runner
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 72
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private UniTask Runner(CancellationToken cancellation_token = default)
+    parameters:
+    - id: cancellation_token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function Runner(cancellation_token As CancellationToken = Nothing) As UniTask
+  overload: Tutorial.Tutorial.Runner*
+- uid: Tutorial.Tutorial.Opening(System.Threading.CancellationToken)
+  commentId: M:Tutorial.Tutorial.Opening(System.Threading.CancellationToken)
+  id: Opening(System.Threading.CancellationToken)
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: Opening(CancellationToken)
+  nameWithType: Tutorial.Opening(CancellationToken)
+  fullName: Tutorial.Tutorial.Opening(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Opening
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 99
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private UniTask Opening(CancellationToken cancellation_token = default)
+    parameters:
+    - id: cancellation_token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function Opening(cancellation_token As CancellationToken = Nothing) As UniTask
+  overload: Tutorial.Tutorial.Opening*
+- uid: Tutorial.Tutorial.ThreeOnThree(System.Threading.CancellationToken)
+  commentId: M:Tutorial.Tutorial.ThreeOnThree(System.Threading.CancellationToken)
+  id: ThreeOnThree(System.Threading.CancellationToken)
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: ThreeOnThree(CancellationToken)
+  nameWithType: Tutorial.ThreeOnThree(CancellationToken)
+  fullName: Tutorial.Tutorial.ThreeOnThree(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ThreeOnThree
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 165
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private UniTask ThreeOnThree(CancellationToken cancellation_token = default)
+    parameters:
+    - id: cancellation_token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function ThreeOnThree(cancellation_token As CancellationToken = Nothing) As UniTask
+  overload: Tutorial.Tutorial.ThreeOnThree*
+- uid: Tutorial.Tutorial.CheckThreeOnThreeCleared
+  commentId: M:Tutorial.Tutorial.CheckThreeOnThreeCleared
+  id: CheckThreeOnThreeCleared
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: CheckThreeOnThreeCleared()
+  nameWithType: Tutorial.CheckThreeOnThreeCleared()
+  fullName: Tutorial.Tutorial.CheckThreeOnThreeCleared()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CheckThreeOnThreeCleared
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 200
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private bool CheckThreeOnThreeCleared()
+    return:
+      type: System.Boolean
+    content.vb: Private Function CheckThreeOnThreeCleared() As Boolean
+  overload: Tutorial.Tutorial.CheckThreeOnThreeCleared*
+- uid: Tutorial.Tutorial.RetryThreeOnThree(System.Threading.CancellationToken)
+  commentId: M:Tutorial.Tutorial.RetryThreeOnThree(System.Threading.CancellationToken)
+  id: RetryThreeOnThree(System.Threading.CancellationToken)
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: RetryThreeOnThree(CancellationToken)
+  nameWithType: Tutorial.RetryThreeOnThree(CancellationToken)
+  fullName: Tutorial.Tutorial.RetryThreeOnThree(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: RetryThreeOnThree
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 209
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private UniTask RetryThreeOnThree(CancellationToken cancellation_token = default)
+    parameters:
+    - id: cancellation_token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function RetryThreeOnThree(cancellation_token As CancellationToken = Nothing) As UniTask
+  overload: Tutorial.Tutorial.RetryThreeOnThree*
+- uid: Tutorial.Tutorial.ChargeAttack(System.Threading.CancellationToken)
+  commentId: M:Tutorial.Tutorial.ChargeAttack(System.Threading.CancellationToken)
+  id: ChargeAttack(System.Threading.CancellationToken)
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: ChargeAttack(CancellationToken)
+  nameWithType: Tutorial.ChargeAttack(CancellationToken)
+  fullName: Tutorial.Tutorial.ChargeAttack(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ChargeAttack
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 246
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private UniTask ChargeAttack(CancellationToken cancellation_token = default)
+    parameters:
+    - id: cancellation_token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function ChargeAttack(cancellation_token As CancellationToken = Nothing) As UniTask
+  overload: Tutorial.Tutorial.ChargeAttack*
+- uid: Tutorial.Tutorial.MinusChargeAttackNum
+  commentId: M:Tutorial.Tutorial.MinusChargeAttackNum
+  id: MinusChargeAttackNum
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: MinusChargeAttackNum()
+  nameWithType: Tutorial.MinusChargeAttackNum()
+  fullName: Tutorial.Tutorial.MinusChargeAttackNum()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: MinusChargeAttackNum
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 291
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public void MinusChargeAttackNum()
+    content.vb: Public Sub MinusChargeAttackNum()
+  overload: Tutorial.Tutorial.MinusChargeAttackNum*
+- uid: Tutorial.Tutorial.CheckChargeAttackTutorialFinished
+  commentId: M:Tutorial.Tutorial.CheckChargeAttackTutorialFinished
+  id: CheckChargeAttackTutorialFinished
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: CheckChargeAttackTutorialFinished()
+  nameWithType: Tutorial.CheckChargeAttackTutorialFinished()
+  fullName: Tutorial.Tutorial.CheckChargeAttackTutorialFinished()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CheckChargeAttackTutorialFinished
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 297
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: public void CheckChargeAttackTutorialFinished()
+    content.vb: Public Sub CheckChargeAttackTutorialFinished()
+  overload: Tutorial.Tutorial.CheckChargeAttackTutorialFinished*
+- uid: Tutorial.Tutorial.UIDescription(System.Threading.CancellationToken)
+  commentId: M:Tutorial.Tutorial.UIDescription(System.Threading.CancellationToken)
+  id: UIDescription(System.Threading.CancellationToken)
+  parent: Tutorial.Tutorial
+  langs:
+  - csharp
+  - vb
+  name: UIDescription(CancellationToken)
+  nameWithType: Tutorial.UIDescription(CancellationToken)
+  fullName: Tutorial.Tutorial.UIDescription(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: UIDescription
+    path: ../Assets/Scripts/StageContents/Tutorial/Tutorial.cs
+    startLine: 306
+  assemblies:
+  - SamuraiSoccer.StageContents.Tutorial
+  namespace: Tutorial
+  syntax:
+    content: private UniTask UIDescription(CancellationToken cancellation_token = default)
+    parameters:
+    - id: cancellation_token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function UIDescription(cancellation_token As CancellationToken = Nothing) As UniTask
+  overload: Tutorial.Tutorial.UIDescription*
+references:
+- uid: Tutorial
+  commentId: N:Tutorial
+  href: Tutorial.html
+  name: Tutorial
+  nameWithType: Tutorial
+  fullName: Tutorial
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  commentId: T:SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  parent: SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html
+  name: EasyCPUManager
+  nameWithType: EasyCPUManager
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+- uid: SamuraiSoccer.SoccerGame.AI
+  commentId: N:SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame.AI
+  nameWithType: SamuraiSoccer.SoccerGame.AI
+  fullName: SamuraiSoccer.SoccerGame.AI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: Cinemachine.CinemachineVirtualCamera
+  commentId: T:Cinemachine.CinemachineVirtualCamera
+  parent: Cinemachine
+  isExternal: true
+  name: CinemachineVirtualCamera
+  nameWithType: CinemachineVirtualCamera
+  fullName: Cinemachine.CinemachineVirtualCamera
+- uid: Cinemachine
+  commentId: N:Cinemachine
+  isExternal: true
+  name: Cinemachine
+  nameWithType: Cinemachine
+  fullName: Cinemachine
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: Tutorial.Tutorial.Awake*
+  commentId: Overload:Tutorial.Tutorial.Awake
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_Awake
+  name: Awake
+  nameWithType: Tutorial.Awake
+  fullName: Tutorial.Tutorial.Awake
+- uid: Tutorial.Tutorial.Start*
+  commentId: Overload:Tutorial.Tutorial.Start
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_Start
+  name: Start
+  nameWithType: Tutorial.Start
+  fullName: Tutorial.Tutorial.Start
+- uid: Tutorial.Tutorial.Runner*
+  commentId: Overload:Tutorial.Tutorial.Runner
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_Runner_System_Threading_CancellationToken_
+  name: Runner
+  nameWithType: Tutorial.Runner
+  fullName: Tutorial.Tutorial.Runner
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Tutorial.Tutorial.Opening*
+  commentId: Overload:Tutorial.Tutorial.Opening
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_Opening_System_Threading_CancellationToken_
+  name: Opening
+  nameWithType: Tutorial.Opening
+  fullName: Tutorial.Tutorial.Opening
+- uid: Tutorial.Tutorial.ThreeOnThree*
+  commentId: Overload:Tutorial.Tutorial.ThreeOnThree
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_ThreeOnThree_System_Threading_CancellationToken_
+  name: ThreeOnThree
+  nameWithType: Tutorial.ThreeOnThree
+  fullName: Tutorial.Tutorial.ThreeOnThree
+- uid: Tutorial.Tutorial.CheckThreeOnThreeCleared*
+  commentId: Overload:Tutorial.Tutorial.CheckThreeOnThreeCleared
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_CheckThreeOnThreeCleared
+  name: CheckThreeOnThreeCleared
+  nameWithType: Tutorial.CheckThreeOnThreeCleared
+  fullName: Tutorial.Tutorial.CheckThreeOnThreeCleared
+- uid: Tutorial.Tutorial.RetryThreeOnThree*
+  commentId: Overload:Tutorial.Tutorial.RetryThreeOnThree
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_RetryThreeOnThree_System_Threading_CancellationToken_
+  name: RetryThreeOnThree
+  nameWithType: Tutorial.RetryThreeOnThree
+  fullName: Tutorial.Tutorial.RetryThreeOnThree
+- uid: Tutorial.Tutorial.ChargeAttack*
+  commentId: Overload:Tutorial.Tutorial.ChargeAttack
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_ChargeAttack_System_Threading_CancellationToken_
+  name: ChargeAttack
+  nameWithType: Tutorial.ChargeAttack
+  fullName: Tutorial.Tutorial.ChargeAttack
+- uid: Tutorial.Tutorial.MinusChargeAttackNum*
+  commentId: Overload:Tutorial.Tutorial.MinusChargeAttackNum
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_MinusChargeAttackNum
+  name: MinusChargeAttackNum
+  nameWithType: Tutorial.MinusChargeAttackNum
+  fullName: Tutorial.Tutorial.MinusChargeAttackNum
+- uid: Tutorial.Tutorial.CheckChargeAttackTutorialFinished*
+  commentId: Overload:Tutorial.Tutorial.CheckChargeAttackTutorialFinished
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_CheckChargeAttackTutorialFinished
+  name: CheckChargeAttackTutorialFinished
+  nameWithType: Tutorial.CheckChargeAttackTutorialFinished
+  fullName: Tutorial.Tutorial.CheckChargeAttackTutorialFinished
+- uid: Tutorial.Tutorial.UIDescription*
+  commentId: Overload:Tutorial.Tutorial.UIDescription
+  href: Tutorial.Tutorial.html#Tutorial_Tutorial_UIDescription_System_Threading_CancellationToken_
+  name: UIDescription
+  nameWithType: Tutorial.UIDescription
+  fullName: Tutorial.Tutorial.UIDescription

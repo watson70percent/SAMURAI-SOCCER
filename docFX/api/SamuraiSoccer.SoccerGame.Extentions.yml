@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.Extentions
+  commentId: T:SamuraiSoccer.SoccerGame.Extentions
+  id: Extentions
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.Extentions.ToVector2(UnityEngine.Transform)
+  - SamuraiSoccer.SoccerGame.Extentions.ToVector2Int(UnityEngine.GameObject)
+  langs:
+  - csharp
+  - vb
+  name: Extentions
+  nameWithType: Extentions
+  fullName: SamuraiSoccer.SoccerGame.Extentions
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Extentions.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Extentions
+    path: ../Assets/Scripts/SoccerGame/Extentions.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static class Extentions
+    content.vb: Public Module Extentions
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.SoccerGame.Extentions.ToVector2Int(UnityEngine.GameObject)
+  commentId: M:SamuraiSoccer.SoccerGame.Extentions.ToVector2Int(UnityEngine.GameObject)
+  id: ToVector2Int(UnityEngine.GameObject)
+  isExtensionMethod: true
+  parent: SamuraiSoccer.SoccerGame.Extentions
+  langs:
+  - csharp
+  - vb
+  name: ToVector2Int(GameObject)
+  nameWithType: Extentions.ToVector2Int(GameObject)
+  fullName: SamuraiSoccer.SoccerGame.Extentions.ToVector2Int(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Extentions.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ToVector2Int
+    path: ../Assets/Scripts/SoccerGame/Extentions.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static Vector2Int ToVector2Int(this GameObject obj)
+    parameters:
+    - id: obj
+      type: UnityEngine.GameObject
+    return:
+      type: UnityEngine.Vector2Int
+    content.vb: Public Shared Function ToVector2Int(obj As GameObject) As Vector2Int
+  overload: SamuraiSoccer.SoccerGame.Extentions.ToVector2Int*
+- uid: SamuraiSoccer.SoccerGame.Extentions.ToVector2(UnityEngine.Transform)
+  commentId: M:SamuraiSoccer.SoccerGame.Extentions.ToVector2(UnityEngine.Transform)
+  id: ToVector2(UnityEngine.Transform)
+  isExtensionMethod: true
+  parent: SamuraiSoccer.SoccerGame.Extentions
+  langs:
+  - csharp
+  - vb
+  name: ToVector2(Transform)
+  nameWithType: Extentions.ToVector2(Transform)
+  fullName: SamuraiSoccer.SoccerGame.Extentions.ToVector2(UnityEngine.Transform)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Extentions.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ToVector2
+    path: ../Assets/Scripts/SoccerGame/Extentions.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static Vector2 ToVector2(this Transform t)
+    parameters:
+    - id: t
+      type: UnityEngine.Transform
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared Function ToVector2(t As Transform) As Vector2
+  overload: SamuraiSoccer.SoccerGame.Extentions.ToVector2*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SamuraiSoccer.SoccerGame.Extentions.ToVector2Int*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Extentions.ToVector2Int
+  href: SamuraiSoccer.SoccerGame.Extentions.html#SamuraiSoccer_SoccerGame_Extentions_ToVector2Int_UnityEngine_GameObject_
+  name: ToVector2Int
+  nameWithType: Extentions.ToVector2Int
+  fullName: SamuraiSoccer.SoccerGame.Extentions.ToVector2Int
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Vector2Int
+  commentId: T:UnityEngine.Vector2Int
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2Int
+  nameWithType: Vector2Int
+  fullName: UnityEngine.Vector2Int
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.Extentions.ToVector2*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Extentions.ToVector2
+  href: SamuraiSoccer.SoccerGame.Extentions.html#SamuraiSoccer_SoccerGame_Extentions_ToVector2_UnityEngine_Transform_
+  name: ToVector2
+  nameWithType: Extentions.ToVector2
+  fullName: SamuraiSoccer.SoccerGame.Extentions.ToVector2
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2

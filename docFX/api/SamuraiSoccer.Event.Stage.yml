@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  id: Stage
+  parent: SamuraiSoccer.Event
+  children:
+  - SamuraiSoccer.Event.Stage.China
+  - SamuraiSoccer.Event.Stage.Japan
+  - SamuraiSoccer.Event.Stage.Russian
+  - SamuraiSoccer.Event.Stage.UK
+  - SamuraiSoccer.Event.Stage.USA
+  - SamuraiSoccer.Event.Stage.World
+  langs:
+  - csharp
+  - vb
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Stage
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 47
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ステージ(国名or全体)
+  example: []
+  syntax:
+    content: public enum Stage
+    content.vb: Public Enum Stage
+- uid: SamuraiSoccer.Event.Stage.World
+  commentId: F:SamuraiSoccer.Event.Stage.World
+  id: World
+  parent: SamuraiSoccer.Event.Stage
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: Stage.World
+  fullName: SamuraiSoccer.Event.Stage.World
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: World
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 49
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: World = 0
+    return:
+      type: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event.Stage.UK
+  commentId: F:SamuraiSoccer.Event.Stage.UK
+  id: UK
+  parent: SamuraiSoccer.Event.Stage
+  langs:
+  - csharp
+  - vb
+  name: UK
+  nameWithType: Stage.UK
+  fullName: SamuraiSoccer.Event.Stage.UK
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: UK
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 50
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: UK = 1
+    return:
+      type: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event.Stage.China
+  commentId: F:SamuraiSoccer.Event.Stage.China
+  id: China
+  parent: SamuraiSoccer.Event.Stage
+  langs:
+  - csharp
+  - vb
+  name: China
+  nameWithType: Stage.China
+  fullName: SamuraiSoccer.Event.Stage.China
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: China
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 51
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: China = 2
+    return:
+      type: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event.Stage.USA
+  commentId: F:SamuraiSoccer.Event.Stage.USA
+  id: USA
+  parent: SamuraiSoccer.Event.Stage
+  langs:
+  - csharp
+  - vb
+  name: USA
+  nameWithType: Stage.USA
+  fullName: SamuraiSoccer.Event.Stage.USA
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: USA
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 52
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: USA = 3
+    return:
+      type: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event.Stage.Russian
+  commentId: F:SamuraiSoccer.Event.Stage.Russian
+  id: Russian
+  parent: SamuraiSoccer.Event.Stage
+  langs:
+  - csharp
+  - vb
+  name: Russian
+  nameWithType: Stage.Russian
+  fullName: SamuraiSoccer.Event.Stage.Russian
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Russian
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 53
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: Russian = 4
+    return:
+      type: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event.Stage.Japan
+  commentId: F:SamuraiSoccer.Event.Stage.Japan
+  id: Japan
+  parent: SamuraiSoccer.Event.Stage
+  langs:
+  - csharp
+  - vb
+  name: Japan
+  nameWithType: Stage.Japan
+  fullName: SamuraiSoccer.Event.Stage.Japan
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Japan
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 54
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: Japan = 5
+    return:
+      type: SamuraiSoccer.Event.Stage
+references:
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage

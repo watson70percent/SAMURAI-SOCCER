@@ -1,0 +1,303 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.CrowdMenber
+  commentId: T:SamuraiSoccer.StageContents.CrowdMenber
+  id: CrowdMenber
+  parent: SamuraiSoccer.StageContents
+  children:
+  - SamuraiSoccer.StageContents.CrowdMenber.Start
+  - SamuraiSoccer.StageContents.CrowdMenber.m_crowdMaterial
+  - SamuraiSoccer.StageContents.CrowdMenber.m_crowdRenderers
+  - SamuraiSoccer.StageContents.CrowdMenber.m_crowdTextures
+  langs:
+  - csharp
+  - vb
+  name: CrowdMenber
+  nameWithType: CrowdMenber
+  fullName: SamuraiSoccer.StageContents.CrowdMenber
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/CrowdMenber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CrowdMenber
+    path: ../Assets/Scripts/StageContents/CrowdMenber.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: 'public class CrowdMenber : MonoBehaviour'
+    content.vb: Public Class CrowdMenber Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.CrowdMenber.m_crowdTextures
+  commentId: F:SamuraiSoccer.StageContents.CrowdMenber.m_crowdTextures
+  id: m_crowdTextures
+  parent: SamuraiSoccer.StageContents.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: m_crowdTextures
+  nameWithType: CrowdMenber.m_crowdTextures
+  fullName: SamuraiSoccer.StageContents.CrowdMenber.m_crowdTextures
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/CrowdMenber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_crowdTextures
+    path: ../Assets/Scripts/StageContents/CrowdMenber.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Texture[] m_crowdTextures
+    return:
+      type: UnityEngine.Texture[]
+    content.vb: >-
+      <SerializeField>
+
+      Private m_crowdTextures As Texture()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.CrowdMenber.m_crowdRenderers
+  commentId: F:SamuraiSoccer.StageContents.CrowdMenber.m_crowdRenderers
+  id: m_crowdRenderers
+  parent: SamuraiSoccer.StageContents.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: m_crowdRenderers
+  nameWithType: CrowdMenber.m_crowdRenderers
+  fullName: SamuraiSoccer.StageContents.CrowdMenber.m_crowdRenderers
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/CrowdMenber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_crowdRenderers
+    path: ../Assets/Scripts/StageContents/CrowdMenber.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Renderer[] m_crowdRenderers
+    return:
+      type: UnityEngine.Renderer[]
+    content.vb: >-
+      <SerializeField>
+
+      Private m_crowdRenderers As Renderer()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.CrowdMenber.m_crowdMaterial
+  commentId: F:SamuraiSoccer.StageContents.CrowdMenber.m_crowdMaterial
+  id: m_crowdMaterial
+  parent: SamuraiSoccer.StageContents.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: m_crowdMaterial
+  nameWithType: CrowdMenber.m_crowdMaterial
+  fullName: SamuraiSoccer.StageContents.CrowdMenber.m_crowdMaterial
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/CrowdMenber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_crowdMaterial
+    path: ../Assets/Scripts/StageContents/CrowdMenber.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Material m_crowdMaterial
+    return:
+      type: UnityEngine.Material
+    content.vb: >-
+      <SerializeField>
+
+      Private m_crowdMaterial As Material
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.CrowdMenber.Start
+  commentId: M:SamuraiSoccer.StageContents.CrowdMenber.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.CrowdMenber
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: CrowdMenber.Start()
+  fullName: SamuraiSoccer.StageContents.CrowdMenber.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/CrowdMenber.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/CrowdMenber.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.CrowdMenber.Start*
+references:
+- uid: SamuraiSoccer.StageContents
+  commentId: N:SamuraiSoccer.StageContents
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents
+  nameWithType: SamuraiSoccer.StageContents
+  fullName: SamuraiSoccer.StageContents
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Texture[]
+  isExternal: true
+  name: Texture[]
+  nameWithType: Texture[]
+  fullName: UnityEngine.Texture[]
+  nameWithType.vb: Texture()
+  fullName.vb: UnityEngine.Texture()
+  name.vb: Texture()
+  spec.csharp:
+  - uid: UnityEngine.Texture
+    name: Texture
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Texture
+    name: Texture
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Renderer[]
+  isExternal: true
+  name: Renderer[]
+  nameWithType: Renderer[]
+  fullName: UnityEngine.Renderer[]
+  nameWithType.vb: Renderer()
+  fullName.vb: UnityEngine.Renderer()
+  name.vb: Renderer()
+  spec.csharp:
+  - uid: UnityEngine.Renderer
+    name: Renderer
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Renderer
+    name: Renderer
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Material
+  commentId: T:UnityEngine.Material
+  parent: UnityEngine
+  isExternal: true
+  name: Material
+  nameWithType: Material
+  fullName: UnityEngine.Material
+- uid: SamuraiSoccer.StageContents.CrowdMenber.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.CrowdMenber.Start
+  href: SamuraiSoccer.StageContents.CrowdMenber.html#SamuraiSoccer_StageContents_CrowdMenber_Start
+  name: Start
+  nameWithType: CrowdMenber.Start
+  fullName: SamuraiSoccer.StageContents.CrowdMenber.Start

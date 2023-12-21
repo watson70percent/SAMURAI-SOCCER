@@ -1,847 +1,1298 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class InGameEvent
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class InGameEvent
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      <title>Class InGameEvent
+ | doc </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InGameEvent
+ | doc ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/watson70percent/SAMURAI-SOCCER/new/docFX/apiSpec/new?filename=SamuraiSoccer_Event_InGameEvent.md&amp;value=---%0Auid%3A%20SamuraiSoccer.Event.InGameEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="doc">
+            doc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SamuraiSoccer.Event.InGameEvent">
-  
-  
-  <h1 id="SamuraiSoccer_Event_InGameEvent" data-uid="SamuraiSoccer.Event.InGameEvent" class="text-break">Class InGameEvent
+
+        <article data-uid="SamuraiSoccer.Event.InGameEvent">
+
+
+
+  <h1 id="SamuraiSoccer_Event_InGameEvent" data-uid="SamuraiSoccer.Event.InGameEvent" class="text-break">
+    Class InGameEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>試合中のイベントを管理</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InGameEvent</span></div>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SamuraiSoccer.html">SamuraiSoccer</a>.<a class="xref" href="SamuraiSoccer.Event.html">Event</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SamuraiSoccer.Event.dll</dd></dl>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SamuraiSoccer.Event.html">SamuraiSoccer.Event</a></h6>
-  <h6><strong>Assembly</strong>: SamuraiSoccer.Event.dll</h6>
-  <h5 id="SamuraiSoccer_Event_InGameEvent_syntax">Syntax</h5>
+
+  <div class="markdown summary"><p>試合中のイベントを管理</p>
+</div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class InGameEvent</code></pre>
   </div>
-  <h3 id="fields">Fields
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InGameEvent</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_finishShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_finishShareObservable">
+  m_finishShareObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_finishShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_finishShareObservable">m_finishShareObservable</h4>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;Unit&gt; m_finishShareObservable</code></pre>
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;Unit&gt; m_finishShareObservable</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_finishSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_finishSubject">m_finishSubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;Unit&gt; m_finishSubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_goalShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_goalShareObservable">m_goalShareObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;Unit&gt; m_goalShareObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_goalSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_goalSubject">m_goalSubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;Unit&gt; m_goalSubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_isPlaying" data-uid="SamuraiSoccer.Event.InGameEvent.m_isPlaying">m_isPlaying</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static bool m_isPlaying</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_pauseShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_pauseShareObservable">m_pauseShareObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;bool&gt; m_pauseShareObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_pauseSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_pauseSubject">m_pauseSubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;bool&gt; m_pauseSubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_penaltySubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_penaltySubject">m_penaltySubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;int&gt; m_penaltySubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_penaltySubjectObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_penaltySubjectObservable">m_penaltySubjectObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;int&gt; m_penaltySubjectObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_playShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_playShareObservable">m_playShareObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;Unit&gt; m_playShareObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_playSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_playSubject">m_playSubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;Unit&gt; m_playSubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_resetShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_resetShareObservable">m_resetShareObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;Unit&gt; m_resetShareObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_resetSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_resetSubject">m_resetSubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;Unit&gt; m_resetSubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_standbyShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_standbyShareObservable">m_standbyShareObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;Unit&gt; m_standbyShareObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_standbySubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_standbySubject">m_standbySubject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static Subject&lt;Unit&gt; m_standbySubject</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniRx.Subject</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="SamuraiSoccer_Event_InGameEvent_m_updateDuringPlayObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_updateDuringPlayObservable">m_updateDuringPlayObservable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static IObservable&lt;long&gt; m_updateDuringPlayObservable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_finishSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_finishSubject">
+  m_finishSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Subject&lt;Unit&gt; m_finishSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_goalShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_goalShareObservable">
+  m_goalShareObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;GoalEventType&gt; m_goalShareObservable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="SamuraiSoccer.Event.GoalEventType.html">GoalEventType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_goalSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_goalSubject">
+  m_goalSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Subject&lt;GoalEventType&gt; m_goalSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<a class="xref" href="SamuraiSoccer.Event.GoalEventType.html">GoalEventType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_isPlaying" data-uid="SamuraiSoccer.Event.InGameEvent.m_isPlaying">
+  m_isPlaying
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static bool m_isPlaying</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_opponentScoreSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_opponentScoreSubject">
+  m_opponentScoreSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static ReactiveProperty&lt;int&gt; m_opponentScoreSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ReactiveProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_pauseShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_pauseShareObservable">
+  m_pauseShareObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;bool&gt; m_pauseShareObservable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_pauseSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_pauseSubject">
+  m_pauseSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Subject&lt;bool&gt; m_pauseSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_penaltySubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_penaltySubject">
+  m_penaltySubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Subject&lt;int&gt; m_penaltySubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_penaltySubjectObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_penaltySubjectObservable">
+  m_penaltySubjectObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;int&gt; m_penaltySubjectObservable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_playShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_playShareObservable">
+  m_playShareObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;Unit&gt; m_playShareObservable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_playSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_playSubject">
+  m_playSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Subject&lt;Unit&gt; m_playSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_resetSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_resetSubject">
+  m_resetSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static ReplaySubject&lt;Unit&gt; m_resetSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ReplaySubject</span>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_standbyShareObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_standbyShareObservable">
+  m_standbyShareObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;bool&gt; m_standbyShareObservable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_standbySubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_standbySubject">
+  m_standbySubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Subject&lt;bool&gt; m_standbySubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Subject</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_teammateScoreSubject" data-uid="SamuraiSoccer.Event.InGameEvent.m_teammateScoreSubject">
+  m_teammateScoreSubject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static ReactiveProperty&lt;int&gt; m_teammateScoreSubject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ReactiveProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_m_updateDuringPlayObservable" data-uid="SamuraiSoccer.Event.InGameEvent.m_updateDuringPlayObservable">
+  m_updateDuringPlayObservable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static IObservable&lt;long&gt; m_updateDuringPlayObservable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Finish_" data-uid="SamuraiSoccer.Event.InGameEvent.Finish*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Finish" data-uid="SamuraiSoccer.Event.InGameEvent.Finish">Finish</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Finish" data-uid="SamuraiSoccer.Event.InGameEvent.Finish">
+  Finish
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>FinishイベントのSubscribe先</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IObservable&lt;Unit&gt; Finish { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Goal_" data-uid="SamuraiSoccer.Event.InGameEvent.Goal*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Goal" data-uid="SamuraiSoccer.Event.InGameEvent.Goal">Goal</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Goal" data-uid="SamuraiSoccer.Event.InGameEvent.Goal">
+  Goal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>GoalイベントのSubscribe先</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IObservable&lt;Unit&gt; Goal { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IObservable&lt;GoalEventType&gt; Goal { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="SamuraiSoccer.Event.GoalEventType.html">GoalEventType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_Event_InGameEvent_OpponentScore_" data-uid="SamuraiSoccer.Event.InGameEvent.OpponentScore*"></a>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_OpponentScore" data-uid="SamuraiSoccer.Event.InGameEvent.OpponentScore">
+  OpponentScore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OpponentScoreイベントのSubscribe先</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IObservable&lt;int&gt; OpponentScore { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Pause_" data-uid="SamuraiSoccer.Event.InGameEvent.Pause*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Pause" data-uid="SamuraiSoccer.Event.InGameEvent.Pause">Pause</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Pause" data-uid="SamuraiSoccer.Event.InGameEvent.Pause">
+  Pause
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>PauseイベントのSubscribe先 true:一時停止, false:解除</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IObservable&lt;bool&gt; Pause { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Penalty_" data-uid="SamuraiSoccer.Event.InGameEvent.Penalty*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Penalty" data-uid="SamuraiSoccer.Event.InGameEvent.Penalty">Penalty</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Penalty" data-uid="SamuraiSoccer.Event.InGameEvent.Penalty">
+  Penalty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>PenaltyイベントのSubscribe先 0:警告, 1:退場</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IObservable&lt;int&gt; Penalty { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Play_" data-uid="SamuraiSoccer.Event.InGameEvent.Play*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Play" data-uid="SamuraiSoccer.Event.InGameEvent.Play">Play</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Play" data-uid="SamuraiSoccer.Event.InGameEvent.Play">
+  Play
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>PlayイベントのSubscribe先</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IObservable&lt;Unit&gt; Play { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Reset_" data-uid="SamuraiSoccer.Event.InGameEvent.Reset*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Reset" data-uid="SamuraiSoccer.Event.InGameEvent.Reset">Reset</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Reset" data-uid="SamuraiSoccer.Event.InGameEvent.Reset">
+  Reset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>ResetイベントのSubscribe先</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IObservable&lt;Unit&gt; Reset { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">Unit</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_Standby_" data-uid="SamuraiSoccer.Event.InGameEvent.Standby*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_Standby" data-uid="SamuraiSoccer.Event.InGameEvent.Standby">Standby</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_Standby" data-uid="SamuraiSoccer.Event.InGameEvent.Standby">
+  Standby
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>StandbyイベントのSubscribe先</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IObservable&lt;Unit&gt; Standby { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IObservable&lt;bool&gt; Standby { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">UniRx.Unit</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_Event_InGameEvent_TeammateScore_" data-uid="SamuraiSoccer.Event.InGameEvent.TeammateScore*"></a>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_TeammateScore" data-uid="SamuraiSoccer.Event.InGameEvent.TeammateScore">
+  TeammateScore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>TeammateScoreイベントのSubscribe先</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IObservable&lt;int&gt; TeammateScore { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_UpdateDuringPlay_" data-uid="SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_UpdateDuringPlay" data-uid="SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay">UpdateDuringPlay</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_UpdateDuringPlay" data-uid="SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay">
+  UpdateDuringPlay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Play中にUpdateタイミングで発行され続けるストリーム</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IObservable&lt;long&gt; UpdateDuringPlay { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_FinishOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.FinishOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_FinishOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.FinishOnNext">FinishOnNext()</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_FinishOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.FinishOnNext">
+  FinishOnNext()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Finishイベントの発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void FinishOnNext()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_GoalOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.GoalOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_GoalOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.GoalOnNext">GoalOnNext()</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_GoalOnNext_SamuraiSoccer_Event_GoalEventType_" data-uid="SamuraiSoccer.Event.InGameEvent.GoalOnNext(SamuraiSoccer.Event.GoalEventType)">
+  GoalOnNext(GoalEventType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Goalイベントの発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void GoalOnNext()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void GoalOnNext(GoalEventType type)</code></pre>
   </div>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="SamuraiSoccer.Event.GoalEventType.html">GoalEventType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_Event_InGameEvent_OpponentScoreOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext*"></a>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_OpponentScoreOnNext_System_Int32_" data-uid="SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext(System.Int32)">
+  OpponentScoreOnNext(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OpponentScoreイベントの発行</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpponentScoreOnNext(int score)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>score</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_PauseOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.PauseOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_PauseOnNext_System_Boolean_" data-uid="SamuraiSoccer.Event.InGameEvent.PauseOnNext(System.Boolean)">PauseOnNext(Boolean)</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_PauseOnNext_System_Boolean_" data-uid="SamuraiSoccer.Event.InGameEvent.PauseOnNext(System.Boolean)">
+  PauseOnNext(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Pauseイベントの発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void PauseOnNext(bool isPause)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isPause</span></td>
-        <td><p>true:一時停止, false:解除</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isPause</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true:一時停止, false:解除</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_PenaltyOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.PenaltyOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_PenaltyOnNext_System_Int32_" data-uid="SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(System.Int32)">PenaltyOnNext(Int32)</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_PenaltyOnNext_System_Int32_" data-uid="SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(System.Int32)">
+  PenaltyOnNext(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Penaltyイベントの発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void PenaltyOnNext(int penaltycount)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">penaltycount</span></td>
-        <td><p>0:警告, 1:退場</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>penaltycount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>0:警告, 1:退場</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_PlayOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.PlayOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_PlayOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.PlayOnNext">PlayOnNext()</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_PlayOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.PlayOnNext">
+  PlayOnNext()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Playイベントを発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void PlayOnNext()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_ResetOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.ResetOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_ResetOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.ResetOnNext">ResetOnNext()</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_ResetOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.ResetOnNext">
+  ResetOnNext()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Resetのイベントを発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void ResetOnNext()</code></pre>
   </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_Event_InGameEvent_ResetResetSubject_" data-uid="SamuraiSoccer.Event.InGameEvent.ResetResetSubject*"></a>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_ResetResetSubject" data-uid="SamuraiSoccer.Event.InGameEvent.ResetResetSubject">
+  ResetResetSubject()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ResetResetSubject()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="SamuraiSoccer_Event_InGameEvent_StandbyOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.StandbyOnNext*"></a>
-  <h4 id="SamuraiSoccer_Event_InGameEvent_StandbyOnNext" data-uid="SamuraiSoccer.Event.InGameEvent.StandbyOnNext">StandbyOnNext()</h4>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_StandbyOnNext_System_Boolean_" data-uid="SamuraiSoccer.Event.InGameEvent.StandbyOnNext(System.Boolean)">
+  StandbyOnNext(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Standbyイベントを発行</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void StandbyOnNext()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StandbyOnNext(bool isTeammateBall = false)</code></pre>
   </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isTeammateBall</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>自チームボールか。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_Event_InGameEvent_TeammateScoreOnNext_" data-uid="SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext*"></a>
+
+  <h3 id="SamuraiSoccer_Event_InGameEvent_TeammateScoreOnNext_System_Int32_" data-uid="SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext(System.Int32)">
+  TeammateScoreOnNext(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>TeammateScoreイベントの発行</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void TeammateScoreOnNext(int score)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>score</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/Event/InGameEvent.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

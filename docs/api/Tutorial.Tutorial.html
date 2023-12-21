@@ -1,483 +1,1267 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Tutorial
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Tutorial
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      <title>Class Tutorial
+ | doc </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Tutorial
+ | doc ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/watson70percent/SAMURAI-SOCCER/new/docFX/apiSpec/new?filename=Tutorial_Tutorial.md&amp;value=---%0Auid%3A%20Tutorial.Tutorial%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="doc">
+            doc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tutorial.Tutorial">
-  
-  
-  <h1 id="Tutorial_Tutorial" data-uid="Tutorial.Tutorial" class="text-break">Class Tutorial
+
+        <article data-uid="Tutorial.Tutorial">
+
+
+
+  <h1 id="Tutorial_Tutorial" data-uid="Tutorial.Tutorial" class="text-break">
+    Class Tutorial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
-    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
-    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">Tutorial</span></div>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Tutorial.html">Tutorial</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SamuraiSoccer.StageContents.Tutorial.dll</dd></dl>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tutorial.html">Tutorial</a></h6>
-  <h6><strong>Assembly</strong>: SamuraiSoccer.StageContents.Tutorial.dll</h6>
-  <h5 id="Tutorial_Tutorial_syntax">Syntax</h5>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class Tutorial : MonoBehaviour</code></pre>
   </div>
-  <h3 id="fields">Fields
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">Tutorial</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Tutorial_Tutorial_arrowAnimator" data-uid="Tutorial.Tutorial.arrowAnimator">
+  arrowAnimator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
-  <h4 id="Tutorial_Tutorial_arrowAnimator" data-uid="Tutorial.Tutorial.arrowAnimator">arrowAnimator</h4>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Animator arrowAnimator</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Animator</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_ball" data-uid="Tutorial.Tutorial.ball">ball</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Animator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_ball" data-uid="Tutorial.Tutorial.ball">
+  ball
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GameObject ball</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_enemy" data-uid="Tutorial.Tutorial.enemy">enemy</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_chargeAttackText" data-uid="Tutorial.Tutorial.chargeAttackText">
+  chargeAttackText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject chargeAttackText</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_chargeAttackTutorialFinished" data-uid="Tutorial.Tutorial.chargeAttackTutorialFinished">
+  chargeAttackTutorialFinished
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool chargeAttackTutorialFinished</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_easyCPUManager" data-uid="Tutorial.Tutorial.easyCPUManager">
+  easyCPUManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EasyCPUManager easyCPUManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html">EasyCPUManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_enemy" data-uid="Tutorial.Tutorial.enemy">
+  enemy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GameObject enemy</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_enemyNumber" data-uid="Tutorial.Tutorial.enemyNumber">enemyNumber</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_enemyGroup" data-uid="Tutorial.Tutorial.enemyGroup">
+  enemyGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject enemyGroup</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_enemyNumber" data-uid="Tutorial.Tutorial.enemyNumber">
+  enemyNumber
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Text enemyNumber</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.UI.Text</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_exclamationMark" data-uid="Tutorial.Tutorial.exclamationMark">exclamationMark</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Text</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_exclamationMark" data-uid="Tutorial.Tutorial.exclamationMark">
+  exclamationMark
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GameObject exclamationMark</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_firstYellowCard" data-uid="Tutorial.Tutorial.firstYellowCard">firstYellowCard</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_initBallPos" data-uid="Tutorial.Tutorial.initBallPos">
+  initBallPos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject firstYellowCard</code></pre>
+    <pre><code class="lang-csharp hljs">private Vector3 initBallPos</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_samurai" data-uid="Tutorial.Tutorial.samurai">samurai</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_isThreeOnThreeFinished" data-uid="Tutorial.Tutorial.isThreeOnThreeFinished">
+  isThreeOnThreeFinished
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool isThreeOnThreeFinished</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_leftControllerFocusAnimator" data-uid="Tutorial.Tutorial.leftControllerFocusAnimator">
+  leftControllerFocusAnimator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Animator leftControllerFocusAnimator</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Animator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_referee" data-uid="Tutorial.Tutorial.referee">
+  referee
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject referee</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_remainChargeAttackNum" data-uid="Tutorial.Tutorial.remainChargeAttackNum">
+  remainChargeAttackNum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int remainChargeAttackNum</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_remainChargeAttackText" data-uid="Tutorial.Tutorial.remainChargeAttackText">
+  remainChargeAttackText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Text remainChargeAttackText</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Text</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_rightControllerFocusAnimator" data-uid="Tutorial.Tutorial.rightControllerFocusAnimator">
+  rightControllerFocusAnimator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Animator rightControllerFocusAnimator</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Animator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_samurai" data-uid="Tutorial.Tutorial.samurai">
+  samurai
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GameObject samurai</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_samuraiCamera" data-uid="Tutorial.Tutorial.samuraiCamera">samuraiCamera</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_samuraiCamera" data-uid="Tutorial.Tutorial.samuraiCamera">
+  samuraiCamera
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CinemachineVirtualCamera samuraiCamera</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cinemachine.CinemachineVirtualCamera</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_spotCamera" data-uid="Tutorial.Tutorial.spotCamera">spotCamera</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">CinemachineVirtualCamera</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_spotCamera" data-uid="Tutorial.Tutorial.spotCamera">
+  spotCamera
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CinemachineVirtualCamera spotCamera</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cinemachine.CinemachineVirtualCamera</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_textAnimator" data-uid="Tutorial.Tutorial.textAnimator">textAnimator</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">CinemachineVirtualCamera</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_teamGroup" data-uid="Tutorial.Tutorial.teamGroup">
+  teamGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject teamGroup</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_textAnimator" data-uid="Tutorial.Tutorial.textAnimator">
+  textAnimator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Animator textAnimator</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Animator</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_timerText" data-uid="Tutorial.Tutorial.timerText">timerText</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Animator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_tutorialText" data-uid="Tutorial.Tutorial.tutorialText">
+  tutorialText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Text timerText</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.UI.Text</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Tutorial_Tutorial_tutorialText" data-uid="Tutorial.Tutorial.tutorialText">tutorialText</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Text tutorialText</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.UI.Text</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Text</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_uiMask" data-uid="Tutorial.Tutorial.uiMask">
+  uiMask
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject uiMask</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_whistleSENumber" data-uid="Tutorial.Tutorial.whistleSENumber">
+  whistleSENumber
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;ホイッスル開始音&quot;)]
+public int whistleSENumber</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Tutorial_Tutorial_wholeviewCamera" data-uid="Tutorial.Tutorial.wholeviewCamera">
+  wholeviewCamera
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CinemachineVirtualCamera wholeviewCamera</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">CinemachineVirtualCamera</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Tutorial_Tutorial_Awake_" data-uid="Tutorial.Tutorial.Awake*"></a>
+
+  <h3 id="Tutorial_Tutorial_Awake" data-uid="Tutorial.Tutorial.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_ChargeAttack_" data-uid="Tutorial.Tutorial.ChargeAttack*"></a>
+
+  <h3 id="Tutorial_Tutorial_ChargeAttack_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.ChargeAttack(System.Threading.CancellationToken)">
+  ChargeAttack(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask ChargeAttack(CancellationToken cancellation_token = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellation_token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_CheckChargeAttackTutorialFinished_" data-uid="Tutorial.Tutorial.CheckChargeAttackTutorialFinished*"></a>
+
+  <h3 id="Tutorial_Tutorial_CheckChargeAttackTutorialFinished" data-uid="Tutorial.Tutorial.CheckChargeAttackTutorialFinished">
+  CheckChargeAttackTutorialFinished()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CheckChargeAttackTutorialFinished()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_CheckThreeOnThreeCleared_" data-uid="Tutorial.Tutorial.CheckThreeOnThreeCleared*"></a>
+
+  <h3 id="Tutorial_Tutorial_CheckThreeOnThreeCleared" data-uid="Tutorial.Tutorial.CheckThreeOnThreeCleared">
+  CheckThreeOnThreeCleared()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool CheckThreeOnThreeCleared()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_MinusChargeAttackNum_" data-uid="Tutorial.Tutorial.MinusChargeAttackNum*"></a>
+
+  <h3 id="Tutorial_Tutorial_MinusChargeAttackNum" data-uid="Tutorial.Tutorial.MinusChargeAttackNum">
+  MinusChargeAttackNum()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MinusChargeAttackNum()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_Opening_" data-uid="Tutorial.Tutorial.Opening*"></a>
+
+  <h3 id="Tutorial_Tutorial_Opening_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.Opening(System.Threading.CancellationToken)">
+  Opening(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask Opening(CancellationToken cancellation_token = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellation_token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_RetryThreeOnThree_" data-uid="Tutorial.Tutorial.RetryThreeOnThree*"></a>
+
+  <h3 id="Tutorial_Tutorial_RetryThreeOnThree_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.RetryThreeOnThree(System.Threading.CancellationToken)">
+  RetryThreeOnThree(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask RetryThreeOnThree(CancellationToken cancellation_token = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellation_token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Tutorial_Tutorial_Runner_" data-uid="Tutorial.Tutorial.Runner*"></a>
-  <h4 id="Tutorial_Tutorial_Runner_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.Runner(System.Threading.CancellationToken)">Runner(CancellationToken)</h4>
+
+  <h3 id="Tutorial_Tutorial_Runner_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.Runner(System.Threading.CancellationToken)">
+  Runner(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">async UniTask Runner(CancellationToken cancellation_token = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">private UniTask Runner(CancellationToken cancellation_token = default)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellation_token</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Cysharp.Threading.Tasks.UniTask</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellation_token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Tutorial_Tutorial_Start_" data-uid="Tutorial.Tutorial.Start*"></a>
-  <h4 id="Tutorial_Tutorial_Start" data-uid="Tutorial.Tutorial.Start">Start()</h4>
+
+  <h3 id="Tutorial_Tutorial_Start" data-uid="Tutorial.Tutorial.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Start()</code></pre>
+    <pre><code class="lang-csharp hljs">private void Start()</code></pre>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_ThreeOnThree_" data-uid="Tutorial.Tutorial.ThreeOnThree*"></a>
+
+  <h3 id="Tutorial_Tutorial_ThreeOnThree_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.ThreeOnThree(System.Threading.CancellationToken)">
+  ThreeOnThree(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask ThreeOnThree(CancellationToken cancellation_token = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellation_token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Tutorial_Tutorial_UIDescription_" data-uid="Tutorial.Tutorial.UIDescription*"></a>
+
+  <h3 id="Tutorial_Tutorial_UIDescription_System_Threading_CancellationToken_" data-uid="Tutorial.Tutorial.UIDescription(System.Threading.CancellationToken)">
+  UIDescription(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask UIDescription(CancellationToken cancellation_token = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellation_token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Tutorial/Tutorial.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

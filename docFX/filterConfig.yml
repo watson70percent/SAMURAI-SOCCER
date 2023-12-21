@@ -1,7 +1,4 @@
 apiRules:
-- include:
-    uidRegex: ^Global
-    type: Namespace
 - exclude:
     uidRegex: ^System\.Object
     type: Type
@@ -31,6 +28,9 @@ apiRules:
       uid: System.ComponentModel.EditorBrowsableAttribute
       ctorArguments:
       - System.ComponentModel.EditorBrowsableState.Never
+- include:
+    uidRegex: ^Global
+    type: Namespace
 attributeRules:
 - exclude:
     uidRegex: ^System\.ComponentModel\.Design$

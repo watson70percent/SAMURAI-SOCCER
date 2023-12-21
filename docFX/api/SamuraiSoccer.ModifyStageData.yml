@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.ModifyStageData
+  commentId: T:SamuraiSoccer.ModifyStageData
+  id: ModifyStageData
+  parent: SamuraiSoccer
+  children:
+  - SamuraiSoccer.ModifyStageData.OnGUI
+  - SamuraiSoccer.ModifyStageData.ShowWindow
+  - SamuraiSoccer.ModifyStageData.m_data
+  langs:
+  - csharp
+  - vb
+  name: ModifyStageData
+  nameWithType: ModifyStageData
+  fullName: SamuraiSoccer.ModifyStageData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Editor/ModifyStageData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ModifyStageData
+    path: ../Assets/Scripts/Editor/ModifyStageData.cs
+    startLine: 8
+  assemblies:
+  - ScriptsEditor
+  namespace: SamuraiSoccer
+  syntax:
+    content: 'public class ModifyStageData : EditorWindow'
+    content.vb: Public Class ModifyStageData Inherits EditorWindow
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.EditorWindow
+- uid: SamuraiSoccer.ModifyStageData.ShowWindow
+  commentId: M:SamuraiSoccer.ModifyStageData.ShowWindow
+  id: ShowWindow
+  parent: SamuraiSoccer.ModifyStageData
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: ModifyStageData.ShowWindow()
+  fullName: SamuraiSoccer.ModifyStageData.ShowWindow()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Editor/ModifyStageData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ShowWindow
+    path: ../Assets/Scripts/Editor/ModifyStageData.cs
+    startLine: 10
+  assemblies:
+  - ScriptsEditor
+  namespace: SamuraiSoccer
+  syntax:
+    content: >-
+      [MenuItem("Custom/Modify stage data")]
+
+      private static void ShowWindow()
+    content.vb: >-
+      <MenuItem("Custom/Modify stage data")>
+
+      Private Shared Sub ShowWindow()
+  overload: SamuraiSoccer.ModifyStageData.ShowWindow*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Custom/Modify stage data
+- uid: SamuraiSoccer.ModifyStageData.m_data
+  commentId: F:SamuraiSoccer.ModifyStageData.m_data
+  id: m_data
+  parent: SamuraiSoccer.ModifyStageData
+  langs:
+  - csharp
+  - vb
+  name: m_data
+  nameWithType: ModifyStageData.m_data
+  fullName: SamuraiSoccer.ModifyStageData.m_data
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Editor/ModifyStageData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_data
+    path: ../Assets/Scripts/Editor/ModifyStageData.cs
+    startLine: 16
+  assemblies:
+  - ScriptsEditor
+  namespace: SamuraiSoccer
+  syntax:
+    content: private SaveData m_data
+    return:
+      type: SamuraiSoccer.SaveData
+    content.vb: Private m_data As SaveData
+- uid: SamuraiSoccer.ModifyStageData.OnGUI
+  commentId: M:SamuraiSoccer.ModifyStageData.OnGUI
+  id: OnGUI
+  parent: SamuraiSoccer.ModifyStageData
+  langs:
+  - csharp
+  - vb
+  name: OnGUI()
+  nameWithType: ModifyStageData.OnGUI()
+  fullName: SamuraiSoccer.ModifyStageData.OnGUI()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Editor/ModifyStageData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnGUI
+    path: ../Assets/Scripts/Editor/ModifyStageData.cs
+    startLine: 18
+  assemblies:
+  - ScriptsEditor
+  namespace: SamuraiSoccer
+  syntax:
+    content: private void OnGUI()
+    content.vb: Private Sub OnGUI()
+  overload: SamuraiSoccer.ModifyStageData.OnGUI*
+references:
+- uid: SamuraiSoccer
+  commentId: N:SamuraiSoccer
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer
+  nameWithType: SamuraiSoccer
+  fullName: SamuraiSoccer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.EditorWindow
+  commentId: T:UnityEditor.EditorWindow
+  parent: UnityEditor
+  isExternal: true
+  name: EditorWindow
+  nameWithType: EditorWindow
+  fullName: UnityEditor.EditorWindow
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: SamuraiSoccer.ModifyStageData.ShowWindow*
+  commentId: Overload:SamuraiSoccer.ModifyStageData.ShowWindow
+  href: SamuraiSoccer.ModifyStageData.html#SamuraiSoccer_ModifyStageData_ShowWindow
+  name: ShowWindow
+  nameWithType: ModifyStageData.ShowWindow
+  fullName: SamuraiSoccer.ModifyStageData.ShowWindow
+- uid: SamuraiSoccer.SaveData
+  commentId: T:SamuraiSoccer.SaveData
+  parent: SamuraiSoccer
+  href: SamuraiSoccer.SaveData.html
+  name: SaveData
+  nameWithType: SaveData
+  fullName: SamuraiSoccer.SaveData
+- uid: SamuraiSoccer.ModifyStageData.OnGUI*
+  commentId: Overload:SamuraiSoccer.ModifyStageData.OnGUI
+  href: SamuraiSoccer.ModifyStageData.html#SamuraiSoccer_ModifyStageData_OnGUI
+  name: OnGUI
+  nameWithType: ModifyStageData.OnGUI
+  fullName: SamuraiSoccer.ModifyStageData.OnGUI

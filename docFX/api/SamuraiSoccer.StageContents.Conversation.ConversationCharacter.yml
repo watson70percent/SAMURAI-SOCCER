@@ -1,0 +1,277 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  commentId: T:SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  id: ConversationCharacter
+  parent: SamuraiSoccer.StageContents.Conversation
+  children:
+  - SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_characterName
+  - SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageAngry
+  - SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageFunny
+  - SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageNormal
+  - SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSad
+  - SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSilhouette
+  langs:
+  - csharp
+  - vb
+  name: ConversationCharacter
+  nameWithType: ConversationCharacter
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ConversationCharacter
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 13
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class ConversationCharacter
+    content.vb: >-
+      <Serializable>
+
+      Public Class ConversationCharacter
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_characterName
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_characterName
+  id: m_characterName
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  langs:
+  - csharp
+  - vb
+  name: m_characterName
+  nameWithType: ConversationCharacter.m_characterName
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_characterName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_characterName
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 16
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public CharacterName m_characterName
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.CharacterName
+    content.vb: Public m_characterName As CharacterName
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageNormal
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageNormal
+  id: m_imageNormal
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  langs:
+  - csharp
+  - vb
+  name: m_imageNormal
+  nameWithType: ConversationCharacter.m_imageNormal
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageNormal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_imageNormal
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 17
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public Sprite m_imageNormal
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public m_imageNormal As Sprite
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSilhouette
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSilhouette
+  id: m_imageSilhouette
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  langs:
+  - csharp
+  - vb
+  name: m_imageSilhouette
+  nameWithType: ConversationCharacter.m_imageSilhouette
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSilhouette
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_imageSilhouette
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 18
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public Sprite m_imageSilhouette
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public m_imageSilhouette As Sprite
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageFunny
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageFunny
+  id: m_imageFunny
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  langs:
+  - csharp
+  - vb
+  name: m_imageFunny
+  nameWithType: ConversationCharacter.m_imageFunny
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageFunny
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_imageFunny
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 19
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public Sprite m_imageFunny
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public m_imageFunny As Sprite
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageAngry
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageAngry
+  id: m_imageAngry
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  langs:
+  - csharp
+  - vb
+  name: m_imageAngry
+  nameWithType: ConversationCharacter.m_imageAngry
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageAngry
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_imageAngry
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 20
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public Sprite m_imageAngry
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public m_imageAngry As Sprite
+- uid: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSad
+  commentId: F:SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSad
+  id: m_imageSad
+  parent: SamuraiSoccer.StageContents.Conversation.ConversationCharacter
+  langs:
+  - csharp
+  - vb
+  name: m_imageSad
+  nameWithType: ConversationCharacter.m_imageSad
+  fullName: SamuraiSoccer.StageContents.Conversation.ConversationCharacter.m_imageSad
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_imageSad
+    path: ../Assets/Scripts/StageContents/Conversation/ConversationCharacters.cs
+    startLine: 21
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public Sprite m_imageSad
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public m_imageSad As Sprite
+references:
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SamuraiSoccer.StageContents.Conversation.CharacterName
+  commentId: T:SamuraiSoccer.StageContents.Conversation.CharacterName
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.CharacterName.html
+  name: CharacterName
+  nameWithType: CharacterName
+  fullName: SamuraiSoccer.StageContents.Conversation.CharacterName
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

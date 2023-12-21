@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.China.SoundBoxUtil
+  commentId: T:SamuraiSoccer.StageContents.China.SoundBoxUtil
+  id: SoundBoxUtil
+  parent: SamuraiSoccer.StageContents.China
+  children:
+  - SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox(UnityEngine.Vector3,UnityEngine.AudioClip)
+  langs:
+  - csharp
+  - vb
+  name: SoundBoxUtil
+  nameWithType: SoundBoxUtil
+  fullName: SamuraiSoccer.StageContents.China.SoundBoxUtil
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/SoundBox.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SoundBoxUtil
+    path: ../Assets/Scripts/StageContents/China/SoundBox.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: 'public class SoundBoxUtil : MonoBehaviour'
+    content.vb: Public Class SoundBoxUtil Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox(UnityEngine.Vector3,UnityEngine.AudioClip)
+  commentId: M:SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox(UnityEngine.Vector3,UnityEngine.AudioClip)
+  id: SetSoundBox(UnityEngine.Vector3,UnityEngine.AudioClip)
+  parent: SamuraiSoccer.StageContents.China.SoundBoxUtil
+  langs:
+  - csharp
+  - vb
+  name: SetSoundBox(Vector3, AudioClip)
+  nameWithType: SoundBoxUtil.SetSoundBox(Vector3, AudioClip)
+  fullName: SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox(UnityEngine.Vector3, UnityEngine.AudioClip)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/China/SoundBox.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetSoundBox
+    path: ../Assets/Scripts/StageContents/China/SoundBox.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.China
+  namespace: SamuraiSoccer.StageContents.China
+  syntax:
+    content: public static void SetSoundBox(Vector3 position, AudioClip clip)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    - id: clip
+      type: UnityEngine.AudioClip
+    content.vb: Public Shared Sub SetSoundBox(position As Vector3, clip As AudioClip)
+  overload: SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox*
+references:
+- uid: SamuraiSoccer.StageContents.China
+  commentId: N:SamuraiSoccer.StageContents.China
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.China
+  nameWithType: SamuraiSoccer.StageContents.China
+  fullName: SamuraiSoccer.StageContents.China
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.China
+    name: China
+    href: SamuraiSoccer.StageContents.China.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox*
+  commentId: Overload:SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox
+  href: SamuraiSoccer.StageContents.China.SoundBoxUtil.html#SamuraiSoccer_StageContents_China_SoundBoxUtil_SetSoundBox_UnityEngine_Vector3_UnityEngine_AudioClip_
+  name: SetSoundBox
+  nameWithType: SoundBoxUtil.SetSoundBox
+  fullName: SamuraiSoccer.StageContents.China.SoundBoxUtil.SetSoundBox
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip

@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Player.PlayerMove.State
+  commentId: T:SamuraiSoccer.Player.PlayerMove.State
+  id: PlayerMove.State
+  parent: SamuraiSoccer.Player
+  children:
+  - SamuraiSoccer.Player.PlayerMove.State.ChargeAttack
+  - SamuraiSoccer.Player.PlayerMove.State.Idle
+  - SamuraiSoccer.Player.PlayerMove.State.Playing
+  - SamuraiSoccer.Player.PlayerMove.State.StandBy
+  langs:
+  - csharp
+  - vb
+  name: PlayerMove.State
+  nameWithType: PlayerMove.State
+  fullName: SamuraiSoccer.Player.PlayerMove.State
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: State
+    path: ../Assets/Scripts/Player/PlayerMove.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private enum PlayerMove.State
+    content.vb: Private Enum PlayerMove.State
+- uid: SamuraiSoccer.Player.PlayerMove.State.StandBy
+  commentId: F:SamuraiSoccer.Player.PlayerMove.State.StandBy
+  id: StandBy
+  parent: SamuraiSoccer.Player.PlayerMove.State
+  langs:
+  - csharp
+  - vb
+  name: StandBy
+  nameWithType: PlayerMove.State.StandBy
+  fullName: SamuraiSoccer.Player.PlayerMove.State.StandBy
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StandBy
+    path: ../Assets/Scripts/Player/PlayerMove.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: StandBy = 0
+    return:
+      type: SamuraiSoccer.Player.PlayerMove.State
+- uid: SamuraiSoccer.Player.PlayerMove.State.Playing
+  commentId: F:SamuraiSoccer.Player.PlayerMove.State.Playing
+  id: Playing
+  parent: SamuraiSoccer.Player.PlayerMove.State
+  langs:
+  - csharp
+  - vb
+  name: Playing
+  nameWithType: PlayerMove.State.Playing
+  fullName: SamuraiSoccer.Player.PlayerMove.State.Playing
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Playing
+    path: ../Assets/Scripts/Player/PlayerMove.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: Playing = 1
+    return:
+      type: SamuraiSoccer.Player.PlayerMove.State
+- uid: SamuraiSoccer.Player.PlayerMove.State.ChargeAttack
+  commentId: F:SamuraiSoccer.Player.PlayerMove.State.ChargeAttack
+  id: ChargeAttack
+  parent: SamuraiSoccer.Player.PlayerMove.State
+  langs:
+  - csharp
+  - vb
+  name: ChargeAttack
+  nameWithType: PlayerMove.State.ChargeAttack
+  fullName: SamuraiSoccer.Player.PlayerMove.State.ChargeAttack
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ChargeAttack
+    path: ../Assets/Scripts/Player/PlayerMove.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: ChargeAttack = 2
+    return:
+      type: SamuraiSoccer.Player.PlayerMove.State
+- uid: SamuraiSoccer.Player.PlayerMove.State.Idle
+  commentId: F:SamuraiSoccer.Player.PlayerMove.State.Idle
+  id: Idle
+  parent: SamuraiSoccer.Player.PlayerMove.State
+  langs:
+  - csharp
+  - vb
+  name: Idle
+  nameWithType: PlayerMove.State.Idle
+  fullName: SamuraiSoccer.Player.PlayerMove.State.Idle
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Player/PlayerMove.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Idle
+    path: ../Assets/Scripts/Player/PlayerMove.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: Idle = 3
+    return:
+      type: SamuraiSoccer.Player.PlayerMove.State
+references:
+- uid: SamuraiSoccer.Player
+  commentId: N:SamuraiSoccer.Player
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Player
+  nameWithType: SamuraiSoccer.Player
+  fullName: SamuraiSoccer.Player
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+- uid: SamuraiSoccer.Player.PlayerMove.State
+  commentId: T:SamuraiSoccer.Player.PlayerMove.State
+  parent: SamuraiSoccer.Player
+  href: SamuraiSoccer.Player.PlayerMove.html
+  name: PlayerMove.State
+  nameWithType: PlayerMove.State
+  fullName: SamuraiSoccer.Player.PlayerMove.State
+  spec.csharp:
+  - uid: SamuraiSoccer.Player.PlayerMove
+    name: PlayerMove
+    href: SamuraiSoccer.Player.PlayerMove.html
+  - name: .
+  - uid: SamuraiSoccer.Player.PlayerMove.State
+    name: State
+    href: SamuraiSoccer.Player.PlayerMove.State.html
+  spec.vb:
+  - uid: SamuraiSoccer.Player.PlayerMove
+    name: PlayerMove
+    href: SamuraiSoccer.Player.PlayerMove.html
+  - name: .
+  - uid: SamuraiSoccer.Player.PlayerMove.State
+    name: State
+    href: SamuraiSoccer.Player.PlayerMove.State.html

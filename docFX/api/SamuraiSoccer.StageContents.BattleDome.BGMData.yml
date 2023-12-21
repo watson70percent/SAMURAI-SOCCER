@@ -1,0 +1,370 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.BattleDome.BGMData
+  commentId: T:SamuraiSoccer.StageContents.BattleDome.BGMData
+  id: BGMData
+  parent: SamuraiSoccer.StageContents.BattleDome
+  children:
+  - SamuraiSoccer.StageContents.BattleDome.BGMData.data
+  - SamuraiSoccer.StageContents.BattleDome.BGMData.f_table
+  - SamuraiSoccer.StageContents.BattleDome.BGMData.time_span
+  langs:
+  - csharp
+  - vb
+  name: BGMData
+  nameWithType: BGMData
+  fullName: SamuraiSoccer.StageContents.BattleDome.BGMData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BGMData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BGMData
+    path: ../Assets/Scripts/StageContents/BattleDome/BGMData.cs
+    startLine: 8
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: >-
+      [Serializable]
+
+      [JsonObject]
+
+      public class BGMData
+    content.vb: >-
+      <Serializable>
+
+      <JsonObject>
+
+      Public Class BGMData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.BattleDome.BGMData.time_span
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BGMData.time_span
+  id: time_span
+  parent: SamuraiSoccer.StageContents.BattleDome.BGMData
+  langs:
+  - csharp
+  - vb
+  name: time_span
+  nameWithType: BGMData.time_span
+  fullName: SamuraiSoccer.StageContents.BattleDome.BGMData.time_span
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BGMData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: time_span
+    path: ../Assets/Scripts/StageContents/BattleDome/BGMData.cs
+    startLine: 13
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: >-
+      [JsonProperty]
+
+      public float time_span
+    return:
+      type: System.Single
+    content.vb: >-
+      <JsonProperty>
+
+      Public time_span As Single
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.BattleDome.BGMData.f_table
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BGMData.f_table
+  id: f_table
+  parent: SamuraiSoccer.StageContents.BattleDome.BGMData
+  langs:
+  - csharp
+  - vb
+  name: f_table
+  nameWithType: BGMData.f_table
+  fullName: SamuraiSoccer.StageContents.BattleDome.BGMData.f_table
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BGMData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: f_table
+    path: ../Assets/Scripts/StageContents/BattleDome/BGMData.cs
+    startLine: 15
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: >-
+      [JsonProperty]
+
+      public List<float> f_table
+    return:
+      type: System.Collections.Generic.List{System.Single}
+    content.vb: >-
+      <JsonProperty>
+
+      Public f_table As List(Of Single)
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.BattleDome.BGMData.data
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BGMData.data
+  id: data
+  parent: SamuraiSoccer.StageContents.BattleDome.BGMData
+  langs:
+  - csharp
+  - vb
+  name: data
+  nameWithType: BGMData.data
+  fullName: SamuraiSoccer.StageContents.BattleDome.BGMData.data
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BGMData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: data
+    path: ../Assets/Scripts/StageContents/BattleDome/BGMData.cs
+    startLine: 17
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: >-
+      [JsonProperty]
+
+      public List<List<float>> data
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}
+    content.vb: >-
+      <JsonProperty>
+
+      Public data As List(Of List(Of Single))
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+references:
+- uid: SamuraiSoccer.StageContents.BattleDome
+  commentId: N:SamuraiSoccer.StageContents.BattleDome
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.BattleDome
+  nameWithType: SamuraiSoccer.StageContents.BattleDome
+  fullName: SamuraiSoccer.StageContents.BattleDome
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattleDome
+    name: BattleDome
+    href: SamuraiSoccer.StageContents.BattleDome.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattleDome
+    name: BattleDome
+    href: SamuraiSoccer.StageContents.BattleDome.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<float>
+  nameWithType: List<float>
+  fullName: System.Collections.Generic.List<float>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<List<float>>
+  nameWithType: List<List<float>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<float>>
+  nameWithType.vb: List(Of List(Of Single))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of Single))
+  name.vb: List(Of List(Of Single))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  - name: )

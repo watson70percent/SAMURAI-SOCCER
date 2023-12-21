@@ -1,0 +1,874 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConversationManager
+ | doc </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConversationManager
+ | doc ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/watson70percent/SAMURAI-SOCCER/new/docFX/apiSpec/new?filename=SamuraiSoccer_StageContents_Conversation_ConversationManager.md&amp;value=---%0Auid%3A%20SamuraiSoccer.StageContents.Conversation.ConversationManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="doc">
+            doc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager">
+
+
+
+  <h1 id="SamuraiSoccer_StageContents_Conversation_ConversationManager" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager" class="text-break">
+    Class ConversationManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SamuraiSoccer.html">SamuraiSoccer</a>.<a class="xref" href="SamuraiSoccer.StageContents.html">StageContents</a>.<a class="xref" href="SamuraiSoccer.StageContents.Conversation.html">Conversation</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Conversation.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConversationManager : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">ConversationManager</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_brushPen" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_brushPen">
+  m_brushPen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private GameObject m_brushPen</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_characterImages" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterImages">
+  m_characterImages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;会話キャラクターの画像(左:0, 右:1)&quot;)]
+private Image[] m_characterImages</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Image</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_characterNameTexts" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_characterNameTexts">
+  m_characterNameTexts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;会話キャラクターの名前(左:0, 右:1)&quot;)]
+private Text[] m_characterNameTexts</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Text</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_conversationCharacters" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationCharacters">
+  m_conversationCharacters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private ConversationCharacters m_conversationCharacters</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.StageContents.Conversation.ConversationCharacters.html">ConversationCharacters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_conversationContents" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationContents">
+  m_conversationContents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;会話文を表示するコンテンツ全体&quot;)]
+private GameObject m_conversationContents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_conversationDatas" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationDatas">
+  m_conversationDatas
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private StageConversationDatas m_conversationDatas</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.StageContents.Conversation.StageConversationDatas.html">StageConversationDatas</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_conversationText" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_conversationText">
+  m_conversationText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private Text m_conversationText</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Text</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_initPos" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_initPos">
+  m_initPos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector3 m_initPos</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_isTouched" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_isTouched">
+  m_isTouched
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool m_isTouched</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_optionYesButtons" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_optionYesButtons">
+  m_optionYesButtons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private List&lt;Button&gt; m_optionYesButtons</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Button</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_provider" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_provider">
+  m_provider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private TouchProvider m_provider</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.UI.TouchProvider.html">TouchProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_scrollObject" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollObject">
+  m_scrollObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private GameObject m_scrollObject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_scrollScript" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_scrollScript">
+  m_scrollScript
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private ScrollScript m_scrollScript</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.UI.ScrollScript.html">ScrollScript</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_textScroller" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_textScroller">
+  m_textScroller
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private TextScroller m_textScroller</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.UI.TextScroller.html">TextScroller</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_m_uiFade" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.m_uiFade">
+  m_uiFade
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+private UIFade m_uiFade</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SamuraiSoccer.UI.UIFade.html">UIFade</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_ActiveTextUI_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_ActiveTextUI_System_Boolean_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.ActiveTextUI(System.Boolean)">
+  ActiveTextUI(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>会話プレハブのテキスト部分のSetActiveを一括で実施する</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ActiveTextUI(bool setActive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setActive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_ChangeCharacterEmotion_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_ChangeCharacterEmotion_UnityEngine_UI_Image_SamuraiSoccer_StageContents_Conversation_CharacterName_SamuraiSoccer_StageContents_Conversation_EmotionType_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.ChangeCharacterEmotion(UnityEngine.UI.Image,SamuraiSoccer.StageContents.Conversation.CharacterName,SamuraiSoccer.StageContents.Conversation.EmotionType)">
+  ChangeCharacterEmotion(Image, CharacterName, EmotionType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>会話キャラクターの画像を適切な感情のものに設定する</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ChangeCharacterEmotion(Image image, CharacterName name, EmotionType emotionType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>image</code> <span class="xref">Image</span></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="SamuraiSoccer.StageContents.Conversation.CharacterName.html">CharacterName</a></dt>
+    <dd></dd>
+    <dt><code>emotionType</code> <a class="xref" href="SamuraiSoccer.StageContents.Conversation.EmotionType.html">EmotionType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_ConversationProcess_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_ConversationProcess_System_Int32_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.ConversationProcess(System.Int32)">
+  ConversationProcess(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>会話分の表示と再生</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask ConversationProcess(int conversatioNum)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conversatioNum</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>再生する会話番号</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_HopImage_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_HopImage_UnityEngine_UI_Image_UnityEngine_Vector3_System_Threading_CancellationToken_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.HopImage(UnityEngine.UI.Image,UnityEngine.Vector3,System.Threading.CancellationToken)">
+  HopImage(Image, Vector3, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private UniTask HopImage(Image image, Vector3 initPos, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>image</code> <span class="xref">Image</span></dt>
+    <dd></dd>
+    <dt><code>initPos</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_PlayConversation_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_PlayConversation_System_Int32_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.PlayConversation(System.Int32)">
+  PlayConversation(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>会話コンテンツの起動</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask PlayConversation(int conversationNum)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conversationNum</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>会話番号</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_SetCharacterInfo_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_SetCharacterInfo_System_Int32_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.SetCharacterInfo(System.Int32)">
+  SetCharacterInfo(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>会話キャラクター情報の追加</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void SetCharacterInfo(int conversationNum)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conversationNum</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>会話番号</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SamuraiSoccer_StageContents_Conversation_ConversationManager_Start_" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.Start*"></a>
+
+  <h3 id="SamuraiSoccer_StageContents_Conversation_ConversationManager_Start" data-uid="SamuraiSoccer.StageContents.Conversation.ConversationManager.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/watson70percent/SAMURAI-SOCCER/blob/docFX/Assets/Scripts/StageContents/Conversation/ConversationManager.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

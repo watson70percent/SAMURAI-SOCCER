@@ -1,0 +1,104 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SaveData
+  commentId: T:SamuraiSoccer.SaveData
+  id: SaveData
+  parent: SamuraiSoccer
+  children:
+  - SamuraiSoccer.SaveData.m_stageData
+  langs:
+  - csharp
+  - vb
+  name: SaveData
+  nameWithType: SaveData
+  fullName: SamuraiSoccer.SaveData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SaveData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SaveData
+    path: ../Assets/Scripts/SaveData.cs
+    startLine: 3
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SaveData
+    content.vb: >-
+      <Serializable>
+
+      Public Class SaveData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SaveData.m_stageData
+  commentId: F:SamuraiSoccer.SaveData.m_stageData
+  id: m_stageData
+  parent: SamuraiSoccer.SaveData
+  langs:
+  - csharp
+  - vb
+  name: m_stageData
+  nameWithType: SaveData.m_stageData
+  fullName: SamuraiSoccer.SaveData.m_stageData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SaveData.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageData
+    path: ../Assets/Scripts/SaveData.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: public int m_stageData
+    return:
+      type: System.Int32
+    content.vb: Public m_stageData As Integer
+references:
+- uid: SamuraiSoccer
+  commentId: N:SamuraiSoccer
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer
+  nameWithType: SamuraiSoccer
+  fullName: SamuraiSoccer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

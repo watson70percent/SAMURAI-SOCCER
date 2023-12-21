@@ -1,0 +1,805 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.Constants
+  commentId: T:SamuraiSoccer.SoccerGame.Constants
+  id: Constants
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.Constants.G2G
+  - SamuraiSoccer.SoccerGame.Constants.OppornentGoalPoint
+  - SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint
+  - SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxX
+  - SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxZ
+  - SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinX
+  - SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinZ
+  - SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent
+  - SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam
+  - SamuraiSoccer.SoccerGame.Constants.OurGoalPoint
+  - SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent
+  - SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam
+  - SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint
+  - SamuraiSoccer.SoccerGame.Constants.Width
+  - SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterOppornent
+  - SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterTeam
+  - SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterOppornent
+  - SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterTeam
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: SamuraiSoccer.SoccerGame.Constants
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Constants
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 定数
+  example: []
+  syntax:
+    content: public static class Constants
+    content.vb: Public Module Constants
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.SoccerGame.Constants.OurGoalPoint
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.OurGoalPoint
+  id: OurGoalPoint
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OurGoalPoint
+  nameWithType: Constants.OurGoalPoint
+  fullName: SamuraiSoccer.SoccerGame.Constants.OurGoalPoint
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OurGoalPoint
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 自陣のゴール
+  example: []
+  syntax:
+    content: public static readonly Vector3 OurGoalPoint
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Shared ReadOnly OurGoalPoint As Vector3
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentGoalPoint
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.OppornentGoalPoint
+  id: OppornentGoalPoint
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentGoalPoint
+  nameWithType: Constants.OppornentGoalPoint
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentGoalPoint
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OppornentGoalPoint
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 相手のゴール
+  example: []
+  syntax:
+    content: public static readonly Vector3 OppornentGoalPoint
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Shared ReadOnly OppornentGoalPoint As Vector3
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinX
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinX
+  id: OppornentSpornRandMinX
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentSpornRandMinX
+  nameWithType: Constants.OppornentSpornRandMinX
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinX
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OppornentSpornRandMinX
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 相手がスポーンするランダム幅
+  example: []
+  syntax:
+    content: public static readonly float OppornentSpornRandMinX
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly OppornentSpornRandMinX As Single
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxX
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxX
+  id: OppornentSpornRandMaxX
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentSpornRandMaxX
+  nameWithType: Constants.OppornentSpornRandMaxX
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxX
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OppornentSpornRandMaxX
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static readonly float OppornentSpornRandMaxX
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly OppornentSpornRandMaxX As Single
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinZ
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinZ
+  id: OppornentSpornRandMinZ
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentSpornRandMinZ
+  nameWithType: Constants.OppornentSpornRandMinZ
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMinZ
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OppornentSpornRandMinZ
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static readonly float OppornentSpornRandMinZ
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly OppornentSpornRandMinZ As Single
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxZ
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxZ
+  id: OppornentSpornRandMaxZ
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentSpornRandMaxZ
+  nameWithType: Constants.OppornentSpornRandMaxZ
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentSpornRandMaxZ
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OppornentSpornRandMaxZ
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public static readonly float OppornentSpornRandMaxZ
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly OppornentSpornRandMaxZ As Single
+- uid: SamuraiSoccer.SoccerGame.Constants.Width
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.Width
+  id: Width
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Constants.Width
+  fullName: SamuraiSoccer.SoccerGame.Constants.Width
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Width
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 37
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: フィールドの幅
+  example: []
+  syntax:
+    content: public static float Width { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property Width As Single
+  overload: SamuraiSoccer.SoccerGame.Constants.Width*
+- uid: SamuraiSoccer.SoccerGame.Constants.G2G
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.G2G
+  id: G2G
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: G2G
+  nameWithType: Constants.G2G
+  fullName: SamuraiSoccer.SoccerGame.Constants.G2G
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: G2G
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ゴール間の距離
+  example: []
+  syntax:
+    content: public static float G2G { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property G2G As Single
+  overload: SamuraiSoccer.SoccerGame.Constants.G2G*
+- uid: SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint
+  id: TeammateSpornPoint
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: TeammateSpornPoint
+  nameWithType: Constants.TeammateSpornPoint
+  fullName: SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TeammateSpornPoint
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 59
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 味方のスポーン地点
+  example: []
+  syntax:
+    content: public static Vector3 TeammateSpornPoint { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Shared ReadOnly Property TeammateSpornPoint As Vector3
+  overload: SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint*
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint
+  id: OppornentSpornPoint
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OppornentSpornPoint
+  nameWithType: Constants.OppornentSpornPoint
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OppornentSpornPoint
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 71
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 相手のスポーン地点
+  example: []
+  syntax:
+    content: public static Vector3 OppornentSpornPoint { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Shared ReadOnly Property OppornentSpornPoint As Vector3
+  overload: SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint*
+- uid: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam
+  id: TeammateInitialSpornPointCenterTeam
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: TeammateInitialSpornPointCenterTeam
+  nameWithType: Constants.TeammateInitialSpornPointCenterTeam
+  fullName: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TeammateInitialSpornPointCenterTeam
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 84
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 味方ボールのときの味方の最初のスポーン場所
+  example: []
+  syntax:
+    content: public static Vector3[] TeammateInitialSpornPointCenterTeam { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3[]
+    content.vb: Public Shared ReadOnly Property TeammateInitialSpornPointCenterTeam As Vector3()
+  overload: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam*
+- uid: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent
+  id: TeammateInitialSpornPointCenterOppornent
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: TeammateInitialSpornPointCenterOppornent
+  nameWithType: Constants.TeammateInitialSpornPointCenterOppornent
+  fullName: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TeammateInitialSpornPointCenterOppornent
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 95
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 相手ボールのときの味方の最初のスポーン場所
+  example: []
+  syntax:
+    content: public static Vector3[] TeammateInitialSpornPointCenterOppornent { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3[]
+    content.vb: Public Shared ReadOnly Property TeammateInitialSpornPointCenterOppornent As Vector3()
+  overload: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent*
+- uid: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam
+  id: OpprnentInitialSpornPointCenterTeam
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OpprnentInitialSpornPointCenterTeam
+  nameWithType: Constants.OpprnentInitialSpornPointCenterTeam
+  fullName: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OpprnentInitialSpornPointCenterTeam
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 106
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 味方ボールのときの相手の最初のスポーン場所
+  example: []
+  syntax:
+    content: public static Vector3[] OpprnentInitialSpornPointCenterTeam { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3[]
+    content.vb: Public Shared ReadOnly Property OpprnentInitialSpornPointCenterTeam As Vector3()
+  overload: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam*
+- uid: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent
+  commentId: P:SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent
+  id: OpprnentInitialSpornPointCenterOppornent
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: OpprnentInitialSpornPointCenterOppornent
+  nameWithType: Constants.OpprnentInitialSpornPointCenterOppornent
+  fullName: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OpprnentInitialSpornPointCenterOppornent
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 117
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 相手ボールのときの相手の最初のスポーン場所
+  example: []
+  syntax:
+    content: public static Vector3[] OpprnentInitialSpornPointCenterOppornent { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3[]
+    content.vb: Public Shared ReadOnly Property OpprnentInitialSpornPointCenterOppornent As Vector3()
+  overload: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent*
+- uid: SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterTeam
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterTeam
+  id: teammateInitialSpornPointCenterTeam
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: teammateInitialSpornPointCenterTeam
+  nameWithType: Constants.teammateInitialSpornPointCenterTeam
+  fullName: SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterTeam
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: teammateInitialSpornPointCenterTeam
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 125
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly IEnumerable<Vector3> teammateInitialSpornPointCenterTeam
+    return:
+      type: System.Collections.Generic.IEnumerable{UnityEngine.Vector3}
+    content.vb: Private Shared ReadOnly teammateInitialSpornPointCenterTeam As IEnumerable(Of Vector3)
+- uid: SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterOppornent
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterOppornent
+  id: teammateInitialSpornPointCenterOppornent
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: teammateInitialSpornPointCenterOppornent
+  nameWithType: Constants.teammateInitialSpornPointCenterOppornent
+  fullName: SamuraiSoccer.SoccerGame.Constants.teammateInitialSpornPointCenterOppornent
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: teammateInitialSpornPointCenterOppornent
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 133
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly IEnumerable<Vector3> teammateInitialSpornPointCenterOppornent
+    return:
+      type: System.Collections.Generic.IEnumerable{UnityEngine.Vector3}
+    content.vb: Private Shared ReadOnly teammateInitialSpornPointCenterOppornent As IEnumerable(Of Vector3)
+- uid: SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterTeam
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterTeam
+  id: oppornentInitialSpornPointCenterTeam
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: oppornentInitialSpornPointCenterTeam
+  nameWithType: Constants.oppornentInitialSpornPointCenterTeam
+  fullName: SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterTeam
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: oppornentInitialSpornPointCenterTeam
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 140
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly IEnumerable<Vector3> oppornentInitialSpornPointCenterTeam
+    return:
+      type: System.Collections.Generic.IEnumerable{UnityEngine.Vector3}
+    content.vb: Private Shared ReadOnly oppornentInitialSpornPointCenterTeam As IEnumerable(Of Vector3)
+- uid: SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterOppornent
+  commentId: F:SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterOppornent
+  id: oppornentInitialSpornPointCenterOppornent
+  parent: SamuraiSoccer.SoccerGame.Constants
+  langs:
+  - csharp
+  - vb
+  name: oppornentInitialSpornPointCenterOppornent
+  nameWithType: Constants.oppornentInitialSpornPointCenterOppornent
+  fullName: SamuraiSoccer.SoccerGame.Constants.oppornentInitialSpornPointCenterOppornent
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Constants.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: oppornentInitialSpornPointCenterOppornent
+    path: ../Assets/Scripts/SoccerGame/Constants.cs
+    startLine: 147
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly IEnumerable<Vector3> oppornentInitialSpornPointCenterOppornent
+    return:
+      type: System.Collections.Generic.IEnumerable{UnityEngine.Vector3}
+    content.vb: Private Shared ReadOnly oppornentInitialSpornPointCenterOppornent As IEnumerable(Of Vector3)
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.SoccerGame.Constants.Width*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.Width
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_Width
+  name: Width
+  nameWithType: Constants.Width
+  fullName: SamuraiSoccer.SoccerGame.Constants.Width
+- uid: SamuraiSoccer.SoccerGame.Constants.G2G*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.G2G
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_G2G
+  name: G2G
+  nameWithType: Constants.G2G
+  fullName: SamuraiSoccer.SoccerGame.Constants.G2G
+- uid: SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_TeammateSpornPoint
+  name: TeammateSpornPoint
+  nameWithType: Constants.TeammateSpornPoint
+  fullName: SamuraiSoccer.SoccerGame.Constants.TeammateSpornPoint
+- uid: SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_OppornentSpornPoint
+  name: OppornentSpornPoint
+  nameWithType: Constants.OppornentSpornPoint
+  fullName: SamuraiSoccer.SoccerGame.Constants.OppornentSpornPoint
+- uid: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_TeammateInitialSpornPointCenterTeam
+  name: TeammateInitialSpornPointCenterTeam
+  nameWithType: Constants.TeammateInitialSpornPointCenterTeam
+  fullName: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterTeam
+- uid: UnityEngine.Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: UnityEngine.Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: UnityEngine.Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_TeammateInitialSpornPointCenterOppornent
+  name: TeammateInitialSpornPointCenterOppornent
+  nameWithType: Constants.TeammateInitialSpornPointCenterOppornent
+  fullName: SamuraiSoccer.SoccerGame.Constants.TeammateInitialSpornPointCenterOppornent
+- uid: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_OpprnentInitialSpornPointCenterTeam
+  name: OpprnentInitialSpornPointCenterTeam
+  nameWithType: Constants.OpprnentInitialSpornPointCenterTeam
+  fullName: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterTeam
+- uid: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent
+  href: SamuraiSoccer.SoccerGame.Constants.html#SamuraiSoccer_SoccerGame_Constants_OpprnentInitialSpornPointCenterOppornent
+  name: OpprnentInitialSpornPointCenterOppornent
+  nameWithType: Constants.OpprnentInitialSpornPointCenterOppornent
+  fullName: SamuraiSoccer.SoccerGame.Constants.OpprnentInitialSpornPointCenterOppornent
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.Vector3}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.Vector3}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Vector3>
+  nameWithType: IEnumerable<Vector3>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.Vector3>
+  nameWithType.vb: IEnumerable(Of Vector3)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.Vector3)
+  name.vb: IEnumerable(Of Vector3)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.HidePanel
+  commentId: T:SamuraiSoccer.UI.HidePanel
+  id: HidePanel
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.HidePanel.Start
+  - SamuraiSoccer.UI.HidePanel.Update
+  - SamuraiSoccer.UI.HidePanel.m_parent
+  - SamuraiSoccer.UI.HidePanel.m_pos
+  langs:
+  - csharp
+  - vb
+  name: HidePanel
+  nameWithType: HidePanel
+  fullName: SamuraiSoccer.UI.HidePanel
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/HidePanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: HidePanel
+    path: ../Assets/Scripts/UI/HidePanel.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: >-
+    巻物の右側をHideパネルで隠しておく
+
+    UIのレンダー順はいじれなかったのでスクリプト側で解決した
+  example: []
+  syntax:
+    content: 'public class HidePanel : MonoBehaviour'
+    content.vb: Public Class HidePanel Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.HidePanel.m_parent
+  commentId: F:SamuraiSoccer.UI.HidePanel.m_parent
+  id: m_parent
+  parent: SamuraiSoccer.UI.HidePanel
+  langs:
+  - csharp
+  - vb
+  name: m_parent
+  nameWithType: HidePanel.m_parent
+  fullName: SamuraiSoccer.UI.HidePanel.m_parent
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/HidePanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_parent
+    path: ../Assets/Scripts/UI/HidePanel.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform m_parent
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private m_parent As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.HidePanel.m_pos
+  commentId: F:SamuraiSoccer.UI.HidePanel.m_pos
+  id: m_pos
+  parent: SamuraiSoccer.UI.HidePanel
+  langs:
+  - csharp
+  - vb
+  name: m_pos
+  nameWithType: HidePanel.m_pos
+  fullName: SamuraiSoccer.UI.HidePanel.m_pos
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/HidePanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_pos
+    path: ../Assets/Scripts/UI/HidePanel.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Vector3 m_pos
+    return:
+      type: UnityEngine.Vector3
+    content.vb: >-
+      <SerializeField>
+
+      Private m_pos As Vector3
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.HidePanel.Start
+  commentId: M:SamuraiSoccer.UI.HidePanel.Start
+  id: Start
+  parent: SamuraiSoccer.UI.HidePanel
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: HidePanel.Start()
+  fullName: SamuraiSoccer.UI.HidePanel.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/HidePanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/HidePanel.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.HidePanel.Start*
+- uid: SamuraiSoccer.UI.HidePanel.Update
+  commentId: M:SamuraiSoccer.UI.HidePanel.Update
+  id: Update
+  parent: SamuraiSoccer.UI.HidePanel
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: HidePanel.Update()
+  fullName: SamuraiSoccer.UI.HidePanel.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/HidePanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/UI/HidePanel.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update()
+  overload: SamuraiSoccer.UI.HidePanel.Update*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.UI.HidePanel.Start*
+  commentId: Overload:SamuraiSoccer.UI.HidePanel.Start
+  href: SamuraiSoccer.UI.HidePanel.html#SamuraiSoccer_UI_HidePanel_Start
+  name: Start
+  nameWithType: HidePanel.Start
+  fullName: SamuraiSoccer.UI.HidePanel.Start
+- uid: SamuraiSoccer.UI.HidePanel.Update*
+  commentId: Overload:SamuraiSoccer.UI.HidePanel.Update
+  href: SamuraiSoccer.UI.HidePanel.html#SamuraiSoccer_UI_HidePanel_Update
+  name: Update
+  nameWithType: HidePanel.Update
+  fullName: SamuraiSoccer.UI.HidePanel.Update

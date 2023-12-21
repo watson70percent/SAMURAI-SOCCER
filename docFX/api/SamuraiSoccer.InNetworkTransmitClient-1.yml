@@ -1,0 +1,1030 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.InNetworkTransmitClient`1
+  commentId: T:SamuraiSoccer.InNetworkTransmitClient`1
+  id: InNetworkTransmitClient`1
+  parent: SamuraiSoccer
+  children:
+  - SamuraiSoccer.InNetworkTransmitClient`1.#ctor
+  - SamuraiSoccer.InNetworkTransmitClient`1.#ctor(System.Net.Http.Headers.HttpRequestHeaders)
+  - SamuraiSoccer.InNetworkTransmitClient`1.Get(System.String)
+  - SamuraiSoccer.InNetworkTransmitClient`1.GetAsync(System.String)
+  - SamuraiSoccer.InNetworkTransmitClient`1.Set(System.String,`0)
+  - SamuraiSoccer.InNetworkTransmitClient`1.SetAsync(System.String,`0)
+  - SamuraiSoccer.InNetworkTransmitClient`1.TryGet(System.String,`0@)
+  - SamuraiSoccer.InNetworkTransmitClient`1.client
+  langs:
+  - csharp
+  - vb
+  name: InNetworkTransmitClient<T>
+  nameWithType: InNetworkTransmitClient<T>
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: InNetworkTransmitClient
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: サーバーとデータを送受信する．
+  example: []
+  syntax:
+    content: 'public class InNetworkTransmitClient<T> : IDataTransmitClient<T>'
+    typeParameters:
+    - id: T
+      description: 受け渡しするデータの型．
+    content.vb: Public Class InNetworkTransmitClient(Of T) Implements IDataTransmitClient(Of T)
+  inheritance:
+  - System.Object
+  implements:
+  - SamuraiSoccer.IDataTransmitClient{{T}}
+  nameWithType.vb: InNetworkTransmitClient(Of T)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T)
+  name.vb: InNetworkTransmitClient(Of T)
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.client
+  commentId: F:SamuraiSoccer.InNetworkTransmitClient`1.client
+  id: client
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: client
+  nameWithType: InNetworkTransmitClient<T>.client
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.client
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: client
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private readonly HttpClient client
+    return:
+      type: System.Net.Http.HttpClient
+    content.vb: Private ReadOnly client As HttpClient
+  nameWithType.vb: InNetworkTransmitClient(Of T).client
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).client
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.#ctor
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.#ctor
+  id: '#ctor'
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: InNetworkTransmitClient()
+  nameWithType: InNetworkTransmitClient<T>.InNetworkTransmitClient()
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.InNetworkTransmitClient()
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: public InNetworkTransmitClient()
+    content.vb: Public Sub New()
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.#ctor*
+  nameWithType.vb: InNetworkTransmitClient(Of T).New()
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).New()
+  name.vb: New()
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.#ctor(System.Net.Http.Headers.HttpRequestHeaders)
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.#ctor(System.Net.Http.Headers.HttpRequestHeaders)
+  id: '#ctor(System.Net.Http.Headers.HttpRequestHeaders)'
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: InNetworkTransmitClient(HttpRequestHeaders)
+  nameWithType: InNetworkTransmitClient<T>.InNetworkTransmitClient(HttpRequestHeaders)
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.InNetworkTransmitClient(System.Net.Http.Headers.HttpRequestHeaders)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: デフォルトのヘッダを指定する際のコンストラクタ．
+  example: []
+  syntax:
+    content: public InNetworkTransmitClient(HttpRequestHeaders defaultHeader)
+    parameters:
+    - id: defaultHeader
+      type: System.Net.Http.Headers.HttpRequestHeaders
+      description: デフォルトのヘッダ．
+    content.vb: Public Sub New(defaultHeader As HttpRequestHeaders)
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.#ctor*
+  nameWithType.vb: InNetworkTransmitClient(Of T).New(HttpRequestHeaders)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).New(System.Net.Http.Headers.HttpRequestHeaders)
+  name.vb: New(HttpRequestHeaders)
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.Get(System.String)
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.Get(System.String)
+  id: Get(System.String)
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: Get(string)
+  nameWithType: InNetworkTransmitClient<T>.Get(string)
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.Get(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Get
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: 使用できません．
+  example: []
+  syntax:
+    content: public T Get(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: '{T}'
+    content.vb: Public Function [Get](key As String) As T
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.Get*
+  implements:
+  - SamuraiSoccer.IDataTransmitClient{{T}}.Get(System.String)
+  nameWithType.vb: InNetworkTransmitClient(Of T).Get(String)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).Get(String)
+  name.vb: Get(String)
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.TryGet(System.String,`0@)
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.TryGet(System.String,`0@)
+  id: TryGet(System.String,`0@)
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: TryGet(string, out T)
+  nameWithType: InNetworkTransmitClient<T>.TryGet(string, out T)
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.TryGet(string, out T)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TryGet
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 40
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: 使用できません．
+  example: []
+  syntax:
+    content: public bool TryGet(string key, out T value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: '{T}'
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGet(key As String, value As T) As Boolean
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.TryGet*
+  implements:
+  - SamuraiSoccer.IDataTransmitClient{{T}}.TryGet(System.String,{T}@)
+  nameWithType.vb: InNetworkTransmitClient(Of T).TryGet(String, T)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).TryGet(String, T)
+  name.vb: TryGet(String, T)
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.Set(System.String,`0)
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.Set(System.String,`0)
+  id: Set(System.String,`0)
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: Set(string, T)
+  nameWithType: InNetworkTransmitClient<T>.Set(string, T)
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.Set(string, T)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Set
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: 使用できません．
+  example: []
+  syntax:
+    content: public void Set(string key, T value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: '{T}'
+    content.vb: Public Sub [Set](key As String, value As T)
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.Set*
+  implements:
+  - SamuraiSoccer.IDataTransmitClient{{T}}.Set(System.String,{T})
+  nameWithType.vb: InNetworkTransmitClient(Of T).Set(String, T)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).Set(String, T)
+  name.vb: Set(String, T)
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.GetAsync(System.String)
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.GetAsync(System.String)
+  id: GetAsync(System.String)
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(string)
+  nameWithType: InNetworkTransmitClient<T>.GetAsync(string)
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.GetAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GetAsync
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 54
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: データを受け取り・受信する．
+  example: []
+  syntax:
+    content: public UniTask<T> GetAsync(string key)
+    parameters:
+    - id: key
+      type: System.String
+      description: 渡すときと共通のキーまたはURL．
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{{T}}
+      description: 受け取ったデータ．
+    content.vb: Public Function GetAsync(key As String) As UniTask(Of T)
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.GetAsync*
+  implements:
+  - SamuraiSoccer.IDataTransmitClient{{T}}.GetAsync(System.String)
+  nameWithType.vb: InNetworkTransmitClient(Of T).GetAsync(String)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).GetAsync(String)
+  name.vb: GetAsync(String)
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.SetAsync(System.String,`0)
+  commentId: M:SamuraiSoccer.InNetworkTransmitClient`1.SetAsync(System.String,`0)
+  id: SetAsync(System.String,`0)
+  parent: SamuraiSoccer.InNetworkTransmitClient`1
+  langs:
+  - csharp
+  - vb
+  name: SetAsync(string, T)
+  nameWithType: InNetworkTransmitClient<T>.SetAsync(string, T)
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.SetAsync(string, T)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/InNetworkTransmitClient.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetAsync
+    path: ../Assets/Scripts/InNetworkTransmitClient.cs
+    startLine: 62
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: データを渡す・送信する．
+  example: []
+  syntax:
+    content: public UniTask SetAsync(string key, T value)
+    parameters:
+    - id: key
+      type: System.String
+      description: 受け取るときと共通のキーまたはURL．
+    - id: value
+      type: '{T}'
+      description: 送るデータ．
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function SetAsync(key As String, value As T) As UniTask
+  overload: SamuraiSoccer.InNetworkTransmitClient`1.SetAsync*
+  implements:
+  - SamuraiSoccer.IDataTransmitClient{{T}}.SetAsync(System.String,{T})
+  nameWithType.vb: InNetworkTransmitClient(Of T).SetAsync(String, T)
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).SetAsync(String, T)
+  name.vb: SetAsync(String, T)
+references:
+- uid: SamuraiSoccer
+  commentId: N:SamuraiSoccer
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer
+  nameWithType: SamuraiSoccer
+  fullName: SamuraiSoccer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SamuraiSoccer.IDataTransmitClient{{T}}
+  commentId: T:SamuraiSoccer.IDataTransmitClient{`0}
+  parent: SamuraiSoccer
+  definition: SamuraiSoccer.IDataTransmitClient`1
+  href: SamuraiSoccer.IDataTransmitClient-1.html
+  name: IDataTransmitClient<T>
+  nameWithType: IDataTransmitClient<T>
+  fullName: SamuraiSoccer.IDataTransmitClient<T>
+  nameWithType.vb: IDataTransmitClient(Of T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T)
+  name.vb: IDataTransmitClient(Of T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1
+    name: IDataTransmitClient
+    href: SamuraiSoccer.IDataTransmitClient-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1
+    name: IDataTransmitClient
+    href: SamuraiSoccer.IDataTransmitClient-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SamuraiSoccer.IDataTransmitClient`1
+  commentId: T:SamuraiSoccer.IDataTransmitClient`1
+  href: SamuraiSoccer.IDataTransmitClient-1.html
+  name: IDataTransmitClient<T>
+  nameWithType: IDataTransmitClient<T>
+  fullName: SamuraiSoccer.IDataTransmitClient<T>
+  nameWithType.vb: IDataTransmitClient(Of T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T)
+  name.vb: IDataTransmitClient(Of T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1
+    name: IDataTransmitClient
+    href: SamuraiSoccer.IDataTransmitClient-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1
+    name: IDataTransmitClient
+    href: SamuraiSoccer.IDataTransmitClient-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.#ctor*
+  commentId: Overload:SamuraiSoccer.InNetworkTransmitClient`1.#ctor
+  href: SamuraiSoccer.InNetworkTransmitClient-1.html#SamuraiSoccer_InNetworkTransmitClient_1__ctor
+  name: InNetworkTransmitClient
+  nameWithType: InNetworkTransmitClient<T>.InNetworkTransmitClient
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.InNetworkTransmitClient
+  nameWithType.vb: InNetworkTransmitClient(Of T).New
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).New
+  name.vb: New
+- uid: System.Net.Http.Headers.HttpRequestHeaders
+  commentId: T:System.Net.Http.Headers.HttpRequestHeaders
+  parent: System.Net.Http.Headers
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.headers.httprequestheaders
+  name: HttpRequestHeaders
+  nameWithType: HttpRequestHeaders
+  fullName: System.Net.Http.Headers.HttpRequestHeaders
+- uid: System.Net.Http.Headers
+  commentId: N:System.Net.Http.Headers
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http.Headers
+  nameWithType: System.Net.Http.Headers
+  fullName: System.Net.Http.Headers
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  - name: .
+  - uid: System.Net.Http.Headers
+    name: Headers
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http.headers
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  - name: .
+  - uid: System.Net.Http.Headers
+    name: Headers
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http.headers
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.Get*
+  commentId: Overload:SamuraiSoccer.InNetworkTransmitClient`1.Get
+  href: SamuraiSoccer.InNetworkTransmitClient-1.html#SamuraiSoccer_InNetworkTransmitClient_1_Get_System_String_
+  name: Get
+  nameWithType: InNetworkTransmitClient<T>.Get
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.Get
+  nameWithType.vb: InNetworkTransmitClient(Of T).Get
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).Get
+- uid: SamuraiSoccer.IDataTransmitClient{{T}}.Get(System.String)
+  commentId: M:SamuraiSoccer.IDataTransmitClient{`0}.Get(System.String)
+  parent: SamuraiSoccer.IDataTransmitClient{{T}}
+  definition: SamuraiSoccer.IDataTransmitClient`1.Get(System.String)
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Get_System_String_
+  name: Get(string)
+  nameWithType: IDataTransmitClient<T>.Get(string)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.Get(string)
+  nameWithType.vb: IDataTransmitClient(Of T).Get(String)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).Get(String)
+  name.vb: Get(String)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.Get(System.String)
+    name: Get
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Get_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.Get(System.String)
+    name: Get
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Get_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: SamuraiSoccer.IDataTransmitClient`1.Get(System.String)
+  commentId: M:SamuraiSoccer.IDataTransmitClient`1.Get(System.String)
+  isExternal: true
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Get_System_String_
+  name: Get(string)
+  nameWithType: IDataTransmitClient<T>.Get(string)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.Get(string)
+  nameWithType.vb: IDataTransmitClient(Of T).Get(String)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).Get(String)
+  name.vb: Get(String)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.Get(System.String)
+    name: Get
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Get_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.Get(System.String)
+    name: Get
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Get_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.TryGet*
+  commentId: Overload:SamuraiSoccer.InNetworkTransmitClient`1.TryGet
+  href: SamuraiSoccer.InNetworkTransmitClient-1.html#SamuraiSoccer_InNetworkTransmitClient_1_TryGet_System_String__0__
+  name: TryGet
+  nameWithType: InNetworkTransmitClient<T>.TryGet
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.TryGet
+  nameWithType.vb: InNetworkTransmitClient(Of T).TryGet
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).TryGet
+- uid: SamuraiSoccer.IDataTransmitClient{{T}}.TryGet(System.String,{T}@)
+  commentId: M:SamuraiSoccer.IDataTransmitClient{`0}.TryGet(System.String,`0@)
+  parent: SamuraiSoccer.IDataTransmitClient{{T}}
+  definition: SamuraiSoccer.IDataTransmitClient`1.TryGet(System.String,`0@)
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_TryGet_System_String__0__
+  name: TryGet(string, out T)
+  nameWithType: IDataTransmitClient<T>.TryGet(string, out T)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.TryGet(string, out T)
+  nameWithType.vb: IDataTransmitClient(Of T).TryGet(String, T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).TryGet(String, T)
+  name.vb: TryGet(String, T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.TryGet(System.String,`0@)
+    name: TryGet
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_TryGet_System_String__0__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.TryGet(System.String,`0@)
+    name: TryGet
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_TryGet_System_String__0__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.IDataTransmitClient`1.TryGet(System.String,`0@)
+  commentId: M:SamuraiSoccer.IDataTransmitClient`1.TryGet(System.String,`0@)
+  isExternal: true
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_TryGet_System_String__0__
+  name: TryGet(string, out T)
+  nameWithType: IDataTransmitClient<T>.TryGet(string, out T)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.TryGet(string, out T)
+  nameWithType.vb: IDataTransmitClient(Of T).TryGet(String, T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).TryGet(String, T)
+  name.vb: TryGet(String, T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.TryGet(System.String,`0@)
+    name: TryGet
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_TryGet_System_String__0__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.TryGet(System.String,`0@)
+    name: TryGet
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_TryGet_System_String__0__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.Set*
+  commentId: Overload:SamuraiSoccer.InNetworkTransmitClient`1.Set
+  href: SamuraiSoccer.InNetworkTransmitClient-1.html#SamuraiSoccer_InNetworkTransmitClient_1_Set_System_String__0_
+  name: Set
+  nameWithType: InNetworkTransmitClient<T>.Set
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.Set
+  nameWithType.vb: InNetworkTransmitClient(Of T).Set
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).Set
+- uid: SamuraiSoccer.IDataTransmitClient{{T}}.Set(System.String,{T})
+  commentId: M:SamuraiSoccer.IDataTransmitClient{`0}.Set(System.String,`0)
+  parent: SamuraiSoccer.IDataTransmitClient{{T}}
+  definition: SamuraiSoccer.IDataTransmitClient`1.Set(System.String,`0)
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Set_System_String__0_
+  name: Set(string, T)
+  nameWithType: IDataTransmitClient<T>.Set(string, T)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.Set(string, T)
+  nameWithType.vb: IDataTransmitClient(Of T).Set(String, T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).Set(String, T)
+  name.vb: Set(String, T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.Set(System.String,`0)
+    name: Set
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Set_System_String__0_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.Set(System.String,`0)
+    name: Set
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Set_System_String__0_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.IDataTransmitClient`1.Set(System.String,`0)
+  commentId: M:SamuraiSoccer.IDataTransmitClient`1.Set(System.String,`0)
+  isExternal: true
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Set_System_String__0_
+  name: Set(string, T)
+  nameWithType: IDataTransmitClient<T>.Set(string, T)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.Set(string, T)
+  nameWithType.vb: IDataTransmitClient(Of T).Set(String, T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).Set(String, T)
+  name.vb: Set(String, T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.Set(System.String,`0)
+    name: Set
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Set_System_String__0_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.Set(System.String,`0)
+    name: Set
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_Set_System_String__0_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.GetAsync*
+  commentId: Overload:SamuraiSoccer.InNetworkTransmitClient`1.GetAsync
+  href: SamuraiSoccer.InNetworkTransmitClient-1.html#SamuraiSoccer_InNetworkTransmitClient_1_GetAsync_System_String_
+  name: GetAsync
+  nameWithType: InNetworkTransmitClient<T>.GetAsync
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.GetAsync
+  nameWithType.vb: InNetworkTransmitClient(Of T).GetAsync
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).GetAsync
+- uid: SamuraiSoccer.IDataTransmitClient{{T}}.GetAsync(System.String)
+  commentId: M:SamuraiSoccer.IDataTransmitClient{`0}.GetAsync(System.String)
+  parent: SamuraiSoccer.IDataTransmitClient{{T}}
+  definition: SamuraiSoccer.IDataTransmitClient`1.GetAsync(System.String)
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_GetAsync_System_String_
+  name: GetAsync(string)
+  nameWithType: IDataTransmitClient<T>.GetAsync(string)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.GetAsync(string)
+  nameWithType.vb: IDataTransmitClient(Of T).GetAsync(String)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).GetAsync(String)
+  name.vb: GetAsync(String)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.GetAsync(System.String)
+    name: GetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_GetAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.GetAsync(System.String)
+    name: GetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_GetAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask{{T}}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{`0}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.IDataTransmitClient`1.GetAsync(System.String)
+  commentId: M:SamuraiSoccer.IDataTransmitClient`1.GetAsync(System.String)
+  isExternal: true
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_GetAsync_System_String_
+  name: GetAsync(string)
+  nameWithType: IDataTransmitClient<T>.GetAsync(string)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.GetAsync(string)
+  nameWithType.vb: IDataTransmitClient(Of T).GetAsync(String)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).GetAsync(String)
+  name.vb: GetAsync(String)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.GetAsync(System.String)
+    name: GetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_GetAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.GetAsync(System.String)
+    name: GetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_GetAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.InNetworkTransmitClient`1.SetAsync*
+  commentId: Overload:SamuraiSoccer.InNetworkTransmitClient`1.SetAsync
+  href: SamuraiSoccer.InNetworkTransmitClient-1.html#SamuraiSoccer_InNetworkTransmitClient_1_SetAsync_System_String__0_
+  name: SetAsync
+  nameWithType: InNetworkTransmitClient<T>.SetAsync
+  fullName: SamuraiSoccer.InNetworkTransmitClient<T>.SetAsync
+  nameWithType.vb: InNetworkTransmitClient(Of T).SetAsync
+  fullName.vb: SamuraiSoccer.InNetworkTransmitClient(Of T).SetAsync
+- uid: SamuraiSoccer.IDataTransmitClient{{T}}.SetAsync(System.String,{T})
+  commentId: M:SamuraiSoccer.IDataTransmitClient{`0}.SetAsync(System.String,`0)
+  parent: SamuraiSoccer.IDataTransmitClient{{T}}
+  definition: SamuraiSoccer.IDataTransmitClient`1.SetAsync(System.String,`0)
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_SetAsync_System_String__0_
+  name: SetAsync(string, T)
+  nameWithType: IDataTransmitClient<T>.SetAsync(string, T)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.SetAsync(string, T)
+  nameWithType.vb: IDataTransmitClient(Of T).SetAsync(String, T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).SetAsync(String, T)
+  name.vb: SetAsync(String, T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.SetAsync(System.String,`0)
+    name: SetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_SetAsync_System_String__0_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient{`0}.SetAsync(System.String,`0)
+    name: SetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_SetAsync_System_String__0_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: SamuraiSoccer.IDataTransmitClient`1.SetAsync(System.String,`0)
+  commentId: M:SamuraiSoccer.IDataTransmitClient`1.SetAsync(System.String,`0)
+  isExternal: true
+  href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_SetAsync_System_String__0_
+  name: SetAsync(string, T)
+  nameWithType: IDataTransmitClient<T>.SetAsync(string, T)
+  fullName: SamuraiSoccer.IDataTransmitClient<T>.SetAsync(string, T)
+  nameWithType.vb: IDataTransmitClient(Of T).SetAsync(String, T)
+  fullName.vb: SamuraiSoccer.IDataTransmitClient(Of T).SetAsync(String, T)
+  name.vb: SetAsync(String, T)
+  spec.csharp:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.SetAsync(System.String,`0)
+    name: SetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_SetAsync_System_String__0_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: SamuraiSoccer.IDataTransmitClient`1.SetAsync(System.String,`0)
+    name: SetAsync
+    href: SamuraiSoccer.IDataTransmitClient-1.html#SamuraiSoccer_IDataTransmitClient_1_SetAsync_System_String__0_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )

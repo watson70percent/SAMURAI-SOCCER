@@ -1,0 +1,1812 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.InGameEvent
+  commentId: T:SamuraiSoccer.Event.InGameEvent
+  id: InGameEvent
+  parent: SamuraiSoccer.Event
+  children:
+  - SamuraiSoccer.Event.InGameEvent.Finish
+  - SamuraiSoccer.Event.InGameEvent.FinishOnNext
+  - SamuraiSoccer.Event.InGameEvent.Goal
+  - SamuraiSoccer.Event.InGameEvent.GoalOnNext(SamuraiSoccer.Event.GoalEventType)
+  - SamuraiSoccer.Event.InGameEvent.OpponentScore
+  - SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext(System.Int32)
+  - SamuraiSoccer.Event.InGameEvent.Pause
+  - SamuraiSoccer.Event.InGameEvent.PauseOnNext(System.Boolean)
+  - SamuraiSoccer.Event.InGameEvent.Penalty
+  - SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(System.Int32)
+  - SamuraiSoccer.Event.InGameEvent.Play
+  - SamuraiSoccer.Event.InGameEvent.PlayOnNext
+  - SamuraiSoccer.Event.InGameEvent.Reset
+  - SamuraiSoccer.Event.InGameEvent.ResetOnNext
+  - SamuraiSoccer.Event.InGameEvent.ResetResetSubject
+  - SamuraiSoccer.Event.InGameEvent.Standby
+  - SamuraiSoccer.Event.InGameEvent.StandbyOnNext(System.Boolean)
+  - SamuraiSoccer.Event.InGameEvent.TeammateScore
+  - SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext(System.Int32)
+  - SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay
+  - SamuraiSoccer.Event.InGameEvent.m_finishShareObservable
+  - SamuraiSoccer.Event.InGameEvent.m_finishSubject
+  - SamuraiSoccer.Event.InGameEvent.m_goalShareObservable
+  - SamuraiSoccer.Event.InGameEvent.m_goalSubject
+  - SamuraiSoccer.Event.InGameEvent.m_isPlaying
+  - SamuraiSoccer.Event.InGameEvent.m_opponentScoreSubject
+  - SamuraiSoccer.Event.InGameEvent.m_pauseShareObservable
+  - SamuraiSoccer.Event.InGameEvent.m_pauseSubject
+  - SamuraiSoccer.Event.InGameEvent.m_penaltySubject
+  - SamuraiSoccer.Event.InGameEvent.m_penaltySubjectObservable
+  - SamuraiSoccer.Event.InGameEvent.m_playShareObservable
+  - SamuraiSoccer.Event.InGameEvent.m_playSubject
+  - SamuraiSoccer.Event.InGameEvent.m_resetSubject
+  - SamuraiSoccer.Event.InGameEvent.m_standbyShareObservable
+  - SamuraiSoccer.Event.InGameEvent.m_standbySubject
+  - SamuraiSoccer.Event.InGameEvent.m_teammateScoreSubject
+  - SamuraiSoccer.Event.InGameEvent.m_updateDuringPlayObservable
+  langs:
+  - csharp
+  - vb
+  name: InGameEvent
+  nameWithType: InGameEvent
+  fullName: SamuraiSoccer.Event.InGameEvent
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: InGameEvent
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: 試合中のイベントを管理
+  example: []
+  syntax:
+    content: public static class InGameEvent
+    content.vb: Public Module InGameEvent
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.Event.InGameEvent.m_isPlaying
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_isPlaying
+  id: m_isPlaying
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_isPlaying
+  nameWithType: InGameEvent.m_isPlaying
+  fullName: SamuraiSoccer.Event.InGameEvent.m_isPlaying
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isPlaying
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static bool m_isPlaying
+    return:
+      type: System.Boolean
+    content.vb: Private Shared m_isPlaying As Boolean
+- uid: SamuraiSoccer.Event.InGameEvent.m_resetSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_resetSubject
+  id: m_resetSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_resetSubject
+  nameWithType: InGameEvent.m_resetSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_resetSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_resetSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReplaySubject<Unit> m_resetSubject
+    return:
+      type: UniRx.ReplaySubject{UniRx.Unit}
+    content.vb: Private Shared m_resetSubject As ReplaySubject(Of Unit)
+- uid: SamuraiSoccer.Event.InGameEvent.Reset
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Reset
+  id: Reset
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Reset
+  nameWithType: InGameEvent.Reset
+  fullName: SamuraiSoccer.Event.InGameEvent.Reset
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Reset
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ResetイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<Unit> Reset { get; }
+    parameters: []
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Public Shared ReadOnly Property Reset As IObservable(Of Unit)
+  overload: SamuraiSoccer.Event.InGameEvent.Reset*
+- uid: SamuraiSoccer.Event.InGameEvent.ResetOnNext
+  commentId: M:SamuraiSoccer.Event.InGameEvent.ResetOnNext
+  id: ResetOnNext
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: ResetOnNext()
+  nameWithType: InGameEvent.ResetOnNext()
+  fullName: SamuraiSoccer.Event.InGameEvent.ResetOnNext()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResetOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Resetのイベントを発行
+  example: []
+  syntax:
+    content: public static void ResetOnNext()
+    content.vb: Public Shared Sub ResetOnNext()
+  overload: SamuraiSoccer.Event.InGameEvent.ResetOnNext*
+- uid: SamuraiSoccer.Event.InGameEvent.ResetResetSubject
+  commentId: M:SamuraiSoccer.Event.InGameEvent.ResetResetSubject
+  id: ResetResetSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: ResetResetSubject()
+  nameWithType: InGameEvent.ResetResetSubject()
+  fullName: SamuraiSoccer.Event.InGameEvent.ResetResetSubject()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResetResetSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static void ResetResetSubject()
+    content.vb: Public Shared Sub ResetResetSubject()
+  overload: SamuraiSoccer.Event.InGameEvent.ResetResetSubject*
+- uid: SamuraiSoccer.Event.InGameEvent.m_standbySubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_standbySubject
+  id: m_standbySubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_standbySubject
+  nameWithType: InGameEvent.m_standbySubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_standbySubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_standbySubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 40
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<bool> m_standbySubject
+    return:
+      type: UniRx.Subject{System.Boolean}
+    content.vb: Private Shared m_standbySubject As Subject(Of Boolean)
+- uid: SamuraiSoccer.Event.InGameEvent.m_standbyShareObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_standbyShareObservable
+  id: m_standbyShareObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_standbyShareObservable
+  nameWithType: InGameEvent.m_standbyShareObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_standbyShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_standbyShareObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 41
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<bool> m_standbyShareObservable
+    return:
+      type: System.IObservable{System.Boolean}
+    content.vb: Private Shared m_standbyShareObservable As IObservable(Of Boolean)
+- uid: SamuraiSoccer.Event.InGameEvent.Standby
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Standby
+  id: Standby
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Standby
+  nameWithType: InGameEvent.Standby
+  fullName: SamuraiSoccer.Event.InGameEvent.Standby
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Standby
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 46
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: StandbyイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<bool> Standby { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Boolean}
+    content.vb: Public Shared ReadOnly Property Standby As IObservable(Of Boolean)
+  overload: SamuraiSoccer.Event.InGameEvent.Standby*
+- uid: SamuraiSoccer.Event.InGameEvent.StandbyOnNext(System.Boolean)
+  commentId: M:SamuraiSoccer.Event.InGameEvent.StandbyOnNext(System.Boolean)
+  id: StandbyOnNext(System.Boolean)
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: StandbyOnNext(bool)
+  nameWithType: InGameEvent.StandbyOnNext(bool)
+  fullName: SamuraiSoccer.Event.InGameEvent.StandbyOnNext(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StandbyOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 57
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Standbyイベントを発行
+  example: []
+  syntax:
+    content: public static void StandbyOnNext(bool isTeammateBall = false)
+    parameters:
+    - id: isTeammateBall
+      type: System.Boolean
+      description: 自チームボールか。
+    content.vb: Public Shared Sub StandbyOnNext(isTeammateBall As Boolean = False)
+  overload: SamuraiSoccer.Event.InGameEvent.StandbyOnNext*
+  nameWithType.vb: InGameEvent.StandbyOnNext(Boolean)
+  fullName.vb: SamuraiSoccer.Event.InGameEvent.StandbyOnNext(Boolean)
+  name.vb: StandbyOnNext(Boolean)
+- uid: SamuraiSoccer.Event.InGameEvent.m_playSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_playSubject
+  id: m_playSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_playSubject
+  nameWithType: InGameEvent.m_playSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_playSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_playSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 63
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<Unit> m_playSubject
+    return:
+      type: UniRx.Subject{UniRx.Unit}
+    content.vb: Private Shared m_playSubject As Subject(Of Unit)
+- uid: SamuraiSoccer.Event.InGameEvent.m_playShareObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_playShareObservable
+  id: m_playShareObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_playShareObservable
+  nameWithType: InGameEvent.m_playShareObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_playShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_playShareObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 64
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<Unit> m_playShareObservable
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Private Shared m_playShareObservable As IObservable(Of Unit)
+- uid: SamuraiSoccer.Event.InGameEvent.Play
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Play
+  id: Play
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Play
+  nameWithType: InGameEvent.Play
+  fullName: SamuraiSoccer.Event.InGameEvent.Play
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Play
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 69
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: PlayイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<Unit> Play { get; }
+    parameters: []
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Public Shared ReadOnly Property Play As IObservable(Of Unit)
+  overload: SamuraiSoccer.Event.InGameEvent.Play*
+- uid: SamuraiSoccer.Event.InGameEvent.PlayOnNext
+  commentId: M:SamuraiSoccer.Event.InGameEvent.PlayOnNext
+  id: PlayOnNext
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayOnNext()
+  nameWithType: InGameEvent.PlayOnNext()
+  fullName: SamuraiSoccer.Event.InGameEvent.PlayOnNext()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 77
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Playイベントを発行
+  example: []
+  syntax:
+    content: public static void PlayOnNext()
+    content.vb: Public Shared Sub PlayOnNext()
+  overload: SamuraiSoccer.Event.InGameEvent.PlayOnNext*
+- uid: SamuraiSoccer.Event.InGameEvent.m_updateDuringPlayObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_updateDuringPlayObservable
+  id: m_updateDuringPlayObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_updateDuringPlayObservable
+  nameWithType: InGameEvent.m_updateDuringPlayObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_updateDuringPlayObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_updateDuringPlayObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 83
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<long> m_updateDuringPlayObservable
+    return:
+      type: System.IObservable{System.Int64}
+    content.vb: Private Shared m_updateDuringPlayObservable As IObservable(Of Long)
+- uid: SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay
+  commentId: P:SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay
+  id: UpdateDuringPlay
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: UpdateDuringPlay
+  nameWithType: InGameEvent.UpdateDuringPlay
+  fullName: SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: UpdateDuringPlay
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 87
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Play中にUpdateタイミングで発行され続けるストリーム
+  example: []
+  syntax:
+    content: public static IObservable<long> UpdateDuringPlay { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Int64}
+    content.vb: Public Shared ReadOnly Property UpdateDuringPlay As IObservable(Of Long)
+  overload: SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay*
+- uid: SamuraiSoccer.Event.InGameEvent.m_goalSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_goalSubject
+  id: m_goalSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_goalSubject
+  nameWithType: InGameEvent.m_goalSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_goalSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_goalSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 92
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<GoalEventType> m_goalSubject
+    return:
+      type: UniRx.Subject{SamuraiSoccer.Event.GoalEventType}
+    content.vb: Private Shared m_goalSubject As Subject(Of GoalEventType)
+- uid: SamuraiSoccer.Event.InGameEvent.m_goalShareObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_goalShareObservable
+  id: m_goalShareObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_goalShareObservable
+  nameWithType: InGameEvent.m_goalShareObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_goalShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_goalShareObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 93
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<GoalEventType> m_goalShareObservable
+    return:
+      type: System.IObservable{SamuraiSoccer.Event.GoalEventType}
+    content.vb: Private Shared m_goalShareObservable As IObservable(Of GoalEventType)
+- uid: SamuraiSoccer.Event.InGameEvent.Goal
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Goal
+  id: Goal
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Goal
+  nameWithType: InGameEvent.Goal
+  fullName: SamuraiSoccer.Event.InGameEvent.Goal
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Goal
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 98
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: GoalイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<GoalEventType> Goal { get; }
+    parameters: []
+    return:
+      type: System.IObservable{SamuraiSoccer.Event.GoalEventType}
+    content.vb: Public Shared ReadOnly Property Goal As IObservable(Of GoalEventType)
+  overload: SamuraiSoccer.Event.InGameEvent.Goal*
+- uid: SamuraiSoccer.Event.InGameEvent.GoalOnNext(SamuraiSoccer.Event.GoalEventType)
+  commentId: M:SamuraiSoccer.Event.InGameEvent.GoalOnNext(SamuraiSoccer.Event.GoalEventType)
+  id: GoalOnNext(SamuraiSoccer.Event.GoalEventType)
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: GoalOnNext(GoalEventType)
+  nameWithType: InGameEvent.GoalOnNext(GoalEventType)
+  fullName: SamuraiSoccer.Event.InGameEvent.GoalOnNext(SamuraiSoccer.Event.GoalEventType)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GoalOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 106
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Goalイベントの発行
+  example: []
+  syntax:
+    content: public static void GoalOnNext(GoalEventType type)
+    parameters:
+    - id: type
+      type: SamuraiSoccer.Event.GoalEventType
+    content.vb: Public Shared Sub GoalOnNext(type As GoalEventType)
+  overload: SamuraiSoccer.Event.InGameEvent.GoalOnNext*
+- uid: SamuraiSoccer.Event.InGameEvent.m_penaltySubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_penaltySubject
+  id: m_penaltySubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_penaltySubject
+  nameWithType: InGameEvent.m_penaltySubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_penaltySubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_penaltySubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 112
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<int> m_penaltySubject
+    return:
+      type: UniRx.Subject{System.Int32}
+    content.vb: Private Shared m_penaltySubject As Subject(Of Integer)
+- uid: SamuraiSoccer.Event.InGameEvent.m_penaltySubjectObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_penaltySubjectObservable
+  id: m_penaltySubjectObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_penaltySubjectObservable
+  nameWithType: InGameEvent.m_penaltySubjectObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_penaltySubjectObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_penaltySubjectObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 113
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<int> m_penaltySubjectObservable
+    return:
+      type: System.IObservable{System.Int32}
+    content.vb: Private Shared m_penaltySubjectObservable As IObservable(Of Integer)
+- uid: SamuraiSoccer.Event.InGameEvent.Penalty
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Penalty
+  id: Penalty
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Penalty
+  nameWithType: InGameEvent.Penalty
+  fullName: SamuraiSoccer.Event.InGameEvent.Penalty
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Penalty
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 118
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: PenaltyイベントのSubscribe先 0:警告, 1:退場
+  example: []
+  syntax:
+    content: public static IObservable<int> Penalty { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Int32}
+    content.vb: Public Shared ReadOnly Property Penalty As IObservable(Of Integer)
+  overload: SamuraiSoccer.Event.InGameEvent.Penalty*
+- uid: SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(System.Int32)
+  commentId: M:SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(System.Int32)
+  id: PenaltyOnNext(System.Int32)
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: PenaltyOnNext(int)
+  nameWithType: InGameEvent.PenaltyOnNext(int)
+  fullName: SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PenaltyOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 127
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Penaltyイベントの発行
+  example: []
+  syntax:
+    content: public static void PenaltyOnNext(int penaltycount)
+    parameters:
+    - id: penaltycount
+      type: System.Int32
+      description: 0:警告, 1:退場
+    content.vb: Public Shared Sub PenaltyOnNext(penaltycount As Integer)
+  overload: SamuraiSoccer.Event.InGameEvent.PenaltyOnNext*
+  nameWithType.vb: InGameEvent.PenaltyOnNext(Integer)
+  fullName.vb: SamuraiSoccer.Event.InGameEvent.PenaltyOnNext(Integer)
+  name.vb: PenaltyOnNext(Integer)
+- uid: SamuraiSoccer.Event.InGameEvent.m_pauseSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_pauseSubject
+  id: m_pauseSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_pauseSubject
+  nameWithType: InGameEvent.m_pauseSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_pauseSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_pauseSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 132
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<bool> m_pauseSubject
+    return:
+      type: UniRx.Subject{System.Boolean}
+    content.vb: Private Shared m_pauseSubject As Subject(Of Boolean)
+- uid: SamuraiSoccer.Event.InGameEvent.m_pauseShareObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_pauseShareObservable
+  id: m_pauseShareObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_pauseShareObservable
+  nameWithType: InGameEvent.m_pauseShareObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_pauseShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_pauseShareObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 133
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<bool> m_pauseShareObservable
+    return:
+      type: System.IObservable{System.Boolean}
+    content.vb: Private Shared m_pauseShareObservable As IObservable(Of Boolean)
+- uid: SamuraiSoccer.Event.InGameEvent.Pause
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Pause
+  id: Pause
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Pause
+  nameWithType: InGameEvent.Pause
+  fullName: SamuraiSoccer.Event.InGameEvent.Pause
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Pause
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 138
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: PauseイベントのSubscribe先 true:一時停止, false:解除
+  example: []
+  syntax:
+    content: public static IObservable<bool> Pause { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Boolean}
+    content.vb: Public Shared ReadOnly Property Pause As IObservable(Of Boolean)
+  overload: SamuraiSoccer.Event.InGameEvent.Pause*
+- uid: SamuraiSoccer.Event.InGameEvent.PauseOnNext(System.Boolean)
+  commentId: M:SamuraiSoccer.Event.InGameEvent.PauseOnNext(System.Boolean)
+  id: PauseOnNext(System.Boolean)
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: PauseOnNext(bool)
+  nameWithType: InGameEvent.PauseOnNext(bool)
+  fullName: SamuraiSoccer.Event.InGameEvent.PauseOnNext(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PauseOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 147
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Pauseイベントの発行
+  example: []
+  syntax:
+    content: public static void PauseOnNext(bool isPause)
+    parameters:
+    - id: isPause
+      type: System.Boolean
+      description: true:一時停止, false:解除
+    content.vb: Public Shared Sub PauseOnNext(isPause As Boolean)
+  overload: SamuraiSoccer.Event.InGameEvent.PauseOnNext*
+  nameWithType.vb: InGameEvent.PauseOnNext(Boolean)
+  fullName.vb: SamuraiSoccer.Event.InGameEvent.PauseOnNext(Boolean)
+  name.vb: PauseOnNext(Boolean)
+- uid: SamuraiSoccer.Event.InGameEvent.m_finishSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_finishSubject
+  id: m_finishSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_finishSubject
+  nameWithType: InGameEvent.m_finishSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_finishSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_finishSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 160
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<Unit> m_finishSubject
+    return:
+      type: UniRx.Subject{UniRx.Unit}
+    content.vb: Private Shared m_finishSubject As Subject(Of Unit)
+- uid: SamuraiSoccer.Event.InGameEvent.m_finishShareObservable
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_finishShareObservable
+  id: m_finishShareObservable
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_finishShareObservable
+  nameWithType: InGameEvent.m_finishShareObservable
+  fullName: SamuraiSoccer.Event.InGameEvent.m_finishShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_finishShareObservable
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 161
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<Unit> m_finishShareObservable
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Private Shared m_finishShareObservable As IObservable(Of Unit)
+- uid: SamuraiSoccer.Event.InGameEvent.Finish
+  commentId: P:SamuraiSoccer.Event.InGameEvent.Finish
+  id: Finish
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: Finish
+  nameWithType: InGameEvent.Finish
+  fullName: SamuraiSoccer.Event.InGameEvent.Finish
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Finish
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 166
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: FinishイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<Unit> Finish { get; }
+    parameters: []
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Public Shared ReadOnly Property Finish As IObservable(Of Unit)
+  overload: SamuraiSoccer.Event.InGameEvent.Finish*
+- uid: SamuraiSoccer.Event.InGameEvent.FinishOnNext
+  commentId: M:SamuraiSoccer.Event.InGameEvent.FinishOnNext
+  id: FinishOnNext
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: FinishOnNext()
+  nameWithType: InGameEvent.FinishOnNext()
+  fullName: SamuraiSoccer.Event.InGameEvent.FinishOnNext()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FinishOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 174
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Finishイベントの発行
+  example: []
+  syntax:
+    content: public static void FinishOnNext()
+    content.vb: Public Shared Sub FinishOnNext()
+  overload: SamuraiSoccer.Event.InGameEvent.FinishOnNext*
+- uid: SamuraiSoccer.Event.InGameEvent.m_teammateScoreSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_teammateScoreSubject
+  id: m_teammateScoreSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_teammateScoreSubject
+  nameWithType: InGameEvent.m_teammateScoreSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_teammateScoreSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_teammateScoreSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 180
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReactiveProperty<int> m_teammateScoreSubject
+    return:
+      type: UniRx.ReactiveProperty{System.Int32}
+    content.vb: Private Shared m_teammateScoreSubject As ReactiveProperty(Of Integer)
+- uid: SamuraiSoccer.Event.InGameEvent.TeammateScore
+  commentId: P:SamuraiSoccer.Event.InGameEvent.TeammateScore
+  id: TeammateScore
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: TeammateScore
+  nameWithType: InGameEvent.TeammateScore
+  fullName: SamuraiSoccer.Event.InGameEvent.TeammateScore
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TeammateScore
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 185
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: TeammateScoreイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<int> TeammateScore { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Int32}
+    content.vb: Public Shared ReadOnly Property TeammateScore As IObservable(Of Integer)
+  overload: SamuraiSoccer.Event.InGameEvent.TeammateScore*
+- uid: SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext(System.Int32)
+  commentId: M:SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext(System.Int32)
+  id: TeammateScoreOnNext(System.Int32)
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: TeammateScoreOnNext(int)
+  nameWithType: InGameEvent.TeammateScoreOnNext(int)
+  fullName: SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TeammateScoreOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 193
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: TeammateScoreイベントの発行
+  example: []
+  syntax:
+    content: public static void TeammateScoreOnNext(int score)
+    parameters:
+    - id: score
+      type: System.Int32
+    content.vb: Public Shared Sub TeammateScoreOnNext(score As Integer)
+  overload: SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext*
+  nameWithType.vb: InGameEvent.TeammateScoreOnNext(Integer)
+  fullName.vb: SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext(Integer)
+  name.vb: TeammateScoreOnNext(Integer)
+- uid: SamuraiSoccer.Event.InGameEvent.m_opponentScoreSubject
+  commentId: F:SamuraiSoccer.Event.InGameEvent.m_opponentScoreSubject
+  id: m_opponentScoreSubject
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: m_opponentScoreSubject
+  nameWithType: InGameEvent.m_opponentScoreSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.m_opponentScoreSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_opponentScoreSubject
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 199
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReactiveProperty<int> m_opponentScoreSubject
+    return:
+      type: UniRx.ReactiveProperty{System.Int32}
+    content.vb: Private Shared m_opponentScoreSubject As ReactiveProperty(Of Integer)
+- uid: SamuraiSoccer.Event.InGameEvent.OpponentScore
+  commentId: P:SamuraiSoccer.Event.InGameEvent.OpponentScore
+  id: OpponentScore
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: OpponentScore
+  nameWithType: InGameEvent.OpponentScore
+  fullName: SamuraiSoccer.Event.InGameEvent.OpponentScore
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OpponentScore
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 204
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: OpponentScoreイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<int> OpponentScore { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Int32}
+    content.vb: Public Shared ReadOnly Property OpponentScore As IObservable(Of Integer)
+  overload: SamuraiSoccer.Event.InGameEvent.OpponentScore*
+- uid: SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext(System.Int32)
+  commentId: M:SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext(System.Int32)
+  id: OpponentScoreOnNext(System.Int32)
+  parent: SamuraiSoccer.Event.InGameEvent
+  langs:
+  - csharp
+  - vb
+  name: OpponentScoreOnNext(int)
+  nameWithType: InGameEvent.OpponentScoreOnNext(int)
+  fullName: SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/InGameEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OpponentScoreOnNext
+    path: ../Assets/Scripts/Event/InGameEvent.cs
+    startLine: 212
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: OpponentScoreイベントの発行
+  example: []
+  syntax:
+    content: public static void OpponentScoreOnNext(int score)
+    parameters:
+    - id: score
+      type: System.Int32
+    content.vb: Public Shared Sub OpponentScoreOnNext(score As Integer)
+  overload: SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext*
+  nameWithType.vb: InGameEvent.OpponentScoreOnNext(Integer)
+  fullName.vb: SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext(Integer)
+  name.vb: OpponentScoreOnNext(Integer)
+references:
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UniRx.ReplaySubject{UniRx.Unit}
+  commentId: T:UniRx.ReplaySubject{UniRx.Unit}
+  parent: UniRx
+  definition: UniRx.ReplaySubject`1
+  name: ReplaySubject<Unit>
+  nameWithType: ReplaySubject<Unit>
+  fullName: UniRx.ReplaySubject<UniRx.Unit>
+  nameWithType.vb: ReplaySubject(Of Unit)
+  fullName.vb: UniRx.ReplaySubject(Of UniRx.Unit)
+  name.vb: ReplaySubject(Of Unit)
+  spec.csharp:
+  - uid: UniRx.ReplaySubject`1
+    name: ReplaySubject
+    isExternal: true
+  - name: <
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReplaySubject`1
+    name: ReplaySubject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: )
+- uid: UniRx.ReplaySubject`1
+  commentId: T:UniRx.ReplaySubject`1
+  isExternal: true
+  name: ReplaySubject<T>
+  nameWithType: ReplaySubject<T>
+  fullName: UniRx.ReplaySubject<T>
+  nameWithType.vb: ReplaySubject(Of T)
+  fullName.vb: UniRx.ReplaySubject(Of T)
+  name.vb: ReplaySubject(Of T)
+  spec.csharp:
+  - uid: UniRx.ReplaySubject`1
+    name: ReplaySubject
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReplaySubject`1
+    name: ReplaySubject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.Event.InGameEvent.Reset*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Reset
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Reset
+  name: Reset
+  nameWithType: InGameEvent.Reset
+  fullName: SamuraiSoccer.Event.InGameEvent.Reset
+- uid: System.IObservable{UniRx.Unit}
+  commentId: T:System.IObservable{UniRx.Unit}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<Unit>
+  nameWithType: IObservable<Unit>
+  fullName: System.IObservable<UniRx.Unit>
+  nameWithType.vb: IObservable(Of Unit)
+  fullName.vb: System.IObservable(Of UniRx.Unit)
+  name.vb: IObservable(Of Unit)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.ResetOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.ResetOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_ResetOnNext
+  name: ResetOnNext
+  nameWithType: InGameEvent.ResetOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.ResetOnNext
+- uid: SamuraiSoccer.Event.InGameEvent.ResetResetSubject*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.ResetResetSubject
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_ResetResetSubject
+  name: ResetResetSubject
+  nameWithType: InGameEvent.ResetResetSubject
+  fullName: SamuraiSoccer.Event.InGameEvent.ResetResetSubject
+- uid: UniRx.Subject{System.Boolean}
+  commentId: T:UniRx.Subject{System.Boolean}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Subject<bool>
+  nameWithType: Subject<bool>
+  fullName: UniRx.Subject<bool>
+  nameWithType.vb: Subject(Of Boolean)
+  fullName.vb: UniRx.Subject(Of Boolean)
+  name.vb: Subject(Of Boolean)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UniRx.Subject`1
+  commentId: T:UniRx.Subject`1
+  isExternal: true
+  name: Subject<T>
+  nameWithType: Subject<T>
+  fullName: UniRx.Subject<T>
+  nameWithType.vb: Subject(Of T)
+  fullName.vb: UniRx.Subject(Of T)
+  name.vb: Subject(Of T)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IObservable{System.Boolean}
+  commentId: T:System.IObservable{System.Boolean}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<bool>
+  nameWithType: IObservable<bool>
+  fullName: System.IObservable<bool>
+  nameWithType.vb: IObservable(Of Boolean)
+  fullName.vb: System.IObservable(Of Boolean)
+  name.vb: IObservable(Of Boolean)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.Standby*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Standby
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Standby
+  name: Standby
+  nameWithType: InGameEvent.Standby
+  fullName: SamuraiSoccer.Event.InGameEvent.Standby
+- uid: SamuraiSoccer.Event.InGameEvent.StandbyOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.StandbyOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_StandbyOnNext_System_Boolean_
+  name: StandbyOnNext
+  nameWithType: InGameEvent.StandbyOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.StandbyOnNext
+- uid: UniRx.Subject{UniRx.Unit}
+  commentId: T:UniRx.Subject{UniRx.Unit}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  name: Subject<Unit>
+  nameWithType: Subject<Unit>
+  fullName: UniRx.Subject<UniRx.Unit>
+  nameWithType.vb: Subject(Of Unit)
+  fullName.vb: UniRx.Subject(Of UniRx.Unit)
+  name.vb: Subject(Of Unit)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.Play*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Play
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Play
+  name: Play
+  nameWithType: InGameEvent.Play
+  fullName: SamuraiSoccer.Event.InGameEvent.Play
+- uid: SamuraiSoccer.Event.InGameEvent.PlayOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.PlayOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_PlayOnNext
+  name: PlayOnNext
+  nameWithType: InGameEvent.PlayOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.PlayOnNext
+- uid: System.IObservable{System.Int64}
+  commentId: T:System.IObservable{System.Int64}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<long>
+  nameWithType: IObservable<long>
+  fullName: System.IObservable<long>
+  nameWithType.vb: IObservable(Of Long)
+  fullName.vb: System.IObservable(Of Long)
+  name.vb: IObservable(Of Long)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_UpdateDuringPlay
+  name: UpdateDuringPlay
+  nameWithType: InGameEvent.UpdateDuringPlay
+  fullName: SamuraiSoccer.Event.InGameEvent.UpdateDuringPlay
+- uid: UniRx.Subject{SamuraiSoccer.Event.GoalEventType}
+  commentId: T:UniRx.Subject{SamuraiSoccer.Event.GoalEventType}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: SamuraiSoccer.Event.GoalEventType.html
+  name: Subject<GoalEventType>
+  nameWithType: Subject<GoalEventType>
+  fullName: UniRx.Subject<SamuraiSoccer.Event.GoalEventType>
+  nameWithType.vb: Subject(Of GoalEventType)
+  fullName.vb: UniRx.Subject(Of SamuraiSoccer.Event.GoalEventType)
+  name.vb: Subject(Of GoalEventType)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: SamuraiSoccer.Event.GoalEventType
+    name: GoalEventType
+    href: SamuraiSoccer.Event.GoalEventType.html
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.Event.GoalEventType
+    name: GoalEventType
+    href: SamuraiSoccer.Event.GoalEventType.html
+  - name: )
+- uid: System.IObservable{SamuraiSoccer.Event.GoalEventType}
+  commentId: T:System.IObservable{SamuraiSoccer.Event.GoalEventType}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<GoalEventType>
+  nameWithType: IObservable<GoalEventType>
+  fullName: System.IObservable<SamuraiSoccer.Event.GoalEventType>
+  nameWithType.vb: IObservable(Of GoalEventType)
+  fullName.vb: System.IObservable(Of SamuraiSoccer.Event.GoalEventType)
+  name.vb: IObservable(Of GoalEventType)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: SamuraiSoccer.Event.GoalEventType
+    name: GoalEventType
+    href: SamuraiSoccer.Event.GoalEventType.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.Event.GoalEventType
+    name: GoalEventType
+    href: SamuraiSoccer.Event.GoalEventType.html
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.Goal*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Goal
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Goal
+  name: Goal
+  nameWithType: InGameEvent.Goal
+  fullName: SamuraiSoccer.Event.InGameEvent.Goal
+- uid: SamuraiSoccer.Event.InGameEvent.GoalOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.GoalOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_GoalOnNext_SamuraiSoccer_Event_GoalEventType_
+  name: GoalOnNext
+  nameWithType: InGameEvent.GoalOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.GoalOnNext
+- uid: SamuraiSoccer.Event.GoalEventType
+  commentId: T:SamuraiSoccer.Event.GoalEventType
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.GoalEventType.html
+  name: GoalEventType
+  nameWithType: GoalEventType
+  fullName: SamuraiSoccer.Event.GoalEventType
+- uid: UniRx.Subject{System.Int32}
+  commentId: T:UniRx.Subject{System.Int32}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Subject<int>
+  nameWithType: Subject<int>
+  fullName: UniRx.Subject<int>
+  nameWithType.vb: Subject(Of Integer)
+  fullName.vb: UniRx.Subject(Of Integer)
+  name.vb: Subject(Of Integer)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.IObservable{System.Int32}
+  commentId: T:System.IObservable{System.Int32}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<int>
+  nameWithType: IObservable<int>
+  fullName: System.IObservable<int>
+  nameWithType.vb: IObservable(Of Integer)
+  fullName.vb: System.IObservable(Of Integer)
+  name.vb: IObservable(Of Integer)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.Penalty*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Penalty
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Penalty
+  name: Penalty
+  nameWithType: InGameEvent.Penalty
+  fullName: SamuraiSoccer.Event.InGameEvent.Penalty
+- uid: SamuraiSoccer.Event.InGameEvent.PenaltyOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.PenaltyOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_PenaltyOnNext_System_Int32_
+  name: PenaltyOnNext
+  nameWithType: InGameEvent.PenaltyOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.PenaltyOnNext
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.Event.InGameEvent.Pause*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Pause
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Pause
+  name: Pause
+  nameWithType: InGameEvent.Pause
+  fullName: SamuraiSoccer.Event.InGameEvent.Pause
+- uid: SamuraiSoccer.Event.InGameEvent.PauseOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.PauseOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_PauseOnNext_System_Boolean_
+  name: PauseOnNext
+  nameWithType: InGameEvent.PauseOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.PauseOnNext
+- uid: SamuraiSoccer.Event.InGameEvent.Finish*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.Finish
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_Finish
+  name: Finish
+  nameWithType: InGameEvent.Finish
+  fullName: SamuraiSoccer.Event.InGameEvent.Finish
+- uid: SamuraiSoccer.Event.InGameEvent.FinishOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.FinishOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_FinishOnNext
+  name: FinishOnNext
+  nameWithType: InGameEvent.FinishOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.FinishOnNext
+- uid: UniRx.ReactiveProperty{System.Int32}
+  commentId: T:UniRx.ReactiveProperty{System.Int32}
+  parent: UniRx
+  definition: UniRx.ReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: ReactiveProperty<int>
+  nameWithType: ReactiveProperty<int>
+  fullName: UniRx.ReactiveProperty<int>
+  nameWithType.vb: ReactiveProperty(Of Integer)
+  fullName.vb: UniRx.ReactiveProperty(Of Integer)
+  name.vb: ReactiveProperty(Of Integer)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UniRx.ReactiveProperty`1
+  commentId: T:UniRx.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: UniRx.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: UniRx.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.Event.InGameEvent.TeammateScore*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.TeammateScore
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_TeammateScore
+  name: TeammateScore
+  nameWithType: InGameEvent.TeammateScore
+  fullName: SamuraiSoccer.Event.InGameEvent.TeammateScore
+- uid: SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_TeammateScoreOnNext_System_Int32_
+  name: TeammateScoreOnNext
+  nameWithType: InGameEvent.TeammateScoreOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.TeammateScoreOnNext
+- uid: SamuraiSoccer.Event.InGameEvent.OpponentScore*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.OpponentScore
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_OpponentScore
+  name: OpponentScore
+  nameWithType: InGameEvent.OpponentScore
+  fullName: SamuraiSoccer.Event.InGameEvent.OpponentScore
+- uid: SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext*
+  commentId: Overload:SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext
+  href: SamuraiSoccer.Event.InGameEvent.html#SamuraiSoccer_Event_InGameEvent_OpponentScoreOnNext_System_Int32_
+  name: OpponentScoreOnNext
+  nameWithType: InGameEvent.OpponentScoreOnNext
+  fullName: SamuraiSoccer.Event.InGameEvent.OpponentScoreOnNext

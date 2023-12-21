@@ -1,0 +1,295 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Player.Trail
+  commentId: T:SamuraiSoccer.Player.Trail
+  id: Trail
+  parent: SamuraiSoccer.Player
+  children:
+  - SamuraiSoccer.Player.Trail.OnHit(UnityEngine.GameObject)
+  - SamuraiSoccer.Player.Trail.Start
+  - SamuraiSoccer.Player.Trail.Vanish(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: Trail
+  nameWithType: Trail
+  fullName: SamuraiSoccer.Player.Trail
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Player/Trail.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Trail
+    path: ../Assets/Scripts/Player/Trail.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: 'public class Trail : MonoBehaviour'
+    content.vb: Public Class Trail Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.Player.Trail.Start
+  commentId: M:SamuraiSoccer.Player.Trail.Start
+  id: Start
+  parent: SamuraiSoccer.Player.Trail
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Trail.Start()
+  fullName: SamuraiSoccer.Player.Trail.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/Trail.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/Player/Trail.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.Player.Trail.Start*
+- uid: SamuraiSoccer.Player.Trail.OnHit(UnityEngine.GameObject)
+  commentId: M:SamuraiSoccer.Player.Trail.OnHit(UnityEngine.GameObject)
+  id: OnHit(UnityEngine.GameObject)
+  parent: SamuraiSoccer.Player.Trail
+  langs:
+  - csharp
+  - vb
+  name: OnHit(GameObject)
+  nameWithType: Trail.OnHit(GameObject)
+  fullName: SamuraiSoccer.Player.Trail.OnHit(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/Trail.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnHit
+    path: ../Assets/Scripts/Player/Trail.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private void OnHit(GameObject obj)
+    parameters:
+    - id: obj
+      type: UnityEngine.GameObject
+    content.vb: Private Sub OnHit(obj As GameObject)
+  overload: SamuraiSoccer.Player.Trail.OnHit*
+- uid: SamuraiSoccer.Player.Trail.Vanish(System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.Player.Trail.Vanish(System.Threading.CancellationToken)
+  id: Vanish(System.Threading.CancellationToken)
+  parent: SamuraiSoccer.Player.Trail
+  langs:
+  - csharp
+  - vb
+  name: Vanish(CancellationToken)
+  nameWithType: Trail.Vanish(CancellationToken)
+  fullName: SamuraiSoccer.Player.Trail.Vanish(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Player/Trail.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Vanish
+    path: ../Assets/Scripts/Player/Trail.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.Player
+  namespace: SamuraiSoccer.Player
+  syntax:
+    content: private UniTask Vanish(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function Vanish(token As CancellationToken) As UniTask
+  overload: SamuraiSoccer.Player.Trail.Vanish*
+references:
+- uid: SamuraiSoccer.Player
+  commentId: N:SamuraiSoccer.Player
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Player
+  nameWithType: SamuraiSoccer.Player
+  fullName: SamuraiSoccer.Player
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Player
+    name: Player
+    href: SamuraiSoccer.Player.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.Player.Trail.Start*
+  commentId: Overload:SamuraiSoccer.Player.Trail.Start
+  href: SamuraiSoccer.Player.Trail.html#SamuraiSoccer_Player_Trail_Start
+  name: Start
+  nameWithType: Trail.Start
+  fullName: SamuraiSoccer.Player.Trail.Start
+- uid: SamuraiSoccer.Player.Trail.OnHit*
+  commentId: Overload:SamuraiSoccer.Player.Trail.OnHit
+  href: SamuraiSoccer.Player.Trail.html#SamuraiSoccer_Player_Trail_OnHit_UnityEngine_GameObject_
+  name: OnHit
+  nameWithType: Trail.OnHit
+  fullName: SamuraiSoccer.Player.Trail.OnHit
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.Player.Trail.Vanish*
+  commentId: Overload:SamuraiSoccer.Player.Trail.Vanish
+  href: SamuraiSoccer.Player.Trail.html#SamuraiSoccer_Player_Trail_Vanish_System_Threading_CancellationToken_
+  name: Vanish
+  nameWithType: Trail.Vanish
+  fullName: SamuraiSoccer.Player.Trail.Vanish
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

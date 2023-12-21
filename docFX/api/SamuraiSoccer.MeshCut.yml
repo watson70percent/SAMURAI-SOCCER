@@ -1,0 +1,725 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.MeshCut
+  commentId: T:SamuraiSoccer.MeshCut
+  id: MeshCut
+  parent: SamuraiSoccer
+  children:
+  - SamuraiSoccer.MeshCut.CutMesh(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  - SamuraiSoccer.MeshCut.CutMeshOnce(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  - SamuraiSoccer.MeshCut.CutMeshRough(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  - SamuraiSoccer.MeshCut.Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  - SamuraiSoccer.MeshCut.SepalateOnce(System.Boolean[],System.Int32[],System.Int32)
+  - SamuraiSoccer.MeshCut._backMeshData
+  - SamuraiSoccer.MeshCut._frontMeshData
+  - SamuraiSoccer.MeshCut._isFront
+  - SamuraiSoccer.MeshCut._slashPlane
+  - SamuraiSoccer.MeshCut._targetMesh
+  - SamuraiSoccer.MeshCut._targetNormals
+  - SamuraiSoccer.MeshCut._targetUVs
+  - SamuraiSoccer.MeshCut._targetVertices
+  langs:
+  - csharp
+  - vb
+  name: MeshCut
+  nameWithType: MeshCut
+  fullName: SamuraiSoccer.MeshCut
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: MeshCut
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: 'public class MeshCut : MonoBehaviour'
+    content.vb: Public Class MeshCut Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.MeshCut._targetMesh
+  commentId: F:SamuraiSoccer.MeshCut._targetMesh
+  id: _targetMesh
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetMesh
+  nameWithType: MeshCut._targetMesh
+  fullName: SamuraiSoccer.MeshCut._targetMesh
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _targetMesh
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static Mesh _targetMesh
+    return:
+      type: UnityEngine.Mesh
+    content.vb: Private Shared _targetMesh As Mesh
+- uid: SamuraiSoccer.MeshCut._targetVertices
+  commentId: F:SamuraiSoccer.MeshCut._targetVertices
+  id: _targetVertices
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetVertices
+  nameWithType: MeshCut._targetVertices
+  fullName: SamuraiSoccer.MeshCut._targetVertices
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _targetVertices
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static Vector3[] _targetVertices
+    return:
+      type: UnityEngine.Vector3[]
+    content.vb: Private Shared _targetVertices As Vector3()
+- uid: SamuraiSoccer.MeshCut._targetNormals
+  commentId: F:SamuraiSoccer.MeshCut._targetNormals
+  id: _targetNormals
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetNormals
+  nameWithType: MeshCut._targetNormals
+  fullName: SamuraiSoccer.MeshCut._targetNormals
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _targetNormals
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static Vector3[] _targetNormals
+    return:
+      type: UnityEngine.Vector3[]
+    content.vb: Private Shared _targetNormals As Vector3()
+- uid: SamuraiSoccer.MeshCut._targetUVs
+  commentId: F:SamuraiSoccer.MeshCut._targetUVs
+  id: _targetUVs
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _targetUVs
+  nameWithType: MeshCut._targetUVs
+  fullName: SamuraiSoccer.MeshCut._targetUVs
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _targetUVs
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static Vector2[] _targetUVs
+    return:
+      type: UnityEngine.Vector2[]
+    content.vb: Private Shared _targetUVs As Vector2()
+- uid: SamuraiSoccer.MeshCut._frontMeshData
+  commentId: F:SamuraiSoccer.MeshCut._frontMeshData
+  id: _frontMeshData
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _frontMeshData
+  nameWithType: MeshCut._frontMeshData
+  fullName: SamuraiSoccer.MeshCut._frontMeshData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _frontMeshData
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static MeshCut.MeshData _frontMeshData
+    return:
+      type: SamuraiSoccer.MeshCut.MeshData
+    content.vb: Private Shared _frontMeshData As MeshCut.MeshData
+- uid: SamuraiSoccer.MeshCut._backMeshData
+  commentId: F:SamuraiSoccer.MeshCut._backMeshData
+  id: _backMeshData
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _backMeshData
+  nameWithType: MeshCut._backMeshData
+  fullName: SamuraiSoccer.MeshCut._backMeshData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _backMeshData
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static MeshCut.MeshData _backMeshData
+    return:
+      type: SamuraiSoccer.MeshCut.MeshData
+    content.vb: Private Shared _backMeshData As MeshCut.MeshData
+- uid: SamuraiSoccer.MeshCut._slashPlane
+  commentId: F:SamuraiSoccer.MeshCut._slashPlane
+  id: _slashPlane
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _slashPlane
+  nameWithType: MeshCut._slashPlane
+  fullName: SamuraiSoccer.MeshCut._slashPlane
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _slashPlane
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static Plane _slashPlane
+    return:
+      type: UnityEngine.Plane
+    content.vb: Private Shared _slashPlane As Plane
+- uid: SamuraiSoccer.MeshCut._isFront
+  commentId: F:SamuraiSoccer.MeshCut._isFront
+  id: _isFront
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: _isFront
+  nameWithType: MeshCut._isFront
+  fullName: SamuraiSoccer.MeshCut._isFront
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: _isFront
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static bool[] _isFront
+    return:
+      type: System.Boolean[]
+    content.vb: Private Shared _isFront As Boolean()
+- uid: SamuraiSoccer.MeshCut.CutMesh(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.MeshCut.CutMesh(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  id: CutMesh(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: CutMesh(GameObject, Vector3, Vector3)
+  nameWithType: MeshCut.CutMesh(GameObject, Vector3, Vector3)
+  fullName: SamuraiSoccer.MeshCut.CutMesh(UnityEngine.GameObject, UnityEngine.Vector3, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CutMesh
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: >-
+    gameObjectを切断して2つのMeshにして返します.
+
+    1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です.
+
+    何度も切るようなオブジェクトでも頂点数が増えないように処理をしてあります
+  example: []
+  syntax:
+    content: public static Mesh[] CutMesh(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection)
+    parameters:
+    - id: target
+      type: UnityEngine.GameObject
+      description: 切断対象のgameObject
+    - id: planeAnchorPoint
+      type: UnityEngine.Vector3
+      description: 切断面上の1点
+    - id: planeNormalDirection
+      type: UnityEngine.Vector3
+      description: 切断面の法線
+    return:
+      type: UnityEngine.Mesh[]
+      description: ''
+    content.vb: Public Shared Function CutMesh(target As GameObject, planeAnchorPoint As Vector3, planeNormalDirection As Vector3) As Mesh()
+  overload: SamuraiSoccer.MeshCut.CutMesh*
+- uid: SamuraiSoccer.MeshCut.CutMeshOnce(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.MeshCut.CutMeshOnce(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  id: CutMeshOnce(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: CutMeshOnce(GameObject, Vector3, Vector3)
+  nameWithType: MeshCut.CutMeshOnce(GameObject, Vector3, Vector3)
+  fullName: SamuraiSoccer.MeshCut.CutMeshOnce(UnityEngine.GameObject, UnityEngine.Vector3, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CutMeshOnce
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 140
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: >-
+    gameObjectを切断して2つのMeshにして返します.
+
+    1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です.
+
+    切断の処理が雑なので何度も斬ると頂点数が膨れ上がります. そのかわり一回斬るだけならこっちが早い
+  example: []
+  syntax:
+    content: public static Mesh[] CutMeshOnce(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection)
+    parameters:
+    - id: target
+      type: UnityEngine.GameObject
+      description: 切断対象のgameObject
+    - id: planeAnchorPoint
+      type: UnityEngine.Vector3
+      description: 切断面上の1点
+    - id: planeNormalDirection
+      type: UnityEngine.Vector3
+      description: 切断面の法線
+    return:
+      type: UnityEngine.Mesh[]
+      description: ''
+    content.vb: Public Shared Function CutMeshOnce(target As GameObject, planeAnchorPoint As Vector3, planeNormalDirection As Vector3) As Mesh()
+  overload: SamuraiSoccer.MeshCut.CutMeshOnce*
+- uid: SamuraiSoccer.MeshCut.CutMeshRough(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.MeshCut.CutMeshRough(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  id: CutMeshRough(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: CutMeshRough(GameObject, Vector3, Vector3)
+  nameWithType: MeshCut.CutMeshRough(GameObject, Vector3, Vector3)
+  fullName: SamuraiSoccer.MeshCut.CutMeshRough(UnityEngine.GameObject, UnityEngine.Vector3, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CutMeshRough
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 247
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  summary: gameObjectを雑に切断して2つのMeshにして返します. 切断面がザラザラなのでハイポリにしか使えませんが処理はちょっと早いです. 1つ目のMeshが切断面の法線に対して表側, 2つ目が裏側です.
+  example: []
+  syntax:
+    content: public static Mesh[] CutMeshRough(GameObject target, Vector3 planeAnchorPoint, Vector3 planeNormalDirection)
+    parameters:
+    - id: target
+      type: UnityEngine.GameObject
+      description: 切断対象のgameObject
+    - id: planeAnchorPoint
+      type: UnityEngine.Vector3
+      description: 切断面上の1点
+    - id: planeNormalDirection
+      type: UnityEngine.Vector3
+      description: 切断面の法線
+    return:
+      type: UnityEngine.Mesh[]
+      description: ''
+    content.vb: Public Shared Function CutMeshRough(target As GameObject, planeAnchorPoint As Vector3, planeNormalDirection As Vector3) As Mesh()
+  overload: SamuraiSoccer.MeshCut.CutMeshRough*
+- uid: SamuraiSoccer.MeshCut.Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  commentId: M:SamuraiSoccer.MeshCut.Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  id: Sepalate(System.Boolean[],System.Int32[],System.Int32)
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: Sepalate(bool[], int[], int)
+  nameWithType: MeshCut.Sepalate(bool[], int[], int)
+  fullName: SamuraiSoccer.MeshCut.Sepalate(bool[], int[], int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Sepalate
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 338
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static void Sepalate(bool[] sides, int[] vertexIndices, int submesh)
+    parameters:
+    - id: sides
+      type: System.Boolean[]
+    - id: vertexIndices
+      type: System.Int32[]
+    - id: submesh
+      type: System.Int32
+    content.vb: Private Shared Sub Sepalate(sides As Boolean(), vertexIndices As Integer(), submesh As Integer)
+  overload: SamuraiSoccer.MeshCut.Sepalate*
+  nameWithType.vb: MeshCut.Sepalate(Boolean(), Integer(), Integer)
+  fullName.vb: SamuraiSoccer.MeshCut.Sepalate(Boolean(), Integer(), Integer)
+  name.vb: Sepalate(Boolean(), Integer(), Integer)
+- uid: SamuraiSoccer.MeshCut.SepalateOnce(System.Boolean[],System.Int32[],System.Int32)
+  commentId: M:SamuraiSoccer.MeshCut.SepalateOnce(System.Boolean[],System.Int32[],System.Int32)
+  id: SepalateOnce(System.Boolean[],System.Int32[],System.Int32)
+  parent: SamuraiSoccer.MeshCut
+  langs:
+  - csharp
+  - vb
+  name: SepalateOnce(bool[], int[], int)
+  nameWithType: MeshCut.SepalateOnce(bool[], int[], int)
+  fullName: SamuraiSoccer.MeshCut.SepalateOnce(bool[], int[], int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/MeshCut.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SepalateOnce
+    path: ../Assets/Scripts/MeshCut.cs
+    startLine: 468
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private static void SepalateOnce(bool[] sides, int[] vertexIndices, int submesh)
+    parameters:
+    - id: sides
+      type: System.Boolean[]
+    - id: vertexIndices
+      type: System.Int32[]
+    - id: submesh
+      type: System.Int32
+    content.vb: Private Shared Sub SepalateOnce(sides As Boolean(), vertexIndices As Integer(), submesh As Integer)
+  overload: SamuraiSoccer.MeshCut.SepalateOnce*
+  nameWithType.vb: MeshCut.SepalateOnce(Boolean(), Integer(), Integer)
+  fullName.vb: SamuraiSoccer.MeshCut.SepalateOnce(Boolean(), Integer(), Integer)
+  name.vb: SepalateOnce(Boolean(), Integer(), Integer)
+references:
+- uid: SamuraiSoccer
+  commentId: N:SamuraiSoccer
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer
+  nameWithType: SamuraiSoccer
+  fullName: SamuraiSoccer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Mesh
+  commentId: T:UnityEngine.Mesh
+  parent: UnityEngine
+  isExternal: true
+  name: Mesh
+  nameWithType: Mesh
+  fullName: UnityEngine.Mesh
+- uid: UnityEngine.Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: UnityEngine.Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: UnityEngine.Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: UnityEngine.Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: UnityEngine.Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.MeshCut.MeshData
+  commentId: T:SamuraiSoccer.MeshCut.MeshData
+  parent: SamuraiSoccer
+  href: SamuraiSoccer.MeshCut.html
+  name: MeshCut.MeshData
+  nameWithType: MeshCut.MeshData
+  fullName: SamuraiSoccer.MeshCut.MeshData
+  spec.csharp:
+  - uid: SamuraiSoccer.MeshCut
+    name: MeshCut
+    href: SamuraiSoccer.MeshCut.html
+  - name: .
+  - uid: SamuraiSoccer.MeshCut.MeshData
+    name: MeshData
+    href: SamuraiSoccer.MeshCut.MeshData.html
+  spec.vb:
+  - uid: SamuraiSoccer.MeshCut
+    name: MeshCut
+    href: SamuraiSoccer.MeshCut.html
+  - name: .
+  - uid: SamuraiSoccer.MeshCut.MeshData
+    name: MeshData
+    href: SamuraiSoccer.MeshCut.MeshData.html
+- uid: UnityEngine.Plane
+  commentId: T:UnityEngine.Plane
+  parent: UnityEngine
+  isExternal: true
+  name: Plane
+  nameWithType: Plane
+  fullName: UnityEngine.Plane
+- uid: System.Boolean[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool[]
+  nameWithType: bool[]
+  fullName: bool[]
+  nameWithType.vb: Boolean()
+  fullName.vb: Boolean()
+  name.vb: Boolean()
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.MeshCut.CutMesh*
+  commentId: Overload:SamuraiSoccer.MeshCut.CutMesh
+  href: SamuraiSoccer.MeshCut.html#SamuraiSoccer_MeshCut_CutMesh_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Vector3_
+  name: CutMesh
+  nameWithType: MeshCut.CutMesh
+  fullName: SamuraiSoccer.MeshCut.CutMesh
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Mesh[]
+  isExternal: true
+  name: Mesh[]
+  nameWithType: Mesh[]
+  fullName: UnityEngine.Mesh[]
+  nameWithType.vb: Mesh()
+  fullName.vb: UnityEngine.Mesh()
+  name.vb: Mesh()
+  spec.csharp:
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.MeshCut.CutMeshOnce*
+  commentId: Overload:SamuraiSoccer.MeshCut.CutMeshOnce
+  href: SamuraiSoccer.MeshCut.html#SamuraiSoccer_MeshCut_CutMeshOnce_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Vector3_
+  name: CutMeshOnce
+  nameWithType: MeshCut.CutMeshOnce
+  fullName: SamuraiSoccer.MeshCut.CutMeshOnce
+- uid: SamuraiSoccer.MeshCut.CutMeshRough*
+  commentId: Overload:SamuraiSoccer.MeshCut.CutMeshRough
+  href: SamuraiSoccer.MeshCut.html#SamuraiSoccer_MeshCut_CutMeshRough_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Vector3_
+  name: CutMeshRough
+  nameWithType: MeshCut.CutMeshRough
+  fullName: SamuraiSoccer.MeshCut.CutMeshRough
+- uid: SamuraiSoccer.MeshCut.Sepalate*
+  commentId: Overload:SamuraiSoccer.MeshCut.Sepalate
+  href: SamuraiSoccer.MeshCut.html#SamuraiSoccer_MeshCut_Sepalate_System_Boolean___System_Int32___System_Int32_
+  name: Sepalate
+  nameWithType: MeshCut.Sepalate
+  fullName: SamuraiSoccer.MeshCut.Sepalate
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.MeshCut.SepalateOnce*
+  commentId: Overload:SamuraiSoccer.MeshCut.SepalateOnce
+  href: SamuraiSoccer.MeshCut.html#SamuraiSoccer_MeshCut_SepalateOnce_System_Boolean___System_Int32___System_Int32_
+  name: SepalateOnce
+  nameWithType: MeshCut.SepalateOnce
+  fullName: SamuraiSoccer.MeshCut.SepalateOnce

@@ -1,0 +1,1280 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.PlayerEvent
+  commentId: T:SamuraiSoccer.Event.PlayerEvent
+  id: PlayerEvent
+  parent: SamuraiSoccer.Event
+  children:
+  - SamuraiSoccer.Event.PlayerEvent.Attack
+  - SamuraiSoccer.Event.PlayerEvent.AttackOnNext
+  - SamuraiSoccer.Event.PlayerEvent.FaulCheck
+  - SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext
+  - SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack
+  - SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack
+  - SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack
+  - SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack(System.Boolean)
+  - SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack(System.Boolean)
+  - SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack(System.Boolean)
+  - SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext(UnityEngine.Vector3)
+  - SamuraiSoccer.Event.PlayerEvent.StickDir
+  - SamuraiSoccer.Event.PlayerEvent.StickInput
+  - SamuraiSoccer.Event.PlayerEvent.m_attackShareObservable
+  - SamuraiSoccer.Event.PlayerEvent.m_attackSubject
+  - SamuraiSoccer.Event.PlayerEvent.m_faulCheckShareObservable
+  - SamuraiSoccer.Event.PlayerEvent.m_faulCheckSubject
+  - SamuraiSoccer.Event.PlayerEvent.m_getPenalty
+  - SamuraiSoccer.Event.PlayerEvent.m_isEnableAttack
+  - SamuraiSoccer.Event.PlayerEvent.m_isEnableChargeAttack
+  - SamuraiSoccer.Event.PlayerEvent.m_isInChargeAttack
+  - SamuraiSoccer.Event.PlayerEvent.m_lockChargeAttack
+  - SamuraiSoccer.Event.PlayerEvent.m_stickDir
+  - SamuraiSoccer.Event.PlayerEvent.m_stickInputShareObservable
+  - SamuraiSoccer.Event.PlayerEvent.m_stickInputSubject
+  langs:
+  - csharp
+  - vb
+  name: PlayerEvent
+  nameWithType: PlayerEvent
+  fullName: SamuraiSoccer.Event.PlayerEvent
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayerEvent
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: プレイヤーのイベントを管理
+  example: []
+  syntax:
+    content: public static class PlayerEvent
+    content.vb: Public Module PlayerEvent
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.Event.PlayerEvent.m_stickDir
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_stickDir
+  id: m_stickDir
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_stickDir
+  nameWithType: PlayerEvent.m_stickDir
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_stickDir
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stickDir
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReactiveProperty<Vector3> m_stickDir
+    return:
+      type: UniRx.ReactiveProperty{UnityEngine.Vector3}
+    content.vb: Private Shared m_stickDir As ReactiveProperty(Of Vector3)
+- uid: SamuraiSoccer.Event.PlayerEvent.StickDir
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.StickDir
+  id: StickDir
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: StickDir
+  nameWithType: PlayerEvent.StickDir
+  fullName: SamuraiSoccer.Event.PlayerEvent.StickDir
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StickDir
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static IReadOnlyReactiveProperty<Vector3> StickDir { get; }
+    parameters: []
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{UnityEngine.Vector3}
+    content.vb: Public Shared ReadOnly Property StickDir As IReadOnlyReactiveProperty(Of Vector3)
+  overload: SamuraiSoccer.Event.PlayerEvent.StickDir*
+- uid: SamuraiSoccer.Event.PlayerEvent.m_attackSubject
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_attackSubject
+  id: m_attackSubject
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_attackSubject
+  nameWithType: PlayerEvent.m_attackSubject
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_attackSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_attackSubject
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<Unit> m_attackSubject
+    return:
+      type: UniRx.Subject{UniRx.Unit}
+    content.vb: Private Shared m_attackSubject As Subject(Of Unit)
+- uid: SamuraiSoccer.Event.PlayerEvent.m_attackShareObservable
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_attackShareObservable
+  id: m_attackShareObservable
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_attackShareObservable
+  nameWithType: PlayerEvent.m_attackShareObservable
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_attackShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_attackShareObservable
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<Unit> m_attackShareObservable
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Private Shared m_attackShareObservable As IObservable(Of Unit)
+- uid: SamuraiSoccer.Event.PlayerEvent.Attack
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.Attack
+  id: Attack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: Attack
+  nameWithType: PlayerEvent.Attack
+  fullName: SamuraiSoccer.Event.PlayerEvent.Attack
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Attack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: AttackイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<Unit> Attack { get; }
+    parameters: []
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Public Shared ReadOnly Property Attack As IObservable(Of Unit)
+  overload: SamuraiSoccer.Event.PlayerEvent.Attack*
+- uid: SamuraiSoccer.Event.PlayerEvent.m_isEnableAttack
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_isEnableAttack
+  id: m_isEnableAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_isEnableAttack
+  nameWithType: PlayerEvent.m_isEnableAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_isEnableAttack
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isEnableAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IReadOnlyReactiveProperty<bool> m_isEnableAttack
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Private Shared m_isEnableAttack As IReadOnlyReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.m_getPenalty
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_getPenalty
+  id: m_getPenalty
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_getPenalty
+  nameWithType: PlayerEvent.m_getPenalty
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_getPenalty
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_getPenalty
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 38
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IReadOnlyReactiveProperty<bool> m_getPenalty
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Private Shared m_getPenalty As IReadOnlyReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.AttackOnNext
+  commentId: M:SamuraiSoccer.Event.PlayerEvent.AttackOnNext
+  id: AttackOnNext
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: AttackOnNext()
+  nameWithType: PlayerEvent.AttackOnNext()
+  fullName: SamuraiSoccer.Event.PlayerEvent.AttackOnNext()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AttackOnNext
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 46
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Attackのイベントを発行
+  example: []
+  syntax:
+    content: public static void AttackOnNext()
+    content.vb: Public Shared Sub AttackOnNext()
+  overload: SamuraiSoccer.Event.PlayerEvent.AttackOnNext*
+- uid: SamuraiSoccer.Event.PlayerEvent.m_faulCheckSubject
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_faulCheckSubject
+  id: m_faulCheckSubject
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_faulCheckSubject
+  nameWithType: PlayerEvent.m_faulCheckSubject
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_faulCheckSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_faulCheckSubject
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 52
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<Unit> m_faulCheckSubject
+    return:
+      type: UniRx.Subject{UniRx.Unit}
+    content.vb: Private Shared m_faulCheckSubject As Subject(Of Unit)
+- uid: SamuraiSoccer.Event.PlayerEvent.m_faulCheckShareObservable
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_faulCheckShareObservable
+  id: m_faulCheckShareObservable
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_faulCheckShareObservable
+  nameWithType: PlayerEvent.m_faulCheckShareObservable
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_faulCheckShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_faulCheckShareObservable
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 53
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<Unit> m_faulCheckShareObservable
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Private Shared m_faulCheckShareObservable As IObservable(Of Unit)
+- uid: SamuraiSoccer.Event.PlayerEvent.FaulCheck
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.FaulCheck
+  id: FaulCheck
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: FaulCheck
+  nameWithType: PlayerEvent.FaulCheck
+  fullName: SamuraiSoccer.Event.PlayerEvent.FaulCheck
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FaulCheck
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 55
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static IObservable<Unit> FaulCheck { get; }
+    parameters: []
+    return:
+      type: System.IObservable{UniRx.Unit}
+    content.vb: Public Shared ReadOnly Property FaulCheck As IObservable(Of Unit)
+  overload: SamuraiSoccer.Event.PlayerEvent.FaulCheck*
+- uid: SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext
+  commentId: M:SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext
+  id: FaulCheckOnNext
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: FaulCheckOnNext()
+  nameWithType: PlayerEvent.FaulCheckOnNext()
+  fullName: SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FaulCheckOnNext
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 59
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static void FaulCheckOnNext()
+    content.vb: Public Shared Sub FaulCheckOnNext()
+  overload: SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext*
+- uid: SamuraiSoccer.Event.PlayerEvent.m_stickInputSubject
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_stickInputSubject
+  id: m_stickInputSubject
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_stickInputSubject
+  nameWithType: PlayerEvent.m_stickInputSubject
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_stickInputSubject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stickInputSubject
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 66
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<Vector3> m_stickInputSubject
+    return:
+      type: UniRx.Subject{UnityEngine.Vector3}
+    content.vb: Private Shared m_stickInputSubject As Subject(Of Vector3)
+- uid: SamuraiSoccer.Event.PlayerEvent.m_stickInputShareObservable
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_stickInputShareObservable
+  id: m_stickInputShareObservable
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_stickInputShareObservable
+  nameWithType: PlayerEvent.m_stickInputShareObservable
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_stickInputShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stickInputShareObservable
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 67
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<Vector3> m_stickInputShareObservable
+    return:
+      type: System.IObservable{UnityEngine.Vector3}
+    content.vb: Private Shared m_stickInputShareObservable As IObservable(Of Vector3)
+- uid: SamuraiSoccer.Event.PlayerEvent.StickInput
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.StickInput
+  id: StickInput
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: StickInput
+  nameWithType: PlayerEvent.StickInput
+  fullName: SamuraiSoccer.Event.PlayerEvent.StickInput
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StickInput
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 72
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: 移動イベントを発行
+  example: []
+  syntax:
+    content: public static IObservable<Vector3> StickInput { get; }
+    parameters: []
+    return:
+      type: System.IObservable{UnityEngine.Vector3}
+    content.vb: Public Shared ReadOnly Property StickInput As IObservable(Of Vector3)
+  overload: SamuraiSoccer.Event.PlayerEvent.StickInput*
+- uid: SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext(UnityEngine.Vector3)
+  id: StickControllerOnNext(UnityEngine.Vector3)
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: StickControllerOnNext(Vector3)
+  nameWithType: PlayerEvent.StickControllerOnNext(Vector3)
+  fullName: SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StickControllerOnNext
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 77
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static void StickControllerOnNext(Vector3 dir)
+    parameters:
+    - id: dir
+      type: UnityEngine.Vector3
+    content.vb: Public Shared Sub StickControllerOnNext(dir As Vector3)
+  overload: SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext*
+- uid: SamuraiSoccer.Event.PlayerEvent.m_isInChargeAttack
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_isInChargeAttack
+  id: m_isInChargeAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_isInChargeAttack
+  nameWithType: PlayerEvent.m_isInChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_isInChargeAttack
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isInChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 83
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReactiveProperty<bool> m_isInChargeAttack
+    return:
+      type: UniRx.ReactiveProperty{System.Boolean}
+    content.vb: Private Shared m_isInChargeAttack As ReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack
+  id: IsInChargeAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: IsInChargeAttack
+  nameWithType: PlayerEvent.IsInChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: IsInChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 87
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ため攻撃中かどうか
+  example: []
+  syntax:
+    content: public static IReadOnlyReactiveProperty<bool> IsInChargeAttack { get; }
+    parameters: []
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Public Shared ReadOnly Property IsInChargeAttack As IReadOnlyReactiveProperty(Of Boolean)
+  overload: SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack*
+- uid: SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack(System.Boolean)
+  commentId: M:SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack(System.Boolean)
+  id: SetIsInChargeAtack(System.Boolean)
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: SetIsInChargeAtack(bool)
+  nameWithType: PlayerEvent.SetIsInChargeAtack(bool)
+  fullName: SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetIsInChargeAtack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 91
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static void SetIsInChargeAtack(bool flag)
+    parameters:
+    - id: flag
+      type: System.Boolean
+    content.vb: Public Shared Sub SetIsInChargeAtack(flag As Boolean)
+  overload: SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack*
+  nameWithType.vb: PlayerEvent.SetIsInChargeAtack(Boolean)
+  fullName.vb: SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack(Boolean)
+  name.vb: SetIsInChargeAtack(Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.m_isEnableChargeAttack
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_isEnableChargeAttack
+  id: m_isEnableChargeAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_isEnableChargeAttack
+  nameWithType: PlayerEvent.m_isEnableChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_isEnableChargeAttack
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isEnableChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 101
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReactiveProperty<bool> m_isEnableChargeAttack
+    return:
+      type: UniRx.ReactiveProperty{System.Boolean}
+    content.vb: Private Shared m_isEnableChargeAttack As ReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack
+  id: IsEnableChargeAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: IsEnableChargeAttack
+  nameWithType: PlayerEvent.IsEnableChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: IsEnableChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 105
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ため攻撃が可能かどうか
+  example: []
+  syntax:
+    content: public static IReadOnlyReactiveProperty<bool> IsEnableChargeAttack { get; }
+    parameters: []
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Public Shared ReadOnly Property IsEnableChargeAttack As IReadOnlyReactiveProperty(Of Boolean)
+  overload: SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack*
+- uid: SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack(System.Boolean)
+  commentId: M:SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack(System.Boolean)
+  id: SetIsEnableChargeAtack(System.Boolean)
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: SetIsEnableChargeAtack(bool)
+  nameWithType: PlayerEvent.SetIsEnableChargeAtack(bool)
+  fullName: SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetIsEnableChargeAtack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 109
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static void SetIsEnableChargeAtack(bool flag)
+    parameters:
+    - id: flag
+      type: System.Boolean
+    content.vb: Public Shared Sub SetIsEnableChargeAtack(flag As Boolean)
+  overload: SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack*
+  nameWithType.vb: PlayerEvent.SetIsEnableChargeAtack(Boolean)
+  fullName.vb: SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack(Boolean)
+  name.vb: SetIsEnableChargeAtack(Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.m_lockChargeAttack
+  commentId: F:SamuraiSoccer.Event.PlayerEvent.m_lockChargeAttack
+  id: m_lockChargeAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: m_lockChargeAttack
+  nameWithType: PlayerEvent.m_lockChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.m_lockChargeAttack
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_lockChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 115
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static ReactiveProperty<bool> m_lockChargeAttack
+    return:
+      type: UniRx.ReactiveProperty{System.Boolean}
+    content.vb: Private Shared m_lockChargeAttack As ReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack
+  commentId: P:SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack
+  id: IsLockChargeAttack
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: IsLockChargeAttack
+  nameWithType: PlayerEvent.IsLockChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: IsLockChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 119
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ため攻撃を使えなくするかどうか
+  example: []
+  syntax:
+    content: public static IReadOnlyReactiveProperty<bool> IsLockChargeAttack { get; }
+    parameters: []
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Public Shared ReadOnly Property IsLockChargeAttack As IReadOnlyReactiveProperty(Of Boolean)
+  overload: SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack*
+- uid: SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack(System.Boolean)
+  commentId: M:SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack(System.Boolean)
+  id: SetLockChargeAttack(System.Boolean)
+  parent: SamuraiSoccer.Event.PlayerEvent
+  langs:
+  - csharp
+  - vb
+  name: SetLockChargeAttack(bool)
+  nameWithType: PlayerEvent.SetLockChargeAttack(bool)
+  fullName: SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/PlayerEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetLockChargeAttack
+    path: ../Assets/Scripts/Event/PlayerEvent.cs
+    startLine: 128
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: ため攻撃の使用可能状態を設定する
+  example: []
+  syntax:
+    content: public static void SetLockChargeAttack(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: true：ため攻撃できない
+    content.vb: Public Shared Sub SetLockChargeAttack(value As Boolean)
+  overload: SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack*
+  nameWithType.vb: PlayerEvent.SetLockChargeAttack(Boolean)
+  fullName.vb: SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack(Boolean)
+  name.vb: SetLockChargeAttack(Boolean)
+references:
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UniRx.ReactiveProperty{UnityEngine.Vector3}
+  commentId: T:UniRx.ReactiveProperty{UnityEngine.Vector3}
+  parent: UniRx
+  definition: UniRx.ReactiveProperty`1
+  name: ReactiveProperty<Vector3>
+  nameWithType: ReactiveProperty<Vector3>
+  fullName: UniRx.ReactiveProperty<UnityEngine.Vector3>
+  nameWithType.vb: ReactiveProperty(Of Vector3)
+  fullName.vb: UniRx.ReactiveProperty(Of UnityEngine.Vector3)
+  name.vb: ReactiveProperty(Of Vector3)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: UniRx.ReactiveProperty`1
+  commentId: T:UniRx.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: UniRx.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: UniRx.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.Event.PlayerEvent.StickDir*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.StickDir
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_StickDir
+  name: StickDir
+  nameWithType: PlayerEvent.StickDir
+  fullName: SamuraiSoccer.Event.PlayerEvent.StickDir
+- uid: UniRx.IReadOnlyReactiveProperty{UnityEngine.Vector3}
+  commentId: T:UniRx.IReadOnlyReactiveProperty{UnityEngine.Vector3}
+  parent: UniRx
+  definition: UniRx.IReadOnlyReactiveProperty`1
+  name: IReadOnlyReactiveProperty<Vector3>
+  nameWithType: IReadOnlyReactiveProperty<Vector3>
+  fullName: UniRx.IReadOnlyReactiveProperty<UnityEngine.Vector3>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Vector3)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of UnityEngine.Vector3)
+  name.vb: IReadOnlyReactiveProperty(Of Vector3)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: UniRx.IReadOnlyReactiveProperty`1
+  commentId: T:UniRx.IReadOnlyReactiveProperty`1
+  isExternal: true
+  name: IReadOnlyReactiveProperty<T>
+  nameWithType: IReadOnlyReactiveProperty<T>
+  fullName: UniRx.IReadOnlyReactiveProperty<T>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of T)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of T)
+  name.vb: IReadOnlyReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx.Subject{UniRx.Unit}
+  commentId: T:UniRx.Subject{UniRx.Unit}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  name: Subject<Unit>
+  nameWithType: Subject<Unit>
+  fullName: UniRx.Subject<UniRx.Unit>
+  nameWithType.vb: Subject(Of Unit)
+  fullName.vb: UniRx.Subject(Of UniRx.Unit)
+  name.vb: Subject(Of Unit)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: )
+- uid: UniRx.Subject`1
+  commentId: T:UniRx.Subject`1
+  isExternal: true
+  name: Subject<T>
+  nameWithType: Subject<T>
+  fullName: UniRx.Subject<T>
+  nameWithType.vb: Subject(Of T)
+  fullName.vb: UniRx.Subject(Of T)
+  name.vb: Subject(Of T)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IObservable{UniRx.Unit}
+  commentId: T:System.IObservable{UniRx.Unit}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<Unit>
+  nameWithType: IObservable<Unit>
+  fullName: System.IObservable<UniRx.Unit>
+  nameWithType.vb: IObservable(Of Unit)
+  fullName.vb: System.IObservable(Of UniRx.Unit)
+  name.vb: IObservable(Of Unit)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UniRx.Unit
+    name: Unit
+    isExternal: true
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.Event.PlayerEvent.Attack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.Attack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_Attack
+  name: Attack
+  nameWithType: PlayerEvent.Attack
+  fullName: SamuraiSoccer.Event.PlayerEvent.Attack
+- uid: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+  commentId: T:UniRx.IReadOnlyReactiveProperty{System.Boolean}
+  parent: UniRx
+  definition: UniRx.IReadOnlyReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: IReadOnlyReactiveProperty<bool>
+  nameWithType: IReadOnlyReactiveProperty<bool>
+  fullName: UniRx.IReadOnlyReactiveProperty<bool>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Boolean)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of Boolean)
+  name.vb: IReadOnlyReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SamuraiSoccer.Event.PlayerEvent.AttackOnNext*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.AttackOnNext
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_AttackOnNext
+  name: AttackOnNext
+  nameWithType: PlayerEvent.AttackOnNext
+  fullName: SamuraiSoccer.Event.PlayerEvent.AttackOnNext
+- uid: SamuraiSoccer.Event.PlayerEvent.FaulCheck*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.FaulCheck
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_FaulCheck
+  name: FaulCheck
+  nameWithType: PlayerEvent.FaulCheck
+  fullName: SamuraiSoccer.Event.PlayerEvent.FaulCheck
+- uid: SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_FaulCheckOnNext
+  name: FaulCheckOnNext
+  nameWithType: PlayerEvent.FaulCheckOnNext
+  fullName: SamuraiSoccer.Event.PlayerEvent.FaulCheckOnNext
+- uid: UniRx.Subject{UnityEngine.Vector3}
+  commentId: T:UniRx.Subject{UnityEngine.Vector3}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  name: Subject<Vector3>
+  nameWithType: Subject<Vector3>
+  fullName: UniRx.Subject<UnityEngine.Vector3>
+  nameWithType.vb: Subject(Of Vector3)
+  fullName.vb: UniRx.Subject(Of UnityEngine.Vector3)
+  name.vb: Subject(Of Vector3)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: System.IObservable{UnityEngine.Vector3}
+  commentId: T:System.IObservable{UnityEngine.Vector3}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<Vector3>
+  nameWithType: IObservable<Vector3>
+  fullName: System.IObservable<UnityEngine.Vector3>
+  nameWithType.vb: IObservable(Of Vector3)
+  fullName.vb: System.IObservable(Of UnityEngine.Vector3)
+  name.vb: IObservable(Of Vector3)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: SamuraiSoccer.Event.PlayerEvent.StickInput*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.StickInput
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_StickInput
+  name: StickInput
+  nameWithType: PlayerEvent.StickInput
+  fullName: SamuraiSoccer.Event.PlayerEvent.StickInput
+- uid: SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_StickControllerOnNext_UnityEngine_Vector3_
+  name: StickControllerOnNext
+  nameWithType: PlayerEvent.StickControllerOnNext
+  fullName: SamuraiSoccer.Event.PlayerEvent.StickControllerOnNext
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UniRx.ReactiveProperty{System.Boolean}
+  commentId: T:UniRx.ReactiveProperty{System.Boolean}
+  parent: UniRx
+  definition: UniRx.ReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: ReactiveProperty<bool>
+  nameWithType: ReactiveProperty<bool>
+  fullName: UniRx.ReactiveProperty<bool>
+  nameWithType.vb: ReactiveProperty(Of Boolean)
+  fullName.vb: UniRx.ReactiveProperty(Of Boolean)
+  name.vb: ReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_IsInChargeAttack
+  name: IsInChargeAttack
+  nameWithType: PlayerEvent.IsInChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.IsInChargeAttack
+- uid: SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_SetIsInChargeAtack_System_Boolean_
+  name: SetIsInChargeAtack
+  nameWithType: PlayerEvent.SetIsInChargeAtack
+  fullName: SamuraiSoccer.Event.PlayerEvent.SetIsInChargeAtack
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_IsEnableChargeAttack
+  name: IsEnableChargeAttack
+  nameWithType: PlayerEvent.IsEnableChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.IsEnableChargeAttack
+- uid: SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_SetIsEnableChargeAtack_System_Boolean_
+  name: SetIsEnableChargeAtack
+  nameWithType: PlayerEvent.SetIsEnableChargeAtack
+  fullName: SamuraiSoccer.Event.PlayerEvent.SetIsEnableChargeAtack
+- uid: SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_IsLockChargeAttack
+  name: IsLockChargeAttack
+  nameWithType: PlayerEvent.IsLockChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.IsLockChargeAttack
+- uid: SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack*
+  commentId: Overload:SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack
+  href: SamuraiSoccer.Event.PlayerEvent.html#SamuraiSoccer_Event_PlayerEvent_SetLockChargeAttack_System_Boolean_
+  name: SetLockChargeAttack
+  nameWithType: PlayerEvent.SetLockChargeAttack
+  fullName: SamuraiSoccer.Event.PlayerEvent.SetLockChargeAttack

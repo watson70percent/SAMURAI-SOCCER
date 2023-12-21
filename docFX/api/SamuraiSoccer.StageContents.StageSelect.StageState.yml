@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StageState
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageState
+  id: StageState
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StageState.Cleared
+  - SamuraiSoccer.StageContents.StageSelect.StageState.NotPlayable
+  - SamuraiSoccer.StageContents.StageSelect.StageState.Playable
+  langs:
+  - csharp
+  - vb
+  name: StageState
+  nameWithType: StageState
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageState
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageState
+    path: ../Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: >-
+    ステージの状態
+
+    NotPlayable:プレイ不可
+
+    Playable:プレイ可能
+
+    Cleared:クリア済み
+  example: []
+  syntax:
+    content: public enum StageState
+    content.vb: Public Enum StageState
+- uid: SamuraiSoccer.StageContents.StageSelect.StageState.NotPlayable
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageState.NotPlayable
+  id: NotPlayable
+  parent: SamuraiSoccer.StageContents.StageSelect.StageState
+  langs:
+  - csharp
+  - vb
+  name: NotPlayable
+  nameWithType: StageState.NotPlayable
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageState.NotPlayable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: NotPlayable
+    path: ../Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: NotPlayable = 0
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StageState
+- uid: SamuraiSoccer.StageContents.StageSelect.StageState.Playable
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageState.Playable
+  id: Playable
+  parent: SamuraiSoccer.StageContents.StageSelect.StageState
+  langs:
+  - csharp
+  - vb
+  name: Playable
+  nameWithType: StageState.Playable
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageState.Playable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Playable
+    path: ../Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: Playable = 1
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StageState
+- uid: SamuraiSoccer.StageContents.StageSelect.StageState.Cleared
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageState.Cleared
+  id: Cleared
+  parent: SamuraiSoccer.StageContents.StageSelect.StageState
+  langs:
+  - csharp
+  - vb
+  name: Cleared
+  nameWithType: StageState.Cleared
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageState.Cleared
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Cleared
+    path: ../Assets/Scripts/StageContents/StageSelect/StageIcon.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: Cleared = 2
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StageState
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: SamuraiSoccer.StageContents.StageSelect.StageState
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageState
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.StageState.html
+  name: StageState
+  nameWithType: StageState
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageState

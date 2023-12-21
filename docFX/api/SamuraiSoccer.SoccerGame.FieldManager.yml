@@ -1,0 +1,640 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.FieldManager
+  commentId: T:SamuraiSoccer.SoccerGame.FieldManager
+  id: FieldManager
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldManager.Awake
+  - SamuraiSoccer.SoccerGame.FieldManager.GroundNumber
+  - SamuraiSoccer.SoccerGame.FieldManager.LoadField
+  - SamuraiSoccer.SoccerGame.FieldManager.Update
+  - SamuraiSoccer.SoccerGame.FieldManager.ball
+  - SamuraiSoccer.SoccerGame.FieldManager.ball_rb
+  - SamuraiSoccer.SoccerGame.FieldManager.groundNumber
+  - SamuraiSoccer.SoccerGame.FieldManager.info
+  - SamuraiSoccer.SoccerGame.FieldManager.root
+  - SamuraiSoccer.SoccerGame.FieldManager.rotation
+  - SamuraiSoccer.SoccerGame.FieldManager.wind
+  langs:
+  - csharp
+  - vb
+  name: FieldManager
+  nameWithType: FieldManager
+  fullName: SamuraiSoccer.SoccerGame.FieldManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FieldManager
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: フィールド情報を管理する。
+  example: []
+  syntax:
+    content: >-
+      [DefaultExecutionOrder(-1)]
+
+      public class FieldManager : MonoBehaviour
+    content.vb: >-
+      <DefaultExecutionOrder(-1)>
+
+      Public Class FieldManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  attributes:
+  - type: UnityEngine.DefaultExecutionOrder
+    ctor: UnityEngine.DefaultExecutionOrder.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: -1
+- uid: SamuraiSoccer.SoccerGame.FieldManager.root
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.root
+  id: root
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: root
+  nameWithType: FieldManager.root
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.root
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: root
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public GameObject root
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public root As GameObject
+- uid: SamuraiSoccer.SoccerGame.FieldManager.info
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.info
+  id: info
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: info
+  nameWithType: FieldManager.info
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.info
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: info
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public FieldInfo info
+    return:
+      type: SamuraiSoccer.SoccerGame.FieldInfo
+    content.vb: >-
+      <NonSerialized>
+
+      Public info As FieldInfo
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.FieldManager.ball
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.ball
+  id: ball
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: FieldManager.ball
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.ball
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ball
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public GameObject ball
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ball As GameObject
+- uid: SamuraiSoccer.SoccerGame.FieldManager.ball_rb
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.ball_rb
+  id: ball_rb
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: ball_rb
+  nameWithType: FieldManager.ball_rb
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.ball_rb
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ball_rb
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private Rigidbody ball_rb
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: Private ball_rb As Rigidbody
+- uid: SamuraiSoccer.SoccerGame.FieldManager.wind
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.wind
+  id: wind
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: wind
+  nameWithType: FieldManager.wind
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.wind
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: wind
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private WindInfoBase wind
+    return:
+      type: SamuraiSoccer.SoccerGame.WindInfoBase
+    content.vb: Private wind As WindInfoBase
+- uid: SamuraiSoccer.SoccerGame.FieldManager.rotation
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.rotation
+  id: rotation
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: rotation
+  nameWithType: FieldManager.rotation
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.rotation
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rotation
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public FieldRotationBase rotation
+    return:
+      type: SamuraiSoccer.SoccerGame.FieldRotationBase
+    content.vb: Public rotation As FieldRotationBase
+- uid: SamuraiSoccer.SoccerGame.FieldManager.groundNumber
+  commentId: F:SamuraiSoccer.SoccerGame.FieldManager.groundNumber
+  id: groundNumber
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: groundNumber
+  nameWithType: FieldManager.groundNumber
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.groundNumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: groundNumber
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private int groundNumber
+    return:
+      type: System.Int32
+    content.vb: Private groundNumber As Integer
+- uid: SamuraiSoccer.SoccerGame.FieldManager.GroundNumber
+  commentId: P:SamuraiSoccer.SoccerGame.FieldManager.GroundNumber
+  id: GroundNumber
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: GroundNumber
+  nameWithType: FieldManager.GroundNumber
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.GroundNumber
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GroundNumber
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 31
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public int GroundNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property GroundNumber As Integer
+  overload: SamuraiSoccer.SoccerGame.FieldManager.GroundNumber*
+- uid: SamuraiSoccer.SoccerGame.FieldManager.Awake
+  commentId: M:SamuraiSoccer.SoccerGame.FieldManager.Awake
+  id: Awake
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: FieldManager.Awake()
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 33
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.SoccerGame.FieldManager.Awake*
+- uid: SamuraiSoccer.SoccerGame.FieldManager.Update
+  commentId: M:SamuraiSoccer.SoccerGame.FieldManager.Update
+  id: Update
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: FieldManager.Update()
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.SoccerGame.FieldManager.Update*
+- uid: SamuraiSoccer.SoccerGame.FieldManager.LoadField
+  commentId: M:SamuraiSoccer.SoccerGame.FieldManager.LoadField
+  id: LoadField
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: LoadField()
+  nameWithType: FieldManager.LoadField()
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.LoadField()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LoadField
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 53
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private UniTask LoadField()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function LoadField() As UniTask
+  overload: SamuraiSoccer.SoccerGame.FieldManager.LoadField*
+- uid: SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition(UnityEngine.Vector3)
+  id: AdaptPosition(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: AdaptPosition(Vector3)
+  nameWithType: FieldManager.AdaptPosition(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AdaptPosition
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 77
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 回転後の位置に変換
+  example: []
+  syntax:
+    content: public Vector3 AdaptPosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: UnityEngine.Vector3
+      description: 元の場所
+    return:
+      type: UnityEngine.Vector3
+      description: 変換後の場所
+    content.vb: Public Function AdaptPosition(pos As Vector3) As Vector3
+  overload: SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition*
+- uid: SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition(UnityEngine.Vector3)
+  id: AdaptInversePosition(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldManager
+  langs:
+  - csharp
+  - vb
+  name: AdaptInversePosition(Vector3)
+  nameWithType: FieldManager.AdaptInversePosition(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AdaptInversePosition
+    path: ../Assets/Scripts/SoccerGame/FieldManager.cs
+    startLine: 87
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 開店前の位置に変換
+  example: []
+  syntax:
+    content: public Vector3 AdaptInversePosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: UnityEngine.Vector3
+      description: 元の場所
+    return:
+      type: UnityEngine.Vector3
+      description: 変換後の場所
+    content.vb: Public Function AdaptInversePosition(pos As Vector3) As Vector3
+  overload: SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.SoccerGame.FieldInfo
+  commentId: T:SamuraiSoccer.SoccerGame.FieldInfo
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.FieldInfo.html
+  name: FieldInfo
+  nameWithType: FieldInfo
+  fullName: SamuraiSoccer.SoccerGame.FieldInfo
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: SamuraiSoccer.SoccerGame.WindInfoBase
+  commentId: T:SamuraiSoccer.SoccerGame.WindInfoBase
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.WindInfoBase.html
+  name: WindInfoBase
+  nameWithType: WindInfoBase
+  fullName: SamuraiSoccer.SoccerGame.WindInfoBase
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase
+  commentId: T:SamuraiSoccer.SoccerGame.FieldRotationBase
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.FieldRotationBase.html
+  name: FieldRotationBase
+  nameWithType: FieldRotationBase
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.SoccerGame.FieldManager.GroundNumber*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldManager.GroundNumber
+  href: SamuraiSoccer.SoccerGame.FieldManager.html#SamuraiSoccer_SoccerGame_FieldManager_GroundNumber
+  name: GroundNumber
+  nameWithType: FieldManager.GroundNumber
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.GroundNumber
+- uid: SamuraiSoccer.SoccerGame.FieldManager.Awake*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldManager.Awake
+  href: SamuraiSoccer.SoccerGame.FieldManager.html#SamuraiSoccer_SoccerGame_FieldManager_Awake
+  name: Awake
+  nameWithType: FieldManager.Awake
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.Awake
+- uid: SamuraiSoccer.SoccerGame.FieldManager.Update*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldManager.Update
+  href: SamuraiSoccer.SoccerGame.FieldManager.html#SamuraiSoccer_SoccerGame_FieldManager_Update
+  name: Update
+  nameWithType: FieldManager.Update
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.Update
+- uid: SamuraiSoccer.SoccerGame.FieldManager.LoadField*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldManager.LoadField
+  href: SamuraiSoccer.SoccerGame.FieldManager.html#SamuraiSoccer_SoccerGame_FieldManager_LoadField
+  name: LoadField
+  nameWithType: FieldManager.LoadField
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.LoadField
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition
+  href: SamuraiSoccer.SoccerGame.FieldManager.html#SamuraiSoccer_SoccerGame_FieldManager_AdaptPosition_UnityEngine_Vector3_
+  name: AdaptPosition
+  nameWithType: FieldManager.AdaptPosition
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.AdaptPosition
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition
+  href: SamuraiSoccer.SoccerGame.FieldManager.html#SamuraiSoccer_SoccerGame_FieldManager_AdaptInversePosition_UnityEngine_Vector3_
+  name: AdaptInversePosition
+  nameWithType: FieldManager.AdaptInversePosition
+  fullName: SamuraiSoccer.SoccerGame.FieldManager.AdaptInversePosition

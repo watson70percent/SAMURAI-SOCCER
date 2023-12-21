@@ -1,0 +1,302 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.BlackoutPanel
+  commentId: T:SamuraiSoccer.UI.BlackoutPanel
+  id: BlackoutPanel
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.BlackoutPanel.Blackout(System.Single)
+  - SamuraiSoccer.UI.BlackoutPanel.Start
+  - SamuraiSoccer.UI.BlackoutPanel.m_panelImage
+  langs:
+  - csharp
+  - vb
+  name: BlackoutPanel
+  nameWithType: BlackoutPanel
+  fullName: SamuraiSoccer.UI.BlackoutPanel
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/BlackoutPanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BlackoutPanel
+    path: ../Assets/Scripts/UI/BlackoutPanel.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class BlackoutPanel : MonoBehaviour'
+    content.vb: Public Class BlackoutPanel Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.BlackoutPanel.m_panelImage
+  commentId: F:SamuraiSoccer.UI.BlackoutPanel.m_panelImage
+  id: m_panelImage
+  parent: SamuraiSoccer.UI.BlackoutPanel
+  langs:
+  - csharp
+  - vb
+  name: m_panelImage
+  nameWithType: BlackoutPanel.m_panelImage
+  fullName: SamuraiSoccer.UI.BlackoutPanel.m_panelImage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/BlackoutPanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_panelImage
+    path: ../Assets/Scripts/UI/BlackoutPanel.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Image m_panelImage
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: >-
+      <SerializeField>
+
+      Private m_panelImage As Image
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.BlackoutPanel.Start
+  commentId: M:SamuraiSoccer.UI.BlackoutPanel.Start
+  id: Start
+  parent: SamuraiSoccer.UI.BlackoutPanel
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: BlackoutPanel.Start()
+  fullName: SamuraiSoccer.UI.BlackoutPanel.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/BlackoutPanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/BlackoutPanel.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.BlackoutPanel.Start*
+- uid: SamuraiSoccer.UI.BlackoutPanel.Blackout(System.Single)
+  commentId: M:SamuraiSoccer.UI.BlackoutPanel.Blackout(System.Single)
+  id: Blackout(System.Single)
+  parent: SamuraiSoccer.UI.BlackoutPanel
+  langs:
+  - csharp
+  - vb
+  name: Blackout(float)
+  nameWithType: BlackoutPanel.Blackout(float)
+  fullName: SamuraiSoccer.UI.BlackoutPanel.Blackout(float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/BlackoutPanel.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Blackout
+    path: ../Assets/Scripts/UI/BlackoutPanel.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 試合画面の暗転を行う
+  example: []
+  syntax:
+    content: public UniTask Blackout(float totaltimesec)
+    parameters:
+    - id: totaltimesec
+      type: System.Single
+      description: 暗転の全体時間
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Public Function Blackout(totaltimesec As Single) As UniTask
+  overload: SamuraiSoccer.UI.BlackoutPanel.Blackout*
+  nameWithType.vb: BlackoutPanel.Blackout(Single)
+  fullName.vb: SamuraiSoccer.UI.BlackoutPanel.Blackout(Single)
+  name.vb: Blackout(Single)
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: SamuraiSoccer.UI.BlackoutPanel.Start*
+  commentId: Overload:SamuraiSoccer.UI.BlackoutPanel.Start
+  href: SamuraiSoccer.UI.BlackoutPanel.html#SamuraiSoccer_UI_BlackoutPanel_Start
+  name: Start
+  nameWithType: BlackoutPanel.Start
+  fullName: SamuraiSoccer.UI.BlackoutPanel.Start
+- uid: SamuraiSoccer.UI.BlackoutPanel.Blackout*
+  commentId: Overload:SamuraiSoccer.UI.BlackoutPanel.Blackout
+  href: SamuraiSoccer.UI.BlackoutPanel.html#SamuraiSoccer_UI_BlackoutPanel_Blackout_System_Single_
+  name: Blackout
+  nameWithType: BlackoutPanel.Blackout
+  fullName: SamuraiSoccer.UI.BlackoutPanel.Blackout
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

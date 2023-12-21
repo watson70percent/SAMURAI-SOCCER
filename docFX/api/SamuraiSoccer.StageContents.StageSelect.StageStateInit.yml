@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StageStateInit
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageStateInit
+  id: StageStateInit
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake
+  - SamuraiSoccer.StageContents.StageSelect.StageStateInit.m_stageIcon
+  langs:
+  - csharp
+  - vb
+  name: StageStateInit
+  nameWithType: StageStateInit
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageStateInit
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageStateInit.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageStateInit
+    path: ../Assets/Scripts/StageContents/StageSelect/StageStateInit.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: 'public class StageStateInit : MonoBehaviour'
+    content.vb: Public Class StageStateInit Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.StageSelect.StageStateInit.m_stageIcon
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageStateInit.m_stageIcon
+  id: m_stageIcon
+  parent: SamuraiSoccer.StageContents.StageSelect.StageStateInit
+  langs:
+  - csharp
+  - vb
+  name: m_stageIcon
+  nameWithType: StageStateInit.m_stageIcon
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageStateInit.m_stageIcon
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageStateInit.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageIcon
+    path: ../Assets/Scripts/StageContents/StageSelect/StageStateInit.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private StageIcon[] m_stageIcon
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StageIcon[]
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stageIcon As StageIcon()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake
+  id: Awake
+  parent: SamuraiSoccer.StageContents.StageSelect.StageStateInit
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: StageStateInit.Awake()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageStateInit.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/StageContents/StageSelect/StageStateInit.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake*
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.StageSelect.StageIcon[]
+  isExternal: true
+  href: SamuraiSoccer.StageContents.StageSelect.StageIcon.html
+  name: StageIcon[]
+  nameWithType: StageIcon[]
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageIcon[]
+  nameWithType.vb: StageIcon()
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.StageIcon()
+  name.vb: StageIcon()
+  spec.csharp:
+  - uid: SamuraiSoccer.StageContents.StageSelect.StageIcon
+    name: StageIcon
+    href: SamuraiSoccer.StageContents.StageSelect.StageIcon.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: SamuraiSoccer.StageContents.StageSelect.StageIcon
+    name: StageIcon
+    href: SamuraiSoccer.StageContents.StageSelect.StageIcon.html
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake
+  href: SamuraiSoccer.StageContents.StageSelect.StageStateInit.html#SamuraiSoccer_StageContents_StageSelect_StageStateInit_Awake
+  name: Awake
+  nameWithType: StageStateInit.Awake
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageStateInit.Awake

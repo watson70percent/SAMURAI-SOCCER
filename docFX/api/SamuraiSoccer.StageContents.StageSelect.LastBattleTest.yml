@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+  id: LastBattleTest
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start
+  - SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update
+  - SamuraiSoccer.StageContents.StageSelect.LastBattleTest.stageIcon
+  langs:
+  - csharp
+  - vb
+  name: LastBattleTest
+  nameWithType: LastBattleTest
+  fullName: SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LastBattleTest
+    path: ../Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: 'public class LastBattleTest : MonoBehaviour'
+    content.vb: Public Class LastBattleTest Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.stageIcon
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.LastBattleTest.stageIcon
+  id: stageIcon
+  parent: SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+  langs:
+  - csharp
+  - vb
+  name: stageIcon
+  nameWithType: LastBattleTest.stageIcon
+  fullName: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.stageIcon
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: stageIcon
+    path: ../Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private StageIcon stageIcon
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.StageIcon
+    content.vb: >-
+      <SerializeField>
+
+      Private stageIcon As StageIcon
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: LastBattleTest.Start()
+  fullName: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start*
+- uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.StageSelect.LastBattleTest
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: LastBattleTest.Update()
+  fullName: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/StageSelect/LastBattleTest.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update*
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.StageContents.StageSelect.StageIcon
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageIcon
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.StageIcon.html
+  name: StageIcon
+  nameWithType: StageIcon
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageIcon
+- uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start
+  href: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.html#SamuraiSoccer_StageContents_StageSelect_LastBattleTest_Start
+  name: Start
+  nameWithType: LastBattleTest.Start
+  fullName: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Start
+- uid: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update
+  href: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.html#SamuraiSoccer_StageContents_StageSelect_LastBattleTest_Update
+  name: Update
+  nameWithType: LastBattleTest.Update
+  fullName: SamuraiSoccer.StageContents.StageSelect.LastBattleTest.Update

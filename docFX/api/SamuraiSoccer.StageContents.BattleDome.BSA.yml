@@ -1,0 +1,796 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA
+  commentId: T:SamuraiSoccer.StageContents.BattleDome.BSA
+  id: BSA
+  parent: SamuraiSoccer.StageContents.BattleDome
+  children:
+  - SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck
+  - SamuraiSoccer.StageContents.BattleDome.BSA.FCount
+  - SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable
+  - SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount
+  - SamuraiSoccer.StageContents.BattleDome.BSA.LevelData(System.Int32)
+  - SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit
+  - SamuraiSoccer.StageContents.BattleDome.BSA.Load(System.String)
+  - SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount
+  - SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime
+  - SamuraiSoccer.StageContents.BattleDome.BSA.m_fCount
+  - SamuraiSoccer.StageContents.BattleDome.BSA.m_levelCount
+  - SamuraiSoccer.StageContents.BattleDome.BSA.m_raw
+  - SamuraiSoccer.StageContents.BattleDome.BSA.m_sampleCount
+  - SamuraiSoccer.StageContents.BattleDome.BSA.m_strideTime
+  langs:
+  - csharp
+  - vb
+  name: BSA
+  nameWithType: BSA
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BSA
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 11
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: BSAファイルを扱うクラス。
+  example: []
+  syntax:
+    content: public sealed class BSA
+    content.vb: Public NotInheritable Class BSA
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.m_raw
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BSA.m_raw
+  id: m_raw
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: m_raw
+  nameWithType: BSA.m_raw
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.m_raw
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_raw
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 13
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private byte[] m_raw
+    return:
+      type: System.Byte[]
+    content.vb: Private m_raw As Byte()
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.m_strideTime
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BSA.m_strideTime
+  id: m_strideTime
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: m_strideTime
+  nameWithType: BSA.m_strideTime
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.m_strideTime
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_strideTime
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 14
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private float m_strideTime
+    return:
+      type: System.Single
+    content.vb: Private m_strideTime As Single
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.m_fCount
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BSA.m_fCount
+  id: m_fCount
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: m_fCount
+  nameWithType: BSA.m_fCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.m_fCount
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_fCount
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 15
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private byte m_fCount
+    return:
+      type: System.Byte
+    content.vb: Private m_fCount As Byte
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.m_levelCount
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BSA.m_levelCount
+  id: m_levelCount
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: m_levelCount
+  nameWithType: BSA.m_levelCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.m_levelCount
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_levelCount
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 16
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private byte m_levelCount
+    return:
+      type: System.Byte
+    content.vb: Private m_levelCount As Byte
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.m_sampleCount
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.BSA.m_sampleCount
+  id: m_sampleCount
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: m_sampleCount
+  nameWithType: BSA.m_sampleCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.m_sampleCount
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_sampleCount
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 17
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private uint m_sampleCount
+    return:
+      type: System.UInt32
+    content.vb: Private m_sampleCount As UInteger
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable
+  commentId: P:SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable
+  id: IsAvailable
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: IsAvailable
+  nameWithType: BSA.IsAvailable
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: IsAvailable
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 22
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: ファイルが読み込まれ使用できるかどうか。
+  example: []
+  syntax:
+    content: public bool IsAvailable { get; private set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsAvailable As Boolean
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable*
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime
+  commentId: P:SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime
+  id: StrideTime
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: StrideTime
+  nameWithType: BSA.StrideTime
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StrideTime
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 27
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: サンプル間の時間間隔（s）。
+  example: []
+  syntax:
+    content: public float StrideTime { get; private set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property StrideTime As Single
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime*
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.FCount
+  commentId: P:SamuraiSoccer.StageContents.BattleDome.BSA.FCount
+  id: FCount
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: FCount
+  nameWithType: BSA.FCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.FCount
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FCount
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 40
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: 周波数サンプル数。
+  example: []
+  syntax:
+    content: public byte FCount { get; private set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property FCount As Byte
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.FCount*
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount
+  commentId: P:SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount
+  id: LevelCount
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: LevelCount
+  nameWithType: BSA.LevelCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LevelCount
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 53
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: 音圧レベルの分解能。
+  example: []
+  syntax:
+    content: public byte LevelCount { get; private set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property LevelCount As Byte
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount*
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit
+  commentId: P:SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit
+  id: LevelUnit
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: LevelUnit
+  nameWithType: BSA.LevelUnit
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LevelUnit
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 66
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: 音圧レベルを0-1にする時の正規化係数。
+  example: []
+  syntax:
+    content: public double LevelUnit { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property LevelUnit As Double
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit*
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount
+  commentId: P:SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount
+  id: SampleCount
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: SampleCount
+  nameWithType: BSA.SampleCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SampleCount
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 71
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: サンプル数。
+  example: []
+  syntax:
+    content: public uint SampleCount { get; private set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property SampleCount As UInteger
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount*
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.Load(System.String)
+  commentId: M:SamuraiSoccer.StageContents.BattleDome.BSA.Load(System.String)
+  id: Load(System.String)
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: Load(string)
+  nameWithType: BSA.Load(string)
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.Load(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Load
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 90
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: ファイルをロードする。
+  example: []
+  syntax:
+    content: public UniTask Load(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: 読み込むファイル名。
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: UniTask
+    content.vb: Public Function Load(fileName As String) As UniTask
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.Load*
+  nameWithType.vb: BSA.Load(String)
+  fullName.vb: SamuraiSoccer.StageContents.BattleDome.BSA.Load(String)
+  name.vb: Load(String)
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.LevelData(System.Int32)
+  commentId: M:SamuraiSoccer.StageContents.BattleDome.BSA.LevelData(System.Int32)
+  id: LevelData(System.Int32)
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: LevelData(int)
+  nameWithType: BSA.LevelData(int)
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.LevelData(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LevelData
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 128
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: 音圧レベルのデータを取得する。
+  example: []
+  syntax:
+    content: public ReadOnlySpan<byte> LevelData(int time)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: 時間のインデックス。
+    return:
+      type: System.ReadOnlySpan{System.Byte}
+      description: 音圧レベルのデータ。
+    content.vb: Public Function LevelData(time As Integer) As ReadOnlySpan(Of Byte)
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.LevelData*
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    commentId: T:System.IndexOutOfRangeException
+    description: インデックスが不正の場合投げられる。
+  nameWithType.vb: BSA.LevelData(Integer)
+  fullName.vb: SamuraiSoccer.StageContents.BattleDome.BSA.LevelData(Integer)
+  name.vb: LevelData(Integer)
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck
+  commentId: M:SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck
+  id: AvailableCheck
+  parent: SamuraiSoccer.StageContents.BattleDome.BSA
+  langs:
+  - csharp
+  - vb
+  name: AvailableCheck()
+  nameWithType: BSA.AvailableCheck()
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/BSA.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AvailableCheck
+    path: ../Assets/Scripts/StageContents/BattleDome/BSA.cs
+    startLine: 145
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  summary: ファイルが読み込まれ使用できるかチェック。
+  example: []
+  syntax:
+    content: private void AvailableCheck()
+    content.vb: Private Sub AvailableCheck()
+  overload: SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck*
+  exceptions:
+  - type: System.MemberAccessException
+    commentId: T:System.MemberAccessException
+    description: ファイルが読み込まれていない場合投げられる。
+references:
+- uid: SamuraiSoccer.StageContents.BattleDome
+  commentId: N:SamuraiSoccer.StageContents.BattleDome
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.BattleDome
+  nameWithType: SamuraiSoccer.StageContents.BattleDome
+  fullName: SamuraiSoccer.StageContents.BattleDome
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattleDome
+    name: BattleDome
+    href: SamuraiSoccer.StageContents.BattleDome.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattleDome
+    name: BattleDome
+    href: SamuraiSoccer.StageContents.BattleDome.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_IsAvailable
+  name: IsAvailable
+  nameWithType: BSA.IsAvailable
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.IsAvailable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_StrideTime
+  name: StrideTime
+  nameWithType: BSA.StrideTime
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.StrideTime
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.FCount*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.FCount
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_FCount
+  name: FCount
+  nameWithType: BSA.FCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.FCount
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_LevelCount
+  name: LevelCount
+  nameWithType: BSA.LevelCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.LevelCount
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_LevelUnit
+  name: LevelUnit
+  nameWithType: BSA.LevelUnit
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.LevelUnit
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_SampleCount
+  name: SampleCount
+  nameWithType: BSA.SampleCount
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.SampleCount
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.Load*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.Load
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_Load_System_String_
+  name: Load
+  nameWithType: BSA.Load
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.Load
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: System.IndexOutOfRangeException
+  commentId: T:System.IndexOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception
+  name: IndexOutOfRangeException
+  nameWithType: IndexOutOfRangeException
+  fullName: System.IndexOutOfRangeException
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.LevelData*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.LevelData
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_LevelData_System_Int32_
+  name: LevelData
+  nameWithType: BSA.LevelData
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.LevelData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.MemberAccessException
+  commentId: T:System.MemberAccessException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memberaccessexception
+  name: MemberAccessException
+  nameWithType: MemberAccessException
+  fullName: System.MemberAccessException
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html#SamuraiSoccer_StageContents_BattleDome_BSA_AvailableCheck
+  name: AvailableCheck
+  nameWithType: BSA.AvailableCheck
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA.AvailableCheck

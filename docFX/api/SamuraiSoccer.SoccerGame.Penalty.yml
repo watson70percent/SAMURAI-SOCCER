@@ -1,0 +1,521 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.Penalty
+  commentId: T:SamuraiSoccer.SoccerGame.Penalty
+  id: Penalty
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.Penalty.LoseEffect
+  - SamuraiSoccer.SoccerGame.Penalty.OnReset(UniRx.Unit)
+  - SamuraiSoccer.SoccerGame.Penalty.Start
+  - SamuraiSoccer.SoccerGame.Penalty.YellowCard(System.Int32)
+  - SamuraiSoccer.SoccerGame.Penalty.m_gameOverPanel
+  - SamuraiSoccer.SoccerGame.Penalty.m_redcardSENumber
+  - SamuraiSoccer.SoccerGame.Penalty.m_resultSceneName
+  - SamuraiSoccer.SoccerGame.Penalty.m_yellowCard
+  - SamuraiSoccer.SoccerGame.Penalty.m_yellowcardSENumber
+  langs:
+  - csharp
+  - vb
+  name: Penalty
+  nameWithType: Penalty
+  fullName: SamuraiSoccer.SoccerGame.Penalty
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Penalty
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: 'public class Penalty : MonoBehaviour'
+    content.vb: Public Class Penalty Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.Penalty.m_yellowCard
+  commentId: F:SamuraiSoccer.SoccerGame.Penalty.m_yellowCard
+  id: m_yellowCard
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: m_yellowCard
+  nameWithType: Penalty.m_yellowCard
+  fullName: SamuraiSoccer.SoccerGame.Penalty.m_yellowCard
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_yellowCard
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject[] m_yellowCard
+    return:
+      type: UnityEngine.GameObject[]
+    content.vb: >-
+      <SerializeField>
+
+      Private m_yellowCard As GameObject()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.Penalty.m_gameOverPanel
+  commentId: F:SamuraiSoccer.SoccerGame.Penalty.m_gameOverPanel
+  id: m_gameOverPanel
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: m_gameOverPanel
+  nameWithType: Penalty.m_gameOverPanel
+  fullName: SamuraiSoccer.SoccerGame.Penalty.m_gameOverPanel
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_gameOverPanel
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_gameOverPanel
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_gameOverPanel As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.Penalty.m_yellowcardSENumber
+  commentId: F:SamuraiSoccer.SoccerGame.Penalty.m_yellowcardSENumber
+  id: m_yellowcardSENumber
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: m_yellowcardSENumber
+  nameWithType: Penalty.m_yellowcardSENumber
+  fullName: SamuraiSoccer.SoccerGame.Penalty.m_yellowcardSENumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_yellowcardSENumber
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private int m_yellowcardSENumber
+    return:
+      type: System.Int32
+    content.vb: Private m_yellowcardSENumber As Integer
+- uid: SamuraiSoccer.SoccerGame.Penalty.m_redcardSENumber
+  commentId: F:SamuraiSoccer.SoccerGame.Penalty.m_redcardSENumber
+  id: m_redcardSENumber
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: m_redcardSENumber
+  nameWithType: Penalty.m_redcardSENumber
+  fullName: SamuraiSoccer.SoccerGame.Penalty.m_redcardSENumber
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_redcardSENumber
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private int m_redcardSENumber
+    return:
+      type: System.Int32
+    content.vb: Private m_redcardSENumber As Integer
+- uid: SamuraiSoccer.SoccerGame.Penalty.m_resultSceneName
+  commentId: F:SamuraiSoccer.SoccerGame.Penalty.m_resultSceneName
+  id: m_resultSceneName
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: m_resultSceneName
+  nameWithType: Penalty.m_resultSceneName
+  fullName: SamuraiSoccer.SoccerGame.Penalty.m_resultSceneName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_resultSceneName
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private string m_resultSceneName
+    return:
+      type: System.String
+    content.vb: >-
+      <SerializeField>
+
+      Private m_resultSceneName As String
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.Penalty.Start
+  commentId: M:SamuraiSoccer.SoccerGame.Penalty.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Penalty.Start()
+  fullName: SamuraiSoccer.SoccerGame.Penalty.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.SoccerGame.Penalty.Start*
+- uid: SamuraiSoccer.SoccerGame.Penalty.OnReset(UniRx.Unit)
+  commentId: M:SamuraiSoccer.SoccerGame.Penalty.OnReset(UniRx.Unit)
+  id: OnReset(UniRx.Unit)
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: OnReset(Unit)
+  nameWithType: Penalty.OnReset(Unit)
+  fullName: SamuraiSoccer.SoccerGame.Penalty.OnReset(UniRx.Unit)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnReset
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 33
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void OnReset(Unit _)
+    parameters:
+    - id: _
+      type: UniRx.Unit
+    content.vb: Private Sub OnReset(_ As Unit)
+  overload: SamuraiSoccer.SoccerGame.Penalty.OnReset*
+- uid: SamuraiSoccer.SoccerGame.Penalty.YellowCard(System.Int32)
+  commentId: M:SamuraiSoccer.SoccerGame.Penalty.YellowCard(System.Int32)
+  id: YellowCard(System.Int32)
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: YellowCard(int)
+  nameWithType: Penalty.YellowCard(int)
+  fullName: SamuraiSoccer.SoccerGame.Penalty.YellowCard(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: YellowCard
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void YellowCard(int penaltynumber)
+    parameters:
+    - id: penaltynumber
+      type: System.Int32
+    content.vb: Private Sub YellowCard(penaltynumber As Integer)
+  overload: SamuraiSoccer.SoccerGame.Penalty.YellowCard*
+  nameWithType.vb: Penalty.YellowCard(Integer)
+  fullName.vb: SamuraiSoccer.SoccerGame.Penalty.YellowCard(Integer)
+  name.vb: YellowCard(Integer)
+- uid: SamuraiSoccer.SoccerGame.Penalty.LoseEffect
+  commentId: M:SamuraiSoccer.SoccerGame.Penalty.LoseEffect
+  id: LoseEffect
+  parent: SamuraiSoccer.SoccerGame.Penalty
+  langs:
+  - csharp
+  - vb
+  name: LoseEffect()
+  nameWithType: Penalty.LoseEffect()
+  fullName: SamuraiSoccer.SoccerGame.Penalty.LoseEffect()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/Penalty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LoseEffect
+    path: ../Assets/Scripts/SoccerGame/Penalty.cs
+    startLine: 58
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private UniTask LoseEffect()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function LoseEffect() As UniTask
+  overload: SamuraiSoccer.SoccerGame.Penalty.LoseEffect*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject[]
+  isExternal: true
+  name: GameObject[]
+  nameWithType: GameObject[]
+  fullName: UnityEngine.GameObject[]
+  nameWithType.vb: GameObject()
+  fullName.vb: UnityEngine.GameObject()
+  name.vb: GameObject()
+  spec.csharp:
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SamuraiSoccer.SoccerGame.Penalty.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Penalty.Start
+  href: SamuraiSoccer.SoccerGame.Penalty.html#SamuraiSoccer_SoccerGame_Penalty_Start
+  name: Start
+  nameWithType: Penalty.Start
+  fullName: SamuraiSoccer.SoccerGame.Penalty.Start
+- uid: SamuraiSoccer.SoccerGame.Penalty.OnReset*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Penalty.OnReset
+  href: SamuraiSoccer.SoccerGame.Penalty.html#SamuraiSoccer_SoccerGame_Penalty_OnReset_UniRx_Unit_
+  name: OnReset
+  nameWithType: Penalty.OnReset
+  fullName: SamuraiSoccer.SoccerGame.Penalty.OnReset
+- uid: UniRx.Unit
+  commentId: T:UniRx.Unit
+  parent: UniRx
+  isExternal: true
+  name: Unit
+  nameWithType: Unit
+  fullName: UniRx.Unit
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.SoccerGame.Penalty.YellowCard*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Penalty.YellowCard
+  href: SamuraiSoccer.SoccerGame.Penalty.html#SamuraiSoccer_SoccerGame_Penalty_YellowCard_System_Int32_
+  name: YellowCard
+  nameWithType: Penalty.YellowCard
+  fullName: SamuraiSoccer.SoccerGame.Penalty.YellowCard
+- uid: SamuraiSoccer.SoccerGame.Penalty.LoseEffect*
+  commentId: Overload:SamuraiSoccer.SoccerGame.Penalty.LoseEffect
+  href: SamuraiSoccer.SoccerGame.Penalty.html#SamuraiSoccer_SoccerGame_Penalty_LoseEffect
+  name: LoseEffect
+  nameWithType: Penalty.LoseEffect
+  fullName: SamuraiSoccer.SoccerGame.Penalty.LoseEffect
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

@@ -1,0 +1,268 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase
+  commentId: T:SamuraiSoccer.SoccerGame.FieldRotationBase
+  id: FieldRotationBase
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition(UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.FieldRotationBase.Awake
+  - SamuraiSoccer.SoccerGame.FieldRotationBase.rotation
+  langs:
+  - csharp
+  - vb
+  name: FieldRotationBase
+  nameWithType: FieldRotationBase
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldRotationBase.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FieldRotationBase
+    path: ../Assets/Scripts/SoccerGame/FieldRotationBase.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: フィールドの傾きを持ったクラス。ここから派生。
+  example: []
+  syntax:
+    content: 'public abstract class FieldRotationBase : MonoBehaviour'
+    content.vb: Public MustInherit Class FieldRotationBase Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - SamuraiSoccer.SoccerGame.NonRotation
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.rotation
+  commentId: F:SamuraiSoccer.SoccerGame.FieldRotationBase.rotation
+  id: rotation
+  parent: SamuraiSoccer.SoccerGame.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: rotation
+  nameWithType: FieldRotationBase.rotation
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.rotation
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldRotationBase.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rotation
+    path: ../Assets/Scripts/SoccerGame/FieldRotationBase.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 回転
+  example: []
+  syntax:
+    content: public Quaternion rotation
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public rotation As Quaternion
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.Awake
+  commentId: M:SamuraiSoccer.SoccerGame.FieldRotationBase.Awake
+  id: Awake
+  parent: SamuraiSoccer.SoccerGame.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: FieldRotationBase.Awake()
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldRotationBase.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/SoccerGame/FieldRotationBase.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 初期化。ご自由に。
+  example: []
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: SamuraiSoccer.SoccerGame.FieldRotationBase.Awake*
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition(UnityEngine.Vector3)
+  id: AdaptPosition(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: AdaptPosition(Vector3)
+  nameWithType: FieldRotationBase.AdaptPosition(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldRotationBase.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AdaptPosition
+    path: ../Assets/Scripts/SoccerGame/FieldRotationBase.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Vector3 AdaptPosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: UnityEngine.Vector3
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Function AdaptPosition(pos As Vector3) As Vector3
+  overload: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition*
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition(UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition(UnityEngine.Vector3)
+  id: AdaptInversePosition(UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.FieldRotationBase
+  langs:
+  - csharp
+  - vb
+  name: AdaptInversePosition(Vector3)
+  nameWithType: FieldRotationBase.AdaptInversePosition(Vector3)
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/FieldRotationBase.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: AdaptInversePosition
+    path: ../Assets/Scripts/SoccerGame/FieldRotationBase.cs
+    startLine: 36
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Vector3 AdaptInversePosition(Vector3 pos)
+    parameters:
+    - id: pos
+      type: UnityEngine.Vector3
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Function AdaptInversePosition(pos As Vector3) As Vector3
+  overload: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.Awake*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldRotationBase.Awake
+  href: SamuraiSoccer.SoccerGame.FieldRotationBase.html#SamuraiSoccer_SoccerGame_FieldRotationBase_Awake
+  name: Awake
+  nameWithType: FieldRotationBase.Awake
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.Awake
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition
+  href: SamuraiSoccer.SoccerGame.FieldRotationBase.html#SamuraiSoccer_SoccerGame_FieldRotationBase_AdaptPosition_UnityEngine_Vector3_
+  name: AdaptPosition
+  nameWithType: FieldRotationBase.AdaptPosition
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptPosition
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition*
+  commentId: Overload:SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition
+  href: SamuraiSoccer.SoccerGame.FieldRotationBase.html#SamuraiSoccer_SoccerGame_FieldRotationBase_AdaptInversePosition_UnityEngine_Vector3_
+  name: AdaptInversePosition
+  nameWithType: FieldRotationBase.AdaptInversePosition
+  fullName: SamuraiSoccer.SoccerGame.FieldRotationBase.AdaptInversePosition

@@ -1,0 +1,742 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.ScrollScript
+  commentId: T:SamuraiSoccer.UI.ScrollScript
+  id: ScrollScript
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.ScrollScript.ChangeMaterial(SamuraiSoccer.Event.Stage)
+  - SamuraiSoccer.UI.ScrollScript.FlagMaterials
+  - SamuraiSoccer.UI.ScrollScript.ResetObject(System.Single)
+  - SamuraiSoccer.UI.ScrollScript.ScrollMaterial
+  - SamuraiSoccer.UI.ScrollScript.ScrollObject
+  - SamuraiSoccer.UI.ScrollScript.ScrollSlide(System.Single,System.Single,System.Single,System.Single,System.Threading.CancellationToken)
+  - SamuraiSoccer.UI.ScrollScript.Start
+  - SamuraiSoccer.UI.ScrollScript.easeOutCubic(System.Single,System.Single,System.Single,System.Single)
+  - SamuraiSoccer.UI.ScrollScript.initRot
+  - SamuraiSoccer.UI.ScrollScript.rectra
+  - SamuraiSoccer.UI.ScrollScript.rotSpeed
+  - SamuraiSoccer.UI.ScrollScript.slideTime
+  langs:
+  - csharp
+  - vb
+  name: ScrollScript
+  nameWithType: ScrollScript
+  fullName: SamuraiSoccer.UI.ScrollScript
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ScrollScript
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 巻物をなめらかに移動させる
+  example: []
+  syntax:
+    content: 'public class ScrollScript : MonoBehaviour'
+    content.vb: Public Class ScrollScript Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.ScrollScript.rectra
+  commentId: F:SamuraiSoccer.UI.ScrollScript.rectra
+  id: rectra
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: rectra
+  nameWithType: ScrollScript.rectra
+  fullName: SamuraiSoccer.UI.ScrollScript.rectra
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rectra
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform rectra
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private rectra As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.ScrollScript.slideTime
+  commentId: F:SamuraiSoccer.UI.ScrollScript.slideTime
+  id: slideTime
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: slideTime
+  nameWithType: ScrollScript.slideTime
+  fullName: SamuraiSoccer.UI.ScrollScript.slideTime
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: slideTime
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float slideTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private slideTime As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.ScrollScript.ScrollObject
+  commentId: F:SamuraiSoccer.UI.ScrollScript.ScrollObject
+  id: ScrollObject
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: ScrollObject
+  nameWithType: ScrollScript.ScrollObject
+  fullName: SamuraiSoccer.UI.ScrollScript.ScrollObject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ScrollObject
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject ScrollObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private ScrollObject As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.ScrollScript.rotSpeed
+  commentId: F:SamuraiSoccer.UI.ScrollScript.rotSpeed
+  id: rotSpeed
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: rotSpeed
+  nameWithType: ScrollScript.rotSpeed
+  fullName: SamuraiSoccer.UI.ScrollScript.rotSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rotSpeed
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float rotSpeed
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private rotSpeed As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.ScrollScript.FlagMaterials
+  commentId: F:SamuraiSoccer.UI.ScrollScript.FlagMaterials
+  id: FlagMaterials
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: FlagMaterials
+  nameWithType: ScrollScript.FlagMaterials
+  fullName: SamuraiSoccer.UI.ScrollScript.FlagMaterials
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FlagMaterials
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Material[] FlagMaterials
+    return:
+      type: UnityEngine.Material[]
+    content.vb: >-
+      <SerializeField>
+
+      Private FlagMaterials As Material()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.ScrollScript.ScrollMaterial
+  commentId: F:SamuraiSoccer.UI.ScrollScript.ScrollMaterial
+  id: ScrollMaterial
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: ScrollMaterial
+  nameWithType: ScrollScript.ScrollMaterial
+  fullName: SamuraiSoccer.UI.ScrollScript.ScrollMaterial
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ScrollMaterial
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private MeshRenderer ScrollMaterial
+    return:
+      type: UnityEngine.MeshRenderer
+    content.vb: Private ScrollMaterial As MeshRenderer
+- uid: SamuraiSoccer.UI.ScrollScript.initRot
+  commentId: F:SamuraiSoccer.UI.ScrollScript.initRot
+  id: initRot
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: initRot
+  nameWithType: ScrollScript.initRot
+  fullName: SamuraiSoccer.UI.ScrollScript.initRot
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: initRot
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private Vector3 initRot
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private initRot As Vector3
+- uid: SamuraiSoccer.UI.ScrollScript.Start
+  commentId: M:SamuraiSoccer.UI.ScrollScript.Start
+  id: Start
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ScrollScript.Start()
+  fullName: SamuraiSoccer.UI.ScrollScript.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: SamuraiSoccer.UI.ScrollScript.Start*
+- uid: SamuraiSoccer.UI.ScrollScript.ScrollSlide(System.Single,System.Single,System.Single,System.Single,System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.UI.ScrollScript.ScrollSlide(System.Single,System.Single,System.Single,System.Single,System.Threading.CancellationToken)
+  id: ScrollSlide(System.Single,System.Single,System.Single,System.Single,System.Threading.CancellationToken)
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: ScrollSlide(float, float, float, float, CancellationToken)
+  nameWithType: ScrollScript.ScrollSlide(float, float, float, float, CancellationToken)
+  fullName: SamuraiSoccer.UI.ScrollScript.ScrollSlide(float, float, float, float, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ScrollSlide
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 巻物の回転処理を行う
+  example: []
+  syntax:
+    content: public UniTask ScrollSlide(float startX, float goalX, float Y, float rollTime, CancellationToken cancellationToken = default)
+    parameters:
+    - id: startX
+      type: System.Single
+      description: 巻物の初期位置のX座標
+    - id: goalX
+      type: System.Single
+      description: 巻物の最終位置のX座標
+    - id: Y
+      type: System.Single
+      description: 巻物のY座標
+    - id: rollTime
+      type: System.Single
+      description: 移動、回転にかける時間
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Public Function ScrollSlide(startX As Single, goalX As Single, Y As Single, rollTime As Single, cancellationToken As CancellationToken = Nothing) As UniTask
+  overload: SamuraiSoccer.UI.ScrollScript.ScrollSlide*
+  nameWithType.vb: ScrollScript.ScrollSlide(Single, Single, Single, Single, CancellationToken)
+  fullName.vb: SamuraiSoccer.UI.ScrollScript.ScrollSlide(Single, Single, Single, Single, System.Threading.CancellationToken)
+  name.vb: ScrollSlide(Single, Single, Single, Single, CancellationToken)
+- uid: SamuraiSoccer.UI.ScrollScript.easeOutCubic(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:SamuraiSoccer.UI.ScrollScript.easeOutCubic(System.Single,System.Single,System.Single,System.Single)
+  id: easeOutCubic(System.Single,System.Single,System.Single,System.Single)
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: easeOutCubic(float, float, float, float)
+  nameWithType: ScrollScript.easeOutCubic(float, float, float, float)
+  fullName: SamuraiSoccer.UI.ScrollScript.easeOutCubic(float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: easeOutCubic
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 63
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: イージングの計算
+  example: []
+  syntax:
+    content: private float easeOutCubic(float t, float goal, float start, float goalTime)
+    parameters:
+    - id: t
+      type: System.Single
+      description: 現在の時刻
+    - id: goal
+      type: System.Single
+      description: 最終地点のx座標
+    - id: start
+      type: System.Single
+      description: t=0のx座標
+    - id: goalTime
+      type: System.Single
+      description: 最終地点の時刻
+    return:
+      type: System.Single
+      description: 現在のx座標
+    content.vb: Private Function easeOutCubic(t As Single, goal As Single, start As Single, goalTime As Single) As Single
+  overload: SamuraiSoccer.UI.ScrollScript.easeOutCubic*
+  nameWithType.vb: ScrollScript.easeOutCubic(Single, Single, Single, Single)
+  fullName.vb: SamuraiSoccer.UI.ScrollScript.easeOutCubic(Single, Single, Single, Single)
+  name.vb: easeOutCubic(Single, Single, Single, Single)
+- uid: SamuraiSoccer.UI.ScrollScript.ResetObject(System.Single)
+  commentId: M:SamuraiSoccer.UI.ScrollScript.ResetObject(System.Single)
+  id: ResetObject(System.Single)
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: ResetObject(float)
+  nameWithType: ScrollScript.ResetObject(float)
+  fullName: SamuraiSoccer.UI.ScrollScript.ResetObject(float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ResetObject
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 72
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 巻物を元初期位置に戻す
+  example: []
+  syntax:
+    content: public void ResetObject(float startX)
+    parameters:
+    - id: startX
+      type: System.Single
+      description: 巻物の初期位置
+    content.vb: Public Sub ResetObject(startX As Single)
+  overload: SamuraiSoccer.UI.ScrollScript.ResetObject*
+  nameWithType.vb: ScrollScript.ResetObject(Single)
+  fullName.vb: SamuraiSoccer.UI.ScrollScript.ResetObject(Single)
+  name.vb: ResetObject(Single)
+- uid: SamuraiSoccer.UI.ScrollScript.ChangeMaterial(SamuraiSoccer.Event.Stage)
+  commentId: M:SamuraiSoccer.UI.ScrollScript.ChangeMaterial(SamuraiSoccer.Event.Stage)
+  id: ChangeMaterial(SamuraiSoccer.Event.Stage)
+  parent: SamuraiSoccer.UI.ScrollScript
+  langs:
+  - csharp
+  - vb
+  name: ChangeMaterial(Stage)
+  nameWithType: ScrollScript.ChangeMaterial(Stage)
+  fullName: SamuraiSoccer.UI.ScrollScript.ChangeMaterial(SamuraiSoccer.Event.Stage)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/ScrollScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ChangeMaterial
+    path: ../Assets/Scripts/UI/ScrollScript.cs
+    startLine: 82
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: 巻物のMaterialを変更する
+  example: []
+  syntax:
+    content: public void ChangeMaterial(Stage nowStage)
+    parameters:
+    - id: nowStage
+      type: SamuraiSoccer.Event.Stage
+      description: 巻物に反映させる国
+    content.vb: Public Sub ChangeMaterial(nowStage As Stage)
+  overload: SamuraiSoccer.UI.ScrollScript.ChangeMaterial*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Material[]
+  isExternal: true
+  name: Material[]
+  nameWithType: Material[]
+  fullName: UnityEngine.Material[]
+  nameWithType.vb: Material()
+  fullName.vb: UnityEngine.Material()
+  name.vb: Material()
+  spec.csharp:
+  - uid: UnityEngine.Material
+    name: Material
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Material
+    name: Material
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.MeshRenderer
+  commentId: T:UnityEngine.MeshRenderer
+  parent: UnityEngine
+  isExternal: true
+  name: MeshRenderer
+  nameWithType: MeshRenderer
+  fullName: UnityEngine.MeshRenderer
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.UI.ScrollScript.Start*
+  commentId: Overload:SamuraiSoccer.UI.ScrollScript.Start
+  href: SamuraiSoccer.UI.ScrollScript.html#SamuraiSoccer_UI_ScrollScript_Start
+  name: Start
+  nameWithType: ScrollScript.Start
+  fullName: SamuraiSoccer.UI.ScrollScript.Start
+- uid: SamuraiSoccer.UI.ScrollScript.ScrollSlide*
+  commentId: Overload:SamuraiSoccer.UI.ScrollScript.ScrollSlide
+  href: SamuraiSoccer.UI.ScrollScript.html#SamuraiSoccer_UI_ScrollScript_ScrollSlide_System_Single_System_Single_System_Single_System_Single_System_Threading_CancellationToken_
+  name: ScrollSlide
+  nameWithType: ScrollScript.ScrollSlide
+  fullName: SamuraiSoccer.UI.ScrollScript.ScrollSlide
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.UI.ScrollScript.easeOutCubic*
+  commentId: Overload:SamuraiSoccer.UI.ScrollScript.easeOutCubic
+  href: SamuraiSoccer.UI.ScrollScript.html#SamuraiSoccer_UI_ScrollScript_easeOutCubic_System_Single_System_Single_System_Single_System_Single_
+  name: easeOutCubic
+  nameWithType: ScrollScript.easeOutCubic
+  fullName: SamuraiSoccer.UI.ScrollScript.easeOutCubic
+- uid: SamuraiSoccer.UI.ScrollScript.ResetObject*
+  commentId: Overload:SamuraiSoccer.UI.ScrollScript.ResetObject
+  href: SamuraiSoccer.UI.ScrollScript.html#SamuraiSoccer_UI_ScrollScript_ResetObject_System_Single_
+  name: ResetObject
+  nameWithType: ScrollScript.ResetObject
+  fullName: SamuraiSoccer.UI.ScrollScript.ResetObject
+- uid: SamuraiSoccer.UI.ScrollScript.ChangeMaterial*
+  commentId: Overload:SamuraiSoccer.UI.ScrollScript.ChangeMaterial
+  href: SamuraiSoccer.UI.ScrollScript.html#SamuraiSoccer_UI_ScrollScript_ChangeMaterial_SamuraiSoccer_Event_Stage_
+  name: ChangeMaterial
+  nameWithType: ScrollScript.ChangeMaterial
+  fullName: SamuraiSoccer.UI.ScrollScript.ChangeMaterial
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html

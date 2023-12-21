@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType
+  commentId: T:SamuraiSoccer.StageContents.Conversation.EmotionType
+  id: EmotionType
+  parent: SamuraiSoccer.StageContents.Conversation
+  children:
+  - SamuraiSoccer.StageContents.Conversation.EmotionType.Angry
+  - SamuraiSoccer.StageContents.Conversation.EmotionType.Funny
+  - SamuraiSoccer.StageContents.Conversation.EmotionType.Normal
+  - SamuraiSoccer.StageContents.Conversation.EmotionType.Sad
+  - SamuraiSoccer.StageContents.Conversation.EmotionType.Silhouette
+  langs:
+  - csharp
+  - vb
+  name: EmotionType
+  nameWithType: EmotionType
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: EmotionType
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 44
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Serializable]
+
+      public enum EmotionType
+    content.vb: >-
+      <Serializable>
+
+      Public Enum EmotionType
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType.Normal
+  commentId: F:SamuraiSoccer.StageContents.Conversation.EmotionType.Normal
+  id: Normal
+  parent: SamuraiSoccer.StageContents.Conversation.EmotionType
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: EmotionType.Normal
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType.Normal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Normal
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 47
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: Normal = 0
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType.Silhouette
+  commentId: F:SamuraiSoccer.StageContents.Conversation.EmotionType.Silhouette
+  id: Silhouette
+  parent: SamuraiSoccer.StageContents.Conversation.EmotionType
+  langs:
+  - csharp
+  - vb
+  name: Silhouette
+  nameWithType: EmotionType.Silhouette
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType.Silhouette
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Silhouette
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 48
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: Silhouette = 1
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType.Funny
+  commentId: F:SamuraiSoccer.StageContents.Conversation.EmotionType.Funny
+  id: Funny
+  parent: SamuraiSoccer.StageContents.Conversation.EmotionType
+  langs:
+  - csharp
+  - vb
+  name: Funny
+  nameWithType: EmotionType.Funny
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType.Funny
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Funny
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 49
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: Funny = 2
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType.Angry
+  commentId: F:SamuraiSoccer.StageContents.Conversation.EmotionType.Angry
+  id: Angry
+  parent: SamuraiSoccer.StageContents.Conversation.EmotionType
+  langs:
+  - csharp
+  - vb
+  name: Angry
+  nameWithType: EmotionType.Angry
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType.Angry
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Angry
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 50
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: Angry = 3
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType.Sad
+  commentId: F:SamuraiSoccer.StageContents.Conversation.EmotionType.Sad
+  id: Sad
+  parent: SamuraiSoccer.StageContents.Conversation.EmotionType
+  langs:
+  - csharp
+  - vb
+  name: Sad
+  nameWithType: EmotionType.Sad
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType.Sad
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Sad
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 51
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: Sad = 4
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.EmotionType
+references:
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: SamuraiSoccer.StageContents.Conversation.EmotionType
+  commentId: T:SamuraiSoccer.StageContents.Conversation.EmotionType
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.EmotionType.html
+  name: EmotionType
+  nameWithType: EmotionType
+  fullName: SamuraiSoccer.StageContents.Conversation.EmotionType

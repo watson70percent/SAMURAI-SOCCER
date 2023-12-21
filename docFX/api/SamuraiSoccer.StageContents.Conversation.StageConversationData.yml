@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Conversation.StageConversationData
+  commentId: T:SamuraiSoccer.StageContents.Conversation.StageConversationData
+  id: StageConversationData
+  parent: SamuraiSoccer.StageContents.Conversation
+  children:
+  - SamuraiSoccer.StageContents.Conversation.StageConversationData.m_conversationTexts
+  - SamuraiSoccer.StageContents.Conversation.StageConversationData.m_leftCharacterName
+  - SamuraiSoccer.StageContents.Conversation.StageConversationData.m_rightCharacterName
+  langs:
+  - csharp
+  - vb
+  name: StageConversationData
+  nameWithType: StageConversationData
+  fullName: SamuraiSoccer.StageContents.Conversation.StageConversationData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageConversationData
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 12
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class StageConversationData
+    content.vb: >-
+      <Serializable>
+
+      Public Class StageConversationData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Conversation.StageConversationData.m_leftCharacterName
+  commentId: F:SamuraiSoccer.StageContents.Conversation.StageConversationData.m_leftCharacterName
+  id: m_leftCharacterName
+  parent: SamuraiSoccer.StageContents.Conversation.StageConversationData
+  langs:
+  - csharp
+  - vb
+  name: m_leftCharacterName
+  nameWithType: StageConversationData.m_leftCharacterName
+  fullName: SamuraiSoccer.StageContents.Conversation.StageConversationData.m_leftCharacterName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_leftCharacterName
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 15
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public CharacterName m_leftCharacterName
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.CharacterName
+    content.vb: Public m_leftCharacterName As CharacterName
+- uid: SamuraiSoccer.StageContents.Conversation.StageConversationData.m_rightCharacterName
+  commentId: F:SamuraiSoccer.StageContents.Conversation.StageConversationData.m_rightCharacterName
+  id: m_rightCharacterName
+  parent: SamuraiSoccer.StageContents.Conversation.StageConversationData
+  langs:
+  - csharp
+  - vb
+  name: m_rightCharacterName
+  nameWithType: StageConversationData.m_rightCharacterName
+  fullName: SamuraiSoccer.StageContents.Conversation.StageConversationData.m_rightCharacterName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_rightCharacterName
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 16
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public CharacterName m_rightCharacterName
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.CharacterName
+    content.vb: Public m_rightCharacterName As CharacterName
+- uid: SamuraiSoccer.StageContents.Conversation.StageConversationData.m_conversationTexts
+  commentId: F:SamuraiSoccer.StageContents.Conversation.StageConversationData.m_conversationTexts
+  id: m_conversationTexts
+  parent: SamuraiSoccer.StageContents.Conversation.StageConversationData
+  langs:
+  - csharp
+  - vb
+  name: m_conversationTexts
+  nameWithType: StageConversationData.m_conversationTexts
+  fullName: SamuraiSoccer.StageContents.Conversation.StageConversationData.m_conversationTexts
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationTexts
+    path: ../Assets/Scripts/StageContents/Conversation/StageConversationDatas.cs
+    startLine: 17
+  assemblies:
+  - Conversation
+  namespace: SamuraiSoccer.StageContents.Conversation
+  syntax:
+    content: public List<ConversationText> m_conversationTexts
+    return:
+      type: System.Collections.Generic.List{SamuraiSoccer.StageContents.Conversation.ConversationText}
+    content.vb: Public m_conversationTexts As List(Of ConversationText)
+references:
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SamuraiSoccer.StageContents.Conversation.CharacterName
+  commentId: T:SamuraiSoccer.StageContents.Conversation.CharacterName
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.CharacterName.html
+  name: CharacterName
+  nameWithType: CharacterName
+  fullName: SamuraiSoccer.StageContents.Conversation.CharacterName
+- uid: System.Collections.Generic.List{SamuraiSoccer.StageContents.Conversation.ConversationText}
+  commentId: T:System.Collections.Generic.List{SamuraiSoccer.StageContents.Conversation.ConversationText}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ConversationText>
+  nameWithType: List<ConversationText>
+  fullName: System.Collections.Generic.List<SamuraiSoccer.StageContents.Conversation.ConversationText>
+  nameWithType.vb: List(Of ConversationText)
+  fullName.vb: System.Collections.Generic.List(Of SamuraiSoccer.StageContents.Conversation.ConversationText)
+  name.vb: List(Of ConversationText)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: SamuraiSoccer.StageContents.Conversation.ConversationText
+    name: ConversationText
+    href: SamuraiSoccer.StageContents.Conversation.ConversationText.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.StageContents.Conversation.ConversationText
+    name: ConversationText
+    href: SamuraiSoccer.StageContents.Conversation.ConversationText.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,82 +1,50 @@
 {
-    "metadata": [{
-        "src": [{
-            "files": [
-                "**/Assembly-CSharp-firstpath.csproj",
-                "**/SamuraiSoccer.csproj",
-                "**/SamuraiSoccer.Event.csproj",
-                "**/SamuraiSoccer.Event.EditorExtension.csproj",
-                "**/SamuraiSoccer.Player.csproj",
-                "**/SamuraiSoccer.SoccerGame.csproj",
-                "**/SamuraiSoccer.SoccerGame.AI.csproj",
-                "**/SamuraiSoccer.SoccerGame.AI.EditorExtension.csproj",
-                "**/SamuraiSoccer.SoccerGame.Extension.csproj",
-                "**/SamuraiSoccer.StageContents.csproj",
-                "**/SamuraiSoccer.StageContents.China.csproj",
-                "**/SamuraiSoccer.StageContents.Result.csproj",
-                "**/SamuraiSoccer.StageContents.Rossia.csproj",
-                "**/SamuraiSoccer.StageContents.StageSelect.csproj",
-                "**/SamuraiSoccer.StageContents.Tutorial.csproj",
-                "**/SamuraiSoccer.StageContents.UK.csproj",
-                "**/SamuraiSoccer.StageContents.USA.csproj",
-                "**/SamuraiSoccer.UI.csproj"
-            ],
-            "src": "../"
-        }],
-        "dest": "api",
-        "filter": "filterConfig.yml",
-        "shouldSkipMarkup": false,
-        "disableGitFeatures": false,
-        "disableDefaultFilter": true,
-        "force": true
-    }],
-    "build": {
-        "content": [{
-                "files": [
-                    "api/**.yml",
-                    "api/index.md"
-                ]
-            },
-            {
-                "files": [
-                    "articles/**.md",
-                    "articles/toc.yml",
-                    "toc.yml",
-                    "*.md"
-                ]
-            }
-        ],
-        "resource": [{
-            "files": [
-                "images/**"
-            ]
-        }],
-        "overwrite": [{
-            "files": [
-                "apidoc/**.md"
-            ],
-            "exclude": [
-                "obj/**",
-                "**/docs"
-            ]
-        }],
-        "dest": "../docs",
-        "globalMetadataFiles": [],
-        "fileMetadataFiles": [],
-        "template": [
-            "default"
-        ],
-        "postProcessors": [],
-        "markdownEngineName": "markdig",
-        "noLangKeyword": false,
-        "keepFileLink": false,
-        "cleanupCacheHistory": false,
-        "disableGitFeatures": false,
-        "globalMetadata": {
-            "_enableSearch": true
-        },
-        "sitemap": {
-            "baseUrl": "https://watson70percent.github.io/SAMURAI-SOCCER"
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../",
+          "files": [
+            "**/*.csproj"
+          ]
         }
+      ],
+      "dest": "api",
+      "filter": "filterConfig.yml",
+      "includePrivateMembers": true
     }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "../docs",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "doc",
+      "_appTitle": "doc",
+      "_enableSearch": true,
+      "pdf": true
+    },
+    "sitemap": {
+        "baseUrl": "https://watson70percent.github.io/SAMURAI-SOCCER"
+    }
+  }
 }

@@ -1,0 +1,287 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.DetectExceptionLog
+  commentId: T:SamuraiSoccer.DetectExceptionLog
+  id: DetectExceptionLog
+  parent: SamuraiSoccer
+  children:
+  - SamuraiSoccer.DetectExceptionLog.HandleLog(System.String,System.String,UnityEngine.LogType)
+  - SamuraiSoccer.DetectExceptionLog.OnDisable
+  - SamuraiSoccer.DetectExceptionLog.OnEnable
+  - SamuraiSoccer.DetectExceptionLog.m_logText
+  langs:
+  - csharp
+  - vb
+  name: DetectExceptionLog
+  nameWithType: DetectExceptionLog
+  fullName: SamuraiSoccer.DetectExceptionLog
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/DetectExceptionLog.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: DetectExceptionLog
+    path: ../Assets/Scripts/DetectExceptionLog.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: 'public class DetectExceptionLog : MonoBehaviour'
+    content.vb: Public Class DetectExceptionLog Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.DetectExceptionLog.m_logText
+  commentId: F:SamuraiSoccer.DetectExceptionLog.m_logText
+  id: m_logText
+  parent: SamuraiSoccer.DetectExceptionLog
+  langs:
+  - csharp
+  - vb
+  name: m_logText
+  nameWithType: DetectExceptionLog.m_logText
+  fullName: SamuraiSoccer.DetectExceptionLog.m_logText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/DetectExceptionLog.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_logText
+    path: ../Assets/Scripts/DetectExceptionLog.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Text m_logText
+    return:
+      type: UnityEngine.UI.Text
+    content.vb: >-
+      <SerializeField>
+
+      Private m_logText As Text
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.DetectExceptionLog.OnEnable
+  commentId: M:SamuraiSoccer.DetectExceptionLog.OnEnable
+  id: OnEnable
+  parent: SamuraiSoccer.DetectExceptionLog
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: DetectExceptionLog.OnEnable()
+  fullName: SamuraiSoccer.DetectExceptionLog.OnEnable()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/DetectExceptionLog.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnEnable
+    path: ../Assets/Scripts/DetectExceptionLog.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private void OnEnable()
+    content.vb: Private Sub OnEnable()
+  overload: SamuraiSoccer.DetectExceptionLog.OnEnable*
+- uid: SamuraiSoccer.DetectExceptionLog.OnDisable
+  commentId: M:SamuraiSoccer.DetectExceptionLog.OnDisable
+  id: OnDisable
+  parent: SamuraiSoccer.DetectExceptionLog
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: DetectExceptionLog.OnDisable()
+  fullName: SamuraiSoccer.DetectExceptionLog.OnDisable()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/DetectExceptionLog.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnDisable
+    path: ../Assets/Scripts/DetectExceptionLog.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private void OnDisable()
+    content.vb: Private Sub OnDisable()
+  overload: SamuraiSoccer.DetectExceptionLog.OnDisable*
+- uid: SamuraiSoccer.DetectExceptionLog.HandleLog(System.String,System.String,UnityEngine.LogType)
+  commentId: M:SamuraiSoccer.DetectExceptionLog.HandleLog(System.String,System.String,UnityEngine.LogType)
+  id: HandleLog(System.String,System.String,UnityEngine.LogType)
+  parent: SamuraiSoccer.DetectExceptionLog
+  langs:
+  - csharp
+  - vb
+  name: HandleLog(string, string, LogType)
+  nameWithType: DetectExceptionLog.HandleLog(string, string, LogType)
+  fullName: SamuraiSoccer.DetectExceptionLog.HandleLog(string, string, UnityEngine.LogType)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/DetectExceptionLog.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: HandleLog
+    path: ../Assets/Scripts/DetectExceptionLog.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer
+  namespace: SamuraiSoccer
+  syntax:
+    content: private void HandleLog(string logString, string stackTrace, LogType type)
+    parameters:
+    - id: logString
+      type: System.String
+    - id: stackTrace
+      type: System.String
+    - id: type
+      type: UnityEngine.LogType
+    content.vb: Private Sub HandleLog(logString As String, stackTrace As String, type As LogType)
+  overload: SamuraiSoccer.DetectExceptionLog.HandleLog*
+  nameWithType.vb: DetectExceptionLog.HandleLog(String, String, LogType)
+  fullName.vb: SamuraiSoccer.DetectExceptionLog.HandleLog(String, String, UnityEngine.LogType)
+  name.vb: HandleLog(String, String, LogType)
+references:
+- uid: SamuraiSoccer
+  commentId: N:SamuraiSoccer
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer
+  nameWithType: SamuraiSoccer
+  fullName: SamuraiSoccer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.UI.Text
+  commentId: T:UnityEngine.UI.Text
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: UnityEngine.UI.Text
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: SamuraiSoccer.DetectExceptionLog.OnEnable*
+  commentId: Overload:SamuraiSoccer.DetectExceptionLog.OnEnable
+  href: SamuraiSoccer.DetectExceptionLog.html#SamuraiSoccer_DetectExceptionLog_OnEnable
+  name: OnEnable
+  nameWithType: DetectExceptionLog.OnEnable
+  fullName: SamuraiSoccer.DetectExceptionLog.OnEnable
+- uid: SamuraiSoccer.DetectExceptionLog.OnDisable*
+  commentId: Overload:SamuraiSoccer.DetectExceptionLog.OnDisable
+  href: SamuraiSoccer.DetectExceptionLog.html#SamuraiSoccer_DetectExceptionLog_OnDisable
+  name: OnDisable
+  nameWithType: DetectExceptionLog.OnDisable
+  fullName: SamuraiSoccer.DetectExceptionLog.OnDisable
+- uid: SamuraiSoccer.DetectExceptionLog.HandleLog*
+  commentId: Overload:SamuraiSoccer.DetectExceptionLog.HandleLog
+  href: SamuraiSoccer.DetectExceptionLog.html#SamuraiSoccer_DetectExceptionLog_HandleLog_System_String_System_String_UnityEngine_LogType_
+  name: HandleLog
+  nameWithType: DetectExceptionLog.HandleLog
+  fullName: SamuraiSoccer.DetectExceptionLog.HandleLog
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.LogType
+  commentId: T:UnityEngine.LogType
+  parent: UnityEngine
+  isExternal: true
+  name: LogType
+  nameWithType: LogType
+  fullName: UnityEngine.LogType

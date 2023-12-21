@@ -1,0 +1,697 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  id: StageSelectBGM
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM(SamuraiSoccer.Event.Stage,System.Single)
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.cn
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.current
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.gb
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.isNotCleared
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.jp
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ru
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.start
+  - SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.us
+  langs:
+  - csharp
+  - vb
+  name: StageSelectBGM
+  nameWithType: StageSelectBGM
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageSelectBGM
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  summary: ステージセレクトのBGMを監理。
+  example: []
+  syntax:
+    content: 'public class StageSelectBGM : MonoBehaviour'
+    content.vb: Public Class StageSelectBGM Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.start
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.start
+  id: start
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: start
+  nameWithType: StageSelectBGM.start
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.start
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: start
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource start
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private start As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.jp
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.jp
+  id: jp
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: jp
+  nameWithType: StageSelectBGM.jp
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.jp
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: jp
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource jp
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private jp As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.gb
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.gb
+  id: gb
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: gb
+  nameWithType: StageSelectBGM.gb
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.gb
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: gb
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource gb
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private gb As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.cn
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.cn
+  id: cn
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: cn
+  nameWithType: StageSelectBGM.cn
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.cn
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: cn
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource cn
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private cn As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.us
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.us
+  id: us
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: us
+  nameWithType: StageSelectBGM.us
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.us
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: us
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource us
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private us As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ru
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ru
+  id: ru
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: ru
+  nameWithType: StageSelectBGM.ru
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ru
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ru
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource ru
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private ru As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.current
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.current
+  id: current
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: current
+  nameWithType: StageSelectBGM.current
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.current
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: current
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private Stage current
+    return:
+      type: SamuraiSoccer.Event.Stage
+    content.vb: Private current As Stage
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.isNotCleared
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.isNotCleared
+  id: isNotCleared
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: isNotCleared
+  nameWithType: StageSelectBGM.isNotCleared
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.isNotCleared
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: isNotCleared
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 29
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private bool isNotCleared
+    return:
+      type: System.Boolean
+    content.vb: Private isNotCleared As Boolean
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: StageSelectBGM.Start()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 31
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM(SamuraiSoccer.Event.Stage,System.Single)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM(SamuraiSoccer.Event.Stage,System.Single)
+  id: ChangeBGM(SamuraiSoccer.Event.Stage,System.Single)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: ChangeBGM(Stage, float)
+  nameWithType: StageSelectBGM.ChangeBGM(Stage, float)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM(SamuraiSoccer.Event.Stage, float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ChangeBGM
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 66
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public void ChangeBGM(Stage next, float delayTime)
+    parameters:
+    - id: next
+      type: SamuraiSoccer.Event.Stage
+    - id: delayTime
+      type: System.Single
+    content.vb: Public Sub ChangeBGM([next] As Stage, delayTime As Single)
+  overload: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM*
+  nameWithType.vb: StageSelectBGM.ChangeBGM(Stage, Single)
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM(SamuraiSoccer.Event.Stage, Single)
+  name.vb: ChangeBGM(Stage, Single)
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  id: FadeOut(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: FadeOut(AudioSource, float, CancellationToken)
+  nameWithType: StageSelectBGM.FadeOut(AudioSource, float, CancellationToken)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut(UnityEngine.AudioSource, float, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FadeOut
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 92
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private UniTask FadeOut(AudioSource source, float delayTime, CancellationToken token)
+    parameters:
+    - id: source
+      type: UnityEngine.AudioSource
+    - id: delayTime
+      type: System.Single
+    - id: token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function FadeOut(source As AudioSource, delayTime As Single, token As CancellationToken) As UniTask
+  overload: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut*
+  nameWithType.vb: StageSelectBGM.FadeOut(AudioSource, Single, CancellationToken)
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut(UnityEngine.AudioSource, Single, System.Threading.CancellationToken)
+  name.vb: FadeOut(AudioSource, Single, CancellationToken)
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  id: FadeIn(UnityEngine.AudioSource,System.Single,System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM
+  langs:
+  - csharp
+  - vb
+  name: FadeIn(AudioSource, float, CancellationToken)
+  nameWithType: StageSelectBGM.FadeIn(AudioSource, float, CancellationToken)
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn(UnityEngine.AudioSource, float, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FadeIn
+    path: ../Assets/Scripts/StageContents/StageSelect/StageSelectBGM.cs
+    startLine: 105
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private UniTask FadeIn(AudioSource source, float delayTime, CancellationToken token)
+    parameters:
+    - id: source
+      type: UnityEngine.AudioSource
+    - id: delayTime
+      type: System.Single
+    - id: token
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function FadeIn(source As AudioSource, delayTime As Single, token As CancellationToken) As UniTask
+  overload: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn*
+  nameWithType.vb: StageSelectBGM.FadeIn(AudioSource, Single, CancellationToken)
+  fullName.vb: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn(UnityEngine.AudioSource, Single, System.Threading.CancellationToken)
+  name.vb: FadeIn(AudioSource, Single, CancellationToken)
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start
+  href: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.html#SamuraiSoccer_StageContents_StageSelect_StageSelectBGM_Start
+  name: Start
+  nameWithType: StageSelectBGM.Start
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.Start
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM
+  href: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.html#SamuraiSoccer_StageContents_StageSelect_StageSelectBGM_ChangeBGM_SamuraiSoccer_Event_Stage_System_Single_
+  name: ChangeBGM
+  nameWithType: StageSelectBGM.ChangeBGM
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.ChangeBGM
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut
+  href: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.html#SamuraiSoccer_StageContents_StageSelect_StageSelectBGM_FadeOut_UnityEngine_AudioSource_System_Single_System_Threading_CancellationToken_
+  name: FadeOut
+  nameWithType: StageSelectBGM.FadeOut
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeOut
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn
+  href: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.html#SamuraiSoccer_StageContents_StageSelect_StageSelectBGM_FadeIn_UnityEngine_AudioSource_System_Single_System_Threading_CancellationToken_
+  name: FadeIn
+  nameWithType: StageSelectBGM.FadeIn
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageSelectBGM.FadeIn

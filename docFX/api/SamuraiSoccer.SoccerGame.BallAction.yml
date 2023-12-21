@@ -1,0 +1,1470 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.BallAction
+  commentId: T:SamuraiSoccer.SoccerGame.BallAction
+  id: BallAction
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.BallAction.Awake
+  - SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)
+  - SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)
+  - SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)
+  - SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)
+  - SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)
+  - SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)
+  - SamuraiSoccer.SoccerGame.BallAction.Pause(System.Boolean)
+  - SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)
+  - SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)
+  - SamuraiSoccer.SoccerGame.BallAction.Start
+  - SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)
+  - SamuraiSoccer.SoccerGame.BallAction.Update
+  - SamuraiSoccer.SoccerGame.BallAction.angularVelocity
+  - SamuraiSoccer.SoccerGame.BallAction.calledNum
+  - SamuraiSoccer.SoccerGame.BallAction.commandStream
+  - SamuraiSoccer.SoccerGame.BallAction.gravity
+  - SamuraiSoccer.SoccerGame.BallAction.info
+  - SamuraiSoccer.SoccerGame.BallAction.isPause
+  - SamuraiSoccer.SoccerGame.BallAction.last_touch
+  - SamuraiSoccer.SoccerGame.BallAction.owner
+  - SamuraiSoccer.SoccerGame.BallAction.rb
+  - SamuraiSoccer.SoccerGame.BallAction.scoreManager
+  - SamuraiSoccer.SoccerGame.BallAction.sqrt2
+  - SamuraiSoccer.SoccerGame.BallAction.sqrt3
+  - SamuraiSoccer.SoccerGame.BallAction.velocity
+  langs:
+  - csharp
+  - vb
+  name: BallAction
+  nameWithType: BallAction
+  fullName: SamuraiSoccer.SoccerGame.BallAction
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BallAction
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ボールに対するアクションをするクラス．（ボールにくっつける．）
+  example: []
+  syntax:
+    content: 'public class BallAction : MonoBehaviour'
+    content.vb: Public Class BallAction Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.SoccerGame.BallAction.rb
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.rb
+  id: rb
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: rb
+  nameWithType: BallAction.rb
+  fullName: SamuraiSoccer.SoccerGame.BallAction.rb
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rb
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public Rigidbody rb
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: >-
+      <NonSerialized>
+
+      Public rb As Rigidbody
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.BallAction.info
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.info
+  id: info
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: info
+  nameWithType: BallAction.info
+  fullName: SamuraiSoccer.SoccerGame.BallAction.info
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: info
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public FieldManager info
+    return:
+      type: SamuraiSoccer.SoccerGame.FieldManager
+    content.vb: Public info As FieldManager
+- uid: SamuraiSoccer.SoccerGame.BallAction.scoreManager
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.scoreManager
+  id: scoreManager
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: scoreManager
+  nameWithType: BallAction.scoreManager
+  fullName: SamuraiSoccer.SoccerGame.BallAction.scoreManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: scoreManager
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public ScoreManager scoreManager
+    return:
+      type: SamuraiSoccer.SoccerGame.ScoreManager
+    content.vb: Public scoreManager As ScoreManager
+- uid: SamuraiSoccer.SoccerGame.BallAction.sqrt3
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.sqrt3
+  id: sqrt3
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: sqrt3
+  nameWithType: BallAction.sqrt3
+  fullName: SamuraiSoccer.SoccerGame.BallAction.sqrt3
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: sqrt3
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly float sqrt3
+    return:
+      type: System.Single
+    content.vb: Private Shared ReadOnly sqrt3 As Single
+- uid: SamuraiSoccer.SoccerGame.BallAction.sqrt2
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.sqrt2
+  id: sqrt2
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: sqrt2
+  nameWithType: BallAction.sqrt2
+  fullName: SamuraiSoccer.SoccerGame.BallAction.sqrt2
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: sqrt2
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly float sqrt2
+    return:
+      type: System.Single
+    content.vb: Private Shared ReadOnly sqrt2 As Single
+- uid: SamuraiSoccer.SoccerGame.BallAction.gravity
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.gravity
+  id: gravity
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: gravity
+  nameWithType: BallAction.gravity
+  fullName: SamuraiSoccer.SoccerGame.BallAction.gravity
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: gravity
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static readonly float gravity
+    return:
+      type: System.Single
+    content.vb: Private Shared ReadOnly gravity As Single
+- uid: SamuraiSoccer.SoccerGame.BallAction.velocity
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.velocity
+  id: velocity
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: velocity
+  nameWithType: BallAction.velocity
+  fullName: SamuraiSoccer.SoccerGame.BallAction.velocity
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: velocity
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private Vector3 velocity
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private velocity As Vector3
+- uid: SamuraiSoccer.SoccerGame.BallAction.angularVelocity
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.angularVelocity
+  id: angularVelocity
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: angularVelocity
+  nameWithType: BallAction.angularVelocity
+  fullName: SamuraiSoccer.SoccerGame.BallAction.angularVelocity
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: angularVelocity
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private Vector3 angularVelocity
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private angularVelocity As Vector3
+- uid: SamuraiSoccer.SoccerGame.BallAction.calledNum
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.calledNum
+  id: calledNum
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: calledNum
+  nameWithType: BallAction.calledNum
+  fullName: SamuraiSoccer.SoccerGame.BallAction.calledNum
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: calledNum
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private int calledNum
+    return:
+      type: System.Int32
+    content.vb: Private calledNum As Integer
+- uid: SamuraiSoccer.SoccerGame.BallAction.commandStream
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.commandStream
+  id: commandStream
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: commandStream
+  nameWithType: BallAction.commandStream
+  fullName: SamuraiSoccer.SoccerGame.BallAction.commandStream
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: commandStream
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private static Subject<BallActionCommand> commandStream
+    return:
+      type: UniRx.Subject{SamuraiSoccer.SoccerGame.BallActionCommand}
+    content.vb: Private Shared commandStream As Subject(Of BallActionCommand)
+- uid: SamuraiSoccer.SoccerGame.BallAction.last_touch
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.last_touch
+  id: last_touch
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: last_touch
+  nameWithType: BallAction.last_touch
+  fullName: SamuraiSoccer.SoccerGame.BallAction.last_touch
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: last_touch
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public bool last_touch
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <NonSerialized>
+
+      Public last_touch As Boolean
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.BallAction.owner
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.owner
+  id: owner
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: owner
+  nameWithType: BallAction.owner
+  fullName: SamuraiSoccer.SoccerGame.BallAction.owner
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: owner
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public GameObject owner
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <NonSerialized>
+
+      Public owner As GameObject
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.BallAction.isPause
+  commentId: F:SamuraiSoccer.SoccerGame.BallAction.isPause
+  id: isPause
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: isPause
+  nameWithType: BallAction.isPause
+  fullName: SamuraiSoccer.SoccerGame.BallAction.isPause
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: isPause
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private bool isPause
+    return:
+      type: System.Boolean
+    content.vb: Private isPause As Boolean
+- uid: SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)
+  id: CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: CommandStreamOnNext(BallActionCommand)
+  nameWithType: BallAction.CommandStreamOnNext(BallActionCommand)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext(SamuraiSoccer.SoccerGame.BallActionCommand)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CommandStreamOnNext
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 40
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ボールに対するアクションを行う．
+  example: []
+  syntax:
+    content: public static void CommandStreamOnNext(BallActionCommand command)
+    parameters:
+    - id: command
+      type: SamuraiSoccer.SoccerGame.BallActionCommand
+      description: コマンド．
+    content.vb: Public Shared Sub CommandStreamOnNext(command As BallActionCommand)
+  overload: SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Awake
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Awake
+  id: Awake
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: BallAction.Awake()
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 45
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.SoccerGame.BallAction.Awake*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Start
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: BallAction.Start()
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 50
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.SoccerGame.BallAction.Start*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Update
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Update
+  id: Update
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: BallAction.Update()
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 57
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.SoccerGame.BallAction.Update*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Pause(System.Boolean)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Pause(System.Boolean)
+  id: Pause(System.Boolean)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Pause(bool)
+  nameWithType: BallAction.Pause(bool)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Pause(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Pause
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 83
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Pause(bool isPause)
+    parameters:
+    - id: isPause
+      type: System.Boolean
+    content.vb: Private Sub Pause(isPause As Boolean)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Pause*
+  nameWithType.vb: BallAction.Pause(Boolean)
+  fullName.vb: SamuraiSoccer.SoccerGame.BallAction.Pause(Boolean)
+  name.vb: Pause(Boolean)
+- uid: SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)
+  id: Play(UniRx.Unit)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Play(Unit)
+  nameWithType: BallAction.Play(Unit)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Play(UniRx.Unit)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Play
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 100
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void Play(Unit _)
+    parameters:
+    - id: _
+      type: UniRx.Unit
+    content.vb: Private Sub Play(_ As Unit)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Play*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)
+  id: Command(SamuraiSoccer.SoccerGame.BallActionCommand)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Command(BallActionCommand)
+  nameWithType: BallAction.Command(BallActionCommand)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Command(SamuraiSoccer.SoccerGame.BallActionCommand)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Command
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 114
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: コマンドの処理を振り分け．
+  example: []
+  syntax:
+    content: private void Command(BallActionCommand command)
+    parameters:
+    - id: command
+      type: SamuraiSoccer.SoccerGame.BallActionCommand
+      description: コマンド．
+    content.vb: Private Sub Command(command As BallActionCommand)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Command*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)
+  id: Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Dribble(DribbleCommand)
+  nameWithType: BallAction.Dribble(DribbleCommand)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Dribble(SamuraiSoccer.SoccerGame.DribbleCommand)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Dribble
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 129
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ドリブルっぽいもの。StartCorutineじゃなくてイテレーターで操作してほしい。
+  example: []
+  syntax:
+    content: public UniTask Dribble(DribbleCommand c)
+    parameters:
+    - id: c
+      type: SamuraiSoccer.SoccerGame.DribbleCommand
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Public Function Dribble(c As DribbleCommand) As UniTask
+  overload: SamuraiSoccer.SoccerGame.BallAction.Dribble*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: Steal(UnityEngine.GameObject,SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Steal(GameObject, PersonalStatus, PersonalStatus)
+  nameWithType: BallAction.Steal(GameObject, PersonalStatus, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Steal(UnityEngine.GameObject, SamuraiSoccer.SoccerGame.PersonalStatus, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Steal
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 155
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: ボールを盗むときの関数
+  example: []
+  syntax:
+    content: private void Steal(GameObject self, PersonalStatus holder = null, PersonalStatus tryer = null)
+    parameters:
+    - id: self
+      type: UnityEngine.GameObject
+      description: ボール奪う人
+    - id: holder
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: ボールを持っている人の能力値
+    - id: tryer
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: ボールを奪う人の能力値
+    content.vb: Private Sub Steal(self As GameObject, holder As PersonalStatus = Nothing, tryer As PersonalStatus = Nothing)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Steal*
+- uid: SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus,SamuraiSoccer.SoccerGame.PersonalStatus)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: SuccessSteal(PersonalStatus, PersonalStatus)
+  nameWithType: BallAction.SuccessSteal(PersonalStatus, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.SuccessSteal(SamuraiSoccer.SoccerGame.PersonalStatus, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SuccessSteal
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 163
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private bool SuccessSteal(PersonalStatus holder, PersonalStatus tryer)
+    parameters:
+    - id: holder
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    - id: tryer
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    return:
+      type: System.Boolean
+    content.vb: Private Function SuccessSteal(holder As PersonalStatus, tryer As PersonalStatus) As Boolean
+  overload: SamuraiSoccer.SoccerGame.BallAction.SuccessSteal*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)
+  id: Trap(SamuraiSoccer.SoccerGame.TrapCommand)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Trap(TrapCommand)
+  nameWithType: BallAction.Trap(TrapCommand)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Trap(SamuraiSoccer.SoccerGame.TrapCommand)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Trap
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 174
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: トラップするとき呼ぶ関数
+  example: []
+  syntax:
+    content: private void Trap(TrapCommand command)
+    parameters:
+    - id: command
+      type: SamuraiSoccer.SoccerGame.TrapCommand
+    content.vb: Private Sub Trap(command As TrapCommand)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Trap*
+- uid: SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: SuccessTrap(PersonalStatus)
+  nameWithType: BallAction.SuccessTrap(PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.SuccessTrap(SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SuccessTrap
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 187
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: トラップが成功するかの判定
+  example: []
+  syntax:
+    content: private bool SuccessTrap(PersonalStatus self)
+    parameters:
+    - id: self
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: 能力値
+    return:
+      type: System.Boolean
+      description: 成功のときtrue
+    content.vb: Private Function SuccessTrap(self As PersonalStatus) As Boolean
+  overload: SamuraiSoccer.SoccerGame.BallAction.SuccessTrap*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)
+  id: Pass(SamuraiSoccer.SoccerGame.PassCommand)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Pass(PassCommand)
+  nameWithType: BallAction.Pass(PassCommand)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Pass(SamuraiSoccer.SoccerGame.PassCommand)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Pass
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 196
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: パスをするとき呼ぶ関数
+  example: []
+  syntax:
+    content: private void Pass(PassCommand command)
+    parameters:
+    - id: command
+      type: SamuraiSoccer.SoccerGame.PassCommand
+    content.vb: Private Sub Pass(command As PassCommand)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Pass*
+- uid: SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: CalcLowPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: CalcLowPass(Vector2, Vector2, PersonalStatus)
+  nameWithType: BallAction.CalcLowPass(Vector2, Vector2, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CalcLowPass(UnityEngine.Vector2, UnityEngine.Vector2, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CalcLowPass
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 215
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)
+    parameters:
+    - id: sender
+      type: UnityEngine.Vector2
+    - id: recever
+      type: UnityEngine.Vector2
+    - id: self
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Private Sub CalcLowPass(sender As Vector2, recever As Vector2, self As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.BallAction.CalcLowPass*
+- uid: SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: CalcMiddlePass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: CalcMiddlePass(Vector2, Vector2, PersonalStatus)
+  nameWithType: BallAction.CalcMiddlePass(Vector2, Vector2, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass(UnityEngine.Vector2, UnityEngine.Vector2, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CalcMiddlePass
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 222
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)
+    parameters:
+    - id: sender
+      type: UnityEngine.Vector2
+    - id: recever
+      type: UnityEngine.Vector2
+    - id: self
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Private Sub CalcMiddlePass(sender As Vector2, recever As Vector2, self As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass*
+- uid: SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: CalcHighPass(UnityEngine.Vector2,UnityEngine.Vector2,SamuraiSoccer.SoccerGame.PersonalStatus)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: CalcHighPass(Vector2, Vector2, PersonalStatus)
+  nameWithType: BallAction.CalcHighPass(Vector2, Vector2, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CalcHighPass(UnityEngine.Vector2, UnityEngine.Vector2, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CalcHighPass
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 235
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)
+    parameters:
+    - id: sender
+      type: UnityEngine.Vector2
+    - id: recever
+      type: UnityEngine.Vector2
+    - id: self
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Private Sub CalcHighPass(sender As Vector2, recever As Vector2, self As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.BallAction.CalcHighPass*
+- uid: SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)
+  id: Shoot(SamuraiSoccer.SoccerGame.ShootCommand)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: Shoot(ShootCommand)
+  nameWithType: BallAction.Shoot(ShootCommand)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Shoot(SamuraiSoccer.SoccerGame.ShootCommand)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Shoot
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 252
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: シュートを撃つ関数
+  example: []
+  syntax:
+    content: private void Shoot(ShootCommand command)
+    parameters:
+    - id: command
+      type: SamuraiSoccer.SoccerGame.ShootCommand
+    content.vb: Private Sub Shoot(command As ShootCommand)
+  overload: SamuraiSoccer.SoccerGame.BallAction.Shoot*
+- uid: SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)
+  id: OnCollisionEnter(UnityEngine.Collision)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: OnCollisionEnter(Collision)
+  nameWithType: BallAction.OnCollisionEnter(Collision)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter(UnityEngine.Collision)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnCollisionEnter
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 274
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: 特殊なイベント発生
+  example: []
+  syntax:
+    content: private void OnCollisionEnter(Collision other)
+    parameters:
+    - id: other
+      type: UnityEngine.Collision
+    content.vb: Private Sub OnCollisionEnter(other As Collision)
+  overload: SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter*
+- uid: SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)
+  commentId: M:SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)
+  id: OnTriggerEnter(UnityEngine.Collider)
+  parent: SamuraiSoccer.SoccerGame.BallAction
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: BallAction.OnTriggerEnter(Collider)
+  fullName: SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter(UnityEngine.Collider)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallAction.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnTriggerEnter
+    path: ../Assets/Scripts/SoccerGame/BallAction.cs
+    startLine: 297
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: private void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: UnityEngine.Collider
+    content.vb: Private Sub OnTriggerEnter(other As Collider)
+  overload: SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter*
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: SamuraiSoccer.SoccerGame.FieldManager
+  commentId: T:SamuraiSoccer.SoccerGame.FieldManager
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.FieldManager.html
+  name: FieldManager
+  nameWithType: FieldManager
+  fullName: SamuraiSoccer.SoccerGame.FieldManager
+- uid: SamuraiSoccer.SoccerGame.ScoreManager
+  commentId: T:SamuraiSoccer.SoccerGame.ScoreManager
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.ScoreManager.html
+  name: ScoreManager
+  nameWithType: ScoreManager
+  fullName: SamuraiSoccer.SoccerGame.ScoreManager
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UniRx.Subject{SamuraiSoccer.SoccerGame.BallActionCommand}
+  commentId: T:UniRx.Subject{SamuraiSoccer.SoccerGame.BallActionCommand}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  name: Subject<BallActionCommand>
+  nameWithType: Subject<BallActionCommand>
+  fullName: UniRx.Subject<SamuraiSoccer.SoccerGame.BallActionCommand>
+  nameWithType.vb: Subject(Of BallActionCommand)
+  fullName.vb: UniRx.Subject(Of SamuraiSoccer.SoccerGame.BallActionCommand)
+  name.vb: Subject(Of BallActionCommand)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: SamuraiSoccer.SoccerGame.BallActionCommand
+    name: BallActionCommand
+    href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.SoccerGame.BallActionCommand
+    name: BallActionCommand
+    href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  - name: )
+- uid: UniRx.Subject`1
+  commentId: T:UniRx.Subject`1
+  isExternal: true
+  name: Subject<T>
+  nameWithType: Subject<T>
+  fullName: UniRx.Subject<T>
+  nameWithType.vb: Subject(Of T)
+  fullName.vb: UniRx.Subject(Of T)
+  name.vb: Subject(Of T)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_CommandStreamOnNext_SamuraiSoccer_SoccerGame_BallActionCommand_
+  name: CommandStreamOnNext
+  nameWithType: BallAction.CommandStreamOnNext
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CommandStreamOnNext
+- uid: SamuraiSoccer.SoccerGame.BallActionCommand
+  commentId: T:SamuraiSoccer.SoccerGame.BallActionCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  name: BallActionCommand
+  nameWithType: BallActionCommand
+  fullName: SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: SamuraiSoccer.SoccerGame.BallAction.Awake*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Awake
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Awake
+  name: Awake
+  nameWithType: BallAction.Awake
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Awake
+- uid: SamuraiSoccer.SoccerGame.BallAction.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Start
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Start
+  name: Start
+  nameWithType: BallAction.Start
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Start
+- uid: SamuraiSoccer.SoccerGame.BallAction.Update*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Update
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Update
+  name: Update
+  nameWithType: BallAction.Update
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Update
+- uid: SamuraiSoccer.SoccerGame.BallAction.Pause*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Pause
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Pause_System_Boolean_
+  name: Pause
+  nameWithType: BallAction.Pause
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Pause
+- uid: SamuraiSoccer.SoccerGame.BallAction.Play*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Play
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Play_UniRx_Unit_
+  name: Play
+  nameWithType: BallAction.Play
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Play
+- uid: UniRx.Unit
+  commentId: T:UniRx.Unit
+  parent: UniRx
+  isExternal: true
+  name: Unit
+  nameWithType: Unit
+  fullName: UniRx.Unit
+- uid: SamuraiSoccer.SoccerGame.BallAction.Command*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Command
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Command_SamuraiSoccer_SoccerGame_BallActionCommand_
+  name: Command
+  nameWithType: BallAction.Command
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Command
+- uid: SamuraiSoccer.SoccerGame.BallAction.Dribble*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Dribble
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Dribble_SamuraiSoccer_SoccerGame_DribbleCommand_
+  name: Dribble
+  nameWithType: BallAction.Dribble
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Dribble
+- uid: SamuraiSoccer.SoccerGame.DribbleCommand
+  commentId: T:SamuraiSoccer.SoccerGame.DribbleCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.DribbleCommand.html
+  name: DribbleCommand
+  nameWithType: DribbleCommand
+  fullName: SamuraiSoccer.SoccerGame.DribbleCommand
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.SoccerGame.BallAction.Steal*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Steal
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Steal_UnityEngine_GameObject_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: Steal
+  nameWithType: BallAction.Steal
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Steal
+- uid: SamuraiSoccer.SoccerGame.PersonalStatus
+  commentId: T:SamuraiSoccer.SoccerGame.PersonalStatus
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PersonalStatus.html
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: SamuraiSoccer.SoccerGame.PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.BallAction.SuccessSteal*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.SuccessSteal
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_SuccessSteal_SamuraiSoccer_SoccerGame_PersonalStatus_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: SuccessSteal
+  nameWithType: BallAction.SuccessSteal
+  fullName: SamuraiSoccer.SoccerGame.BallAction.SuccessSteal
+- uid: SamuraiSoccer.SoccerGame.BallAction.Trap*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Trap
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Trap_SamuraiSoccer_SoccerGame_TrapCommand_
+  name: Trap
+  nameWithType: BallAction.Trap
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Trap
+- uid: SamuraiSoccer.SoccerGame.TrapCommand
+  commentId: T:SamuraiSoccer.SoccerGame.TrapCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.TrapCommand.html
+  name: TrapCommand
+  nameWithType: TrapCommand
+  fullName: SamuraiSoccer.SoccerGame.TrapCommand
+- uid: SamuraiSoccer.SoccerGame.BallAction.SuccessTrap*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.SuccessTrap
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_SuccessTrap_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: SuccessTrap
+  nameWithType: BallAction.SuccessTrap
+  fullName: SamuraiSoccer.SoccerGame.BallAction.SuccessTrap
+- uid: SamuraiSoccer.SoccerGame.BallAction.Pass*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Pass
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Pass_SamuraiSoccer_SoccerGame_PassCommand_
+  name: Pass
+  nameWithType: BallAction.Pass
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Pass
+- uid: SamuraiSoccer.SoccerGame.PassCommand
+  commentId: T:SamuraiSoccer.SoccerGame.PassCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PassCommand.html
+  name: PassCommand
+  nameWithType: PassCommand
+  fullName: SamuraiSoccer.SoccerGame.PassCommand
+- uid: SamuraiSoccer.SoccerGame.BallAction.CalcLowPass*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.CalcLowPass
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_CalcLowPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: CalcLowPass
+  nameWithType: BallAction.CalcLowPass
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CalcLowPass
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_CalcMiddlePass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: CalcMiddlePass
+  nameWithType: BallAction.CalcMiddlePass
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CalcMiddlePass
+- uid: SamuraiSoccer.SoccerGame.BallAction.CalcHighPass*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.CalcHighPass
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_CalcHighPass_UnityEngine_Vector2_UnityEngine_Vector2_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: CalcHighPass
+  nameWithType: BallAction.CalcHighPass
+  fullName: SamuraiSoccer.SoccerGame.BallAction.CalcHighPass
+- uid: SamuraiSoccer.SoccerGame.BallAction.Shoot*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.Shoot
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_Shoot_SamuraiSoccer_SoccerGame_ShootCommand_
+  name: Shoot
+  nameWithType: BallAction.Shoot
+  fullName: SamuraiSoccer.SoccerGame.BallAction.Shoot
+- uid: SamuraiSoccer.SoccerGame.ShootCommand
+  commentId: T:SamuraiSoccer.SoccerGame.ShootCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.ShootCommand.html
+  name: ShootCommand
+  nameWithType: ShootCommand
+  fullName: SamuraiSoccer.SoccerGame.ShootCommand
+- uid: SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_OnCollisionEnter_UnityEngine_Collision_
+  name: OnCollisionEnter
+  nameWithType: BallAction.OnCollisionEnter
+  fullName: SamuraiSoccer.SoccerGame.BallAction.OnCollisionEnter
+- uid: UnityEngine.Collision
+  commentId: T:UnityEngine.Collision
+  parent: UnityEngine
+  isExternal: true
+  name: Collision
+  nameWithType: Collision
+  fullName: UnityEngine.Collision
+- uid: SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter*
+  commentId: Overload:SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter
+  href: SamuraiSoccer.SoccerGame.BallAction.html#SamuraiSoccer_SoccerGame_BallAction_OnTriggerEnter_UnityEngine_Collider_
+  name: OnTriggerEnter
+  nameWithType: BallAction.OnTriggerEnter
+  fullName: SamuraiSoccer.SoccerGame.BallAction.OnTriggerEnter
+- uid: UnityEngine.Collider
+  commentId: T:UnityEngine.Collider
+  parent: UnityEngine
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: UnityEngine.Collider

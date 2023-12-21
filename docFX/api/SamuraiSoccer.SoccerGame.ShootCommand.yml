@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.ShootCommand
+  commentId: T:SamuraiSoccer.SoccerGame.ShootCommand
+  id: ShootCommand
+  parent: SamuraiSoccer.SoccerGame
+  children:
+  - SamuraiSoccer.SoccerGame.ShootCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  - SamuraiSoccer.SoccerGame.ShootCommand.m_sender
+  - SamuraiSoccer.SoccerGame.ShootCommand.m_status
+  langs:
+  - csharp
+  - vb
+  name: ShootCommand
+  nameWithType: ShootCommand
+  fullName: SamuraiSoccer.SoccerGame.ShootCommand
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ShootCommand
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 93
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: シュートする時のコマンド．
+  example: []
+  syntax:
+    content: 'public class ShootCommand : BallActionCommand'
+    content.vb: Public Class ShootCommand Inherits BallActionCommand
+  inheritance:
+  - System.Object
+  - SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: SamuraiSoccer.SoccerGame.ShootCommand.m_sender
+  commentId: F:SamuraiSoccer.SoccerGame.ShootCommand.m_sender
+  id: m_sender
+  parent: SamuraiSoccer.SoccerGame.ShootCommand
+  langs:
+  - csharp
+  - vb
+  name: m_sender
+  nameWithType: ShootCommand.m_sender
+  fullName: SamuraiSoccer.SoccerGame.ShootCommand.m_sender
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_sender
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 95
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public Transform m_sender
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public m_sender As Transform
+- uid: SamuraiSoccer.SoccerGame.ShootCommand.m_status
+  commentId: F:SamuraiSoccer.SoccerGame.ShootCommand.m_status
+  id: m_status
+  parent: SamuraiSoccer.SoccerGame.ShootCommand
+  langs:
+  - csharp
+  - vb
+  name: m_status
+  nameWithType: ShootCommand.m_status
+  fullName: SamuraiSoccer.SoccerGame.ShootCommand.m_status
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_status
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 96
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  syntax:
+    content: public PersonalStatus m_status
+    return:
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+    content.vb: Public m_status As PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.ShootCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  commentId: M:SamuraiSoccer.SoccerGame.ShootCommand.#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)
+  id: '#ctor(UnityEngine.Transform,SamuraiSoccer.SoccerGame.PersonalStatus)'
+  parent: SamuraiSoccer.SoccerGame.ShootCommand
+  langs:
+  - csharp
+  - vb
+  name: ShootCommand(Transform, PersonalStatus)
+  nameWithType: ShootCommand.ShootCommand(Transform, PersonalStatus)
+  fullName: SamuraiSoccer.SoccerGame.ShootCommand.ShootCommand(UnityEngine.Transform, SamuraiSoccer.SoccerGame.PersonalStatus)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/BallActionCommand.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: .ctor
+    path: ../Assets/Scripts/SoccerGame/BallActionCommand.cs
+    startLine: 103
+  assemblies:
+  - SamuraiSoccer.SoccerGame
+  namespace: SamuraiSoccer.SoccerGame
+  summary: シュートする時のコマンド．
+  example: []
+  syntax:
+    content: public ShootCommand(Transform sender, PersonalStatus status)
+    parameters:
+    - id: sender
+      type: UnityEngine.Transform
+      description: シュート主．
+    - id: status
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: シュート主のステータス．
+    content.vb: Public Sub New(sender As Transform, status As PersonalStatus)
+  overload: SamuraiSoccer.SoccerGame.ShootCommand.#ctor*
+  nameWithType.vb: ShootCommand.New(Transform, PersonalStatus)
+  fullName.vb: SamuraiSoccer.SoccerGame.ShootCommand.New(UnityEngine.Transform, SamuraiSoccer.SoccerGame.PersonalStatus)
+  name.vb: New(Transform, PersonalStatus)
+references:
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SamuraiSoccer.SoccerGame.BallActionCommand
+  commentId: T:SamuraiSoccer.SoccerGame.BallActionCommand
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.BallActionCommand.html
+  name: BallActionCommand
+  nameWithType: BallActionCommand
+  fullName: SamuraiSoccer.SoccerGame.BallActionCommand
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.SoccerGame.PersonalStatus
+  commentId: T:SamuraiSoccer.SoccerGame.PersonalStatus
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PersonalStatus.html
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: SamuraiSoccer.SoccerGame.PersonalStatus
+- uid: SamuraiSoccer.SoccerGame.ShootCommand.#ctor*
+  commentId: Overload:SamuraiSoccer.SoccerGame.ShootCommand.#ctor
+  href: SamuraiSoccer.SoccerGame.ShootCommand.html#SamuraiSoccer_SoccerGame_ShootCommand__ctor_UnityEngine_Transform_SamuraiSoccer_SoccerGame_PersonalStatus_
+  name: ShootCommand
+  nameWithType: ShootCommand.ShootCommand
+  fullName: SamuraiSoccer.SoccerGame.ShootCommand.ShootCommand
+  nameWithType.vb: ShootCommand.New
+  fullName.vb: SamuraiSoccer.SoccerGame.ShootCommand.New
+  name.vb: New

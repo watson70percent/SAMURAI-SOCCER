@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.AI.EditorExtension.FieldMaker
+  commentId: T:SamuraiSoccer.AI.EditorExtension.FieldMaker
+  id: FieldMaker
+  parent: SamuraiSoccer.AI.EditorExtension
+  children:
+  - SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton
+  langs:
+  - csharp
+  - vb
+  name: FieldMaker
+  nameWithType: FieldMaker
+  fullName: SamuraiSoccer.AI.EditorExtension.FieldMaker
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/Editor/FieldMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FieldMaker
+    path: ../Assets/Scripts/SoccerGame/AI/Editor/FieldMaker.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI.EditorExtension
+  namespace: SamuraiSoccer.AI.EditorExtension
+  summary: フィールドを作るためのクラス。メニューウィンドウに出るけど実行用。スクリプトで内容を書く。
+  example: []
+  syntax:
+    content: 'public class FieldMaker : EditorWindow'
+    content.vb: Public Class FieldMaker Inherits EditorWindow
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.EditorWindow
+- uid: SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton
+  commentId: M:SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton
+  id: ClickButton
+  parent: SamuraiSoccer.AI.EditorExtension.FieldMaker
+  langs:
+  - csharp
+  - vb
+  name: ClickButton()
+  nameWithType: FieldMaker.ClickButton()
+  fullName: SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/Editor/FieldMaker.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ClickButton
+    path: ../Assets/Scripts/SoccerGame/AI/Editor/FieldMaker.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI.EditorExtension
+  namespace: SamuraiSoccer.AI.EditorExtension
+  syntax:
+    content: >-
+      [MenuItem("Custom/FieldMaker")]
+
+      private static void ClickButton()
+    content.vb: >-
+      <MenuItem("Custom/FieldMaker")>
+
+      Private Shared Sub ClickButton()
+  overload: SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Custom/FieldMaker
+references:
+- uid: SamuraiSoccer.AI.EditorExtension
+  commentId: N:SamuraiSoccer.AI.EditorExtension
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.AI.EditorExtension
+  nameWithType: SamuraiSoccer.AI.EditorExtension
+  fullName: SamuraiSoccer.AI.EditorExtension
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.AI
+    name: AI
+    href: SamuraiSoccer.AI.html
+  - name: .
+  - uid: SamuraiSoccer.AI.EditorExtension
+    name: EditorExtension
+    href: SamuraiSoccer.AI.EditorExtension.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.AI
+    name: AI
+    href: SamuraiSoccer.AI.html
+  - name: .
+  - uid: SamuraiSoccer.AI.EditorExtension
+    name: EditorExtension
+    href: SamuraiSoccer.AI.EditorExtension.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.EditorWindow
+  commentId: T:UnityEditor.EditorWindow
+  parent: UnityEditor
+  isExternal: true
+  name: EditorWindow
+  nameWithType: EditorWindow
+  fullName: UnityEditor.EditorWindow
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton*
+  commentId: Overload:SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton
+  href: SamuraiSoccer.AI.EditorExtension.FieldMaker.html#SamuraiSoccer_AI_EditorExtension_FieldMaker_ClickButton
+  name: ClickButton
+  nameWithType: FieldMaker.ClickButton
+  fullName: SamuraiSoccer.AI.EditorExtension.FieldMaker.ClickButton

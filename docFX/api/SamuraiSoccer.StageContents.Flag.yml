@@ -1,0 +1,290 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.Flag
+  commentId: T:SamuraiSoccer.StageContents.Flag
+  id: Flag
+  parent: SamuraiSoccer.StageContents
+  children:
+  - SamuraiSoccer.StageContents.Flag.Start
+  - SamuraiSoccer.StageContents.Flag.m_meshes
+  - SamuraiSoccer.StageContents.Flag.m_shader
+  - SamuraiSoccer.StageContents.Flag.m_texture
+  langs:
+  - csharp
+  - vb
+  name: Flag
+  nameWithType: Flag
+  fullName: SamuraiSoccer.StageContents.Flag
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Flag.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Flag
+    path: ../Assets/Scripts/StageContents/Flag.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: 'public class Flag : MonoBehaviour'
+    content.vb: Public Class Flag Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.Flag.m_texture
+  commentId: F:SamuraiSoccer.StageContents.Flag.m_texture
+  id: m_texture
+  parent: SamuraiSoccer.StageContents.Flag
+  langs:
+  - csharp
+  - vb
+  name: m_texture
+  nameWithType: Flag.m_texture
+  fullName: SamuraiSoccer.StageContents.Flag.m_texture
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Flag.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_texture
+    path: ../Assets/Scripts/StageContents/Flag.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Texture m_texture
+    return:
+      type: UnityEngine.Texture
+    content.vb: >-
+      <SerializeField>
+
+      Private m_texture As Texture
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Flag.m_shader
+  commentId: F:SamuraiSoccer.StageContents.Flag.m_shader
+  id: m_shader
+  parent: SamuraiSoccer.StageContents.Flag
+  langs:
+  - csharp
+  - vb
+  name: m_shader
+  nameWithType: Flag.m_shader
+  fullName: SamuraiSoccer.StageContents.Flag.m_shader
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Flag.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_shader
+    path: ../Assets/Scripts/StageContents/Flag.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Shader m_shader
+    return:
+      type: UnityEngine.Shader
+    content.vb: >-
+      <SerializeField>
+
+      Private m_shader As Shader
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Flag.m_meshes
+  commentId: F:SamuraiSoccer.StageContents.Flag.m_meshes
+  id: m_meshes
+  parent: SamuraiSoccer.StageContents.Flag
+  langs:
+  - csharp
+  - vb
+  name: m_meshes
+  nameWithType: Flag.m_meshes
+  fullName: SamuraiSoccer.StageContents.Flag.m_meshes
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Flag.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_meshes
+    path: ../Assets/Scripts/StageContents/Flag.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private MeshRenderer[] m_meshes
+    return:
+      type: UnityEngine.MeshRenderer[]
+    content.vb: >-
+      <SerializeField>
+
+      Private m_meshes As MeshRenderer()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.Flag.Start
+  commentId: M:SamuraiSoccer.StageContents.Flag.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.Flag
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Flag.Start()
+  fullName: SamuraiSoccer.StageContents.Flag.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/Flag.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/Flag.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents
+  namespace: SamuraiSoccer.StageContents
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.Flag.Start*
+references:
+- uid: SamuraiSoccer.StageContents
+  commentId: N:SamuraiSoccer.StageContents
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents
+  nameWithType: SamuraiSoccer.StageContents
+  fullName: SamuraiSoccer.StageContents
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Texture
+  commentId: T:UnityEngine.Texture
+  parent: UnityEngine
+  isExternal: true
+  name: Texture
+  nameWithType: Texture
+  fullName: UnityEngine.Texture
+- uid: UnityEngine.Shader
+  commentId: T:UnityEngine.Shader
+  parent: UnityEngine
+  isExternal: true
+  name: Shader
+  nameWithType: Shader
+  fullName: UnityEngine.Shader
+- uid: UnityEngine.MeshRenderer[]
+  isExternal: true
+  name: MeshRenderer[]
+  nameWithType: MeshRenderer[]
+  fullName: UnityEngine.MeshRenderer[]
+  nameWithType.vb: MeshRenderer()
+  fullName.vb: UnityEngine.MeshRenderer()
+  name.vb: MeshRenderer()
+  spec.csharp:
+  - uid: UnityEngine.MeshRenderer
+    name: MeshRenderer
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.MeshRenderer
+    name: MeshRenderer
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.StageContents.Flag.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.Flag.Start
+  href: SamuraiSoccer.StageContents.Flag.html#SamuraiSoccer_StageContents_Flag_Start
+  name: Start
+  nameWithType: Flag.Start
+  fullName: SamuraiSoccer.StageContents.Flag.Start

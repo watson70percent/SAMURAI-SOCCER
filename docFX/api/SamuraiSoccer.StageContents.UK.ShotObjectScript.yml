@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  commentId: T:SamuraiSoccer.StageContents.UK.ShotObjectScript
+  id: ShotObjectScript
+  parent: SamuraiSoccer.StageContents.UK
+  children:
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway(UnityEngine.GameObject,System.Threading.CancellationToken)
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.Move
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.Start
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.dangerAreaLength
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.groundWidth
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.isActive
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.isEnd
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.movedLength
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.soundEffect
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity
+  - SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity0
+  langs:
+  - csharp
+  - vb
+  name: ShotObjectScript
+  nameWithType: ShotObjectScript
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ShotObjectScript
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: 'public class ShotObjectScript : MonoBehaviour'
+    content.vb: Public Class ShotObjectScript Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity
+  id: velocity
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: velocity
+  nameWithType: ShotObjectScript.velocity
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: velocity
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float velocity
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private velocity As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.movedLength
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.movedLength
+  id: movedLength
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: movedLength
+  nameWithType: ShotObjectScript.movedLength
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.movedLength
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: movedLength
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private float movedLength
+    return:
+      type: System.Single
+    content.vb: Private movedLength As Single
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.groundWidth
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.groundWidth
+  id: groundWidth
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: groundWidth
+  nameWithType: ShotObjectScript.groundWidth
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.groundWidth
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: groundWidth
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private float groundWidth
+    return:
+      type: System.Single
+    content.vb: Private groundWidth As Single
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.dangerAreaLength
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.dangerAreaLength
+  id: dangerAreaLength
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: dangerAreaLength
+  nameWithType: ShotObjectScript.dangerAreaLength
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.dangerAreaLength
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: dangerAreaLength
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private float dangerAreaLength
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Private dangerAreaLength As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.isEnd
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.isEnd
+  id: isEnd
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: isEnd
+  nameWithType: ShotObjectScript.isEnd
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.isEnd
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: isEnd
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private bool isEnd
+    return:
+      type: System.Boolean
+    content.vb: Private isEnd As Boolean
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.isActive
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.isActive
+  id: isActive
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: isActive
+  nameWithType: ShotObjectScript.isActive
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.isActive
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: isActive
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private bool isActive
+    return:
+      type: System.Boolean
+    content.vb: Private isActive As Boolean
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.soundEffect
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.soundEffect
+  id: soundEffect
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: soundEffect
+  nameWithType: ShotObjectScript.soundEffect
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.soundEffect
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: soundEffect
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private AudioSource soundEffect
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <SerializeField>
+
+      Private soundEffect As AudioSource
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec
+  commentId: P:SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec
+  id: rotateVec
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: rotateVec
+  nameWithType: ShotObjectScript.rotateVec
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rotateVec
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private Vector3 rotateVec { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private ReadOnly Property rotateVec As Vector3
+  overload: SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec*
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity0
+  commentId: F:SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity0
+  id: velocity0
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: velocity0
+  nameWithType: ShotObjectScript.velocity0
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.velocity0
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: velocity0
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private float velocity0
+    return:
+      type: System.Single
+    content.vb: Private velocity0 As Single
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.Start
+  commentId: M:SamuraiSoccer.StageContents.UK.ShotObjectScript.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ShotObjectScript.Start()
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.UK.ShotObjectScript.Start*
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.Move
+  commentId: M:SamuraiSoccer.StageContents.UK.ShotObjectScript.Move
+  id: Move
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: Move()
+  nameWithType: ShotObjectScript.Move()
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.Move()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Move
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 58
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private void Move()
+    content.vb: Private Sub Move()
+  overload: SamuraiSoccer.StageContents.UK.ShotObjectScript.Move*
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway(UnityEngine.GameObject,System.Threading.CancellationToken)
+  commentId: M:SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway(UnityEngine.GameObject,System.Threading.CancellationToken)
+  id: BlowAway(UnityEngine.GameObject,System.Threading.CancellationToken)
+  parent: SamuraiSoccer.StageContents.UK.ShotObjectScript
+  langs:
+  - csharp
+  - vb
+  name: BlowAway(GameObject, CancellationToken)
+  nameWithType: ShotObjectScript.BlowAway(GameObject, CancellationToken)
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway(UnityEngine.GameObject, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: BlowAway
+    path: ../Assets/Scripts/StageContents/UK/ShotObjectScript.cs
+    startLine: 71
+  assemblies:
+  - SamuraiSoccer.StageContents.UK
+  namespace: SamuraiSoccer.StageContents.UK
+  syntax:
+    content: private UniTask BlowAway(GameObject player, CancellationToken cancellationToken = default)
+    parameters:
+    - id: player
+      type: UnityEngine.GameObject
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function BlowAway(player As GameObject, cancellationToken As CancellationToken = Nothing) As UniTask
+  overload: SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway*
+references:
+- uid: SamuraiSoccer.StageContents.UK
+  commentId: N:SamuraiSoccer.StageContents.UK
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.UK
+  nameWithType: SamuraiSoccer.StageContents.UK
+  fullName: SamuraiSoccer.StageContents.UK
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.UK
+    name: UK
+    href: SamuraiSoccer.StageContents.UK.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.UK
+    name: UK
+    href: SamuraiSoccer.StageContents.UK.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec*
+  commentId: Overload:SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec
+  href: SamuraiSoccer.StageContents.UK.ShotObjectScript.html#SamuraiSoccer_StageContents_UK_ShotObjectScript_rotateVec
+  name: rotateVec
+  nameWithType: ShotObjectScript.rotateVec
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.rotateVec
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.UK.ShotObjectScript.Start
+  href: SamuraiSoccer.StageContents.UK.ShotObjectScript.html#SamuraiSoccer_StageContents_UK_ShotObjectScript_Start
+  name: Start
+  nameWithType: ShotObjectScript.Start
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.Start
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.Move*
+  commentId: Overload:SamuraiSoccer.StageContents.UK.ShotObjectScript.Move
+  href: SamuraiSoccer.StageContents.UK.ShotObjectScript.html#SamuraiSoccer_StageContents_UK_ShotObjectScript_Move
+  name: Move
+  nameWithType: ShotObjectScript.Move
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.Move
+- uid: SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway*
+  commentId: Overload:SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway
+  href: SamuraiSoccer.StageContents.UK.ShotObjectScript.html#SamuraiSoccer_StageContents_UK_ShotObjectScript_BlowAway_UnityEngine_GameObject_System_Threading_CancellationToken_
+  name: BlowAway
+  nameWithType: ShotObjectScript.BlowAway
+  fullName: SamuraiSoccer.StageContents.UK.ShotObjectScript.BlowAway
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

@@ -1,0 +1,689 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.SlidePad
+  commentId: T:SamuraiSoccer.UI.SlidePad
+  id: SlidePad
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.SlidePad.Controller(UnityEngine.Vector2)
+  - SamuraiSoccer.UI.SlidePad.DragEnd
+  - SamuraiSoccer.UI.SlidePad.DragStart(UnityEngine.EventSystems.BaseEventData)
+  - SamuraiSoccer.UI.SlidePad.FindFinger
+  - SamuraiSoccer.UI.SlidePad.LateUpdate
+  - SamuraiSoccer.UI.SlidePad.PlayingState
+  - SamuraiSoccer.UI.SlidePad.Start
+  - SamuraiSoccer.UI.SlidePad.m_fingerID
+  - SamuraiSoccer.UI.SlidePad.m_isDragged
+  - SamuraiSoccer.UI.SlidePad.m_joyStartPosition
+  - SamuraiSoccer.UI.SlidePad.m_joyrect
+  - SamuraiSoccer.UI.SlidePad.m_joystick
+  - SamuraiSoccer.UI.SlidePad.m_radius
+  - SamuraiSoccer.UI.SlidePad.m_scale
+  - SamuraiSoccer.UI.SlidePad.m_slideStartPosition
+  langs:
+  - csharp
+  - vb
+  name: SlidePad
+  nameWithType: SlidePad
+  fullName: SamuraiSoccer.UI.SlidePad
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SlidePad
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class SlidePad : MonoBehaviour'
+    content.vb: Public Class SlidePad Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.SlidePad.m_radius
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_radius
+  id: m_radius
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_radius
+  nameWithType: SlidePad.m_radius
+  fullName: SamuraiSoccer.UI.SlidePad.m_radius
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_radius
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private float m_radius
+    return:
+      type: System.Single
+    content.vb: Private m_radius As Single
+- uid: SamuraiSoccer.UI.SlidePad.m_scale
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_scale
+  id: m_scale
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_scale
+  nameWithType: SlidePad.m_scale
+  fullName: SamuraiSoccer.UI.SlidePad.m_scale
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_scale
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 14
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private float m_scale
+    return:
+      type: System.Single
+    content.vb: Private m_scale As Single
+- uid: SamuraiSoccer.UI.SlidePad.m_isDragged
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_isDragged
+  id: m_isDragged
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_isDragged
+  nameWithType: SlidePad.m_isDragged
+  fullName: SamuraiSoccer.UI.SlidePad.m_isDragged
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isDragged
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 15
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private bool m_isDragged
+    return:
+      type: System.Boolean
+    content.vb: Private m_isDragged As Boolean
+- uid: SamuraiSoccer.UI.SlidePad.m_joystick
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_joystick
+  id: m_joystick
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_joystick
+  nameWithType: SlidePad.m_joystick
+  fullName: SamuraiSoccer.UI.SlidePad.m_joystick
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_joystick
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 17
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject m_joystick
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private m_joystick As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.UI.SlidePad.m_joyrect
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_joyrect
+  id: m_joyrect
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_joyrect
+  nameWithType: SlidePad.m_joyrect
+  fullName: SamuraiSoccer.UI.SlidePad.m_joyrect
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_joyrect
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private RectTransform m_joyrect
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Private m_joyrect As RectTransform
+- uid: SamuraiSoccer.UI.SlidePad.m_joyStartPosition
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_joyStartPosition
+  id: m_joyStartPosition
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_joyStartPosition
+  nameWithType: SlidePad.m_joyStartPosition
+  fullName: SamuraiSoccer.UI.SlidePad.m_joyStartPosition
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_joyStartPosition
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private Vector2 m_joyStartPosition
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Private m_joyStartPosition As Vector2
+- uid: SamuraiSoccer.UI.SlidePad.m_slideStartPosition
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_slideStartPosition
+  id: m_slideStartPosition
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_slideStartPosition
+  nameWithType: SlidePad.m_slideStartPosition
+  fullName: SamuraiSoccer.UI.SlidePad.m_slideStartPosition
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_slideStartPosition
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private Vector2 m_slideStartPosition
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Private m_slideStartPosition As Vector2
+- uid: SamuraiSoccer.UI.SlidePad.m_fingerID
+  commentId: F:SamuraiSoccer.UI.SlidePad.m_fingerID
+  id: m_fingerID
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: m_fingerID
+  nameWithType: SlidePad.m_fingerID
+  fullName: SamuraiSoccer.UI.SlidePad.m_fingerID
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_fingerID
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 21
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private int m_fingerID
+    return:
+      type: System.Int32
+    content.vb: Private m_fingerID As Integer
+- uid: SamuraiSoccer.UI.SlidePad.Start
+  commentId: M:SamuraiSoccer.UI.SlidePad.Start
+  id: Start
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: SlidePad.Start()
+  fullName: SamuraiSoccer.UI.SlidePad.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.UI.SlidePad.Start*
+- uid: SamuraiSoccer.UI.SlidePad.LateUpdate
+  commentId: M:SamuraiSoccer.UI.SlidePad.LateUpdate
+  id: LateUpdate
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: LateUpdate()
+  nameWithType: SlidePad.LateUpdate()
+  fullName: SamuraiSoccer.UI.SlidePad.LateUpdate()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LateUpdate
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void LateUpdate()
+    content.vb: Private Sub LateUpdate()
+  overload: SamuraiSoccer.UI.SlidePad.LateUpdate*
+- uid: SamuraiSoccer.UI.SlidePad.PlayingState
+  commentId: M:SamuraiSoccer.UI.SlidePad.PlayingState
+  id: PlayingState
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: PlayingState()
+  nameWithType: SlidePad.PlayingState()
+  fullName: SamuraiSoccer.UI.SlidePad.PlayingState()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PlayingState
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 39
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void PlayingState()
+    content.vb: Private Sub PlayingState()
+  overload: SamuraiSoccer.UI.SlidePad.PlayingState*
+- uid: SamuraiSoccer.UI.SlidePad.DragStart(UnityEngine.EventSystems.BaseEventData)
+  commentId: M:SamuraiSoccer.UI.SlidePad.DragStart(UnityEngine.EventSystems.BaseEventData)
+  id: DragStart(UnityEngine.EventSystems.BaseEventData)
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: DragStart(BaseEventData)
+  nameWithType: SlidePad.DragStart(BaseEventData)
+  fullName: SamuraiSoccer.UI.SlidePad.DragStart(UnityEngine.EventSystems.BaseEventData)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: DragStart
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 63
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: >-
+    おそらくEventTriggerで呼びだす
+
+    最初のタッチの検出
+  example: []
+  syntax:
+    content: public void DragStart(BaseEventData baseEventData)
+    parameters:
+    - id: baseEventData
+      type: UnityEngine.EventSystems.BaseEventData
+      description: ''
+    content.vb: Public Sub DragStart(baseEventData As BaseEventData)
+  overload: SamuraiSoccer.UI.SlidePad.DragStart*
+- uid: SamuraiSoccer.UI.SlidePad.DragEnd
+  commentId: M:SamuraiSoccer.UI.SlidePad.DragEnd
+  id: DragEnd
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: DragEnd()
+  nameWithType: SlidePad.DragEnd()
+  fullName: SamuraiSoccer.UI.SlidePad.DragEnd()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: DragEnd
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 83
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: >-
+    おそらくEventTriggerで呼びだす
+
+    タッチ終了検出
+  example: []
+  syntax:
+    content: public void DragEnd()
+    content.vb: Public Sub DragEnd()
+  overload: SamuraiSoccer.UI.SlidePad.DragEnd*
+- uid: SamuraiSoccer.UI.SlidePad.Controller(UnityEngine.Vector2)
+  commentId: M:SamuraiSoccer.UI.SlidePad.Controller(UnityEngine.Vector2)
+  id: Controller(UnityEngine.Vector2)
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: Controller(Vector2)
+  nameWithType: SlidePad.Controller(Vector2)
+  fullName: SamuraiSoccer.UI.SlidePad.Controller(UnityEngine.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Controller
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 89
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Controller(Vector2 dir)
+    parameters:
+    - id: dir
+      type: UnityEngine.Vector2
+    content.vb: Private Sub Controller(dir As Vector2)
+  overload: SamuraiSoccer.UI.SlidePad.Controller*
+- uid: SamuraiSoccer.UI.SlidePad.FindFinger
+  commentId: M:SamuraiSoccer.UI.SlidePad.FindFinger
+  id: FindFinger
+  parent: SamuraiSoccer.UI.SlidePad
+  langs:
+  - csharp
+  - vb
+  name: FindFinger()
+  nameWithType: SlidePad.FindFinger()
+  fullName: SamuraiSoccer.UI.SlidePad.FindFinger()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/SlidePad.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FindFinger
+    path: ../Assets/Scripts/UI/SlidePad.cs
+    startLine: 100
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  summary: >-
+    タッチ情報から前フレームと同じタッチがあればそれを返す
+
+    初回タッチは別のところで登録するのでreturn new Touch();は呼ばれない
+  example: []
+  syntax:
+    content: private Touch FindFinger()
+    return:
+      type: UnityEngine.Touch
+      description: ''
+    content.vb: Private Function FindFinger() As Touch
+  overload: SamuraiSoccer.UI.SlidePad.FindFinger*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.UI.SlidePad.Start*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.Start
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_Start
+  name: Start
+  nameWithType: SlidePad.Start
+  fullName: SamuraiSoccer.UI.SlidePad.Start
+- uid: SamuraiSoccer.UI.SlidePad.LateUpdate*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.LateUpdate
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_LateUpdate
+  name: LateUpdate
+  nameWithType: SlidePad.LateUpdate
+  fullName: SamuraiSoccer.UI.SlidePad.LateUpdate
+- uid: SamuraiSoccer.UI.SlidePad.PlayingState*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.PlayingState
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_PlayingState
+  name: PlayingState
+  nameWithType: SlidePad.PlayingState
+  fullName: SamuraiSoccer.UI.SlidePad.PlayingState
+- uid: SamuraiSoccer.UI.SlidePad.DragStart*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.DragStart
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_DragStart_UnityEngine_EventSystems_BaseEventData_
+  name: DragStart
+  nameWithType: SlidePad.DragStart
+  fullName: SamuraiSoccer.UI.SlidePad.DragStart
+- uid: UnityEngine.EventSystems.BaseEventData
+  commentId: T:UnityEngine.EventSystems.BaseEventData
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: BaseEventData
+  nameWithType: BaseEventData
+  fullName: UnityEngine.EventSystems.BaseEventData
+- uid: UnityEngine.EventSystems
+  commentId: N:UnityEngine.EventSystems
+  isExternal: true
+  name: UnityEngine.EventSystems
+  nameWithType: UnityEngine.EventSystems
+  fullName: UnityEngine.EventSystems
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+- uid: SamuraiSoccer.UI.SlidePad.DragEnd*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.DragEnd
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_DragEnd
+  name: DragEnd
+  nameWithType: SlidePad.DragEnd
+  fullName: SamuraiSoccer.UI.SlidePad.DragEnd
+- uid: SamuraiSoccer.UI.SlidePad.Controller*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.Controller
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_Controller_UnityEngine_Vector2_
+  name: Controller
+  nameWithType: SlidePad.Controller
+  fullName: SamuraiSoccer.UI.SlidePad.Controller
+- uid: SamuraiSoccer.UI.SlidePad.FindFinger*
+  commentId: Overload:SamuraiSoccer.UI.SlidePad.FindFinger
+  href: SamuraiSoccer.UI.SlidePad.html#SamuraiSoccer_UI_SlidePad_FindFinger
+  name: FindFinger
+  nameWithType: SlidePad.FindFinger
+  fullName: SamuraiSoccer.UI.SlidePad.FindFinger
+- uid: UnityEngine.Touch
+  commentId: T:UnityEngine.Touch
+  parent: UnityEngine
+  isExternal: true
+  name: Touch
+  nameWithType: Touch
+  fullName: UnityEngine.Touch

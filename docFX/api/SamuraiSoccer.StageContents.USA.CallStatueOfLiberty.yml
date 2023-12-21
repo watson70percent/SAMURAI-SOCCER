@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty
+  commentId: T:SamuraiSoccer.StageContents.USA.CallStatueOfLiberty
+  id: CallStatueOfLiberty
+  parent: SamuraiSoccer.StageContents.USA
+  children:
+  - SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start
+  - SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.StatuePrefab
+  langs:
+  - csharp
+  - vb
+  name: CallStatueOfLiberty
+  nameWithType: CallStatueOfLiberty
+  fullName: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/CallStatueOfLiberty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: CallStatueOfLiberty
+    path: ../Assets/Scripts/StageContents/USA/CallStatueOfLiberty.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: 'public class CallStatueOfLiberty : MonoBehaviour'
+    content.vb: Public Class CallStatueOfLiberty Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.StatuePrefab
+  commentId: F:SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.StatuePrefab
+  id: StatuePrefab
+  parent: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty
+  langs:
+  - csharp
+  - vb
+  name: StatuePrefab
+  nameWithType: CallStatueOfLiberty.StatuePrefab
+  fullName: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.StatuePrefab
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/CallStatueOfLiberty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StatuePrefab
+    path: ../Assets/Scripts/StageContents/USA/CallStatueOfLiberty.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private GameObject StatuePrefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <SerializeField>
+
+      Private StatuePrefab As GameObject
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start
+  commentId: M:SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: CallStatueOfLiberty.Start()
+  fullName: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/USA/CallStatueOfLiberty.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/USA/CallStatueOfLiberty.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.StageContents.USA
+  namespace: SamuraiSoccer.StageContents.USA
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start*
+references:
+- uid: SamuraiSoccer.StageContents.USA
+  commentId: N:SamuraiSoccer.StageContents.USA
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.USA
+  nameWithType: SamuraiSoccer.StageContents.USA
+  fullName: SamuraiSoccer.StageContents.USA
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.USA
+    name: USA
+    href: SamuraiSoccer.StageContents.USA.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.USA
+    name: USA
+    href: SamuraiSoccer.StageContents.USA.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start
+  href: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.html#SamuraiSoccer_StageContents_USA_CallStatueOfLiberty_Start
+  name: Start
+  nameWithType: CallStatueOfLiberty.Start
+  fullName: SamuraiSoccer.StageContents.USA.CallStatueOfLiberty.Start

@@ -1,0 +1,549 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.Event.StageSelectEvent
+  commentId: T:SamuraiSoccer.Event.StageSelectEvent
+  id: StageSelectEvent
+  parent: SamuraiSoccer.Event
+  children:
+  - SamuraiSoccer.Event.StageSelectEvent.Preview
+  - SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext(System.Int32)
+  - SamuraiSoccer.Event.StageSelectEvent.Stage
+  - SamuraiSoccer.Event.StageSelectEvent.StageOnNext(SamuraiSoccer.Event.Stage)
+  - SamuraiSoccer.Event.StageSelectEvent.m_preview
+  - SamuraiSoccer.Event.StageSelectEvent.m_previewShareObservable
+  - SamuraiSoccer.Event.StageSelectEvent.m_stage
+  - SamuraiSoccer.Event.StageSelectEvent.m_stageShareObservable
+  langs:
+  - csharp
+  - vb
+  name: StageSelectEvent
+  nameWithType: StageSelectEvent
+  fullName: SamuraiSoccer.Event.StageSelectEvent
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageSelectEvent
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 5
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: public static class StageSelectEvent
+    content.vb: Public Module StageSelectEvent
+  inheritance:
+  - System.Object
+- uid: SamuraiSoccer.Event.StageSelectEvent.m_stage
+  commentId: F:SamuraiSoccer.Event.StageSelectEvent.m_stage
+  id: m_stage
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: m_stage
+  nameWithType: StageSelectEvent.m_stage
+  fullName: SamuraiSoccer.Event.StageSelectEvent.m_stage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stage
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<Stage> m_stage
+    return:
+      type: UniRx.Subject{SamuraiSoccer.Event.Stage}
+    content.vb: Private Shared m_stage As Subject(Of Stage)
+- uid: SamuraiSoccer.Event.StageSelectEvent.m_stageShareObservable
+  commentId: F:SamuraiSoccer.Event.StageSelectEvent.m_stageShareObservable
+  id: m_stageShareObservable
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: m_stageShareObservable
+  nameWithType: StageSelectEvent.m_stageShareObservable
+  fullName: SamuraiSoccer.Event.StageSelectEvent.m_stageShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stageShareObservable
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 8
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<Stage> m_stageShareObservable
+    return:
+      type: System.IObservable{SamuraiSoccer.Event.Stage}
+    content.vb: Private Shared m_stageShareObservable As IObservable(Of Stage)
+- uid: SamuraiSoccer.Event.StageSelectEvent.Stage
+  commentId: P:SamuraiSoccer.Event.StageSelectEvent.Stage
+  id: Stage
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: Stage
+  nameWithType: StageSelectEvent.Stage
+  fullName: SamuraiSoccer.Event.StageSelectEvent.Stage
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Stage
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 12
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: StageイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static IObservable<Stage> Stage { get; }
+    parameters: []
+    return:
+      type: System.IObservable{SamuraiSoccer.Event.Stage}
+    content.vb: Public Shared ReadOnly Property Stage As IObservable(Of Stage)
+  overload: SamuraiSoccer.Event.StageSelectEvent.Stage*
+- uid: SamuraiSoccer.Event.StageSelectEvent.StageOnNext(SamuraiSoccer.Event.Stage)
+  commentId: M:SamuraiSoccer.Event.StageSelectEvent.StageOnNext(SamuraiSoccer.Event.Stage)
+  id: StageOnNext(SamuraiSoccer.Event.Stage)
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: StageOnNext(Stage)
+  nameWithType: StageSelectEvent.StageOnNext(Stage)
+  fullName: SamuraiSoccer.Event.StageSelectEvent.StageOnNext(SamuraiSoccer.Event.Stage)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageOnNext
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 20
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Stageイベントを発行
+  example: []
+  syntax:
+    content: public static void StageOnNext(Stage stage)
+    parameters:
+    - id: stage
+      type: SamuraiSoccer.Event.Stage
+      description: ステージ(国名)
+    content.vb: Public Shared Sub StageOnNext(stage As Stage)
+  overload: SamuraiSoccer.Event.StageSelectEvent.StageOnNext*
+- uid: SamuraiSoccer.Event.StageSelectEvent.m_preview
+  commentId: F:SamuraiSoccer.Event.StageSelectEvent.m_preview
+  id: m_preview
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: m_preview
+  nameWithType: StageSelectEvent.m_preview
+  fullName: SamuraiSoccer.Event.StageSelectEvent.m_preview
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_preview
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static Subject<int> m_preview
+    return:
+      type: UniRx.Subject{System.Int32}
+    content.vb: Private Shared m_preview As Subject(Of Integer)
+- uid: SamuraiSoccer.Event.StageSelectEvent.m_previewShareObservable
+  commentId: F:SamuraiSoccer.Event.StageSelectEvent.m_previewShareObservable
+  id: m_previewShareObservable
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: m_previewShareObservable
+  nameWithType: StageSelectEvent.m_previewShareObservable
+  fullName: SamuraiSoccer.Event.StageSelectEvent.m_previewShareObservable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_previewShareObservable
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  syntax:
+    content: private static IObservable<int> m_previewShareObservable
+    return:
+      type: System.IObservable{System.Int32}
+    content.vb: Private Shared m_previewShareObservable As IObservable(Of Integer)
+- uid: SamuraiSoccer.Event.StageSelectEvent.Preview
+  commentId: P:SamuraiSoccer.Event.StageSelectEvent.Preview
+  id: Preview
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: Preview
+  nameWithType: StageSelectEvent.Preview
+  fullName: SamuraiSoccer.Event.StageSelectEvent.Preview
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Preview
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: Previewイベントを発行
+  example: []
+  syntax:
+    content: public static IObservable<int> Preview { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Int32}
+    content.vb: Public Shared ReadOnly Property Preview As IObservable(Of Integer)
+  overload: SamuraiSoccer.Event.StageSelectEvent.Preview*
+- uid: SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext(System.Int32)
+  commentId: M:SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext(System.Int32)
+  id: PreviewOnNext(System.Int32)
+  parent: SamuraiSoccer.Event.StageSelectEvent
+  langs:
+  - csharp
+  - vb
+  name: PreviewOnNext(int)
+  nameWithType: StageSelectEvent.PreviewOnNext(int)
+  fullName: SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Event/StageSelectEvent.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: PreviewOnNext
+    path: ../Assets/Scripts/Event/StageSelectEvent.cs
+    startLine: 38
+  assemblies:
+  - SamuraiSoccer.Event
+  namespace: SamuraiSoccer.Event
+  summary: PreviewイベントのSubscribe先
+  example: []
+  syntax:
+    content: public static void PreviewOnNext(int number)
+    parameters:
+    - id: number
+      type: System.Int32
+      description: ステージ番号
+    content.vb: Public Shared Sub PreviewOnNext(number As Integer)
+  overload: SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext*
+  nameWithType.vb: StageSelectEvent.PreviewOnNext(Integer)
+  fullName.vb: SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext(Integer)
+  name.vb: PreviewOnNext(Integer)
+references:
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UniRx.Subject{SamuraiSoccer.Event.Stage}
+  commentId: T:UniRx.Subject{SamuraiSoccer.Event.Stage}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: SamuraiSoccer.Event.Stage.html
+  name: Subject<Stage>
+  nameWithType: Subject<Stage>
+  fullName: UniRx.Subject<SamuraiSoccer.Event.Stage>
+  nameWithType.vb: Subject(Of Stage)
+  fullName.vb: UniRx.Subject(Of SamuraiSoccer.Event.Stage)
+  name.vb: Subject(Of Stage)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: )
+- uid: UniRx.Subject`1
+  commentId: T:UniRx.Subject`1
+  isExternal: true
+  name: Subject<T>
+  nameWithType: Subject<T>
+  fullName: UniRx.Subject<T>
+  nameWithType.vb: Subject(Of T)
+  fullName.vb: UniRx.Subject(Of T)
+  name.vb: Subject(Of T)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: System.IObservable{SamuraiSoccer.Event.Stage}
+  commentId: T:System.IObservable{SamuraiSoccer.Event.Stage}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<Stage>
+  nameWithType: IObservable<Stage>
+  fullName: System.IObservable<SamuraiSoccer.Event.Stage>
+  nameWithType.vb: IObservable(Of Stage)
+  fullName.vb: System.IObservable(Of SamuraiSoccer.Event.Stage)
+  name.vb: IObservable(Of Stage)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.Event.Stage
+    name: Stage
+    href: SamuraiSoccer.Event.Stage.html
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.Event.StageSelectEvent.Stage*
+  commentId: Overload:SamuraiSoccer.Event.StageSelectEvent.Stage
+  href: SamuraiSoccer.Event.StageSelectEvent.html#SamuraiSoccer_Event_StageSelectEvent_Stage
+  name: Stage
+  nameWithType: StageSelectEvent.Stage
+  fullName: SamuraiSoccer.Event.StageSelectEvent.Stage
+- uid: SamuraiSoccer.Event.StageSelectEvent.StageOnNext*
+  commentId: Overload:SamuraiSoccer.Event.StageSelectEvent.StageOnNext
+  href: SamuraiSoccer.Event.StageSelectEvent.html#SamuraiSoccer_Event_StageSelectEvent_StageOnNext_SamuraiSoccer_Event_Stage_
+  name: StageOnNext
+  nameWithType: StageSelectEvent.StageOnNext
+  fullName: SamuraiSoccer.Event.StageSelectEvent.StageOnNext
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: UniRx.Subject{System.Int32}
+  commentId: T:UniRx.Subject{System.Int32}
+  parent: UniRx
+  definition: UniRx.Subject`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Subject<int>
+  nameWithType: Subject<int>
+  fullName: UniRx.Subject<int>
+  nameWithType.vb: Subject(Of Integer)
+  fullName.vb: UniRx.Subject(Of Integer)
+  name.vb: Subject(Of Integer)
+  spec.csharp:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.Subject`1
+    name: Subject
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.IObservable{System.Int32}
+  commentId: T:System.IObservable{System.Int32}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<int>
+  nameWithType: IObservable<int>
+  fullName: System.IObservable<int>
+  nameWithType.vb: IObservable(Of Integer)
+  fullName.vb: System.IObservable(Of Integer)
+  name.vb: IObservable(Of Integer)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: SamuraiSoccer.Event.StageSelectEvent.Preview*
+  commentId: Overload:SamuraiSoccer.Event.StageSelectEvent.Preview
+  href: SamuraiSoccer.Event.StageSelectEvent.html#SamuraiSoccer_Event_StageSelectEvent_Preview
+  name: Preview
+  nameWithType: StageSelectEvent.Preview
+  fullName: SamuraiSoccer.Event.StageSelectEvent.Preview
+- uid: SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext*
+  commentId: Overload:SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext
+  href: SamuraiSoccer.Event.StageSelectEvent.html#SamuraiSoccer_Event_StageSelectEvent_PreviewOnNext_System_Int32_
+  name: PreviewOnNext
+  nameWithType: StageSelectEvent.PreviewOnNext
+  fullName: SamuraiSoccer.Event.StageSelectEvent.PreviewOnNext
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

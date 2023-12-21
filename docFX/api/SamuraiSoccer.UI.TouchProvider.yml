@@ -1,0 +1,361 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.UI.TouchProvider
+  commentId: T:SamuraiSoccer.UI.TouchProvider
+  id: TouchProvider
+  parent: SamuraiSoccer.UI
+  children:
+  - SamuraiSoccer.UI.TouchProvider.Awake
+  - SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty
+  - SamuraiSoccer.UI.TouchProvider.Update
+  - SamuraiSoccer.UI.TouchProvider.m_reactiveProperty
+  langs:
+  - csharp
+  - vb
+  name: TouchProvider
+  nameWithType: TouchProvider
+  fullName: SamuraiSoccer.UI.TouchProvider
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/UI/TouchProvider.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TouchProvider
+    path: ../Assets/Scripts/UI/TouchProvider.cs
+    startLine: 7
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: 'public class TouchProvider : MonoBehaviour'
+    content.vb: Public Class TouchProvider Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.UI.TouchProvider.m_reactiveProperty
+  commentId: F:SamuraiSoccer.UI.TouchProvider.m_reactiveProperty
+  id: m_reactiveProperty
+  parent: SamuraiSoccer.UI.TouchProvider
+  langs:
+  - csharp
+  - vb
+  name: m_reactiveProperty
+  nameWithType: TouchProvider.m_reactiveProperty
+  fullName: SamuraiSoccer.UI.TouchProvider.m_reactiveProperty
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/UI/TouchProvider.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_reactiveProperty
+    path: ../Assets/Scripts/UI/TouchProvider.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private ReactiveProperty<bool> m_reactiveProperty
+    return:
+      type: UniRx.ReactiveProperty{System.Boolean}
+    content.vb: Private m_reactiveProperty As ReactiveProperty(Of Boolean)
+- uid: SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty
+  commentId: P:SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty
+  id: IsTouchingReactiveProperty
+  parent: SamuraiSoccer.UI.TouchProvider
+  langs:
+  - csharp
+  - vb
+  name: IsTouchingReactiveProperty
+  nameWithType: TouchProvider.IsTouchingReactiveProperty
+  fullName: SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/UI/TouchProvider.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: IsTouchingReactiveProperty
+    path: ../Assets/Scripts/UI/TouchProvider.cs
+    startLine: 11
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: public IReadOnlyReactiveProperty<bool> IsTouchingReactiveProperty { get; }
+    parameters: []
+    return:
+      type: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+    content.vb: Public ReadOnly Property IsTouchingReactiveProperty As IReadOnlyReactiveProperty(Of Boolean)
+  overload: SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty*
+- uid: SamuraiSoccer.UI.TouchProvider.Awake
+  commentId: M:SamuraiSoccer.UI.TouchProvider.Awake
+  id: Awake
+  parent: SamuraiSoccer.UI.TouchProvider
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: TouchProvider.Awake()
+  fullName: SamuraiSoccer.UI.TouchProvider.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TouchProvider.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/UI/TouchProvider.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.UI.TouchProvider.Awake*
+- uid: SamuraiSoccer.UI.TouchProvider.Update
+  commentId: M:SamuraiSoccer.UI.TouchProvider.Update
+  id: Update
+  parent: SamuraiSoccer.UI.TouchProvider
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: TouchProvider.Update()
+  fullName: SamuraiSoccer.UI.TouchProvider.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/UI/TouchProvider.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/UI/TouchProvider.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.UI
+  namespace: SamuraiSoccer.UI
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.UI.TouchProvider.Update*
+references:
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UniRx.ReactiveProperty{System.Boolean}
+  commentId: T:UniRx.ReactiveProperty{System.Boolean}
+  parent: UniRx
+  definition: UniRx.ReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: ReactiveProperty<bool>
+  nameWithType: ReactiveProperty<bool>
+  fullName: UniRx.ReactiveProperty<bool>
+  nameWithType.vb: ReactiveProperty(Of Boolean)
+  fullName.vb: UniRx.ReactiveProperty(Of Boolean)
+  name.vb: ReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UniRx.ReactiveProperty`1
+  commentId: T:UniRx.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: UniRx.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: UniRx.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty*
+  commentId: Overload:SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty
+  href: SamuraiSoccer.UI.TouchProvider.html#SamuraiSoccer_UI_TouchProvider_IsTouchingReactiveProperty
+  name: IsTouchingReactiveProperty
+  nameWithType: TouchProvider.IsTouchingReactiveProperty
+  fullName: SamuraiSoccer.UI.TouchProvider.IsTouchingReactiveProperty
+- uid: UniRx.IReadOnlyReactiveProperty{System.Boolean}
+  commentId: T:UniRx.IReadOnlyReactiveProperty{System.Boolean}
+  parent: UniRx
+  definition: UniRx.IReadOnlyReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: IReadOnlyReactiveProperty<bool>
+  nameWithType: IReadOnlyReactiveProperty<bool>
+  fullName: UniRx.IReadOnlyReactiveProperty<bool>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of Boolean)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of Boolean)
+  name.vb: IReadOnlyReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UniRx.IReadOnlyReactiveProperty`1
+  commentId: T:UniRx.IReadOnlyReactiveProperty`1
+  isExternal: true
+  name: IReadOnlyReactiveProperty<T>
+  nameWithType: IReadOnlyReactiveProperty<T>
+  fullName: UniRx.IReadOnlyReactiveProperty<T>
+  nameWithType.vb: IReadOnlyReactiveProperty(Of T)
+  fullName.vb: UniRx.IReadOnlyReactiveProperty(Of T)
+  name.vb: IReadOnlyReactiveProperty(Of T)
+  spec.csharp:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UniRx.IReadOnlyReactiveProperty`1
+    name: IReadOnlyReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SamuraiSoccer.UI.TouchProvider.Awake*
+  commentId: Overload:SamuraiSoccer.UI.TouchProvider.Awake
+  href: SamuraiSoccer.UI.TouchProvider.html#SamuraiSoccer_UI_TouchProvider_Awake
+  name: Awake
+  nameWithType: TouchProvider.Awake
+  fullName: SamuraiSoccer.UI.TouchProvider.Awake
+- uid: SamuraiSoccer.UI.TouchProvider.Update*
+  commentId: Overload:SamuraiSoccer.UI.TouchProvider.Update
+  href: SamuraiSoccer.UI.TouchProvider.html#SamuraiSoccer_UI_TouchProvider_Update
+  name: Update
+  nameWithType: TouchProvider.Update
+  fullName: SamuraiSoccer.UI.TouchProvider.Update

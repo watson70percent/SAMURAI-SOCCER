@@ -1,0 +1,566 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator
+  commentId: T:SamuraiSoccer.StageContents.BattleDome.Indicator
+  id: Indicator
+  parent: SamuraiSoccer.StageContents.BattleDome
+  children:
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.Start
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.Update
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.bgmData
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_bgm
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_center
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_fileName
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_indicatorPlane
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_levelNormalizer
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_objs
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_start_time
+  - SamuraiSoccer.StageContents.BattleDome.Indicator.m_width
+  langs:
+  - csharp
+  - vb
+  name: Indicator
+  nameWithType: Indicator
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Indicator
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 7
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: 'public class Indicator : MonoBehaviour'
+    content.vb: Public Class Indicator Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_indicatorPlane
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_indicatorPlane
+  id: m_indicatorPlane
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_indicatorPlane
+  nameWithType: Indicator.m_indicatorPlane
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_indicatorPlane
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_indicatorPlane
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 9
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: public GameObject m_indicatorPlane
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public m_indicatorPlane As GameObject
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_bgm
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_bgm
+  id: m_bgm
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_bgm
+  nameWithType: Indicator.m_bgm
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_bgm
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_bgm
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 10
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: public AudioSource m_bgm
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public m_bgm As AudioSource
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_objs
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_objs
+  id: m_objs
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_objs
+  nameWithType: Indicator.m_objs
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_objs
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_objs
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 12
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private Material[] m_objs
+    return:
+      type: UnityEngine.Material[]
+    content.vb: Private m_objs As Material()
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.bgmData
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.bgmData
+  id: bgmData
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: bgmData
+  nameWithType: Indicator.bgmData
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.bgmData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: bgmData
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 13
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private BSA bgmData
+    return:
+      type: SamuraiSoccer.StageContents.BattleDome.BSA
+    content.vb: Private bgmData As BSA
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_start_time
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_start_time
+  id: m_start_time
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_start_time
+  nameWithType: Indicator.m_start_time
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_start_time
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_start_time
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 14
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private DateTime m_start_time
+    return:
+      type: System.DateTime
+    content.vb: Private m_start_time As Date
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_levelNormalizer
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_levelNormalizer
+  id: m_levelNormalizer
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_levelNormalizer
+  nameWithType: Indicator.m_levelNormalizer
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_levelNormalizer
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_levelNormalizer
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 15
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private double m_levelNormalizer
+    return:
+      type: System.Double
+    content.vb: Private m_levelNormalizer As Double
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_center
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_center
+  id: m_center
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_center
+  nameWithType: Indicator.m_center
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_center
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_center
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 17
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private readonly Vector3 m_center
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Private ReadOnly m_center As Vector3
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_width
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_width
+  id: m_width
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_width
+  nameWithType: Indicator.m_width
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_width
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_width
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 18
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private readonly float m_width
+    return:
+      type: System.Single
+    content.vb: Private ReadOnly m_width As Single
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.m_fileName
+  commentId: F:SamuraiSoccer.StageContents.BattleDome.Indicator.m_fileName
+  id: m_fileName
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: m_fileName
+  nameWithType: Indicator.m_fileName
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.m_fileName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_fileName
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 19
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private readonly string m_fileName
+    return:
+      type: System.String
+    content.vb: Private ReadOnly m_fileName As String
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.Start
+  commentId: M:SamuraiSoccer.StageContents.BattleDome.Indicator.Start
+  id: Start
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Indicator.Start()
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 22
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private UniTask Start()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function Start() As UniTask
+  overload: SamuraiSoccer.StageContents.BattleDome.Indicator.Start*
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.Update
+  commentId: M:SamuraiSoccer.StageContents.BattleDome.Indicator.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.BattleDome.Indicator
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Indicator.Update()
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/BattleDome/Indicator.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/BattleDome/Indicator.cs
+    startLine: 54
+  assemblies:
+  - BattleDome
+  namespace: SamuraiSoccer.StageContents.BattleDome
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.BattleDome.Indicator.Update*
+references:
+- uid: SamuraiSoccer.StageContents.BattleDome
+  commentId: N:SamuraiSoccer.StageContents.BattleDome
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.BattleDome
+  nameWithType: SamuraiSoccer.StageContents.BattleDome
+  fullName: SamuraiSoccer.StageContents.BattleDome
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattleDome
+    name: BattleDome
+    href: SamuraiSoccer.StageContents.BattleDome.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.BattleDome
+    name: BattleDome
+    href: SamuraiSoccer.StageContents.BattleDome.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: UnityEngine.Material[]
+  isExternal: true
+  name: Material[]
+  nameWithType: Material[]
+  fullName: UnityEngine.Material[]
+  nameWithType.vb: Material()
+  fullName.vb: UnityEngine.Material()
+  name.vb: Material()
+  spec.csharp:
+  - uid: UnityEngine.Material
+    name: Material
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Material
+    name: Material
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SamuraiSoccer.StageContents.BattleDome.BSA
+  commentId: T:SamuraiSoccer.StageContents.BattleDome.BSA
+  parent: SamuraiSoccer.StageContents.BattleDome
+  href: SamuraiSoccer.StageContents.BattleDome.BSA.html
+  name: BSA
+  nameWithType: BSA
+  fullName: SamuraiSoccer.StageContents.BattleDome.BSA
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.Start*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.Indicator.Start
+  href: SamuraiSoccer.StageContents.BattleDome.Indicator.html#SamuraiSoccer_StageContents_BattleDome_Indicator_Start
+  name: Start
+  nameWithType: Indicator.Start
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.Start
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.StageContents.BattleDome.Indicator.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.BattleDome.Indicator.Update
+  href: SamuraiSoccer.StageContents.BattleDome.Indicator.html#SamuraiSoccer_StageContents_BattleDome_Indicator_Update
+  name: Update
+  nameWithType: Indicator.Update
+  fullName: SamuraiSoccer.StageContents.BattleDome.Indicator.Update

@@ -1,0 +1,237 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+  id: StagePreviewDatas
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas.stageSelectList
+  langs:
+  - csharp
+  - vb
+  name: StagePreviewDatas
+  nameWithType: StagePreviewDatas
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StagePreviewDatas
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewDatas.cs
+    startLine: 6
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [CreateAssetMenu]
+
+      public class StagePreviewDatas : ScriptableObject
+    content.vb: >-
+      <CreateAssetMenu>
+
+      Public Class StagePreviewDatas Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas.stageSelectList
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas.stageSelectList
+  id: stageSelectList
+  parent: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas
+  langs:
+  - csharp
+  - vb
+  name: stageSelectList
+  nameWithType: StagePreviewDatas.stageSelectList
+  fullName: SamuraiSoccer.StageContents.StageSelect.StagePreviewDatas.stageSelectList
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StagePreviewDatas.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: stageSelectList
+    path: ../Assets/Scripts/StageContents/StageSelect/StagePreviewDatas.cs
+    startLine: 9
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public List<StagePreviewData> stageSelectList
+    return:
+      type: System.Collections.Generic.List{SamuraiSoccer.StageContents.StageSelect.StagePreviewData}
+    content.vb: Public stageSelectList As List(Of StagePreviewData)
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.List{SamuraiSoccer.StageContents.StageSelect.StagePreviewData}
+  commentId: T:System.Collections.Generic.List{SamuraiSoccer.StageContents.StageSelect.StagePreviewData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<StagePreviewData>
+  nameWithType: List<StagePreviewData>
+  fullName: System.Collections.Generic.List<SamuraiSoccer.StageContents.StageSelect.StagePreviewData>
+  nameWithType.vb: List(Of StagePreviewData)
+  fullName.vb: System.Collections.Generic.List(Of SamuraiSoccer.StageContents.StageSelect.StagePreviewData)
+  name.vb: List(Of StagePreviewData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewData
+    name: StagePreviewData
+    href: SamuraiSoccer.StageContents.StageSelect.StagePreviewData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SamuraiSoccer.StageContents.StageSelect.StagePreviewData
+    name: StagePreviewData
+    href: SamuraiSoccer.StageContents.StageSelect.StagePreviewData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

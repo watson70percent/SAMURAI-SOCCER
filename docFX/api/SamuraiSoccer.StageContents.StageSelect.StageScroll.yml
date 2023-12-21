@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.StageScroll
+  id: StageScroll
+  parent: SamuraiSoccer.StageContents.StageSelect
+  children:
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.Update
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_conversationPublisher
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_image
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_imageRect
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_publisher
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_scrollIcon
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_stage
+  - SamuraiSoccer.StageContents.StageSelect.StageScroll.m_viewPort
+  langs:
+  - csharp
+  - vb
+  name: StageScroll
+  nameWithType: StageScroll
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: StageScroll
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 10
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: 'public class StageScroll : MonoBehaviour'
+    content.vb: Public Class StageScroll Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_stage
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_stage
+  id: m_stage
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_stage
+  nameWithType: StageScroll.m_stage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_stage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_stage
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 13
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Stage m_stage
+    return:
+      type: SamuraiSoccer.Event.Stage
+    content.vb: >-
+      <SerializeField>
+
+      Private m_stage As Stage
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_viewPort
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_viewPort
+  id: m_viewPort
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_viewPort
+  nameWithType: StageScroll.m_viewPort
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_viewPort
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_viewPort
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 16
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform m_viewPort
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private m_viewPort As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_image
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_image
+  id: m_image
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_image
+  nameWithType: StageScroll.m_image
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_image
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_image
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private Image m_image
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: >-
+      <SerializeField>
+
+      Private m_image As Image
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_imageRect
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_imageRect
+  id: m_imageRect
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_imageRect
+  nameWithType: StageScroll.m_imageRect
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_imageRect
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_imageRect
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 19
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private RectTransform m_imageRect
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: >-
+      <SerializeField>
+
+      Private m_imageRect As RectTransform
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_scrollIcon
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_scrollIcon
+  id: m_scrollIcon
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_scrollIcon
+  nameWithType: StageScroll.m_scrollIcon
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_scrollIcon
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_scrollIcon
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private ScrollIcon m_scrollIcon
+    return:
+      type: SamuraiSoccer.StageContents.StageSelect.ScrollIcon
+    content.vb: >-
+      <SerializeField>
+
+      Private m_scrollIcon As ScrollIcon
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_publisher
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_publisher
+  id: m_publisher
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_publisher
+  nameWithType: StageScroll.m_publisher
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_publisher
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_publisher
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 24
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private SelectedStagePublisher m_publisher
+    return:
+      type: SamuraiSoccer.UI.SelectedStagePublisher
+    content.vb: >-
+      <SerializeField>
+
+      Private m_publisher As SelectedStagePublisher
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_conversationPublisher
+  commentId: F:SamuraiSoccer.StageContents.StageSelect.StageScroll.m_conversationPublisher
+  id: m_conversationPublisher
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: m_conversationPublisher
+  nameWithType: StageScroll.m_conversationPublisher
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.m_conversationPublisher
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_conversationPublisher
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: >-
+      [SerializeField]
+
+      private SelectedConversationPublisher m_conversationPublisher
+    return:
+      type: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+    content.vb: >-
+      <SerializeField>
+
+      Private m_conversationPublisher As SelectedConversationPublisher
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage
+  commentId: P:SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage
+  id: Stage
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: Stage
+  nameWithType: StageScroll.Stage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Stage
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public Stage Stage { get; }
+    parameters: []
+    return:
+      type: SamuraiSoccer.Event.Stage
+    content.vb: Public ReadOnly Property Stage As Stage
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.Update
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScroll.Update
+  id: Update
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: StageScroll.Update()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScroll.Update*
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick
+  commentId: M:SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick
+  id: OnClick
+  parent: SamuraiSoccer.StageContents.StageSelect.StageScroll
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: StageScroll.OnClick()
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OnClick
+    path: ../Assets/Scripts/StageContents/StageSelect/StageScroll.cs
+    startLine: 44
+  assemblies:
+  - SamuraiSoccer.StageContents.StageSelect
+  namespace: SamuraiSoccer.StageContents.StageSelect
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick()
+  overload: SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick*
+references:
+- uid: SamuraiSoccer.StageContents.StageSelect
+  commentId: N:SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.StageSelect
+  nameWithType: SamuraiSoccer.StageContents.StageSelect
+  fullName: SamuraiSoccer.StageContents.StageSelect
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.StageSelect
+    name: StageSelect
+    href: SamuraiSoccer.StageContents.StageSelect.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SamuraiSoccer.Event.Stage
+  commentId: T:SamuraiSoccer.Event.Stage
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: SamuraiSoccer.Event.Stage
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  href: UnityEngine.html
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    href: UnityEngine.html
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    href: UnityEngine.UI.html
+- uid: SamuraiSoccer.StageContents.StageSelect.ScrollIcon
+  commentId: T:SamuraiSoccer.StageContents.StageSelect.ScrollIcon
+  parent: SamuraiSoccer.StageContents.StageSelect
+  href: SamuraiSoccer.StageContents.StageSelect.ScrollIcon.html
+  name: ScrollIcon
+  nameWithType: ScrollIcon
+  fullName: SamuraiSoccer.StageContents.StageSelect.ScrollIcon
+- uid: SamuraiSoccer.UI.SelectedStagePublisher
+  commentId: T:SamuraiSoccer.UI.SelectedStagePublisher
+  parent: SamuraiSoccer.UI
+  href: SamuraiSoccer.UI.SelectedStagePublisher.html
+  name: SelectedStagePublisher
+  nameWithType: SelectedStagePublisher
+  fullName: SamuraiSoccer.UI.SelectedStagePublisher
+- uid: SamuraiSoccer.UI
+  commentId: N:SamuraiSoccer.UI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.UI
+  nameWithType: SamuraiSoccer.UI
+  fullName: SamuraiSoccer.UI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.UI
+    name: UI
+    href: SamuraiSoccer.UI.html
+- uid: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  commentId: T:SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+  parent: SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher.html
+  name: SelectedConversationPublisher
+  nameWithType: SelectedConversationPublisher
+  fullName: SamuraiSoccer.StageContents.Conversation.SelectedConversationPublisher
+- uid: SamuraiSoccer.StageContents.Conversation
+  commentId: N:SamuraiSoccer.StageContents.Conversation
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.StageContents.Conversation
+  nameWithType: SamuraiSoccer.StageContents.Conversation
+  fullName: SamuraiSoccer.StageContents.Conversation
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents
+    name: StageContents
+    href: SamuraiSoccer.StageContents.html
+  - name: .
+  - uid: SamuraiSoccer.StageContents.Conversation
+    name: Conversation
+    href: SamuraiSoccer.StageContents.Conversation.html
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage
+  href: SamuraiSoccer.StageContents.StageSelect.StageScroll.html#SamuraiSoccer_StageContents_StageSelect_StageScroll_Stage
+  name: Stage
+  nameWithType: StageScroll.Stage
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.Stage
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.Update*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScroll.Update
+  href: SamuraiSoccer.StageContents.StageSelect.StageScroll.html#SamuraiSoccer_StageContents_StageSelect_StageScroll_Update
+  name: Update
+  nameWithType: StageScroll.Update
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.Update
+- uid: SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick*
+  commentId: Overload:SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick
+  href: SamuraiSoccer.StageContents.StageSelect.StageScroll.html#SamuraiSoccer_StageContents_StageSelect_StageScroll_OnClick
+  name: OnClick
+  nameWithType: StageScroll.OnClick
+  fullName: SamuraiSoccer.StageContents.StageSelect.StageScroll.OnClick

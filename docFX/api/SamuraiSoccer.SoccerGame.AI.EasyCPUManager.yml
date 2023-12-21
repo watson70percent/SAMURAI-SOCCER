@@ -1,0 +1,1817 @@
+### YamlMime:ManagedReference
+items:
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  commentId: T:SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  id: EasyCPUManager
+  parent: SamuraiSoccer.SoccerGame.AI
+  children:
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost(System.Boolean,System.Single,System.Int32)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost(System.Boolean,System.Single,System.Int32)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init(System.Boolean)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill(UnityEngine.GameObject)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause(System.Boolean)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play(UniRx.Unit)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed(System.Single)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn(SamuraiSoccer.SoccerGame.PersonalStatus,UnityEngine.Vector3)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby(System.Boolean)
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.audioSource
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.ball
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.field
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.goalSound
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.m_isPause
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_opp
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_team
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.oppName
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_p
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_stock
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opponent
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.rbs
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.referee
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.resultSceneName
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.samurai
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.startSound
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_p
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_stock
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammate
+  - SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammateName
+  langs:
+  - csharp
+  - vb
+  name: EasyCPUManager
+  nameWithType: EasyCPUManager
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: EasyCPUManager
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 18
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: CPUを操作するクラス
+  example: []
+  syntax:
+    content: >-
+      [DefaultExecutionOrder(5)]
+
+      [RequireComponent(typeof(FieldManager))]
+
+      public class EasyCPUManager : MonoBehaviour
+    content.vb: >-
+      <DefaultExecutionOrder(5)>
+
+      <RequireComponent(GetType(FieldManager))>
+
+      Public Class EasyCPUManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  attributes:
+  - type: UnityEngine.DefaultExecutionOrder
+    ctor: UnityEngine.DefaultExecutionOrder.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 5
+  - type: UnityEngine.RequireComponent
+    ctor: UnityEngine.RequireComponent.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: SamuraiSoccer.SoccerGame.FieldManager
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.samurai
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.samurai
+  id: samurai
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: samurai
+  nameWithType: EasyCPUManager.samurai
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.samurai
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: samurai
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 22
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public GameObject samurai
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public samurai As GameObject
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.referee
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.referee
+  id: referee
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: referee
+  nameWithType: EasyCPUManager.referee
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.referee
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: referee
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 23
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public GameObject referee
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public referee As GameObject
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team
+  id: team
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: team
+  nameWithType: EasyCPUManager.team
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: team
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 25
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public List<GameObject> team
+    return:
+      type: System.Collections.Generic.List{UnityEngine.GameObject}
+    content.vb: Public team As List(Of GameObject)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_stock
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_stock
+  id: team_stock
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: team_stock
+  nameWithType: EasyCPUManager.team_stock
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_stock
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: team_stock
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 26
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public Team team_stock
+    return:
+      type: SamuraiSoccer.SoccerGame.AI.Team
+    content.vb: Public team_stock As Team
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp
+  id: opp
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: opp
+  nameWithType: EasyCPUManager.opp
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: opp
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 27
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public List<GameObject> opp
+    return:
+      type: System.Collections.Generic.List{UnityEngine.GameObject}
+    content.vb: Public opp As List(Of GameObject)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_stock
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_stock
+  id: opp_stock
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: opp_stock
+  nameWithType: EasyCPUManager.opp_stock
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_stock
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: opp_stock
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 28
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public Team opp_stock
+    return:
+      type: SamuraiSoccer.SoccerGame.AI.Team
+    content.vb: Public opp_stock As Team
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_p
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_p
+  id: team_p
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: team_p
+  nameWithType: EasyCPUManager.team_p
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.team_p
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: team_p
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 30
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public Transform team_p
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public team_p As Transform
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_p
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_p
+  id: opp_p
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: opp_p
+  nameWithType: EasyCPUManager.opp_p
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opp_p
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: opp_p
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 31
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public Transform opp_p
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public opp_p As Transform
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.ball
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.ball
+  id: ball
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: ball
+  nameWithType: EasyCPUManager.ball
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.ball
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: ball
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 32
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public BallAction ball
+    return:
+      type: SamuraiSoccer.SoccerGame.BallAction
+    content.vb: Public ball As BallAction
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammate
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammate
+  id: teammate
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: teammate
+  nameWithType: EasyCPUManager.teammate
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammate
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: teammate
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 33
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private GameObject teammate
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Private teammate As GameObject
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammateName
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammateName
+  id: teammateName
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: teammateName
+  nameWithType: EasyCPUManager.teammateName
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.teammateName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: teammateName
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 34
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private string teammateName
+    return:
+      type: System.String
+    content.vb: Private teammateName As String
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opponent
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opponent
+  id: opponent
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: opponent
+  nameWithType: EasyCPUManager.opponent
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.opponent
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: opponent
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 35
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private GameObject opponent
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Private opponent As GameObject
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.oppName
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.oppName
+  id: oppName
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: oppName
+  nameWithType: EasyCPUManager.oppName
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.oppName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: oppName
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 36
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private string oppName
+    return:
+      type: System.String
+    content.vb: Private oppName As String
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_team
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_team
+  id: near_team
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: near_team
+  nameWithType: EasyCPUManager.near_team
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_team
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: near_team
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 38
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public GameObject near_team
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <NonSerialized>
+
+      Public near_team As GameObject
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_opp
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_opp
+  id: near_opp
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: near_opp
+  nameWithType: EasyCPUManager.near_opp
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.near_opp
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: near_opp
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 40
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public GameObject near_opp
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <NonSerialized>
+
+      Public near_opp As GameObject
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.rbs
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.rbs
+  id: rbs
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: rbs
+  nameWithType: EasyCPUManager.rbs
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.rbs
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: rbs
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 42
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public Dictionary<GameObject, Rigidbody> rbs
+    return:
+      type: System.Collections.Generic.Dictionary{UnityEngine.GameObject,UnityEngine.Rigidbody}
+    content.vb: Public rbs As Dictionary(Of GameObject, Rigidbody)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.field
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.field
+  id: field
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: field
+  nameWithType: EasyCPUManager.field
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.field
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: field
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 44
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private FieldManager field
+    return:
+      type: SamuraiSoccer.SoccerGame.FieldManager
+    content.vb: Private field As FieldManager
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.audioSource
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.audioSource
+  id: audioSource
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: EasyCPUManager.audioSource
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.audioSource
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: audioSource
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 46
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public AudioSource audioSource
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public audioSource As AudioSource
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.goalSound
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.goalSound
+  id: goalSound
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: goalSound
+  nameWithType: EasyCPUManager.goalSound
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.goalSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: goalSound
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 47
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public AudioClip goalSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public goalSound As AudioClip
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.startSound
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.startSound
+  id: startSound
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: startSound
+  nameWithType: EasyCPUManager.startSound
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.startSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: startSound
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 48
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public AudioClip startSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public startSound As AudioClip
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.resultSceneName
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.resultSceneName
+  id: resultSceneName
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: resultSceneName
+  nameWithType: EasyCPUManager.resultSceneName
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.resultSceneName
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: resultSceneName
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 50
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: public string resultSceneName
+    return:
+      type: System.String
+    content.vb: Public resultSceneName As String
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.m_isPause
+  commentId: F:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.m_isPause
+  id: m_isPause
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: m_isPause
+  nameWithType: EasyCPUManager.m_isPause
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.m_isPause
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: m_isPause
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 52
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private bool m_isPause
+    return:
+      type: System.Boolean
+    content.vb: Private m_isPause As Boolean
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount
+  commentId: P:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount
+  id: TeamMemberCount
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberCount
+  nameWithType: EasyCPUManager.TeamMemberCount
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: TeamMemberCount
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 57
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: 味方の人数
+  example: []
+  syntax:
+    content: public int TeamMemberCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TeamMemberCount As Integer
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount
+  commentId: P:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount
+  id: OpponentMemberCount
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: OpponentMemberCount
+  nameWithType: EasyCPUManager.OpponentMemberCount
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: OpponentMemberCount
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 68
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: 敵の人数
+  example: []
+  syntax:
+    content: public int OpponentMemberCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property OpponentMemberCount As Integer
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost(System.Boolean,System.Single,System.Int32)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost(System.Boolean,System.Single,System.Int32)
+  id: Boost(System.Boolean,System.Single,System.Int32)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Boost(bool, float, int)
+  nameWithType: EasyCPUManager.Boost(bool, float, int)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost(bool, float, int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Boost
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 82
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: ブースト
+  example: []
+  syntax:
+    content: public void Boost(bool isTeam, float coeff, int finishTime = 0)
+    parameters:
+    - id: isTeam
+      type: System.Boolean
+      description: 味方にブーストか
+    - id: coeff
+      type: System.Single
+      description: 倍率
+    - id: finishTime
+      type: System.Int32
+      description: ブースト終了時間
+    content.vb: Public Sub Boost(isTeam As Boolean, coeff As Single, finishTime As Integer = 0)
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost*
+  nameWithType.vb: EasyCPUManager.Boost(Boolean, Single, Integer)
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost(Boolean, Single, Integer)
+  name.vb: Boost(Boolean, Single, Integer)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost(System.Boolean,System.Single,System.Int32)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost(System.Boolean,System.Single,System.Int32)
+  id: FinBoost(System.Boolean,System.Single,System.Int32)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: FinBoost(bool, float, int)
+  nameWithType: EasyCPUManager.FinBoost(bool, float, int)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost(bool, float, int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: FinBoost
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 121
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private UniTask FinBoost(bool isTeam, float coeff, int fin)
+    parameters:
+    - id: isTeam
+      type: System.Boolean
+    - id: coeff
+      type: System.Single
+    - id: fin
+      type: System.Int32
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function FinBoost(isTeam As Boolean, coeff As Single, fin As Integer) As UniTask
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost*
+  nameWithType.vb: EasyCPUManager.FinBoost(Boolean, Single, Integer)
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost(Boolean, Single, Integer)
+  name.vb: FinBoost(Boolean, Single, Integer)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake
+  id: Awake
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: EasyCPUManager.Awake()
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Awake
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 128
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Awake()
+    content.vb: Private Sub Awake()
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start
+  id: Start
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EasyCPUManager.Start()
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Start
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 143
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Start()
+    content.vb: Private Sub Start()
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update
+  id: Update
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: EasyCPUManager.Update()
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Update
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 152
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Update()
+    content.vb: Private Sub Update()
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause(System.Boolean)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause(System.Boolean)
+  id: Pause(System.Boolean)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Pause(bool)
+  nameWithType: EasyCPUManager.Pause(bool)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Pause
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 177
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Pause(bool isPause)
+    parameters:
+    - id: isPause
+      type: System.Boolean
+    content.vb: Private Sub Pause(isPause As Boolean)
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause*
+  nameWithType.vb: EasyCPUManager.Pause(Boolean)
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause(Boolean)
+  name.vb: Pause(Boolean)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play(UniRx.Unit)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play(UniRx.Unit)
+  id: Play(UniRx.Unit)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Play(Unit)
+  nameWithType: EasyCPUManager.Play(Unit)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play(UniRx.Unit)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Play
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 183
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Play(Unit _)
+    parameters:
+    - id: _
+      type: UniRx.Unit
+    content.vb: Private Sub Play(_ As Unit)
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby(System.Boolean)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby(System.Boolean)
+  id: Standby(System.Boolean)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Standby(bool)
+  nameWithType: EasyCPUManager.Standby(bool)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Standby
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 189
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void Standby(bool _)
+    parameters:
+    - id: _
+      type: System.Boolean
+    content.vb: Private Sub Standby(_ As Boolean)
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby*
+  nameWithType.vb: EasyCPUManager.Standby(Boolean)
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby(Boolean)
+  name.vb: Standby(Boolean)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed(System.Single)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed(System.Single)
+  id: SetAnimatorSpeed(System.Single)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: SetAnimatorSpeed(float)
+  nameWithType: EasyCPUManager.SetAnimatorSpeed(float)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed(float)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SetAnimatorSpeed
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 195
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private void SetAnimatorSpeed(float speed)
+    parameters:
+    - id: speed
+      type: System.Single
+    content.vb: Private Sub SetAnimatorSpeed(speed As Single)
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed*
+  nameWithType.vb: EasyCPUManager.SetAnimatorSpeed(Single)
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed(Single)
+  name.vb: SetAnimatorSpeed(Single)
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  id: GoalAction(SamuraiSoccer.Event.GoalEventType)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: GoalAction(GoalEventType)
+  nameWithType: EasyCPUManager.GoalAction(GoalEventType)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction(SamuraiSoccer.Event.GoalEventType)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: GoalAction
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 208
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private UniTask GoalAction(GoalEventType t)
+    parameters:
+    - id: t
+      type: SamuraiSoccer.Event.GoalEventType
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function GoalAction(t As GoalEventType) As UniTask
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember
+  id: LoadMember
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMember()
+  nameWithType: EasyCPUManager.LoadMember()
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: LoadMember
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 220
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  syntax:
+    content: private UniTask LoadMember()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Private Function LoadMember() As UniTask
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill(UnityEngine.GameObject)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill(UnityEngine.GameObject)
+  id: Kill(UnityEngine.GameObject)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Kill(GameObject)
+  nameWithType: EasyCPUManager.Kill(GameObject)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Kill
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 258
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: 選手を殺す。一応瞬時復活もさせる。
+  example: []
+  syntax:
+    content: public UniTask Kill(GameObject dead)
+    parameters:
+    - id: dead
+      type: UnityEngine.GameObject
+      description: 死ぬ対象の選手
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function Kill(dead As GameObject) As UniTask
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin
+  id: SlowToWin
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: SlowToWin()
+  nameWithType: EasyCPUManager.SlowToWin()
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: SlowToWin
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 306
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: 勝った時にシーン遷移までゆっくりにして遷移させる
+  example: []
+  syntax:
+    content: private UniTask SlowToWin()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+      description: ''
+    content.vb: Private Function SlowToWin() As UniTask
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn(SamuraiSoccer.SoccerGame.PersonalStatus,UnityEngine.Vector3)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn(SamuraiSoccer.SoccerGame.PersonalStatus,UnityEngine.Vector3)
+  id: Sporn(SamuraiSoccer.SoccerGame.PersonalStatus,UnityEngine.Vector3)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Sporn(PersonalStatus, Vector3)
+  nameWithType: EasyCPUManager.Sporn(PersonalStatus, Vector3)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn(SamuraiSoccer.SoccerGame.PersonalStatus, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Sporn
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 321
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: 選手復活
+  example: []
+  syntax:
+    content: public GameObject Sporn(PersonalStatus status, Vector3 pos)
+    parameters:
+    - id: status
+      type: SamuraiSoccer.SoccerGame.PersonalStatus
+      description: ステータス
+    - id: pos
+      type: UnityEngine.Vector3
+      description: 復活場所
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public Function Sporn(status As PersonalStatus, pos As Vector3) As GameObject
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn*
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init(System.Boolean)
+  commentId: M:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init(System.Boolean)
+  id: Init(System.Boolean)
+  parent: SamuraiSoccer.SoccerGame.AI.EasyCPUManager
+  langs:
+  - csharp
+  - vb
+  name: Init(bool)
+  nameWithType: EasyCPUManager.Init(bool)
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init(bool)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+      branch: docFX
+      repo: https://github.com/watson70percent/SAMURAI-SOCCER.git
+    id: Init
+    path: ../Assets/Scripts/SoccerGame/AI/EasyCPUManager.cs
+    startLine: 365
+  assemblies:
+  - SamuraiSoccer.SoccerGame.AI
+  namespace: SamuraiSoccer.SoccerGame.AI
+  summary: 初期化。選手の生成をしてる。
+  example: []
+  syntax:
+    content: public void Init(bool centerIsTeammate = false)
+    parameters:
+    - id: centerIsTeammate
+      type: System.Boolean
+    content.vb: Public Sub Init(centerIsTeammate As Boolean = False)
+  overload: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init*
+  nameWithType.vb: EasyCPUManager.Init(Boolean)
+  fullName.vb: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init(Boolean)
+  name.vb: Init(Boolean)
+references:
+- uid: SamuraiSoccer.SoccerGame.AI
+  commentId: N:SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame.AI
+  nameWithType: SamuraiSoccer.SoccerGame.AI
+  fullName: SamuraiSoccer.SoccerGame.AI
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame.AI
+    name: AI
+    href: SamuraiSoccer.SoccerGame.AI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Collections.Generic.List{UnityEngine.GameObject}
+  commentId: T:System.Collections.Generic.List{UnityEngine.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: System.Collections.Generic.List<UnityEngine.GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.GameObject)
+  name.vb: List(Of GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SamuraiSoccer.SoccerGame.AI.Team
+  commentId: T:SamuraiSoccer.SoccerGame.AI.Team
+  parent: SamuraiSoccer.SoccerGame.AI
+  href: SamuraiSoccer.SoccerGame.AI.Team.html
+  name: Team
+  nameWithType: Team
+  fullName: SamuraiSoccer.SoccerGame.AI.Team
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: SamuraiSoccer.SoccerGame.BallAction
+  commentId: T:SamuraiSoccer.SoccerGame.BallAction
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.BallAction.html
+  name: BallAction
+  nameWithType: BallAction
+  fullName: SamuraiSoccer.SoccerGame.BallAction
+- uid: SamuraiSoccer.SoccerGame
+  commentId: N:SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.SoccerGame
+  nameWithType: SamuraiSoccer.SoccerGame
+  fullName: SamuraiSoccer.SoccerGame
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.SoccerGame
+    name: SoccerGame
+    href: SamuraiSoccer.SoccerGame.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.Dictionary{UnityEngine.GameObject,UnityEngine.Rigidbody}
+  commentId: T:System.Collections.Generic.Dictionary{UnityEngine.GameObject,UnityEngine.Rigidbody}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<GameObject, Rigidbody>
+  nameWithType: Dictionary<GameObject, Rigidbody>
+  fullName: System.Collections.Generic.Dictionary<UnityEngine.GameObject, UnityEngine.Rigidbody>
+  nameWithType.vb: Dictionary(Of GameObject, Rigidbody)
+  fullName.vb: System.Collections.Generic.Dictionary(Of UnityEngine.GameObject, UnityEngine.Rigidbody)
+  name.vb: Dictionary(Of GameObject, Rigidbody)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Rigidbody
+    name: Rigidbody
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Rigidbody
+    name: Rigidbody
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: SamuraiSoccer.SoccerGame.FieldManager
+  commentId: T:SamuraiSoccer.SoccerGame.FieldManager
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.FieldManager.html
+  name: FieldManager
+  nameWithType: FieldManager
+  fullName: SamuraiSoccer.SoccerGame.FieldManager
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_TeamMemberCount
+  name: TeamMemberCount
+  nameWithType: EasyCPUManager.TeamMemberCount
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.TeamMemberCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_OpponentMemberCount
+  name: OpponentMemberCount
+  nameWithType: EasyCPUManager.OpponentMemberCount
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.OpponentMemberCount
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Boost_System_Boolean_System_Single_System_Int32_
+  name: Boost
+  nameWithType: EasyCPUManager.Boost
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Boost
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_FinBoost_System_Boolean_System_Single_System_Int32_
+  name: FinBoost
+  nameWithType: EasyCPUManager.FinBoost
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.FinBoost
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Awake
+  name: Awake
+  nameWithType: EasyCPUManager.Awake
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Awake
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Start
+  name: Start
+  nameWithType: EasyCPUManager.Start
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Start
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Update
+  name: Update
+  nameWithType: EasyCPUManager.Update
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Update
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Pause_System_Boolean_
+  name: Pause
+  nameWithType: EasyCPUManager.Pause
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Pause
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Play_UniRx_Unit_
+  name: Play
+  nameWithType: EasyCPUManager.Play
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Play
+- uid: UniRx.Unit
+  commentId: T:UniRx.Unit
+  parent: UniRx
+  isExternal: true
+  name: Unit
+  nameWithType: Unit
+  fullName: UniRx.Unit
+- uid: UniRx
+  commentId: N:UniRx
+  isExternal: true
+  name: UniRx
+  nameWithType: UniRx
+  fullName: UniRx
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Standby_System_Boolean_
+  name: Standby
+  nameWithType: EasyCPUManager.Standby
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Standby
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_SetAnimatorSpeed_System_Single_
+  name: SetAnimatorSpeed
+  nameWithType: EasyCPUManager.SetAnimatorSpeed
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SetAnimatorSpeed
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_GoalAction_SamuraiSoccer_Event_GoalEventType_
+  name: GoalAction
+  nameWithType: EasyCPUManager.GoalAction
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.GoalAction
+- uid: SamuraiSoccer.Event.GoalEventType
+  commentId: T:SamuraiSoccer.Event.GoalEventType
+  parent: SamuraiSoccer.Event
+  href: SamuraiSoccer.Event.GoalEventType.html
+  name: GoalEventType
+  nameWithType: GoalEventType
+  fullName: SamuraiSoccer.Event.GoalEventType
+- uid: SamuraiSoccer.Event
+  commentId: N:SamuraiSoccer.Event
+  href: SamuraiSoccer.html
+  name: SamuraiSoccer.Event
+  nameWithType: SamuraiSoccer.Event
+  fullName: SamuraiSoccer.Event
+  spec.csharp:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+  spec.vb:
+  - uid: SamuraiSoccer
+    name: SamuraiSoccer
+    href: SamuraiSoccer.html
+  - name: .
+  - uid: SamuraiSoccer.Event
+    name: Event
+    href: SamuraiSoccer.Event.html
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_LoadMember
+  name: LoadMember
+  nameWithType: EasyCPUManager.LoadMember
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.LoadMember
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Kill_UnityEngine_GameObject_
+  name: Kill
+  nameWithType: EasyCPUManager.Kill
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Kill
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_SlowToWin
+  name: SlowToWin
+  nameWithType: EasyCPUManager.SlowToWin
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.SlowToWin
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Sporn_SamuraiSoccer_SoccerGame_PersonalStatus_UnityEngine_Vector3_
+  name: Sporn
+  nameWithType: EasyCPUManager.Sporn
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Sporn
+- uid: SamuraiSoccer.SoccerGame.PersonalStatus
+  commentId: T:SamuraiSoccer.SoccerGame.PersonalStatus
+  parent: SamuraiSoccer.SoccerGame
+  href: SamuraiSoccer.SoccerGame.PersonalStatus.html
+  name: PersonalStatus
+  nameWithType: PersonalStatus
+  fullName: SamuraiSoccer.SoccerGame.PersonalStatus
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init*
+  commentId: Overload:SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init
+  href: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.html#SamuraiSoccer_SoccerGame_AI_EasyCPUManager_Init_System_Boolean_
+  name: Init
+  nameWithType: EasyCPUManager.Init
+  fullName: SamuraiSoccer.SoccerGame.AI.EasyCPUManager.Init
