@@ -2,9 +2,8 @@
 using UnityEngine.SceneManagement;
 using SamuraiSoccer.Event;
 using UniRx;
-using SamuraiSoccer.StageContents.Result;
-using SamuraiSoccer.StageContents;
-using SamuraiSoccer;
+using UnityEditor;
+using Cysharp.Threading.Tasks;
 
 namespace SamuraiSoccer.StageContents.China
 {
@@ -22,6 +21,9 @@ namespace SamuraiSoccer.StageContents.China
         [SerializeField]
         private GameObject m_blood;
         private GameObject m_player;
+
+        [SerializeField]
+        private string m_resultSceneName;
 
         enum State
         {
@@ -81,33 +83,36 @@ namespace SamuraiSoccer.StageContents.China
 
         private void OnTriggerEnter(Collider other)
         {
+            //すでにゲームが終了しているときは何もせずにreturn
+            var client = new InMemoryDataTransitClient<GameResult>();
+            if (client.TryGet(StorageKey.KEY_WINORLOSE, out var outvalue))
+            {
+                client.Set(StorageKey.KEY_WINORLOSE, outvalue);
+                return;
+            }
             //プレイヤーとぶつかったらゲームオーバー
             if (other.tag == "Player" && !m_hit && m_state.Value == State.Active)
             {
                 m_hit = true;
-                Invoke("GameOver", 0.2f);
+                GameOver().Forget();
             }
         }
 
 
-        public void GameOver()
+        private async UniTask GameOver()
         {
-            SceneManager.sceneLoaded += GameSceneLoaded;
             InGameEvent.FinishOnNext();
             SoundBoxUtil.SetSoundBox(transform.position, m_hitSound);
-
+            Time.timeScale = 0.3f;
             InMemoryDataTransitClient<GameResult> inMemoryDataTransitClient = new InMemoryDataTransitClient<GameResult>();
             inMemoryDataTransitClient.Set(StorageKey.KEY_WINORLOSE, GameResult.Lose);
-            Instantiate(m_blood, m_player.transform.position + Vector3.up * 0.1f, Quaternion.identity);
+            Instantiate(m_blood, m_player.transform.position + Vector3.up * 0.2f, Quaternion.identity);
             Instantiate(m_gameOverPanel);
-
+            await UniTask.Delay(1000);
+            Time.timeScale = 1.0f;
+            SceneManager.LoadScene(m_resultSceneName);
         }
 
-        void GameSceneLoaded(Scene next, LoadSceneMode mode)
-        {
-
-            SceneManager.sceneLoaded -= GameSceneLoaded;
-        }
 
     }
 }

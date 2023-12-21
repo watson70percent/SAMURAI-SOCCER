@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
@@ -43,7 +41,7 @@ namespace SamuraiSoccer.StageContents.USA
                 Destroy(gameObject);
             }).AddTo(this);
             //アップデートで0.1秒ごとに呼び出す処理
-            InGameEvent.UpdateDuringPlay.ThrottleFirst(System.TimeSpan.FromSeconds(0.1)).Subscribe(_ =>
+            InGameEvent.UpdateDuringPlay.ThrottleFirst(TimeSpan.FromSeconds(0.1)).Subscribe(_ =>
             {
                 MoveStatue();
             }).AddTo(this);
@@ -60,7 +58,7 @@ namespace SamuraiSoccer.StageContents.USA
             {
                 CurrentStatueMode = StatueMode.Rise;
                 m_bodyObj.transform.position += new Vector3(0f, 1.0f, 0f);
-                m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f * (1f + Mathf.Sin(1000 * m_time * m_time)));
+                m_spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f * (1f + Mathf.Sin(100 * m_time * m_time)));
                 return;
             }
             //影を一定値で固定、自由の女神が倒れる

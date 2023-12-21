@@ -58,7 +58,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   goalSound: {fileID: 8300000, guid: 3fdbf0aefa5190242904f2ccc688f7d8, type: 3}
   startSound: {fileID: 8300000, guid: af0d39a7d4c92de478a0630662715e0a, type: 3}
-  goalImage: {fileID: 0}
+  resultScene: {fileID: 102900000, guid: d0be5105f530c9e4193544792d669744, type: 3}
 --- !u!114 &4220772580559016563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,9 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f74646e8fbebdc4b88aaf643ed5ecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitTime: 300
-  displayText: {fileID: 0}
-  timeText: {fileID: 0}
+  m_resultSceneName: Result
+  m_longWhistleNum: 0
+  m_limitTimeSec: 300
+  m_timeText: {fileID: 0}
 --- !u!114 &4220772580559016461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,11 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf72f4328c96654bb2434c12d5d326f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_resultSceneName: Result
-  m_goalDelayMiliSec: 5000
-  m_finishDelayMiliSec: 1000
-  m_goalFadeAnimator: {fileID: 0}
   m_trumpetShellSENumber: 2
   m_whistleSENumber: 10
-  m_shortWhistleSENumber: 12
   m_gameBGM: 1

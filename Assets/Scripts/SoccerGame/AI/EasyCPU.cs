@@ -71,7 +71,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             m_isPause = false;
         }
 
-        private void Standby(Unit _)
+        private void Standby(bool _)
         {
             m_isPause = true;
         }
@@ -97,6 +97,11 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (m_isPause)
             {
                 return;
+            }
+
+            if (transform.position.y < -5f)
+            {
+                _ = manager.Kill(gameObject);
             }
 
             if ((ball.position - transform.position).sqrMagnitude < 4)

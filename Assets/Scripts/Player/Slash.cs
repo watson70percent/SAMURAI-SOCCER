@@ -4,6 +4,8 @@ using UnityEngine;
 using SamuraiSoccer.SoccerGame.AI;
 using UniRx.Triggers;
 using UniRx;
+using SamuraiSoccer.SoccerGame;
+using System.Linq;
 
 namespace SamuraiSoccer.Player
 {
@@ -45,30 +47,9 @@ namespace SamuraiSoccer.Player
 
         private void OnHit(GameObject obj)
         {
-            if (obj.GetComponent<EasyCPU>()?.status.ally == false) //敵にあたったとき
-            {
-                var dir = obj.transform.position - transform.position;
-                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-                GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
-                obj.GetComponent<EasyCPU>().Attacked();
-            }
-            else if (obj.gameObject.tag == "TutorialEnemy") // チュートリアル用
-            {
-                var dir = obj.transform.position - transform.position;
-                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-                GameObject.FindGameObjectWithTag("Referee").GetComponent<AudioSource>().PlayOneShot(slash);
-            }
-            else if(obj.gameObject.tag == "Ball" && m_isAttackBall) // ボールに当たったとき
-            {
-                var dir = obj.transform.position - transform.position;
-                dir = dir.normalized;
-                dir = new Vector3(dir.x,0.3f,dir.z);
-                obj.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000);
-                m_isAttackBall = false;
-
-                
-            }
+            // 当たった対象のinterfaceごとに処理が切り替わる。
+            var dir = ((obj.transform.position - transform.position).normalized+3f*transform.forward).normalized;
+            obj.GetComponents<ISlashed>().ToList().ForEach(x => x.Slashed(dir));
         }
     }
-
 }

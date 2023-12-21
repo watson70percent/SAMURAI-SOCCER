@@ -40,7 +40,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             { Stage.UK, new Vector2(90, 572)},
             { Stage.China, new Vector2(600, 705) },
             { Stage.USA, new Vector2(1310, 685)},
-            { Stage.Rossia, new Vector2(550, 450) },
+            { Stage.Russian, new Vector2(550, 450) },
             { Stage.World, new Vector2(925, 650) }
         };
 
@@ -50,7 +50,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             { Stage.UK, 80},
             { Stage.China, 160 },
             { Stage.USA, 180 },
-            { Stage.Rossia, 300 },
+            { Stage.Russian, 300 },
             { Stage.World, 850 }
         };
 
@@ -75,22 +75,6 @@ namespace SamuraiSoccer.StageContents.StageSelect
         {
             // さいしょのデータを取得する．デフォルトでワールドの位置にしてる．
             SetPosition(m_worldPoint[Stage.World], m_worldSize[Stage.World]);
-            // テスト
-            await UniTask.Delay(3000);
-            SetPosition(m_worldPoint[Stage.Japan], m_worldSize[Stage.Japan]);
-            await UniTask.Delay(3000);
-            m_selectState = Stage.Japan;
-            _ = ToFloating();
-            await UniTask.Delay(3000);
-            _ = GoTo(Stage.UK);
-            await UniTask.Delay(500);
-            _ = GoTo(Stage.China);
-            await UniTask.Delay(750);
-            _ = GoTo(Stage.USA);
-            await UniTask.Delay(750);
-            _ = GoTo(Stage.Rossia);
-            await UniTask.Delay(750);
-            _ = GoTo(Stage.Japan);
         }
 
         /// <summary>

@@ -7,34 +7,48 @@ namespace SamuraiSoccer.StageContents.Result
 {
     public class StageDataSave : MonoBehaviour
     {
-        [SerializeField]
-        private ConversationManager m_conversationManager;
-
-        private void Start()
+        /// <summary>
+        /// クリア番号が過去のセーブデータ以上だったらセーブデータを更新する
+        /// </summary>
+        /// <param name="clearNumber">クリア番号</param>
+        /// <returns>セーブしたかどうか</returns>
+        public bool Save(int clearNumber)
         {
-            Save(this.GetCancellationTokenOnDestroy()).Forget();
-        }
-
-        async UniTask Save(CancellationToken cancellation_token)
-        {
-            GameResult result;
-            while ((result = GetComponent<ResultManager>().ResultState) == GameResult.Undefined)
+            InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
+            int savedNumber;
+            if (fileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out var save))
             {
-                await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
+                savedNumber = save.m_stageData;
             }
-
-            if (result == GameResult.Win)
+            else
             {
-                InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
-                int stageNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
+                savedNumber = 0;
+                SaveData data = new SaveData();
+                data.m_stageData = clearNumber;
+                fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
+            }
+            if (clearNumber >= savedNumber)
+            {
                 // ステージ情報を保存
                 SaveData saveData = new SaveData();
-                saveData.m_stageData = stageNumber;
+                saveData.m_stageData = clearNumber + 1;
                 new InFileTransmitClient<SaveData>().Set(StorageKey.KEY_STAGENUMBER, saveData);
-                // ステージ番号に対応したお話を開始
-                // お話の番号=クリアしたステージ番号を3で割った商×4+ステージ番号を3で割った余り+1
-                await m_conversationManager.PlayConversation((stageNumber / 3) * 4 + stageNumber % 3 + 1);
+                return true;
             }
+            return false;
+        }
+
+        /// <summary>
+        /// セーブデータを初期化する(ResetだとMonoBehaviourと名前が被るから命名変更)
+        /// </summary>
+        /// <returns></returns>
+        public void ResetData()
+        {
+            InFileTransmitClient<SaveData> fileTransitClient = new InFileTransmitClient<SaveData>();
+            SaveData data = new SaveData();
+            data.m_stageData = 0;
+            fileTransitClient.Set(StorageKey.KEY_STAGENUMBER, data);
+            PlayerPrefs.SetInt("DoneTutorial", 0);
         }
     }
 }

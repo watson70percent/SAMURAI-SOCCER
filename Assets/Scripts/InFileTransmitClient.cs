@@ -12,7 +12,7 @@ namespace SamuraiSoccer
     /// <typeparam name="T">受け渡しするデータの型．</typeparam>
     public class InFileTransmitClient<T> : IDataTransmitClient<T>
     {
-        private readonly string folderPath = Application.dataPath;
+        private readonly string folderPath = Application.persistentDataPath;
         private readonly string typeName = typeof(T).Name;
 
         private string GetSavePath(string key)

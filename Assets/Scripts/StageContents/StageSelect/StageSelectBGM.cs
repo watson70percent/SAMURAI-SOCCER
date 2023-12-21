@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 using Cysharp.Threading.Tasks;
 using SamuraiSoccer.Event;
+using System.Threading;
 
 namespace SamuraiSoccer.StageContents.StageSelect
 {
@@ -29,9 +31,11 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         void Start()
         {
-            InFileTransmitClient<int> clearedStageNumFileTransitClient = new InFileTransmitClient<int>();
+            InFileTransmitClient<SaveData> clearedStageNumFileTransitClient = new InFileTransmitClient<SaveData>();
+            SaveData data;
             int cleared = 0;
-            clearedStageNumFileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out cleared);
+            clearedStageNumFileTransitClient.TryGet(StorageKey.KEY_STAGENUMBER, out data);
+            cleared = data.m_stageData;
             var all = new AudioSource[] { start, jp, gb, cn, us, ru };
             foreach (var bgm in all)
             {
@@ -62,40 +66,36 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         public void ChangeBGM(Stage next, float delayTime)
         {
+            var token = this.GetCancellationTokenOnDestroy();
             if (isNotCleared)
             {
                 return;
             }
 
-            if (next == Stage.World)
+            switch (current)
             {
-                switch (current)
-                {
-                    case Stage.UK: _ = FadeOut(gb, delayTime); break;
-                    case Stage.China: _ = FadeOut(cn, delayTime); break;
-                    case Stage.USA: _ = FadeOut(us, delayTime); break;
-                    case Stage.Rossia: _ = FadeOut(ru, delayTime); break;
-                }
-            }
-            else
-            {
-                switch (next)
-                {
-                    case Stage.UK: _ = FadeIn(gb, delayTime); break;
-                    case Stage.China: _ = FadeIn(cn, delayTime); break;
-                    case Stage.USA: _ = FadeIn(us, delayTime); break;
-                    case Stage.Rossia: _ = FadeIn(ru, delayTime); break;
-                }
+                case Stage.UK: _ = FadeOut(gb, delayTime, token); break;
+                case Stage.China: _ = FadeOut(cn, delayTime, token); break;
+                case Stage.USA: _ = FadeOut(us, delayTime, token); break;
+                case Stage.Russian: _ = FadeOut(ru, delayTime, token); break;
             }
 
+            switch (next)
+            {
+                case Stage.UK: _ = FadeIn(gb, delayTime, token); break;
+                case Stage.China: _ = FadeIn(cn, delayTime, token); break;
+                case Stage.USA: _ = FadeIn(us, delayTime, token); break;
+                case Stage.Russian: _ = FadeIn(ru, delayTime, token); break;
+            }
             current = next;
         }
 
-        private async UniTask FadeOut(AudioSource source, float delayTime)
+        private async UniTask FadeOut(AudioSource source, float delayTime, CancellationToken token)
         {
             var totalTime = 0.0f;
             while (totalTime < delayTime)
             {
+                token.ThrowIfCancellationRequested();
                 source.volume = (delayTime - totalTime) / delayTime;
                 totalTime += Time.deltaTime;
                 await UniTask.Yield();
@@ -103,11 +103,12 @@ namespace SamuraiSoccer.StageContents.StageSelect
             source.volume = 0;
         }
 
-        private async UniTask FadeIn(AudioSource source, float delayTime)
+        private async UniTask FadeIn(AudioSource source, float delayTime, CancellationToken token)
         {
             var totalTime = 0.0f;
             while (totalTime < delayTime)
             {
+                token.ThrowIfCancellationRequested();
                 source.volume = totalTime / delayTime;
                 totalTime += Time.deltaTime;
                 await UniTask.Yield();

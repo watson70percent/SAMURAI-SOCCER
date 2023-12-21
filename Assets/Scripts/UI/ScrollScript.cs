@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
+using SamuraiSoccer.Event;
+using System.Threading;
 
 namespace SamuraiSoccer.UI
 {
@@ -14,35 +16,40 @@ namespace SamuraiSoccer.UI
         [SerializeField] RectTransform rectra;//動かす巻物のRectTransform
         [SerializeField] float slideTime;//移動にかける時間
         [SerializeField] GameObject ScrollObject;//巻物の3Dオブジェクト
-        [SerializeField] float rotSpeed;//回転速度
-        [SerializeField] float startX, goalX;//巻物の初期位置と最終位置のX座標
+        [SerializeField] float rotSpeed;//回転速度係数
+        [SerializeField] Material[] FlagMaterials;//旗のマテリアル
+        MeshRenderer ScrollMaterial;//巻物(3D)のMeshRenderer
 
+        private Vector3 initRot;
+
+        public void Start()
+        {
+            initRot = ScrollObject.transform.eulerAngles;
+            ScrollMaterial = ScrollObject.GetComponent<MeshRenderer>();
+        }
 
         /// <summary>
-        /// 巻物を初期位置から線対称の位置に移動させる
+        /// 巻物の回転処理を行う
         /// </summary>
+        /// <param name="startX">巻物の初期位置のX座標</param>
+        /// <param name="goalX">巻物の最終位置のX座標</param>
+        /// <param name="Y">巻物のY座標</param>
+        /// <param name="rollTime">移動、回転にかける時間</param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async UniTask ScrollSlide()
+        public async UniTask ScrollSlide(float startX, float goalX, float Y, float rollTime, CancellationToken cancellationToken = default)
         {
             float elapsedTime = 0;
-            float y = rectra.anchoredPosition.y;
-            float rotSign;//回転の向き
-            if (startX > goalX)
+            rectra.localPosition = new Vector3(startX, Y, rectra.localPosition.z);
+            while (elapsedTime < rollTime)
             {
-                rotSign = 1;
-            }
-            else
-            {
-                rotSign = -1;
-            };
-            while (elapsedTime < slideTime)
-            {
+                // キャンセルされていたらOperationCanceledExceptionをスロー
+                cancellationToken.ThrowIfCancellationRequested();
                 elapsedTime += Time.deltaTime;
-                float x = easeOutCubic(elapsedTime, goalX, startX, slideTime);
-                rectra.anchoredPosition = new Vector2(x, y);
-                ScrollObject.transform.eulerAngles = new Vector3(0, rotSign * x * rotSpeed, 0);
+                float x = easeOutCubic(elapsedTime, goalX, startX, rollTime);
+                rectra.anchoredPosition = new Vector2(x, Y);
+                ScrollObject.transform.eulerAngles = new Vector3(0, -(x - startX) * rotSpeed, 0);
                 await UniTask.Delay(1);
-                Debug.Log(elapsedTime);
             }
         }
 
@@ -57,6 +64,25 @@ namespace SamuraiSoccer.UI
         float easeOutCubic(float t, float goal, float start, float goalTime)
         {
             return (goal - start) * (1 - Mathf.Pow(goalTime - t, 3)) + start;
+        }
+
+        /// <summary>
+        /// 巻物を元初期位置に戻す
+        /// </summary>
+        /// <param name="startX">巻物の初期位置</param>
+        public void ResetObject(float startX)
+        {
+            rectra.localPosition = new Vector3(startX, rectra.localPosition.y, rectra.localPosition.z);
+            ScrollObject.transform.eulerAngles = initRot;
+        }
+
+        /// <summary>
+        /// 巻物のMaterialを変更する
+        /// </summary>
+        /// <param name="nowStage">巻物に反映させる国</param>
+        public void ChangeMaterial(Stage nowStage)
+        {
+            ScrollMaterial.material = FlagMaterials[(int)nowStage];
         }
     }
 }

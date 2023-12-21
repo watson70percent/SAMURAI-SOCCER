@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
 using UniRx;
-
 using SamuraiSoccer.Event;
 using Cysharp.Threading.Tasks;
 
@@ -20,6 +15,7 @@ namespace SamuraiSoccer.SoccerGame
         [NonSerialized]
         public Rigidbody rb;
         public FieldManager info;
+        public ScoreManager scoreManager;
         private static readonly float sqrt3 = Mathf.Sqrt(3);
         private static readonly float sqrt2 = Mathf.Sqrt(2);
         private static readonly float gravity = 9.8f;
@@ -27,12 +23,16 @@ namespace SamuraiSoccer.SoccerGame
         private Vector3 velocity;
         private Vector3 angularVelocity;
 
+        private int calledNum = 0; // ゴールイベントが複数呼び出されたか監視する番号
+
         private static Subject<BallActionCommand> commandStream = new();
 
         [NonSerialized]
         public bool last_touch;
         [NonSerialized]
         public GameObject owner;
+
+        private bool isPause; // ポーズ中かどうか
 
         /// <summary>
         /// ボールに対するアクションを行う．
@@ -52,7 +52,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
-            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1)).Subscribe(Command);
+            commandStream.ThrottleFirst(TimeSpan.FromSeconds(0.1), Scheduler.MainThreadFixedUpdate).Subscribe(Command).AddTo(this);
         }
 
         private void Update()
@@ -89,17 +89,23 @@ namespace SamuraiSoccer.SoccerGame
                 rb.velocity = Vector3.zero;
                 angularVelocity = rb.angularVelocity;
                 rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
             }
             else
             {
                 Play(new Unit());
             }
+            this.isPause = isPause;
         }
 
         private void Play(Unit _)
         {
+            rb.isKinematic = false;
             rb.velocity = velocity;
             rb.angularVelocity = angularVelocity;
+            // ゴールイベントが呼び出された数を初期化
+            calledNum = 0;
+            isPause = false;
         }
 
         /// <summary>
@@ -251,16 +257,14 @@ namespace SamuraiSoccer.SoccerGame
                 Vector3 dest;
                 if (command.m_status.ally)
                 {
-
                     dest = (info.AdaptPosition(Constants.OppornentGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - command.m_sender.position).normalized;
                 }
                 else
                 {
                     dest = (info.AdaptPosition(Constants.OurGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - command.m_sender.position).normalized;
-
                 }
 
-                rb.AddForce(command.m_status.power * dest, ForceMode.Impulse);
+                rb.AddForce(Mathf.Min(10.0f, command.m_status.power) * dest, ForceMode.Impulse);
             }
         }
 
@@ -272,7 +276,9 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
-                InGameEvent.GoalOnNext();
+                if (System.Threading.Interlocked.Increment(ref calledNum) != 1) return;
+                var isTeammateGoal = transform.position.z > (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2;
+                scoreManager.Goal(isTeammateGoal);
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
@@ -293,7 +299,10 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (other.gameObject.CompareTag("Goal"))
             {
-                InGameEvent.GoalOnNext();
+                if (System.Threading.Interlocked.Increment(ref calledNum) != 1) return;
+                if (isPause) return;
+                var isTeammateGoal = transform.position.z > (Constants.OppornentGoalPoint.z + Constants.OurGoalPoint.z) / 2;
+                scoreManager.Goal(isTeammateGoal);
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {

@@ -21,7 +21,6 @@ namespace SamuraiSoccer.SoccerGame
         public void SetAreaSize(float newValue) { m_areaSize = newValue; }
 
         public ParticleSystem surprisedMark;
-        public Button attackButton;
         private MeshFilter m_meshFilter;
         [Space(10)]
         public bool useObstacles = false;
@@ -41,8 +40,9 @@ namespace SamuraiSoccer.SoccerGame
         // Start is called before the first frame update
         void Start()
         {
+            InGameEvent.Reset.Subscribe(_ => m_penaltyCount = 0).AddTo(this);
 
-            PlayerEvent.Attack.Subscribe(x=> {
+            PlayerEvent.FaulCheck.Subscribe(x=> {
                 var token = this.GetCancellationTokenOnDestroy();
                 FoulCheck(token).Forget();
             }).AddTo(this);
@@ -172,8 +172,6 @@ namespace SamuraiSoccer.SoccerGame
                 InGameEvent.PenaltyOnNext(m_penaltyCount);
                 m_penaltyCount = 1; //ペナルティ回数は0or1のため強制的に1に変更
                 surprisedMark.Play();
-                attackButton.enabled = false;
-                Invoke("PenaltyRemoval", 1);
 
                 return true;
             }
@@ -182,10 +180,6 @@ namespace SamuraiSoccer.SoccerGame
 
             return false;
 
-        }
-        void PenaltyRemoval()
-        {
-            attackButton.enabled = true;
         }
     }
 
