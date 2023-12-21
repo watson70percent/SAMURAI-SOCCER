@@ -151,7 +151,7 @@ namespace Tutorial
             await UniTask.Delay(2000);
             tutorialText.text = "";
             //敵が一定距離吹っ飛ぶまで待機
-            while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || enemyPrefab.transform.position.y > -5)
+            while ((enemyPrefab.transform.position - destination).sqrMagnitude < 400 || Mathf.Abs(enemyPrefab.transform.position.y) < 5)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellation_token);
             }
