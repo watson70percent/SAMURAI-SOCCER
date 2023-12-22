@@ -101,8 +101,11 @@ namespace SamuraiSoccer
         [ReadOnly]
         public NativeList<int> center;
 
+        [ReadOnly]
+        public NativeArray<Vector3> pos;
+
         [WriteOnly]
-        public NativeParallelMultiHashMap<int, int> vertexIndex;
+        public NativeParallelMultiHashMap<Vector3, int> vertexIndex;
 
         public void Dispose()
         {
@@ -114,9 +117,9 @@ namespace SamuraiSoccer
             var triCount = center.Length / 3;
             for (int i = 0; i < triCount; i++)
             {
-                vertexIndex.Add(center[3 * i], i);
-                vertexIndex.Add(center[3 * i + 1], i);
-                vertexIndex.Add(center[3 * i + 2], i);
+                vertexIndex.Add(pos[center[3 * i]], i);
+                vertexIndex.Add(pos[center[3 * i + 1]], i);
+                vertexIndex.Add(pos[center[3 * i + 2]], i);
             }
         }
     }
@@ -137,7 +140,7 @@ namespace SamuraiSoccer
         public NativeList<int> center;
 
         [ReadOnly]
-        public NativeParallelMultiHashMap<int, int> vertexIndex;
+        public NativeParallelMultiHashMap<Vector3, int> vertexIndex;
 
         public NativeList<DividePoint> divideP;
 
@@ -171,9 +174,9 @@ namespace SamuraiSoccer
                     case 1: firstIdx = center[i1]; secondIdx = center[i3]; break;
                     case 2: firstIdx = center[i1]; secondIdx = center[i2]; break;
                 }
-                var singleCount = vertexIndex.CountValuesForKey(singleIdx) - 1;
+                var singleCount = vertexIndex.CountValuesForKey(vertexPos[singleIdx]) - 1;
                 Span<int> singleArray = stackalloc int[singleCount];
-                var singlev = vertexIndex.GetValuesForKey(singleIdx);
+                var singlev = vertexIndex.GetValuesForKey(vertexPos[singleIdx]);
                 singlev.MoveNext();
                 for (int j = 0; j < singleCount; j++)
                 {
@@ -185,10 +188,10 @@ namespace SamuraiSoccer
                     singlev.MoveNext();
                 }
 
-                var firstv = vertexIndex.GetValuesForKey(firstIdx);
+                var firstv = vertexIndex.GetValuesForKey(vertexPos[firstIdx]);
                 var sideMeshIndex0 = FindMatchData(singleArray, firstv);
 
-                var secondv = vertexIndex.GetValuesForKey(secondIdx);
+                var secondv = vertexIndex.GetValuesForKey(vertexPos[secondIdx]);
                 var sideMeshIndex1 = FindMatchData(singleArray, secondv);
 
                 int divideIndex0, divideIndex1;
@@ -273,7 +276,7 @@ namespace SamuraiSoccer
             }
         }
 
-        private int FindMatchData(in Span<int> src, in NativeParallelMultiHashMap<int, int>.Enumerator dst)
+        private int FindMatchData(in Span<int> src, in NativeParallelMultiHashMap<Vector3, int>.Enumerator dst)
         {
             foreach (var s in src)
             {

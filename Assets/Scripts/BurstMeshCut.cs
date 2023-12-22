@@ -112,7 +112,8 @@ namespace SamuraiSoccer
                 {
                     var indexJob = new IndexJob();
                     indexJob.center = job.meshJudge.center;
-                    indexJob.vertexIndex = new NativeParallelMultiHashMap<int, int>(0, Allocator.TempJob);
+                    indexJob.pos = vertex;
+                    indexJob.vertexIndex = new NativeParallelMultiHashMap<Vector3, int>(0, Allocator.TempJob);
                     var indexHandler = indexJob.Schedule(job.meshHandler);
                     disposable.Add(indexJob);
                     return (indexJob, indexHandler);
