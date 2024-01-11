@@ -30,7 +30,7 @@ namespace SamuraiSoccer.Player
             InGameEvent.Goal.Subscribe(x => { m_isPlaying = false; }).AddTo(this);
             InGameEvent.Finish.Subscribe(x => { m_isPlaying = false; }).AddTo(this);
 
-            PlayerEvent.IsEnableChargeAttack.Subscribe(isEnableAttack => { if(m_isPlaying) aura.SetActive(isEnableAttack); }).AddTo(this);
+            PlayerEvent.IsEnableChargeAttack.Subscribe(isEnableAttack => { aura.SetActive(isEnableAttack && m_isPlaying); }).AddTo(this);
         }
     }
 }
