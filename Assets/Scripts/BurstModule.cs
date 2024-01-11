@@ -6,6 +6,8 @@ using Unity.Mathematics;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using Unity.Burst.CompilerServices;
+using System.Collections.Generic;
+using static UnityEditor.PlayerSettings;
 
 namespace SamuraiSoccer
 {
@@ -292,6 +294,7 @@ namespace SamuraiSoccer
         }
     }
 
+    [BurstCompile]
     public struct DividePoint : IEquatable<DividePoint>
     {
         public readonly int idx0;
@@ -330,6 +333,7 @@ namespace SamuraiSoccer
         public static bool operator !=(DividePoint lhs, DividePoint rhs) { return !(lhs == rhs); }
     }
 
+    [BurstCompile]
     public struct DivideInfo
     {
         public int singleIndex;
@@ -867,6 +871,276 @@ namespace SamuraiSoccer
                 }
             }
         }
+    }
+
+    [BurstCompile]
+    public struct MakeLoopJob : IJob, IDisposable
+    {
+        public int deleteAxis;
+
+        [ReadOnly]
+        public NativeList<DivideInfo> divideInfo;
+
+        [ReadOnly]
+        public NativeList<DividePoint> divideP;
+
+        public NativeList<int> loopNo;
+
+        [WriteOnly]
+        public NativeList<LoopInfo> loopInfo;
+
+        public void Dispose()
+        {
+            loopNo.Dispose();
+            loopInfo.Dispose();
+        }
+
+        public void Execute()
+        {
+            var _loopNo = new NativeArray<int>(divideInfo.Length, Allocator.Temp);
+            var loopMap = new NativeList<int>(Allocator.Temp);
+            var no = 0;
+
+            for (var i = 0; i < divideInfo.Length; i++)
+            {
+                var haveLoopNo0 = divideInfo[i].sideMeshIndex0 < i;
+                var haveLoopNo1 = divideInfo[i].sideMeshIndex1 < i;
+
+                if (haveLoopNo0 && haveLoopNo1)
+                {
+                    var info = divideInfo[i];
+                    var no0 = _loopNo[info.sideMeshIndex0];
+                    var no1 = _loopNo[info.sideMeshIndex1];
+                    var mapped0 = loopMap[no0];
+                    var mapped1 = loopMap[no1];
+                    var mappedNo = math.min(mapped0, mapped1);
+                    _loopNo[i] = no0;
+                    loopMap[no0] = mappedNo;
+                    loopMap[no1] = mappedNo;
+                }
+                else if (!haveLoopNo0 && !haveLoopNo1)
+                {
+                    _loopNo[i] = no;
+                    loopMap.Add(no);
+                    no++;
+                }
+                else if (haveLoopNo0)
+                {
+                    _loopNo[i] = _loopNo[divideInfo[i].sideMeshIndex0];
+                }
+                else
+                {
+                    _loopNo[i] = _loopNo[divideInfo[i].sideMeshIndex1];
+                }
+            }
+
+            var _mappedSet = new NativeParallelHashSet<int>(loopMap.Length, Allocator.Temp);
+            for (var i = 0; i < loopMap.Length; i++)
+            {
+                _mappedSet.Add(loopMap[i]);
+                loopMap[i] = _mappedSet.Count() - 1;
+            }
+            var loopCount = _mappedSet.Count();
+
+            loopNo.SetCapacity(divideInfo.Length);
+            for (var i = 0; i < divideInfo.Length; i++)
+            {
+                loopNo.Add(loopMap[_loopNo[i]]);
+            }
+
+            for (var i = 0; i < loopCount; i++)
+            {
+                var firstIndex = 0;
+                while (loopNo[firstIndex] != i)
+                {
+                    firstIndex++;
+                }
+
+                var isLoop = false;
+                var beforeIndex = firstIndex;
+                var nextIndex = firstIndex;
+                var xMin = float.MaxValue;
+                var xMax = float.MinValue;
+                var yMin = float.MaxValue;
+                var yMax = float.MinValue;
+
+                while (true)
+                {
+                    var dpIndex = -1;
+                    var thisIndex = nextIndex;
+                    var info = divideInfo[nextIndex];
+                    if (Hint.Unlikely(info.sideMeshIndex0 != int.MaxValue) && info.sideMeshIndex0 != beforeIndex)
+                    {
+                        nextIndex = info.sideMeshIndex0;
+                        dpIndex = info.divideIndex0;
+                    }
+
+                    if (Hint.Unlikely(info.sideMeshIndex1 != int.MaxValue) && info.sideMeshIndex1 != beforeIndex)
+                    {
+                        nextIndex = info.sideMeshIndex1;
+                        dpIndex = info.divideIndex1;
+                    }
+
+                    if (dpIndex < 0)
+                    {
+                        break;
+                    }
+
+                    var x = 0.0f;
+                    var y = 0.0f;
+                    var pos = divideP[dpIndex].pos;
+                    switch (deleteAxis)
+                    {
+                        case 0: x = pos.z; y = pos.y; break;
+                        case 1: x = pos.x; y = pos.z; break;
+                        case 2: x = pos.x; y = pos.y; break;
+                    }
+
+                    xMin = math.min(x, xMin);
+                    xMax = math.max(x, xMax);
+                    yMin = math.min(y, yMin);
+                    yMax = math.max(y, yMax);
+                    
+                    if (Hint.Unlikely(nextIndex == firstIndex))
+                    {
+                        isLoop = true;
+                        break;
+                    }
+                    beforeIndex = thisIndex;
+                }
+
+                var _loopInfo = new LoopInfo(firstIndex, isLoop, xMin, xMax, yMin, yMax);
+                loopInfo.Add(_loopInfo);
+            }
+        }
+    }
+
+    [BurstCompile]
+    public struct LoopInfo
+    {
+        public int firstIndex;
+        public bool isLoop;
+        public float xMin;
+        public float xMax;
+        public float yMin;
+        public float yMax;
+        public float area;
+
+        public LoopInfo(int firstIndex, bool isLoop, float xMin, float xMax, float yMin, float yMax)
+        {
+            this.firstIndex = firstIndex;
+            this.isLoop = isLoop;
+            this.xMin = xMin;
+            this.xMax = xMax;
+            this.yMin = yMin;
+            this.yMax = yMax;
+            this.area = (xMax - xMin) * (yMax - yMin);
+        }
+    }
+
+    public struct CutMeshMapping: IJobParallelFor, IDisposable
+    {
+        public int deleteAxis;
+
+        [ReadOnly]
+        public NativeList<DividePoint> divideP;
+
+        [WriteOnly]
+        public NativeList<Vector2> cutMeshMapped;
+
+        public void Dispose()
+        {
+            cutMeshMapped.Dispose();
+        }
+
+        public void Execute(int index)
+        {
+            var pos = divideP[index].pos;
+            switch (deleteAxis)
+            {
+                case 0: cutMeshMapped[index] = new Vector2(pos.z, pos.y); break;
+                case 1: cutMeshMapped[index] = new Vector2(pos.x, pos.z); break;
+                case 2: cutMeshMapped[index] = new Vector2(pos.x, pos.y); break;
+            }
+        }
+    }
+
+    [BurstCompile]
+    public struct LoopPairingJob : IJob, IDisposable
+    {
+        [ReadOnly]
+        public NativeList<Vector2> cutMeshMapped;
+
+        [ReadOnly]
+        public NativeList<int> loopNo;
+
+        [ReadOnly]
+        public NativeList<LoopInfo> loopInfo;
+
+        [WriteOnly]
+        public NativeParallelMultiHashMap<int, int> loopPair;
+
+        public void Dispose()
+        {
+            loopPair.Dispose();
+        }
+
+        public void Execute()
+        {
+            var loopOrder = new NativeList<LoopOrderTuple>(loopInfo.Length, Allocator.Temp);
+            for(var i = 0; i < loopInfo.Length; i++)
+            {
+                loopOrder.Add(new LoopOrderTuple() { index = i, area = loopInfo[i].area });
+            }
+            var comp = new LoopOrderTupleComp();
+            loopOrder.Sort(comp);
+
+            var checkedSet = new NativeParallelHashSet<int>(loopInfo.Length, Allocator.Temp);
+            for (var i = loopInfo.Length - 1; i > 0; i--)
+            {
+                if (checkedSet.Contains(i))
+                {
+                    continue;
+                }
+
+                for (var j = i - 1; j >= 0; j--)
+                {
+                    if (checkedSet.Contains(j))
+                    {
+                        continue;
+                    }
+
+                    var inner = loopInfo[loopOrder[j].index];
+                    var outer = loopInfo[loopOrder[i].index];
+                    if (inner.xMin < outer.xMin || inner.xMax > outer.xMax || inner.yMin < outer.yMin || inner.yMax > outer.yMax)
+                    {
+                        continue;
+                    }
+
+                }
+            }
+        }
+
+        private bool isInner(int inner, int outer)
+        {
+
+        }
+    }
+
+    [BurstCompile]
+    public struct LoopOrderTupleComp: IComparer<LoopOrderTuple>
+    {
+        public readonly int Compare(LoopOrderTuple x, LoopOrderTuple y)
+        {
+            return x.area.CompareTo(y.area);
+        }
+    }
+
+    [BurstCompile]
+    public struct LoopOrderTuple
+    {
+        public int index;
+        public float area;
     }
 
     [BurstCompile]
