@@ -339,6 +339,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             setting.rb = temp.GetComponent<Rigidbody>();
             setting.status = status;
             setting.SetMass();
+            setting.SetOffset();
 
             rbs.Add(temp, setting.rb);
 

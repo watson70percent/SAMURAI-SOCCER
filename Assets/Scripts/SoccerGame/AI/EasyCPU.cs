@@ -26,9 +26,8 @@ namespace SamuraiSoccer.SoccerGame.AI
         private bool m_isPause = true;
         private Vector2 before_velocity = Vector2.zero;
         private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
-        private Vector2 m_recevePos;
-        private DateTime m_start = DateTime.MinValue;
-        private DateTime m_end = DateTime.MinValue;
+        private PassInfo m_passInfo = null;
+        private Vector2 m_offset;
 
 
         /// <summary>
@@ -55,6 +54,15 @@ namespace SamuraiSoccer.SoccerGame.AI
         public void SetPause(bool isPause)
         {
             m_isPause = isPause;
+        }
+
+        /// <summary>
+        /// ボールに対するオフセットを設定。（オフセットがないとボールが体にあたり変な方へとんでく。）
+        /// ステータス設定後に呼ぶ。
+        /// </summary>
+        public void SetOffset()
+        {
+            m_offset = status.ally ? Vector2.zero : new Vector2(0, 0.5f);
         }
 
         private void Start()
@@ -88,9 +96,7 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         public void RecevePass(PassInfo info)
         {
-            m_recevePos = info.m_recevePos;
-            m_start = info.m_start;
-            m_end = info.m_end;
+            m_passInfo = info;
         }
 
         private async UniTask SlowMove()
@@ -129,6 +135,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                         }
                         else
                         {
+                            m_passInfo = null;
                             BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First(), (PassHeight)Random.Range(0, 3), status));
                         }
                     }
@@ -142,6 +149,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                         }
                         else
                         {
+                            m_passInfo = null;
                             BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First(), (PassHeight)Random.Range(0, 3), status));
                         }
 
@@ -151,24 +159,31 @@ namespace SamuraiSoccer.SoccerGame.AI
             }
 
             var dest = CalcDest();
-            AllMove(dest);
+            AllMove(dest + m_offset);
         }
 
         private Vector2 CalcDest()
         {
             var dest = ball.ToVector2();
-            if (status.ally || m_start > DateTime.Now || m_end.AddSeconds(1.0) < DateTime.Now)
+            if (m_passInfo == null)
             {
                 return dest;
             }
 
-            return m_recevePos;
+            var (valid, d) = m_passInfo.GetInfo();
+
+            if (valid)
+            {
+                return d;
+            }
+
+            return dest;
         }
 
         private void AllMove(Vector2 dest)
         {
             Vector2 vec = dest - gameObject.ToVector2Int();
-            vec = vec.normalized * 10;
+            vec = vec.normalized * Mathf.Min(vec.magnitude, 10.0f);
 
             try
             {
@@ -223,28 +238,28 @@ namespace SamuraiSoccer.SoccerGame.AI
             }
             float dis = vec.magnitude;
 
-            if (dis > 9)
+            if (dis > 10)
             {
                 vec = vec.normalized * status.fast;
             }
             else
             {
-                vec = Mathf.Log10(dis + 1) * status.fast * vec.normalized;
+                vec = Mathf.Log10(dis / 2.0f + 5.0f) * status.fast * vec.normalized;
             }
 
-            if (field.GroundNumber == 1)
+            if (field.GroundNumber == 1 && status.ally)
             {
                 rot_chain.AddLast(vec);
-                if (rot_chain.Count > 15)
+                while (rot_chain.Count > 45)
                 {
                     rot_chain.RemoveFirst();
                 }
             }
             vec = CalcNextPoint(vec);
-            if (field.GroundNumber != 1)
+            if (!status.ally || field.GroundNumber != 1)
             {
                 rot_chain.AddLast(vec);
-                if (rot_chain.Count > 30)
+                while (rot_chain.Count > 1)
                 {
                     rot_chain.RemoveFirst();
                 }
@@ -264,7 +279,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (next.x < 0 || now.x < 0)
             {
                 infield += field.AdaptPosition(new Vector3((-field.AdaptInversePosition(transform.position).x + 5) * Time.deltaTime, 0, 0));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -273,7 +288,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             else if (next.x > Constants.Width || now.x > Constants.Width)
             {
                 infield += field.AdaptPosition(new Vector3((Constants.Width - field.AdaptInversePosition(transform.position).x - 5) * Time.deltaTime, 0, 0));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -283,7 +298,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (next.z < 0 || now.z < 0)
             {
                 infield += field.AdaptPosition(new Vector3(0, 0, (-field.AdaptInversePosition(transform.position).z + 5) * Time.deltaTime));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -292,7 +307,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             else if (next.z > Constants.G2G || now.z > Constants.G2G)
             {
                 infield += field.AdaptPosition(new Vector3(0, 0, (Constants.G2G - field.AdaptInversePosition(transform.position).z - 5) * Time.deltaTime));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }

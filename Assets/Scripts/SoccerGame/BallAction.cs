@@ -221,7 +221,7 @@ namespace SamuraiSoccer.SoccerGame
             var recevePos = recever.ToVector2Int();
             Vector2 dest = (recevePos - sender).normalized;
             var t = (recevePos - sender).magnitude / self.power;
-            var passInfo = new PassInfo(recever, recevePos, DateTime.Now, DateTime.Now.AddSeconds(t));
+            var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
             passStream.OnNext(passInfo);
             rb.AddForce(self.power * dest, ForceMode.Impulse);
         }
@@ -238,7 +238,7 @@ namespace SamuraiSoccer.SoccerGame
             }
             dest = dest.normalized;
             var t = distance / (power / 2.0);
-            var passInfo = new PassInfo(recever, recevePos, DateTime.Now, DateTime.Now.AddSeconds(t));
+            var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
             passStream.OnNext(passInfo);
             rb.AddForce(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y), ForceMode.Impulse);
         }
@@ -255,7 +255,7 @@ namespace SamuraiSoccer.SoccerGame
             }
             dest = dest.normalized;
             var t = distance / (power / sqrt2);
-            var passInfo = new PassInfo(recever, recevePos, DateTime.Now, DateTime.Now.AddSeconds(t));
+            var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
             passStream.OnNext(passInfo);
             rb.AddForce(power * new Vector3(dest.x / sqrt2, 1.0f / sqrt2, dest.z / sqrt2), ForceMode.Impulse);
         }
