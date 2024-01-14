@@ -157,19 +157,12 @@ namespace SamuraiSoccer.SoccerGame.AI
         private Vector2 CalcDest()
         {
             var dest = ball.ToVector2();
-            if (m_start > DateTime.Now || m_end < DateTime.Now)
+            if (status.ally || m_start > DateTime.Now || m_end.AddSeconds(1.0) < DateTime.Now)
             {
                 return dest;
             }
 
-            var dt = m_end - m_start;
-
-            if (DateTime.Now < m_start.Add(dt / 2))
-            {
-                return m_recevePos;
-            }
-
-            return Vector2.Lerp(m_recevePos, dest, (float)((DateTime.Now - m_start - dt / 2) / (dt / 2)));
+            return m_recevePos;
         }
 
         private void AllMove(Vector2 dest)
