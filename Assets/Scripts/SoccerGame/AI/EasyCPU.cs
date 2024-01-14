@@ -26,6 +26,9 @@ namespace SamuraiSoccer.SoccerGame.AI
         private bool m_isPause = true;
         private Vector2 before_velocity = Vector2.zero;
         private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
+        private Vector2 m_recevePos;
+        private DateTime m_start = DateTime.MinValue;
+        private DateTime m_end = DateTime.MinValue;
 
 
         /// <summary>
@@ -59,6 +62,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Standby.Subscribe(Standby).AddTo(this);
+            BallAction.PassInfo.Where(info => info.m_recever == this).Subscribe(RecevePass).AddTo(this);
         }
 
         private void Pause(bool isPause)
@@ -80,6 +84,13 @@ namespace SamuraiSoccer.SoccerGame.AI
         {
             m_isPause = true;
             _ = SlowMove();
+        }
+
+        public void RecevePass(PassInfo info)
+        {
+            m_recevePos = info.m_recevePos;
+            m_start = info.m_start;
+            m_end = info.m_end;
         }
 
         private async UniTask SlowMove()
@@ -118,7 +129,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                         }
                         else
                         {
-                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(), (PassHeight)Random.Range(0, 3), status));
+                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First(), (PassHeight)Random.Range(0, 3), status));
                         }
                     }
                     else
@@ -131,7 +142,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                         }
                         else
                         {
-                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(), (PassHeight)Random.Range(0, 3), status));
+                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First(), (PassHeight)Random.Range(0, 3), status));
                         }
 
                     }
@@ -139,7 +150,26 @@ namespace SamuraiSoccer.SoccerGame.AI
                 catch (Exception) { }
             }
 
-            AllMove(ball.ToVector2());
+            var dest = CalcDest();
+            AllMove(dest);
+        }
+
+        private Vector2 CalcDest()
+        {
+            var dest = ball.ToVector2();
+            if (m_start > DateTime.Now || m_end < DateTime.Now)
+            {
+                return dest;
+            }
+
+            var dt = m_end - m_start;
+
+            if (DateTime.Now < m_start.Add(dt / 2))
+            {
+                return m_recevePos;
+            }
+
+            return Vector2.Lerp(m_recevePos, dest, (float)((DateTime.Now - m_start - dt / 2) / (dt / 2)));
         }
 
         private void AllMove(Vector2 dest)
@@ -212,7 +242,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (field.GroundNumber == 1)
             {
                 rot_chain.AddLast(vec);
-                if (rot_chain.Count > 30)
+                if (rot_chain.Count > 15)
                 {
                     rot_chain.RemoveFirst();
                 }
@@ -291,10 +321,11 @@ namespace SamuraiSoccer.SoccerGame.AI
         {
             var diff = vec - before_velocity;
             float deg = Vector2.Dot(before_velocity, diff) / before_velocity.magnitude / diff.magnitude;
-            float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
-            if (diff.sqrMagnitude > status.fast * status.fast * coeff * coeff / 180 / 180)
+            var grip = status.ally ? 1.0f : 5.0f;
+            float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * Mathf.Min(1.0f, field.info.GetAccDownCoeff(transform.position) * grip);
+            if (diff.sqrMagnitude > status.fast * status.fast * coeff * coeff / 60 / 60)
             {
-                diff = coeff * status.fast * diff.normalized / 180;
+                diff = coeff * status.fast * diff.normalized / 60;
             }
 
             return before_velocity + diff;

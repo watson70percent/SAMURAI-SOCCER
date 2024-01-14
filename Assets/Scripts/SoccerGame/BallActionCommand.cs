@@ -68,7 +68,7 @@ namespace SamuraiSoccer.SoccerGame
     public class PassCommand : BallActionCommand
     {
         public Vector2 m_sender;
-        public Vector2 m_recever;
+        public GameObject m_recever;
         public PassHeight m_passHeight;
         public PersonalStatus m_status;
 
@@ -79,7 +79,7 @@ namespace SamuraiSoccer.SoccerGame
         /// <param name="recever">受け取り主．</param>
         /// <param name="passHeight">パスの高さ．</param>
         /// <param name="status">パス主のステータス．</param>
-        public PassCommand(Vector2 sender, Vector2 recever, PassHeight passHeight, PersonalStatus status)
+        public PassCommand(Vector2 sender, GameObject recever, PassHeight passHeight, PersonalStatus status)
         {
             m_sender = sender;
             m_recever = recever;
