@@ -36,7 +36,7 @@ namespace SamuraiSoccer.SoccerGame
             var p = m_rigidbody.position + m_rigidbody.velocity * t;
             var fall = new Vector2(p.x, p.z);
             var dt = DateTime.Now.AddSeconds(t) - m_start;
-            return (true, Vector2.Lerp(m_recevePos, fall, (float)((DateTime.Now - m_start) / dt)));
+            return (true, Vector2.Lerp(m_recevePos, fall, Mathf.Min(1.0f, 0.25f + (float)((DateTime.Now - m_start) / dt))));
         }
     }
 }

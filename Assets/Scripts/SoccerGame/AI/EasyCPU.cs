@@ -129,7 +129,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                     {
                         var temp = manager.team.Where(value => field.AdaptInversePosition(value.transform.position).z > field.AdaptInversePosition(transform.position).z);
                         var to = Random.Range(0, temp.Count() + 1);
-                        if (to == temp.Count())
+                        if ((field.AdaptInversePosition(transform.position) - Constants.OppornentGoalPoint).sqrMagnitude < 200 ||  to == temp.Count())
                         {
                             BallAction.CommandStreamOnNext(new ShootCommand(gameObject.transform, status));
                         }
@@ -143,7 +143,7 @@ namespace SamuraiSoccer.SoccerGame.AI
                     {
                         var temp = manager.opp.Where(value => field.AdaptInversePosition(value.transform.position).z < field.AdaptInversePosition(transform.position).z);
                         var to = Random.Range(0, temp.Count() + 1);
-                        if (to == temp.Count())
+                        if ((field.AdaptInversePosition(transform.position) - Constants.OurGoalPoint).sqrMagnitude < 200 || to == temp.Count())
                         {
                             BallAction.CommandStreamOnNext(new ShootCommand(gameObject.transform, status));
                         }
