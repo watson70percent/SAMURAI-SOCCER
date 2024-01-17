@@ -41,6 +41,7 @@ namespace SamuraiSoccer.Player
 
         private float currentSpeed = 1.0f;
         private DateTime lastSlash;
+        private bool m_isSlipping = false;
 
 
         // Start is called before the first frame update
@@ -51,11 +52,11 @@ namespace SamuraiSoccer.Player
             SetBoundy();
             velocity = Vector3.zero;
 
-            InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
-            InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; }).AddTo(this);
+            InGameEvent.Reset.Subscribe(x => { m_state = State.Idle; m_isSlipping = false; }).AddTo(this);
+            InGameEvent.Standby.Subscribe(x => { m_state = State.StandBy; m_isSlipping = false; }).AddTo(this);
             InGameEvent.Pause.Subscribe(isPause => { m_state = isPause ? State.Idle : State.Playing; if (!isPause) { UpdateSlashTime(); } }).AddTo(this);
-            InGameEvent.Play.Subscribe(x => { m_state = State.Playing; UpdateSlashTime(); }).AddTo(this);
-            InGameEvent.Goal.Subscribe(x => { PlayerEvent.SetIsEnableChargeAtack(false); }).AddTo(this);
+            InGameEvent.Play.Subscribe(x => { m_state = State.Playing; m_isSlipping = false; UpdateSlashTime(); }).AddTo(this);
+            InGameEvent.Goal.Subscribe(x => { PlayerEvent.SetIsEnableChargeAtack(false); m_isSlipping = false; }).AddTo(this);
             InGameEvent.Finish.Subscribe(x => { m_state = State.Idle; }).AddTo(this);
 
 
@@ -63,9 +64,10 @@ namespace SamuraiSoccer.Player
                     stickDir => { ReceiveStick(stickDir); }
                 ).AddTo(this);
             PlayerEvent.IsInChargeAttack.Subscribe(
-                    x => { 
+                    x =>
+                    {
                         if (x && m_state == State.Playing) { ChargeAttack(); }
-                        else { PlayerEvent.SetIsInChargeAtack(false); }                
+                        else { PlayerEvent.SetIsInChargeAtack(false); }
                     }
                 ).AddTo(this);
             PlayerEvent.Attack.Subscribe(_ => UpdateSlashTime());
@@ -119,8 +121,13 @@ namespace SamuraiSoccer.Player
 
             if (currentVelocity.sqrMagnitude > 1 && diff.x * diff.x / 4 + diff.y * diff.y > coeff * coeff * 50)
             {
+                m_isSlipping = true;
                 Debug.LogWarning("ŠŠ‚Á‚Ä‚é : " + (diff.x * diff.x / 4 + diff.y * diff.y) + ", " + coeff * coeff * 50 + "," + (x * x * 0.1f + y * y * 0.4f + 3));
                 diff = coeff / (x * x * 0.1f + y * y * 0.4f + 3) * diff.normalized;
+            }
+            else
+            {
+                m_isSlipping = false;
             }
             return currentVelocity + diff;
         }
@@ -185,7 +192,7 @@ namespace SamuraiSoccer.Player
         {
             SoundMaster.Instance.PlaySE(13);
             slashTrail.SetActive(true); //ŽaŒ‚‚ÌŽc‘œ‚ð•\Ž¦
-            Vector3 step = PlayerEvent.StickDir.Value.normalized;
+            Vector3 step = m_isSlipping ? new Vector3(velocity.x, 0, velocity.y).normalized : PlayerEvent.StickDir.Value.normalized;
             if (step == Vector3.zero)
             {
                 step = transform.forward;
@@ -209,7 +216,7 @@ namespace SamuraiSoccer.Player
                 }
                 if (isSlash)
                 {
-                    Instantiate(slashCollider, transform.position+Vector3.up, transform.rotation);
+                    Instantiate(slashCollider, transform.position + Vector3.up, transform.rotation);
                 }
                 await UniTask.Yield();
             }
