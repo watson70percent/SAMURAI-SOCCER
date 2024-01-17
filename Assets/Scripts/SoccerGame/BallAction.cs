@@ -223,7 +223,7 @@ namespace SamuraiSoccer.SoccerGame
             var t = (recevePos - sender).magnitude / self.power;
             var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
             passStream.OnNext(passInfo);
-            rb.AddForce(self.power * dest, ForceMode.Impulse);
+            rb.AddForce(Mathf.Min(20.0f, self.power) * dest, ForceMode.Impulse);
         }
 
         private void CalcMiddlePass(Vector2 sender, GameObject recever, PersonalStatus self)
@@ -277,7 +277,7 @@ namespace SamuraiSoccer.SoccerGame
                     dest = (info.AdaptPosition(Constants.OurGoalPoint + new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(0.0f, 2.5f), 0)) - command.m_sender.position).normalized;
                 }
 
-                rb.AddForce(Mathf.Min(10.0f, command.m_status.power) * dest, ForceMode.Impulse);
+                rb.AddForce(Mathf.Min(15.0f, command.m_status.power) * dest, ForceMode.Impulse);
             }
         }
 
