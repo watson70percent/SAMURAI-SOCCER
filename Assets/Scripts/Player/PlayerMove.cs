@@ -192,7 +192,7 @@ namespace SamuraiSoccer.Player
         {
             SoundMaster.Instance.PlaySE(13);
             slashTrail.SetActive(true); //ŽaŒ‚‚ÌŽc‘œ‚ð•\Ž¦
-            Vector3 step = m_isSlipping ? new Vector3(velocity.x, 0, velocity.y).normalized : PlayerEvent.StickDir.Value.normalized;
+            Vector3 step = m_isSlipping ? new Vector3(velocity.x, 0, velocity.y).normalized * 0.1f : PlayerEvent.StickDir.Value.normalized;
             if (step == Vector3.zero)
             {
                 step = transform.forward;
