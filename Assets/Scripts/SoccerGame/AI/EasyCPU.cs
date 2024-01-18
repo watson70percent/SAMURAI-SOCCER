@@ -26,6 +26,8 @@ namespace SamuraiSoccer.SoccerGame.AI
         private bool m_isPause = true;
         private Vector2 before_velocity = Vector2.zero;
         private LinkedList<Vector2> rot_chain = new LinkedList<Vector2>();
+        private PassInfo m_passInfo = null;
+        private Vector2 m_offset;
 
 
         /// <summary>
@@ -54,11 +56,21 @@ namespace SamuraiSoccer.SoccerGame.AI
             m_isPause = isPause;
         }
 
+        /// <summary>
+        /// ボールに対するオフセットを設定。（オフセットがないとボールが体にあたり変な方へとんでく。）
+        /// ステータス設定後に呼ぶ。
+        /// </summary>
+        public void SetOffset()
+        {
+            m_offset = status.ally ? Vector2.zero : new Vector2(0, 0.5f);
+        }
+
         private void Start()
         {
             InGameEvent.Pause.Subscribe(Pause).AddTo(this);
             InGameEvent.Play.Subscribe(Play).AddTo(this);
             InGameEvent.Standby.Subscribe(Standby).AddTo(this);
+            BallAction.PassInfo.Where(info => info.m_recever == this).Subscribe(RecevePass).AddTo(this);
         }
 
         private void Pause(bool isPause)
@@ -80,6 +92,11 @@ namespace SamuraiSoccer.SoccerGame.AI
         {
             m_isPause = true;
             _ = SlowMove();
+        }
+
+        public void RecevePass(PassInfo info)
+        {
+            m_passInfo = info;
         }
 
         private async UniTask SlowMove()
@@ -112,26 +129,28 @@ namespace SamuraiSoccer.SoccerGame.AI
                     {
                         var temp = manager.team.Where(value => field.AdaptInversePosition(value.transform.position).z > field.AdaptInversePosition(transform.position).z);
                         var to = Random.Range(0, temp.Count() + 1);
-                        if (to == temp.Count())
+                        if ((field.AdaptInversePosition(transform.position) - Constants.OppornentGoalPoint).sqrMagnitude < 200 ||  to == temp.Count())
                         {
                             BallAction.CommandStreamOnNext(new ShootCommand(gameObject.transform, status));
                         }
                         else
                         {
-                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(), (PassHeight)Random.Range(0, 3), status));
+                            m_passInfo = null;
+                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First(), (PassHeight)Random.Range(0, 3), status));
                         }
                     }
                     else
                     {
                         var temp = manager.opp.Where(value => field.AdaptInversePosition(value.transform.position).z < field.AdaptInversePosition(transform.position).z);
                         var to = Random.Range(0, temp.Count() + 1);
-                        if (to == temp.Count())
+                        if ((field.AdaptInversePosition(transform.position) - Constants.OurGoalPoint).sqrMagnitude < 200 || to == temp.Count())
                         {
                             BallAction.CommandStreamOnNext(new ShootCommand(gameObject.transform, status));
                         }
                         else
                         {
-                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First().ToVector2Int(), (PassHeight)Random.Range(0, 3), status));
+                            m_passInfo = null;
+                            BallAction.CommandStreamOnNext(new PassCommand(gameObject.ToVector2Int(), temp.Skip(to).First(), (PassHeight)Random.Range(0, 3), status));
                         }
 
                     }
@@ -139,13 +158,32 @@ namespace SamuraiSoccer.SoccerGame.AI
                 catch (Exception) { }
             }
 
-            AllMove(ball.ToVector2());
+            var dest = CalcDest();
+            AllMove(dest + m_offset);
+        }
+
+        private Vector2 CalcDest()
+        {
+            var dest = ball.ToVector2();
+            if (m_passInfo == null)
+            {
+                return dest;
+            }
+
+            var (valid, d) = m_passInfo.GetInfo();
+
+            if (valid)
+            {
+                return d;
+            }
+
+            return dest;
         }
 
         private void AllMove(Vector2 dest)
         {
             Vector2 vec = dest - gameObject.ToVector2Int();
-            vec = vec.normalized * 10;
+            vec = vec.normalized * Mathf.Min(vec.magnitude, 10.0f);
 
             try
             {
@@ -200,28 +238,28 @@ namespace SamuraiSoccer.SoccerGame.AI
             }
             float dis = vec.magnitude;
 
-            if (dis > 9)
+            if (dis > 10)
             {
                 vec = vec.normalized * status.fast;
             }
             else
             {
-                vec = Mathf.Log10(dis + 1) * status.fast * vec.normalized;
+                vec = Mathf.Log10(dis / 2.0f + 5.0f) * status.fast * vec.normalized;
             }
 
-            if (field.GroundNumber == 1)
+            if (field.GroundNumber == 1 && status.ally)
             {
                 rot_chain.AddLast(vec);
-                if (rot_chain.Count > 30)
+                while (rot_chain.Count > 45)
                 {
                     rot_chain.RemoveFirst();
                 }
             }
             vec = CalcNextPoint(vec);
-            if (field.GroundNumber != 1)
+            if (!status.ally || field.GroundNumber != 1)
             {
                 rot_chain.AddLast(vec);
-                if (rot_chain.Count > 30)
+                while (rot_chain.Count > 1)
                 {
                     rot_chain.RemoveFirst();
                 }
@@ -241,7 +279,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (next.x < 0 || now.x < 0)
             {
                 infield += field.AdaptPosition(new Vector3((-field.AdaptInversePosition(transform.position).x + 5) * Time.deltaTime, 0, 0));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -250,7 +288,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             else if (next.x > Constants.Width || now.x > Constants.Width)
             {
                 infield += field.AdaptPosition(new Vector3((Constants.Width - field.AdaptInversePosition(transform.position).x - 5) * Time.deltaTime, 0, 0));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -260,7 +298,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             if (next.z < 0 || now.z < 0)
             {
                 infield += field.AdaptPosition(new Vector3(0, 0, (-field.AdaptInversePosition(transform.position).z + 5) * Time.deltaTime));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -269,7 +307,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             else if (next.z > Constants.G2G || now.z > Constants.G2G)
             {
                 infield += field.AdaptPosition(new Vector3(0, 0, (Constants.G2G - field.AdaptInversePosition(transform.position).z - 5) * Time.deltaTime));
-                if (rot_chain.Count > 0)
+                while (rot_chain.Count > 0)
                 {
                     rot_chain.RemoveLast();
                 }
@@ -291,10 +329,11 @@ namespace SamuraiSoccer.SoccerGame.AI
         {
             var diff = vec - before_velocity;
             float deg = Vector2.Dot(before_velocity, diff) / before_velocity.magnitude / diff.magnitude;
-            float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * field.info.GetAccDownCoeff(transform.position);
-            if (diff.sqrMagnitude > status.fast * status.fast * coeff * coeff / 180 / 180)
+            var grip = status.ally ? 1.0f : 5.0f;
+            float coeff = (deg + 1) / 2 * field.info.GetAccUpCoeff(transform.position) + (1 - deg) / 2 * Mathf.Min(1.0f, field.info.GetAccDownCoeff(transform.position) * grip);
+            if (diff.sqrMagnitude > status.fast * status.fast * coeff * coeff / 60 / 60)
             {
-                diff = coeff * status.fast * diff.normalized / 180;
+                diff = coeff * status.fast * diff.normalized / 60;
             }
 
             return before_velocity + diff;

@@ -339,6 +339,7 @@ namespace SamuraiSoccer.SoccerGame.AI
             setting.rb = temp.GetComponent<Rigidbody>();
             setting.status = status;
             setting.SetMass();
+            setting.SetOffset();
 
             rbs.Add(temp, setting.rb);
 
@@ -419,6 +420,7 @@ namespace SamuraiSoccer.SoccerGame.AI
 
             ball.gameObject.transform.position = (Constants.OppornentGoalPoint + Constants.OurGoalPoint) / 2 + new Vector3(0, 0.5f, 0);
             ball.rb.velocity = Vector3.zero;
+            ball.rb.angularVelocity = Vector3.zero;
             samurai.transform.position = new Vector3(35.7f, 0, 39.6f);
             referee.transform.position = new Vector3(38, 0, 69);
 

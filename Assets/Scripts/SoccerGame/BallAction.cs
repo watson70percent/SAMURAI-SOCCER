@@ -26,6 +26,9 @@ namespace SamuraiSoccer.SoccerGame
         private int calledNum = 0; // ゴールイベントが複数呼び出されたか監視する番号
 
         private static Subject<BallActionCommand> commandStream = new();
+        private static Subject<PassInfo> passStream = new();
+
+        public static IObservable<PassInfo> PassInfo { get => passStream; }
 
         [NonSerialized]
         public bool last_touch;
@@ -213,16 +216,20 @@ namespace SamuraiSoccer.SoccerGame
             }
         }
 
-        private void CalcLowPass(Vector2 sender, Vector2 recever, PersonalStatus self)
+        private void CalcLowPass(Vector2 sender, GameObject recever, PersonalStatus self)
         {
-            Vector2 dest = (recever - sender).normalized;
-
-            rb.AddForce(self.power * dest, ForceMode.Impulse);
+            var recevePos = recever.ToVector2Int();
+            Vector2 dest = (recevePos - sender).normalized;
+            var t = (recevePos - sender).magnitude / self.power;
+            var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
+            passStream.OnNext(passInfo);
+            rb.AddForce(Mathf.Min(20.0f, self.power) * dest, ForceMode.Impulse);
         }
 
-        private void CalcMiddlePass(Vector2 sender, Vector2 recever, PersonalStatus self)
+        private void CalcMiddlePass(Vector2 sender, GameObject recever, PersonalStatus self)
         {
-            Vector2 dest = (recever - sender);
+            var recevePos = recever.ToVector2Int();
+            Vector2 dest = recevePos - sender;
             float distance = dest.magnitude;
             float power = Mathf.Sqrt(3 * gravity * distance) / 2;
             if (power > self.power)
@@ -230,12 +237,16 @@ namespace SamuraiSoccer.SoccerGame
                 power = self.power;
             }
             dest = dest.normalized;
+            var t = distance / (power / 2.0);
+            var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
+            passStream.OnNext(passInfo);
             rb.AddForce(power * new Vector3(2 / sqrt3 * dest.x, 1.0f / sqrt3, 2 / sqrt3 * dest.y), ForceMode.Impulse);
         }
 
-        private void CalcHighPass(Vector2 sender, Vector2 recever, PersonalStatus self)
+        private void CalcHighPass(Vector2 sender, GameObject recever, PersonalStatus self)
         {
-            Vector3 dest = recever - sender;
+            var recevePos = recever.ToVector2Int();
+            Vector3 dest = recevePos - sender;
             float distance = dest.magnitude;
             float power = Mathf.Sqrt(gravity * distance);
             if (power > self.power)
@@ -243,8 +254,10 @@ namespace SamuraiSoccer.SoccerGame
                 power = self.power;
             }
             dest = dest.normalized;
+            var t = distance / (power / sqrt2);
+            var passInfo = new PassInfo(recever, recevePos, rb, DateTime.Now, DateTime.Now.AddSeconds(t));
+            passStream.OnNext(passInfo);
             rb.AddForce(power * new Vector3(dest.x / sqrt2, 1.0f / sqrt2, dest.z / sqrt2), ForceMode.Impulse);
-
         }
 
         /// <summary>
@@ -257,14 +270,14 @@ namespace SamuraiSoccer.SoccerGame
                 Vector3 dest;
                 if (command.m_status.ally)
                 {
-                    dest = (info.AdaptPosition(Constants.OppornentGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - command.m_sender.position).normalized;
+                    dest = (info.AdaptPosition(Constants.OppornentGoalPoint + new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(0.0f, 2.5f), 0)) - command.m_sender.position).normalized;
                 }
                 else
                 {
-                    dest = (info.AdaptPosition(Constants.OurGoalPoint + new Vector3(Random.Range(-10, 10), Random.Range(0.0f, 2.0f), 0)) - command.m_sender.position).normalized;
+                    dest = (info.AdaptPosition(Constants.OurGoalPoint + new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(0.0f, 2.5f), 0)) - command.m_sender.position).normalized;
                 }
 
-                rb.AddForce(Mathf.Min(10.0f, command.m_status.power) * dest, ForceMode.Impulse);
+                rb.AddForce(Mathf.Min(15.0f, command.m_status.power) * dest, ForceMode.Impulse);
             }
         }
 
