@@ -758,7 +758,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &658479511
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -775,7 +775,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &658479512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1729,6 +1730,7 @@ GameObject:
   - component: {fileID: 1902545106}
   - component: {fileID: 1902545105}
   - component: {fileID: 1902545108}
+  - component: {fileID: 1902545109}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -1785,6 +1787,7 @@ MonoBehaviour:
   uiMask: {fileID: 605463381}
   leftControllerFocusAnimator: {fileID: 1980195604}
   rightControllerFocusAnimator: {fileID: 658479511}
+  m_provider: {fileID: 1902545109}
 --- !u!114 &1902545105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,6 +1852,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CutSceneScoreTeammate: 
   m_CutSceneScoreOpponent: 
+--- !u!114 &1902545109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902545101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0cd653f6b6b9240bfeaba12796b90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1947074218 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2433001006624056901, guid: 3481aaf22b85c304f8086076a27c93b2,
@@ -2043,7 +2058,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1980195604
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2060,7 +2075,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1980195605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2198,7 +2214,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!95 &2076745885
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2215,7 +2231,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2089128186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,7 +2312,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!95 &2089128190
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2312,7 +2329,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2092222245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 804ba53f1a183214abd0908ae2152096,
@@ -2539,7 +2557,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5728114704678306450}
-  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.086396605, w: 0.7018089}
+  m_LocalRotation: {x: 0.08639663, y: 0.70180887, z: -0.08639663, w: 0.70180887}
   m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8029,6 +8047,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -9974,6 +9993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
