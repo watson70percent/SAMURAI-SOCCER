@@ -9,6 +9,7 @@ using SamuraiSoccer;
 using SamuraiSoccer.StageContents;
 using SamuraiSoccer.Event;
 using SamuraiSoccer.SoccerGame.AI;
+using SamuraiSoccer.UI;
 using System.Collections.Generic;
 
 namespace Tutorial
@@ -38,12 +39,15 @@ namespace Tutorial
         public GameObject uiMask;
         public Animator leftControllerFocusAnimator;
         public Animator rightControllerFocusAnimator;
+        public TouchProvider m_provider;
 
         private bool isThreeOnThreeFinished; // 3対3のミニゲームが終了したかどうか
 
         private bool chargeAttackTutorialFinished; // ため斬りのチュートリアルが終了したかどうか
 
         private Vector3 initBallPos;
+
+        private bool m_isTouched = false; //画面に触れたかどうか
 
         private void Awake()
         {
@@ -67,6 +71,11 @@ namespace Tutorial
             // フォーカス演出を非表示(最初から非表示にすると画面サイズに合わせたUIの縮小が機能しない)
             leftControllerFocusAnimator.SetTrigger("None");
             rightControllerFocusAnimator.SetTrigger("None");
+            // タップしたときに処理が進むReactivePropertyを登録
+            m_provider.IsTouchingReactiveProperty.Where(b => b).Subscribe(_ =>
+            {
+                m_isTouched = true;
+            }).AddTo(this);
             Runner(token).Forget();
         }
 
@@ -102,9 +111,9 @@ namespace Tutorial
             await UniTask.Delay(5000);
             tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
             tutorialText.text = "ここではこの世界で戦うちゅーとりあるを行う";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "サムライは残された日本の希望だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             Vector3 destination = new Vector3(10f, 3f, 30f);
             var enemyPrefab = Instantiate(enemy, destination, Quaternion.identity);
             exclamationMark.transform.position = destination + new Vector3(0f, 3f, 0f);
@@ -115,9 +124,9 @@ namespace Tutorial
             spotCamera.Follow = enemyPrefab.transform;
             spotCamera.LookAt = enemyPrefab.transform;
             spotCamera.Priority = 11;
-            await UniTask.Delay(3000);
+            await UniTask.Delay(3000); // これは演出だから変えない
             tutorialText.text = "まずはここまで行こう";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             exclamationMark.SetActive(false);
             leftControllerFocusAnimator.SetTrigger("Focus");
             //カメラをもとに戻す
@@ -140,9 +149,9 @@ namespace Tutorial
             leftControllerFocusAnimator.SetTrigger("None");
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "サムライが行うのはただ斬ることのみ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "試しに目の前の人をひとおもいに斬れ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             rightControllerFocusAnimator.SetTrigger("Focus");
             InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
@@ -160,7 +169,7 @@ namespace Tutorial
             InGameEvent.PauseOnNext(true);
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "よし、それでいい";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
         }
 
         private async UniTask ThreeOnThree(CancellationToken cancellation_token = default)
@@ -171,17 +180,17 @@ namespace Tutorial
             samuraiCamera.Priority = 9;
             wholeviewCamera.Priority = 11;
             tutorialText.text = "今度は実戦形式だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "敵を全て斬りたおせ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "ただし、れふぇりーには気をつけよ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "視界内で刀を見せると反則だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "2回反則で退場になる";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "それでは試合開始だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             //カメラをもとに戻す
             wholeviewCamera.Priority = 9;
             samuraiCamera.Priority = 11;
@@ -212,7 +221,7 @@ namespace Tutorial
             InGameEvent.PauseOnNext(true);
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "しまった、れふぇりーに見つかってしまった";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "もう一度だ";
             await UniTask.Delay(1000);
             UIEffectEvent.BlackOutOnNext(5f);
@@ -226,7 +235,7 @@ namespace Tutorial
             InGameEvent.ResetOnNext();
             await UniTask.Delay(1000);
             tutorialText.text = "次こそ成功させよ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             InGameEvent.PlayOnNext();
             // キーがセットされていたら全て倒し終わった時にバグるので吐き出させておく
@@ -256,12 +265,12 @@ namespace Tutorial
             ball.transform.position = initBallPos;
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "流石我らが希望、手際が良い";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "次はため斬りの練習だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             uiMask.SetActive(true);
             tutorialText.text = "斬る力をためることで前方に移動しながら斬れるぞ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "試しに3回ため斬りしよう";
             rightControllerFocusAnimator.SetTrigger("Focus");
             chargeAttackText.SetActive(true);
@@ -280,7 +289,7 @@ namespace Tutorial
                     }
                 }
             ).AddTo(this);
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             textAnimator.SetTrigger("SlideText");
@@ -311,26 +320,35 @@ namespace Tutorial
             //試合情報の見方説明
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "よくぞ使いこなして見せた";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "本番でも使いこなすのだ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "最後に試合で必要な情報を確認する";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             arrowAnimator.gameObject.SetActive(true);
             tutorialText.text = "これは残りの敵の数だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "0になれば日本の勝利だ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             arrowAnimator.SetTrigger("MoveArrow");
             await UniTask.Delay(1000);
             tutorialText.text = "これは残り時間だ";
-            await UniTask.Delay(2000);
+            await WaitUntilIsTouched();
             tutorialText.text = "無くなるまでにクリアせよ";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             tutorialText.text = "それではちゅーとりあるを終わる";
-            await UniTask.Delay(3000);
+            await WaitUntilIsTouched();
             arrowAnimator.gameObject.SetActive(false);
             tutorialText.text = "必ず日本に勝利を持ち帰れ";
+        }
+
+        private async UniTask WaitUntilIsTouched()
+        {
+            m_isTouched = false;
+            while (!m_isTouched)
+            {
+                await UniTask.Yield();
+            }
         }
     }
 }
