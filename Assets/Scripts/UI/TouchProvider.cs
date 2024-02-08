@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
@@ -8,6 +6,7 @@ namespace SamuraiSoccer.UI
     public class TouchProvider : MonoBehaviour
     {
         private ReactiveProperty<bool> m_reactiveProperty;
+        private int m_prevTouchCount;
 
         public IReadOnlyReactiveProperty<bool> IsTouchingReactiveProperty => m_reactiveProperty;
 
@@ -19,7 +18,8 @@ namespace SamuraiSoccer.UI
         // Update is called once per frame
         void Update()
         {
-            m_reactiveProperty.Value = Input.touchCount > 0;
+            m_reactiveProperty.Value = Input.touchCount > m_prevTouchCount;
+            m_prevTouchCount = Input.touchCount;
         }
     }
 }
