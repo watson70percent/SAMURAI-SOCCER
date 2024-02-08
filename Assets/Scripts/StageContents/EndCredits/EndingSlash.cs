@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SamuraiSoccer.SoccerGame.AI;
 using UniRx.Triggers;
 using UniRx;
-using SamuraiSoccer.SoccerGame;
 using System.Linq;
+using SamuraiSoccer;
 
-namespace SamuraiSoccer.Player
+
+namespace SamuraiSoccer.StageContents.EndCredits
 {
     public class EndingSlash : MonoBehaviour
     {
@@ -47,7 +47,6 @@ namespace SamuraiSoccer.Player
 
         private void OnHit(Collision collision)
         {
-            
             var slashnormal = -transform.forward; //スラッシュの法線
             print(collision.contacts[0].point);
             print(slashnormal);
@@ -67,7 +66,12 @@ namespace SamuraiSoccer.Player
             fragment.GetComponent<MeshCollider>().convex = true;
             //Destroy(fragment.GetComponent<BoxCollider>());
 
-            fragment.AddComponent<Rigidbody>().AddForce(new Vector3(0, -0.01f, 0) * 20, ForceMode.Impulse);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 2, ForceMode.Impulse);
+            fragment.AddComponent<Rigidbody>().AddForce(-transform.forward* 2, ForceMode.Impulse);
+            fragment.GetComponent<Rigidbody>().useGravity = false;
+            fragment.GetComponent<Rigidbody>().angularVelocity = Random.insideUnitSphere*0.5f;
+            collision.gameObject.GetComponent<Rigidbody>().angularVelocity = Random.insideUnitSphere*0.5f;
+            fragment.layer = 12;
         }
     }
 }
