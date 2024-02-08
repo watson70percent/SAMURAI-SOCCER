@@ -111,9 +111,9 @@ namespace Tutorial
             await UniTask.Delay(5000);
             tutorialText.gameObject.transform.parent.gameObject.SetActive(true);
             tutorialText.text = "ここではこの世界で戦うちゅーとりあるを行う";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "サムライは残された日本の希望だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             Vector3 destination = new Vector3(10f, 3f, 30f);
             var enemyPrefab = Instantiate(enemy, destination, Quaternion.identity);
             exclamationMark.transform.position = destination + new Vector3(0f, 3f, 0f);
@@ -126,7 +126,7 @@ namespace Tutorial
             spotCamera.Priority = 11;
             await UniTask.Delay(3000); // これは演出だから変えない
             tutorialText.text = "まずはここまで行こう";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             exclamationMark.SetActive(false);
             leftControllerFocusAnimator.SetTrigger("Focus");
             //カメラをもとに戻す
@@ -149,9 +149,9 @@ namespace Tutorial
             leftControllerFocusAnimator.SetTrigger("None");
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "サムライが行うのはただ斬ることのみ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "試しに目の前の人をひとおもいに斬れ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             rightControllerFocusAnimator.SetTrigger("Focus");
             InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
@@ -169,7 +169,7 @@ namespace Tutorial
             InGameEvent.PauseOnNext(true);
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "よし、それでいい";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
         }
 
         private async UniTask ThreeOnThree(CancellationToken cancellation_token = default)
@@ -180,17 +180,17 @@ namespace Tutorial
             samuraiCamera.Priority = 9;
             wholeviewCamera.Priority = 11;
             tutorialText.text = "今度は実戦形式だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "敵を全て斬りたおせ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "ただし、れふぇりーには気をつけよ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "視界内で刀を見せると反則だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "2回反則で退場になる";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "それでは試合開始だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             //カメラをもとに戻す
             wholeviewCamera.Priority = 9;
             samuraiCamera.Priority = 11;
@@ -221,7 +221,7 @@ namespace Tutorial
             InGameEvent.PauseOnNext(true);
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "しまった、れふぇりーに見つかってしまった";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "もう一度だ";
             await UniTask.Delay(1000);
             UIEffectEvent.BlackOutOnNext(5f);
@@ -235,7 +235,7 @@ namespace Tutorial
             InGameEvent.ResetOnNext();
             await UniTask.Delay(1000);
             tutorialText.text = "次こそ成功させよ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             InGameEvent.PlayOnNext();
             // キーがセットされていたら全て倒し終わった時にバグるので吐き出させておく
@@ -265,12 +265,12 @@ namespace Tutorial
             ball.transform.position = initBallPos;
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "流石我らが希望、手際が良い";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "次はため斬りの練習だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             uiMask.SetActive(true);
             tutorialText.text = "斬る力をためることで前方に移動しながら斬れるぞ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "試しに3回ため斬りしよう";
             rightControllerFocusAnimator.SetTrigger("Focus");
             chargeAttackText.SetActive(true);
@@ -289,7 +289,7 @@ namespace Tutorial
                     }
                 }
             ).AddTo(this);
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             InGameEvent.PlayOnNext();
             _ = SoundMaster.Instance.PlaySE(whistleSENumber);
             textAnimator.SetTrigger("SlideText");
@@ -320,31 +320,38 @@ namespace Tutorial
             //試合情報の見方説明
             textAnimator.SetTrigger("ReturnText");
             tutorialText.text = "よくぞ使いこなして見せた";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "本番でも使いこなすのだ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "最後に試合で必要な情報を確認する";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             arrowAnimator.gameObject.SetActive(true);
             tutorialText.text = "これは残りの敵の数だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "0になれば日本の勝利だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             arrowAnimator.SetTrigger("MoveArrow");
             await UniTask.Delay(1000);
             tutorialText.text = "これは残り時間だ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "無くなるまでにクリアせよ";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             tutorialText.text = "それではちゅーとりあるを終わる";
-            await WaitUntilIsTouched();
+            await WaitUntilIsTouched(1000);
             arrowAnimator.gameObject.SetActive(false);
             tutorialText.text = "必ず日本に勝利を持ち帰れ";
         }
 
-        private async UniTask WaitUntilIsTouched()
+        /// <summary>
+        /// タップするまで待機する
+        /// </summary>
+        /// <param name="delayMilliSec">タップを受け付けるまでの遅延時間</param>
+        /// <returns></returns>
+        private async UniTask WaitUntilIsTouched(int delayMilliSec)
         {
+            // 待機秒数だけ待って、そのあとタップするまで待機
             m_isTouched = false;
+            await UniTask.Delay(delayMilliSec);
             while (!m_isTouched)
             {
                 await UniTask.Yield();
