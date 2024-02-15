@@ -215,5 +215,14 @@ namespace SamuraiSoccer.Event
             m_opponentScoreSubject.Value = score;
             Debug.Log("Game score: " + m_teammateScoreSubject.Value + " : " + m_opponentScoreSubject.Value);
         }
+
+        /// <summary>
+        /// “_”‚ğ‰Šú‰»‚·‚é
+        /// </summary>
+        public static void ResetScore()
+        {
+            m_teammateScoreSubject.Value = 0;
+            m_opponentScoreSubject.Value = 0;
+        }
     }
 }
