@@ -46,5 +46,13 @@ namespace SamuraiSoccer.SoccerGame
             };
             InGameEvent.GoalOnNext(goalEventType);
         }
+
+        /// <summary>
+        /// “_”‚ğ‰Šú‰»‚·‚é
+        /// </summary>
+        private void OnDestroy()
+        {
+            InGameEvent.ResetScore();
+        }
     }
 }
