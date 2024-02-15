@@ -52,6 +52,8 @@ namespace SamuraiSoccer.StageContents.Conversation
         private ScrollScript m_scrollScript;
 
         private bool m_isTouched = false; //‰æ–Ê‚ÉG‚ê‚½‚©‚Ç‚¤‚©
+        [SerializeField]
+        private GameObject RightNameWindow;
 
         // Start is called before the first frame update
         public void Start()
@@ -157,7 +159,15 @@ namespace SamuraiSoccer.StageContents.Conversation
             m_characterNameTexts[0].text = leftCharacterName.ToString();
             m_characterImages[0].sprite = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == leftCharacterName).First().m_imageSilhouette;
             CharacterName rightCharacterName = m_conversationDatas.ConversationDatas[conversationNum].m_rightCharacterName;
-            m_characterNameTexts[1].text = rightCharacterName.ToString();
+            if(rightCharacterName == CharacterName.xxx)
+            {
+                m_characterNameTexts[1].text = "";
+                RightNameWindow.SetActive(false);
+            }
+            else
+            {
+                m_characterNameTexts[1].text = rightCharacterName.ToString();
+            }
             m_characterImages[1].sprite = m_conversationCharacters.m_conversationCharacters.Where(x => x.m_characterName == rightCharacterName).First().m_imageSilhouette;
         }
 
