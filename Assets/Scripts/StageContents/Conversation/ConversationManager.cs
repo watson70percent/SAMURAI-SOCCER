@@ -93,14 +93,15 @@ namespace SamuraiSoccer.StageContents.Conversation
         private async UniTask ConversationProcess(int conversatioNum, Action afterBGM)
         {
             var beforeBGM = SoundMaster.Instance.BGMIndex;
-            if (beforeBGM != 14)
+            var conversationBGM = ConversationBGMMapping(conversatioNum);
+            if (conversationBGM != -1)
             {
                 // 最終ステージのBGMでなければいったん止める。
                 SoundMaster.Instance.StopSound();
             }
             await UniTask.Delay(1000);
 
-            if (beforeBGM != 14)
+            if (conversationBGM != -1)
             {
                 SoundMaster.Instance.PlayBGM(ConversationBGMMapping(conversatioNum));
             }
@@ -158,13 +159,13 @@ namespace SamuraiSoccer.StageContents.Conversation
             ActiveTextUI(false);
             await m_uiFade.FadeOutUI();
             await m_scrollScript.ScrollSlide(-m_initPos.x, m_initPos.x, m_initPos.y, 1.0f);
-            if (beforeBGM != 14)
+            if (conversationBGM != -1)
             {
                 SoundMaster.Instance.StopSound();
             }
             await UniTask.Delay(500);
 
-            if (beforeBGM != 14)
+            if (conversationBGM != -1)
             {
                 if (beforeBGM == -1 || beforeBGM == SoundMaster.STAGE_SELECT_BGM_INDEX)
                 {
