@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using SamuraiSoccer.UI;
 using System.Linq;
 using System.Threading;
+using System;
 
 namespace SamuraiSoccer.StageContents.Conversation
 {
@@ -70,8 +71,9 @@ namespace SamuraiSoccer.StageContents.Conversation
         /// 会話コンテンツの起動
         /// </summary>
         /// <param name="conversationNum">会話番号</param>
+        /// <param name="afterBGM">会話後に流すBGMの処理</param>
         /// <returns></returns>
-        public async UniTask PlayConversation(int conversationNum)
+        public async UniTask PlayConversation(int conversationNum, Action afterBGM)
         {
             if (conversationNum > m_conversationDatas.ConversationDatas.Count)
             {
@@ -79,7 +81,7 @@ namespace SamuraiSoccer.StageContents.Conversation
                 return;
             }
             m_conversationContents.SetActive(true);
-            await ConversationProcess(conversationNum);
+            await ConversationProcess(conversationNum, afterBGM);
             m_conversationContents.SetActive(false);
         }
 
@@ -88,9 +90,20 @@ namespace SamuraiSoccer.StageContents.Conversation
         /// </summary>
         /// <param name="conversatioNum">再生する会話番号</param>
         /// <returns></returns>
-        private async UniTask ConversationProcess(int conversatioNum)
+        private async UniTask ConversationProcess(int conversatioNum, Action afterBGM)
         {
+            var beforeBGM = SoundMaster.Instance.BGMIndex;
+            if (beforeBGM != 14)
+            {
+                // 最終ステージのBGMでなければいったん止める。
+                SoundMaster.Instance.StopSound();
+            }
             await UniTask.Delay(1000);
+
+            if (beforeBGM != 14)
+            {
+                SoundMaster.Instance.PlayBGM(ConversationBGMMapping(conversatioNum));
+            }
             await m_scrollScript.ScrollSlide(m_initPos.x, -m_initPos.x, m_initPos.y, 1.0f);
             SetCharacterInfo(conversatioNum);
             await m_uiFade.FadeInUI();
@@ -145,7 +158,22 @@ namespace SamuraiSoccer.StageContents.Conversation
             ActiveTextUI(false);
             await m_uiFade.FadeOutUI();
             await m_scrollScript.ScrollSlide(-m_initPos.x, m_initPos.x, m_initPos.y, 1.0f);
+            if (beforeBGM != 14)
+            {
+                SoundMaster.Instance.StopSound();
+            }
             await UniTask.Delay(500);
+
+            if (beforeBGM != 14)
+            {
+                if (beforeBGM == -1 || beforeBGM == SoundMaster.STAGE_SELECT_BGM_INDEX)
+                {
+                    // タイミング的にBGMが未設定またはステージセレクトのときはステージセレクト再生。
+                    SoundMaster.Instance.PlayBGM(SoundMaster.STAGE_SELECT_BGM_INDEX);
+                }
+                // リザルトの時はここで上書き。
+                afterBGM();
+            }
             // 巻物の移動
         }
 
@@ -227,6 +255,41 @@ namespace SamuraiSoccer.StageContents.Conversation
                 image.transform.localPosition = new Vector3(initPos.x, initPos.y + 5 * (1 + Mathf.Sin(3 * Mathf.PI * elapsedtime)), initPos.z);
                 await UniTask.Yield();
             }
+        }
+
+        private int ConversationBGMMapping(int conversation)
+        {
+            if (conversation >= 0 && conversation <= 3)
+            {
+                return 15;
+            }
+
+            if (conversation >= 4 && conversation <= 7)
+            {
+                return 16;
+            }
+
+            if (conversation >= 8 && conversation <= 11)
+            {
+                return 17;
+            }
+
+            if (conversation >= 12 && conversation <= 15)
+            {
+                return 18;
+            }
+
+            if (conversation >= 16 && conversation <= 18)
+            {
+                return 19;
+            }
+
+            if (conversation >= 30 && conversation <= 31)
+            {
+                return -1;
+            }
+
+            throw new ArgumentException("会話番号が想定されていないためBGMが再生できません");
         }
     }
 }

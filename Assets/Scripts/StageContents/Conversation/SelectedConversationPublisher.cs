@@ -36,7 +36,7 @@ namespace SamuraiSoccer.StageContents.Conversation
                 // 該当会話番号 == クリア番号(初期は-1)を3で割った商*4かつ3で割った余りが0とき
                 if (m_conversationNum == clearNumber / 3 * 4 && clearNumber % 3 == 0)
                 {
-                    _ = m_conversationManager.PlayConversation(m_conversationNum);
+                    _ = m_conversationManager.PlayConversation(m_conversationNum, () => { });
                     m_finishedConversation = true;
                 }
             }
