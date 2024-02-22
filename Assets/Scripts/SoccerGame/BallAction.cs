@@ -62,25 +62,74 @@ namespace SamuraiSoccer.SoccerGame
         {
             rb.angularDrag = info.info.Getdrag(gameObject.transform.position);
             var vel = rb.velocity;
-            if (vel.sqrMagnitude < 1)
+            if (transform.position.x <= 0.5)
             {
+                if (transform.position.x <= -0.5 && vel.x < 0)
+                {
+                    vel.x *= -0.5f;
+                }
+                if (vel.x < 1)
+                {
+                    vel.x += 0.1f;
+                }
+            }
+            else if (transform.position.x >= 59.5)
+            {
+                if (transform.position.x <= 60.5 && vel.x > 0)
+                {
+                    vel.x *= -0.5f;
+                }
+                if (vel.x > -1)
+                {
+                    vel.x -= 0.1f;
+                }
+            }
+            if (transform.position.z <= -4.5 || (transform.position.z <= 0.5 && (Mathf.Abs(transform.position.x - 30.0f) > 4.5 || transform.position.y > 5.5)))
+            {
+                if ((transform.position.z <= -5.5 || (transform.position.z < -0.5 && (Mathf.Abs(transform.position.x - 30.0f) > 4.5 || transform.position.y > 5.5))) && vel.z < 0)
+                {
+                    vel.z *= -0.5f;
+                }
+                if (vel.z < 1)
+                {
+                    vel.z += 0.1f;
+                }
+            }
+            else if (transform.position.z >= 104.5 || (transform.position.z >= 99.5 && (Mathf.Abs(transform.position.x - 30.0f) > 4.5 || transform.position.y > 5.5)))
+            {
+                if ((transform.position.z >= 105.5 || (transform.position.z > 100.5 && (Mathf.Abs(transform.position.x - 30.0f) > 4.5 || transform.position.y > 5.5))) && vel.z > 0)
+                {
+                    vel.z *= -0.5f;
+                }
+                if (vel.z > -1)
+                {
+                    vel.z -= 0.1f;
+                }
+            }
+            rb.velocity = vel;
+
+            if (transform.position.y < -0.5)
+            {
+                rb.velocity = Vector3.zero;
+                var pos = transform.position;
+                pos.y = 0.5f;
                 if (transform.position.x <= 0.5)
                 {
-                    vel.x += 1;
+                    pos.x = 0.5f;
                 }
-                else if (transform.position.x >= 49.5)
+                else if (transform.position.x >= 59.5)
                 {
-                    vel.x -= 1;
+                    pos.x = 59.5f;
                 }
                 if (transform.position.z <= 0.5)
                 {
-                    vel.z += 1;
+                    pos.z = 0.5f;
                 }
-                else if(transform.position.z >= 99.5)
+                else if (transform.position.z >= 99.5)
                 {
-                    vel.z -= 1;
+                    pos.z = 99.5f;
                 }
-                rb.velocity = vel;
+                transform.position = pos;
             }
         }
 
