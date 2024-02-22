@@ -31,6 +31,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
         void Start()
         {
+            SoundMaster.Instance.BGMIndexObservable.Subscribe(ManageStageSelectBGM).AddTo(this);
             InFileTransmitClient<SaveData> clearedStageNumFileTransitClient = new InFileTransmitClient<SaveData>();
             SaveData data;
             int cleared = 0;
@@ -46,11 +47,13 @@ namespace SamuraiSoccer.StageContents.StageSelect
 
             if (cleared == 0)
             {
+                start.volume = 0;
                 start.Play();
                 isNotCleared = true;
             }
             else
             {
+                jp.volume = 0;
                 gb.volume = 0;
                 cn.volume = 0;
                 us.volume = 0;
@@ -61,6 +64,12 @@ namespace SamuraiSoccer.StageContents.StageSelect
                 us.Play();
                 ru.Play();
                 isNotCleared = false;
+            }
+
+            if (SoundMaster.Instance.BGMIndex == -1)
+            {
+                // 他のBGMが鳴ってなかったらステージセレクトの音を鳴らす。こっちが先に走ってたら後のBGMが上書きすればOK。
+                SoundMaster.Instance.PlayBGM(SoundMaster.STAGE_SELECT_BGM_INDEX);
             }
         }
 
@@ -116,6 +125,36 @@ namespace SamuraiSoccer.StageContents.StageSelect
             source.volume = 1;
         }
 
+        private void ManageStageSelectBGM(int BGMIndex)
+        {
+            if (BGMIndex == SoundMaster.STAGE_SELECT_BGM_INDEX)
+            {
+                if (isNotCleared)
+                {
+                    start.volume = 1;
+                } 
+                else
+                {
+                    jp.volume = 1;
+                    switch (current)
+                    {
+                        case Stage.UK: gb.volume = 1; break;
+                        case Stage.China: cn.volume = 1; break;
+                        case Stage.USA: us.volume = 1; break;
+                        case Stage.Russian: ru.volume = 1; break;
+                    }
+                }
+            } 
+            else
+            {
+                start.volume = 0;
+                jp.volume = 0;
+                gb.volume = 0;
+                cn.volume = 0;
+                us.volume = 0;
+                ru.volume = 0;
+            }
+        }
     }
 }
 

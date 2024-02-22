@@ -22,7 +22,7 @@ namespace SamuraiSoccer.StageContents.StageSelect
             {
                 if (save.m_stageData == m_lastStageSaveNumber)
                 {
-                    _ = m_conversationManager.PlayConversation(m_lastStageConversationNumber);
+                    _ = m_conversationManager.PlayConversation(m_lastStageConversationNumber, () => { });
                 }
             }
         }

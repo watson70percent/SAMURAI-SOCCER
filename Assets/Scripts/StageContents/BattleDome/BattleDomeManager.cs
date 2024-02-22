@@ -71,7 +71,7 @@ namespace SamuraiSoccer.StageContents.BattlerDome
                 default: break;
             }
             
-            await conversationManager.PlayConversation(conversationNum:convNum);
+            await conversationManager.PlayConversation(conversationNum:convNum, () => { });
         }
     }
 }

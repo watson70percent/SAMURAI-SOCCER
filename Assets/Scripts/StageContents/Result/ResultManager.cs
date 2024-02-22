@@ -14,10 +14,12 @@ namespace SamuraiSoccer.StageContents.Result
     public class ResultManager : MonoBehaviour
     {
         public GameResult ResultState { get; private set; } = GameResult.Undefined;
-        [SerializeField] 
+        [SerializeField]
         private Text result;
         [SerializeField]
         private Text samuraiPhrase;
+        [SerializeField]
+        private ResultBGM resultBGM;
         [SerializeField]
         private SamuraiWordBase samuraiWordBase;
         [SerializeField]
@@ -77,7 +79,11 @@ namespace SamuraiSoccer.StageContents.Result
             {
                 // ステージ番号に対応したお話を開始
                 // お話の番号=クリアしたステージ番号を3で割った商×4+ステージ番号を3で割った余り+1
-                conversationManager.PlayConversation((clearNumber / 3) * 4 + clearNumber % 3 + 1).Forget();
+                conversationManager.PlayConversation((clearNumber / 3) * 4 + clearNumber % 3 + 1, () => resultBGM.PlayWinBGM().Forget()).Forget();
+            }
+            else
+            {
+                resultBGM.PlayWinBGM().Forget();
             }
             // 再戦用に再びKEY_STAGENUMBERをセットする
             stageNumberTransitionClient.Set(StorageKey.KEY_STAGENUMBER, clearNumber);
@@ -103,6 +109,7 @@ namespace SamuraiSoccer.StageContents.Result
                 txt.color = Color.white;
             }
             mainCamera.backgroundColor = Color.black;
+            resultBGM.PlayLoseBGM().Forget();
         }
     }
 }
