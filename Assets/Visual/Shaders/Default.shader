@@ -3,17 +3,13 @@
 	Properties
 	{
 		_Color("Color", Color) = (1,1,1,1)
-		
-
 	}
-		SubShader
+	SubShader
 	{
-		Tags {
-		"RenderType" = "Opaque" }
+		Tags { "RenderType" = "Opaque" }
 		LOD 200
-
-	   Pass{
-
+		Pass
+		{
 			CGPROGRAM
 
 			#pragma vertex vert
@@ -47,7 +43,7 @@
 			}
 
 			ENDCG
-}
+		}
 	}
-		FallBack "Diffuse"
+	FallBack "Diffuse"
 }
