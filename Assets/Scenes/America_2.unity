@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6814271, g: 0.8031638, b: 0.7361451, a: 1}
+  m_IndirectSpecularColor: {r: 0.6826118, g: 0.8030509, b: 0.72876096, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -797,12 +797,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: c9166b198d6d91f468f73149da2a880d,
-        type: 2}
-    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
-        type: 3}
       propertyPath: m_textInfo.lineCount
       value: 1
       objectReference: {fileID: 0}
@@ -815,6 +809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 605237409308239715, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -894,7 +893,7 @@ PrefabInstance:
     - target: {fileID: 2677264473472736776, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.57
+      value: -24.3
       objectReference: {fileID: 0}
     - target: {fileID: 2677264473472736776, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -974,22 +973,22 @@ PrefabInstance:
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7018089
+      value: 0.70180887
       objectReference: {fileID: 0}
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08639662
+      value: 0.08639663
       objectReference: {fileID: 0}
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7018088
+      value: 0.70180887
       objectReference: {fileID: 0}
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.086396605
+      value: -0.08639663
       objectReference: {fileID: 0}
     - target: {fileID: 3450927741976376893, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -1038,10 +1037,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8720120096575165463, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: c9166b198d6d91f468f73149da2a880d,
-        type: 2}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 8720120096575165463, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_textInfo.lineCount

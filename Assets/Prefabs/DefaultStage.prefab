@@ -1001,7 +1001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -75}
+  m_AnchoredPosition: {x: -2, y: -75}
   m_SizeDelta: {x: 206, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &5699874379056814415
@@ -2198,6 +2198,7 @@ GameObject:
   - component: {fileID: 8853161991278064164}
   - component: {fileID: 8768024167986269545}
   - component: {fileID: 387417325391953883}
+  - component: {fileID: 5042413248085106325}
   m_Layer: 5
   m_Name: TimerIcon
   m_TagString: Untagged
@@ -2263,6 +2264,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5042413248085106325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4287955340624999454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.5, y: -1.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5324424899319995125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,7 +2344,7 @@ RectTransform:
   m_GameObject: {fileID: 6531459954496752689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2677264473634793521}
@@ -2336,7 +2352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.4394}
+  m_AnchoredPosition: {x: 20, y: -6.1}
   m_SizeDelta: {x: 990.1498, y: 211.6926}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &6210350899994546573
@@ -2367,8 +2383,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9898f5f54aa2a9047b6267c865da37ae, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e1abd661157a94e4983e937d72672181, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -12019,16 +12035,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606684516825536011, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
         type: 3}
-      propertyPath: m_fontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606684516825536011, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606684516825536011, guid: 3e64670e26f948d4b966bb2f13b8a4a8,
-        type: 3}
       propertyPath: m_textAlignment
       value: 65535
       objectReference: {fileID: 0}
@@ -12207,11 +12213,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5467824820701917325, guid: 8c0daeb887d86394e89ee077e8758ea1,
-        type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6359015005064493796, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
       propertyPath: m_Pivot.x
@@ -12341,21 +12342,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 339.1075
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -17.0537
       objectReference: {fileID: 0}
     - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
