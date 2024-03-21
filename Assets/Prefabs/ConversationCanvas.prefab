@@ -184,6 +184,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 1
@@ -363,14 +364,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 472abb1ee034b984e92d7a0561d67997, type: 2}
-  m_Color: {r: 0.8301887, g: 0.7933599, b: 0.40334642, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e047c34d778bfc64291cde0abe3b9e58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -391,6 +392,7 @@ GameObject:
   - component: {fileID: 3472616890078086948}
   - component: {fileID: 3472616890078086954}
   - component: {fileID: 3472616890078086949}
+  - component: {fileID: 7033835602995350703}
   m_Layer: 5
   m_Name: Name_Right
   m_TagString: Untagged
@@ -457,6 +459,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7033835602995350703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472616890078086951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &3472616890229842575
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +565,7 @@ GameObject:
   - component: {fileID: 3472616890233703569}
   - component: {fileID: 3472616890233703575}
   - component: {fileID: 3472616890233703574}
+  - component: {fileID: 6363382690796272102}
   m_Layer: 5
   m_Name: Name_Left
   m_TagString: Untagged
@@ -614,6 +632,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6363382690796272102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472616890233703568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &3472616890248094804
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +799,7 @@ MonoBehaviour:
   m_provider: {fileID: 837690063741851198}
   m_textScroller: {fileID: 6014586119898072728}
   m_scrollScript: {fileID: 3242743231519018622}
+  RightNameWindow: {fileID: 0}
 --- !u!114 &3472616890380064506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,6 +876,7 @@ GameObject:
   - component: {fileID: 3472616890507889721}
   - component: {fileID: 3472616890507889727}
   - component: {fileID: 3472616890507889726}
+  - component: {fileID: 8611901048071003561}
   m_Layer: 5
   m_Name: TextBox
   m_TagString: Untagged
@@ -908,6 +943,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8611901048071003561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472616890507889720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &3472616890542016804
 GameObject:
   m_ObjectHideFlags: 0
