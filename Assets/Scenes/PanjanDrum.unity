@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 501383d85f6d34aa8a6a91d0956a9787, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9b6156b68212d4548a3a00204d787319, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -346,7 +346,7 @@ PrefabInstance:
     - target: {fileID: 2677264474762347539, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2946974242945152555, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
@@ -427,12 +427,12 @@ PrefabInstance:
         type: 3}
       propertyPath: groundMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 504879daace9b9744998cdbed7bac131, type: 2}
+      objectReference: {fileID: 2100000, guid: 876ff6fd5c512db4589dfbef6ade755c, type: 2}
     - target: {fileID: 8812370543220125398, guid: f0c17f2fc41c12044b2143319858dbd4,
         type: 3}
       propertyPath: groundNormalMap
       value: 
-      objectReference: {fileID: 2800000, guid: e932147324a2707408b9b8e47e4da785, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c17f2fc41c12044b2143319858dbd4, type: 3}
 --- !u!1 &511898924
@@ -1013,7 +1013,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b13063d0bd9119a4c800e8d1d98a49f0, type: 2}
+  - {fileID: 2100000, guid: e364e84f047a4914991f20f8cabda8ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
