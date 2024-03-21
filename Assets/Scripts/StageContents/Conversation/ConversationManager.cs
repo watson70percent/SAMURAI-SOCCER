@@ -21,6 +21,9 @@ namespace SamuraiSoccer.StageContents.Conversation
         [SerializeField, Tooltip("会話キャラクターの名前(左:0, 右:1)")]
         private Text[] m_characterNameTexts = new Text[2];
 
+        [SerializeField, Tooltip("会話キャラクターの名前が書かれたWindow(左:0, 右:1)")]
+        private GameObject[] m_characterNameWindow = new GameObject[2];
+
         [SerializeField]
         private Text m_conversationText; //会話テキスト
 
@@ -53,8 +56,6 @@ namespace SamuraiSoccer.StageContents.Conversation
         private ScrollScript m_scrollScript;
 
         private bool m_isTouched = false; //画面に触れたかどうか
-        [SerializeField]
-        private GameObject RightNameWindow;
 
         // Start is called before the first frame update
         public void Start()
@@ -88,12 +89,12 @@ namespace SamuraiSoccer.StageContents.Conversation
         /// <summary>
         /// 会話分の表示と再生
         /// </summary>
-        /// <param name="conversatioNum">再生する会話番号</param>
+        /// <param name="conversationNum">再生する会話番号</param>
         /// <returns></returns>
-        private async UniTask ConversationProcess(int conversatioNum, Action afterBGM)
+        private async UniTask ConversationProcess(int conversationNum, Action afterBGM)
         {
             var beforeBGM = SoundMaster.Instance.BGMIndex;
-            var conversationBGM = ConversationBGMMapping(conversatioNum);
+            var conversationBGM = ConversationBGMMapping(conversationNum);
             if (conversationBGM != -1)
             {
                 // 最終ステージのBGMでなければいったん止める。
@@ -103,13 +104,33 @@ namespace SamuraiSoccer.StageContents.Conversation
 
             if (conversationBGM != -1)
             {
-                SoundMaster.Instance.PlayBGM(ConversationBGMMapping(conversatioNum));
+                SoundMaster.Instance.PlayBGM(ConversationBGMMapping(conversationNum));
             }
+            // 巻物がスライドしてくる
             await m_scrollScript.ScrollSlide(m_initPos.x, -m_initPos.x, m_initPos.y, 1.0f);
-            SetCharacterInfo(conversatioNum);
+            // 会話キャラの情報設定
+            SetCharacterInfo(conversationNum);
+            StageConversationData stageConversationData = m_conversationDatas.ConversationDatas[conversationNum];
+            // 片方の名前Windowを表示
+            if (stageConversationData.m_conversationTexts[0].m_characterName == stageConversationData.m_leftCharacterName)
+            {
+                // 左の名前だけ表示
+                m_characterNameWindow[0].SetActive(true);
+                m_characterNameWindow[1].SetActive(false);               
+            }
+            else if (stageConversationData.m_conversationTexts[0].m_characterName == stageConversationData.m_rightCharacterName)
+            {
+                // 右の名前だけ表示
+                m_characterNameWindow[0].SetActive(false);
+                m_characterNameWindow[1].SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("会話しているキャラクター以外が会話の主として選択されているよ！");
+            }
+            // 会話UIが現れる
             await m_uiFade.FadeInUI();
             ActiveTextUI(true);
-            StageConversationData stageConversationData = m_conversationDatas.ConversationDatas[conversatioNum];
             // 会話文の再生
             for (int i = 0; i < stageConversationData.m_conversationTexts.Count; i++)
             {
@@ -118,11 +139,17 @@ namespace SamuraiSoccer.StageContents.Conversation
                 if (stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_leftCharacterName)
                 {
                     speakerNum = 0;
+                    // 左の名前だけ表示
+                    m_characterNameWindow[0].SetActive(true);
+                    m_characterNameWindow[1].SetActive(false);
                     ChangeCharacterEmotion(m_characterImages[0], stageConversationData.m_conversationTexts[i].m_characterName, stageConversationData.m_conversationTexts[i].m_motionType);
                 }
                 else if (stageConversationData.m_conversationTexts[i].m_characterName == stageConversationData.m_rightCharacterName)
                 {
                     speakerNum = 1;
+                    // 右の名前だけ表示
+                    m_characterNameWindow[0].SetActive(false);
+                    m_characterNameWindow[1].SetActive(true);
                     ChangeCharacterEmotion(m_characterImages[1], stageConversationData.m_conversationTexts[i].m_characterName, stageConversationData.m_conversationTexts[i].m_motionType);
                 }
                 else
@@ -191,7 +218,6 @@ namespace SamuraiSoccer.StageContents.Conversation
             if(rightCharacterName == CharacterName.xxx)
             {
                 m_characterNameTexts[1].text = "";
-                RightNameWindow.SetActive(false);
             }
             else
             {
