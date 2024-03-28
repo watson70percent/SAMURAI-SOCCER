@@ -2852,18 +2852,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 352490631036542598}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6008674687175126277 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6307103907673961347, guid: 3481aaf22b85c304f8086076a27c93b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 352490631036542598}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b3e793fe8dc03438815f731ed9a0bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &945774437329446498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3243,7 +3231,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalCanvas
       value: 
-      objectReference: {fileID: 6008674687175126277}
+      objectReference: {fileID: 0}
     - target: {fileID: 4220772580559016567, guid: adc7cc280ff34dd4aae0a9c929b10607,
         type: 3}
       propertyPath: audioSource
@@ -12196,7 +12184,7 @@ PrefabInstance:
     - target: {fileID: 263184007866340889, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 130
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 263184007866340889, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
@@ -12315,23 +12303,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326491972242366650, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326491972242366650, guid: 8c0daeb887d86394e89ee077e8758ea1,
+        type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326491972242366650, guid: 8c0daeb887d86394e89ee077e8758ea1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7326491972242366650, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 395.1231
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 339.1075
+      propertyPath: m_AnchoredPosition.x
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8180898860876945591, guid: 8c0daeb887d86394e89ee077e8758ea1,
         type: 3}
@@ -12627,7 +12625,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalCanvas
       value: 
-      objectReference: {fileID: 6008674687175126277}
+      objectReference: {fileID: 0}
     - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
         type: 3}
       propertyPath: fadeAnimator
