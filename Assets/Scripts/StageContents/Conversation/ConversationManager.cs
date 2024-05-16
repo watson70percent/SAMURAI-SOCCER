@@ -98,13 +98,13 @@ namespace SamuraiSoccer.StageContents.Conversation
             if (conversationBGM != -1)
             {
                 // 最終ステージのBGMでなければいったん止める。
-                SoundMaster.Instance.StopSound();
+                SoundMaster.Instance.StopSound(conversationBGM);
             }
             await UniTask.Delay(1000);
 
             if (conversationBGM != -1)
             {
-                SoundMaster.Instance.PlayBGM(ConversationBGMMapping(conversationNum));
+                SoundMaster.Instance.PlayBGM(conversationBGM);
             }
             // 巻物がスライドしてくる
             await m_scrollScript.ScrollSlide(m_initPos.x, -m_initPos.x, m_initPos.y, 1.0f);
