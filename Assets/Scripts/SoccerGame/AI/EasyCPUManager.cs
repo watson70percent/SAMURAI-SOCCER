@@ -20,17 +20,22 @@ namespace SamuraiSoccer.SoccerGame.AI
     [RequireComponent(typeof(FieldManager))]
     public class EasyCPUManager : MonoBehaviour
     {
-        public GameObject samurai;
-        public GameObject referee;
+        [SerializeField]
+        private GameObject samurai;
+        [SerializeField] 
+        private GameObject referee;
 
         public List<GameObject> team = new List<GameObject>();
-        public Team team_stock = new Team();
+        private Team team_stock = new Team();
         public List<GameObject> opp = new List<GameObject>();
-        public Team opp_stock = new Team();
+        private Team opp_stock = new Team();
 
-        public Transform team_p;
-        public Transform opp_p;
-        public BallAction ball;
+        [SerializeField] 
+        private Transform team_p;
+        [SerializeField] 
+        private Transform opp_p;
+        [SerializeField] 
+        private BallAction ball;
         private GameObject teammate;
         private string teammateName;
         private GameObject opponent;
@@ -44,9 +49,12 @@ namespace SamuraiSoccer.SoccerGame.AI
 
         private FieldManager field;
 
-        public AudioSource audioSource;
-        public AudioClip goalSound;
-        public AudioClip startSound;
+        [SerializeField]
+        private AudioSource audioSource;
+        [SerializeField]
+        private AudioClip goalSound;
+        [SerializeField]
+        private AudioClip startSound;
 
         public string resultSceneName = "Result";
 
