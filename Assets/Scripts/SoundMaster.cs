@@ -18,6 +18,8 @@ namespace SamuraiSoccer
         //SEのAudioSource
         private static AudioSource seAudioSource;
 
+        private static List<int> arrowSEIndexes = new List<int> { 3 };
+
         private static SoundMaster instance;
         public static SoundMaster Instance
         {
@@ -32,9 +34,13 @@ namespace SamuraiSoccer
                     seAudioSource = soundObj.AddComponent<AudioSource>();
                     seAudioSource.loop = false;
                     soundDatabase = Resources.Load<SoundDatabase>("SoundDataBase");
+                    foreach (int i in arrowSEIndexes)
+                    {
+                        instance.arrowList.Add(soundDatabase.soundDatas.First(x => x.soundIndex == i).baseSound);
+                    }
                     var obs = instance.playSESubject.Pairwise().Share();
-                    obs.Where(clips => clips.Current != clips.Previous).Select(clips => clips.Current).Subscribe(clip => instance.PlaySEInternal(clip)).AddTo(instance);
-                    obs.Where(clips => clips.Current == clips.Previous).ThrottleFirst(TimeSpan.FromSeconds(0.5)).Select(clips => clips.Current).Subscribe(clip => instance.PlaySEInternal(clip)).AddTo(instance);
+                    obs.Where(instance.DifferentClipOrArrowList).Select(clips => clips.Current).Subscribe(clip => instance.PlaySEInternal(clip)).AddTo(instance);
+                    obs.Where(clips => !instance.DifferentClipOrArrowList(clips)).ThrottleFirst(TimeSpan.FromSeconds(0.5)).Select(clips => clips.Current).Subscribe(clip => instance.PlaySEInternal(clip)).AddTo(instance);
                     instance.playSESubject.OnNext(null);
                 }
                 return instance;
@@ -48,6 +54,12 @@ namespace SamuraiSoccer
         private Stack<(int, float)> requests = new();
         private float bgmBolume = 1;
         private Subject<AudioClip> playSESubject = new Subject<AudioClip>();
+        private List<AudioClip> arrowList = new List<AudioClip>();
+
+        private bool DifferentClipOrArrowList(Pair<AudioClip> clips)
+        {
+            return arrowList.Contains(clips.Current) || (clips.Current != clips.Previous);
+        }
 
         /// <summary>
         /// 現在流れているBGMの番号。
