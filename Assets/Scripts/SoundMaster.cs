@@ -32,6 +32,10 @@ namespace SamuraiSoccer
                     seAudioSource = soundObj.AddComponent<AudioSource>();
                     seAudioSource.loop = false;
                     soundDatabase = Resources.Load<SoundDatabase>("SoundDataBase");
+                    var obs = instance.playSESubject.Pairwise().Share();
+                    obs.Where(clips => clips.Current != clips.Previous).Select(clips => clips.Current).Subscribe(clip => instance.PlaySEInternal(clip)).AddTo(instance);
+                    obs.Where(clips => clips.Current == clips.Previous).ThrottleFirst(TimeSpan.FromSeconds(0.5)).Select(clips => clips.Current).Subscribe(clip => instance.PlaySEInternal(clip)).AddTo(instance);
+                    instance.playSESubject.OnNext(null);
                 }
                 return instance;
             }
@@ -43,6 +47,7 @@ namespace SamuraiSoccer
         private int reserveIndex = -1;
         private Stack<(int, float)> requests = new();
         private float bgmBolume = 1;
+        private Subject<AudioClip> playSESubject = new Subject<AudioClip>();
 
         /// <summary>
         /// 現在流れているBGMの番号。
@@ -85,8 +90,13 @@ namespace SamuraiSoccer
         {
             seAudioSource.volume = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).soundVolume * seBolume;
             var targetClip = soundDatabase.soundDatas.First(x => x.soundIndex == soundIndex).baseSound;
-            seAudioSource.PlayOneShot(targetClip);
+            playSESubject.OnNext(targetClip);
             await UniTask.Delay((int)(targetClip.length * 1000), true); //msなので1000をかけて単位変換
+        }
+
+        private void PlaySEInternal(AudioClip targetClip)
+        {
+            seAudioSource.PlayOneShot(targetClip);
         }
 
         /// <summary>
