@@ -29,8 +29,9 @@ namespace SamuraiSoccer.StageContents.Result
         [SerializeField]
         private List<Text> texts;
         [SerializeField]
+        private List<Image> buttonBackgrounds;
+        [SerializeField]
         private Camera mainCamera;
-
         [SerializeField]
         private int lastStageNum;
         [SerializeField]
@@ -72,6 +73,10 @@ namespace SamuraiSoccer.StageContents.Result
             {
                 txt.color = Color.black;
             }
+            foreach (var grounds in buttonBackgrounds)
+            {
+                grounds.color = new Color(147f / 255f, 147f / 255f, 147f / 255f);
+            }
             mainCamera.backgroundColor = Color.white;
             InMemoryDataTransitClient<int> stageNumberTransitionClient = new InMemoryDataTransitClient<int>();
             int clearNumber = stageNumberTransitionClient.Get(StorageKey.KEY_STAGENUMBER);
@@ -107,6 +112,10 @@ namespace SamuraiSoccer.StageContents.Result
             foreach (var txt in texts)
             {
                 txt.color = Color.white;
+            }
+            foreach (var grounds in buttonBackgrounds)
+            {
+                grounds.color = new Color(56f / 255f, 56f / 255f, 56f / 255f);
             }
             mainCamera.backgroundColor = Color.black;
             resultBGM.PlayLoseBGM().Forget();
