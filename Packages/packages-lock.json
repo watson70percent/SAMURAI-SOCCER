@@ -97,13 +97,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "3.2.1",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.project-auditor": {
       "version": "https://github.com/Unity-Technologies/ProjectAuditor.git",
       "depth": 0,
@@ -112,30 +105,6 @@
         "com.unity.nuget.mono-cecil": "1.10.2"
       },
       "hash": "93f367f0d2b98b4c4e22c7c51ca50fa26632d64e"
-    },
-    "com.unity.purchasing": {
-      "version": "4.10.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.services.core": "1.8.2"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.services.core": {
-      "version": "1.12.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.nuget.newtonsoft-json": "3.2.1",
-        "com.unity.modules.androidjni": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.sysroot": {
       "version": "2.0.5",
@@ -203,6 +172,19 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "org.kumas.nuget-importer": {
+      "version": "https://github.com/kumaS-nu/NuGet-importer-for-Unity.git?path=NuGetImporterForUnity/Packages/NuGet Importer",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "50cef9770fff131e15fa98255192cd9081776fcb"
+    },
+    "org.nuget.newtonsoft.json": {
+      "version": "file:Newtonsoft.Json",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
