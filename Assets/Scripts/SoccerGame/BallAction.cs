@@ -60,8 +60,8 @@ namespace SamuraiSoccer.SoccerGame
 
         private void Update()
         {
-            rb.angularDrag = info.info.Getdrag(gameObject.transform.position);
-            var vel = rb.velocity;
+            rb.angularDamping = info.info.Getdrag(gameObject.transform.position);
+            var vel = rb.linearVelocity;
             if (transform.position.x <= 0.5)
             {
                 if (transform.position.x <= -0.5 && vel.x < 0)
@@ -106,11 +106,11 @@ namespace SamuraiSoccer.SoccerGame
                     vel.z -= 0.1f;
                 }
             }
-            rb.velocity = vel;
+            rb.linearVelocity = vel;
 
             if (transform.position.y < -0.5)
             {
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
                 var pos = transform.position;
                 pos.y = 0.5f;
                 if (transform.position.x <= 0.5)
@@ -137,8 +137,8 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (isPause)
             {
-                velocity = rb.velocity;
-                rb.velocity = Vector3.zero;
+                velocity = rb.linearVelocity;
+                rb.linearVelocity = Vector3.zero;
                 angularVelocity = rb.angularVelocity;
                 rb.angularVelocity = Vector3.zero;
                 rb.isKinematic = true;
@@ -153,7 +153,7 @@ namespace SamuraiSoccer.SoccerGame
         private void Play(Unit _)
         {
             rb.isKinematic = false;
-            rb.velocity = velocity;
+            rb.linearVelocity = velocity;
             rb.angularVelocity = angularVelocity;
             // ゴールイベントが呼び出された数を初期化
             calledNum = 0;
@@ -228,7 +228,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             if (SuccessTrap(command.m_status))
             {
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
             }
         }
 
@@ -248,7 +248,7 @@ namespace SamuraiSoccer.SoccerGame
         /// </summary>
         private void Pass(PassCommand command)
         {
-            if (gameObject.transform.position.y < 1 && (command.m_sender - gameObject.ToVector2Int()).sqrMagnitude < 4 && rb.velocity.sqrMagnitude < 25)
+            if (gameObject.transform.position.y < 1 && (command.m_sender - gameObject.ToVector2Int()).sqrMagnitude < 4 && rb.linearVelocity.sqrMagnitude < 25)
             {
 
                 if (command.m_status == default)
@@ -314,7 +314,7 @@ namespace SamuraiSoccer.SoccerGame
         /// </summary>
         private void Shoot(ShootCommand command)
         {
-            if (rb.velocity.sqrMagnitude < 25)
+            if (rb.linearVelocity.sqrMagnitude < 25)
             {
                 Vector3 dest;
                 if (command.m_status.ally)
@@ -344,7 +344,7 @@ namespace SamuraiSoccer.SoccerGame
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
-                var vel = rb.velocity;
+                var vel = rb.linearVelocity;
                 if (transform.position.x <= 1 || transform.position.x >= 49)
                 {
                     vel.x *= -1;
@@ -353,7 +353,7 @@ namespace SamuraiSoccer.SoccerGame
                 {
                     vel.z *= -1;
                 }
-                rb.velocity = vel;
+                rb.linearVelocity = vel;
             }
         }
 
@@ -368,7 +368,7 @@ namespace SamuraiSoccer.SoccerGame
             }
             else if (other.gameObject.CompareTag("OutBall"))
             {
-                var vel = rb.velocity;
+                var vel = rb.linearVelocity;
                 if (transform.position.x <= 1 || transform.position.x >= 49)
                 {
                     vel.x *= -1;
@@ -377,7 +377,7 @@ namespace SamuraiSoccer.SoccerGame
                 {
                     vel.z *= -1;
                 }
-                rb.velocity = vel;
+                rb.linearVelocity = vel;
             }
         }
     }

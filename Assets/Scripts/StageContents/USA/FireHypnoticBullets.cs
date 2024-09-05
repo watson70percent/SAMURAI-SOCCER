@@ -48,7 +48,7 @@ namespace SamuraiSoccer.StageContents.USA
             gameObject.transform.localRotation = firelotation;
             //弾を生成し、発射
             GameObject Bullet = Instantiate(HypnoticBullets);
-            Bullet.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * 8;
+            Bullet.GetComponent<Rigidbody>().linearVelocity = gameObject.transform.forward * 8;
             Bullet.transform.position = gameObject.transform.position + gameObject.transform.forward * 3f + new Vector3(0f, -0.5f, 0f);
         }
     }

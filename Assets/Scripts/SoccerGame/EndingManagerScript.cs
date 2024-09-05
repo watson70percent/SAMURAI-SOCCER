@@ -44,7 +44,7 @@ namespace SamuraiSoccer.SoccerGame
             {
                 elapsedTime = 0;
                 staff = Instantiate(test,sponeSpot.transform.position,sponeSpot.transform.rotation);
-                staff.GetComponent<Rigidbody>().velocity = Vector3.down * velocity;
+                staff.GetComponent<Rigidbody>().linearVelocity = Vector3.down * velocity;
                 staff.GetComponent<MeshRenderer>().material = StaffList[staffIndex];
                 staffIndex++;
             }
@@ -59,7 +59,7 @@ namespace SamuraiSoccer.SoccerGame
         {
             for(int i=0; i < 20; i++)
             {
-                await UniTask.Delay(TimeSpan.FromSeconds(1)); //ÅŒã‚Ìƒpƒlƒ‹‚ð—¬‚µ‚Ä‚©‚ç5•bŒã‚ÉƒV[ƒ“‘JˆÚ
+                await UniTask.Delay(TimeSpan.FromSeconds(1)); //ï¿½ÅŒï¿½Ìƒpï¿½lï¿½ï¿½ï¿½ð—¬‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½5ï¿½bï¿½ï¿½ÉƒVï¿½[ï¿½ï¿½ï¿½Jï¿½ï¿½
                 audioSource.volume = Math.Max(1 - (float)i / 20,0);
             }
             SceneManager.LoadScene("Start");

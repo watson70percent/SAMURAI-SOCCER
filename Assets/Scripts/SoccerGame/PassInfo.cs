@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SamuraiSoccer.SoccerGame
 {
     /// <summary>
-    /// o‚µ‚½ƒpƒX‚ÉŠÖ‚·‚éî•ñB
+    /// ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½pï¿½Xï¿½ÉŠÖ‚ï¿½ï¿½ï¿½ï¿½ï¿½B
     /// </summary>
     public sealed class PassInfo
     {
@@ -32,8 +32,8 @@ namespace SamuraiSoccer.SoccerGame
                 return (false, Vector2.zero);
             }
 
-            var t = (m_rigidbody.velocity.y + Mathf.Sqrt(m_rigidbody.velocity.y * m_rigidbody.velocity.y + 2 * gravity * m_rigidbody.position.y)) / gravity;
-            var p = m_rigidbody.position + m_rigidbody.velocity * t;
+            var t = (m_rigidbody.linearVelocity.y + Mathf.Sqrt(m_rigidbody.linearVelocity.y * m_rigidbody.linearVelocity.y + 2 * gravity * m_rigidbody.position.y)) / gravity;
+            var p = m_rigidbody.position + m_rigidbody.linearVelocity * t;
             var fall = new Vector2(p.x, p.z);
             var dt = DateTime.Now.AddSeconds(t) - m_start;
             return (true, Vector2.Lerp(m_recevePos, fall, Mathf.Min(1.0f, 0.25f + (float)((DateTime.Now - m_start) / dt))));

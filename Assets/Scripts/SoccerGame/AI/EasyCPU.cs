@@ -356,7 +356,7 @@ namespace SamuraiSoccer.SoccerGame.AI
 
             if (other.gameObject == ball.gameObject)
             {
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
             }
         }
     }

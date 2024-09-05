@@ -89,13 +89,13 @@ namespace SamuraiSoccer.StageContents.USA
             if (ispause)
             {
                 //一時停止時は弾丸の速度を0にする
-                m_tmpVelocity = m_rb.velocity;
-                m_rb.velocity = Vector3.zero;
+                m_tmpVelocity = m_rb.linearVelocity;
+                m_rb.linearVelocity = Vector3.zero;
             }
             else
             {
                 //解除時は元に戻す
-                m_rb.velocity = m_tmpVelocity;
+                m_rb.linearVelocity = m_tmpVelocity;
                 m_tmpVelocity = Vector3.zero;
             }
         }

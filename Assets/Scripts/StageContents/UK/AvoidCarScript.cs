@@ -17,9 +17,9 @@ namespace Name
                 Rigidbody rb = _.transform.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    Vector3 v3 = rb.velocity;
+                    Vector3 v3 = rb.linearVelocity;
                     v3.y = 10;
-                    rb.velocity = v3;
+                    rb.linearVelocity = v3;
                 }
             }).AddTo(this);
         }
