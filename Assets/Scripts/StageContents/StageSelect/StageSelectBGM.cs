@@ -105,6 +105,11 @@ namespace SamuraiSoccer.StageContents.StageSelect
             while (totalTime < delayTime)
             {
                 token.ThrowIfCancellationRequested();
+                if (SoundMaster.Instance.BGMIndex != SoundMaster.STAGE_SELECT_BGM_INDEX)
+                {
+                    source.volume = 0;
+                    return;
+                }
                 source.volume = (delayTime - totalTime) / delayTime;
                 totalTime += Time.deltaTime;
                 await UniTask.Yield();
@@ -118,6 +123,11 @@ namespace SamuraiSoccer.StageContents.StageSelect
             while (totalTime < delayTime)
             {
                 token.ThrowIfCancellationRequested();
+                if (SoundMaster.Instance.BGMIndex != SoundMaster.STAGE_SELECT_BGM_INDEX)
+                {
+                    source.volume = 0;
+                    return;
+                }
                 source.volume = totalTime / delayTime;
                 totalTime += Time.deltaTime;
                 await UniTask.Yield();
