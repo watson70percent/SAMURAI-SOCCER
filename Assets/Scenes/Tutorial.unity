@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5370581, g: 0.85635304, b: 0.6740359, a: 1}
+  m_IndirectSpecularColor: {r: 0.5362196, g: 0.8624121, b: 0.67644453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1263,7 +1263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612862407}
-  m_LocalRotation: {x: 0.08639662, y: 0.70180887, z: -0.08639662, w: 0.70180887}
+  m_LocalRotation: {x: 0.08639663, y: 0.70180887, z: -0.08639663, w: 0.70180887}
   m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2004,18 +2004,6 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 8850587216502882831}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1967285275 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6307103907673961347, guid: 3481aaf22b85c304f8086076a27c93b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 4248596136358121844}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b3e793fe8dc03438815f731ed9a0bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1980195602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5728114704678306450}
-  m_LocalRotation: {x: 0.08639663, y: 0.70180887, z: -0.08639663, w: 0.70180887}
+  m_LocalRotation: {x: 0.08639662, y: 0.7018088, z: -0.086396605, w: 0.7018089}
   m_LocalPosition: {x: -44.3, y: 20, z: 59.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10439,6 +10427,11 @@ PrefabInstance:
       propertyPath: penaltyManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 681709424100340581, guid: 1e64183c9ab276d478846abdab9dfe8e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d566ca61a145d9d469cd18235688c0cc, type: 2}
     - target: {fileID: 686055778079660932, guid: 1e64183c9ab276d478846abdab9dfe8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15215,7 +15208,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalCanvas
       value: 
-      objectReference: {fileID: 1967285275}
+      objectReference: {fileID: 0}
     - target: {fileID: 6787424404838169157, guid: 40f9cb3a22e7a454199ecebe51daf7c1,
         type: 3}
       propertyPath: refereeAudio
