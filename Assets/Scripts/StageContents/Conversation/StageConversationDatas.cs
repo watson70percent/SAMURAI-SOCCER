@@ -40,6 +40,7 @@ namespace SamuraiSoccer.StageContents.Conversation
         シドーシャ,
         AI,
         xxx,
+        ナナミ,
     }
 
     [System.Serializable]
